@@ -109,18 +109,29 @@ class DatabaseSeeder extends Seeder
         $this->command->info('📋 Creando lotes (1000)...');
         $contadorLotes = 1;
 
-        $medicamentos->each(function (Medicamento $medicamento) use (&$contadorLotes) {
-            // 1 lote vigente con buen stock
+        $medicamentos->each(function (Medicamento $medicamento, $index) use (&$contadorLotes) {
+            // Distribuir los 1000 lotes:
+            // - Primeros 150 medicamentos: lote vencido (para probar regla #3 y scope vencidos)
+            // - Siguientes 100 medicamentos: lote por vencer <30 días (para probar regla #1 FEFO)
+            // - Restantes 750 medicamentos: lote vigente (3 a 24 meses)
+            if ($index < 150) {
+                $fecha = now()->subDays(rand(15, 180))->format('Y-m-d');
+            } elseif ($index < 250) {
+                $fecha = now()->addDays(rand(3, 25))->format('Y-m-d');
+            } else {
+                $fecha = now()->addMonths(rand(3, 24))->format('Y-m-d');
+            }
+
             Lote::create([
                 'medicamento_id'    => $medicamento->id,
                 'numero_lote'       => 'LOT-' . str_pad($contadorLotes++, 6, '0', STR_PAD_LEFT),
-                'fecha_vencimiento' => now()->addMonths(rand(3, 24))->format('Y-m-d'),
+                'fecha_vencimiento' => $fecha,
                 'cantidad_stock'    => rand(30, 200),
             ]);
         });
 
-        // Poner 50 medicamentos con stock bajo mínimo - Regla #2
-        $medicamentos->take(50)->each(function (Medicamento $medicamento) {
+        // Poner 50 medicamentos vigentes con stock bajo mínimo - Regla #2
+        $medicamentos->skip(250)->take(50)->each(function (Medicamento $medicamento) {
             $medicamento->lotes()
                 ->where('fecha_vencimiento', '>=', now()->toDateString())
                 ->update(['cantidad_stock' => rand(1, 3)]);

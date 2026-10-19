@@ -175,15 +175,27 @@ echo "🔹 CONSULTA 12: Demostración empírica de despacho FEFO (First-Expired,
 echo str_repeat('-', 60) . "\n";
 DB::beginTransaction();
 try {
-    $med = Medicamento::where('nombre_comercial', 'Ciprofloxacino Genfar')->first();
-    $lotes = $med->lotes()->where('fecha_vencimiento', '>=', now()->toDateString())->orderBy('fecha_vencimiento', 'asc')->take(2)->get();
-    echo "  ANTES -> Lote 1 (Vence: {$lotes[0]->fecha_vencimiento->format('Y-m-d')}): {$lotes[0]->cantidad_stock} und | Lote 2 (Vence: {$lotes[1]->fecha_vencimiento->format('Y-m-d')}): {$lotes[1]->cantidad_stock} und\n";
+    $med = Medicamento::first();
+    $lote1 = Lote::create([
+        'medicamento_id'    => $med->id,
+        'numero_lote'       => 'LOT-FEFO-TEST-A',
+        'fecha_vencimiento' => now()->addDays(15)->toDateString(),
+        'cantidad_stock'    => 10,
+    ]);
+    $lote2 = Lote::create([
+        'medicamento_id'    => $med->id,
+        'numero_lote'       => 'LOT-FEFO-TEST-B',
+        'fecha_vencimiento' => now()->addMonths(6)->toDateString(),
+        'cantidad_stock'    => 20,
+    ]);
 
-    (new VentaService)->crearVenta([['medicamento_id' => $med->id, 'cantidad' => $lotes[0]->cantidad_stock + 2]]);
+    echo "  ANTES -> Lote A (Vence: {$lote1->fecha_vencimiento->format('Y-m-d')}): {$lote1->cantidad_stock} und | Lote B (Vence: {$lote2->fecha_vencimiento->format('Y-m-d')}): {$lote2->cantidad_stock} und\n";
 
-    $l1 = $lotes[0]->fresh();
-    $l2 = $lotes[1]->fresh();
-    echo "  DESPUÉS (se vendieron " . ($lotes[0]->cantidad_stock + 2) . " und) -> Lote 1: {$l1->cantidad_stock} und (se liquidó primero) | Lote 2: {$l2->cantidad_stock} und (se debitó el resto)\n";
+    (new VentaService)->crearVenta([['medicamento_id' => $med->id, 'cantidad' => 14]]);
+
+    $lote1->refresh();
+    $lote2->refresh();
+    echo "  DESPUÉS (se vendieron 14 und) -> Lote A: {$lote1->cantidad_stock} und (liquidado primero por vencer antes) | Lote B: {$lote2->cantidad_stock} und (debitó el resto)\n";
 } finally {
     DB::rollBack();
 }
