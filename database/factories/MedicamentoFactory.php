@@ -46,14 +46,18 @@ class MedicamentoFactory extends Factory
 
         [$nombreComercial, $principioActivo, $presentacion] = self::$medicamentos[$i];
 
+        // Sufijo único para evitar colisión en nombre_comercial (UNIQUE no está en medicamentos,
+        // pero sí evitamos duplicados lógicos usando un índice)
+        $sufijo = '-' . str_pad(self::$index, 3, '0', STR_PAD_LEFT);
+
         return [
-            'categoria_id' => Categoria::factory(),
-            'laboratorio_id' => Laboratorio::factory(),
-            'nombre_comercial' => $nombreComercial,
+            'categoria_id'     => Categoria::inRandomOrder()->value('id') ?? Categoria::factory(),
+            'laboratorio_id'   => Laboratorio::inRandomOrder()->value('id') ?? Laboratorio::factory(),
+            'nombre_comercial' => $nombreComercial . $sufijo,
             'principio_activo' => $principioActivo,
-            'presentacion' => $presentacion,
-            'precio_venta' => fake()->randomFloat(2, 5.00, 150.00),
-            'stock_minimo' => fake()->numberBetween(5, 25),
+            'presentacion'     => $presentacion,
+            'precio_venta'     => fake()->randomFloat(2, 5.00, 150.00),
+            'stock_minimo'     => fake()->numberBetween(5, 25),
         ];
     }
 }

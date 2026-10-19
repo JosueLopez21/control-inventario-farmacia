@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     use WithoutModelEvents;
 
     /**
-     * Seed the application's database con datos representativos de farmacia en español.
+     * Seed the application's database con ~1000 datos representativos de farmacia en español.
      */
     public function run(): void
     {
-        $this->command->info('🏥 Sembrando datos de farmacia...');
+        $this->command->info('🏥 Sembrando datos de farmacia (~1000 registros)...');
 
-        // 1. Categorías
+        // 1. Categorías (10)
         $this->command->info('📦 Creando categorías...');
         $categorias = collect([
             ['nombre' => 'Analgésicos', 'descripcion' => 'Medicamentos para aliviar el dolor, como paracetamol e ibuprofeno.'],
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             ['nombre' => 'Broncodilatadores', 'descripcion' => 'Medicamentos para enfermedades respiratorias y asma.'],
         ])->map(fn ($data) => Categoria::create($data));
 
-        // 2. Laboratorios
+        // 2. Laboratorios (12)
         $this->command->info('🏭 Creando laboratorios...');
         $laboratorios = collect([
             ['nombre' => 'Pfizer', 'pais' => 'Estados Unidos', 'email' => 'contacto@pfizer.com'],
@@ -54,8 +54,8 @@ class DatabaseSeeder extends Seeder
             ['nombre' => 'Laboratorios Bagó', 'pais' => 'Argentina', 'email' => 'contacto@bago.com'],
         ])->map(fn ($data) => Laboratorio::create($data));
 
-        // 3. Medicamentos (30 medicamentos reales)
-        $this->command->info('💊 Creando medicamentos...');
+        // 3. Medicamentos: 30 reales fijos + 70 por factory = 100 total
+        $this->command->info('💊 Creando medicamentos (100)...');
         $datosMedicamentos = [
             ['Panadol', 'Paracetamol', 'Tabletas 500mg x 20', 0, 5, 8.50, 15],
             ['Advil', 'Ibuprofeno', 'Cápsulas 400mg x 10', 0, 0, 12.00, 10],
@@ -91,18 +91,22 @@ class DatabaseSeeder extends Seeder
 
         $medicamentos = collect($datosMedicamentos)->map(function ($med) use ($categorias, $laboratorios) {
             return Medicamento::create([
-                'categoria_id' => $categorias[$med[3]]->id,
-                'laboratorio_id' => $laboratorios[$med[4]]->id,
+                'categoria_id'     => $categorias[$med[3]]->id,
+                'laboratorio_id'   => $laboratorios[$med[4]]->id,
                 'nombre_comercial' => $med[0],
                 'principio_activo' => $med[1],
-                'presentacion' => $med[2],
-                'precio_venta' => $med[5],
-                'stock_minimo' => $med[6],
+                'presentacion'     => $med[2],
+                'precio_venta'     => $med[5],
+                'stock_minimo'     => $med[6],
             ]);
         });
 
-        // 4. Lotes (vigentes, próximos a vencer y vencidos)
-        $this->command->info('📋 Creando lotes...');
+        // 70 medicamentos adicionales con factory
+        $medicamentosFactory = Medicamento::factory(70)->create();
+        $medicamentos = $medicamentos->merge($medicamentosFactory);
+
+        // 4. Lotes: 5 por medicamento = 500 lotes total
+        $this->command->info('📋 Creando lotes (500)...');
         $contadorLotes = 1;
 
         $medicamentos->each(function (Medicamento $medicamento) use (&$contadorLotes) {
@@ -110,47 +114,55 @@ class DatabaseSeeder extends Seeder
             for ($i = 0; $i < 2; $i++) {
                 Lote::create([
                     'medicamento_id' => $medicamento->id,
-                    'numero_lote' => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
-                    'fecha_vencimiento' => now()->addMonths(rand(3, 18))->format('Y-m-d'),
-                    'cantidad_stock' => rand(30, 150),
+                    'numero_lote'    => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
+                    'fecha_vencimiento' => now()->addMonths(rand(3, 24))->format('Y-m-d'),
+                    'cantidad_stock' => rand(30, 200),
                 ]);
             }
 
-            // 1 lote próximo a vencer (dentro de 30 días) - Regla #1
+            // 1 lote próximo a vencer (dentro de 30 días) - Regla FEFO #1
             Lote::create([
                 'medicamento_id' => $medicamento->id,
-                'numero_lote' => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
+                'numero_lote'    => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
                 'fecha_vencimiento' => now()->addDays(rand(1, 29))->format('Y-m-d'),
-                'cantidad_stock' => rand(5, 30),
+                'cantidad_stock' => rand(5, 40),
             ]);
 
             // 1 lote vencido - Regla #3
             Lote::create([
                 'medicamento_id' => $medicamento->id,
-                'numero_lote' => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
-                'fecha_vencimiento' => now()->subDays(rand(1, 180))->format('Y-m-d'),
-                'cantidad_stock' => rand(1, 20),
+                'numero_lote'    => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
+                'fecha_vencimiento' => now()->subDays(rand(1, 365))->format('Y-m-d'),
+                'cantidad_stock' => rand(1, 30),
+            ]);
+
+            // 1 lote histórico vencido adicional (más antiguo)
+            Lote::create([
+                'medicamento_id' => $medicamento->id,
+                'numero_lote'    => 'LOT-' . str_pad($contadorLotes++, 5, '0', STR_PAD_LEFT),
+                'fecha_vencimiento' => now()->subMonths(rand(6, 24))->format('Y-m-d'),
+                'cantidad_stock' => rand(0, 10),
             ]);
         });
 
-        // Crear 5 medicamentos con stock bajo mínimo - Regla #2
-        $medicamentos->take(5)->each(function (Medicamento $medicamento) {
+        // Poner 10 medicamentos con stock bajo mínimo - Regla #2
+        $medicamentos->take(10)->each(function (Medicamento $medicamento) {
             $medicamento->lotes()
                 ->where('fecha_vencimiento', '>=', now()->toDateString())
                 ->update(['cantidad_stock' => rand(1, 3)]);
         });
 
-        // 5. Ventas con Detalles (25 ventas con FIFO)
-        $this->command->info('🛒 Creando ventas...');
+        // 5. Ventas con Detalles: 200 ventas
+        $this->command->info('🛒 Creando ventas (200)...');
 
-        for ($s = 0; $s < 25; $s++) {
+        for ($s = 0; $s < 200; $s++) {
             $venta = Venta::create([
-                'fecha_venta' => fake()->dateTimeBetween('-3 months', 'now'),
+                'fecha_venta' => fake()->dateTimeBetween('-12 months', 'now'),
                 'monto_total' => 0,
             ]);
 
             $montoTotal = 0;
-            $detalles = rand(1, 5);
+            $detalles   = rand(1, 6);
 
             for ($d = 0; $d < $detalles; $d++) {
                 $loteDisponible = Lote::where('fecha_vencimiento', '>=', now()->toDateString())
@@ -162,14 +174,14 @@ class DatabaseSeeder extends Seeder
                     continue;
                 }
 
-                $maxQty = min($loteDisponible->cantidad_stock, 5);
-                $qty = rand(1, max(1, $maxQty));
+                $maxQty        = min($loteDisponible->cantidad_stock, 8);
+                $qty           = rand(1, max(1, $maxQty));
                 $precioUnitario = $loteDisponible->medicamento->precio_venta;
 
                 DetalleVenta::create([
-                    'venta_id' => $venta->id,
-                    'lote_id' => $loteDisponible->id,
-                    'cantidad' => $qty,
+                    'venta_id'       => $venta->id,
+                    'lote_id'        => $loteDisponible->id,
+                    'cantidad'       => $qty,
                     'precio_unitario' => $precioUnitario,
                 ]);
 
@@ -181,14 +193,15 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->command->info('');
-        $this->command->info('✅ Seeding completado exitosamente:');
-        $this->command->info("   📦 Categorías:    " . Categoria::count());
-        $this->command->info("   🏭 Laboratorios:  " . Laboratorio::count());
-        $this->command->info("   💊 Medicamentos:  " . Medicamento::count());
-        $this->command->info("   📋 Lotes:          " . Lote::count());
-        $this->command->info("   🛒 Ventas:         " . Venta::count());
-        $this->command->info("   📝 Detalles:       " . DetalleVenta::count());
-        $this->command->info("   ⚠️  Lotes vencidos: " . Lote::vencidos()->count());
+        $this->command->info('✅ Seeding completado exitosamente (~1000 registros):');
+        $this->command->info("   📦 Categorías:      " . Categoria::count());
+        $this->command->info("   🏭 Laboratorios:    " . Laboratorio::count());
+        $this->command->info("   💊 Medicamentos:    " . Medicamento::count());
+        $this->command->info("   📋 Lotes:            " . Lote::count());
+        $this->command->info("   🛒 Ventas:           " . Venta::count());
+        $this->command->info("   📝 Detalles:         " . DetalleVenta::count());
+        $this->command->info("   ⚠️  Lotes vencidos:  " . Lote::vencidos()->count());
         $this->command->info("   ⏰ Lotes por vencer: " . Lote::porVencer()->count());
+        $this->command->info("   📊 TOTAL registros:  " . (Categoria::count() + Laboratorio::count() + Medicamento::count() + Lote::count() + Venta::count() + DetalleVenta::count()));
     }
 }
