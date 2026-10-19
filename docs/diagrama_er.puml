@@ -1,0 +1,80 @@
+@startuml Diagrama_ER_Farmacia
+!theme plain
+skinparam linetype ortho
+skinparam shadowing false
+skinparam roundcorner 5
+
+entity "categorias" as categorias {
+    * id : bigint <<PK, generated>>
+    --
+    * nombre : varchar(255) <<UNIQUE, INDEX>>
+    descripcion : text
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+entity "laboratorios" as laboratorios {
+    * id : bigint <<PK, generated>>
+    --
+    * nombre : varchar(255) <<UNIQUE, INDEX>>
+    * pais : varchar(255) <<INDEX>>
+    direccion : varchar(255)
+    telefono : varchar(255)
+    email : varchar(255)
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+entity "medicamentos" as medicamentos {
+    * id : bigint <<PK, generated>>
+    --
+    * categoria_id : bigint <<FK, INDEX>>
+    * laboratorio_id : bigint <<FK, INDEX>>
+    * nombre_comercial : varchar(255) <<INDEX>>
+    * principio_activo : varchar(255) <<INDEX>>
+    * presentacion : varchar(255)
+    * precio_venta : decimal(10,2) <<CHECK > 0>>
+    * stock_minimo : integer <<CHECK >= 0, default 10>>
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+entity "lotes" as lotes {
+    * id : bigint <<PK, generated>>
+    --
+    * medicamento_id : bigint <<FK, INDEX>>
+    * numero_lote : varchar(255) <<UNIQUE>>
+    * fecha_vencimiento : date <<INDEX>>
+    * cantidad_stock : integer <<CHECK >= 0>>
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+entity "ventas" as ventas {
+    * id : bigint <<PK, generated>>
+    --
+    * fecha_venta : timestamp <<INDEX>>
+    * monto_total : decimal(10,2) <<CHECK >= 0>>
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+entity "detalles_venta" as detalles_venta {
+    * id : bigint <<PK, generated>>
+    --
+    * venta_id : bigint <<FK, INDEX, ON DELETE CASCADE>>
+    * lote_id : bigint <<FK, INDEX, ON DELETE RESTRICT>>
+    * cantidad : integer <<CHECK > 0>>
+    * precio_unitario : decimal(10,2) <<CHECK > 0>>
+    * created_at : timestamp
+    * updated_at : timestamp
+}
+
+' Relaciones y cardinalidades
+categorias ||--o{ medicamentos : "1 clasifica a N\n(ON DELETE RESTRICT)"
+laboratorios ||--o{ medicamentos : "1 fabrica N\n(ON DELETE RESTRICT)"
+medicamentos ||--o{ lotes : "1 posee N\n(ON DELETE RESTRICT)"
+ventas ||--|{ detalles_venta : "1 contiene 1..N\n(ON DELETE CASCADE)"
+lotes ||--o{ detalles_venta : "1 se dispensa en N\n(ON DELETE RESTRICT)"
+
+@enduml
