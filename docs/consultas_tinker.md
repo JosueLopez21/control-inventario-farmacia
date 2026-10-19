@@ -5,7 +5,7 @@ Este documento contiene las consultas de consola ejecutables en **Laravel Tinker
 ---
 
 ## 📌 Configuración Inicial en Tinker
-Al iniciar `php artisan tinker`, se recomienda importar los modelos para simplificar la ejecución:
+Al iniciar `php artisan tinker`, ejecuta las importaciones **una sola vez** al inicio de la sesión:
 
 ```php
 use App\Models\Categoria;
@@ -17,6 +17,9 @@ use App\Models\DetalleVenta;
 use App\Services\VentaService;
 use Illuminate\Support\Facades\DB;
 ```
+
+> [!TIP]
+> **Nota de Tinker:** Los `use ...` solo deben ejecutarse una vez por sesión. Si ejecutas `use App\Models\Lote;` por segunda vez en la misma sesión abierta, PHP mostrará un `FATAL ERROR: Cannot use ... because the name is already in use`. Si te sucede, escribe `exit` y vuelve a iniciar `php artisan tinker`.
 
 ---
 
@@ -158,16 +161,16 @@ DB::transaction(function() {
 ```
 * **Salida Real Ejecutada:**
 ```text
-UNIQUE VIOLATION: 23505 -> Código LOT-00003 duplicado rechazado.
+UNIQUE VIOLATION: 23505 -> Código LOT-000001 duplicado rechazado.
 => [
-     "total" => 120,
-     "vigentes_con_stock" => 83,
-     "vencidos" => 30,
-     "agotados_stock_cero" => 7,
+     "total" => 1000,
+     "vigentes_con_stock" => 792,
+     "vencidos" => 150,
+     "agotados_stock_cero" => 58,
    ]
 ```
 * **Justificación Técnica:**
-  > Valida la restricción `UNIQUE (numero_lote)` arrojando `SQLSTATE 23505`, lo que impide duplicidad de números de lote en el sistema. Asimismo, demuestra la consistencia matemática del inventario: los 120 lotes totales cuadran de forma estricta sumando los vigentes disponibles (83), los vencidos (30) y los vigentes agotados por ventas (7).
+  > Valida la restricción `UNIQUE (numero_lote)` arrojando `SQLSTATE 23505`, lo que impide duplicidad de números de lote en el sistema. Asimismo, demuestra la consistencia matemática del inventario: los 1,000 lotes totales cuadran de forma estricta sumando los vigentes disponibles (792), los vencidos (150) y los vigentes agotados por ventas (58).
 
 ---
 
@@ -187,7 +190,7 @@ DB::transaction(function() {
 ```
 * **Salida Real Ejecutada:**
 ```text
-RESTRICT VIOLATION: 23001 -> No se puede borrar categoría 'Analgésicos' porque tiene 5 medicamentos asociados.
+RESTRICT VIOLATION: 23001 -> No se puede borrar categoría 'Analgésicos' porque tiene 103 medicamentos asociados.
 ```
 * **Justificación Técnica:**
   > Evidencia el comportamiento `ON DELETE RESTRICT` de la clave foránea `medicamentos_categoria_id_foreign`. La base de datos impide borrados accidentales en cascada, obligando al usuario a reubicar o dar de baja primero los medicamentos dependientes antes de poder suprimir la categoría principal.
@@ -199,25 +202,27 @@ RESTRICT VIOLATION: 23001 -> No se puede borrar categoría 'Analgésicos' porque
 * **Comando Tinker:**
 ```php
 DB::transaction(function() {
-    $med = Medicamento::where('nombre_comercial', 'Ciprofloxacino Genfar')->first();
-    $lotes = $med->lotes()->where('fecha_vencimiento', '>=', now()->toDateString())->orderBy('fecha_vencimiento', 'asc')->take(2)->get();
-    echo "ANTES -> Lote FEFO 1 ({$lotes[0]->numero_lote}, Vence: {$lotes[0]->fecha_vencimiento->format('Y-m-d')}): {$lotes[0]->cantidad_stock} und | Lote 2 ({$lotes[1]->numero_lote}, Vence: {$lotes[1]->fecha_vencimiento->format('Y-m-d')}): {$lotes[1]->cantidad_stock} und\n";
+    $med = Medicamento::first();
+    $lote1 = Lote::create(['medicamento_id' => $med->id, 'numero_lote' => 'LOT-FEFO-TEST-A', 'fecha_vencimiento' => now()->addDays(15)->toDateString(), 'cantidad_stock' => 10]);
+    $lote2 = Lote::create(['medicamento_id' => $med->id, 'numero_lote' => 'LOT-FEFO-TEST-B', 'fecha_vencimiento' => now()->addMonths(6)->toDateString(), 'cantidad_stock' => 20]);
     
-    // Vendemos todo el lote 1 + 2 unidades del lote 2
-    (new VentaService)->crearVenta([['medicamento_id' => $med->id, 'cantidad' => $lotes[0]->cantidad_stock + 2]]);
+    echo "ANTES -> Lote A (Vence: {$lote1->fecha_vencimiento->format('Y-m-d')}): {$lote1->cantidad_stock} und | Lote B (Vence: {$lote2->fecha_vencimiento->format('Y-m-d')}): {$lote2->cantidad_stock} und\n";
     
-    $l1 = $lotes[0]->fresh(); $l2 = $lotes[1]->fresh();
-    echo "DESPUÉS -> Lote FEFO 1: {$l1->cantidad_stock} und (agotado) | Lote 2: {$l2->cantidad_stock} und (descontó 2)\n";
+    // Vendemos 14 unidades: agota Lote A (10 und) y descuenta 4 und de Lote B
+    (new VentaService)->crearVenta([['medicamento_id' => $med->id, 'cantidad' => 14]]);
+    
+    $l1 = $lote1->fresh(); $l2 = $lote2->fresh();
+    echo "DESPUÉS -> Lote A: {$l1->cantidad_stock} und (agotado por vencer antes) | Lote B: {$l2->cantidad_stock} und (debitó las 4 restantes)\n";
     throw new \Exception("Rollback");
 });
 ```
 * **Salida Real Ejecutada:**
 ```text
-ANTES -> Lote FEFO 1 (LOT-00023, Vence: 2026-11-13): 6 und | Lote 2 (LOT-00021, Vence: 2027-04-18): 70 und
-DESPUÉS -> Lote FEFO 1: 0 und (agotado) | Lote 2: 68 und (descontó 2)
+ANTES -> Lote A (Vence: 2026-11-03): 10 und | Lote B (Vence: 2027-04-19): 20 und
+DESPUÉS -> Lote A: 0 und (agotado por vencer antes) | Lote B: 16 und (debitó las 4 restantes)
 ```
 * **Justificación Técnica:**
-  > Comprueba la implementación transaccional del algoritmo **FEFO** en `VentaService`. Al registrar una venta mayor al stock del lote más próximo a caducar (LOT-00023), el servicio liquida completamente dicho lote y continúa debitando el saldo restante del siguiente lote cronológico (LOT-00021), minimizando el riesgo de vencimientos en estantería.
+  > Comprueba la implementación transaccional del algoritmo **FEFO** en `VentaService`. Al registrar una venta mayor al stock del lote más próximo a caducar (Lote A con vencimiento en 15 días), el servicio liquida completamente dicho lote y continúa debitando el saldo restante del siguiente lote cronológico (Lote B con vencimiento en 6 meses), minimizando el riesgo de vencimientos en estantería.
 
 ---
 
@@ -273,10 +278,10 @@ Lote::with('medicamento:id,nombre_comercial')->get()->filter(fn($l) => $l->canti
 * **Salida Real Ejecutada:**
 ```text
 => [
-     "total_ventas" => 25,
-     "recaudacion_total" => "$3,291.50",
-     "ticket_promedio" => "$131.66",
-     "unidades_dispensadas" => 214,
+     "total_ventas" => 1000,
+     "recaudacion_total" => "$1,210,841.62",
+     "ticket_promedio" => "$1,210.84",
+     "unidades_dispensadas" => 15874,
    ]
 ```
 * **Justificación Técnica:**
