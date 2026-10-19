@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict V9ZAhbYrW1KnOSYIQU9pbKsikNhYfYesKJfRefFfJUQ2iYJf8GjUAjhPnHEBjbk
+\restrict lCKelnl3DLhEcTagTP4eiaVTeb1fdqBhVTmV3JYAjdCrD4XHWGFBUl605eSf4ir
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -24,7 +24,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: cache; Type: TABLE; Schema: public; Owner: postgres
+-- Name: cache; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.cache (
@@ -34,10 +34,8 @@ CREATE TABLE public.cache (
 );
 
 
-ALTER TABLE public.cache OWNER TO postgres;
-
 --
--- Name: cache_locks; Type: TABLE; Schema: public; Owner: postgres
+-- Name: cache_locks; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.cache_locks (
@@ -47,10 +45,8 @@ CREATE TABLE public.cache_locks (
 );
 
 
-ALTER TABLE public.cache_locks OWNER TO postgres;
-
 --
--- Name: categorias; Type: TABLE; Schema: public; Owner: postgres
+-- Name: categorias; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.categorias (
@@ -62,10 +58,8 @@ CREATE TABLE public.categorias (
 );
 
 
-ALTER TABLE public.categorias OWNER TO postgres;
-
 --
--- Name: categorias_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: categorias_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.categorias_id_seq
@@ -76,17 +70,15 @@ CREATE SEQUENCE public.categorias_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.categorias_id_seq OWNER TO postgres;
-
 --
--- Name: categorias_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: categorias_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.categorias_id_seq OWNED BY public.categorias.id;
 
 
 --
--- Name: detalles_venta; Type: TABLE; Schema: public; Owner: postgres
+-- Name: detalles_venta; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.detalles_venta (
@@ -102,10 +94,8 @@ CREATE TABLE public.detalles_venta (
 );
 
 
-ALTER TABLE public.detalles_venta OWNER TO postgres;
-
 --
--- Name: detalles_venta_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: detalles_venta_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.detalles_venta_id_seq
@@ -116,17 +106,15 @@ CREATE SEQUENCE public.detalles_venta_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.detalles_venta_id_seq OWNER TO postgres;
-
 --
--- Name: detalles_venta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: detalles_venta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.detalles_venta_id_seq OWNED BY public.detalles_venta.id;
 
 
 --
--- Name: failed_jobs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: failed_jobs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.failed_jobs (
@@ -140,10 +128,8 @@ CREATE TABLE public.failed_jobs (
 );
 
 
-ALTER TABLE public.failed_jobs OWNER TO postgres;
-
 --
--- Name: failed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: failed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.failed_jobs_id_seq
@@ -154,17 +140,15 @@ CREATE SEQUENCE public.failed_jobs_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.failed_jobs_id_seq OWNER TO postgres;
-
 --
--- Name: failed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: failed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.failed_jobs_id_seq OWNED BY public.failed_jobs.id;
 
 
 --
--- Name: job_batches; Type: TABLE; Schema: public; Owner: postgres
+-- Name: job_batches; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.job_batches (
@@ -181,10 +165,8 @@ CREATE TABLE public.job_batches (
 );
 
 
-ALTER TABLE public.job_batches OWNER TO postgres;
-
 --
--- Name: jobs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: jobs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.jobs (
@@ -198,10 +180,8 @@ CREATE TABLE public.jobs (
 );
 
 
-ALTER TABLE public.jobs OWNER TO postgres;
-
 --
--- Name: jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jobs_id_seq
@@ -212,17 +192,15 @@ CREATE SEQUENCE public.jobs_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jobs_id_seq OWNER TO postgres;
-
 --
--- Name: jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.jobs_id_seq OWNED BY public.jobs.id;
 
 
 --
--- Name: laboratorios; Type: TABLE; Schema: public; Owner: postgres
+-- Name: laboratorios; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.laboratorios (
@@ -237,10 +215,8 @@ CREATE TABLE public.laboratorios (
 );
 
 
-ALTER TABLE public.laboratorios OWNER TO postgres;
-
 --
--- Name: laboratorios_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: laboratorios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.laboratorios_id_seq
@@ -251,17 +227,15 @@ CREATE SEQUENCE public.laboratorios_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.laboratorios_id_seq OWNER TO postgres;
-
 --
--- Name: laboratorios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: laboratorios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.laboratorios_id_seq OWNED BY public.laboratorios.id;
 
 
 --
--- Name: lotes; Type: TABLE; Schema: public; Owner: postgres
+-- Name: lotes; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.lotes (
@@ -276,10 +250,8 @@ CREATE TABLE public.lotes (
 );
 
 
-ALTER TABLE public.lotes OWNER TO postgres;
-
 --
--- Name: lotes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: lotes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.lotes_id_seq
@@ -290,17 +262,15 @@ CREATE SEQUENCE public.lotes_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.lotes_id_seq OWNER TO postgres;
-
 --
--- Name: lotes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: lotes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.lotes_id_seq OWNED BY public.lotes.id;
 
 
 --
--- Name: medicamentos; Type: TABLE; Schema: public; Owner: postgres
+-- Name: medicamentos; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.medicamentos (
@@ -319,10 +289,8 @@ CREATE TABLE public.medicamentos (
 );
 
 
-ALTER TABLE public.medicamentos OWNER TO postgres;
-
 --
--- Name: medicamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: medicamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.medicamentos_id_seq
@@ -333,17 +301,15 @@ CREATE SEQUENCE public.medicamentos_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.medicamentos_id_seq OWNER TO postgres;
-
 --
--- Name: medicamentos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: medicamentos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.medicamentos_id_seq OWNED BY public.medicamentos.id;
 
 
 --
--- Name: migrations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: migrations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.migrations (
@@ -353,10 +319,8 @@ CREATE TABLE public.migrations (
 );
 
 
-ALTER TABLE public.migrations OWNER TO postgres;
-
 --
--- Name: migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.migrations_id_seq
@@ -368,17 +332,15 @@ CREATE SEQUENCE public.migrations_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.migrations_id_seq OWNER TO postgres;
-
 --
--- Name: migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.migrations_id_seq OWNED BY public.migrations.id;
 
 
 --
--- Name: password_reset_tokens; Type: TABLE; Schema: public; Owner: postgres
+-- Name: password_reset_tokens; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.password_reset_tokens (
@@ -388,10 +350,8 @@ CREATE TABLE public.password_reset_tokens (
 );
 
 
-ALTER TABLE public.password_reset_tokens OWNER TO postgres;
-
 --
--- Name: sessions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sessions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.sessions (
@@ -404,10 +364,8 @@ CREATE TABLE public.sessions (
 );
 
 
-ALTER TABLE public.sessions OWNER TO postgres;
-
 --
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
+-- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.users (
@@ -422,10 +380,8 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
-
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -436,17 +392,15 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.users_id_seq OWNER TO postgres;
-
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: ventas; Type: TABLE; Schema: public; Owner: postgres
+-- Name: ventas; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.ventas (
@@ -459,10 +413,8 @@ CREATE TABLE public.ventas (
 );
 
 
-ALTER TABLE public.ventas OWNER TO postgres;
-
 --
--- Name: ventas_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ventas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ventas_id_seq
@@ -473,87 +425,85 @@ CREATE SEQUENCE public.ventas_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ventas_id_seq OWNER TO postgres;
-
 --
--- Name: ventas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: ventas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.ventas_id_seq OWNED BY public.ventas.id;
 
 
 --
--- Name: categorias id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: categorias id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categorias ALTER COLUMN id SET DEFAULT nextval('public.categorias_id_seq'::regclass);
 
 
 --
--- Name: detalles_venta id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: detalles_venta id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.detalles_venta ALTER COLUMN id SET DEFAULT nextval('public.detalles_venta_id_seq'::regclass);
 
 
 --
--- Name: failed_jobs id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: failed_jobs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.failed_jobs ALTER COLUMN id SET DEFAULT nextval('public.failed_jobs_id_seq'::regclass);
 
 
 --
--- Name: jobs id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: jobs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
 
 
 --
--- Name: laboratorios id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: laboratorios id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.laboratorios ALTER COLUMN id SET DEFAULT nextval('public.laboratorios_id_seq'::regclass);
 
 
 --
--- Name: lotes id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: lotes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.lotes ALTER COLUMN id SET DEFAULT nextval('public.lotes_id_seq'::regclass);
 
 
 --
--- Name: medicamentos id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: medicamentos id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.medicamentos ALTER COLUMN id SET DEFAULT nextval('public.medicamentos_id_seq'::regclass);
 
 
 --
--- Name: migrations id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: migrations id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.migrations ALTER COLUMN id SET DEFAULT nextval('public.migrations_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Name: ventas id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: ventas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.ventas ALTER COLUMN id SET DEFAULT nextval('public.ventas_id_seq'::regclass);
 
 
 --
--- Data for Name: cache; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: cache; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.cache (key, value, expiration) FROM stdin;
@@ -561,7 +511,7 @@ COPY public.cache (key, value, expiration) FROM stdin;
 
 
 --
--- Data for Name: cache_locks; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: cache_locks; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.cache_locks (key, owner, expiration) FROM stdin;
@@ -569,105 +519,3701 @@ COPY public.cache_locks (key, owner, expiration) FROM stdin;
 
 
 --
--- Data for Name: categorias; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: categorias; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.categorias (id, nombre, descripcion, created_at, updated_at) FROM stdin;
-4	Analgésicos	Medicamentos para aliviar el dolor, como paracetamol e ibuprofeno.	2026-10-18 21:30:06	2026-10-18 21:30:06
-5	Antibióticos	Medicamentos para combatir infecciones bacterianas.	2026-10-18 21:30:06	2026-10-18 21:30:06
-6	Antiinflamatorios	Medicamentos que reducen la inflamación y la hinchazón.	2026-10-18 21:30:06	2026-10-18 21:30:06
-7	Antihipertensivos	Medicamentos para controlar la presión arterial alta.	2026-10-18 21:30:06	2026-10-18 21:30:06
-8	Vitaminas y Suplementos	Suplementos nutricionales y complejos vitamínicos.	2026-10-18 21:30:06	2026-10-18 21:30:06
-9	Antihistamínicos	Medicamentos para tratar alergias y reacciones alérgicas.	2026-10-18 21:30:06	2026-10-18 21:30:06
-10	Antidiabéticos	Medicamentos para el control de la glucosa en sangre.	2026-10-18 21:30:06	2026-10-18 21:30:06
-11	Gastrointestinales	Medicamentos para trastornos digestivos y estomacales.	2026-10-18 21:30:06	2026-10-18 21:30:06
-12	Dermatológicos	Medicamentos de uso tópico para afecciones de la piel.	2026-10-18 21:30:06	2026-10-18 21:30:06
-13	Broncodilatadores	Medicamentos para enfermedades respiratorias y asma.	2026-10-18 21:30:06	2026-10-18 21:30:06
+1	Analgésicos	Medicamentos para aliviar el dolor, como paracetamol e ibuprofeno.	2026-10-19 15:58:40	2026-10-19 15:58:40
+2	Antibióticos	Medicamentos para combatir infecciones bacterianas.	2026-10-19 15:58:40	2026-10-19 15:58:40
+3	Antiinflamatorios	Medicamentos que reducen la inflamación y la hinchazón.	2026-10-19 15:58:40	2026-10-19 15:58:40
+4	Antihipertensivos	Medicamentos para controlar la presión arterial alta.	2026-10-19 15:58:40	2026-10-19 15:58:40
+5	Vitaminas y Suplementos	Suplementos nutricionales y complejos vitamínicos.	2026-10-19 15:58:40	2026-10-19 15:58:40
+6	Antihistamínicos	Medicamentos para tratar alergias y reacciones alérgicas.	2026-10-19 15:58:40	2026-10-19 15:58:40
+7	Antidiabéticos	Medicamentos para el control de la glucosa en sangre.	2026-10-19 15:58:40	2026-10-19 15:58:40
+8	Gastrointestinales	Medicamentos para trastornos digestivos y estomacales.	2026-10-19 15:58:40	2026-10-19 15:58:40
+9	Dermatológicos	Medicamentos de uso tópico para afecciones de la piel.	2026-10-19 15:58:40	2026-10-19 15:58:40
+10	Broncodilatadores	Medicamentos para enfermedades respiratorias y asma.	2026-10-19 15:58:40	2026-10-19 15:58:40
 \.
 
 
 --
--- Data for Name: detalles_venta; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: detalles_venta; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.detalles_venta (id, venta_id, lote_id, cantidad, precio_unitario, created_at, updated_at) FROM stdin;
-3	2	111	3	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-4	2	20	3	25.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-5	3	12	1	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-6	3	95	3	8.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-7	3	120	1	16.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-8	3	64	2	45.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-9	4	11	2	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-10	4	116	4	28.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-11	4	61	3	10.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-12	5	29	1	22.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-13	5	108	3	11.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-14	6	13	1	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-15	6	95	2	8.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-16	6	43	3	11.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-17	7	111	3	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-18	7	76	5	6.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-19	7	103	4	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-20	8	68	2	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-21	8	32	4	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-22	8	47	5	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-23	9	59	5	10.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-24	9	117	1	28.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-25	9	68	5	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-26	9	91	2	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-27	9	40	2	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-28	10	51	1	12.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-29	11	7	1	8.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-30	11	51	5	12.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-31	11	123	3	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-32	12	105	2	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-33	12	32	4	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-34	12	31	5	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-35	13	115	4	28.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-36	13	63	2	45.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-37	13	72	5	5.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-38	13	125	5	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-39	13	49	1	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-40	14	12	1	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-41	14	48	5	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-42	15	49	2	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-43	16	91	1	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-44	16	107	1	11.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-45	16	52	3	12.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-46	17	125	2	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-47	18	60	5	10.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-48	19	48	5	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-49	19	67	4	12.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-50	20	91	4	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-51	20	92	5	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-52	20	123	2	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-53	20	97	1	8.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-54	20	79	3	8.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-55	21	120	5	16.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-56	21	123	3	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-57	21	40	2	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-58	21	63	1	45.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-59	21	17	2	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-60	22	15	2	6.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-61	22	41	3	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-62	23	51	5	12.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-63	23	120	1	16.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-64	24	41	3	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-65	25	120	5	16.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-66	25	24	1	18.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-67	25	21	3	25.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-68	25	49	3	15.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-69	25	100	4	10.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-70	26	39	3	9.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-71	26	100	5	10.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-72	26	31	2	35.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-73	26	55	5	14.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-74	26	73	4	5.50	2026-10-18 21:30:07	2026-10-18 21:30:07
+1	1	349	4	8.33	2026-10-19 15:58:53	2026-10-19 15:58:53
+2	2	383	3	50.06	2026-10-19 15:58:53	2026-10-19 15:58:53
+3	3	744	3	29.99	2026-10-19 15:58:53	2026-10-19 15:58:53
+4	4	131	8	100.39	2026-10-19 15:58:53	2026-10-19 15:58:53
+5	4	406	8	37.51	2026-10-19 15:58:53	2026-10-19 15:58:53
+6	5	373	1	28.50	2026-10-19 15:58:53	2026-10-19 15:58:53
+7	5	708	6	25.09	2026-10-19 15:58:53	2026-10-19 15:58:53
+8	6	537	1	122.19	2026-10-19 15:58:53	2026-10-19 15:58:53
+9	6	181	7	63.73	2026-10-19 15:58:53	2026-10-19 15:58:53
+10	7	471	4	18.14	2026-10-19 15:58:53	2026-10-19 15:58:53
+11	7	30	1	14.00	2026-10-19 15:58:53	2026-10-19 15:58:53
+12	7	615	3	118.88	2026-10-19 15:58:53	2026-10-19 15:58:53
+13	7	713	2	141.10	2026-10-19 15:58:53	2026-10-19 15:58:53
+14	7	483	2	134.61	2026-10-19 15:58:53	2026-10-19 15:58:53
+15	8	713	4	141.10	2026-10-19 15:58:53	2026-10-19 15:58:53
+16	8	461	1	141.22	2026-10-19 15:58:53	2026-10-19 15:58:53
+17	8	447	4	68.67	2026-10-19 15:58:53	2026-10-19 15:58:53
+18	8	18	1	6.00	2026-10-19 15:58:53	2026-10-19 15:58:53
+19	8	979	2	141.12	2026-10-19 15:58:53	2026-10-19 15:58:53
+20	8	563	5	21.56	2026-10-19 15:58:53	2026-10-19 15:58:53
+21	9	645	5	61.95	2026-10-19 15:58:53	2026-10-19 15:58:53
+22	10	48	2	21.37	2026-10-19 15:58:53	2026-10-19 15:58:53
+23	10	849	1	102.02	2026-10-19 15:58:53	2026-10-19 15:58:53
+24	10	342	6	115.18	2026-10-19 15:58:53	2026-10-19 15:58:53
+25	10	419	8	67.09	2026-10-19 15:58:53	2026-10-19 15:58:53
+26	11	626	7	77.49	2026-10-19 15:58:53	2026-10-19 15:58:53
+27	11	262	6	128.31	2026-10-19 15:58:53	2026-10-19 15:58:53
+28	11	389	3	84.67	2026-10-19 15:58:53	2026-10-19 15:58:53
+29	11	46	2	103.35	2026-10-19 15:58:53	2026-10-19 15:58:53
+30	11	842	6	32.35	2026-10-19 15:58:53	2026-10-19 15:58:53
+31	11	411	4	62.50	2026-10-19 15:58:54	2026-10-19 15:58:54
+32	12	319	8	8.15	2026-10-19 15:58:54	2026-10-19 15:58:54
+33	12	33	1	86.16	2026-10-19 15:58:54	2026-10-19 15:58:54
+34	12	932	5	28.25	2026-10-19 15:58:54	2026-10-19 15:58:54
+35	12	858	1	24.01	2026-10-19 15:58:54	2026-10-19 15:58:54
+36	13	918	1	36.52	2026-10-19 15:58:54	2026-10-19 15:58:54
+37	13	992	5	85.28	2026-10-19 15:58:54	2026-10-19 15:58:54
+38	14	95	1	140.71	2026-10-19 15:58:54	2026-10-19 15:58:54
+39	14	808	8	142.03	2026-10-19 15:58:54	2026-10-19 15:58:54
+40	15	367	8	126.04	2026-10-19 15:58:54	2026-10-19 15:58:54
+41	15	669	6	35.68	2026-10-19 15:58:54	2026-10-19 15:58:54
+42	15	804	4	56.13	2026-10-19 15:58:54	2026-10-19 15:58:54
+43	15	484	4	116.80	2026-10-19 15:58:54	2026-10-19 15:58:54
+44	15	832	8	102.87	2026-10-19 15:58:54	2026-10-19 15:58:54
+45	15	436	8	131.35	2026-10-19 15:58:54	2026-10-19 15:58:54
+46	16	158	8	40.89	2026-10-19 15:58:54	2026-10-19 15:58:54
+47	16	114	6	109.75	2026-10-19 15:58:54	2026-10-19 15:58:54
+48	16	273	8	76.33	2026-10-19 15:58:54	2026-10-19 15:58:54
+49	16	986	2	149.70	2026-10-19 15:58:54	2026-10-19 15:58:54
+50	16	961	4	111.61	2026-10-19 15:58:54	2026-10-19 15:58:54
+51	16	144	6	77.20	2026-10-19 15:58:54	2026-10-19 15:58:54
+52	17	933	5	122.38	2026-10-19 15:58:54	2026-10-19 15:58:54
+53	17	417	1	83.86	2026-10-19 15:58:54	2026-10-19 15:58:54
+54	17	331	6	95.00	2026-10-19 15:58:54	2026-10-19 15:58:54
+55	17	561	8	44.66	2026-10-19 15:58:54	2026-10-19 15:58:54
+56	17	76	3	98.78	2026-10-19 15:58:54	2026-10-19 15:58:54
+57	17	564	2	17.72	2026-10-19 15:58:54	2026-10-19 15:58:54
+58	18	356	1	90.68	2026-10-19 15:58:54	2026-10-19 15:58:54
+59	19	284	1	68.56	2026-10-19 15:58:54	2026-10-19 15:58:54
+60	19	717	8	68.90	2026-10-19 15:58:54	2026-10-19 15:58:54
+61	19	681	7	94.83	2026-10-19 15:58:54	2026-10-19 15:58:54
+62	19	528	1	36.91	2026-10-19 15:58:54	2026-10-19 15:58:54
+63	19	776	8	39.52	2026-10-19 15:58:54	2026-10-19 15:58:54
+64	19	716	2	109.46	2026-10-19 15:58:54	2026-10-19 15:58:54
+65	20	851	5	126.89	2026-10-19 15:58:54	2026-10-19 15:58:54
+66	20	193	3	61.82	2026-10-19 15:58:54	2026-10-19 15:58:54
+67	20	736	3	32.58	2026-10-19 15:58:54	2026-10-19 15:58:54
+68	20	923	1	54.92	2026-10-19 15:58:54	2026-10-19 15:58:54
+69	21	805	4	98.87	2026-10-19 15:58:54	2026-10-19 15:58:54
+70	21	686	6	124.35	2026-10-19 15:58:54	2026-10-19 15:58:54
+71	21	403	6	81.29	2026-10-19 15:58:54	2026-10-19 15:58:54
+72	21	431	8	43.27	2026-10-19 15:58:54	2026-10-19 15:58:54
+73	21	436	7	131.35	2026-10-19 15:58:54	2026-10-19 15:58:54
+74	21	387	6	47.37	2026-10-19 15:58:54	2026-10-19 15:58:54
+75	22	84	7	53.67	2026-10-19 15:58:54	2026-10-19 15:58:54
+76	23	769	7	46.02	2026-10-19 15:58:54	2026-10-19 15:58:54
+77	23	154	6	26.99	2026-10-19 15:58:54	2026-10-19 15:58:54
+78	23	148	2	5.99	2026-10-19 15:58:54	2026-10-19 15:58:54
+79	24	429	4	89.80	2026-10-19 15:58:54	2026-10-19 15:58:54
+80	24	577	5	66.36	2026-10-19 15:58:55	2026-10-19 15:58:55
+81	24	31	3	145.18	2026-10-19 15:58:55	2026-10-19 15:58:55
+82	24	231	6	66.60	2026-10-19 15:58:55	2026-10-19 15:58:55
+83	24	932	6	28.25	2026-10-19 15:58:55	2026-10-19 15:58:55
+84	25	975	2	134.50	2026-10-19 15:58:55	2026-10-19 15:58:55
+85	25	577	2	66.36	2026-10-19 15:58:55	2026-10-19 15:58:55
+86	26	476	7	34.80	2026-10-19 15:58:55	2026-10-19 15:58:55
+87	26	412	5	66.66	2026-10-19 15:58:55	2026-10-19 15:58:55
+88	26	630	2	144.86	2026-10-19 15:58:55	2026-10-19 15:58:55
+89	27	7	3	35.00	2026-10-19 15:58:55	2026-10-19 15:58:55
+90	27	401	1	36.52	2026-10-19 15:58:55	2026-10-19 15:58:55
+91	27	79	4	79.86	2026-10-19 15:58:55	2026-10-19 15:58:55
+92	27	246	2	22.35	2026-10-19 15:58:55	2026-10-19 15:58:55
+93	28	627	8	122.18	2026-10-19 15:58:55	2026-10-19 15:58:55
+94	28	381	5	100.28	2026-10-19 15:58:55	2026-10-19 15:58:55
+95	28	495	4	36.18	2026-10-19 15:58:55	2026-10-19 15:58:55
+96	28	341	7	45.77	2026-10-19 15:58:55	2026-10-19 15:58:55
+97	29	913	7	13.43	2026-10-19 15:58:55	2026-10-19 15:58:55
+98	29	720	4	72.75	2026-10-19 15:58:55	2026-10-19 15:58:55
+99	30	629	4	131.93	2026-10-19 15:58:55	2026-10-19 15:58:55
+100	30	217	5	92.41	2026-10-19 15:58:55	2026-10-19 15:58:55
+101	30	155	5	21.24	2026-10-19 15:58:55	2026-10-19 15:58:55
+102	31	166	7	56.88	2026-10-19 15:58:55	2026-10-19 15:58:55
+103	31	640	6	144.81	2026-10-19 15:58:55	2026-10-19 15:58:55
+104	31	472	3	49.50	2026-10-19 15:58:55	2026-10-19 15:58:55
+105	31	124	5	98.91	2026-10-19 15:58:55	2026-10-19 15:58:55
+106	31	78	1	113.21	2026-10-19 15:58:55	2026-10-19 15:58:55
+107	31	838	5	17.28	2026-10-19 15:58:55	2026-10-19 15:58:55
+108	32	839	3	145.55	2026-10-19 15:58:55	2026-10-19 15:58:55
+109	32	454	4	35.97	2026-10-19 15:58:55	2026-10-19 15:58:55
+110	33	841	4	72.09	2026-10-19 15:58:55	2026-10-19 15:58:55
+111	33	296	6	45.48	2026-10-19 15:58:55	2026-10-19 15:58:55
+112	33	857	5	13.39	2026-10-19 15:58:55	2026-10-19 15:58:55
+113	33	628	7	62.07	2026-10-19 15:58:55	2026-10-19 15:58:55
+114	34	856	6	57.11	2026-10-19 15:58:55	2026-10-19 15:58:55
+115	35	174	3	140.45	2026-10-19 15:58:55	2026-10-19 15:58:55
+116	36	662	2	96.98	2026-10-19 15:58:55	2026-10-19 15:58:55
+117	36	906	6	140.30	2026-10-19 15:58:55	2026-10-19 15:58:55
+118	37	326	4	40.53	2026-10-19 15:58:55	2026-10-19 15:58:55
+119	37	349	4	8.33	2026-10-19 15:58:55	2026-10-19 15:58:55
+120	37	794	7	7.40	2026-10-19 15:58:55	2026-10-19 15:58:55
+121	37	9	2	9.00	2026-10-19 15:58:55	2026-10-19 15:58:55
+122	38	381	3	100.28	2026-10-19 15:58:55	2026-10-19 15:58:55
+123	38	187	1	147.70	2026-10-19 15:58:55	2026-10-19 15:58:55
+124	38	224	2	81.53	2026-10-19 15:58:55	2026-10-19 15:58:55
+125	38	235	4	122.69	2026-10-19 15:58:55	2026-10-19 15:58:55
+126	38	431	3	43.27	2026-10-19 15:58:55	2026-10-19 15:58:55
+127	38	319	2	8.15	2026-10-19 15:58:55	2026-10-19 15:58:55
+128	39	172	6	146.07	2026-10-19 15:58:55	2026-10-19 15:58:55
+129	39	836	5	75.35	2026-10-19 15:58:55	2026-10-19 15:58:55
+130	39	54	3	63.64	2026-10-19 15:58:55	2026-10-19 15:58:55
+131	39	446	2	108.64	2026-10-19 15:58:55	2026-10-19 15:58:55
+132	39	610	6	44.51	2026-10-19 15:58:55	2026-10-19 15:58:55
+133	40	417	4	83.86	2026-10-19 15:58:55	2026-10-19 15:58:55
+134	40	316	8	38.75	2026-10-19 15:58:55	2026-10-19 15:58:55
+135	40	342	4	115.18	2026-10-19 15:58:56	2026-10-19 15:58:56
+136	40	771	7	104.34	2026-10-19 15:58:56	2026-10-19 15:58:56
+137	40	841	8	72.09	2026-10-19 15:58:56	2026-10-19 15:58:56
+138	41	365	2	114.09	2026-10-19 15:58:56	2026-10-19 15:58:56
+139	42	960	3	121.09	2026-10-19 15:58:56	2026-10-19 15:58:56
+140	42	735	8	25.21	2026-10-19 15:58:56	2026-10-19 15:58:56
+141	42	441	2	103.22	2026-10-19 15:58:56	2026-10-19 15:58:56
+142	42	796	5	55.51	2026-10-19 15:58:56	2026-10-19 15:58:56
+143	42	880	8	9.84	2026-10-19 15:58:56	2026-10-19 15:58:56
+144	43	556	1	15.74	2026-10-19 15:58:56	2026-10-19 15:58:56
+145	43	898	5	140.88	2026-10-19 15:58:56	2026-10-19 15:58:56
+146	43	761	8	8.80	2026-10-19 15:58:56	2026-10-19 15:58:56
+147	43	775	1	79.25	2026-10-19 15:58:56	2026-10-19 15:58:56
+148	43	126	1	141.02	2026-10-19 15:58:56	2026-10-19 15:58:56
+149	43	867	6	54.52	2026-10-19 15:58:56	2026-10-19 15:58:56
+150	44	151	1	32.42	2026-10-19 15:58:56	2026-10-19 15:58:56
+151	44	542	5	65.80	2026-10-19 15:58:56	2026-10-19 15:58:56
+152	44	418	7	107.84	2026-10-19 15:58:56	2026-10-19 15:58:56
+153	44	446	4	108.64	2026-10-19 15:58:56	2026-10-19 15:58:56
+154	44	611	2	20.97	2026-10-19 15:58:56	2026-10-19 15:58:56
+155	45	356	6	90.68	2026-10-19 15:58:56	2026-10-19 15:58:56
+156	45	468	4	129.72	2026-10-19 15:58:56	2026-10-19 15:58:56
+157	45	993	4	12.87	2026-10-19 15:58:56	2026-10-19 15:58:56
+158	45	790	7	30.52	2026-10-19 15:58:56	2026-10-19 15:58:56
+159	45	660	5	135.97	2026-10-19 15:58:56	2026-10-19 15:58:56
+160	45	375	3	41.11	2026-10-19 15:58:56	2026-10-19 15:58:56
+161	46	518	1	27.61	2026-10-19 15:58:56	2026-10-19 15:58:56
+162	46	602	2	80.84	2026-10-19 15:58:56	2026-10-19 15:58:56
+163	46	49	2	44.97	2026-10-19 15:58:56	2026-10-19 15:58:56
+164	46	281	3	88.72	2026-10-19 15:58:56	2026-10-19 15:58:56
+165	47	304	1	8.87	2026-10-19 15:58:56	2026-10-19 15:58:56
+166	47	938	4	99.08	2026-10-19 15:58:56	2026-10-19 15:58:56
+167	47	912	6	92.43	2026-10-19 15:58:56	2026-10-19 15:58:56
+168	47	436	3	131.35	2026-10-19 15:58:56	2026-10-19 15:58:56
+169	48	352	1	76.73	2026-10-19 15:58:56	2026-10-19 15:58:56
+170	48	760	1	20.92	2026-10-19 15:58:56	2026-10-19 15:58:56
+171	48	933	5	122.38	2026-10-19 15:58:56	2026-10-19 15:58:56
+172	48	409	1	11.18	2026-10-19 15:58:56	2026-10-19 15:58:56
+173	49	182	7	44.86	2026-10-19 15:58:56	2026-10-19 15:58:56
+174	49	102	4	118.72	2026-10-19 15:58:56	2026-10-19 15:58:56
+175	50	849	2	102.02	2026-10-19 15:58:56	2026-10-19 15:58:56
+176	51	699	3	34.26	2026-10-19 15:58:56	2026-10-19 15:58:56
+177	52	34	2	50.37	2026-10-19 15:58:56	2026-10-19 15:58:56
+178	52	573	8	117.51	2026-10-19 15:58:56	2026-10-19 15:58:56
+179	52	821	6	126.25	2026-10-19 15:58:56	2026-10-19 15:58:56
+180	52	898	5	140.88	2026-10-19 15:58:56	2026-10-19 15:58:56
+181	52	929	3	132.93	2026-10-19 15:58:56	2026-10-19 15:58:56
+182	53	636	8	33.76	2026-10-19 15:58:56	2026-10-19 15:58:56
+183	53	928	6	98.75	2026-10-19 15:58:56	2026-10-19 15:58:56
+184	53	123	1	149.26	2026-10-19 15:58:56	2026-10-19 15:58:56
+185	54	266	6	68.52	2026-10-19 15:58:56	2026-10-19 15:58:56
+186	54	400	4	31.90	2026-10-19 15:58:56	2026-10-19 15:58:56
+187	54	531	8	69.28	2026-10-19 15:58:56	2026-10-19 15:58:56
+188	54	299	8	121.64	2026-10-19 15:58:57	2026-10-19 15:58:57
+189	54	898	6	140.88	2026-10-19 15:58:57	2026-10-19 15:58:57
+190	54	12	1	12.50	2026-10-19 15:58:57	2026-10-19 15:58:57
+191	55	673	3	115.98	2026-10-19 15:58:57	2026-10-19 15:58:57
+192	56	813	7	67.34	2026-10-19 15:58:57	2026-10-19 15:58:57
+193	56	760	4	20.92	2026-10-19 15:58:57	2026-10-19 15:58:57
+194	56	707	5	35.88	2026-10-19 15:58:57	2026-10-19 15:58:57
+195	56	1	2	8.50	2026-10-19 15:58:57	2026-10-19 15:58:57
+196	57	983	5	34.04	2026-10-19 15:58:57	2026-10-19 15:58:57
+197	57	431	6	43.27	2026-10-19 15:58:57	2026-10-19 15:58:57
+198	57	990	5	96.87	2026-10-19 15:58:57	2026-10-19 15:58:57
+199	57	947	8	108.23	2026-10-19 15:58:57	2026-10-19 15:58:57
+200	57	392	3	112.27	2026-10-19 15:58:57	2026-10-19 15:58:57
+201	57	104	3	51.55	2026-10-19 15:58:57	2026-10-19 15:58:57
+202	58	238	8	25.62	2026-10-19 15:58:57	2026-10-19 15:58:57
+203	58	290	4	54.16	2026-10-19 15:58:57	2026-10-19 15:58:57
+204	58	600	4	91.66	2026-10-19 15:58:57	2026-10-19 15:58:57
+205	58	445	3	132.18	2026-10-19 15:58:57	2026-10-19 15:58:57
+206	58	101	1	108.56	2026-10-19 15:58:57	2026-10-19 15:58:57
+207	59	362	2	6.49	2026-10-19 15:58:57	2026-10-19 15:58:57
+208	59	906	2	140.30	2026-10-19 15:58:57	2026-10-19 15:58:57
+209	59	650	1	83.13	2026-10-19 15:58:57	2026-10-19 15:58:57
+210	59	716	4	109.46	2026-10-19 15:58:57	2026-10-19 15:58:57
+211	59	744	6	29.99	2026-10-19 15:58:57	2026-10-19 15:58:57
+212	59	648	4	122.75	2026-10-19 15:58:57	2026-10-19 15:58:57
+213	60	925	7	49.79	2026-10-19 15:58:57	2026-10-19 15:58:57
+214	60	218	8	35.75	2026-10-19 15:58:57	2026-10-19 15:58:57
+215	60	107	5	99.83	2026-10-19 15:58:57	2026-10-19 15:58:57
+216	60	886	3	104.28	2026-10-19 15:58:57	2026-10-19 15:58:57
+217	60	806	4	89.07	2026-10-19 15:58:57	2026-10-19 15:58:57
+218	61	972	8	120.17	2026-10-19 15:58:57	2026-10-19 15:58:57
+219	61	275	6	117.32	2026-10-19 15:58:57	2026-10-19 15:58:57
+220	61	389	4	84.67	2026-10-19 15:58:57	2026-10-19 15:58:57
+221	62	103	2	107.64	2026-10-19 15:58:57	2026-10-19 15:58:57
+222	62	867	6	54.52	2026-10-19 15:58:57	2026-10-19 15:58:57
+223	62	459	6	42.13	2026-10-19 15:58:57	2026-10-19 15:58:57
+224	62	617	2	32.34	2026-10-19 15:58:57	2026-10-19 15:58:57
+225	62	931	7	81.16	2026-10-19 15:58:57	2026-10-19 15:58:57
+226	63	792	2	74.48	2026-10-19 15:58:57	2026-10-19 15:58:57
+227	63	912	5	92.43	2026-10-19 15:58:57	2026-10-19 15:58:57
+228	63	748	6	104.47	2026-10-19 15:58:57	2026-10-19 15:58:57
+229	64	357	6	17.35	2026-10-19 15:58:57	2026-10-19 15:58:57
+230	64	903	8	119.89	2026-10-19 15:58:57	2026-10-19 15:58:57
+231	64	188	7	80.28	2026-10-19 15:58:57	2026-10-19 15:58:57
+232	64	675	5	75.20	2026-10-19 15:58:57	2026-10-19 15:58:57
+233	64	975	2	134.50	2026-10-19 15:58:57	2026-10-19 15:58:57
+234	65	937	2	24.53	2026-10-19 15:58:57	2026-10-19 15:58:57
+235	66	322	7	92.24	2026-10-19 15:58:57	2026-10-19 15:58:57
+236	66	312	7	28.60	2026-10-19 15:58:57	2026-10-19 15:58:57
+237	67	67	1	134.35	2026-10-19 15:58:57	2026-10-19 15:58:57
+238	67	320	3	86.32	2026-10-19 15:58:57	2026-10-19 15:58:57
+239	67	676	7	101.97	2026-10-19 15:58:57	2026-10-19 15:58:57
+240	67	869	6	31.21	2026-10-19 15:58:57	2026-10-19 15:58:57
+241	67	989	4	32.64	2026-10-19 15:58:57	2026-10-19 15:58:57
+242	68	392	3	112.27	2026-10-19 15:58:57	2026-10-19 15:58:57
+243	69	216	7	94.02	2026-10-19 15:58:57	2026-10-19 15:58:57
+244	69	841	8	72.09	2026-10-19 15:58:57	2026-10-19 15:58:57
+245	70	216	8	94.02	2026-10-19 15:58:58	2026-10-19 15:58:58
+246	70	35	1	122.01	2026-10-19 15:58:58	2026-10-19 15:58:58
+247	70	311	6	35.11	2026-10-19 15:58:58	2026-10-19 15:58:58
+248	70	464	8	51.92	2026-10-19 15:58:58	2026-10-19 15:58:58
+249	70	981	5	139.72	2026-10-19 15:58:58	2026-10-19 15:58:58
+250	71	977	4	118.81	2026-10-19 15:58:58	2026-10-19 15:58:58
+251	71	304	1	8.87	2026-10-19 15:58:58	2026-10-19 15:58:58
+252	71	402	4	149.31	2026-10-19 15:58:58	2026-10-19 15:58:58
+253	71	627	1	122.18	2026-10-19 15:58:58	2026-10-19 15:58:58
+254	72	816	2	95.47	2026-10-19 15:58:58	2026-10-19 15:58:58
+255	72	541	5	57.39	2026-10-19 15:58:58	2026-10-19 15:58:58
+256	73	38	1	10.28	2026-10-19 15:58:58	2026-10-19 15:58:58
+257	73	254	1	107.92	2026-10-19 15:58:58	2026-10-19 15:58:58
+258	73	437	8	35.61	2026-10-19 15:58:58	2026-10-19 15:58:58
+259	73	810	1	32.38	2026-10-19 15:58:58	2026-10-19 15:58:58
+260	74	865	2	77.74	2026-10-19 15:58:58	2026-10-19 15:58:58
+261	74	532	5	99.87	2026-10-19 15:58:58	2026-10-19 15:58:58
+262	74	705	6	111.72	2026-10-19 15:58:58	2026-10-19 15:58:58
+263	74	704	6	26.31	2026-10-19 15:58:58	2026-10-19 15:58:58
+264	74	676	1	101.97	2026-10-19 15:58:58	2026-10-19 15:58:58
+265	75	266	4	68.52	2026-10-19 15:58:58	2026-10-19 15:58:58
+266	76	507	4	65.37	2026-10-19 15:58:58	2026-10-19 15:58:58
+267	76	540	5	90.10	2026-10-19 15:58:58	2026-10-19 15:58:58
+268	76	371	3	76.37	2026-10-19 15:58:58	2026-10-19 15:58:58
+269	76	254	1	107.92	2026-10-19 15:58:58	2026-10-19 15:58:58
+270	76	479	3	134.49	2026-10-19 15:58:58	2026-10-19 15:58:58
+271	76	253	7	61.78	2026-10-19 15:58:58	2026-10-19 15:58:58
+272	77	896	1	54.48	2026-10-19 15:58:58	2026-10-19 15:58:58
+273	77	346	8	93.61	2026-10-19 15:58:58	2026-10-19 15:58:58
+274	77	217	1	92.41	2026-10-19 15:58:58	2026-10-19 15:58:58
+275	77	408	3	54.08	2026-10-19 15:58:58	2026-10-19 15:58:58
+276	77	383	1	50.06	2026-10-19 15:58:58	2026-10-19 15:58:58
+277	77	805	6	98.87	2026-10-19 15:58:58	2026-10-19 15:58:58
+278	78	143	3	93.43	2026-10-19 15:58:58	2026-10-19 15:58:58
+279	78	271	8	26.48	2026-10-19 15:58:58	2026-10-19 15:58:58
+280	78	316	5	38.75	2026-10-19 15:58:58	2026-10-19 15:58:58
+281	78	881	3	144.20	2026-10-19 15:58:58	2026-10-19 15:58:58
+282	78	721	3	131.15	2026-10-19 15:58:58	2026-10-19 15:58:58
+283	79	203	4	83.08	2026-10-19 15:58:58	2026-10-19 15:58:58
+284	79	294	8	16.23	2026-10-19 15:58:58	2026-10-19 15:58:58
+285	79	763	1	130.25	2026-10-19 15:58:58	2026-10-19 15:58:58
+286	79	323	7	14.21	2026-10-19 15:58:58	2026-10-19 15:58:58
+287	79	69	8	15.51	2026-10-19 15:58:58	2026-10-19 15:58:58
+288	79	94	1	68.09	2026-10-19 15:58:58	2026-10-19 15:58:58
+289	80	212	1	5.44	2026-10-19 15:58:58	2026-10-19 15:58:58
+290	80	720	7	72.75	2026-10-19 15:58:58	2026-10-19 15:58:58
+291	80	61	8	62.47	2026-10-19 15:58:58	2026-10-19 15:58:58
+292	80	627	7	122.18	2026-10-19 15:58:58	2026-10-19 15:58:58
+293	80	177	4	25.52	2026-10-19 15:58:58	2026-10-19 15:58:58
+294	81	684	1	77.74	2026-10-19 15:58:58	2026-10-19 15:58:58
+295	81	491	4	85.12	2026-10-19 15:58:58	2026-10-19 15:58:58
+296	81	689	3	47.29	2026-10-19 15:58:58	2026-10-19 15:58:58
+297	81	154	5	26.99	2026-10-19 15:58:58	2026-10-19 15:58:58
+298	81	270	3	126.00	2026-10-19 15:58:58	2026-10-19 15:58:58
+299	82	559	8	33.45	2026-10-19 15:58:58	2026-10-19 15:58:58
+300	82	757	7	59.41	2026-10-19 15:58:58	2026-10-19 15:58:58
+301	83	748	5	104.47	2026-10-19 15:58:59	2026-10-19 15:58:59
+302	83	104	2	51.55	2026-10-19 15:58:59	2026-10-19 15:58:59
+303	83	811	2	121.96	2026-10-19 15:58:59	2026-10-19 15:58:59
+304	83	767	6	104.40	2026-10-19 15:58:59	2026-10-19 15:58:59
+305	83	278	2	103.51	2026-10-19 15:58:59	2026-10-19 15:58:59
+306	84	886	4	104.28	2026-10-19 15:58:59	2026-10-19 15:58:59
+307	84	477	1	127.78	2026-10-19 15:58:59	2026-10-19 15:58:59
+308	84	608	7	125.72	2026-10-19 15:58:59	2026-10-19 15:58:59
+309	84	17	1	5.50	2026-10-19 15:58:59	2026-10-19 15:58:59
+310	84	251	6	28.82	2026-10-19 15:58:59	2026-10-19 15:58:59
+311	84	383	1	50.06	2026-10-19 15:58:59	2026-10-19 15:58:59
+312	85	362	8	6.49	2026-10-19 15:58:59	2026-10-19 15:58:59
+313	85	714	8	37.90	2026-10-19 15:58:59	2026-10-19 15:58:59
+314	86	729	6	42.49	2026-10-19 15:58:59	2026-10-19 15:58:59
+315	86	858	6	24.01	2026-10-19 15:58:59	2026-10-19 15:58:59
+316	86	223	5	125.23	2026-10-19 15:58:59	2026-10-19 15:58:59
+317	86	70	5	25.63	2026-10-19 15:58:59	2026-10-19 15:58:59
+318	86	378	2	18.60	2026-10-19 15:58:59	2026-10-19 15:58:59
+319	86	934	1	143.55	2026-10-19 15:58:59	2026-10-19 15:58:59
+320	87	997	5	82.61	2026-10-19 15:58:59	2026-10-19 15:58:59
+321	87	561	2	44.66	2026-10-19 15:58:59	2026-10-19 15:58:59
+322	88	28	1	28.00	2026-10-19 15:58:59	2026-10-19 15:58:59
+323	88	903	2	119.89	2026-10-19 15:58:59	2026-10-19 15:58:59
+324	88	394	5	128.43	2026-10-19 15:58:59	2026-10-19 15:58:59
+325	88	541	3	57.39	2026-10-19 15:58:59	2026-10-19 15:58:59
+326	88	355	3	94.85	2026-10-19 15:58:59	2026-10-19 15:58:59
+327	89	6	1	22.00	2026-10-19 15:58:59	2026-10-19 15:58:59
+328	89	391	4	8.26	2026-10-19 15:58:59	2026-10-19 15:58:59
+329	89	70	8	25.63	2026-10-19 15:58:59	2026-10-19 15:58:59
+330	89	739	2	80.82	2026-10-19 15:58:59	2026-10-19 15:58:59
+331	90	323	8	14.21	2026-10-19 15:58:59	2026-10-19 15:58:59
+332	90	261	8	97.10	2026-10-19 15:58:59	2026-10-19 15:58:59
+333	90	215	7	77.75	2026-10-19 15:58:59	2026-10-19 15:58:59
+334	90	272	4	24.17	2026-10-19 15:58:59	2026-10-19 15:58:59
+335	90	42	2	133.85	2026-10-19 15:58:59	2026-10-19 15:58:59
+336	91	172	6	146.07	2026-10-19 15:58:59	2026-10-19 15:58:59
+337	91	942	3	10.01	2026-10-19 15:58:59	2026-10-19 15:58:59
+338	91	176	6	110.14	2026-10-19 15:58:59	2026-10-19 15:58:59
+339	91	226	5	21.08	2026-10-19 15:58:59	2026-10-19 15:58:59
+340	92	508	7	58.44	2026-10-19 15:58:59	2026-10-19 15:58:59
+341	93	629	4	131.93	2026-10-19 15:58:59	2026-10-19 15:58:59
+342	93	866	3	122.06	2026-10-19 15:58:59	2026-10-19 15:58:59
+343	93	790	3	30.52	2026-10-19 15:58:59	2026-10-19 15:58:59
+344	93	437	8	35.61	2026-10-19 15:58:59	2026-10-19 15:58:59
+345	94	895	1	108.23	2026-10-19 15:58:59	2026-10-19 15:58:59
+346	94	585	2	93.33	2026-10-19 15:58:59	2026-10-19 15:58:59
+347	94	347	3	88.23	2026-10-19 15:58:59	2026-10-19 15:58:59
+348	95	71	3	75.13	2026-10-19 15:58:59	2026-10-19 15:58:59
+349	95	776	5	39.52	2026-10-19 15:58:59	2026-10-19 15:58:59
+350	95	442	1	45.28	2026-10-19 15:58:59	2026-10-19 15:58:59
+351	95	496	2	66.15	2026-10-19 15:58:59	2026-10-19 15:58:59
+352	96	28	1	28.00	2026-10-19 15:58:59	2026-10-19 15:58:59
+353	96	645	5	61.95	2026-10-19 15:58:59	2026-10-19 15:58:59
+354	97	762	7	104.08	2026-10-19 15:58:59	2026-10-19 15:58:59
+355	97	361	1	40.95	2026-10-19 15:59:00	2026-10-19 15:59:00
+356	97	135	3	51.43	2026-10-19 15:59:00	2026-10-19 15:59:00
+357	97	682	5	16.95	2026-10-19 15:59:00	2026-10-19 15:59:00
+358	98	499	8	79.87	2026-10-19 15:59:00	2026-10-19 15:59:00
+359	98	324	7	94.68	2026-10-19 15:59:00	2026-10-19 15:59:00
+360	98	991	4	121.80	2026-10-19 15:59:00	2026-10-19 15:59:00
+361	98	377	4	114.27	2026-10-19 15:59:00	2026-10-19 15:59:00
+362	99	356	8	90.68	2026-10-19 15:59:00	2026-10-19 15:59:00
+363	100	695	2	108.68	2026-10-19 15:59:00	2026-10-19 15:59:00
+364	100	163	2	24.72	2026-10-19 15:59:00	2026-10-19 15:59:00
+365	100	914	5	26.89	2026-10-19 15:59:00	2026-10-19 15:59:00
+366	100	208	3	60.72	2026-10-19 15:59:00	2026-10-19 15:59:00
+367	100	51	6	13.41	2026-10-19 15:59:00	2026-10-19 15:59:00
+368	100	999	2	137.14	2026-10-19 15:59:00	2026-10-19 15:59:00
+369	101	892	8	8.25	2026-10-19 15:59:00	2026-10-19 15:59:00
+370	101	270	7	126.00	2026-10-19 15:59:00	2026-10-19 15:59:00
+371	101	259	7	141.21	2026-10-19 15:59:00	2026-10-19 15:59:00
+372	101	818	5	16.66	2026-10-19 15:59:00	2026-10-19 15:59:00
+373	101	925	6	49.79	2026-10-19 15:59:00	2026-10-19 15:59:00
+374	101	573	8	117.51	2026-10-19 15:59:00	2026-10-19 15:59:00
+375	102	806	7	89.07	2026-10-19 15:59:00	2026-10-19 15:59:00
+376	103	53	2	135.26	2026-10-19 15:59:00	2026-10-19 15:59:00
+377	103	750	2	23.96	2026-10-19 15:59:00	2026-10-19 15:59:00
+378	103	364	7	126.52	2026-10-19 15:59:00	2026-10-19 15:59:00
+379	104	298	3	7.88	2026-10-19 15:59:00	2026-10-19 15:59:00
+380	104	951	6	125.48	2026-10-19 15:59:00	2026-10-19 15:59:00
+381	104	103	7	107.64	2026-10-19 15:59:00	2026-10-19 15:59:00
+382	104	845	5	122.34	2026-10-19 15:59:00	2026-10-19 15:59:00
+383	104	132	2	64.93	2026-10-19 15:59:00	2026-10-19 15:59:00
+384	104	65	1	51.99	2026-10-19 15:59:00	2026-10-19 15:59:00
+385	105	29	1	16.00	2026-10-19 15:59:00	2026-10-19 15:59:00
+386	105	804	5	56.13	2026-10-19 15:59:00	2026-10-19 15:59:00
+387	105	277	1	86.30	2026-10-19 15:59:00	2026-10-19 15:59:00
+388	105	376	5	114.71	2026-10-19 15:59:00	2026-10-19 15:59:00
+389	105	567	3	12.54	2026-10-19 15:59:00	2026-10-19 15:59:00
+390	106	917	6	41.56	2026-10-19 15:59:00	2026-10-19 15:59:00
+391	107	152	3	28.21	2026-10-19 15:59:00	2026-10-19 15:59:00
+392	108	592	4	47.20	2026-10-19 15:59:00	2026-10-19 15:59:00
+393	108	401	4	36.52	2026-10-19 15:59:00	2026-10-19 15:59:00
+394	109	133	1	148.97	2026-10-19 15:59:00	2026-10-19 15:59:00
+395	109	426	5	94.15	2026-10-19 15:59:00	2026-10-19 15:59:00
+396	109	790	7	30.52	2026-10-19 15:59:00	2026-10-19 15:59:00
+397	110	704	3	26.31	2026-10-19 15:59:00	2026-10-19 15:59:00
+398	110	479	3	134.49	2026-10-19 15:59:00	2026-10-19 15:59:00
+399	110	217	4	92.41	2026-10-19 15:59:00	2026-10-19 15:59:00
+400	110	99	8	60.50	2026-10-19 15:59:00	2026-10-19 15:59:00
+401	110	806	8	89.07	2026-10-19 15:59:00	2026-10-19 15:59:00
+402	110	739	8	80.82	2026-10-19 15:59:00	2026-10-19 15:59:00
+403	111	672	1	7.22	2026-10-19 15:59:00	2026-10-19 15:59:00
+404	111	722	8	67.90	2026-10-19 15:59:00	2026-10-19 15:59:00
+405	111	413	2	58.61	2026-10-19 15:59:00	2026-10-19 15:59:00
+406	111	383	4	50.06	2026-10-19 15:59:00	2026-10-19 15:59:00
+407	111	703	5	68.65	2026-10-19 15:59:00	2026-10-19 15:59:00
+408	111	792	1	74.48	2026-10-19 15:59:00	2026-10-19 15:59:00
+409	112	288	5	104.48	2026-10-19 15:59:00	2026-10-19 15:59:00
+410	112	96	5	68.08	2026-10-19 15:59:00	2026-10-19 15:59:00
+411	113	11	1	15.00	2026-10-19 15:59:00	2026-10-19 15:59:00
+412	113	870	8	47.58	2026-10-19 15:59:00	2026-10-19 15:59:00
+413	113	824	6	18.83	2026-10-19 15:59:00	2026-10-19 15:59:00
+414	113	528	1	36.91	2026-10-19 15:59:00	2026-10-19 15:59:00
+415	113	883	4	93.79	2026-10-19 15:59:00	2026-10-19 15:59:00
+416	114	795	1	148.01	2026-10-19 15:59:00	2026-10-19 15:59:00
+417	114	825	1	89.58	2026-10-19 15:59:00	2026-10-19 15:59:00
+418	115	891	4	117.86	2026-10-19 15:59:01	2026-10-19 15:59:01
+419	115	91	8	20.88	2026-10-19 15:59:01	2026-10-19 15:59:01
+420	115	252	5	119.37	2026-10-19 15:59:01	2026-10-19 15:59:01
+421	115	466	5	72.61	2026-10-19 15:59:01	2026-10-19 15:59:01
+422	115	298	8	7.88	2026-10-19 15:59:01	2026-10-19 15:59:01
+423	116	450	6	12.63	2026-10-19 15:59:01	2026-10-19 15:59:01
+424	117	416	7	108.40	2026-10-19 15:59:01	2026-10-19 15:59:01
+425	118	389	2	84.67	2026-10-19 15:59:01	2026-10-19 15:59:01
+426	118	624	6	136.08	2026-10-19 15:59:01	2026-10-19 15:59:01
+427	118	867	2	54.52	2026-10-19 15:59:01	2026-10-19 15:59:01
+428	119	53	6	135.26	2026-10-19 15:59:01	2026-10-19 15:59:01
+429	119	137	7	109.43	2026-10-19 15:59:01	2026-10-19 15:59:01
+430	119	953	3	51.12	2026-10-19 15:59:01	2026-10-19 15:59:01
+431	119	15	3	45.00	2026-10-19 15:59:01	2026-10-19 15:59:01
+432	120	1000	7	106.85	2026-10-19 15:59:01	2026-10-19 15:59:01
+433	120	263	1	32.74	2026-10-19 15:59:01	2026-10-19 15:59:01
+434	120	436	5	131.35	2026-10-19 15:59:01	2026-10-19 15:59:01
+435	120	485	2	115.15	2026-10-19 15:59:01	2026-10-19 15:59:01
+436	120	401	2	36.52	2026-10-19 15:59:01	2026-10-19 15:59:01
+437	121	506	3	139.08	2026-10-19 15:59:01	2026-10-19 15:59:01
+438	121	75	7	45.51	2026-10-19 15:59:01	2026-10-19 15:59:01
+439	121	99	1	60.50	2026-10-19 15:59:01	2026-10-19 15:59:01
+440	122	897	8	24.42	2026-10-19 15:59:01	2026-10-19 15:59:01
+441	122	513	4	37.58	2026-10-19 15:59:01	2026-10-19 15:59:01
+442	122	96	8	68.08	2026-10-19 15:59:01	2026-10-19 15:59:01
+443	122	194	4	132.16	2026-10-19 15:59:01	2026-10-19 15:59:01
+444	122	870	1	47.58	2026-10-19 15:59:01	2026-10-19 15:59:01
+445	123	698	8	35.48	2026-10-19 15:59:01	2026-10-19 15:59:01
+446	123	37	2	26.18	2026-10-19 15:59:01	2026-10-19 15:59:01
+447	124	499	2	79.87	2026-10-19 15:59:01	2026-10-19 15:59:01
+448	124	40	1	72.99	2026-10-19 15:59:01	2026-10-19 15:59:01
+449	125	958	1	24.10	2026-10-19 15:59:01	2026-10-19 15:59:01
+450	125	638	1	118.72	2026-10-19 15:59:01	2026-10-19 15:59:01
+451	125	399	3	141.97	2026-10-19 15:59:01	2026-10-19 15:59:01
+452	125	992	4	85.28	2026-10-19 15:59:01	2026-10-19 15:59:01
+453	125	998	1	80.27	2026-10-19 15:59:01	2026-10-19 15:59:01
+454	125	451	3	41.47	2026-10-19 15:59:01	2026-10-19 15:59:01
+455	126	337	8	132.30	2026-10-19 15:59:01	2026-10-19 15:59:01
+456	126	804	2	56.13	2026-10-19 15:59:01	2026-10-19 15:59:01
+457	127	229	8	129.01	2026-10-19 15:59:01	2026-10-19 15:59:01
+458	127	274	4	146.61	2026-10-19 15:59:01	2026-10-19 15:59:01
+459	127	857	8	13.39	2026-10-19 15:59:01	2026-10-19 15:59:01
+460	127	454	2	35.97	2026-10-19 15:59:01	2026-10-19 15:59:01
+461	127	273	7	76.33	2026-10-19 15:59:01	2026-10-19 15:59:01
+462	128	369	5	116.51	2026-10-19 15:59:01	2026-10-19 15:59:01
+463	128	257	3	90.83	2026-10-19 15:59:01	2026-10-19 15:59:01
+464	128	111	8	102.89	2026-10-19 15:59:01	2026-10-19 15:59:01
+465	128	892	1	8.25	2026-10-19 15:59:01	2026-10-19 15:59:01
+466	129	664	8	101.54	2026-10-19 15:59:01	2026-10-19 15:59:01
+467	129	935	5	25.06	2026-10-19 15:59:01	2026-10-19 15:59:01
+468	129	434	7	20.46	2026-10-19 15:59:01	2026-10-19 15:59:01
+469	129	909	7	63.86	2026-10-19 15:59:01	2026-10-19 15:59:01
+470	130	694	7	15.81	2026-10-19 15:59:01	2026-10-19 15:59:01
+471	130	521	6	43.94	2026-10-19 15:59:01	2026-10-19 15:59:01
+472	130	674	4	122.60	2026-10-19 15:59:01	2026-10-19 15:59:01
+473	130	98	4	113.36	2026-10-19 15:59:01	2026-10-19 15:59:01
+474	131	214	4	77.76	2026-10-19 15:59:01	2026-10-19 15:59:01
+475	131	514	4	96.48	2026-10-19 15:59:01	2026-10-19 15:59:01
+476	131	559	5	33.45	2026-10-19 15:59:01	2026-10-19 15:59:01
+477	131	432	2	96.49	2026-10-19 15:59:01	2026-10-19 15:59:01
+478	131	882	3	143.89	2026-10-19 15:59:01	2026-10-19 15:59:01
+479	132	69	3	15.51	2026-10-19 15:59:02	2026-10-19 15:59:02
+480	132	509	2	27.22	2026-10-19 15:59:02	2026-10-19 15:59:02
+481	132	426	1	94.15	2026-10-19 15:59:02	2026-10-19 15:59:02
+482	132	83	7	122.01	2026-10-19 15:59:02	2026-10-19 15:59:02
+483	133	680	3	24.44	2026-10-19 15:59:02	2026-10-19 15:59:02
+484	133	809	5	96.84	2026-10-19 15:59:02	2026-10-19 15:59:02
+485	133	204	6	34.88	2026-10-19 15:59:02	2026-10-19 15:59:02
+486	134	13	2	14.00	2026-10-19 15:59:02	2026-10-19 15:59:02
+487	134	912	2	92.43	2026-10-19 15:59:02	2026-10-19 15:59:02
+488	134	886	8	104.28	2026-10-19 15:59:02	2026-10-19 15:59:02
+489	134	620	7	107.38	2026-10-19 15:59:02	2026-10-19 15:59:02
+490	134	111	8	102.89	2026-10-19 15:59:02	2026-10-19 15:59:02
+491	135	190	6	52.78	2026-10-19 15:59:02	2026-10-19 15:59:02
+492	135	928	7	98.75	2026-10-19 15:59:02	2026-10-19 15:59:02
+493	136	205	6	110.91	2026-10-19 15:59:02	2026-10-19 15:59:02
+494	136	371	2	76.37	2026-10-19 15:59:02	2026-10-19 15:59:02
+495	136	977	6	118.81	2026-10-19 15:59:02	2026-10-19 15:59:02
+496	136	863	6	105.83	2026-10-19 15:59:02	2026-10-19 15:59:02
+497	136	201	5	72.24	2026-10-19 15:59:02	2026-10-19 15:59:02
+498	137	886	5	104.28	2026-10-19 15:59:02	2026-10-19 15:59:02
+499	137	457	8	9.82	2026-10-19 15:59:02	2026-10-19 15:59:02
+500	137	855	4	59.93	2026-10-19 15:59:02	2026-10-19 15:59:02
+501	137	451	7	41.47	2026-10-19 15:59:02	2026-10-19 15:59:02
+502	138	871	1	7.85	2026-10-19 15:59:02	2026-10-19 15:59:02
+503	138	492	5	116.10	2026-10-19 15:59:02	2026-10-19 15:59:02
+504	138	589	7	133.11	2026-10-19 15:59:02	2026-10-19 15:59:02
+505	138	327	3	12.11	2026-10-19 15:59:02	2026-10-19 15:59:02
+506	138	694	3	15.81	2026-10-19 15:59:02	2026-10-19 15:59:02
+507	138	533	1	20.78	2026-10-19 15:59:02	2026-10-19 15:59:02
+508	139	563	2	21.56	2026-10-19 15:59:02	2026-10-19 15:59:02
+509	139	593	7	58.92	2026-10-19 15:59:02	2026-10-19 15:59:02
+510	139	315	4	127.72	2026-10-19 15:59:02	2026-10-19 15:59:02
+511	140	387	5	47.37	2026-10-19 15:59:02	2026-10-19 15:59:02
+512	140	721	3	131.15	2026-10-19 15:59:02	2026-10-19 15:59:02
+513	140	870	8	47.58	2026-10-19 15:59:02	2026-10-19 15:59:02
+514	141	592	5	47.20	2026-10-19 15:59:02	2026-10-19 15:59:02
+515	141	341	5	45.77	2026-10-19 15:59:02	2026-10-19 15:59:02
+516	141	538	2	111.01	2026-10-19 15:59:02	2026-10-19 15:59:02
+517	141	141	6	97.03	2026-10-19 15:59:02	2026-10-19 15:59:02
+518	141	539	1	130.56	2026-10-19 15:59:02	2026-10-19 15:59:02
+519	141	811	7	121.96	2026-10-19 15:59:02	2026-10-19 15:59:02
+520	142	571	1	23.89	2026-10-19 15:59:02	2026-10-19 15:59:02
+521	142	890	6	66.34	2026-10-19 15:59:02	2026-10-19 15:59:02
+522	142	740	1	10.15	2026-10-19 15:59:02	2026-10-19 15:59:02
+523	142	441	2	103.22	2026-10-19 15:59:02	2026-10-19 15:59:02
+524	142	512	1	136.36	2026-10-19 15:59:02	2026-10-19 15:59:02
+525	142	782	4	78.63	2026-10-19 15:59:02	2026-10-19 15:59:02
+526	143	491	5	85.12	2026-10-19 15:59:02	2026-10-19 15:59:02
+527	143	818	4	16.66	2026-10-19 15:59:02	2026-10-19 15:59:02
+528	144	121	6	92.99	2026-10-19 15:59:02	2026-10-19 15:59:02
+529	144	859	2	49.92	2026-10-19 15:59:02	2026-10-19 15:59:02
+530	144	532	5	99.87	2026-10-19 15:59:02	2026-10-19 15:59:02
+531	144	597	8	63.32	2026-10-19 15:59:02	2026-10-19 15:59:02
+532	145	166	4	56.88	2026-10-19 15:59:03	2026-10-19 15:59:03
+533	145	578	8	41.85	2026-10-19 15:59:03	2026-10-19 15:59:03
+534	145	88	5	95.43	2026-10-19 15:59:03	2026-10-19 15:59:03
+535	145	589	8	133.11	2026-10-19 15:59:03	2026-10-19 15:59:03
+536	145	312	1	28.60	2026-10-19 15:59:03	2026-10-19 15:59:03
+537	145	812	6	113.67	2026-10-19 15:59:03	2026-10-19 15:59:03
+538	146	771	6	104.34	2026-10-19 15:59:03	2026-10-19 15:59:03
+539	147	192	6	20.30	2026-10-19 15:59:03	2026-10-19 15:59:03
+540	147	418	6	107.84	2026-10-19 15:59:03	2026-10-19 15:59:03
+541	147	226	2	21.08	2026-10-19 15:59:03	2026-10-19 15:59:03
+542	147	184	7	69.16	2026-10-19 15:59:03	2026-10-19 15:59:03
+543	148	646	2	132.76	2026-10-19 15:59:03	2026-10-19 15:59:03
+544	148	280	6	73.77	2026-10-19 15:59:03	2026-10-19 15:59:03
+545	148	649	5	34.79	2026-10-19 15:59:03	2026-10-19 15:59:03
+546	148	989	3	32.64	2026-10-19 15:59:03	2026-10-19 15:59:03
+547	148	65	7	51.99	2026-10-19 15:59:03	2026-10-19 15:59:03
+548	148	613	7	19.19	2026-10-19 15:59:03	2026-10-19 15:59:03
+549	149	414	6	12.41	2026-10-19 15:59:03	2026-10-19 15:59:03
+550	149	421	3	15.67	2026-10-19 15:59:03	2026-10-19 15:59:03
+551	149	458	1	115.72	2026-10-19 15:59:03	2026-10-19 15:59:03
+552	149	568	7	67.67	2026-10-19 15:59:03	2026-10-19 15:59:03
+553	150	92	1	53.36	2026-10-19 15:59:03	2026-10-19 15:59:03
+554	150	185	1	63.00	2026-10-19 15:59:03	2026-10-19 15:59:03
+555	151	913	2	13.43	2026-10-19 15:59:03	2026-10-19 15:59:03
+556	152	843	2	77.44	2026-10-19 15:59:03	2026-10-19 15:59:03
+557	152	110	8	50.66	2026-10-19 15:59:03	2026-10-19 15:59:03
+558	153	525	3	99.58	2026-10-19 15:59:03	2026-10-19 15:59:03
+559	153	165	7	97.97	2026-10-19 15:59:03	2026-10-19 15:59:03
+560	153	769	2	46.02	2026-10-19 15:59:03	2026-10-19 15:59:03
+561	153	243	5	49.93	2026-10-19 15:59:03	2026-10-19 15:59:03
+562	154	400	3	31.90	2026-10-19 15:59:03	2026-10-19 15:59:03
+563	154	658	2	120.91	2026-10-19 15:59:03	2026-10-19 15:59:03
+564	154	471	7	18.14	2026-10-19 15:59:03	2026-10-19 15:59:03
+565	155	923	8	54.92	2026-10-19 15:59:03	2026-10-19 15:59:03
+566	155	830	1	148.33	2026-10-19 15:59:03	2026-10-19 15:59:03
+567	155	456	8	7.42	2026-10-19 15:59:03	2026-10-19 15:59:03
+568	155	520	2	6.66	2026-10-19 15:59:03	2026-10-19 15:59:03
+569	156	86	7	65.40	2026-10-19 15:59:03	2026-10-19 15:59:03
+570	156	155	1	21.24	2026-10-19 15:59:03	2026-10-19 15:59:03
+571	156	310	6	7.77	2026-10-19 15:59:03	2026-10-19 15:59:03
+572	156	688	8	127.13	2026-10-19 15:59:03	2026-10-19 15:59:03
+573	157	270	4	126.00	2026-10-19 15:59:03	2026-10-19 15:59:03
+574	157	872	6	11.63	2026-10-19 15:59:03	2026-10-19 15:59:03
+575	158	322	5	92.24	2026-10-19 15:59:03	2026-10-19 15:59:03
+576	158	347	2	88.23	2026-10-19 15:59:03	2026-10-19 15:59:03
+577	159	75	8	45.51	2026-10-19 15:59:03	2026-10-19 15:59:03
+578	159	985	4	37.30	2026-10-19 15:59:03	2026-10-19 15:59:03
+579	159	100	3	58.97	2026-10-19 15:59:03	2026-10-19 15:59:03
+580	159	876	6	112.29	2026-10-19 15:59:03	2026-10-19 15:59:03
+581	160	343	1	44.32	2026-10-19 15:59:04	2026-10-19 15:59:04
+582	160	183	8	90.47	2026-10-19 15:59:04	2026-10-19 15:59:04
+583	161	282	1	106.91	2026-10-19 15:59:04	2026-10-19 15:59:04
+584	162	635	6	56.75	2026-10-19 15:59:04	2026-10-19 15:59:04
+585	163	51	7	13.41	2026-10-19 15:59:04	2026-10-19 15:59:04
+586	163	577	8	66.36	2026-10-19 15:59:04	2026-10-19 15:59:04
+587	163	678	8	75.23	2026-10-19 15:59:04	2026-10-19 15:59:04
+588	163	480	2	110.59	2026-10-19 15:59:04	2026-10-19 15:59:04
+589	164	596	8	123.79	2026-10-19 15:59:04	2026-10-19 15:59:04
+590	164	776	8	39.52	2026-10-19 15:59:04	2026-10-19 15:59:04
+591	164	693	8	121.76	2026-10-19 15:59:04	2026-10-19 15:59:04
+592	164	118	4	33.70	2026-10-19 15:59:04	2026-10-19 15:59:04
+593	164	50	3	131.31	2026-10-19 15:59:04	2026-10-19 15:59:04
+594	165	10	2	11.00	2026-10-19 15:59:04	2026-10-19 15:59:04
+595	165	457	7	9.82	2026-10-19 15:59:04	2026-10-19 15:59:04
+596	165	964	8	26.19	2026-10-19 15:59:04	2026-10-19 15:59:04
+597	165	134	3	147.99	2026-10-19 15:59:04	2026-10-19 15:59:04
+598	165	541	7	57.39	2026-10-19 15:59:04	2026-10-19 15:59:04
+599	166	586	2	58.25	2026-10-19 15:59:04	2026-10-19 15:59:04
+600	166	414	1	12.41	2026-10-19 15:59:04	2026-10-19 15:59:04
+601	166	88	3	95.43	2026-10-19 15:59:04	2026-10-19 15:59:04
+602	166	417	4	83.86	2026-10-19 15:59:04	2026-10-19 15:59:04
+603	166	336	8	104.81	2026-10-19 15:59:04	2026-10-19 15:59:04
+604	166	176	3	110.14	2026-10-19 15:59:04	2026-10-19 15:59:04
+605	167	679	1	107.57	2026-10-19 15:59:04	2026-10-19 15:59:04
+606	168	126	5	141.02	2026-10-19 15:59:04	2026-10-19 15:59:04
+607	168	68	8	89.24	2026-10-19 15:59:04	2026-10-19 15:59:04
+608	168	806	6	89.07	2026-10-19 15:59:04	2026-10-19 15:59:04
+609	169	616	8	84.09	2026-10-19 15:59:04	2026-10-19 15:59:04
+610	169	36	1	105.61	2026-10-19 15:59:04	2026-10-19 15:59:04
+611	170	844	3	69.56	2026-10-19 15:59:04	2026-10-19 15:59:04
+612	170	73	6	129.32	2026-10-19 15:59:04	2026-10-19 15:59:04
+613	170	107	4	99.83	2026-10-19 15:59:04	2026-10-19 15:59:04
+614	170	343	4	44.32	2026-10-19 15:59:04	2026-10-19 15:59:04
+615	170	669	3	35.68	2026-10-19 15:59:04	2026-10-19 15:59:04
+616	170	132	3	64.93	2026-10-19 15:59:04	2026-10-19 15:59:04
+617	171	499	1	79.87	2026-10-19 15:59:04	2026-10-19 15:59:04
+618	171	123	8	149.26	2026-10-19 15:59:04	2026-10-19 15:59:04
+619	171	262	3	128.31	2026-10-19 15:59:04	2026-10-19 15:59:04
+620	171	577	7	66.36	2026-10-19 15:59:04	2026-10-19 15:59:04
+621	171	110	6	50.66	2026-10-19 15:59:04	2026-10-19 15:59:04
+622	172	473	6	100.27	2026-10-19 15:59:04	2026-10-19 15:59:04
+623	172	543	6	70.41	2026-10-19 15:59:04	2026-10-19 15:59:04
+624	172	699	6	34.26	2026-10-19 15:59:04	2026-10-19 15:59:04
+625	172	518	1	27.61	2026-10-19 15:59:04	2026-10-19 15:59:04
+626	172	265	5	9.65	2026-10-19 15:59:04	2026-10-19 15:59:04
+627	172	150	4	134.02	2026-10-19 15:59:04	2026-10-19 15:59:04
+628	173	529	1	26.63	2026-10-19 15:59:04	2026-10-19 15:59:04
+629	173	971	8	7.00	2026-10-19 15:59:04	2026-10-19 15:59:04
+630	173	71	8	75.13	2026-10-19 15:59:04	2026-10-19 15:59:04
+631	174	435	5	78.82	2026-10-19 15:59:05	2026-10-19 15:59:05
+632	174	58	2	53.33	2026-10-19 15:59:05	2026-10-19 15:59:05
+633	174	871	3	7.85	2026-10-19 15:59:05	2026-10-19 15:59:05
+634	174	473	7	100.27	2026-10-19 15:59:05	2026-10-19 15:59:05
+635	174	53	5	135.26	2026-10-19 15:59:05	2026-10-19 15:59:05
+636	174	264	3	101.99	2026-10-19 15:59:05	2026-10-19 15:59:05
+637	175	211	3	132.22	2026-10-19 15:59:05	2026-10-19 15:59:05
+638	175	193	2	61.82	2026-10-19 15:59:05	2026-10-19 15:59:05
+639	175	349	7	8.33	2026-10-19 15:59:05	2026-10-19 15:59:05
+640	175	944	5	81.93	2026-10-19 15:59:05	2026-10-19 15:59:05
+641	176	952	4	30.03	2026-10-19 15:59:05	2026-10-19 15:59:05
+642	176	699	5	34.26	2026-10-19 15:59:05	2026-10-19 15:59:05
+643	176	885	1	147.25	2026-10-19 15:59:05	2026-10-19 15:59:05
+644	176	100	5	58.97	2026-10-19 15:59:05	2026-10-19 15:59:05
+645	177	508	8	58.44	2026-10-19 15:59:05	2026-10-19 15:59:05
+646	177	66	3	21.01	2026-10-19 15:59:05	2026-10-19 15:59:05
+647	177	300	5	33.69	2026-10-19 15:59:05	2026-10-19 15:59:05
+648	177	815	3	52.15	2026-10-19 15:59:05	2026-10-19 15:59:05
+649	178	421	5	15.67	2026-10-19 15:59:05	2026-10-19 15:59:05
+650	178	321	8	131.87	2026-10-19 15:59:05	2026-10-19 15:59:05
+651	178	738	3	144.31	2026-10-19 15:59:05	2026-10-19 15:59:05
+652	178	617	1	32.34	2026-10-19 15:59:05	2026-10-19 15:59:05
+653	178	680	8	24.44	2026-10-19 15:59:05	2026-10-19 15:59:05
+654	179	907	6	45.62	2026-10-19 15:59:05	2026-10-19 15:59:05
+655	180	328	6	70.30	2026-10-19 15:59:05	2026-10-19 15:59:05
+656	180	14	2	10.00	2026-10-19 15:59:05	2026-10-19 15:59:05
+657	180	906	2	140.30	2026-10-19 15:59:05	2026-10-19 15:59:05
+658	180	161	4	91.18	2026-10-19 15:59:05	2026-10-19 15:59:05
+659	180	251	8	28.82	2026-10-19 15:59:05	2026-10-19 15:59:05
+660	180	122	6	60.00	2026-10-19 15:59:05	2026-10-19 15:59:05
+661	181	799	7	86.37	2026-10-19 15:59:05	2026-10-19 15:59:05
+662	181	648	2	122.75	2026-10-19 15:59:05	2026-10-19 15:59:05
+663	182	635	3	56.75	2026-10-19 15:59:05	2026-10-19 15:59:05
+664	182	834	7	30.88	2026-10-19 15:59:05	2026-10-19 15:59:05
+665	182	305	5	91.22	2026-10-19 15:59:05	2026-10-19 15:59:05
+666	182	731	7	19.28	2026-10-19 15:59:05	2026-10-19 15:59:05
+667	182	832	6	102.87	2026-10-19 15:59:05	2026-10-19 15:59:05
+668	182	215	2	77.75	2026-10-19 15:59:05	2026-10-19 15:59:05
+669	183	258	4	93.02	2026-10-19 15:59:05	2026-10-19 15:59:05
+670	183	612	3	38.11	2026-10-19 15:59:05	2026-10-19 15:59:05
+671	184	786	1	148.24	2026-10-19 15:59:05	2026-10-19 15:59:05
+672	184	636	5	33.76	2026-10-19 15:59:05	2026-10-19 15:59:05
+673	184	854	5	86.95	2026-10-19 15:59:05	2026-10-19 15:59:05
+674	184	138	5	56.71	2026-10-19 15:59:05	2026-10-19 15:59:05
+675	184	68	4	89.24	2026-10-19 15:59:05	2026-10-19 15:59:05
+676	185	472	5	49.50	2026-10-19 15:59:05	2026-10-19 15:59:05
+677	185	59	2	114.79	2026-10-19 15:59:05	2026-10-19 15:59:05
+678	185	967	5	42.94	2026-10-19 15:59:05	2026-10-19 15:59:05
+679	185	225	8	71.50	2026-10-19 15:59:05	2026-10-19 15:59:05
+680	185	486	8	116.24	2026-10-19 15:59:05	2026-10-19 15:59:05
+681	185	698	8	35.48	2026-10-19 15:59:05	2026-10-19 15:59:05
+682	186	576	3	54.39	2026-10-19 15:59:05	2026-10-19 15:59:05
+683	186	620	7	107.38	2026-10-19 15:59:05	2026-10-19 15:59:05
+684	186	770	7	136.83	2026-10-19 15:59:05	2026-10-19 15:59:05
+685	187	382	8	36.74	2026-10-19 15:59:06	2026-10-19 15:59:06
+686	187	156	1	27.43	2026-10-19 15:59:06	2026-10-19 15:59:06
+687	187	411	4	62.50	2026-10-19 15:59:06	2026-10-19 15:59:06
+688	187	826	3	16.86	2026-10-19 15:59:06	2026-10-19 15:59:06
+689	187	299	6	121.64	2026-10-19 15:59:06	2026-10-19 15:59:06
+690	188	172	4	146.07	2026-10-19 15:59:06	2026-10-19 15:59:06
+691	188	760	5	20.92	2026-10-19 15:59:06	2026-10-19 15:59:06
+692	189	818	7	16.66	2026-10-19 15:59:06	2026-10-19 15:59:06
+693	189	960	1	121.09	2026-10-19 15:59:06	2026-10-19 15:59:06
+694	189	998	5	80.27	2026-10-19 15:59:06	2026-10-19 15:59:06
+695	190	101	6	108.56	2026-10-19 15:59:06	2026-10-19 15:59:06
+696	190	360	7	66.68	2026-10-19 15:59:06	2026-10-19 15:59:06
+697	190	972	6	120.17	2026-10-19 15:59:06	2026-10-19 15:59:06
+698	190	285	7	144.22	2026-10-19 15:59:06	2026-10-19 15:59:06
+699	190	900	7	15.81	2026-10-19 15:59:06	2026-10-19 15:59:06
+700	190	905	8	97.21	2026-10-19 15:59:06	2026-10-19 15:59:06
+701	191	349	4	8.33	2026-10-19 15:59:06	2026-10-19 15:59:06
+702	192	956	8	120.40	2026-10-19 15:59:06	2026-10-19 15:59:06
+703	192	281	8	88.72	2026-10-19 15:59:06	2026-10-19 15:59:06
+704	192	59	4	114.79	2026-10-19 15:59:06	2026-10-19 15:59:06
+705	192	748	1	104.47	2026-10-19 15:59:06	2026-10-19 15:59:06
+706	192	358	2	54.03	2026-10-19 15:59:06	2026-10-19 15:59:06
+707	193	266	1	68.52	2026-10-19 15:59:06	2026-10-19 15:59:06
+708	193	680	2	24.44	2026-10-19 15:59:06	2026-10-19 15:59:06
+709	193	195	6	117.57	2026-10-19 15:59:06	2026-10-19 15:59:06
+710	194	445	4	132.18	2026-10-19 15:59:06	2026-10-19 15:59:06
+711	195	987	7	57.24	2026-10-19 15:59:06	2026-10-19 15:59:06
+712	195	358	8	54.03	2026-10-19 15:59:06	2026-10-19 15:59:06
+713	195	804	8	56.13	2026-10-19 15:59:06	2026-10-19 15:59:06
+714	196	804	3	56.13	2026-10-19 15:59:06	2026-10-19 15:59:06
+715	196	567	6	12.54	2026-10-19 15:59:06	2026-10-19 15:59:06
+716	197	306	2	121.21	2026-10-19 15:59:06	2026-10-19 15:59:06
+717	197	576	7	54.39	2026-10-19 15:59:06	2026-10-19 15:59:06
+718	197	308	6	34.96	2026-10-19 15:59:06	2026-10-19 15:59:06
+719	197	855	3	59.93	2026-10-19 15:59:06	2026-10-19 15:59:06
+720	197	176	1	110.14	2026-10-19 15:59:06	2026-10-19 15:59:06
+721	198	858	6	24.01	2026-10-19 15:59:06	2026-10-19 15:59:06
+722	198	758	6	129.49	2026-10-19 15:59:06	2026-10-19 15:59:06
+723	199	350	3	94.95	2026-10-19 15:59:06	2026-10-19 15:59:06
+724	199	731	1	19.28	2026-10-19 15:59:06	2026-10-19 15:59:06
+725	199	768	2	35.90	2026-10-19 15:59:06	2026-10-19 15:59:06
+726	199	522	6	140.22	2026-10-19 15:59:06	2026-10-19 15:59:06
+727	200	199	4	19.61	2026-10-19 15:59:06	2026-10-19 15:59:06
+728	200	332	2	39.06	2026-10-19 15:59:06	2026-10-19 15:59:06
+729	200	564	1	17.72	2026-10-19 15:59:06	2026-10-19 15:59:06
+730	200	315	1	127.72	2026-10-19 15:59:06	2026-10-19 15:59:06
+731	200	530	4	9.50	2026-10-19 15:59:06	2026-10-19 15:59:06
+732	201	2	2	12.00	2026-10-19 15:59:06	2026-10-19 15:59:06
+733	201	361	5	40.95	2026-10-19 15:59:06	2026-10-19 15:59:06
+734	201	743	5	59.27	2026-10-19 15:59:06	2026-10-19 15:59:06
+735	201	792	4	74.48	2026-10-19 15:59:06	2026-10-19 15:59:06
+736	202	530	2	9.50	2026-10-19 15:59:07	2026-10-19 15:59:07
+737	202	786	3	148.24	2026-10-19 15:59:07	2026-10-19 15:59:07
+738	203	82	6	28.80	2026-10-19 15:59:07	2026-10-19 15:59:07
+739	203	720	3	72.75	2026-10-19 15:59:07	2026-10-19 15:59:07
+740	203	916	6	143.54	2026-10-19 15:59:07	2026-10-19 15:59:07
+741	203	667	5	41.22	2026-10-19 15:59:07	2026-10-19 15:59:07
+742	204	858	4	24.01	2026-10-19 15:59:07	2026-10-19 15:59:07
+743	204	505	4	43.11	2026-10-19 15:59:07	2026-10-19 15:59:07
+744	204	937	6	24.53	2026-10-19 15:59:07	2026-10-19 15:59:07
+745	204	756	1	44.37	2026-10-19 15:59:07	2026-10-19 15:59:07
+746	204	86	2	65.40	2026-10-19 15:59:07	2026-10-19 15:59:07
+747	205	790	6	30.52	2026-10-19 15:59:07	2026-10-19 15:59:07
+748	205	249	5	72.66	2026-10-19 15:59:07	2026-10-19 15:59:07
+749	205	328	7	70.30	2026-10-19 15:59:07	2026-10-19 15:59:07
+750	205	644	8	17.34	2026-10-19 15:59:07	2026-10-19 15:59:07
+751	205	683	6	144.89	2026-10-19 15:59:07	2026-10-19 15:59:07
+752	205	82	6	28.80	2026-10-19 15:59:07	2026-10-19 15:59:07
+753	206	269	2	108.40	2026-10-19 15:59:07	2026-10-19 15:59:07
+754	206	913	2	13.43	2026-10-19 15:59:07	2026-10-19 15:59:07
+755	206	176	5	110.14	2026-10-19 15:59:07	2026-10-19 15:59:07
+756	206	68	1	89.24	2026-10-19 15:59:07	2026-10-19 15:59:07
+757	206	520	6	6.66	2026-10-19 15:59:07	2026-10-19 15:59:07
+758	206	133	8	148.97	2026-10-19 15:59:07	2026-10-19 15:59:07
+759	207	613	1	19.19	2026-10-19 15:59:07	2026-10-19 15:59:07
+760	207	156	5	27.43	2026-10-19 15:59:07	2026-10-19 15:59:07
+761	207	806	8	89.07	2026-10-19 15:59:07	2026-10-19 15:59:07
+762	208	889	7	131.82	2026-10-19 15:59:07	2026-10-19 15:59:07
+763	208	656	5	35.95	2026-10-19 15:59:07	2026-10-19 15:59:07
+764	209	360	5	66.68	2026-10-19 15:59:07	2026-10-19 15:59:07
+765	209	949	7	26.59	2026-10-19 15:59:07	2026-10-19 15:59:07
+766	209	387	4	47.37	2026-10-19 15:59:07	2026-10-19 15:59:07
+767	209	977	7	118.81	2026-10-19 15:59:07	2026-10-19 15:59:07
+768	209	261	2	97.10	2026-10-19 15:59:07	2026-10-19 15:59:07
+769	209	108	3	8.55	2026-10-19 15:59:07	2026-10-19 15:59:07
+770	210	533	7	20.78	2026-10-19 15:59:07	2026-10-19 15:59:07
+771	210	766	6	28.57	2026-10-19 15:59:07	2026-10-19 15:59:07
+772	211	68	2	89.24	2026-10-19 15:59:07	2026-10-19 15:59:07
+773	211	190	4	52.78	2026-10-19 15:59:07	2026-10-19 15:59:07
+774	211	566	5	128.48	2026-10-19 15:59:07	2026-10-19 15:59:07
+775	211	773	3	42.11	2026-10-19 15:59:07	2026-10-19 15:59:07
+776	211	852	5	92.28	2026-10-19 15:59:07	2026-10-19 15:59:07
+777	211	825	3	89.58	2026-10-19 15:59:07	2026-10-19 15:59:07
+778	212	289	6	64.28	2026-10-19 15:59:07	2026-10-19 15:59:07
+779	212	803	6	101.91	2026-10-19 15:59:07	2026-10-19 15:59:07
+780	212	306	4	121.21	2026-10-19 15:59:07	2026-10-19 15:59:07
+781	212	887	7	93.79	2026-10-19 15:59:07	2026-10-19 15:59:07
+782	212	603	5	35.98	2026-10-19 15:59:07	2026-10-19 15:59:07
+783	213	431	2	43.27	2026-10-19 15:59:07	2026-10-19 15:59:07
+784	213	227	8	105.82	2026-10-19 15:59:07	2026-10-19 15:59:07
+785	213	779	8	117.13	2026-10-19 15:59:07	2026-10-19 15:59:07
+786	213	658	6	120.91	2026-10-19 15:59:07	2026-10-19 15:59:07
+787	213	565	6	86.71	2026-10-19 15:59:08	2026-10-19 15:59:08
+788	213	441	1	103.22	2026-10-19 15:59:08	2026-10-19 15:59:08
+789	214	696	6	117.01	2026-10-19 15:59:08	2026-10-19 15:59:08
+790	214	208	6	60.72	2026-10-19 15:59:08	2026-10-19 15:59:08
+791	215	511	6	58.33	2026-10-19 15:59:08	2026-10-19 15:59:08
+792	215	619	2	129.53	2026-10-19 15:59:08	2026-10-19 15:59:08
+793	215	936	1	141.85	2026-10-19 15:59:08	2026-10-19 15:59:08
+794	215	775	6	79.25	2026-10-19 15:59:08	2026-10-19 15:59:08
+795	215	877	3	47.74	2026-10-19 15:59:08	2026-10-19 15:59:08
+796	216	994	6	36.37	2026-10-19 15:59:08	2026-10-19 15:59:08
+797	217	922	3	54.94	2026-10-19 15:59:08	2026-10-19 15:59:08
+798	217	295	5	118.17	2026-10-19 15:59:08	2026-10-19 15:59:08
+799	217	522	8	140.22	2026-10-19 15:59:08	2026-10-19 15:59:08
+800	217	300	7	33.69	2026-10-19 15:59:08	2026-10-19 15:59:08
+801	217	109	8	54.26	2026-10-19 15:59:08	2026-10-19 15:59:08
+802	217	555	4	65.68	2026-10-19 15:59:08	2026-10-19 15:59:08
+803	218	537	6	122.19	2026-10-19 15:59:08	2026-10-19 15:59:08
+804	218	830	6	148.33	2026-10-19 15:59:08	2026-10-19 15:59:08
+805	218	659	8	143.03	2026-10-19 15:59:08	2026-10-19 15:59:08
+806	219	732	1	109.40	2026-10-19 15:59:08	2026-10-19 15:59:08
+807	219	557	1	42.04	2026-10-19 15:59:08	2026-10-19 15:59:08
+808	219	967	2	42.94	2026-10-19 15:59:08	2026-10-19 15:59:08
+809	219	404	3	133.13	2026-10-19 15:59:08	2026-10-19 15:59:08
+810	219	670	3	146.90	2026-10-19 15:59:08	2026-10-19 15:59:08
+811	220	773	8	42.11	2026-10-19 15:59:08	2026-10-19 15:59:08
+812	220	433	1	60.65	2026-10-19 15:59:08	2026-10-19 15:59:08
+813	220	61	8	62.47	2026-10-19 15:59:08	2026-10-19 15:59:08
+814	220	416	1	108.40	2026-10-19 15:59:08	2026-10-19 15:59:08
+815	221	568	3	67.67	2026-10-19 15:59:08	2026-10-19 15:59:08
+816	221	205	3	110.91	2026-10-19 15:59:08	2026-10-19 15:59:08
+817	222	425	7	141.44	2026-10-19 15:59:08	2026-10-19 15:59:08
+818	223	381	4	100.28	2026-10-19 15:59:08	2026-10-19 15:59:08
+819	224	757	4	59.41	2026-10-19 15:59:08	2026-10-19 15:59:08
+820	224	955	4	34.29	2026-10-19 15:59:08	2026-10-19 15:59:08
+821	224	180	3	98.53	2026-10-19 15:59:08	2026-10-19 15:59:08
+822	224	610	1	44.51	2026-10-19 15:59:08	2026-10-19 15:59:08
+823	225	193	1	61.82	2026-10-19 15:59:08	2026-10-19 15:59:08
+824	225	771	8	104.34	2026-10-19 15:59:08	2026-10-19 15:59:08
+825	225	850	4	146.27	2026-10-19 15:59:08	2026-10-19 15:59:08
+826	225	339	4	141.11	2026-10-19 15:59:08	2026-10-19 15:59:08
+827	225	550	1	38.46	2026-10-19 15:59:08	2026-10-19 15:59:08
+828	226	854	5	86.95	2026-10-19 15:59:08	2026-10-19 15:59:08
+829	227	740	3	10.15	2026-10-19 15:59:08	2026-10-19 15:59:08
+830	227	306	5	121.21	2026-10-19 15:59:08	2026-10-19 15:59:08
+831	227	249	6	72.66	2026-10-19 15:59:08	2026-10-19 15:59:08
+832	228	653	5	26.45	2026-10-19 15:59:08	2026-10-19 15:59:08
+833	228	754	7	66.86	2026-10-19 15:59:08	2026-10-19 15:59:08
+834	228	795	1	148.01	2026-10-19 15:59:08	2026-10-19 15:59:08
+835	228	217	2	92.41	2026-10-19 15:59:08	2026-10-19 15:59:08
+836	228	463	7	78.16	2026-10-19 15:59:08	2026-10-19 15:59:08
+837	229	930	6	55.31	2026-10-19 15:59:09	2026-10-19 15:59:09
+838	229	723	4	79.22	2026-10-19 15:59:09	2026-10-19 15:59:09
+839	229	108	5	8.55	2026-10-19 15:59:09	2026-10-19 15:59:09
+840	229	832	7	102.87	2026-10-19 15:59:09	2026-10-19 15:59:09
+841	230	937	5	24.53	2026-10-19 15:59:09	2026-10-19 15:59:09
+842	230	613	1	19.19	2026-10-19 15:59:09	2026-10-19 15:59:09
+843	230	699	5	34.26	2026-10-19 15:59:09	2026-10-19 15:59:09
+844	230	455	8	88.34	2026-10-19 15:59:09	2026-10-19 15:59:09
+845	230	408	1	54.08	2026-10-19 15:59:09	2026-10-19 15:59:09
+846	231	484	1	116.80	2026-10-19 15:59:09	2026-10-19 15:59:09
+847	231	115	1	92.43	2026-10-19 15:59:09	2026-10-19 15:59:09
+848	231	900	3	15.81	2026-10-19 15:59:09	2026-10-19 15:59:09
+849	231	584	4	132.77	2026-10-19 15:59:09	2026-10-19 15:59:09
+850	232	775	1	79.25	2026-10-19 15:59:09	2026-10-19 15:59:09
+851	233	164	4	104.91	2026-10-19 15:59:09	2026-10-19 15:59:09
+852	233	931	2	81.16	2026-10-19 15:59:09	2026-10-19 15:59:09
+853	233	629	1	131.93	2026-10-19 15:59:09	2026-10-19 15:59:09
+854	233	815	8	52.15	2026-10-19 15:59:09	2026-10-19 15:59:09
+855	233	794	5	7.40	2026-10-19 15:59:09	2026-10-19 15:59:09
+856	234	971	3	7.00	2026-10-19 15:59:09	2026-10-19 15:59:09
+857	234	906	6	140.30	2026-10-19 15:59:09	2026-10-19 15:59:09
+858	234	146	5	68.67	2026-10-19 15:59:09	2026-10-19 15:59:09
+859	234	947	7	108.23	2026-10-19 15:59:09	2026-10-19 15:59:09
+860	235	920	6	22.31	2026-10-19 15:59:09	2026-10-19 15:59:09
+861	235	862	8	147.22	2026-10-19 15:59:09	2026-10-19 15:59:09
+862	235	605	2	96.30	2026-10-19 15:59:09	2026-10-19 15:59:09
+863	235	887	5	93.79	2026-10-19 15:59:09	2026-10-19 15:59:09
+864	235	347	2	88.23	2026-10-19 15:59:09	2026-10-19 15:59:09
+865	236	761	6	8.80	2026-10-19 15:59:09	2026-10-19 15:59:09
+866	236	299	7	121.64	2026-10-19 15:59:09	2026-10-19 15:59:09
+867	236	608	7	125.72	2026-10-19 15:59:09	2026-10-19 15:59:09
+868	236	580	6	31.01	2026-10-19 15:59:09	2026-10-19 15:59:09
+869	237	121	5	92.99	2026-10-19 15:59:09	2026-10-19 15:59:09
+870	237	96	5	68.08	2026-10-19 15:59:09	2026-10-19 15:59:09
+871	237	234	2	15.06	2026-10-19 15:59:09	2026-10-19 15:59:09
+872	237	433	6	60.65	2026-10-19 15:59:09	2026-10-19 15:59:09
+873	238	742	8	143.65	2026-10-19 15:59:09	2026-10-19 15:59:09
+874	238	211	5	132.22	2026-10-19 15:59:09	2026-10-19 15:59:09
+875	238	880	8	9.84	2026-10-19 15:59:09	2026-10-19 15:59:09
+876	239	329	3	42.12	2026-10-19 15:59:09	2026-10-19 15:59:09
+877	239	828	2	44.66	2026-10-19 15:59:09	2026-10-19 15:59:09
+878	239	315	6	127.72	2026-10-19 15:59:09	2026-10-19 15:59:09
+879	239	247	7	133.90	2026-10-19 15:59:09	2026-10-19 15:59:09
+880	239	138	6	56.71	2026-10-19 15:59:09	2026-10-19 15:59:09
+881	240	675	8	75.20	2026-10-19 15:59:09	2026-10-19 15:59:09
+882	240	833	1	34.14	2026-10-19 15:59:09	2026-10-19 15:59:09
+883	240	303	6	77.35	2026-10-19 15:59:09	2026-10-19 15:59:09
+884	240	878	5	34.93	2026-10-19 15:59:09	2026-10-19 15:59:09
+885	240	143	2	93.43	2026-10-19 15:59:09	2026-10-19 15:59:09
+886	241	98	1	113.36	2026-10-19 15:59:09	2026-10-19 15:59:09
+887	241	830	2	148.33	2026-10-19 15:59:09	2026-10-19 15:59:09
+888	241	544	8	133.41	2026-10-19 15:59:09	2026-10-19 15:59:09
+889	241	951	6	125.48	2026-10-19 15:59:09	2026-10-19 15:59:09
+890	242	323	2	14.21	2026-10-19 15:59:09	2026-10-19 15:59:09
+891	242	553	8	57.00	2026-10-19 15:59:09	2026-10-19 15:59:09
+892	243	772	3	62.03	2026-10-19 15:59:10	2026-10-19 15:59:10
+893	244	838	6	17.28	2026-10-19 15:59:10	2026-10-19 15:59:10
+894	244	340	6	73.02	2026-10-19 15:59:10	2026-10-19 15:59:10
+895	244	766	1	28.57	2026-10-19 15:59:10	2026-10-19 15:59:10
+896	244	188	8	80.28	2026-10-19 15:59:10	2026-10-19 15:59:10
+897	245	739	3	80.82	2026-10-19 15:59:10	2026-10-19 15:59:10
+898	245	588	8	69.83	2026-10-19 15:59:10	2026-10-19 15:59:10
+899	245	205	3	110.91	2026-10-19 15:59:10	2026-10-19 15:59:10
+900	245	157	1	85.79	2026-10-19 15:59:10	2026-10-19 15:59:10
+901	246	171	1	116.85	2026-10-19 15:59:10	2026-10-19 15:59:10
+902	246	751	1	103.06	2026-10-19 15:59:10	2026-10-19 15:59:10
+903	246	22	1	6.50	2026-10-19 15:59:10	2026-10-19 15:59:10
+904	246	220	6	55.54	2026-10-19 15:59:10	2026-10-19 15:59:10
+905	246	549	2	111.58	2026-10-19 15:59:10	2026-10-19 15:59:10
+906	247	43	2	81.16	2026-10-19 15:59:10	2026-10-19 15:59:10
+907	247	290	6	54.16	2026-10-19 15:59:10	2026-10-19 15:59:10
+908	247	179	7	54.77	2026-10-19 15:59:10	2026-10-19 15:59:10
+909	247	479	4	134.49	2026-10-19 15:59:10	2026-10-19 15:59:10
+910	248	587	4	113.15	2026-10-19 15:59:10	2026-10-19 15:59:10
+911	248	640	1	144.81	2026-10-19 15:59:10	2026-10-19 15:59:10
+912	248	576	8	54.39	2026-10-19 15:59:10	2026-10-19 15:59:10
+913	248	689	1	47.29	2026-10-19 15:59:10	2026-10-19 15:59:10
+914	248	208	4	60.72	2026-10-19 15:59:10	2026-10-19 15:59:10
+915	249	921	7	120.68	2026-10-19 15:59:10	2026-10-19 15:59:10
+916	249	467	4	77.94	2026-10-19 15:59:10	2026-10-19 15:59:10
+917	249	127	8	91.15	2026-10-19 15:59:10	2026-10-19 15:59:10
+918	249	359	6	19.53	2026-10-19 15:59:10	2026-10-19 15:59:10
+919	249	665	2	112.09	2026-10-19 15:59:10	2026-10-19 15:59:10
+920	249	995	6	34.41	2026-10-19 15:59:10	2026-10-19 15:59:10
+921	250	876	7	112.29	2026-10-19 15:59:10	2026-10-19 15:59:10
+922	250	925	6	49.79	2026-10-19 15:59:10	2026-10-19 15:59:10
+923	250	760	5	20.92	2026-10-19 15:59:10	2026-10-19 15:59:10
+924	250	469	7	68.89	2026-10-19 15:59:10	2026-10-19 15:59:10
+925	251	586	6	58.25	2026-10-19 15:59:10	2026-10-19 15:59:10
+926	251	736	6	32.58	2026-10-19 15:59:10	2026-10-19 15:59:10
+927	251	904	6	106.67	2026-10-19 15:59:10	2026-10-19 15:59:10
+928	251	792	4	74.48	2026-10-19 15:59:10	2026-10-19 15:59:10
+929	252	60	8	105.56	2026-10-19 15:59:10	2026-10-19 15:59:10
+930	252	757	3	59.41	2026-10-19 15:59:10	2026-10-19 15:59:10
+931	253	901	8	38.63	2026-10-19 15:59:10	2026-10-19 15:59:10
+932	254	595	1	13.47	2026-10-19 15:59:10	2026-10-19 15:59:10
+933	254	721	7	131.15	2026-10-19 15:59:10	2026-10-19 15:59:10
+934	254	216	6	94.02	2026-10-19 15:59:10	2026-10-19 15:59:10
+935	254	585	5	93.33	2026-10-19 15:59:10	2026-10-19 15:59:10
+936	254	483	4	134.61	2026-10-19 15:59:10	2026-10-19 15:59:10
+937	254	540	7	90.10	2026-10-19 15:59:10	2026-10-19 15:59:10
+938	255	758	1	129.49	2026-10-19 15:59:10	2026-10-19 15:59:10
+939	255	175	6	132.27	2026-10-19 15:59:10	2026-10-19 15:59:10
+940	255	301	8	118.99	2026-10-19 15:59:10	2026-10-19 15:59:10
+941	256	139	2	75.92	2026-10-19 15:59:10	2026-10-19 15:59:10
+942	256	918	2	36.52	2026-10-19 15:59:10	2026-10-19 15:59:10
+943	256	637	6	58.43	2026-10-19 15:59:10	2026-10-19 15:59:10
+944	256	78	2	113.21	2026-10-19 15:59:10	2026-10-19 15:59:10
+945	256	815	2	52.15	2026-10-19 15:59:10	2026-10-19 15:59:10
+946	257	255	7	123.75	2026-10-19 15:59:11	2026-10-19 15:59:11
+947	257	565	8	86.71	2026-10-19 15:59:11	2026-10-19 15:59:11
+948	257	586	2	58.25	2026-10-19 15:59:11	2026-10-19 15:59:11
+949	257	730	2	66.63	2026-10-19 15:59:11	2026-10-19 15:59:11
+950	258	679	7	107.57	2026-10-19 15:59:11	2026-10-19 15:59:11
+951	258	690	8	126.04	2026-10-19 15:59:11	2026-10-19 15:59:11
+952	258	411	4	62.50	2026-10-19 15:59:11	2026-10-19 15:59:11
+953	258	762	8	104.08	2026-10-19 15:59:11	2026-10-19 15:59:11
+954	259	448	2	99.16	2026-10-19 15:59:11	2026-10-19 15:59:11
+955	259	273	3	76.33	2026-10-19 15:59:11	2026-10-19 15:59:11
+956	259	71	3	75.13	2026-10-19 15:59:11	2026-10-19 15:59:11
+957	260	234	6	15.06	2026-10-19 15:59:11	2026-10-19 15:59:11
+958	260	99	8	60.50	2026-10-19 15:59:11	2026-10-19 15:59:11
+959	260	988	6	72.39	2026-10-19 15:59:11	2026-10-19 15:59:11
+960	260	477	3	127.78	2026-10-19 15:59:11	2026-10-19 15:59:11
+961	260	241	8	28.52	2026-10-19 15:59:11	2026-10-19 15:59:11
+962	260	734	7	144.03	2026-10-19 15:59:11	2026-10-19 15:59:11
+963	261	786	5	148.24	2026-10-19 15:59:11	2026-10-19 15:59:11
+964	261	382	6	36.74	2026-10-19 15:59:11	2026-10-19 15:59:11
+965	261	508	8	58.44	2026-10-19 15:59:11	2026-10-19 15:59:11
+966	262	554	7	100.82	2026-10-19 15:59:11	2026-10-19 15:59:11
+967	262	656	3	35.95	2026-10-19 15:59:11	2026-10-19 15:59:11
+968	262	686	2	124.35	2026-10-19 15:59:11	2026-10-19 15:59:11
+969	262	720	6	72.75	2026-10-19 15:59:11	2026-10-19 15:59:11
+970	263	10	1	11.00	2026-10-19 15:59:11	2026-10-19 15:59:11
+971	264	111	2	102.89	2026-10-19 15:59:11	2026-10-19 15:59:11
+972	264	567	4	12.54	2026-10-19 15:59:11	2026-10-19 15:59:11
+973	265	632	4	145.14	2026-10-19 15:59:11	2026-10-19 15:59:11
+974	265	431	1	43.27	2026-10-19 15:59:11	2026-10-19 15:59:11
+975	265	524	2	14.53	2026-10-19 15:59:11	2026-10-19 15:59:11
+976	265	42	1	133.85	2026-10-19 15:59:11	2026-10-19 15:59:11
+977	265	909	5	63.86	2026-10-19 15:59:11	2026-10-19 15:59:11
+978	265	434	5	20.46	2026-10-19 15:59:11	2026-10-19 15:59:11
+979	266	18	1	6.00	2026-10-19 15:59:11	2026-10-19 15:59:11
+980	266	639	7	135.59	2026-10-19 15:59:11	2026-10-19 15:59:11
+981	266	185	3	63.00	2026-10-19 15:59:11	2026-10-19 15:59:11
+982	266	461	4	141.22	2026-10-19 15:59:11	2026-10-19 15:59:11
+983	267	493	8	111.54	2026-10-19 15:59:11	2026-10-19 15:59:11
+984	267	121	2	92.99	2026-10-19 15:59:11	2026-10-19 15:59:11
+985	267	761	2	8.80	2026-10-19 15:59:11	2026-10-19 15:59:11
+986	267	820	4	65.34	2026-10-19 15:59:11	2026-10-19 15:59:11
+987	267	738	3	144.31	2026-10-19 15:59:11	2026-10-19 15:59:11
+988	268	117	1	71.07	2026-10-19 15:59:11	2026-10-19 15:59:11
+989	268	419	2	67.09	2026-10-19 15:59:11	2026-10-19 15:59:11
+990	268	781	5	12.30	2026-10-19 15:59:11	2026-10-19 15:59:11
+991	269	939	1	7.52	2026-10-19 15:59:11	2026-10-19 15:59:11
+992	269	751	2	103.06	2026-10-19 15:59:11	2026-10-19 15:59:11
+993	269	510	2	25.12	2026-10-19 15:59:11	2026-10-19 15:59:11
+994	269	176	4	110.14	2026-10-19 15:59:11	2026-10-19 15:59:11
+995	269	182	3	44.86	2026-10-19 15:59:11	2026-10-19 15:59:11
+996	269	8	1	7.50	2026-10-19 15:59:11	2026-10-19 15:59:11
+997	270	977	5	118.81	2026-10-19 15:59:11	2026-10-19 15:59:11
+998	270	438	3	114.50	2026-10-19 15:59:12	2026-10-19 15:59:12
+999	270	817	1	31.85	2026-10-19 15:59:12	2026-10-19 15:59:12
+1000	270	947	5	108.23	2026-10-19 15:59:12	2026-10-19 15:59:12
+1001	271	710	5	146.89	2026-10-19 15:59:12	2026-10-19 15:59:12
+1002	271	832	5	102.87	2026-10-19 15:59:12	2026-10-19 15:59:12
+1003	272	437	5	35.61	2026-10-19 15:59:12	2026-10-19 15:59:12
+1004	272	238	8	25.62	2026-10-19 15:59:12	2026-10-19 15:59:12
+1005	272	16	1	12.00	2026-10-19 15:59:12	2026-10-19 15:59:12
+1006	272	903	5	119.89	2026-10-19 15:59:12	2026-10-19 15:59:12
+1007	272	368	6	78.66	2026-10-19 15:59:12	2026-10-19 15:59:12
+1008	272	694	1	15.81	2026-10-19 15:59:12	2026-10-19 15:59:12
+1009	273	316	6	38.75	2026-10-19 15:59:12	2026-10-19 15:59:12
+1010	273	205	6	110.91	2026-10-19 15:59:12	2026-10-19 15:59:12
+1011	273	97	2	81.27	2026-10-19 15:59:12	2026-10-19 15:59:12
+1012	273	733	5	14.90	2026-10-19 15:59:12	2026-10-19 15:59:12
+1013	273	562	2	38.58	2026-10-19 15:59:12	2026-10-19 15:59:12
+1014	274	370	6	64.43	2026-10-19 15:59:12	2026-10-19 15:59:12
+1015	274	69	6	15.51	2026-10-19 15:59:12	2026-10-19 15:59:12
+1016	274	431	5	43.27	2026-10-19 15:59:12	2026-10-19 15:59:12
+1017	274	313	2	68.57	2026-10-19 15:59:12	2026-10-19 15:59:12
+1018	275	653	1	26.45	2026-10-19 15:59:12	2026-10-19 15:59:12
+1019	275	565	3	86.71	2026-10-19 15:59:12	2026-10-19 15:59:12
+1020	275	542	7	65.80	2026-10-19 15:59:12	2026-10-19 15:59:12
+1021	275	513	4	37.58	2026-10-19 15:59:12	2026-10-19 15:59:12
+1022	276	560	1	118.31	2026-10-19 15:59:12	2026-10-19 15:59:12
+1023	276	284	1	68.56	2026-10-19 15:59:12	2026-10-19 15:59:12
+1024	276	418	3	107.84	2026-10-19 15:59:12	2026-10-19 15:59:12
+1025	276	865	1	77.74	2026-10-19 15:59:12	2026-10-19 15:59:12
+1026	276	293	8	80.52	2026-10-19 15:59:12	2026-10-19 15:59:12
+1027	277	78	6	113.21	2026-10-19 15:59:12	2026-10-19 15:59:12
+1028	277	1000	6	106.85	2026-10-19 15:59:12	2026-10-19 15:59:12
+1029	277	339	1	141.11	2026-10-19 15:59:12	2026-10-19 15:59:12
+1030	277	363	5	124.78	2026-10-19 15:59:12	2026-10-19 15:59:12
+1031	277	203	3	83.08	2026-10-19 15:59:12	2026-10-19 15:59:12
+1032	278	55	7	116.02	2026-10-19 15:59:12	2026-10-19 15:59:12
+1033	278	971	8	7.00	2026-10-19 15:59:12	2026-10-19 15:59:12
+1034	278	24	3	10.00	2026-10-19 15:59:12	2026-10-19 15:59:12
+1035	278	242	8	141.46	2026-10-19 15:59:12	2026-10-19 15:59:12
+1036	278	678	7	75.23	2026-10-19 15:59:12	2026-10-19 15:59:12
+1037	279	833	3	34.14	2026-10-19 15:59:12	2026-10-19 15:59:12
+1038	279	839	6	145.55	2026-10-19 15:59:12	2026-10-19 15:59:12
+1039	279	122	5	60.00	2026-10-19 15:59:12	2026-10-19 15:59:12
+1040	280	304	6	8.87	2026-10-19 15:59:12	2026-10-19 15:59:12
+1041	280	386	3	106.88	2026-10-19 15:59:12	2026-10-19 15:59:12
+1042	280	841	3	72.09	2026-10-19 15:59:12	2026-10-19 15:59:12
+1043	280	603	1	35.98	2026-10-19 15:59:12	2026-10-19 15:59:12
+1044	280	426	6	94.15	2026-10-19 15:59:12	2026-10-19 15:59:12
+1045	280	724	1	19.77	2026-10-19 15:59:12	2026-10-19 15:59:12
+1046	281	666	7	123.45	2026-10-19 15:59:12	2026-10-19 15:59:12
+1047	281	523	6	50.64	2026-10-19 15:59:12	2026-10-19 15:59:12
+1048	281	956	5	120.40	2026-10-19 15:59:12	2026-10-19 15:59:12
+1049	282	420	1	16.28	2026-10-19 15:59:12	2026-10-19 15:59:12
+1050	282	486	3	116.24	2026-10-19 15:59:12	2026-10-19 15:59:12
+1051	282	389	8	84.67	2026-10-19 15:59:13	2026-10-19 15:59:13
+1052	283	514	7	96.48	2026-10-19 15:59:13	2026-10-19 15:59:13
+1053	283	956	1	120.40	2026-10-19 15:59:13	2026-10-19 15:59:13
+1054	283	635	3	56.75	2026-10-19 15:59:13	2026-10-19 15:59:13
+1055	283	805	7	98.87	2026-10-19 15:59:13	2026-10-19 15:59:13
+1056	283	553	7	57.00	2026-10-19 15:59:13	2026-10-19 15:59:13
+1057	284	795	3	148.01	2026-10-19 15:59:13	2026-10-19 15:59:13
+1058	284	254	2	107.92	2026-10-19 15:59:13	2026-10-19 15:59:13
+1059	285	430	5	99.36	2026-10-19 15:59:13	2026-10-19 15:59:13
+1060	285	491	3	85.12	2026-10-19 15:59:13	2026-10-19 15:59:13
+1061	285	533	1	20.78	2026-10-19 15:59:13	2026-10-19 15:59:13
+1062	285	747	4	119.11	2026-10-19 15:59:13	2026-10-19 15:59:13
+1063	285	801	2	139.78	2026-10-19 15:59:13	2026-10-19 15:59:13
+1064	286	26	1	11.00	2026-10-19 15:59:13	2026-10-19 15:59:13
+1065	287	67	1	134.35	2026-10-19 15:59:13	2026-10-19 15:59:13
+1066	287	382	3	36.74	2026-10-19 15:59:13	2026-10-19 15:59:13
+1067	288	807	3	143.29	2026-10-19 15:59:13	2026-10-19 15:59:13
+1068	288	329	4	42.12	2026-10-19 15:59:13	2026-10-19 15:59:13
+1069	288	109	7	54.26	2026-10-19 15:59:13	2026-10-19 15:59:13
+1070	288	545	6	17.95	2026-10-19 15:59:13	2026-10-19 15:59:13
+1071	288	536	3	98.69	2026-10-19 15:59:13	2026-10-19 15:59:13
+1072	289	246	4	22.35	2026-10-19 15:59:13	2026-10-19 15:59:13
+1073	289	234	7	15.06	2026-10-19 15:59:13	2026-10-19 15:59:13
+1074	289	964	4	26.19	2026-10-19 15:59:13	2026-10-19 15:59:13
+1075	290	596	5	123.79	2026-10-19 15:59:13	2026-10-19 15:59:13
+1076	290	238	7	25.62	2026-10-19 15:59:13	2026-10-19 15:59:13
+1077	290	560	4	118.31	2026-10-19 15:59:13	2026-10-19 15:59:13
+1078	290	724	6	19.77	2026-10-19 15:59:13	2026-10-19 15:59:13
+1079	291	105	8	117.35	2026-10-19 15:59:13	2026-10-19 15:59:13
+1080	291	200	6	141.52	2026-10-19 15:59:13	2026-10-19 15:59:13
+1081	291	230	8	108.46	2026-10-19 15:59:13	2026-10-19 15:59:13
+1082	291	924	3	90.34	2026-10-19 15:59:13	2026-10-19 15:59:13
+1083	292	100	5	58.97	2026-10-19 15:59:13	2026-10-19 15:59:13
+1084	292	641	8	90.15	2026-10-19 15:59:13	2026-10-19 15:59:13
+1085	292	936	8	141.85	2026-10-19 15:59:13	2026-10-19 15:59:13
+1086	293	413	8	58.61	2026-10-19 15:59:13	2026-10-19 15:59:13
+1087	294	271	3	26.48	2026-10-19 15:59:13	2026-10-19 15:59:13
+1088	294	488	5	89.44	2026-10-19 15:59:13	2026-10-19 15:59:13
+1089	295	400	8	31.90	2026-10-19 15:59:13	2026-10-19 15:59:13
+1090	295	718	5	80.34	2026-10-19 15:59:13	2026-10-19 15:59:13
+1091	295	706	6	103.70	2026-10-19 15:59:13	2026-10-19 15:59:13
+1092	295	217	2	92.41	2026-10-19 15:59:13	2026-10-19 15:59:13
+1093	295	916	6	143.54	2026-10-19 15:59:13	2026-10-19 15:59:13
+1094	295	600	1	91.66	2026-10-19 15:59:13	2026-10-19 15:59:13
+1095	296	445	4	132.18	2026-10-19 15:59:13	2026-10-19 15:59:13
+1096	297	386	4	106.88	2026-10-19 15:59:13	2026-10-19 15:59:13
+1097	298	469	7	68.89	2026-10-19 15:59:13	2026-10-19 15:59:13
+1098	298	376	7	114.71	2026-10-19 15:59:13	2026-10-19 15:59:13
+1099	299	563	7	21.56	2026-10-19 15:59:13	2026-10-19 15:59:13
+1100	299	578	5	41.85	2026-10-19 15:59:14	2026-10-19 15:59:14
+1101	299	959	1	136.79	2026-10-19 15:59:14	2026-10-19 15:59:14
+1102	299	938	8	99.08	2026-10-19 15:59:14	2026-10-19 15:59:14
+1103	299	134	7	147.99	2026-10-19 15:59:14	2026-10-19 15:59:14
+1104	299	534	1	87.98	2026-10-19 15:59:14	2026-10-19 15:59:14
+1105	300	512	4	136.36	2026-10-19 15:59:14	2026-10-19 15:59:14
+1106	301	147	1	72.33	2026-10-19 15:59:14	2026-10-19 15:59:14
+1107	301	159	5	83.73	2026-10-19 15:59:14	2026-10-19 15:59:14
+1108	302	787	7	99.61	2026-10-19 15:59:14	2026-10-19 15:59:14
+1109	302	421	3	15.67	2026-10-19 15:59:14	2026-10-19 15:59:14
+1110	302	228	5	131.38	2026-10-19 15:59:14	2026-10-19 15:59:14
+1111	302	970	2	15.64	2026-10-19 15:59:14	2026-10-19 15:59:14
+1112	302	844	1	69.56	2026-10-19 15:59:14	2026-10-19 15:59:14
+1113	303	584	3	132.77	2026-10-19 15:59:14	2026-10-19 15:59:14
+1114	303	787	3	99.61	2026-10-19 15:59:14	2026-10-19 15:59:14
+1115	303	279	2	121.63	2026-10-19 15:59:14	2026-10-19 15:59:14
+1116	304	235	8	122.69	2026-10-19 15:59:14	2026-10-19 15:59:14
+1117	305	763	2	130.25	2026-10-19 15:59:14	2026-10-19 15:59:14
+1118	305	938	5	99.08	2026-10-19 15:59:14	2026-10-19 15:59:14
+1119	305	514	4	96.48	2026-10-19 15:59:14	2026-10-19 15:59:14
+1120	305	79	1	79.86	2026-10-19 15:59:14	2026-10-19 15:59:14
+1121	306	980	4	58.89	2026-10-19 15:59:14	2026-10-19 15:59:14
+1122	306	505	5	43.11	2026-10-19 15:59:14	2026-10-19 15:59:14
+1123	306	519	6	114.25	2026-10-19 15:59:14	2026-10-19 15:59:14
+1124	306	790	8	30.52	2026-10-19 15:59:14	2026-10-19 15:59:14
+1125	306	222	5	43.84	2026-10-19 15:59:14	2026-10-19 15:59:14
+1126	307	210	5	83.10	2026-10-19 15:59:14	2026-10-19 15:59:14
+1127	307	750	2	23.96	2026-10-19 15:59:14	2026-10-19 15:59:14
+1128	307	60	8	105.56	2026-10-19 15:59:14	2026-10-19 15:59:14
+1129	307	503	7	119.84	2026-10-19 15:59:14	2026-10-19 15:59:14
+1130	307	911	7	62.18	2026-10-19 15:59:14	2026-10-19 15:59:14
+1131	308	27	1	9.00	2026-10-19 15:59:14	2026-10-19 15:59:14
+1132	308	331	8	95.00	2026-10-19 15:59:14	2026-10-19 15:59:14
+1133	308	343	3	44.32	2026-10-19 15:59:14	2026-10-19 15:59:14
+1134	309	854	6	86.95	2026-10-19 15:59:14	2026-10-19 15:59:14
+1135	309	486	1	116.24	2026-10-19 15:59:14	2026-10-19 15:59:14
+1136	309	203	8	83.08	2026-10-19 15:59:14	2026-10-19 15:59:14
+1137	309	616	4	84.09	2026-10-19 15:59:14	2026-10-19 15:59:14
+1138	309	372	4	134.53	2026-10-19 15:59:14	2026-10-19 15:59:14
+1139	310	355	5	94.85	2026-10-19 15:59:14	2026-10-19 15:59:14
+1140	310	778	5	34.69	2026-10-19 15:59:14	2026-10-19 15:59:14
+1141	310	428	7	58.50	2026-10-19 15:59:14	2026-10-19 15:59:14
+1142	310	559	4	33.45	2026-10-19 15:59:14	2026-10-19 15:59:14
+1143	310	455	3	88.34	2026-10-19 15:59:14	2026-10-19 15:59:14
+1144	310	391	5	8.26	2026-10-19 15:59:14	2026-10-19 15:59:14
+1145	311	984	1	129.83	2026-10-19 15:59:14	2026-10-19 15:59:14
+1146	311	952	6	30.03	2026-10-19 15:59:14	2026-10-19 15:59:14
+1147	311	758	7	129.49	2026-10-19 15:59:14	2026-10-19 15:59:14
+1148	311	370	5	64.43	2026-10-19 15:59:14	2026-10-19 15:59:14
+1149	311	990	6	96.87	2026-10-19 15:59:14	2026-10-19 15:59:14
+1150	312	481	7	61.45	2026-10-19 15:59:14	2026-10-19 15:59:14
+1151	312	964	6	26.19	2026-10-19 15:59:14	2026-10-19 15:59:14
+1152	312	323	4	14.21	2026-10-19 15:59:14	2026-10-19 15:59:14
+1153	313	366	4	34.23	2026-10-19 15:59:14	2026-10-19 15:59:14
+1154	313	686	5	124.35	2026-10-19 15:59:14	2026-10-19 15:59:14
+1155	313	364	8	126.52	2026-10-19 15:59:14	2026-10-19 15:59:14
+1156	313	690	3	126.04	2026-10-19 15:59:15	2026-10-19 15:59:15
+1157	314	867	1	54.52	2026-10-19 15:59:15	2026-10-19 15:59:15
+1158	314	745	7	6.27	2026-10-19 15:59:15	2026-10-19 15:59:15
+1159	314	398	7	22.77	2026-10-19 15:59:15	2026-10-19 15:59:15
+1160	314	418	3	107.84	2026-10-19 15:59:15	2026-10-19 15:59:15
+1161	314	47	1	145.16	2026-10-19 15:59:15	2026-10-19 15:59:15
+1162	314	418	5	107.84	2026-10-19 15:59:15	2026-10-19 15:59:15
+1163	315	358	5	54.03	2026-10-19 15:59:15	2026-10-19 15:59:15
+1164	315	401	4	36.52	2026-10-19 15:59:15	2026-10-19 15:59:15
+1165	315	930	3	55.31	2026-10-19 15:59:15	2026-10-19 15:59:15
+1166	315	260	7	125.63	2026-10-19 15:59:15	2026-10-19 15:59:15
+1167	315	151	1	32.42	2026-10-19 15:59:15	2026-10-19 15:59:15
+1168	315	790	1	30.52	2026-10-19 15:59:15	2026-10-19 15:59:15
+1169	316	144	2	77.20	2026-10-19 15:59:15	2026-10-19 15:59:15
+1170	316	908	8	75.61	2026-10-19 15:59:15	2026-10-19 15:59:15
+1171	316	618	5	143.59	2026-10-19 15:59:15	2026-10-19 15:59:15
+1172	317	425	6	141.44	2026-10-19 15:59:15	2026-10-19 15:59:15
+1173	317	193	8	61.82	2026-10-19 15:59:15	2026-10-19 15:59:15
+1174	317	814	7	143.95	2026-10-19 15:59:15	2026-10-19 15:59:15
+1175	318	274	7	146.61	2026-10-19 15:59:15	2026-10-19 15:59:15
+1176	318	67	3	134.35	2026-10-19 15:59:15	2026-10-19 15:59:15
+1177	318	393	8	119.89	2026-10-19 15:59:15	2026-10-19 15:59:15
+1178	318	76	2	98.78	2026-10-19 15:59:15	2026-10-19 15:59:15
+1179	318	836	8	75.35	2026-10-19 15:59:15	2026-10-19 15:59:15
+1180	319	379	8	58.15	2026-10-19 15:59:15	2026-10-19 15:59:15
+1181	319	771	7	104.34	2026-10-19 15:59:15	2026-10-19 15:59:15
+1182	319	679	8	107.57	2026-10-19 15:59:15	2026-10-19 15:59:15
+1183	319	390	5	83.21	2026-10-19 15:59:15	2026-10-19 15:59:15
+1184	320	310	8	7.77	2026-10-19 15:59:15	2026-10-19 15:59:15
+1185	321	511	7	58.33	2026-10-19 15:59:15	2026-10-19 15:59:15
+1186	321	363	6	124.78	2026-10-19 15:59:15	2026-10-19 15:59:15
+1187	321	636	5	33.76	2026-10-19 15:59:15	2026-10-19 15:59:15
+1188	321	982	7	82.21	2026-10-19 15:59:15	2026-10-19 15:59:15
+1189	322	469	1	68.89	2026-10-19 15:59:15	2026-10-19 15:59:15
+1190	322	882	1	143.89	2026-10-19 15:59:15	2026-10-19 15:59:15
+1191	322	77	6	27.40	2026-10-19 15:59:15	2026-10-19 15:59:15
+1192	323	405	1	110.72	2026-10-19 15:59:15	2026-10-19 15:59:15
+1193	323	385	2	81.16	2026-10-19 15:59:15	2026-10-19 15:59:15
+1194	323	938	8	99.08	2026-10-19 15:59:15	2026-10-19 15:59:15
+1195	323	382	6	36.74	2026-10-19 15:59:15	2026-10-19 15:59:15
+1196	323	503	6	119.84	2026-10-19 15:59:15	2026-10-19 15:59:15
+1197	323	25	1	35.00	2026-10-19 15:59:15	2026-10-19 15:59:15
+1198	324	899	5	85.06	2026-10-19 15:59:15	2026-10-19 15:59:15
+1199	324	816	4	95.47	2026-10-19 15:59:15	2026-10-19 15:59:15
+1200	325	121	3	92.99	2026-10-19 15:59:15	2026-10-19 15:59:15
+1201	325	516	1	97.86	2026-10-19 15:59:15	2026-10-19 15:59:15
+1202	325	406	4	37.51	2026-10-19 15:59:15	2026-10-19 15:59:15
+1203	325	330	8	58.14	2026-10-19 15:59:15	2026-10-19 15:59:15
+1204	325	748	1	104.47	2026-10-19 15:59:15	2026-10-19 15:59:15
+1205	326	647	2	38.83	2026-10-19 15:59:15	2026-10-19 15:59:15
+1206	326	247	7	133.90	2026-10-19 15:59:15	2026-10-19 15:59:15
+1207	326	791	7	141.56	2026-10-19 15:59:15	2026-10-19 15:59:15
+1208	326	983	1	34.04	2026-10-19 15:59:15	2026-10-19 15:59:15
+1209	326	486	5	116.24	2026-10-19 15:59:16	2026-10-19 15:59:16
+1210	327	632	2	145.14	2026-10-19 15:59:16	2026-10-19 15:59:16
+1211	327	181	6	63.73	2026-10-19 15:59:16	2026-10-19 15:59:16
+1212	327	190	2	52.78	2026-10-19 15:59:16	2026-10-19 15:59:16
+1213	327	225	1	71.50	2026-10-19 15:59:16	2026-10-19 15:59:16
+1214	327	334	6	19.48	2026-10-19 15:59:16	2026-10-19 15:59:16
+1215	327	889	7	131.82	2026-10-19 15:59:16	2026-10-19 15:59:16
+1216	328	187	3	147.70	2026-10-19 15:59:16	2026-10-19 15:59:16
+1217	328	514	3	96.48	2026-10-19 15:59:16	2026-10-19 15:59:16
+1218	328	604	3	96.21	2026-10-19 15:59:16	2026-10-19 15:59:16
+1219	328	361	1	40.95	2026-10-19 15:59:16	2026-10-19 15:59:16
+1220	329	118	8	33.70	2026-10-19 15:59:16	2026-10-19 15:59:16
+1221	329	899	3	85.06	2026-10-19 15:59:16	2026-10-19 15:59:16
+1222	329	854	5	86.95	2026-10-19 15:59:16	2026-10-19 15:59:16
+1223	329	743	5	59.27	2026-10-19 15:59:16	2026-10-19 15:59:16
+1224	330	64	7	46.12	2026-10-19 15:59:16	2026-10-19 15:59:16
+1225	330	605	4	96.30	2026-10-19 15:59:16	2026-10-19 15:59:16
+1226	330	800	3	87.44	2026-10-19 15:59:16	2026-10-19 15:59:16
+1227	330	969	3	71.89	2026-10-19 15:59:16	2026-10-19 15:59:16
+1228	330	331	6	95.00	2026-10-19 15:59:16	2026-10-19 15:59:16
+1229	331	571	5	23.89	2026-10-19 15:59:16	2026-10-19 15:59:16
+1230	332	478	2	116.32	2026-10-19 15:59:16	2026-10-19 15:59:16
+1231	332	562	4	38.58	2026-10-19 15:59:16	2026-10-19 15:59:16
+1232	332	656	5	35.95	2026-10-19 15:59:16	2026-10-19 15:59:16
+1233	332	783	8	73.98	2026-10-19 15:59:16	2026-10-19 15:59:16
+1234	333	652	6	76.14	2026-10-19 15:59:16	2026-10-19 15:59:16
+1235	334	339	5	141.11	2026-10-19 15:59:16	2026-10-19 15:59:16
+1236	334	982	7	82.21	2026-10-19 15:59:16	2026-10-19 15:59:16
+1237	334	131	1	100.39	2026-10-19 15:59:16	2026-10-19 15:59:16
+1238	334	642	3	28.24	2026-10-19 15:59:16	2026-10-19 15:59:16
+1239	335	260	5	125.63	2026-10-19 15:59:16	2026-10-19 15:59:16
+1240	335	810	3	32.38	2026-10-19 15:59:16	2026-10-19 15:59:16
+1241	335	629	7	131.93	2026-10-19 15:59:16	2026-10-19 15:59:16
+1242	335	924	2	90.34	2026-10-19 15:59:16	2026-10-19 15:59:16
+1243	335	326	6	40.53	2026-10-19 15:59:16	2026-10-19 15:59:16
+1244	335	968	7	21.75	2026-10-19 15:59:16	2026-10-19 15:59:16
+1245	336	788	1	90.50	2026-10-19 15:59:16	2026-10-19 15:59:16
+1246	337	936	6	141.85	2026-10-19 15:59:16	2026-10-19 15:59:16
+1247	337	481	8	61.45	2026-10-19 15:59:16	2026-10-19 15:59:16
+1248	338	223	8	125.23	2026-10-19 15:59:16	2026-10-19 15:59:16
+1249	338	590	2	140.82	2026-10-19 15:59:16	2026-10-19 15:59:16
+1250	338	302	5	64.33	2026-10-19 15:59:16	2026-10-19 15:59:16
+1251	338	691	4	128.37	2026-10-19 15:59:16	2026-10-19 15:59:16
+1252	338	545	2	17.95	2026-10-19 15:59:16	2026-10-19 15:59:16
+1253	339	389	8	84.67	2026-10-19 15:59:16	2026-10-19 15:59:16
+1254	340	432	8	96.49	2026-10-19 15:59:16	2026-10-19 15:59:16
+1255	340	722	4	67.90	2026-10-19 15:59:16	2026-10-19 15:59:16
+1256	340	465	1	37.65	2026-10-19 15:59:16	2026-10-19 15:59:16
+1257	341	217	4	92.41	2026-10-19 15:59:16	2026-10-19 15:59:16
+1258	341	705	4	111.72	2026-10-19 15:59:16	2026-10-19 15:59:16
+1259	341	41	2	7.03	2026-10-19 15:59:16	2026-10-19 15:59:16
+1260	341	378	4	18.60	2026-10-19 15:59:16	2026-10-19 15:59:16
+1261	341	834	2	30.88	2026-10-19 15:59:16	2026-10-19 15:59:16
+1262	342	481	4	61.45	2026-10-19 15:59:17	2026-10-19 15:59:17
+1263	342	107	1	99.83	2026-10-19 15:59:17	2026-10-19 15:59:17
+1264	343	176	2	110.14	2026-10-19 15:59:17	2026-10-19 15:59:17
+1265	343	302	5	64.33	2026-10-19 15:59:17	2026-10-19 15:59:17
+1266	343	883	4	93.79	2026-10-19 15:59:17	2026-10-19 15:59:17
+1267	343	91	2	20.88	2026-10-19 15:59:17	2026-10-19 15:59:17
+1268	343	786	1	148.24	2026-10-19 15:59:17	2026-10-19 15:59:17
+1269	343	427	1	49.91	2026-10-19 15:59:17	2026-10-19 15:59:17
+1270	344	503	7	119.84	2026-10-19 15:59:17	2026-10-19 15:59:17
+1271	344	200	7	141.52	2026-10-19 15:59:17	2026-10-19 15:59:17
+1272	344	807	5	143.29	2026-10-19 15:59:17	2026-10-19 15:59:17
+1273	344	787	1	99.61	2026-10-19 15:59:17	2026-10-19 15:59:17
+1274	344	129	4	6.41	2026-10-19 15:59:17	2026-10-19 15:59:17
+1275	345	345	7	124.16	2026-10-19 15:59:17	2026-10-19 15:59:17
+1276	345	703	1	68.65	2026-10-19 15:59:17	2026-10-19 15:59:17
+1277	345	428	3	58.50	2026-10-19 15:59:17	2026-10-19 15:59:17
+1278	345	407	3	21.70	2026-10-19 15:59:17	2026-10-19 15:59:17
+1279	345	848	5	30.71	2026-10-19 15:59:17	2026-10-19 15:59:17
+1280	345	768	5	35.90	2026-10-19 15:59:17	2026-10-19 15:59:17
+1281	346	308	2	34.96	2026-10-19 15:59:17	2026-10-19 15:59:17
+1282	346	316	2	38.75	2026-10-19 15:59:17	2026-10-19 15:59:17
+1283	346	780	6	62.06	2026-10-19 15:59:17	2026-10-19 15:59:17
+1284	346	976	7	64.41	2026-10-19 15:59:17	2026-10-19 15:59:17
+1285	346	893	7	10.00	2026-10-19 15:59:17	2026-10-19 15:59:17
+1286	347	804	7	56.13	2026-10-19 15:59:17	2026-10-19 15:59:17
+1287	347	358	2	54.03	2026-10-19 15:59:17	2026-10-19 15:59:17
+1288	347	422	7	43.32	2026-10-19 15:59:17	2026-10-19 15:59:17
+1289	347	225	6	71.50	2026-10-19 15:59:17	2026-10-19 15:59:17
+1290	347	795	2	148.01	2026-10-19 15:59:17	2026-10-19 15:59:17
+1291	347	958	5	24.10	2026-10-19 15:59:17	2026-10-19 15:59:17
+1292	348	382	1	36.74	2026-10-19 15:59:17	2026-10-19 15:59:17
+1293	349	229	5	129.01	2026-10-19 15:59:17	2026-10-19 15:59:17
+1294	349	994	5	36.37	2026-10-19 15:59:17	2026-10-19 15:59:17
+1295	349	107	6	99.83	2026-10-19 15:59:17	2026-10-19 15:59:17
+1296	349	220	1	55.54	2026-10-19 15:59:17	2026-10-19 15:59:17
+1297	349	110	4	50.66	2026-10-19 15:59:17	2026-10-19 15:59:17
+1298	349	368	3	78.66	2026-10-19 15:59:17	2026-10-19 15:59:17
+1299	350	160	1	142.84	2026-10-19 15:59:17	2026-10-19 15:59:17
+1300	350	735	4	25.21	2026-10-19 15:59:17	2026-10-19 15:59:17
+1301	350	23	1	8.50	2026-10-19 15:59:17	2026-10-19 15:59:17
+1302	350	322	3	92.24	2026-10-19 15:59:17	2026-10-19 15:59:17
+1303	351	503	3	119.84	2026-10-19 15:59:17	2026-10-19 15:59:17
+1304	351	101	8	108.56	2026-10-19 15:59:17	2026-10-19 15:59:17
+1305	351	427	4	49.91	2026-10-19 15:59:17	2026-10-19 15:59:17
+1306	351	443	1	10.68	2026-10-19 15:59:17	2026-10-19 15:59:17
+1307	351	756	3	44.37	2026-10-19 15:59:17	2026-10-19 15:59:17
+1308	351	566	1	128.48	2026-10-19 15:59:17	2026-10-19 15:59:17
+1309	352	631	3	35.04	2026-10-19 15:59:17	2026-10-19 15:59:17
+1310	352	462	7	58.58	2026-10-19 15:59:17	2026-10-19 15:59:17
+1311	353	162	1	28.97	2026-10-19 15:59:17	2026-10-19 15:59:17
+1312	354	753	3	140.58	2026-10-19 15:59:17	2026-10-19 15:59:17
+1313	354	967	7	42.94	2026-10-19 15:59:17	2026-10-19 15:59:17
+1314	355	385	6	81.16	2026-10-19 15:59:17	2026-10-19 15:59:17
+1315	355	564	8	17.72	2026-10-19 15:59:17	2026-10-19 15:59:17
+1316	355	955	3	34.29	2026-10-19 15:59:18	2026-10-19 15:59:18
+1317	355	225	2	71.50	2026-10-19 15:59:18	2026-10-19 15:59:18
+1318	355	173	3	7.93	2026-10-19 15:59:18	2026-10-19 15:59:18
+1319	355	402	3	149.31	2026-10-19 15:59:18	2026-10-19 15:59:18
+1320	356	690	3	126.04	2026-10-19 15:59:18	2026-10-19 15:59:18
+1321	357	306	3	121.21	2026-10-19 15:59:18	2026-10-19 15:59:18
+1322	358	127	6	91.15	2026-10-19 15:59:18	2026-10-19 15:59:18
+1323	359	339	6	141.11	2026-10-19 15:59:18	2026-10-19 15:59:18
+1324	359	978	1	124.43	2026-10-19 15:59:18	2026-10-19 15:59:18
+1325	359	345	7	124.16	2026-10-19 15:59:18	2026-10-19 15:59:18
+1326	359	114	8	109.75	2026-10-19 15:59:18	2026-10-19 15:59:18
+1327	359	989	2	32.64	2026-10-19 15:59:18	2026-10-19 15:59:18
+1328	360	325	8	35.26	2026-10-19 15:59:18	2026-10-19 15:59:18
+1329	360	751	3	103.06	2026-10-19 15:59:18	2026-10-19 15:59:18
+1330	360	154	5	26.99	2026-10-19 15:59:18	2026-10-19 15:59:18
+1331	360	525	3	99.58	2026-10-19 15:59:18	2026-10-19 15:59:18
+1332	360	797	4	101.22	2026-10-19 15:59:18	2026-10-19 15:59:18
+1333	360	770	1	136.83	2026-10-19 15:59:18	2026-10-19 15:59:18
+1334	361	181	1	63.73	2026-10-19 15:59:18	2026-10-19 15:59:18
+1335	361	315	5	127.72	2026-10-19 15:59:18	2026-10-19 15:59:18
+1336	361	814	3	143.95	2026-10-19 15:59:18	2026-10-19 15:59:18
+1337	361	929	7	132.93	2026-10-19 15:59:18	2026-10-19 15:59:18
+1338	362	487	8	28.22	2026-10-19 15:59:18	2026-10-19 15:59:18
+1339	362	885	7	147.25	2026-10-19 15:59:18	2026-10-19 15:59:18
+1340	362	881	6	144.20	2026-10-19 15:59:18	2026-10-19 15:59:18
+1341	362	22	1	6.50	2026-10-19 15:59:18	2026-10-19 15:59:18
+1342	362	895	8	108.23	2026-10-19 15:59:18	2026-10-19 15:59:18
+1343	362	252	1	119.37	2026-10-19 15:59:18	2026-10-19 15:59:18
+1344	363	992	4	85.28	2026-10-19 15:59:18	2026-10-19 15:59:18
+1345	363	401	4	36.52	2026-10-19 15:59:18	2026-10-19 15:59:18
+1346	363	998	1	80.27	2026-10-19 15:59:18	2026-10-19 15:59:18
+1347	363	271	7	26.48	2026-10-19 15:59:18	2026-10-19 15:59:18
+1348	363	831	7	41.64	2026-10-19 15:59:18	2026-10-19 15:59:18
+1349	364	931	8	81.16	2026-10-19 15:59:18	2026-10-19 15:59:18
+1350	364	945	7	35.73	2026-10-19 15:59:18	2026-10-19 15:59:18
+1351	364	908	3	75.61	2026-10-19 15:59:18	2026-10-19 15:59:18
+1352	364	714	5	37.90	2026-10-19 15:59:18	2026-10-19 15:59:18
+1353	364	571	7	23.89	2026-10-19 15:59:18	2026-10-19 15:59:18
+1354	365	334	4	19.48	2026-10-19 15:59:18	2026-10-19 15:59:18
+1355	365	413	3	58.61	2026-10-19 15:59:18	2026-10-19 15:59:18
+1356	365	414	3	12.41	2026-10-19 15:59:18	2026-10-19 15:59:18
+1357	365	584	5	132.77	2026-10-19 15:59:18	2026-10-19 15:59:18
+1358	366	348	8	90.71	2026-10-19 15:59:18	2026-10-19 15:59:18
+1359	366	860	6	56.88	2026-10-19 15:59:18	2026-10-19 15:59:18
+1360	367	299	4	121.64	2026-10-19 15:59:18	2026-10-19 15:59:18
+1361	367	532	1	99.87	2026-10-19 15:59:18	2026-10-19 15:59:18
+1362	367	505	8	43.11	2026-10-19 15:59:18	2026-10-19 15:59:18
+1363	367	880	6	9.84	2026-10-19 15:59:18	2026-10-19 15:59:18
+1364	367	370	5	64.43	2026-10-19 15:59:18	2026-10-19 15:59:18
+1365	368	120	8	33.87	2026-10-19 15:59:18	2026-10-19 15:59:18
+1366	368	184	1	69.16	2026-10-19 15:59:18	2026-10-19 15:59:18
+1367	368	634	6	47.52	2026-10-19 15:59:18	2026-10-19 15:59:18
+1368	368	105	6	117.35	2026-10-19 15:59:18	2026-10-19 15:59:18
+1369	368	120	4	33.87	2026-10-19 15:59:18	2026-10-19 15:59:18
+1370	368	843	5	77.44	2026-10-19 15:59:18	2026-10-19 15:59:18
+1371	369	367	6	126.04	2026-10-19 15:59:18	2026-10-19 15:59:18
+1372	370	623	6	135.33	2026-10-19 15:59:19	2026-10-19 15:59:19
+1373	370	330	5	58.14	2026-10-19 15:59:19	2026-10-19 15:59:19
+1374	370	576	7	54.39	2026-10-19 15:59:19	2026-10-19 15:59:19
+1375	370	926	6	53.44	2026-10-19 15:59:19	2026-10-19 15:59:19
+1376	370	140	4	148.16	2026-10-19 15:59:19	2026-10-19 15:59:19
+1377	371	683	1	144.89	2026-10-19 15:59:19	2026-10-19 15:59:19
+1378	371	223	4	125.23	2026-10-19 15:59:19	2026-10-19 15:59:19
+1379	371	159	1	83.73	2026-10-19 15:59:19	2026-10-19 15:59:19
+1380	371	554	1	100.82	2026-10-19 15:59:19	2026-10-19 15:59:19
+1381	371	130	5	35.15	2026-10-19 15:59:19	2026-10-19 15:59:19
+1382	372	654	8	32.25	2026-10-19 15:59:19	2026-10-19 15:59:19
+1383	373	373	8	28.50	2026-10-19 15:59:19	2026-10-19 15:59:19
+1384	373	780	7	62.06	2026-10-19 15:59:19	2026-10-19 15:59:19
+1385	373	865	1	77.74	2026-10-19 15:59:19	2026-10-19 15:59:19
+1386	373	333	1	11.33	2026-10-19 15:59:19	2026-10-19 15:59:19
+1387	374	343	6	44.32	2026-10-19 15:59:19	2026-10-19 15:59:19
+1388	374	769	7	46.02	2026-10-19 15:59:19	2026-10-19 15:59:19
+1389	374	467	6	77.94	2026-10-19 15:59:19	2026-10-19 15:59:19
+1390	375	788	8	90.50	2026-10-19 15:59:19	2026-10-19 15:59:19
+1391	375	165	6	97.97	2026-10-19 15:59:19	2026-10-19 15:59:19
+1392	375	352	3	76.73	2026-10-19 15:59:19	2026-10-19 15:59:19
+1393	375	221	7	48.83	2026-10-19 15:59:19	2026-10-19 15:59:19
+1394	376	556	4	15.74	2026-10-19 15:59:19	2026-10-19 15:59:19
+1395	376	653	8	26.45	2026-10-19 15:59:19	2026-10-19 15:59:19
+1396	376	904	3	106.67	2026-10-19 15:59:19	2026-10-19 15:59:19
+1397	376	532	8	99.87	2026-10-19 15:59:19	2026-10-19 15:59:19
+1398	377	196	3	47.98	2026-10-19 15:59:19	2026-10-19 15:59:19
+1399	377	196	2	47.98	2026-10-19 15:59:19	2026-10-19 15:59:19
+1400	377	711	2	117.67	2026-10-19 15:59:19	2026-10-19 15:59:19
+1401	378	546	3	41.62	2026-10-19 15:59:19	2026-10-19 15:59:19
+1402	378	147	2	72.33	2026-10-19 15:59:19	2026-10-19 15:59:19
+1403	378	916	3	143.54	2026-10-19 15:59:19	2026-10-19 15:59:19
+1404	378	530	2	9.50	2026-10-19 15:59:19	2026-10-19 15:59:19
+1405	379	19	2	8.00	2026-10-19 15:59:19	2026-10-19 15:59:19
+1406	380	662	5	96.98	2026-10-19 15:59:19	2026-10-19 15:59:19
+1407	380	923	2	54.92	2026-10-19 15:59:19	2026-10-19 15:59:19
+1408	380	798	5	98.00	2026-10-19 15:59:19	2026-10-19 15:59:19
+1409	381	883	4	93.79	2026-10-19 15:59:19	2026-10-19 15:59:19
+1410	381	743	5	59.27	2026-10-19 15:59:19	2026-10-19 15:59:19
+1411	381	215	7	77.75	2026-10-19 15:59:19	2026-10-19 15:59:19
+1412	381	335	2	149.30	2026-10-19 15:59:19	2026-10-19 15:59:19
+1413	381	302	7	64.33	2026-10-19 15:59:19	2026-10-19 15:59:19
+1414	382	382	1	36.74	2026-10-19 15:59:19	2026-10-19 15:59:19
+1415	382	656	1	35.95	2026-10-19 15:59:19	2026-10-19 15:59:19
+1416	383	963	2	116.95	2026-10-19 15:59:19	2026-10-19 15:59:19
+1417	383	404	6	133.13	2026-10-19 15:59:19	2026-10-19 15:59:19
+1418	383	40	1	72.99	2026-10-19 15:59:19	2026-10-19 15:59:19
+1419	383	256	7	135.59	2026-10-19 15:59:19	2026-10-19 15:59:19
+1420	383	581	7	60.20	2026-10-19 15:59:19	2026-10-19 15:59:19
+1421	384	817	1	31.85	2026-10-19 15:59:20	2026-10-19 15:59:20
+1422	384	639	1	135.59	2026-10-19 15:59:20	2026-10-19 15:59:20
+1423	385	308	2	34.96	2026-10-19 15:59:20	2026-10-19 15:59:20
+1424	385	881	3	144.20	2026-10-19 15:59:20	2026-10-19 15:59:20
+1425	385	699	8	34.26	2026-10-19 15:59:20	2026-10-19 15:59:20
+1426	386	929	8	132.93	2026-10-19 15:59:20	2026-10-19 15:59:20
+1427	387	180	6	98.53	2026-10-19 15:59:20	2026-10-19 15:59:20
+1428	387	278	5	103.51	2026-10-19 15:59:20	2026-10-19 15:59:20
+1429	387	892	8	8.25	2026-10-19 15:59:20	2026-10-19 15:59:20
+1430	387	69	6	15.51	2026-10-19 15:59:20	2026-10-19 15:59:20
+1431	388	656	4	35.95	2026-10-19 15:59:20	2026-10-19 15:59:20
+1432	388	76	4	98.78	2026-10-19 15:59:20	2026-10-19 15:59:20
+1433	389	919	2	105.45	2026-10-19 15:59:20	2026-10-19 15:59:20
+1434	389	818	2	16.66	2026-10-19 15:59:20	2026-10-19 15:59:20
+1435	389	896	7	54.48	2026-10-19 15:59:20	2026-10-19 15:59:20
+1436	389	141	4	97.03	2026-10-19 15:59:20	2026-10-19 15:59:20
+1437	390	450	8	12.63	2026-10-19 15:59:20	2026-10-19 15:59:20
+1438	391	476	3	34.80	2026-10-19 15:59:20	2026-10-19 15:59:20
+1439	391	781	1	12.30	2026-10-19 15:59:20	2026-10-19 15:59:20
+1440	391	215	2	77.75	2026-10-19 15:59:20	2026-10-19 15:59:20
+1441	391	860	7	56.88	2026-10-19 15:59:20	2026-10-19 15:59:20
+1442	391	986	2	149.70	2026-10-19 15:59:20	2026-10-19 15:59:20
+1443	392	450	2	12.63	2026-10-19 15:59:20	2026-10-19 15:59:20
+1444	392	514	5	96.48	2026-10-19 15:59:20	2026-10-19 15:59:20
+1445	392	191	2	120.24	2026-10-19 15:59:20	2026-10-19 15:59:20
+1446	392	886	6	104.28	2026-10-19 15:59:20	2026-10-19 15:59:20
+1447	392	397	7	83.57	2026-10-19 15:59:20	2026-10-19 15:59:20
+1448	393	232	8	118.19	2026-10-19 15:59:20	2026-10-19 15:59:20
+1449	393	159	2	83.73	2026-10-19 15:59:20	2026-10-19 15:59:20
+1450	394	705	3	111.72	2026-10-19 15:59:20	2026-10-19 15:59:20
+1451	394	895	8	108.23	2026-10-19 15:59:20	2026-10-19 15:59:20
+1452	395	613	1	19.19	2026-10-19 15:59:20	2026-10-19 15:59:20
+1453	395	392	6	112.27	2026-10-19 15:59:20	2026-10-19 15:59:20
+1454	395	774	8	100.07	2026-10-19 15:59:20	2026-10-19 15:59:20
+1455	395	877	7	47.74	2026-10-19 15:59:20	2026-10-19 15:59:20
+1456	396	847	4	32.77	2026-10-19 15:59:20	2026-10-19 15:59:20
+1457	396	212	6	5.44	2026-10-19 15:59:20	2026-10-19 15:59:20
+1458	396	942	7	10.01	2026-10-19 15:59:20	2026-10-19 15:59:20
+1459	397	438	2	114.50	2026-10-19 15:59:20	2026-10-19 15:59:20
+1460	397	651	5	75.47	2026-10-19 15:59:20	2026-10-19 15:59:20
+1461	397	603	4	35.98	2026-10-19 15:59:20	2026-10-19 15:59:20
+1462	398	125	1	65.35	2026-10-19 15:59:20	2026-10-19 15:59:20
+1463	398	486	7	116.24	2026-10-19 15:59:20	2026-10-19 15:59:20
+1464	398	187	8	147.70	2026-10-19 15:59:20	2026-10-19 15:59:20
+1465	399	773	5	42.11	2026-10-19 15:59:20	2026-10-19 15:59:20
+1466	399	136	5	83.83	2026-10-19 15:59:20	2026-10-19 15:59:20
+1467	399	536	3	98.69	2026-10-19 15:59:20	2026-10-19 15:59:20
+1468	399	830	5	148.33	2026-10-19 15:59:20	2026-10-19 15:59:20
+1469	399	413	2	58.61	2026-10-19 15:59:20	2026-10-19 15:59:20
+1470	400	194	1	132.16	2026-10-19 15:59:20	2026-10-19 15:59:20
+1471	400	638	3	118.72	2026-10-19 15:59:21	2026-10-19 15:59:21
+1472	400	400	1	31.90	2026-10-19 15:59:21	2026-10-19 15:59:21
+1473	400	963	2	116.95	2026-10-19 15:59:21	2026-10-19 15:59:21
+1474	400	749	5	38.39	2026-10-19 15:59:21	2026-10-19 15:59:21
+1475	401	983	4	34.04	2026-10-19 15:59:21	2026-10-19 15:59:21
+1476	401	116	4	61.74	2026-10-19 15:59:21	2026-10-19 15:59:21
+1477	401	548	5	120.70	2026-10-19 15:59:21	2026-10-19 15:59:21
+1478	401	454	7	35.97	2026-10-19 15:59:21	2026-10-19 15:59:21
+1479	402	214	6	77.76	2026-10-19 15:59:21	2026-10-19 15:59:21
+1480	402	746	4	27.36	2026-10-19 15:59:21	2026-10-19 15:59:21
+1481	403	665	8	112.09	2026-10-19 15:59:21	2026-10-19 15:59:21
+1482	403	621	1	92.74	2026-10-19 15:59:21	2026-10-19 15:59:21
+1483	403	454	4	35.97	2026-10-19 15:59:21	2026-10-19 15:59:21
+1484	403	547	1	37.80	2026-10-19 15:59:21	2026-10-19 15:59:21
+1485	404	301	1	118.99	2026-10-19 15:59:21	2026-10-19 15:59:21
+1486	404	921	5	120.68	2026-10-19 15:59:21	2026-10-19 15:59:21
+1487	404	639	1	135.59	2026-10-19 15:59:21	2026-10-19 15:59:21
+1488	404	449	5	28.23	2026-10-19 15:59:21	2026-10-19 15:59:21
+1489	405	361	6	40.95	2026-10-19 15:59:21	2026-10-19 15:59:21
+1490	405	331	4	95.00	2026-10-19 15:59:21	2026-10-19 15:59:21
+1491	405	130	2	35.15	2026-10-19 15:59:21	2026-10-19 15:59:21
+1492	405	708	5	25.09	2026-10-19 15:59:21	2026-10-19 15:59:21
+1493	406	528	5	36.91	2026-10-19 15:59:21	2026-10-19 15:59:21
+1494	406	472	2	49.50	2026-10-19 15:59:21	2026-10-19 15:59:21
+1495	406	55	1	116.02	2026-10-19 15:59:21	2026-10-19 15:59:21
+1496	406	678	2	75.23	2026-10-19 15:59:21	2026-10-19 15:59:21
+1497	406	927	1	120.93	2026-10-19 15:59:21	2026-10-19 15:59:21
+1498	407	602	2	80.84	2026-10-19 15:59:21	2026-10-19 15:59:21
+1499	407	746	3	27.36	2026-10-19 15:59:21	2026-10-19 15:59:21
+1500	407	164	3	104.91	2026-10-19 15:59:21	2026-10-19 15:59:21
+1501	407	635	2	56.75	2026-10-19 15:59:21	2026-10-19 15:59:21
+1502	408	285	3	144.22	2026-10-19 15:59:21	2026-10-19 15:59:21
+1503	408	816	2	95.47	2026-10-19 15:59:21	2026-10-19 15:59:21
+1504	408	204	2	34.88	2026-10-19 15:59:21	2026-10-19 15:59:21
+1505	408	198	6	119.75	2026-10-19 15:59:21	2026-10-19 15:59:21
+1506	409	144	6	77.20	2026-10-19 15:59:21	2026-10-19 15:59:21
+1507	410	305	7	91.22	2026-10-19 15:59:21	2026-10-19 15:59:21
+1508	410	358	5	54.03	2026-10-19 15:59:21	2026-10-19 15:59:21
+1509	411	868	1	113.86	2026-10-19 15:59:21	2026-10-19 15:59:21
+1510	411	969	4	71.89	2026-10-19 15:59:21	2026-10-19 15:59:21
+1511	411	234	4	15.06	2026-10-19 15:59:21	2026-10-19 15:59:21
+1512	411	790	7	30.52	2026-10-19 15:59:21	2026-10-19 15:59:21
+1513	412	480	2	110.59	2026-10-19 15:59:21	2026-10-19 15:59:21
+1514	412	667	2	41.22	2026-10-19 15:59:21	2026-10-19 15:59:21
+1515	412	740	3	10.15	2026-10-19 15:59:21	2026-10-19 15:59:21
+1516	412	737	4	21.78	2026-10-19 15:59:21	2026-10-19 15:59:21
+1517	412	469	1	68.89	2026-10-19 15:59:21	2026-10-19 15:59:21
+1518	412	915	7	118.90	2026-10-19 15:59:21	2026-10-19 15:59:21
+1519	413	143	8	93.43	2026-10-19 15:59:21	2026-10-19 15:59:21
+1520	413	360	8	66.68	2026-10-19 15:59:21	2026-10-19 15:59:21
+1521	413	667	2	41.22	2026-10-19 15:59:21	2026-10-19 15:59:21
+1522	414	204	4	34.88	2026-10-19 15:59:21	2026-10-19 15:59:21
+1523	414	714	8	37.90	2026-10-19 15:59:22	2026-10-19 15:59:22
+1524	414	433	1	60.65	2026-10-19 15:59:22	2026-10-19 15:59:22
+1525	414	955	5	34.29	2026-10-19 15:59:22	2026-10-19 15:59:22
+1526	414	926	8	53.44	2026-10-19 15:59:22	2026-10-19 15:59:22
+1527	414	503	7	119.84	2026-10-19 15:59:22	2026-10-19 15:59:22
+1528	415	93	8	19.71	2026-10-19 15:59:22	2026-10-19 15:59:22
+1529	415	597	7	63.32	2026-10-19 15:59:22	2026-10-19 15:59:22
+1530	415	417	4	83.86	2026-10-19 15:59:22	2026-10-19 15:59:22
+1531	415	795	5	148.01	2026-10-19 15:59:22	2026-10-19 15:59:22
+1532	415	95	2	140.71	2026-10-19 15:59:22	2026-10-19 15:59:22
+1533	416	657	3	100.40	2026-10-19 15:59:22	2026-10-19 15:59:22
+1534	417	342	3	115.18	2026-10-19 15:59:22	2026-10-19 15:59:22
+1535	418	907	3	45.62	2026-10-19 15:59:22	2026-10-19 15:59:22
+1536	418	216	4	94.02	2026-10-19 15:59:22	2026-10-19 15:59:22
+1537	418	420	8	16.28	2026-10-19 15:59:22	2026-10-19 15:59:22
+1538	418	111	2	102.89	2026-10-19 15:59:22	2026-10-19 15:59:22
+1539	418	810	4	32.38	2026-10-19 15:59:22	2026-10-19 15:59:22
+1540	418	52	4	70.38	2026-10-19 15:59:22	2026-10-19 15:59:22
+1541	419	392	7	112.27	2026-10-19 15:59:22	2026-10-19 15:59:22
+1542	419	254	3	107.92	2026-10-19 15:59:22	2026-10-19 15:59:22
+1543	420	296	5	45.48	2026-10-19 15:59:22	2026-10-19 15:59:22
+1544	420	566	1	128.48	2026-10-19 15:59:22	2026-10-19 15:59:22
+1545	421	211	8	132.22	2026-10-19 15:59:22	2026-10-19 15:59:22
+1546	421	476	1	34.80	2026-10-19 15:59:22	2026-10-19 15:59:22
+1547	422	931	8	81.16	2026-10-19 15:59:22	2026-10-19 15:59:22
+1548	422	929	8	132.93	2026-10-19 15:59:22	2026-10-19 15:59:22
+1549	423	571	8	23.89	2026-10-19 15:59:22	2026-10-19 15:59:22
+1550	423	834	6	30.88	2026-10-19 15:59:22	2026-10-19 15:59:22
+1551	424	920	7	22.31	2026-10-19 15:59:22	2026-10-19 15:59:22
+1552	424	125	6	65.35	2026-10-19 15:59:22	2026-10-19 15:59:22
+1553	424	924	8	90.34	2026-10-19 15:59:22	2026-10-19 15:59:22
+1554	424	532	3	99.87	2026-10-19 15:59:22	2026-10-19 15:59:22
+1555	424	371	7	76.37	2026-10-19 15:59:22	2026-10-19 15:59:22
+1556	425	922	8	54.94	2026-10-19 15:59:22	2026-10-19 15:59:22
+1557	426	389	7	84.67	2026-10-19 15:59:22	2026-10-19 15:59:22
+1558	426	285	5	144.22	2026-10-19 15:59:22	2026-10-19 15:59:22
+1559	426	261	7	97.10	2026-10-19 15:59:22	2026-10-19 15:59:22
+1560	426	76	6	98.78	2026-10-19 15:59:22	2026-10-19 15:59:22
+1561	427	137	3	109.43	2026-10-19 15:59:22	2026-10-19 15:59:22
+1562	427	871	7	7.85	2026-10-19 15:59:22	2026-10-19 15:59:22
+1563	427	747	3	119.11	2026-10-19 15:59:22	2026-10-19 15:59:22
+1564	427	846	3	6.34	2026-10-19 15:59:22	2026-10-19 15:59:22
+1565	427	164	4	104.91	2026-10-19 15:59:22	2026-10-19 15:59:22
+1566	427	982	3	82.21	2026-10-19 15:59:22	2026-10-19 15:59:22
+1567	428	998	8	80.27	2026-10-19 15:59:22	2026-10-19 15:59:22
+1568	428	869	5	31.21	2026-10-19 15:59:22	2026-10-19 15:59:22
+1569	428	302	5	64.33	2026-10-19 15:59:22	2026-10-19 15:59:22
+1570	428	827	4	27.33	2026-10-19 15:59:22	2026-10-19 15:59:22
+1571	428	743	2	59.27	2026-10-19 15:59:22	2026-10-19 15:59:22
+1572	428	837	3	99.04	2026-10-19 15:59:22	2026-10-19 15:59:22
+1573	429	228	4	131.38	2026-10-19 15:59:23	2026-10-19 15:59:23
+1574	430	92	1	53.36	2026-10-19 15:59:23	2026-10-19 15:59:23
+1575	430	348	5	90.71	2026-10-19 15:59:23	2026-10-19 15:59:23
+1576	430	226	1	21.08	2026-10-19 15:59:23	2026-10-19 15:59:23
+1577	430	225	2	71.50	2026-10-19 15:59:23	2026-10-19 15:59:23
+1578	430	453	1	100.94	2026-10-19 15:59:23	2026-10-19 15:59:23
+1579	431	786	5	148.24	2026-10-19 15:59:23	2026-10-19 15:59:23
+1580	431	135	3	51.43	2026-10-19 15:59:23	2026-10-19 15:59:23
+1581	431	911	6	62.18	2026-10-19 15:59:23	2026-10-19 15:59:23
+1582	431	938	3	99.08	2026-10-19 15:59:23	2026-10-19 15:59:23
+1583	432	590	6	140.82	2026-10-19 15:59:23	2026-10-19 15:59:23
+1584	432	869	7	31.21	2026-10-19 15:59:23	2026-10-19 15:59:23
+1585	432	539	5	130.56	2026-10-19 15:59:23	2026-10-19 15:59:23
+1586	432	832	3	102.87	2026-10-19 15:59:23	2026-10-19 15:59:23
+1587	433	425	2	141.44	2026-10-19 15:59:23	2026-10-19 15:59:23
+1588	433	329	6	42.12	2026-10-19 15:59:23	2026-10-19 15:59:23
+1589	433	730	5	66.63	2026-10-19 15:59:23	2026-10-19 15:59:23
+1590	433	348	7	90.71	2026-10-19 15:59:23	2026-10-19 15:59:23
+1591	433	187	8	147.70	2026-10-19 15:59:23	2026-10-19 15:59:23
+1592	433	848	5	30.71	2026-10-19 15:59:23	2026-10-19 15:59:23
+1593	434	366	2	34.23	2026-10-19 15:59:23	2026-10-19 15:59:23
+1594	434	751	2	103.06	2026-10-19 15:59:23	2026-10-19 15:59:23
+1595	434	562	6	38.58	2026-10-19 15:59:23	2026-10-19 15:59:23
+1596	434	632	5	145.14	2026-10-19 15:59:23	2026-10-19 15:59:23
+1597	434	818	5	16.66	2026-10-19 15:59:23	2026-10-19 15:59:23
+1598	435	262	3	128.31	2026-10-19 15:59:23	2026-10-19 15:59:23
+1599	436	882	8	143.89	2026-10-19 15:59:23	2026-10-19 15:59:23
+1600	436	521	8	43.94	2026-10-19 15:59:23	2026-10-19 15:59:23
+1601	436	589	1	133.11	2026-10-19 15:59:23	2026-10-19 15:59:23
+1602	437	804	3	56.13	2026-10-19 15:59:23	2026-10-19 15:59:23
+1603	438	285	3	144.22	2026-10-19 15:59:23	2026-10-19 15:59:23
+1604	438	667	7	41.22	2026-10-19 15:59:23	2026-10-19 15:59:23
+1605	438	561	7	44.66	2026-10-19 15:59:23	2026-10-19 15:59:23
+1606	438	213	7	7.38	2026-10-19 15:59:23	2026-10-19 15:59:23
+1607	439	307	7	148.78	2026-10-19 15:59:23	2026-10-19 15:59:23
+1608	439	565	5	86.71	2026-10-19 15:59:23	2026-10-19 15:59:23
+1609	439	203	2	83.08	2026-10-19 15:59:23	2026-10-19 15:59:23
+1610	439	462	3	58.58	2026-10-19 15:59:23	2026-10-19 15:59:23
+1611	439	479	2	134.49	2026-10-19 15:59:23	2026-10-19 15:59:23
+1612	439	143	6	93.43	2026-10-19 15:59:23	2026-10-19 15:59:23
+1613	440	764	8	36.59	2026-10-19 15:59:23	2026-10-19 15:59:23
+1614	441	320	8	86.32	2026-10-19 15:59:23	2026-10-19 15:59:23
+1615	441	825	3	89.58	2026-10-19 15:59:23	2026-10-19 15:59:23
+1616	441	812	5	113.67	2026-10-19 15:59:23	2026-10-19 15:59:23
+1617	441	774	2	100.07	2026-10-19 15:59:23	2026-10-19 15:59:23
+1618	441	672	8	7.22	2026-10-19 15:59:24	2026-10-19 15:59:24
+1619	441	239	7	108.19	2026-10-19 15:59:24	2026-10-19 15:59:24
+1620	442	889	7	131.82	2026-10-19 15:59:24	2026-10-19 15:59:24
+1621	442	742	7	143.65	2026-10-19 15:59:24	2026-10-19 15:59:24
+1622	442	661	1	146.05	2026-10-19 15:59:24	2026-10-19 15:59:24
+1623	442	432	3	96.49	2026-10-19 15:59:24	2026-10-19 15:59:24
+1624	442	989	4	32.64	2026-10-19 15:59:24	2026-10-19 15:59:24
+1625	442	218	3	35.75	2026-10-19 15:59:24	2026-10-19 15:59:24
+1626	443	487	5	28.22	2026-10-19 15:59:24	2026-10-19 15:59:24
+1627	443	2	1	12.00	2026-10-19 15:59:24	2026-10-19 15:59:24
+1628	443	287	5	52.33	2026-10-19 15:59:24	2026-10-19 15:59:24
+1629	443	609	4	32.10	2026-10-19 15:59:24	2026-10-19 15:59:24
+1630	443	385	1	81.16	2026-10-19 15:59:24	2026-10-19 15:59:24
+1631	444	805	1	98.87	2026-10-19 15:59:24	2026-10-19 15:59:24
+1632	444	598	3	117.28	2026-10-19 15:59:24	2026-10-19 15:59:24
+1633	444	733	7	14.90	2026-10-19 15:59:24	2026-10-19 15:59:24
+1634	444	880	8	9.84	2026-10-19 15:59:24	2026-10-19 15:59:24
+1635	444	676	2	101.97	2026-10-19 15:59:24	2026-10-19 15:59:24
+1636	445	328	6	70.30	2026-10-19 15:59:24	2026-10-19 15:59:24
+1637	445	467	1	77.94	2026-10-19 15:59:24	2026-10-19 15:59:24
+1638	445	144	6	77.20	2026-10-19 15:59:24	2026-10-19 15:59:24
+1639	445	208	5	60.72	2026-10-19 15:59:24	2026-10-19 15:59:24
+1640	445	261	2	97.10	2026-10-19 15:59:24	2026-10-19 15:59:24
+1641	446	708	5	25.09	2026-10-19 15:59:24	2026-10-19 15:59:24
+1642	446	983	8	34.04	2026-10-19 15:59:24	2026-10-19 15:59:24
+1643	447	630	2	144.86	2026-10-19 15:59:24	2026-10-19 15:59:24
+1644	447	293	3	80.52	2026-10-19 15:59:24	2026-10-19 15:59:24
+1645	447	256	8	135.59	2026-10-19 15:59:24	2026-10-19 15:59:24
+1646	447	171	4	116.85	2026-10-19 15:59:24	2026-10-19 15:59:24
+1647	448	794	4	7.40	2026-10-19 15:59:24	2026-10-19 15:59:24
+1648	448	344	2	129.19	2026-10-19 15:59:24	2026-10-19 15:59:24
+1649	449	821	3	126.25	2026-10-19 15:59:24	2026-10-19 15:59:24
+1650	449	981	2	139.72	2026-10-19 15:59:24	2026-10-19 15:59:24
+1651	449	604	8	96.21	2026-10-19 15:59:24	2026-10-19 15:59:24
+1652	450	551	1	71.10	2026-10-19 15:59:24	2026-10-19 15:59:24
+1653	450	141	7	97.03	2026-10-19 15:59:24	2026-10-19 15:59:24
+1654	450	481	7	61.45	2026-10-19 15:59:24	2026-10-19 15:59:24
+1655	450	890	5	66.34	2026-10-19 15:59:24	2026-10-19 15:59:24
+1656	450	570	1	34.72	2026-10-19 15:59:24	2026-10-19 15:59:24
+1657	451	267	4	7.96	2026-10-19 15:59:24	2026-10-19 15:59:24
+1658	451	498	2	90.82	2026-10-19 15:59:24	2026-10-19 15:59:24
+1659	451	45	1	100.91	2026-10-19 15:59:24	2026-10-19 15:59:24
+1660	451	716	4	109.46	2026-10-19 15:59:24	2026-10-19 15:59:24
+1661	452	143	7	93.43	2026-10-19 15:59:24	2026-10-19 15:59:24
+1662	453	228	3	131.38	2026-10-19 15:59:24	2026-10-19 15:59:24
+1663	453	678	4	75.23	2026-10-19 15:59:24	2026-10-19 15:59:24
+1664	453	213	8	7.38	2026-10-19 15:59:24	2026-10-19 15:59:24
+1665	454	640	6	144.81	2026-10-19 15:59:24	2026-10-19 15:59:24
+1666	454	98	6	113.36	2026-10-19 15:59:24	2026-10-19 15:59:24
+1667	454	383	2	50.06	2026-10-19 15:59:24	2026-10-19 15:59:24
+1668	454	809	7	96.84	2026-10-19 15:59:24	2026-10-19 15:59:24
+1669	454	192	1	20.30	2026-10-19 15:59:24	2026-10-19 15:59:24
+1670	455	906	3	140.30	2026-10-19 15:59:25	2026-10-19 15:59:25
+1671	455	291	5	59.19	2026-10-19 15:59:25	2026-10-19 15:59:25
+1672	455	288	2	104.48	2026-10-19 15:59:25	2026-10-19 15:59:25
+1673	455	722	4	67.90	2026-10-19 15:59:25	2026-10-19 15:59:25
+1674	455	767	3	104.40	2026-10-19 15:59:25	2026-10-19 15:59:25
+1675	456	499	6	79.87	2026-10-19 15:59:25	2026-10-19 15:59:25
+1676	456	603	3	35.98	2026-10-19 15:59:25	2026-10-19 15:59:25
+1677	456	696	6	117.01	2026-10-19 15:59:25	2026-10-19 15:59:25
+1678	457	865	3	77.74	2026-10-19 15:59:25	2026-10-19 15:59:25
+1679	458	285	3	144.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+1680	458	460	5	94.68	2026-10-19 15:59:25	2026-10-19 15:59:25
+1681	458	305	6	91.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+1682	458	624	4	136.08	2026-10-19 15:59:25	2026-10-19 15:59:25
+1683	458	910	5	41.81	2026-10-19 15:59:25	2026-10-19 15:59:25
+1684	459	804	2	56.13	2026-10-19 15:59:25	2026-10-19 15:59:25
+1685	459	723	5	79.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+1686	459	896	6	54.48	2026-10-19 15:59:25	2026-10-19 15:59:25
+1687	459	195	8	117.57	2026-10-19 15:59:25	2026-10-19 15:59:25
+1688	459	513	3	37.58	2026-10-19 15:59:25	2026-10-19 15:59:25
+1689	460	878	3	34.93	2026-10-19 15:59:25	2026-10-19 15:59:25
+1690	460	566	7	128.48	2026-10-19 15:59:25	2026-10-19 15:59:25
+1691	460	393	3	119.89	2026-10-19 15:59:25	2026-10-19 15:59:25
+1692	460	479	2	134.49	2026-10-19 15:59:25	2026-10-19 15:59:25
+1693	460	199	5	19.61	2026-10-19 15:59:25	2026-10-19 15:59:25
+1694	460	565	6	86.71	2026-10-19 15:59:25	2026-10-19 15:59:25
+1695	461	334	8	19.48	2026-10-19 15:59:25	2026-10-19 15:59:25
+1696	461	620	1	107.38	2026-10-19 15:59:25	2026-10-19 15:59:25
+1697	462	412	3	66.66	2026-10-19 15:59:25	2026-10-19 15:59:25
+1698	462	798	3	98.00	2026-10-19 15:59:25	2026-10-19 15:59:25
+1699	462	293	4	80.52	2026-10-19 15:59:25	2026-10-19 15:59:25
+1700	462	486	1	116.24	2026-10-19 15:59:25	2026-10-19 15:59:25
+1701	462	686	2	124.35	2026-10-19 15:59:25	2026-10-19 15:59:25
+1702	463	516	7	97.86	2026-10-19 15:59:25	2026-10-19 15:59:25
+1703	463	491	5	85.12	2026-10-19 15:59:25	2026-10-19 15:59:25
+1704	464	396	8	12.41	2026-10-19 15:59:25	2026-10-19 15:59:25
+1705	464	482	1	17.07	2026-10-19 15:59:25	2026-10-19 15:59:25
+1706	464	346	4	93.61	2026-10-19 15:59:25	2026-10-19 15:59:25
+1707	464	969	3	71.89	2026-10-19 15:59:25	2026-10-19 15:59:25
+1708	464	126	7	141.02	2026-10-19 15:59:25	2026-10-19 15:59:25
+1709	464	157	7	85.79	2026-10-19 15:59:25	2026-10-19 15:59:25
+1710	465	279	4	121.63	2026-10-19 15:59:25	2026-10-19 15:59:25
+1711	465	583	3	119.99	2026-10-19 15:59:25	2026-10-19 15:59:25
+1712	466	544	1	133.41	2026-10-19 15:59:25	2026-10-19 15:59:25
+1713	466	913	6	13.43	2026-10-19 15:59:25	2026-10-19 15:59:25
+1714	466	614	5	68.01	2026-10-19 15:59:25	2026-10-19 15:59:25
+1715	466	610	4	44.51	2026-10-19 15:59:25	2026-10-19 15:59:25
+1716	466	870	6	47.58	2026-10-19 15:59:25	2026-10-19 15:59:25
+1717	466	188	4	80.28	2026-10-19 15:59:25	2026-10-19 15:59:25
+1718	467	479	7	134.49	2026-10-19 15:59:25	2026-10-19 15:59:25
+1719	468	590	8	140.82	2026-10-19 15:59:25	2026-10-19 15:59:25
+1720	469	526	8	81.64	2026-10-19 15:59:25	2026-10-19 15:59:25
+1721	470	932	2	28.25	2026-10-19 15:59:25	2026-10-19 15:59:25
+1722	470	329	2	42.12	2026-10-19 15:59:25	2026-10-19 15:59:25
+1723	470	109	1	54.26	2026-10-19 15:59:25	2026-10-19 15:59:25
+1724	470	440	3	70.62	2026-10-19 15:59:25	2026-10-19 15:59:25
+1725	471	735	1	25.21	2026-10-19 15:59:25	2026-10-19 15:59:25
+1726	471	232	6	118.19	2026-10-19 15:59:25	2026-10-19 15:59:25
+1727	472	622	4	26.25	2026-10-19 15:59:25	2026-10-19 15:59:25
+1728	472	352	8	76.73	2026-10-19 15:59:25	2026-10-19 15:59:25
+1729	472	302	6	64.33	2026-10-19 15:59:25	2026-10-19 15:59:25
+1730	472	506	8	139.08	2026-10-19 15:59:26	2026-10-19 15:59:26
+1731	473	921	6	120.68	2026-10-19 15:59:26	2026-10-19 15:59:26
+1732	473	498	5	90.82	2026-10-19 15:59:26	2026-10-19 15:59:26
+1733	473	381	8	100.28	2026-10-19 15:59:26	2026-10-19 15:59:26
+1734	473	512	7	136.36	2026-10-19 15:59:26	2026-10-19 15:59:26
+1735	473	565	5	86.71	2026-10-19 15:59:26	2026-10-19 15:59:26
+1736	474	940	1	129.52	2026-10-19 15:59:26	2026-10-19 15:59:26
+1737	475	651	4	75.47	2026-10-19 15:59:26	2026-10-19 15:59:26
+1738	475	418	7	107.84	2026-10-19 15:59:26	2026-10-19 15:59:26
+1739	475	494	2	11.97	2026-10-19 15:59:26	2026-10-19 15:59:26
+1740	475	205	4	110.91	2026-10-19 15:59:26	2026-10-19 15:59:26
+1741	475	990	8	96.87	2026-10-19 15:59:26	2026-10-19 15:59:26
+1742	475	63	8	28.87	2026-10-19 15:59:26	2026-10-19 15:59:26
+1743	476	335	4	149.30	2026-10-19 15:59:26	2026-10-19 15:59:26
+1744	476	525	4	99.58	2026-10-19 15:59:26	2026-10-19 15:59:26
+1745	476	147	6	72.33	2026-10-19 15:59:26	2026-10-19 15:59:26
+1746	477	660	6	135.97	2026-10-19 15:59:26	2026-10-19 15:59:26
+1747	477	970	4	15.64	2026-10-19 15:59:26	2026-10-19 15:59:26
+1748	477	877	2	47.74	2026-10-19 15:59:26	2026-10-19 15:59:26
+1749	477	76	7	98.78	2026-10-19 15:59:26	2026-10-19 15:59:26
+1750	477	424	3	89.35	2026-10-19 15:59:26	2026-10-19 15:59:26
+1751	477	893	7	10.00	2026-10-19 15:59:26	2026-10-19 15:59:26
+1752	478	891	4	117.86	2026-10-19 15:59:26	2026-10-19 15:59:26
+1753	478	151	4	32.42	2026-10-19 15:59:26	2026-10-19 15:59:26
+1754	478	513	8	37.58	2026-10-19 15:59:26	2026-10-19 15:59:26
+1755	478	195	3	117.57	2026-10-19 15:59:26	2026-10-19 15:59:26
+1756	479	908	6	75.61	2026-10-19 15:59:26	2026-10-19 15:59:26
+1757	479	878	5	34.93	2026-10-19 15:59:26	2026-10-19 15:59:26
+1758	479	777	2	119.09	2026-10-19 15:59:26	2026-10-19 15:59:26
+1759	479	996	1	101.79	2026-10-19 15:59:26	2026-10-19 15:59:26
+1760	479	269	1	108.40	2026-10-19 15:59:26	2026-10-19 15:59:26
+1761	480	20	1	9.50	2026-10-19 15:59:26	2026-10-19 15:59:26
+1762	481	508	3	58.44	2026-10-19 15:59:26	2026-10-19 15:59:26
+1763	481	786	5	148.24	2026-10-19 15:59:26	2026-10-19 15:59:26
+1764	482	627	5	122.18	2026-10-19 15:59:26	2026-10-19 15:59:26
+1765	483	971	2	7.00	2026-10-19 15:59:26	2026-10-19 15:59:26
+1766	483	672	3	7.22	2026-10-19 15:59:26	2026-10-19 15:59:26
+1767	483	994	5	36.37	2026-10-19 15:59:26	2026-10-19 15:59:26
+1768	484	488	2	89.44	2026-10-19 15:59:26	2026-10-19 15:59:26
+1769	484	541	3	57.39	2026-10-19 15:59:26	2026-10-19 15:59:26
+1770	485	713	3	141.10	2026-10-19 15:59:26	2026-10-19 15:59:26
+1771	485	135	6	51.43	2026-10-19 15:59:26	2026-10-19 15:59:26
+1772	485	533	6	20.78	2026-10-19 15:59:26	2026-10-19 15:59:26
+1773	485	219	8	140.11	2026-10-19 15:59:26	2026-10-19 15:59:26
+1774	486	744	3	29.99	2026-10-19 15:59:26	2026-10-19 15:59:26
+1775	487	842	1	32.35	2026-10-19 15:59:26	2026-10-19 15:59:26
+1776	487	302	4	64.33	2026-10-19 15:59:26	2026-10-19 15:59:26
+1777	487	456	4	7.42	2026-10-19 15:59:26	2026-10-19 15:59:26
+1778	487	413	6	58.61	2026-10-19 15:59:26	2026-10-19 15:59:26
+1779	487	261	3	97.10	2026-10-19 15:59:26	2026-10-19 15:59:26
+1780	487	82	6	28.80	2026-10-19 15:59:26	2026-10-19 15:59:26
+1781	488	855	4	59.93	2026-10-19 15:59:26	2026-10-19 15:59:26
+1782	488	701	4	114.67	2026-10-19 15:59:26	2026-10-19 15:59:26
+1783	489	761	8	8.80	2026-10-19 15:59:26	2026-10-19 15:59:26
+1784	489	874	1	96.93	2026-10-19 15:59:26	2026-10-19 15:59:26
+1785	489	465	2	37.65	2026-10-19 15:59:26	2026-10-19 15:59:26
+1786	489	44	2	125.90	2026-10-19 15:59:26	2026-10-19 15:59:26
+1787	489	513	1	37.58	2026-10-19 15:59:26	2026-10-19 15:59:26
+1788	490	826	4	16.86	2026-10-19 15:59:26	2026-10-19 15:59:26
+1789	490	419	7	67.09	2026-10-19 15:59:26	2026-10-19 15:59:26
+1790	490	257	7	90.83	2026-10-19 15:59:26	2026-10-19 15:59:26
+1791	490	815	3	52.15	2026-10-19 15:59:26	2026-10-19 15:59:26
+1792	490	462	5	58.58	2026-10-19 15:59:26	2026-10-19 15:59:26
+1793	491	283	8	34.85	2026-10-19 15:59:27	2026-10-19 15:59:27
+1794	491	510	8	25.12	2026-10-19 15:59:27	2026-10-19 15:59:27
+1795	491	659	6	143.03	2026-10-19 15:59:27	2026-10-19 15:59:27
+1796	491	240	7	9.88	2026-10-19 15:59:27	2026-10-19 15:59:27
+1797	492	719	5	95.06	2026-10-19 15:59:27	2026-10-19 15:59:27
+1798	492	199	2	19.61	2026-10-19 15:59:27	2026-10-19 15:59:27
+1799	493	976	4	64.41	2026-10-19 15:59:27	2026-10-19 15:59:27
+1800	493	540	3	90.10	2026-10-19 15:59:27	2026-10-19 15:59:27
+1801	494	592	6	47.20	2026-10-19 15:59:27	2026-10-19 15:59:27
+1802	494	865	5	77.74	2026-10-19 15:59:27	2026-10-19 15:59:27
+1803	494	365	3	114.09	2026-10-19 15:59:27	2026-10-19 15:59:27
+1804	494	986	4	149.70	2026-10-19 15:59:27	2026-10-19 15:59:27
+1805	494	104	8	51.55	2026-10-19 15:59:27	2026-10-19 15:59:27
+1806	494	595	7	13.47	2026-10-19 15:59:27	2026-10-19 15:59:27
+1807	495	928	1	98.75	2026-10-19 15:59:27	2026-10-19 15:59:27
+1808	496	266	3	68.52	2026-10-19 15:59:27	2026-10-19 15:59:27
+1809	496	513	6	37.58	2026-10-19 15:59:27	2026-10-19 15:59:27
+1810	496	769	8	46.02	2026-10-19 15:59:27	2026-10-19 15:59:27
+1811	496	798	7	98.00	2026-10-19 15:59:27	2026-10-19 15:59:27
+1812	496	254	5	107.92	2026-10-19 15:59:27	2026-10-19 15:59:27
+1813	496	733	1	14.90	2026-10-19 15:59:27	2026-10-19 15:59:27
+1814	497	636	1	33.76	2026-10-19 15:59:27	2026-10-19 15:59:27
+1815	497	683	7	144.89	2026-10-19 15:59:27	2026-10-19 15:59:27
+1816	497	492	3	116.10	2026-10-19 15:59:27	2026-10-19 15:59:27
+1817	497	721	2	131.15	2026-10-19 15:59:27	2026-10-19 15:59:27
+1818	498	629	8	131.93	2026-10-19 15:59:27	2026-10-19 15:59:27
+1819	499	279	8	121.63	2026-10-19 15:59:27	2026-10-19 15:59:27
+1820	499	228	2	131.38	2026-10-19 15:59:27	2026-10-19 15:59:27
+1821	500	688	5	127.13	2026-10-19 15:59:27	2026-10-19 15:59:27
+1822	501	419	3	67.09	2026-10-19 15:59:27	2026-10-19 15:59:27
+1823	502	198	1	119.75	2026-10-19 15:59:27	2026-10-19 15:59:27
+1824	502	369	8	116.51	2026-10-19 15:59:27	2026-10-19 15:59:27
+1825	502	393	2	119.89	2026-10-19 15:59:27	2026-10-19 15:59:27
+1826	502	896	6	54.48	2026-10-19 15:59:27	2026-10-19 15:59:27
+1827	503	566	7	128.48	2026-10-19 15:59:27	2026-10-19 15:59:27
+1828	503	533	7	20.78	2026-10-19 15:59:27	2026-10-19 15:59:27
+1829	503	746	1	27.36	2026-10-19 15:59:27	2026-10-19 15:59:27
+1830	503	492	7	116.10	2026-10-19 15:59:27	2026-10-19 15:59:27
+1831	503	557	5	42.04	2026-10-19 15:59:27	2026-10-19 15:59:27
+1832	503	851	1	126.89	2026-10-19 15:59:27	2026-10-19 15:59:27
+1833	504	687	1	19.29	2026-10-19 15:59:27	2026-10-19 15:59:27
+1834	505	599	4	37.36	2026-10-19 15:59:27	2026-10-19 15:59:27
+1835	505	255	7	123.75	2026-10-19 15:59:27	2026-10-19 15:59:27
+1836	505	251	1	28.82	2026-10-19 15:59:27	2026-10-19 15:59:27
+1837	505	678	5	75.23	2026-10-19 15:59:27	2026-10-19 15:59:27
+1838	505	732	1	109.40	2026-10-19 15:59:27	2026-10-19 15:59:27
+1839	505	271	3	26.48	2026-10-19 15:59:27	2026-10-19 15:59:27
+1840	506	587	1	113.15	2026-10-19 15:59:27	2026-10-19 15:59:27
+1841	506	423	3	72.37	2026-10-19 15:59:27	2026-10-19 15:59:27
+1842	506	706	3	103.70	2026-10-19 15:59:27	2026-10-19 15:59:27
+1843	506	91	2	20.88	2026-10-19 15:59:27	2026-10-19 15:59:27
+1844	507	697	6	127.56	2026-10-19 15:59:27	2026-10-19 15:59:27
+1845	508	913	3	13.43	2026-10-19 15:59:27	2026-10-19 15:59:27
+1846	508	622	7	26.25	2026-10-19 15:59:27	2026-10-19 15:59:27
+1847	508	863	4	105.83	2026-10-19 15:59:27	2026-10-19 15:59:27
+1848	508	928	5	98.75	2026-10-19 15:59:27	2026-10-19 15:59:27
+1849	509	644	5	17.34	2026-10-19 15:59:27	2026-10-19 15:59:27
+1850	509	849	8	102.02	2026-10-19 15:59:27	2026-10-19 15:59:27
+1851	509	666	7	123.45	2026-10-19 15:59:27	2026-10-19 15:59:27
+1852	510	225	7	71.50	2026-10-19 15:59:27	2026-10-19 15:59:27
+1853	510	661	1	146.05	2026-10-19 15:59:27	2026-10-19 15:59:27
+1854	510	450	4	12.63	2026-10-19 15:59:27	2026-10-19 15:59:27
+1855	510	703	6	68.65	2026-10-19 15:59:27	2026-10-19 15:59:27
+1856	510	327	2	12.11	2026-10-19 15:59:28	2026-10-19 15:59:28
+1857	510	509	7	27.22	2026-10-19 15:59:28	2026-10-19 15:59:28
+1858	511	923	7	54.92	2026-10-19 15:59:28	2026-10-19 15:59:28
+1859	511	352	5	76.73	2026-10-19 15:59:28	2026-10-19 15:59:28
+1860	511	834	3	30.88	2026-10-19 15:59:28	2026-10-19 15:59:28
+1861	511	993	5	12.87	2026-10-19 15:59:28	2026-10-19 15:59:28
+1862	511	938	7	99.08	2026-10-19 15:59:28	2026-10-19 15:59:28
+1863	512	850	2	146.27	2026-10-19 15:59:28	2026-10-19 15:59:28
+1864	512	165	3	97.97	2026-10-19 15:59:28	2026-10-19 15:59:28
+1865	512	586	1	58.25	2026-10-19 15:59:28	2026-10-19 15:59:28
+1866	512	146	5	68.67	2026-10-19 15:59:28	2026-10-19 15:59:28
+1867	513	455	5	88.34	2026-10-19 15:59:28	2026-10-19 15:59:28
+1868	513	288	2	104.48	2026-10-19 15:59:28	2026-10-19 15:59:28
+1869	513	542	8	65.80	2026-10-19 15:59:28	2026-10-19 15:59:28
+1870	513	454	3	35.97	2026-10-19 15:59:28	2026-10-19 15:59:28
+1871	514	698	1	35.48	2026-10-19 15:59:28	2026-10-19 15:59:28
+1872	514	553	1	57.00	2026-10-19 15:59:28	2026-10-19 15:59:28
+1873	515	382	3	36.74	2026-10-19 15:59:28	2026-10-19 15:59:28
+1874	515	798	6	98.00	2026-10-19 15:59:28	2026-10-19 15:59:28
+1875	515	494	5	11.97	2026-10-19 15:59:28	2026-10-19 15:59:28
+1876	515	871	5	7.85	2026-10-19 15:59:28	2026-10-19 15:59:28
+1877	515	5	1	18.50	2026-10-19 15:59:28	2026-10-19 15:59:28
+1878	516	693	7	121.76	2026-10-19 15:59:28	2026-10-19 15:59:28
+1879	516	53	8	135.26	2026-10-19 15:59:28	2026-10-19 15:59:28
+1880	516	334	5	19.48	2026-10-19 15:59:28	2026-10-19 15:59:28
+1881	516	657	2	100.40	2026-10-19 15:59:28	2026-10-19 15:59:28
+1882	516	610	8	44.51	2026-10-19 15:59:28	2026-10-19 15:59:28
+1883	516	487	8	28.22	2026-10-19 15:59:28	2026-10-19 15:59:28
+1884	517	504	8	127.29	2026-10-19 15:59:28	2026-10-19 15:59:28
+1885	517	478	4	116.32	2026-10-19 15:59:28	2026-10-19 15:59:28
+1886	517	167	4	10.02	2026-10-19 15:59:28	2026-10-19 15:59:28
+1887	518	571	4	23.89	2026-10-19 15:59:28	2026-10-19 15:59:28
+1888	518	154	3	26.99	2026-10-19 15:59:28	2026-10-19 15:59:28
+1889	518	683	7	144.89	2026-10-19 15:59:28	2026-10-19 15:59:28
+1890	519	39	3	148.59	2026-10-19 15:59:28	2026-10-19 15:59:28
+1891	519	580	2	31.01	2026-10-19 15:59:28	2026-10-19 15:59:28
+1892	519	997	6	82.61	2026-10-19 15:59:28	2026-10-19 15:59:28
+1893	519	881	2	144.20	2026-10-19 15:59:28	2026-10-19 15:59:28
+1894	520	560	2	118.31	2026-10-19 15:59:28	2026-10-19 15:59:28
+1895	520	312	2	28.60	2026-10-19 15:59:28	2026-10-19 15:59:28
+1896	521	181	2	63.73	2026-10-19 15:59:28	2026-10-19 15:59:28
+1897	521	892	7	8.25	2026-10-19 15:59:28	2026-10-19 15:59:28
+1898	522	504	6	127.29	2026-10-19 15:59:28	2026-10-19 15:59:28
+1899	522	781	3	12.30	2026-10-19 15:59:28	2026-10-19 15:59:28
+1900	523	548	2	120.70	2026-10-19 15:59:28	2026-10-19 15:59:28
+1901	523	751	8	103.06	2026-10-19 15:59:29	2026-10-19 15:59:29
+1902	523	170	6	5.25	2026-10-19 15:59:29	2026-10-19 15:59:29
+1903	523	883	2	93.79	2026-10-19 15:59:29	2026-10-19 15:59:29
+1904	523	280	6	73.77	2026-10-19 15:59:29	2026-10-19 15:59:29
+1905	523	486	4	116.24	2026-10-19 15:59:29	2026-10-19 15:59:29
+1906	524	551	7	71.10	2026-10-19 15:59:29	2026-10-19 15:59:29
+1907	524	718	4	80.34	2026-10-19 15:59:29	2026-10-19 15:59:29
+1908	524	501	6	35.07	2026-10-19 15:59:29	2026-10-19 15:59:29
+1909	524	598	8	117.28	2026-10-19 15:59:29	2026-10-19 15:59:29
+1910	525	662	7	96.98	2026-10-19 15:59:29	2026-10-19 15:59:29
+1911	525	171	2	116.85	2026-10-19 15:59:29	2026-10-19 15:59:29
+1912	525	880	3	9.84	2026-10-19 15:59:29	2026-10-19 15:59:29
+1913	525	378	6	18.60	2026-10-19 15:59:29	2026-10-19 15:59:29
+1914	525	600	3	91.66	2026-10-19 15:59:29	2026-10-19 15:59:29
+1915	526	981	6	139.72	2026-10-19 15:59:29	2026-10-19 15:59:29
+1916	526	439	6	63.58	2026-10-19 15:59:29	2026-10-19 15:59:29
+1917	526	85	6	37.41	2026-10-19 15:59:29	2026-10-19 15:59:29
+1918	526	993	1	12.87	2026-10-19 15:59:29	2026-10-19 15:59:29
+1919	526	1000	7	106.85	2026-10-19 15:59:29	2026-10-19 15:59:29
+1920	527	738	1	144.31	2026-10-19 15:59:29	2026-10-19 15:59:29
+1921	527	933	3	122.38	2026-10-19 15:59:29	2026-10-19 15:59:29
+1922	527	836	8	75.35	2026-10-19 15:59:29	2026-10-19 15:59:29
+1923	527	615	3	118.88	2026-10-19 15:59:29	2026-10-19 15:59:29
+1924	527	762	4	104.08	2026-10-19 15:59:29	2026-10-19 15:59:29
+1925	527	741	4	110.89	2026-10-19 15:59:29	2026-10-19 15:59:29
+1926	528	437	4	35.61	2026-10-19 15:59:29	2026-10-19 15:59:29
+1927	528	243	8	49.93	2026-10-19 15:59:29	2026-10-19 15:59:29
+1928	528	653	4	26.45	2026-10-19 15:59:29	2026-10-19 15:59:29
+1929	529	249	2	72.66	2026-10-19 15:59:29	2026-10-19 15:59:29
+1930	530	56	5	52.86	2026-10-19 15:59:29	2026-10-19 15:59:29
+1931	530	166	2	56.88	2026-10-19 15:59:29	2026-10-19 15:59:29
+1932	531	516	6	97.86	2026-10-19 15:59:29	2026-10-19 15:59:29
+1933	531	189	6	71.03	2026-10-19 15:59:29	2026-10-19 15:59:29
+1934	531	196	8	47.98	2026-10-19 15:59:29	2026-10-19 15:59:29
+1935	531	57	3	44.78	2026-10-19 15:59:29	2026-10-19 15:59:29
+1936	531	820	4	65.34	2026-10-19 15:59:29	2026-10-19 15:59:29
+1937	532	526	1	81.64	2026-10-19 15:59:29	2026-10-19 15:59:29
+1938	533	638	8	118.72	2026-10-19 15:59:29	2026-10-19 15:59:29
+1939	533	434	2	20.46	2026-10-19 15:59:29	2026-10-19 15:59:29
+1940	533	518	6	27.61	2026-10-19 15:59:29	2026-10-19 15:59:29
+1941	533	658	1	120.91	2026-10-19 15:59:29	2026-10-19 15:59:29
+1942	534	288	3	104.48	2026-10-19 15:59:30	2026-10-19 15:59:30
+1943	534	109	3	54.26	2026-10-19 15:59:30	2026-10-19 15:59:30
+1944	534	52	1	70.38	2026-10-19 15:59:30	2026-10-19 15:59:30
+1945	534	395	3	61.56	2026-10-19 15:59:30	2026-10-19 15:59:30
+1946	534	670	7	146.90	2026-10-19 15:59:30	2026-10-19 15:59:30
+1947	535	641	1	90.15	2026-10-19 15:59:30	2026-10-19 15:59:30
+1948	535	110	7	50.66	2026-10-19 15:59:30	2026-10-19 15:59:30
+1949	536	399	3	141.97	2026-10-19 15:59:30	2026-10-19 15:59:30
+1950	536	474	7	13.08	2026-10-19 15:59:30	2026-10-19 15:59:30
+1951	536	805	1	98.87	2026-10-19 15:59:30	2026-10-19 15:59:30
+1952	536	873	8	101.06	2026-10-19 15:59:30	2026-10-19 15:59:30
+1953	537	948	4	114.90	2026-10-19 15:59:30	2026-10-19 15:59:30
+1954	537	104	5	51.55	2026-10-19 15:59:30	2026-10-19 15:59:30
+1955	537	74	7	129.17	2026-10-19 15:59:30	2026-10-19 15:59:30
+1956	537	806	4	89.07	2026-10-19 15:59:30	2026-10-19 15:59:30
+1957	537	881	1	144.20	2026-10-19 15:59:30	2026-10-19 15:59:30
+1958	538	239	3	108.19	2026-10-19 15:59:30	2026-10-19 15:59:30
+1959	538	450	7	12.63	2026-10-19 15:59:30	2026-10-19 15:59:30
+1960	539	928	4	98.75	2026-10-19 15:59:30	2026-10-19 15:59:30
+1961	539	488	3	89.44	2026-10-19 15:59:30	2026-10-19 15:59:30
+1962	539	218	1	35.75	2026-10-19 15:59:30	2026-10-19 15:59:30
+1963	539	331	7	95.00	2026-10-19 15:59:30	2026-10-19 15:59:30
+1964	540	114	5	109.75	2026-10-19 15:59:30	2026-10-19 15:59:30
+1965	540	167	3	10.02	2026-10-19 15:59:30	2026-10-19 15:59:30
+1966	540	471	6	18.14	2026-10-19 15:59:30	2026-10-19 15:59:30
+1967	540	289	4	64.28	2026-10-19 15:59:30	2026-10-19 15:59:30
+1968	540	374	6	48.89	2026-10-19 15:59:30	2026-10-19 15:59:30
+1969	540	515	8	116.50	2026-10-19 15:59:30	2026-10-19 15:59:30
+1970	541	916	7	143.54	2026-10-19 15:59:30	2026-10-19 15:59:30
+1971	541	867	4	54.52	2026-10-19 15:59:30	2026-10-19 15:59:30
+1972	541	187	3	147.70	2026-10-19 15:59:30	2026-10-19 15:59:30
+1973	541	786	2	148.24	2026-10-19 15:59:30	2026-10-19 15:59:30
+1974	541	248	1	41.38	2026-10-19 15:59:30	2026-10-19 15:59:30
+1975	541	185	2	63.00	2026-10-19 15:59:30	2026-10-19 15:59:30
+1976	542	571	5	23.89	2026-10-19 15:59:30	2026-10-19 15:59:30
+1977	542	768	6	35.90	2026-10-19 15:59:30	2026-10-19 15:59:30
+1978	542	574	1	47.33	2026-10-19 15:59:30	2026-10-19 15:59:30
+1979	542	69	5	15.51	2026-10-19 15:59:30	2026-10-19 15:59:30
+1980	542	90	5	36.99	2026-10-19 15:59:30	2026-10-19 15:59:30
+1981	543	498	5	90.82	2026-10-19 15:59:30	2026-10-19 15:59:30
+1982	543	724	5	19.77	2026-10-19 15:59:30	2026-10-19 15:59:30
+1983	544	617	3	32.34	2026-10-19 15:59:30	2026-10-19 15:59:30
+1984	544	820	3	65.34	2026-10-19 15:59:30	2026-10-19 15:59:30
+1985	544	424	2	89.35	2026-10-19 15:59:31	2026-10-19 15:59:31
+1986	544	423	6	72.37	2026-10-19 15:59:31	2026-10-19 15:59:31
+1987	544	426	2	94.15	2026-10-19 15:59:31	2026-10-19 15:59:31
+1988	545	64	4	46.12	2026-10-19 15:59:31	2026-10-19 15:59:31
+1989	545	824	7	18.83	2026-10-19 15:59:31	2026-10-19 15:59:31
+1990	545	895	7	108.23	2026-10-19 15:59:31	2026-10-19 15:59:31
+1991	545	825	8	89.58	2026-10-19 15:59:31	2026-10-19 15:59:31
+1992	545	589	1	133.11	2026-10-19 15:59:31	2026-10-19 15:59:31
+1993	546	621	4	92.74	2026-10-19 15:59:31	2026-10-19 15:59:31
+1994	546	812	8	113.67	2026-10-19 15:59:31	2026-10-19 15:59:31
+1995	546	584	6	132.77	2026-10-19 15:59:31	2026-10-19 15:59:31
+1996	547	582	3	143.54	2026-10-19 15:59:31	2026-10-19 15:59:31
+1997	547	331	1	95.00	2026-10-19 15:59:31	2026-10-19 15:59:31
+1998	547	608	8	125.72	2026-10-19 15:59:31	2026-10-19 15:59:31
+1999	547	236	7	11.02	2026-10-19 15:59:31	2026-10-19 15:59:31
+2000	547	308	1	34.96	2026-10-19 15:59:31	2026-10-19 15:59:31
+2001	547	117	6	71.07	2026-10-19 15:59:31	2026-10-19 15:59:31
+2002	548	548	6	120.70	2026-10-19 15:59:31	2026-10-19 15:59:31
+2003	548	526	1	81.64	2026-10-19 15:59:31	2026-10-19 15:59:31
+2004	548	789	4	37.83	2026-10-19 15:59:31	2026-10-19 15:59:31
+2005	548	992	3	85.28	2026-10-19 15:59:31	2026-10-19 15:59:31
+2006	548	448	4	99.16	2026-10-19 15:59:31	2026-10-19 15:59:31
+2007	549	722	4	67.90	2026-10-19 15:59:31	2026-10-19 15:59:31
+2008	549	919	1	105.45	2026-10-19 15:59:31	2026-10-19 15:59:31
+2009	549	305	7	91.22	2026-10-19 15:59:31	2026-10-19 15:59:31
+2010	550	256	2	135.59	2026-10-19 15:59:31	2026-10-19 15:59:31
+2011	550	288	3	104.48	2026-10-19 15:59:31	2026-10-19 15:59:31
+2012	550	848	5	30.71	2026-10-19 15:59:31	2026-10-19 15:59:31
+2013	550	166	1	56.88	2026-10-19 15:59:31	2026-10-19 15:59:31
+2014	551	807	8	143.29	2026-10-19 15:59:31	2026-10-19 15:59:31
+2015	551	247	3	133.90	2026-10-19 15:59:31	2026-10-19 15:59:31
+2016	551	881	5	144.20	2026-10-19 15:59:31	2026-10-19 15:59:31
+2017	551	560	3	118.31	2026-10-19 15:59:31	2026-10-19 15:59:31
+2018	551	457	6	9.82	2026-10-19 15:59:31	2026-10-19 15:59:31
+2019	552	649	8	34.79	2026-10-19 15:59:31	2026-10-19 15:59:31
+2020	553	300	8	33.69	2026-10-19 15:59:31	2026-10-19 15:59:31
+2021	553	389	1	84.67	2026-10-19 15:59:31	2026-10-19 15:59:31
+2022	554	58	8	53.33	2026-10-19 15:59:31	2026-10-19 15:59:31
+2023	554	698	1	35.48	2026-10-19 15:59:31	2026-10-19 15:59:31
+2024	554	874	1	96.93	2026-10-19 15:59:31	2026-10-19 15:59:31
+2025	554	977	4	118.81	2026-10-19 15:59:31	2026-10-19 15:59:31
+2026	554	289	3	64.28	2026-10-19 15:59:31	2026-10-19 15:59:31
+2027	554	593	2	58.92	2026-10-19 15:59:31	2026-10-19 15:59:31
+2028	555	931	5	81.16	2026-10-19 15:59:31	2026-10-19 15:59:31
+2029	555	300	4	33.69	2026-10-19 15:59:31	2026-10-19 15:59:31
+2030	555	331	6	95.00	2026-10-19 15:59:31	2026-10-19 15:59:31
+2031	555	176	3	110.14	2026-10-19 15:59:31	2026-10-19 15:59:31
+2032	555	928	8	98.75	2026-10-19 15:59:31	2026-10-19 15:59:31
+2033	555	116	8	61.74	2026-10-19 15:59:31	2026-10-19 15:59:31
+2034	556	275	8	117.32	2026-10-19 15:59:31	2026-10-19 15:59:31
+2035	557	390	2	83.21	2026-10-19 15:59:31	2026-10-19 15:59:31
+2036	557	462	7	58.58	2026-10-19 15:59:31	2026-10-19 15:59:31
+2037	558	639	1	135.59	2026-10-19 15:59:31	2026-10-19 15:59:31
+2038	558	919	1	105.45	2026-10-19 15:59:31	2026-10-19 15:59:31
+2039	558	875	6	109.76	2026-10-19 15:59:31	2026-10-19 15:59:31
+2040	558	566	1	128.48	2026-10-19 15:59:31	2026-10-19 15:59:31
+2041	558	72	5	76.77	2026-10-19 15:59:31	2026-10-19 15:59:31
+2042	559	374	7	48.89	2026-10-19 15:59:31	2026-10-19 15:59:31
+2043	559	647	6	38.83	2026-10-19 15:59:31	2026-10-19 15:59:31
+2044	559	423	1	72.37	2026-10-19 15:59:31	2026-10-19 15:59:31
+2045	560	870	4	47.58	2026-10-19 15:59:31	2026-10-19 15:59:31
+2046	560	568	3	67.67	2026-10-19 15:59:31	2026-10-19 15:59:31
+2047	560	847	7	32.77	2026-10-19 15:59:32	2026-10-19 15:59:32
+2048	560	189	4	71.03	2026-10-19 15:59:32	2026-10-19 15:59:32
+2049	560	855	2	59.93	2026-10-19 15:59:32	2026-10-19 15:59:32
+2050	560	883	6	93.79	2026-10-19 15:59:32	2026-10-19 15:59:32
+2051	561	239	5	108.19	2026-10-19 15:59:32	2026-10-19 15:59:32
+2052	561	4	1	25.00	2026-10-19 15:59:32	2026-10-19 15:59:32
+2053	561	735	3	25.21	2026-10-19 15:59:32	2026-10-19 15:59:32
+2054	561	274	5	146.61	2026-10-19 15:59:32	2026-10-19 15:59:32
+2055	561	476	7	34.80	2026-10-19 15:59:32	2026-10-19 15:59:32
+2056	561	254	3	107.92	2026-10-19 15:59:32	2026-10-19 15:59:32
+2057	562	750	1	23.96	2026-10-19 15:59:32	2026-10-19 15:59:32
+2058	563	103	7	107.64	2026-10-19 15:59:32	2026-10-19 15:59:32
+2059	563	554	6	100.82	2026-10-19 15:59:32	2026-10-19 15:59:32
+2060	563	523	7	50.64	2026-10-19 15:59:32	2026-10-19 15:59:32
+2061	563	406	8	37.51	2026-10-19 15:59:32	2026-10-19 15:59:32
+2062	563	152	8	28.21	2026-10-19 15:59:32	2026-10-19 15:59:32
+2063	564	325	8	35.26	2026-10-19 15:59:32	2026-10-19 15:59:32
+2064	564	616	6	84.09	2026-10-19 15:59:32	2026-10-19 15:59:32
+2065	564	241	5	28.52	2026-10-19 15:59:32	2026-10-19 15:59:32
+2066	564	923	2	54.92	2026-10-19 15:59:32	2026-10-19 15:59:32
+2067	565	369	8	116.51	2026-10-19 15:59:32	2026-10-19 15:59:32
+2068	566	776	1	39.52	2026-10-19 15:59:32	2026-10-19 15:59:32
+2069	566	449	7	28.23	2026-10-19 15:59:32	2026-10-19 15:59:32
+2070	567	571	6	23.89	2026-10-19 15:59:32	2026-10-19 15:59:32
+2071	567	403	5	81.29	2026-10-19 15:59:32	2026-10-19 15:59:32
+2072	567	52	5	70.38	2026-10-19 15:59:32	2026-10-19 15:59:32
+2073	567	554	4	100.82	2026-10-19 15:59:32	2026-10-19 15:59:32
+2074	567	245	3	90.29	2026-10-19 15:59:32	2026-10-19 15:59:32
+2075	567	937	8	24.53	2026-10-19 15:59:32	2026-10-19 15:59:32
+2076	568	252	4	119.37	2026-10-19 15:59:32	2026-10-19 15:59:32
+2077	568	687	6	19.29	2026-10-19 15:59:32	2026-10-19 15:59:32
+2078	568	231	6	66.60	2026-10-19 15:59:32	2026-10-19 15:59:32
+2079	568	377	7	114.27	2026-10-19 15:59:32	2026-10-19 15:59:32
+2080	569	305	6	91.22	2026-10-19 15:59:32	2026-10-19 15:59:32
+2081	570	74	4	129.17	2026-10-19 15:59:32	2026-10-19 15:59:32
+2082	570	220	1	55.54	2026-10-19 15:59:32	2026-10-19 15:59:32
+2083	570	331	7	95.00	2026-10-19 15:59:32	2026-10-19 15:59:32
+2084	570	574	1	47.33	2026-10-19 15:59:32	2026-10-19 15:59:32
+2085	571	66	1	21.01	2026-10-19 15:59:32	2026-10-19 15:59:32
+2086	571	159	8	83.73	2026-10-19 15:59:32	2026-10-19 15:59:32
+2087	571	353	8	70.61	2026-10-19 15:59:32	2026-10-19 15:59:32
+2088	571	901	7	38.63	2026-10-19 15:59:32	2026-10-19 15:59:32
+2089	572	805	4	98.87	2026-10-19 15:59:32	2026-10-19 15:59:32
+2090	572	530	7	9.50	2026-10-19 15:59:32	2026-10-19 15:59:32
+2091	572	270	8	126.00	2026-10-19 15:59:32	2026-10-19 15:59:32
+2092	572	922	7	54.94	2026-10-19 15:59:32	2026-10-19 15:59:32
+2093	572	661	7	146.05	2026-10-19 15:59:32	2026-10-19 15:59:32
+2094	573	868	1	113.86	2026-10-19 15:59:32	2026-10-19 15:59:32
+2095	573	430	4	99.36	2026-10-19 15:59:32	2026-10-19 15:59:32
+2096	574	920	6	22.31	2026-10-19 15:59:32	2026-10-19 15:59:32
+2097	574	642	6	28.24	2026-10-19 15:59:32	2026-10-19 15:59:32
+2098	574	728	3	32.72	2026-10-19 15:59:32	2026-10-19 15:59:32
+2099	574	756	5	44.37	2026-10-19 15:59:32	2026-10-19 15:59:32
+2100	574	394	1	128.43	2026-10-19 15:59:32	2026-10-19 15:59:32
+2101	575	551	5	71.10	2026-10-19 15:59:32	2026-10-19 15:59:32
+2102	575	429	5	89.80	2026-10-19 15:59:32	2026-10-19 15:59:32
+2103	575	459	7	42.13	2026-10-19 15:59:33	2026-10-19 15:59:33
+2104	576	57	1	44.78	2026-10-19 15:59:33	2026-10-19 15:59:33
+2105	576	360	7	66.68	2026-10-19 15:59:33	2026-10-19 15:59:33
+2106	577	199	2	19.61	2026-10-19 15:59:33	2026-10-19 15:59:33
+2107	577	317	5	25.20	2026-10-19 15:59:33	2026-10-19 15:59:33
+2108	577	956	7	120.40	2026-10-19 15:59:33	2026-10-19 15:59:33
+2109	577	831	3	41.64	2026-10-19 15:59:33	2026-10-19 15:59:33
+2110	577	291	4	59.19	2026-10-19 15:59:33	2026-10-19 15:59:33
+2111	578	123	4	149.26	2026-10-19 15:59:33	2026-10-19 15:59:33
+2112	578	225	8	71.50	2026-10-19 15:59:33	2026-10-19 15:59:33
+2113	578	126	3	141.02	2026-10-19 15:59:33	2026-10-19 15:59:33
+2114	579	974	6	52.32	2026-10-19 15:59:33	2026-10-19 15:59:33
+2115	579	514	7	96.48	2026-10-19 15:59:33	2026-10-19 15:59:33
+2116	580	267	3	7.96	2026-10-19 15:59:33	2026-10-19 15:59:33
+2117	580	279	3	121.63	2026-10-19 15:59:33	2026-10-19 15:59:33
+2118	580	168	8	141.97	2026-10-19 15:59:33	2026-10-19 15:59:33
+2119	580	181	5	63.73	2026-10-19 15:59:33	2026-10-19 15:59:33
+2120	581	879	5	59.39	2026-10-19 15:59:33	2026-10-19 15:59:33
+2121	581	158	2	40.89	2026-10-19 15:59:33	2026-10-19 15:59:33
+2122	581	858	5	24.01	2026-10-19 15:59:33	2026-10-19 15:59:33
+2123	581	881	6	144.20	2026-10-19 15:59:33	2026-10-19 15:59:33
+2124	581	365	3	114.09	2026-10-19 15:59:33	2026-10-19 15:59:33
+2125	582	587	8	113.15	2026-10-19 15:59:33	2026-10-19 15:59:33
+2126	582	93	7	19.71	2026-10-19 15:59:33	2026-10-19 15:59:33
+2127	582	245	7	90.29	2026-10-19 15:59:33	2026-10-19 15:59:33
+2128	582	771	5	104.34	2026-10-19 15:59:33	2026-10-19 15:59:33
+2129	582	420	6	16.28	2026-10-19 15:59:33	2026-10-19 15:59:33
+2130	582	669	1	35.68	2026-10-19 15:59:33	2026-10-19 15:59:33
+2131	583	294	7	16.23	2026-10-19 15:59:33	2026-10-19 15:59:33
+2132	583	760	5	20.92	2026-10-19 15:59:33	2026-10-19 15:59:33
+2133	583	690	3	126.04	2026-10-19 15:59:33	2026-10-19 15:59:33
+2134	583	620	8	107.38	2026-10-19 15:59:33	2026-10-19 15:59:33
+2135	583	115	8	92.43	2026-10-19 15:59:33	2026-10-19 15:59:33
+2136	583	133	6	148.97	2026-10-19 15:59:33	2026-10-19 15:59:33
+2137	584	190	5	52.78	2026-10-19 15:59:33	2026-10-19 15:59:33
+2138	584	57	2	44.78	2026-10-19 15:59:33	2026-10-19 15:59:33
+2139	584	613	5	19.19	2026-10-19 15:59:33	2026-10-19 15:59:33
+2140	584	995	8	34.41	2026-10-19 15:59:33	2026-10-19 15:59:33
+2141	584	425	4	141.44	2026-10-19 15:59:33	2026-10-19 15:59:33
+2142	585	733	6	14.90	2026-10-19 15:59:33	2026-10-19 15:59:33
+2143	585	607	6	92.75	2026-10-19 15:59:33	2026-10-19 15:59:33
+2144	586	209	1	41.59	2026-10-19 15:59:33	2026-10-19 15:59:33
+2145	586	111	2	102.89	2026-10-19 15:59:33	2026-10-19 15:59:33
+2146	586	231	1	66.60	2026-10-19 15:59:33	2026-10-19 15:59:33
+2147	587	581	5	60.20	2026-10-19 15:59:33	2026-10-19 15:59:33
+2148	587	785	8	48.21	2026-10-19 15:59:33	2026-10-19 15:59:33
+2149	587	291	4	59.19	2026-10-19 15:59:33	2026-10-19 15:59:33
+2150	587	792	3	74.48	2026-10-19 15:59:33	2026-10-19 15:59:33
+2151	588	148	3	5.99	2026-10-19 15:59:33	2026-10-19 15:59:33
+2152	588	523	4	50.64	2026-10-19 15:59:33	2026-10-19 15:59:33
+2153	588	247	7	133.90	2026-10-19 15:59:33	2026-10-19 15:59:33
+2154	588	412	7	66.66	2026-10-19 15:59:33	2026-10-19 15:59:33
+2155	589	65	6	51.99	2026-10-19 15:59:33	2026-10-19 15:59:33
+2156	590	231	3	66.60	2026-10-19 15:59:33	2026-10-19 15:59:33
+2157	590	968	3	21.75	2026-10-19 15:59:33	2026-10-19 15:59:33
+2158	590	607	1	92.75	2026-10-19 15:59:33	2026-10-19 15:59:33
+2159	590	333	4	11.33	2026-10-19 15:59:33	2026-10-19 15:59:33
+2160	590	840	6	35.36	2026-10-19 15:59:33	2026-10-19 15:59:33
+2161	590	863	6	105.83	2026-10-19 15:59:33	2026-10-19 15:59:33
+2162	591	290	7	54.16	2026-10-19 15:59:33	2026-10-19 15:59:33
+2163	591	902	3	26.18	2026-10-19 15:59:34	2026-10-19 15:59:34
+2164	591	159	1	83.73	2026-10-19 15:59:34	2026-10-19 15:59:34
+2165	591	556	7	15.74	2026-10-19 15:59:34	2026-10-19 15:59:34
+2166	591	442	6	45.28	2026-10-19 15:59:34	2026-10-19 15:59:34
+2167	591	946	3	133.89	2026-10-19 15:59:34	2026-10-19 15:59:34
+2168	592	586	7	58.25	2026-10-19 15:59:34	2026-10-19 15:59:34
+2169	592	326	5	40.53	2026-10-19 15:59:34	2026-10-19 15:59:34
+2170	592	122	7	60.00	2026-10-19 15:59:34	2026-10-19 15:59:34
+2171	593	603	6	35.98	2026-10-19 15:59:34	2026-10-19 15:59:34
+2172	593	500	6	80.75	2026-10-19 15:59:34	2026-10-19 15:59:34
+2173	593	459	1	42.13	2026-10-19 15:59:34	2026-10-19 15:59:34
+2174	593	462	2	58.58	2026-10-19 15:59:34	2026-10-19 15:59:34
+2175	593	164	8	104.91	2026-10-19 15:59:34	2026-10-19 15:59:34
+2176	593	752	6	111.53	2026-10-19 15:59:34	2026-10-19 15:59:34
+2177	594	571	8	23.89	2026-10-19 15:59:34	2026-10-19 15:59:34
+2178	595	971	8	7.00	2026-10-19 15:59:34	2026-10-19 15:59:34
+2179	595	700	7	127.35	2026-10-19 15:59:34	2026-10-19 15:59:34
+2180	595	768	3	35.90	2026-10-19 15:59:34	2026-10-19 15:59:34
+2181	595	617	6	32.34	2026-10-19 15:59:34	2026-10-19 15:59:34
+2182	595	132	7	64.93	2026-10-19 15:59:34	2026-10-19 15:59:34
+2183	595	81	8	88.93	2026-10-19 15:59:34	2026-10-19 15:59:34
+2184	596	200	7	141.52	2026-10-19 15:59:34	2026-10-19 15:59:34
+2185	596	761	7	8.80	2026-10-19 15:59:34	2026-10-19 15:59:34
+2186	596	316	3	38.75	2026-10-19 15:59:34	2026-10-19 15:59:34
+2187	597	671	7	120.85	2026-10-19 15:59:34	2026-10-19 15:59:34
+2188	597	769	2	46.02	2026-10-19 15:59:34	2026-10-19 15:59:34
+2189	597	182	7	44.86	2026-10-19 15:59:34	2026-10-19 15:59:34
+2190	597	330	4	58.14	2026-10-19 15:59:34	2026-10-19 15:59:34
+2191	598	329	4	42.12	2026-10-19 15:59:34	2026-10-19 15:59:34
+2192	598	820	3	65.34	2026-10-19 15:59:34	2026-10-19 15:59:34
+2193	598	181	5	63.73	2026-10-19 15:59:34	2026-10-19 15:59:34
+2194	598	94	7	68.09	2026-10-19 15:59:34	2026-10-19 15:59:34
+2195	599	954	7	104.18	2026-10-19 15:59:34	2026-10-19 15:59:34
+2196	600	958	7	24.10	2026-10-19 15:59:34	2026-10-19 15:59:34
+2197	600	104	1	51.55	2026-10-19 15:59:34	2026-10-19 15:59:34
+2198	600	783	2	73.98	2026-10-19 15:59:34	2026-10-19 15:59:34
+2199	601	172	4	146.07	2026-10-19 15:59:34	2026-10-19 15:59:34
+2200	602	862	7	147.22	2026-10-19 15:59:34	2026-10-19 15:59:34
+2201	603	917	5	41.56	2026-10-19 15:59:34	2026-10-19 15:59:34
+2202	603	319	5	8.15	2026-10-19 15:59:34	2026-10-19 15:59:34
+2203	603	536	5	98.69	2026-10-19 15:59:34	2026-10-19 15:59:34
+2204	603	851	8	126.89	2026-10-19 15:59:34	2026-10-19 15:59:34
+2205	604	646	5	132.76	2026-10-19 15:59:34	2026-10-19 15:59:34
+2206	604	512	2	136.36	2026-10-19 15:59:34	2026-10-19 15:59:34
+2207	604	566	6	128.48	2026-10-19 15:59:34	2026-10-19 15:59:34
+2208	604	536	3	98.69	2026-10-19 15:59:34	2026-10-19 15:59:34
+2209	605	378	7	18.60	2026-10-19 15:59:34	2026-10-19 15:59:34
+2210	605	806	2	89.07	2026-10-19 15:59:34	2026-10-19 15:59:34
+2211	605	154	1	26.99	2026-10-19 15:59:34	2026-10-19 15:59:34
+2212	606	654	2	32.25	2026-10-19 15:59:34	2026-10-19 15:59:34
+2213	606	603	3	35.98	2026-10-19 15:59:34	2026-10-19 15:59:34
+2214	606	358	1	54.03	2026-10-19 15:59:34	2026-10-19 15:59:34
+2215	607	328	7	70.30	2026-10-19 15:59:34	2026-10-19 15:59:34
+2216	607	997	8	82.61	2026-10-19 15:59:34	2026-10-19 15:59:34
+2217	607	304	7	8.87	2026-10-19 15:59:34	2026-10-19 15:59:34
+2218	607	90	6	36.99	2026-10-19 15:59:34	2026-10-19 15:59:34
+2219	607	573	8	117.51	2026-10-19 15:59:34	2026-10-19 15:59:34
+2220	608	61	3	62.47	2026-10-19 15:59:34	2026-10-19 15:59:34
+2221	608	900	3	15.81	2026-10-19 15:59:35	2026-10-19 15:59:35
+2222	608	605	4	96.30	2026-10-19 15:59:35	2026-10-19 15:59:35
+2223	609	115	6	92.43	2026-10-19 15:59:35	2026-10-19 15:59:35
+2224	609	272	1	24.17	2026-10-19 15:59:35	2026-10-19 15:59:35
+2225	609	462	8	58.58	2026-10-19 15:59:35	2026-10-19 15:59:35
+2226	609	484	5	116.80	2026-10-19 15:59:35	2026-10-19 15:59:35
+2227	609	976	1	64.41	2026-10-19 15:59:35	2026-10-19 15:59:35
+2228	609	981	3	139.72	2026-10-19 15:59:35	2026-10-19 15:59:35
+2229	610	194	5	132.16	2026-10-19 15:59:35	2026-10-19 15:59:35
+2230	610	114	6	109.75	2026-10-19 15:59:35	2026-10-19 15:59:35
+2231	610	281	6	88.72	2026-10-19 15:59:35	2026-10-19 15:59:35
+2232	611	916	8	143.54	2026-10-19 15:59:35	2026-10-19 15:59:35
+2233	611	881	6	144.20	2026-10-19 15:59:35	2026-10-19 15:59:35
+2234	612	524	4	14.53	2026-10-19 15:59:35	2026-10-19 15:59:35
+2235	613	411	6	62.50	2026-10-19 15:59:35	2026-10-19 15:59:35
+2236	613	522	3	140.22	2026-10-19 15:59:35	2026-10-19 15:59:35
+2237	614	984	4	129.83	2026-10-19 15:59:35	2026-10-19 15:59:35
+2238	614	155	7	21.24	2026-10-19 15:59:35	2026-10-19 15:59:35
+2239	614	390	2	83.21	2026-10-19 15:59:35	2026-10-19 15:59:35
+2240	615	183	5	90.47	2026-10-19 15:59:35	2026-10-19 15:59:35
+2241	615	553	7	57.00	2026-10-19 15:59:35	2026-10-19 15:59:35
+2242	615	617	5	32.34	2026-10-19 15:59:35	2026-10-19 15:59:35
+2243	615	797	2	101.22	2026-10-19 15:59:35	2026-10-19 15:59:35
+2244	615	643	4	110.45	2026-10-19 15:59:35	2026-10-19 15:59:35
+2245	615	58	2	53.33	2026-10-19 15:59:35	2026-10-19 15:59:35
+2246	616	409	4	11.18	2026-10-19 15:59:35	2026-10-19 15:59:35
+2247	616	450	6	12.63	2026-10-19 15:59:35	2026-10-19 15:59:35
+2248	617	260	2	125.63	2026-10-19 15:59:35	2026-10-19 15:59:35
+2249	617	66	5	21.01	2026-10-19 15:59:35	2026-10-19 15:59:35
+2250	617	773	6	42.11	2026-10-19 15:59:35	2026-10-19 15:59:35
+2251	618	64	8	46.12	2026-10-19 15:59:35	2026-10-19 15:59:35
+2252	618	612	6	38.11	2026-10-19 15:59:35	2026-10-19 15:59:35
+2253	618	83	5	122.01	2026-10-19 15:59:35	2026-10-19 15:59:35
+2254	619	249	4	72.66	2026-10-19 15:59:35	2026-10-19 15:59:35
+2255	619	71	4	75.13	2026-10-19 15:59:35	2026-10-19 15:59:35
+2256	619	853	5	74.21	2026-10-19 15:59:35	2026-10-19 15:59:35
+2257	619	832	8	102.87	2026-10-19 15:59:35	2026-10-19 15:59:35
+2258	620	825	8	89.58	2026-10-19 15:59:35	2026-10-19 15:59:35
+2259	620	258	2	93.02	2026-10-19 15:59:35	2026-10-19 15:59:35
+2260	620	890	2	66.34	2026-10-19 15:59:35	2026-10-19 15:59:35
+2261	620	582	2	143.54	2026-10-19 15:59:35	2026-10-19 15:59:35
+2262	620	344	8	129.19	2026-10-19 15:59:35	2026-10-19 15:59:35
+2263	620	373	5	28.50	2026-10-19 15:59:35	2026-10-19 15:59:35
+2264	621	229	1	129.01	2026-10-19 15:59:35	2026-10-19 15:59:35
+2265	621	854	1	86.95	2026-10-19 15:59:35	2026-10-19 15:59:35
+2266	621	207	5	125.93	2026-10-19 15:59:35	2026-10-19 15:59:35
+2267	621	188	5	80.28	2026-10-19 15:59:35	2026-10-19 15:59:35
+2268	621	811	2	121.96	2026-10-19 15:59:35	2026-10-19 15:59:35
+2269	622	399	7	141.97	2026-10-19 15:59:35	2026-10-19 15:59:35
+2270	622	794	2	7.40	2026-10-19 15:59:35	2026-10-19 15:59:35
+2271	623	795	2	148.01	2026-10-19 15:59:35	2026-10-19 15:59:35
+2272	623	727	1	51.72	2026-10-19 15:59:35	2026-10-19 15:59:35
+2273	623	424	1	89.35	2026-10-19 15:59:35	2026-10-19 15:59:35
+2274	624	597	5	63.32	2026-10-19 15:59:35	2026-10-19 15:59:35
+2275	624	741	2	110.89	2026-10-19 15:59:35	2026-10-19 15:59:35
+2276	624	497	3	140.21	2026-10-19 15:59:35	2026-10-19 15:59:35
+2277	624	272	2	24.17	2026-10-19 15:59:35	2026-10-19 15:59:35
+2278	624	215	1	77.75	2026-10-19 15:59:35	2026-10-19 15:59:35
+2279	625	345	2	124.16	2026-10-19 15:59:35	2026-10-19 15:59:35
+2280	625	655	6	68.59	2026-10-19 15:59:35	2026-10-19 15:59:35
+2281	625	151	2	32.42	2026-10-19 15:59:35	2026-10-19 15:59:35
+2282	626	313	4	68.57	2026-10-19 15:59:35	2026-10-19 15:59:35
+2283	627	742	8	143.65	2026-10-19 15:59:35	2026-10-19 15:59:35
+2284	627	818	7	16.66	2026-10-19 15:59:36	2026-10-19 15:59:36
+2285	627	258	1	93.02	2026-10-19 15:59:36	2026-10-19 15:59:36
+2286	627	486	4	116.24	2026-10-19 15:59:36	2026-10-19 15:59:36
+2287	627	256	5	135.59	2026-10-19 15:59:36	2026-10-19 15:59:36
+2288	627	384	6	78.85	2026-10-19 15:59:36	2026-10-19 15:59:36
+2289	628	739	3	80.82	2026-10-19 15:59:36	2026-10-19 15:59:36
+2290	628	424	3	89.35	2026-10-19 15:59:36	2026-10-19 15:59:36
+2291	628	722	6	67.90	2026-10-19 15:59:36	2026-10-19 15:59:36
+2292	629	579	3	79.51	2026-10-19 15:59:36	2026-10-19 15:59:36
+2293	629	506	2	139.08	2026-10-19 15:59:36	2026-10-19 15:59:36
+2294	629	720	6	72.75	2026-10-19 15:59:36	2026-10-19 15:59:36
+2295	629	547	7	37.80	2026-10-19 15:59:36	2026-10-19 15:59:36
+2296	629	362	6	6.49	2026-10-19 15:59:36	2026-10-19 15:59:36
+2297	629	638	3	118.72	2026-10-19 15:59:36	2026-10-19 15:59:36
+2298	630	258	6	93.02	2026-10-19 15:59:36	2026-10-19 15:59:36
+2299	630	997	8	82.61	2026-10-19 15:59:36	2026-10-19 15:59:36
+2300	630	835	2	93.63	2026-10-19 15:59:36	2026-10-19 15:59:36
+2301	631	957	7	121.44	2026-10-19 15:59:36	2026-10-19 15:59:36
+2302	631	128	3	107.44	2026-10-19 15:59:36	2026-10-19 15:59:36
+2303	632	622	5	26.25	2026-10-19 15:59:36	2026-10-19 15:59:36
+2304	632	893	6	10.00	2026-10-19 15:59:36	2026-10-19 15:59:36
+2305	632	44	1	125.90	2026-10-19 15:59:36	2026-10-19 15:59:36
+2306	632	863	5	105.83	2026-10-19 15:59:37	2026-10-19 15:59:37
+2307	633	708	8	25.09	2026-10-19 15:59:37	2026-10-19 15:59:37
+2308	633	830	4	148.33	2026-10-19 15:59:37	2026-10-19 15:59:37
+2309	633	861	2	129.99	2026-10-19 15:59:37	2026-10-19 15:59:37
+2310	633	906	6	140.30	2026-10-19 15:59:37	2026-10-19 15:59:37
+2311	633	917	2	41.56	2026-10-19 15:59:37	2026-10-19 15:59:37
+2312	633	110	5	50.66	2026-10-19 15:59:37	2026-10-19 15:59:37
+2313	634	807	2	143.29	2026-10-19 15:59:38	2026-10-19 15:59:38
+2314	634	776	6	39.52	2026-10-19 15:59:38	2026-10-19 15:59:38
+2315	634	829	4	89.74	2026-10-19 15:59:38	2026-10-19 15:59:38
+2316	635	934	6	143.55	2026-10-19 15:59:38	2026-10-19 15:59:38
+2317	635	687	7	19.29	2026-10-19 15:59:38	2026-10-19 15:59:38
+2318	635	451	2	41.47	2026-10-19 15:59:38	2026-10-19 15:59:38
+2319	635	660	6	135.97	2026-10-19 15:59:38	2026-10-19 15:59:38
+2320	635	291	1	59.19	2026-10-19 15:59:38	2026-10-19 15:59:38
+2321	635	194	8	132.16	2026-10-19 15:59:39	2026-10-19 15:59:39
+2322	636	306	7	121.21	2026-10-19 15:59:39	2026-10-19 15:59:39
+2323	636	188	5	80.28	2026-10-19 15:59:39	2026-10-19 15:59:39
+2324	636	506	2	139.08	2026-10-19 15:59:39	2026-10-19 15:59:39
+2325	637	824	1	18.83	2026-10-19 15:59:39	2026-10-19 15:59:39
+2326	637	595	4	13.47	2026-10-19 15:59:39	2026-10-19 15:59:39
+2327	637	452	7	12.99	2026-10-19 15:59:39	2026-10-19 15:59:39
+2328	637	195	3	117.57	2026-10-19 15:59:39	2026-10-19 15:59:39
+2329	637	445	7	132.18	2026-10-19 15:59:40	2026-10-19 15:59:40
+2330	637	884	8	68.00	2026-10-19 15:59:40	2026-10-19 15:59:40
+2331	638	429	8	89.80	2026-10-19 15:59:40	2026-10-19 15:59:40
+2332	638	304	8	8.87	2026-10-19 15:59:40	2026-10-19 15:59:40
+2333	638	23	2	8.50	2026-10-19 15:59:40	2026-10-19 15:59:40
+2334	638	621	7	92.74	2026-10-19 15:59:40	2026-10-19 15:59:40
+2335	638	664	4	101.54	2026-10-19 15:59:40	2026-10-19 15:59:40
+2336	639	926	2	53.44	2026-10-19 15:59:40	2026-10-19 15:59:40
+2337	639	641	1	90.15	2026-10-19 15:59:41	2026-10-19 15:59:41
+2338	639	887	8	93.79	2026-10-19 15:59:41	2026-10-19 15:59:41
+2339	640	473	8	100.27	2026-10-19 15:59:41	2026-10-19 15:59:41
+2340	640	434	8	20.46	2026-10-19 15:59:42	2026-10-19 15:59:42
+2341	640	714	2	37.90	2026-10-19 15:59:42	2026-10-19 15:59:42
+2342	640	647	5	38.83	2026-10-19 15:59:43	2026-10-19 15:59:43
+2343	640	811	1	121.96	2026-10-19 15:59:43	2026-10-19 15:59:43
+2344	641	93	7	19.71	2026-10-19 15:59:44	2026-10-19 15:59:44
+2345	642	76	7	98.78	2026-10-19 15:59:45	2026-10-19 15:59:45
+2346	642	59	4	114.79	2026-10-19 15:59:45	2026-10-19 15:59:45
+2347	642	316	1	38.75	2026-10-19 15:59:45	2026-10-19 15:59:45
+2348	643	813	7	67.34	2026-10-19 15:59:45	2026-10-19 15:59:45
+2349	643	444	3	42.97	2026-10-19 15:59:45	2026-10-19 15:59:45
+2350	643	988	6	72.39	2026-10-19 15:59:45	2026-10-19 15:59:45
+2351	643	178	5	34.13	2026-10-19 15:59:45	2026-10-19 15:59:45
+2352	643	211	8	132.22	2026-10-19 15:59:46	2026-10-19 15:59:46
+2353	644	120	5	33.87	2026-10-19 15:59:46	2026-10-19 15:59:46
+2354	645	855	4	59.93	2026-10-19 15:59:46	2026-10-19 15:59:46
+2355	645	3	1	6.50	2026-10-19 15:59:46	2026-10-19 15:59:46
+2356	646	310	5	7.77	2026-10-19 15:59:46	2026-10-19 15:59:46
+2357	647	339	1	141.11	2026-10-19 15:59:46	2026-10-19 15:59:46
+2358	647	132	2	64.93	2026-10-19 15:59:47	2026-10-19 15:59:47
+2359	647	283	2	34.85	2026-10-19 15:59:47	2026-10-19 15:59:47
+2360	647	739	7	80.82	2026-10-19 15:59:47	2026-10-19 15:59:47
+2361	647	465	3	37.65	2026-10-19 15:59:47	2026-10-19 15:59:47
+2362	648	926	5	53.44	2026-10-19 15:59:47	2026-10-19 15:59:47
+2363	648	811	5	121.96	2026-10-19 15:59:47	2026-10-19 15:59:47
+2364	649	409	8	11.18	2026-10-19 15:59:47	2026-10-19 15:59:47
+2365	649	292	5	125.50	2026-10-19 15:59:47	2026-10-19 15:59:47
+2366	649	363	6	124.78	2026-10-19 15:59:48	2026-10-19 15:59:48
+2367	649	825	5	89.58	2026-10-19 15:59:48	2026-10-19 15:59:48
+2368	649	685	3	6.18	2026-10-19 15:59:48	2026-10-19 15:59:48
+2369	650	892	5	8.25	2026-10-19 15:59:48	2026-10-19 15:59:48
+2370	650	956	4	120.40	2026-10-19 15:59:48	2026-10-19 15:59:48
+2371	650	324	1	94.68	2026-10-19 15:59:48	2026-10-19 15:59:48
+2372	651	205	6	110.91	2026-10-19 15:59:48	2026-10-19 15:59:48
+2373	651	696	8	117.01	2026-10-19 15:59:48	2026-10-19 15:59:48
+2374	651	369	1	116.51	2026-10-19 15:59:48	2026-10-19 15:59:48
+2375	651	901	3	38.63	2026-10-19 15:59:49	2026-10-19 15:59:49
+2376	652	635	6	56.75	2026-10-19 15:59:49	2026-10-19 15:59:49
+2377	652	878	8	34.93	2026-10-19 15:59:49	2026-10-19 15:59:49
+2378	652	608	3	125.72	2026-10-19 15:59:49	2026-10-19 15:59:49
+2379	652	681	8	94.83	2026-10-19 15:59:49	2026-10-19 15:59:49
+2380	653	928	8	98.75	2026-10-19 15:59:49	2026-10-19 15:59:49
+2381	653	508	7	58.44	2026-10-19 15:59:49	2026-10-19 15:59:49
+2382	653	336	4	104.81	2026-10-19 15:59:49	2026-10-19 15:59:49
+2383	654	567	7	12.54	2026-10-19 15:59:49	2026-10-19 15:59:49
+2384	654	276	6	137.67	2026-10-19 15:59:49	2026-10-19 15:59:49
+2385	654	70	6	25.63	2026-10-19 15:59:49	2026-10-19 15:59:49
+2386	654	906	8	140.30	2026-10-19 15:59:49	2026-10-19 15:59:49
+2387	654	276	1	137.67	2026-10-19 15:59:49	2026-10-19 15:59:49
+2388	655	358	8	54.03	2026-10-19 15:59:49	2026-10-19 15:59:49
+2389	656	587	1	113.15	2026-10-19 15:59:49	2026-10-19 15:59:49
+2390	656	297	6	28.69	2026-10-19 15:59:49	2026-10-19 15:59:49
+2391	656	119	5	146.38	2026-10-19 15:59:50	2026-10-19 15:59:50
+2392	656	589	7	133.11	2026-10-19 15:59:50	2026-10-19 15:59:50
+2393	656	88	8	95.43	2026-10-19 15:59:50	2026-10-19 15:59:50
+2394	657	754	8	66.86	2026-10-19 15:59:50	2026-10-19 15:59:50
+2395	658	562	6	38.58	2026-10-19 15:59:50	2026-10-19 15:59:50
+2396	658	577	8	66.36	2026-10-19 15:59:50	2026-10-19 15:59:50
+2397	658	428	5	58.50	2026-10-19 15:59:50	2026-10-19 15:59:50
+2398	658	835	6	93.63	2026-10-19 15:59:50	2026-10-19 15:59:50
+2399	658	475	8	71.62	2026-10-19 15:59:50	2026-10-19 15:59:50
+2400	659	457	8	9.82	2026-10-19 15:59:50	2026-10-19 15:59:50
+2401	659	833	6	34.14	2026-10-19 15:59:50	2026-10-19 15:59:50
+2402	659	535	3	96.53	2026-10-19 15:59:50	2026-10-19 15:59:50
+2403	659	275	6	117.32	2026-10-19 15:59:50	2026-10-19 15:59:50
+2404	659	187	1	147.70	2026-10-19 15:59:50	2026-10-19 15:59:50
+2405	660	479	5	134.49	2026-10-19 15:59:50	2026-10-19 15:59:50
+2406	660	324	3	94.68	2026-10-19 15:59:50	2026-10-19 15:59:50
+2407	660	113	8	68.86	2026-10-19 15:59:50	2026-10-19 15:59:50
+2408	661	126	1	141.02	2026-10-19 15:59:50	2026-10-19 15:59:50
+2409	661	336	8	104.81	2026-10-19 15:59:50	2026-10-19 15:59:50
+2410	661	496	3	66.15	2026-10-19 15:59:50	2026-10-19 15:59:50
+2411	661	21	2	7.00	2026-10-19 15:59:50	2026-10-19 15:59:50
+2412	661	965	2	116.96	2026-10-19 15:59:50	2026-10-19 15:59:50
+2413	662	554	6	100.82	2026-10-19 15:59:50	2026-10-19 15:59:50
+2414	662	314	7	35.70	2026-10-19 15:59:50	2026-10-19 15:59:50
+2415	662	913	4	13.43	2026-10-19 15:59:50	2026-10-19 15:59:50
+2416	662	139	1	75.92	2026-10-19 15:59:50	2026-10-19 15:59:50
+2417	663	66	8	21.01	2026-10-19 15:59:50	2026-10-19 15:59:50
+2418	663	949	6	26.59	2026-10-19 15:59:50	2026-10-19 15:59:50
+2419	663	306	6	121.21	2026-10-19 15:59:50	2026-10-19 15:59:50
+2420	664	528	1	36.91	2026-10-19 15:59:50	2026-10-19 15:59:50
+2421	664	153	8	77.96	2026-10-19 15:59:50	2026-10-19 15:59:50
+2422	664	428	5	58.50	2026-10-19 15:59:50	2026-10-19 15:59:50
+2423	664	286	4	90.78	2026-10-19 15:59:50	2026-10-19 15:59:50
+2424	665	766	4	28.57	2026-10-19 15:59:50	2026-10-19 15:59:50
+2425	665	246	5	22.35	2026-10-19 15:59:50	2026-10-19 15:59:50
+2426	665	173	2	7.93	2026-10-19 15:59:50	2026-10-19 15:59:50
+2427	666	968	5	21.75	2026-10-19 15:59:50	2026-10-19 15:59:50
+2428	666	93	2	19.71	2026-10-19 15:59:50	2026-10-19 15:59:50
+2429	667	657	7	100.40	2026-10-19 15:59:50	2026-10-19 15:59:50
+2430	667	879	2	59.39	2026-10-19 15:59:50	2026-10-19 15:59:50
+2431	667	892	2	8.25	2026-10-19 15:59:50	2026-10-19 15:59:50
+2432	668	181	5	63.73	2026-10-19 15:59:50	2026-10-19 15:59:50
+2433	668	621	7	92.74	2026-10-19 15:59:50	2026-10-19 15:59:50
+2434	668	249	1	72.66	2026-10-19 15:59:50	2026-10-19 15:59:50
+2435	668	995	8	34.41	2026-10-19 15:59:50	2026-10-19 15:59:50
+2436	668	844	1	69.56	2026-10-19 15:59:50	2026-10-19 15:59:50
+2437	669	433	4	60.65	2026-10-19 15:59:50	2026-10-19 15:59:50
+2438	669	680	8	24.44	2026-10-19 15:59:50	2026-10-19 15:59:50
+2439	669	738	4	144.31	2026-10-19 15:59:50	2026-10-19 15:59:50
+2440	670	794	2	7.40	2026-10-19 15:59:50	2026-10-19 15:59:50
+2441	670	931	1	81.16	2026-10-19 15:59:50	2026-10-19 15:59:50
+2442	670	707	2	35.88	2026-10-19 15:59:50	2026-10-19 15:59:50
+2443	670	851	8	126.89	2026-10-19 15:59:50	2026-10-19 15:59:50
+2444	671	507	5	65.37	2026-10-19 15:59:50	2026-10-19 15:59:50
+2445	671	221	7	48.83	2026-10-19 15:59:50	2026-10-19 15:59:50
+2446	672	790	1	30.52	2026-10-19 15:59:50	2026-10-19 15:59:50
+2447	672	951	2	125.48	2026-10-19 15:59:50	2026-10-19 15:59:50
+2448	672	177	4	25.52	2026-10-19 15:59:50	2026-10-19 15:59:50
+2449	672	424	6	89.35	2026-10-19 15:59:50	2026-10-19 15:59:50
+2450	673	992	2	85.28	2026-10-19 15:59:50	2026-10-19 15:59:50
+2451	674	755	4	114.05	2026-10-19 15:59:50	2026-10-19 15:59:50
+2452	674	297	4	28.69	2026-10-19 15:59:50	2026-10-19 15:59:50
+2453	674	748	7	104.47	2026-10-19 15:59:50	2026-10-19 15:59:50
+2454	674	670	6	146.90	2026-10-19 15:59:50	2026-10-19 15:59:50
+2455	674	440	7	70.62	2026-10-19 15:59:50	2026-10-19 15:59:50
+2456	675	233	1	129.43	2026-10-19 15:59:51	2026-10-19 15:59:51
+2457	675	71	3	75.13	2026-10-19 15:59:51	2026-10-19 15:59:51
+2458	675	133	4	148.97	2026-10-19 15:59:51	2026-10-19 15:59:51
+2459	675	957	1	121.44	2026-10-19 15:59:51	2026-10-19 15:59:51
+2460	675	980	4	58.89	2026-10-19 15:59:51	2026-10-19 15:59:51
+2461	676	360	2	66.68	2026-10-19 15:59:51	2026-10-19 15:59:51
+2462	676	271	4	26.48	2026-10-19 15:59:51	2026-10-19 15:59:51
+2463	676	683	4	144.89	2026-10-19 15:59:51	2026-10-19 15:59:51
+2464	676	384	2	78.85	2026-10-19 15:59:51	2026-10-19 15:59:51
+2465	676	730	4	66.63	2026-10-19 15:59:51	2026-10-19 15:59:51
+2466	676	696	4	117.01	2026-10-19 15:59:51	2026-10-19 15:59:51
+2467	677	508	7	58.44	2026-10-19 15:59:51	2026-10-19 15:59:51
+2468	677	505	8	43.11	2026-10-19 15:59:51	2026-10-19 15:59:51
+2469	677	376	7	114.71	2026-10-19 15:59:51	2026-10-19 15:59:51
+2470	678	259	8	141.21	2026-10-19 15:59:51	2026-10-19 15:59:51
+2471	678	488	2	89.44	2026-10-19 15:59:51	2026-10-19 15:59:51
+2472	678	927	1	120.93	2026-10-19 15:59:51	2026-10-19 15:59:51
+2473	678	306	1	121.21	2026-10-19 15:59:51	2026-10-19 15:59:51
+2474	679	421	3	15.67	2026-10-19 15:59:51	2026-10-19 15:59:51
+2475	679	778	8	34.69	2026-10-19 15:59:51	2026-10-19 15:59:51
+2476	679	173	1	7.93	2026-10-19 15:59:51	2026-10-19 15:59:51
+2477	679	894	7	58.31	2026-10-19 15:59:51	2026-10-19 15:59:51
+2478	679	756	8	44.37	2026-10-19 15:59:51	2026-10-19 15:59:51
+2479	680	497	5	140.21	2026-10-19 15:59:51	2026-10-19 15:59:51
+2480	680	497	4	140.21	2026-10-19 15:59:51	2026-10-19 15:59:51
+2481	681	557	1	42.04	2026-10-19 15:59:51	2026-10-19 15:59:51
+2482	681	368	6	78.66	2026-10-19 15:59:51	2026-10-19 15:59:51
+2483	681	688	8	127.13	2026-10-19 15:59:51	2026-10-19 15:59:51
+2484	682	121	2	92.99	2026-10-19 15:59:51	2026-10-19 15:59:51
+2485	683	914	6	26.89	2026-10-19 15:59:51	2026-10-19 15:59:51
+2486	683	98	8	113.36	2026-10-19 15:59:51	2026-10-19 15:59:51
+2487	684	764	4	36.59	2026-10-19 15:59:51	2026-10-19 15:59:51
+2488	684	201	7	72.24	2026-10-19 15:59:51	2026-10-19 15:59:51
+2489	684	994	8	36.37	2026-10-19 15:59:51	2026-10-19 15:59:51
+2490	684	555	8	65.68	2026-10-19 15:59:51	2026-10-19 15:59:51
+2491	684	899	6	85.06	2026-10-19 15:59:51	2026-10-19 15:59:51
+2492	685	715	8	36.12	2026-10-19 15:59:51	2026-10-19 15:59:51
+2493	685	817	5	31.85	2026-10-19 15:59:51	2026-10-19 15:59:51
+2494	685	383	4	50.06	2026-10-19 15:59:51	2026-10-19 15:59:51
+2495	685	993	3	12.87	2026-10-19 15:59:51	2026-10-19 15:59:51
+2496	685	293	6	80.52	2026-10-19 15:59:51	2026-10-19 15:59:51
+2497	686	800	3	87.44	2026-10-19 15:59:51	2026-10-19 15:59:51
+2498	686	557	1	42.04	2026-10-19 15:59:51	2026-10-19 15:59:51
+2499	686	18	1	6.00	2026-10-19 15:59:51	2026-10-19 15:59:51
+2500	686	268	5	67.26	2026-10-19 15:59:51	2026-10-19 15:59:51
+2501	686	733	3	14.90	2026-10-19 15:59:51	2026-10-19 15:59:51
+2502	687	767	6	104.40	2026-10-19 15:59:51	2026-10-19 15:59:51
+2503	687	318	8	96.35	2026-10-19 15:59:51	2026-10-19 15:59:51
+2504	687	367	8	126.04	2026-10-19 15:59:51	2026-10-19 15:59:51
+2505	688	552	7	147.64	2026-10-19 15:59:51	2026-10-19 15:59:51
+2506	689	578	4	41.85	2026-10-19 15:59:51	2026-10-19 15:59:51
+2507	689	264	6	101.99	2026-10-19 15:59:51	2026-10-19 15:59:51
+2508	689	951	4	125.48	2026-10-19 15:59:51	2026-10-19 15:59:51
+2509	689	712	7	80.58	2026-10-19 15:59:51	2026-10-19 15:59:51
+2510	689	538	3	111.01	2026-10-19 15:59:51	2026-10-19 15:59:51
+2511	690	902	4	26.18	2026-10-19 15:59:52	2026-10-19 15:59:52
+2512	691	971	1	7.00	2026-10-19 15:59:52	2026-10-19 15:59:52
+2513	691	108	5	8.55	2026-10-19 15:59:52	2026-10-19 15:59:52
+2514	691	28	1	28.00	2026-10-19 15:59:52	2026-10-19 15:59:52
+2515	692	87	2	133.68	2026-10-19 15:59:52	2026-10-19 15:59:52
+2516	692	576	3	54.39	2026-10-19 15:59:52	2026-10-19 15:59:52
+2517	693	283	4	34.85	2026-10-19 15:59:52	2026-10-19 15:59:52
+2518	693	177	1	25.52	2026-10-19 15:59:52	2026-10-19 15:59:52
+2519	693	924	6	90.34	2026-10-19 15:59:52	2026-10-19 15:59:52
+2520	693	358	5	54.03	2026-10-19 15:59:52	2026-10-19 15:59:52
+2521	693	72	8	76.77	2026-10-19 15:59:52	2026-10-19 15:59:52
+2522	694	643	1	110.45	2026-10-19 15:59:52	2026-10-19 15:59:52
+2523	694	959	4	136.79	2026-10-19 15:59:52	2026-10-19 15:59:52
+2524	694	935	1	25.06	2026-10-19 15:59:52	2026-10-19 15:59:52
+2525	695	230	4	108.46	2026-10-19 15:59:52	2026-10-19 15:59:52
+2526	696	534	1	87.98	2026-10-19 15:59:52	2026-10-19 15:59:52
+2527	696	493	6	111.54	2026-10-19 15:59:52	2026-10-19 15:59:52
+2528	696	530	1	9.50	2026-10-19 15:59:52	2026-10-19 15:59:52
+2529	697	319	7	8.15	2026-10-19 15:59:52	2026-10-19 15:59:52
+2530	697	601	7	59.81	2026-10-19 15:59:52	2026-10-19 15:59:52
+2531	697	901	7	38.63	2026-10-19 15:59:52	2026-10-19 15:59:52
+2532	697	834	2	30.88	2026-10-19 15:59:52	2026-10-19 15:59:52
+2533	697	506	5	139.08	2026-10-19 15:59:52	2026-10-19 15:59:52
+2534	697	613	5	19.19	2026-10-19 15:59:52	2026-10-19 15:59:52
+2535	698	428	8	58.50	2026-10-19 15:59:52	2026-10-19 15:59:52
+2536	698	702	8	44.77	2026-10-19 15:59:52	2026-10-19 15:59:52
+2537	698	426	2	94.15	2026-10-19 15:59:52	2026-10-19 15:59:52
+2538	698	677	5	104.55	2026-10-19 15:59:52	2026-10-19 15:59:52
+2539	698	481	7	61.45	2026-10-19 15:59:52	2026-10-19 15:59:52
+2540	698	784	2	91.00	2026-10-19 15:59:52	2026-10-19 15:59:52
+2541	699	621	2	92.74	2026-10-19 15:59:52	2026-10-19 15:59:52
+2542	699	433	5	60.65	2026-10-19 15:59:52	2026-10-19 15:59:52
+2543	699	925	7	49.79	2026-10-19 15:59:52	2026-10-19 15:59:52
+2544	699	426	4	94.15	2026-10-19 15:59:52	2026-10-19 15:59:52
+2545	699	258	7	93.02	2026-10-19 15:59:52	2026-10-19 15:59:52
+2546	700	70	3	25.63	2026-10-19 15:59:52	2026-10-19 15:59:52
+2547	700	218	5	35.75	2026-10-19 15:59:52	2026-10-19 15:59:52
+2548	701	756	5	44.37	2026-10-19 15:59:52	2026-10-19 15:59:52
+2549	701	1000	8	106.85	2026-10-19 15:59:52	2026-10-19 15:59:52
+2550	701	337	5	132.30	2026-10-19 15:59:52	2026-10-19 15:59:52
+2551	701	723	5	79.22	2026-10-19 15:59:52	2026-10-19 15:59:52
+2552	701	808	3	142.03	2026-10-19 15:59:52	2026-10-19 15:59:52
+2553	701	855	6	59.93	2026-10-19 15:59:52	2026-10-19 15:59:52
+2554	702	691	6	128.37	2026-10-19 15:59:52	2026-10-19 15:59:52
+2555	703	98	4	113.36	2026-10-19 15:59:52	2026-10-19 15:59:52
+2556	703	192	2	20.30	2026-10-19 15:59:52	2026-10-19 15:59:52
+2557	703	794	3	7.40	2026-10-19 15:59:52	2026-10-19 15:59:52
+2558	704	101	8	108.56	2026-10-19 15:59:52	2026-10-19 15:59:52
+2559	704	241	8	28.52	2026-10-19 15:59:52	2026-10-19 15:59:52
+2560	704	622	6	26.25	2026-10-19 15:59:52	2026-10-19 15:59:52
+2561	704	783	3	73.98	2026-10-19 15:59:52	2026-10-19 15:59:52
+2562	704	204	1	34.88	2026-10-19 15:59:52	2026-10-19 15:59:52
+2563	704	794	6	7.40	2026-10-19 15:59:52	2026-10-19 15:59:52
+2564	705	639	4	135.59	2026-10-19 15:59:52	2026-10-19 15:59:52
+2565	705	758	5	129.49	2026-10-19 15:59:52	2026-10-19 15:59:52
+2566	705	739	2	80.82	2026-10-19 15:59:52	2026-10-19 15:59:52
+2567	705	367	5	126.04	2026-10-19 15:59:53	2026-10-19 15:59:53
+2568	705	395	7	61.56	2026-10-19 15:59:53	2026-10-19 15:59:53
+2569	705	749	1	38.39	2026-10-19 15:59:53	2026-10-19 15:59:53
+2570	706	779	6	117.13	2026-10-19 15:59:53	2026-10-19 15:59:53
+2571	707	120	2	33.87	2026-10-19 15:59:53	2026-10-19 15:59:53
+2572	707	806	2	89.07	2026-10-19 15:59:53	2026-10-19 15:59:53
+2573	707	879	2	59.39	2026-10-19 15:59:53	2026-10-19 15:59:53
+2574	707	573	3	117.51	2026-10-19 15:59:53	2026-10-19 15:59:53
+2575	708	610	2	44.51	2026-10-19 15:59:53	2026-10-19 15:59:53
+2576	708	914	3	26.89	2026-10-19 15:59:53	2026-10-19 15:59:53
+2577	708	59	7	114.79	2026-10-19 15:59:53	2026-10-19 15:59:53
+2578	708	101	3	108.56	2026-10-19 15:59:53	2026-10-19 15:59:53
+2579	708	573	3	117.51	2026-10-19 15:59:53	2026-10-19 15:59:53
+2580	709	359	4	19.53	2026-10-19 15:59:53	2026-10-19 15:59:53
+2581	710	288	5	104.48	2026-10-19 15:59:53	2026-10-19 15:59:53
+2582	710	582	7	143.54	2026-10-19 15:59:53	2026-10-19 15:59:53
+2583	710	187	3	147.70	2026-10-19 15:59:53	2026-10-19 15:59:53
+2584	710	237	3	68.01	2026-10-19 15:59:53	2026-10-19 15:59:53
+2585	710	700	3	127.35	2026-10-19 15:59:53	2026-10-19 15:59:53
+2586	710	830	6	148.33	2026-10-19 15:59:53	2026-10-19 15:59:53
+2587	711	908	4	75.61	2026-10-19 15:59:53	2026-10-19 15:59:53
+2588	711	417	7	83.86	2026-10-19 15:59:53	2026-10-19 15:59:53
+2589	711	156	4	27.43	2026-10-19 15:59:53	2026-10-19 15:59:53
+2590	712	527	1	117.23	2026-10-19 15:59:53	2026-10-19 15:59:53
+2591	712	812	8	113.67	2026-10-19 15:59:53	2026-10-19 15:59:53
+2592	713	828	7	44.66	2026-10-19 15:59:53	2026-10-19 15:59:53
+2593	713	819	5	41.13	2026-10-19 15:59:53	2026-10-19 15:59:53
+2594	713	6	1	22.00	2026-10-19 15:59:53	2026-10-19 15:59:53
+2595	713	509	4	27.22	2026-10-19 15:59:53	2026-10-19 15:59:53
+2596	714	725	6	40.82	2026-10-19 15:59:53	2026-10-19 15:59:53
+2597	714	630	8	144.86	2026-10-19 15:59:53	2026-10-19 15:59:53
+2598	714	520	8	6.66	2026-10-19 15:59:53	2026-10-19 15:59:53
+2599	714	551	5	71.10	2026-10-19 15:59:53	2026-10-19 15:59:53
+2600	715	145	7	54.03	2026-10-19 15:59:53	2026-10-19 15:59:53
+2601	715	57	5	44.78	2026-10-19 15:59:53	2026-10-19 15:59:53
+2602	715	292	8	125.50	2026-10-19 15:59:53	2026-10-19 15:59:53
+2603	716	339	6	141.11	2026-10-19 15:59:53	2026-10-19 15:59:53
+2604	716	90	5	36.99	2026-10-19 15:59:53	2026-10-19 15:59:53
+2605	716	737	8	21.78	2026-10-19 15:59:53	2026-10-19 15:59:53
+2606	716	66	5	21.01	2026-10-19 15:59:53	2026-10-19 15:59:53
+2607	717	364	7	126.52	2026-10-19 15:59:53	2026-10-19 15:59:53
+2608	717	467	4	77.94	2026-10-19 15:59:53	2026-10-19 15:59:53
+2609	717	399	2	141.97	2026-10-19 15:59:53	2026-10-19 15:59:53
+2610	717	882	3	143.89	2026-10-19 15:59:53	2026-10-19 15:59:53
+2611	717	504	1	127.29	2026-10-19 15:59:53	2026-10-19 15:59:53
+2612	717	499	7	79.87	2026-10-19 15:59:53	2026-10-19 15:59:53
+2613	718	181	5	63.73	2026-10-19 15:59:53	2026-10-19 15:59:53
+2614	718	258	8	93.02	2026-10-19 15:59:53	2026-10-19 15:59:53
+2615	719	934	7	143.55	2026-10-19 15:59:53	2026-10-19 15:59:53
+2616	719	817	8	31.85	2026-10-19 15:59:53	2026-10-19 15:59:53
+2617	719	694	6	15.81	2026-10-19 15:59:53	2026-10-19 15:59:53
+2618	720	805	4	98.87	2026-10-19 15:59:53	2026-10-19 15:59:53
+2619	720	736	5	32.58	2026-10-19 15:59:53	2026-10-19 15:59:53
+2620	720	911	6	62.18	2026-10-19 15:59:53	2026-10-19 15:59:53
+2621	721	732	8	109.40	2026-10-19 15:59:53	2026-10-19 15:59:53
+2622	721	289	7	64.28	2026-10-19 15:59:53	2026-10-19 15:59:53
+2623	721	102	6	118.72	2026-10-19 15:59:53	2026-10-19 15:59:53
+2624	722	754	3	66.86	2026-10-19 15:59:53	2026-10-19 15:59:53
+2625	722	122	3	60.00	2026-10-19 15:59:53	2026-10-19 15:59:53
+2626	722	351	8	78.54	2026-10-19 15:59:53	2026-10-19 15:59:53
+2627	723	130	2	35.15	2026-10-19 15:59:54	2026-10-19 15:59:54
+2628	723	428	3	58.50	2026-10-19 15:59:54	2026-10-19 15:59:54
+2629	723	70	7	25.63	2026-10-19 15:59:54	2026-10-19 15:59:54
+2630	723	715	5	36.12	2026-10-19 15:59:54	2026-10-19 15:59:54
+2631	724	578	2	41.85	2026-10-19 15:59:54	2026-10-19 15:59:54
+2632	724	203	3	83.08	2026-10-19 15:59:54	2026-10-19 15:59:54
+2633	724	942	1	10.01	2026-10-19 15:59:54	2026-10-19 15:59:54
+2634	724	383	1	50.06	2026-10-19 15:59:54	2026-10-19 15:59:54
+2635	724	335	4	149.30	2026-10-19 15:59:54	2026-10-19 15:59:54
+2636	724	318	6	96.35	2026-10-19 15:59:54	2026-10-19 15:59:54
+2637	725	222	6	43.84	2026-10-19 15:59:54	2026-10-19 15:59:54
+2638	725	523	6	50.64	2026-10-19 15:59:54	2026-10-19 15:59:54
+2639	725	631	4	35.04	2026-10-19 15:59:54	2026-10-19 15:59:54
+2640	726	760	1	20.92	2026-10-19 15:59:54	2026-10-19 15:59:54
+2641	726	283	7	34.85	2026-10-19 15:59:54	2026-10-19 15:59:54
+2642	726	760	1	20.92	2026-10-19 15:59:54	2026-10-19 15:59:54
+2643	726	792	1	74.48	2026-10-19 15:59:54	2026-10-19 15:59:54
+2644	726	482	7	17.07	2026-10-19 15:59:54	2026-10-19 15:59:54
+2645	726	546	3	41.62	2026-10-19 15:59:54	2026-10-19 15:59:54
+2646	727	952	8	30.03	2026-10-19 15:59:54	2026-10-19 15:59:54
+2647	727	305	4	91.22	2026-10-19 15:59:54	2026-10-19 15:59:54
+2648	727	421	7	15.67	2026-10-19 15:59:54	2026-10-19 15:59:54
+2649	728	318	7	96.35	2026-10-19 15:59:54	2026-10-19 15:59:54
+2650	728	435	4	78.82	2026-10-19 15:59:54	2026-10-19 15:59:54
+2651	728	203	5	83.08	2026-10-19 15:59:54	2026-10-19 15:59:54
+2652	728	485	5	115.15	2026-10-19 15:59:54	2026-10-19 15:59:54
+2653	728	399	3	141.97	2026-10-19 15:59:54	2026-10-19 15:59:54
+2654	728	892	1	8.25	2026-10-19 15:59:54	2026-10-19 15:59:54
+2655	729	276	3	137.67	2026-10-19 15:59:54	2026-10-19 15:59:54
+2656	730	108	5	8.55	2026-10-19 15:59:54	2026-10-19 15:59:54
+2657	730	766	5	28.57	2026-10-19 15:59:54	2026-10-19 15:59:54
+2658	730	274	4	146.61	2026-10-19 15:59:54	2026-10-19 15:59:54
+2659	731	856	7	57.11	2026-10-19 15:59:54	2026-10-19 15:59:54
+2660	731	345	7	124.16	2026-10-19 15:59:54	2026-10-19 15:59:54
+2661	731	343	4	44.32	2026-10-19 15:59:54	2026-10-19 15:59:54
+2662	731	687	5	19.29	2026-10-19 15:59:54	2026-10-19 15:59:54
+2663	731	203	3	83.08	2026-10-19 15:59:54	2026-10-19 15:59:54
+2664	731	766	8	28.57	2026-10-19 15:59:54	2026-10-19 15:59:54
+2665	732	770	3	136.83	2026-10-19 15:59:54	2026-10-19 15:59:54
+2666	733	405	8	110.72	2026-10-19 15:59:54	2026-10-19 15:59:54
+2667	733	723	8	79.22	2026-10-19 15:59:54	2026-10-19 15:59:54
+2668	733	163	2	24.72	2026-10-19 15:59:54	2026-10-19 15:59:54
+2669	734	880	5	9.84	2026-10-19 15:59:54	2026-10-19 15:59:54
+2670	734	885	1	147.25	2026-10-19 15:59:54	2026-10-19 15:59:54
+2671	734	199	4	19.61	2026-10-19 15:59:54	2026-10-19 15:59:54
+2672	734	570	4	34.72	2026-10-19 15:59:54	2026-10-19 15:59:54
+2673	734	587	8	113.15	2026-10-19 15:59:54	2026-10-19 15:59:54
+2674	735	58	5	53.33	2026-10-19 15:59:54	2026-10-19 15:59:54
+2675	735	819	4	41.13	2026-10-19 15:59:54	2026-10-19 15:59:54
+2676	735	114	4	109.75	2026-10-19 15:59:54	2026-10-19 15:59:54
+2677	736	398	7	22.77	2026-10-19 15:59:54	2026-10-19 15:59:54
+2678	736	245	3	90.29	2026-10-19 15:59:54	2026-10-19 15:59:54
+2679	736	889	7	131.82	2026-10-19 15:59:54	2026-10-19 15:59:54
+2680	736	51	3	13.41	2026-10-19 15:59:54	2026-10-19 15:59:54
+2681	736	270	7	126.00	2026-10-19 15:59:54	2026-10-19 15:59:54
+2682	736	286	7	90.78	2026-10-19 15:59:54	2026-10-19 15:59:54
+2683	737	662	6	96.98	2026-10-19 15:59:54	2026-10-19 15:59:54
+2684	737	451	5	41.47	2026-10-19 15:59:54	2026-10-19 15:59:54
+2685	737	898	1	140.88	2026-10-19 15:59:54	2026-10-19 15:59:54
+2686	737	410	1	26.99	2026-10-19 15:59:54	2026-10-19 15:59:54
+2687	737	785	6	48.21	2026-10-19 15:59:54	2026-10-19 15:59:54
+2688	738	779	1	117.13	2026-10-19 15:59:54	2026-10-19 15:59:54
+2689	738	564	7	17.72	2026-10-19 15:59:55	2026-10-19 15:59:55
+2690	738	980	5	58.89	2026-10-19 15:59:55	2026-10-19 15:59:55
+2691	739	106	1	82.40	2026-10-19 15:59:55	2026-10-19 15:59:55
+2692	739	517	3	103.84	2026-10-19 15:59:55	2026-10-19 15:59:55
+2693	739	211	3	132.22	2026-10-19 15:59:55	2026-10-19 15:59:55
+2694	739	297	8	28.69	2026-10-19 15:59:55	2026-10-19 15:59:55
+2695	739	542	2	65.80	2026-10-19 15:59:55	2026-10-19 15:59:55
+2696	740	590	3	140.82	2026-10-19 15:59:55	2026-10-19 15:59:55
+2697	740	504	3	127.29	2026-10-19 15:59:55	2026-10-19 15:59:55
+2698	740	968	8	21.75	2026-10-19 15:59:55	2026-10-19 15:59:55
+2699	740	429	4	89.80	2026-10-19 15:59:55	2026-10-19 15:59:55
+2700	740	132	1	64.93	2026-10-19 15:59:55	2026-10-19 15:59:55
+2701	741	576	3	54.39	2026-10-19 15:59:55	2026-10-19 15:59:55
+2702	741	976	4	64.41	2026-10-19 15:59:55	2026-10-19 15:59:55
+2703	741	595	6	13.47	2026-10-19 15:59:55	2026-10-19 15:59:55
+2704	741	213	1	7.38	2026-10-19 15:59:55	2026-10-19 15:59:55
+2705	741	207	2	125.93	2026-10-19 15:59:55	2026-10-19 15:59:55
+2706	742	438	6	114.50	2026-10-19 15:59:55	2026-10-19 15:59:55
+2707	742	56	3	52.86	2026-10-19 15:59:55	2026-10-19 15:59:55
+2708	743	576	6	54.39	2026-10-19 15:59:55	2026-10-19 15:59:55
+2709	743	596	7	123.79	2026-10-19 15:59:55	2026-10-19 15:59:55
+2710	743	555	4	65.68	2026-10-19 15:59:55	2026-10-19 15:59:55
+2711	743	352	5	76.73	2026-10-19 15:59:55	2026-10-19 15:59:55
+2712	744	462	2	58.58	2026-10-19 15:59:55	2026-10-19 15:59:55
+2713	744	482	5	17.07	2026-10-19 15:59:55	2026-10-19 15:59:55
+2714	744	282	6	106.91	2026-10-19 15:59:55	2026-10-19 15:59:55
+2715	745	161	8	91.18	2026-10-19 15:59:55	2026-10-19 15:59:55
+2716	745	825	2	89.58	2026-10-19 15:59:55	2026-10-19 15:59:55
+2717	746	225	3	71.50	2026-10-19 15:59:55	2026-10-19 15:59:55
+2718	746	919	6	105.45	2026-10-19 15:59:55	2026-10-19 15:59:55
+2719	746	524	4	14.53	2026-10-19 15:59:55	2026-10-19 15:59:55
+2720	746	261	3	97.10	2026-10-19 15:59:55	2026-10-19 15:59:55
+2721	746	80	1	58.60	2026-10-19 15:59:55	2026-10-19 15:59:55
+2722	747	331	5	95.00	2026-10-19 15:59:55	2026-10-19 15:59:55
+2723	748	603	5	35.98	2026-10-19 15:59:55	2026-10-19 15:59:55
+2724	748	218	4	35.75	2026-10-19 15:59:55	2026-10-19 15:59:55
+2725	748	38	1	10.28	2026-10-19 15:59:55	2026-10-19 15:59:55
+2726	749	318	6	96.35	2026-10-19 15:59:55	2026-10-19 15:59:55
+2727	749	971	7	7.00	2026-10-19 15:59:55	2026-10-19 15:59:55
+2728	750	459	6	42.13	2026-10-19 15:59:55	2026-10-19 15:59:55
+2729	750	639	2	135.59	2026-10-19 15:59:55	2026-10-19 15:59:55
+2730	750	362	5	6.49	2026-10-19 15:59:55	2026-10-19 15:59:55
+2731	751	667	4	41.22	2026-10-19 15:59:55	2026-10-19 15:59:55
+2732	751	463	7	78.16	2026-10-19 15:59:55	2026-10-19 15:59:55
+2733	751	597	8	63.32	2026-10-19 15:59:55	2026-10-19 15:59:55
+2734	752	303	6	77.35	2026-10-19 15:59:55	2026-10-19 15:59:55
+2735	752	6	1	22.00	2026-10-19 15:59:55	2026-10-19 15:59:55
+2736	752	672	8	7.22	2026-10-19 15:59:55	2026-10-19 15:59:55
+2737	752	330	6	58.14	2026-10-19 15:59:55	2026-10-19 15:59:55
+2738	752	745	5	6.27	2026-10-19 15:59:55	2026-10-19 15:59:55
+2739	753	231	4	66.60	2026-10-19 15:59:55	2026-10-19 15:59:55
+2740	753	62	2	71.53	2026-10-19 15:59:55	2026-10-19 15:59:55
+2741	753	272	8	24.17	2026-10-19 15:59:55	2026-10-19 15:59:55
+2742	753	251	5	28.82	2026-10-19 15:59:55	2026-10-19 15:59:55
+2743	753	262	3	128.31	2026-10-19 15:59:55	2026-10-19 15:59:55
+2744	754	773	8	42.11	2026-10-19 15:59:56	2026-10-19 15:59:56
+2745	755	617	5	32.34	2026-10-19 15:59:56	2026-10-19 15:59:56
+2746	756	528	7	36.91	2026-10-19 15:59:56	2026-10-19 15:59:56
+2747	756	333	7	11.33	2026-10-19 15:59:56	2026-10-19 15:59:56
+2748	756	739	3	80.82	2026-10-19 15:59:56	2026-10-19 15:59:56
+2749	756	809	2	96.84	2026-10-19 15:59:56	2026-10-19 15:59:56
+2750	756	585	8	93.33	2026-10-19 15:59:56	2026-10-19 15:59:56
+2751	756	855	6	59.93	2026-10-19 15:59:56	2026-10-19 15:59:56
+2752	757	591	6	83.31	2026-10-19 15:59:56	2026-10-19 15:59:56
+2753	757	318	3	96.35	2026-10-19 15:59:56	2026-10-19 15:59:56
+2754	757	702	1	44.77	2026-10-19 15:59:56	2026-10-19 15:59:56
+2755	757	287	7	52.33	2026-10-19 15:59:56	2026-10-19 15:59:56
+2756	758	478	2	116.32	2026-10-19 15:59:56	2026-10-19 15:59:56
+2757	759	596	3	123.79	2026-10-19 15:59:56	2026-10-19 15:59:56
+2758	759	504	2	127.29	2026-10-19 15:59:56	2026-10-19 15:59:56
+2759	759	865	3	77.74	2026-10-19 15:59:56	2026-10-19 15:59:56
+2760	759	230	3	108.46	2026-10-19 15:59:56	2026-10-19 15:59:56
+2761	759	108	4	8.55	2026-10-19 15:59:56	2026-10-19 15:59:56
+2762	760	744	5	29.99	2026-10-19 15:59:56	2026-10-19 15:59:56
+2763	761	687	6	19.29	2026-10-19 15:59:56	2026-10-19 15:59:56
+2764	761	473	2	100.27	2026-10-19 15:59:56	2026-10-19 15:59:56
+2765	761	318	4	96.35	2026-10-19 15:59:56	2026-10-19 15:59:56
+2766	762	936	7	141.85	2026-10-19 15:59:56	2026-10-19 15:59:56
+2767	763	646	7	132.76	2026-10-19 15:59:56	2026-10-19 15:59:56
+2768	763	506	1	139.08	2026-10-19 15:59:56	2026-10-19 15:59:56
+2769	764	795	1	148.01	2026-10-19 15:59:56	2026-10-19 15:59:56
+2770	764	304	4	8.87	2026-10-19 15:59:56	2026-10-19 15:59:56
+2771	764	71	8	75.13	2026-10-19 15:59:56	2026-10-19 15:59:56
+2772	765	507	1	65.37	2026-10-19 15:59:56	2026-10-19 15:59:56
+2773	765	318	4	96.35	2026-10-19 15:59:56	2026-10-19 15:59:56
+2774	766	427	4	49.91	2026-10-19 15:59:56	2026-10-19 15:59:56
+2775	766	933	5	122.38	2026-10-19 15:59:56	2026-10-19 15:59:56
+2776	766	822	1	128.40	2026-10-19 15:59:56	2026-10-19 15:59:56
+2777	767	260	8	125.63	2026-10-19 15:59:56	2026-10-19 15:59:56
+2778	767	712	6	80.58	2026-10-19 15:59:56	2026-10-19 15:59:56
+2779	767	231	5	66.60	2026-10-19 15:59:56	2026-10-19 15:59:56
+2780	767	642	7	28.24	2026-10-19 15:59:56	2026-10-19 15:59:56
+2781	768	930	7	55.31	2026-10-19 15:59:56	2026-10-19 15:59:56
+2782	768	163	8	24.72	2026-10-19 15:59:56	2026-10-19 15:59:56
+2783	768	518	8	27.61	2026-10-19 15:59:56	2026-10-19 15:59:56
+2784	768	765	5	23.11	2026-10-19 15:59:56	2026-10-19 15:59:56
+2785	768	697	6	127.56	2026-10-19 15:59:56	2026-10-19 15:59:56
+2786	769	662	4	96.98	2026-10-19 15:59:56	2026-10-19 15:59:56
+2787	769	398	1	22.77	2026-10-19 15:59:56	2026-10-19 15:59:56
+2788	769	555	5	65.68	2026-10-19 15:59:56	2026-10-19 15:59:56
+2789	770	934	4	143.55	2026-10-19 15:59:56	2026-10-19 15:59:56
+2790	770	549	3	111.58	2026-10-19 15:59:56	2026-10-19 15:59:56
+2791	770	881	4	144.20	2026-10-19 15:59:56	2026-10-19 15:59:56
+2792	770	585	7	93.33	2026-10-19 15:59:56	2026-10-19 15:59:56
+2793	770	491	4	85.12	2026-10-19 15:59:56	2026-10-19 15:59:56
+2794	771	799	3	86.37	2026-10-19 15:59:56	2026-10-19 15:59:56
+2795	771	998	8	80.27	2026-10-19 15:59:56	2026-10-19 15:59:56
+2796	771	328	2	70.30	2026-10-19 15:59:56	2026-10-19 15:59:56
+2797	772	116	4	61.74	2026-10-19 15:59:56	2026-10-19 15:59:56
+2798	773	190	6	52.78	2026-10-19 15:59:57	2026-10-19 15:59:57
+2799	773	739	2	80.82	2026-10-19 15:59:57	2026-10-19 15:59:57
+2800	773	958	8	24.10	2026-10-19 15:59:57	2026-10-19 15:59:57
+2801	773	145	1	54.03	2026-10-19 15:59:57	2026-10-19 15:59:57
+2802	773	710	6	146.89	2026-10-19 15:59:57	2026-10-19 15:59:57
+2803	774	530	8	9.50	2026-10-19 15:59:57	2026-10-19 15:59:57
+2804	774	360	6	66.68	2026-10-19 15:59:57	2026-10-19 15:59:57
+2805	774	738	6	144.31	2026-10-19 15:59:57	2026-10-19 15:59:57
+2806	775	175	3	132.27	2026-10-19 15:59:57	2026-10-19 15:59:57
+2807	775	347	7	88.23	2026-10-19 15:59:57	2026-10-19 15:59:57
+2808	775	981	7	139.72	2026-10-19 15:59:57	2026-10-19 15:59:57
+2809	776	574	1	47.33	2026-10-19 15:59:57	2026-10-19 15:59:57
+2810	776	361	8	40.95	2026-10-19 15:59:57	2026-10-19 15:59:57
+2811	777	265	1	9.65	2026-10-19 15:59:57	2026-10-19 15:59:57
+2812	777	585	6	93.33	2026-10-19 15:59:57	2026-10-19 15:59:57
+2813	777	433	8	60.65	2026-10-19 15:59:57	2026-10-19 15:59:57
+2814	777	475	8	71.62	2026-10-19 15:59:57	2026-10-19 15:59:57
+2815	777	694	8	15.81	2026-10-19 15:59:57	2026-10-19 15:59:57
+2816	777	353	5	70.61	2026-10-19 15:59:57	2026-10-19 15:59:57
+2817	778	943	5	82.48	2026-10-19 15:59:57	2026-10-19 15:59:57
+2818	778	171	7	116.85	2026-10-19 15:59:57	2026-10-19 15:59:57
+2819	778	87	6	133.68	2026-10-19 15:59:57	2026-10-19 15:59:57
+2820	778	902	5	26.18	2026-10-19 15:59:57	2026-10-19 15:59:57
+2821	778	577	3	66.36	2026-10-19 15:59:57	2026-10-19 15:59:57
+2822	778	316	4	38.75	2026-10-19 15:59:57	2026-10-19 15:59:57
+2823	779	223	5	125.23	2026-10-19 15:59:57	2026-10-19 15:59:57
+2824	779	268	5	67.26	2026-10-19 15:59:57	2026-10-19 15:59:57
+2825	779	849	5	102.02	2026-10-19 15:59:57	2026-10-19 15:59:57
+2826	779	600	6	91.66	2026-10-19 15:59:57	2026-10-19 15:59:57
+2827	779	761	5	8.80	2026-10-19 15:59:57	2026-10-19 15:59:57
+2828	779	725	4	40.82	2026-10-19 15:59:57	2026-10-19 15:59:57
+2829	780	640	4	144.81	2026-10-19 15:59:57	2026-10-19 15:59:57
+2830	780	553	5	57.00	2026-10-19 15:59:57	2026-10-19 15:59:57
+2831	780	680	6	24.44	2026-10-19 15:59:57	2026-10-19 15:59:57
+2832	780	961	2	111.61	2026-10-19 15:59:57	2026-10-19 15:59:57
+2833	781	756	2	44.37	2026-10-19 15:59:57	2026-10-19 15:59:57
+2834	781	342	2	115.18	2026-10-19 15:59:57	2026-10-19 15:59:57
+2835	781	666	6	123.45	2026-10-19 15:59:57	2026-10-19 15:59:57
+2836	781	128	3	107.44	2026-10-19 15:59:57	2026-10-19 15:59:57
+2837	782	269	5	108.40	2026-10-19 15:59:57	2026-10-19 15:59:57
+2838	782	182	2	44.86	2026-10-19 15:59:57	2026-10-19 15:59:57
+2839	782	298	2	7.88	2026-10-19 15:59:57	2026-10-19 15:59:57
+2840	783	675	3	75.20	2026-10-19 15:59:57	2026-10-19 15:59:57
+2841	783	377	1	114.27	2026-10-19 15:59:57	2026-10-19 15:59:57
+2842	783	205	3	110.91	2026-10-19 15:59:57	2026-10-19 15:59:57
+2843	783	210	7	83.10	2026-10-19 15:59:57	2026-10-19 15:59:57
+2844	783	150	2	134.02	2026-10-19 15:59:57	2026-10-19 15:59:57
+2845	783	76	5	98.78	2026-10-19 15:59:57	2026-10-19 15:59:57
+2846	784	503	2	119.84	2026-10-19 15:59:57	2026-10-19 15:59:57
+2847	784	288	3	104.48	2026-10-19 15:59:57	2026-10-19 15:59:57
+2848	784	455	8	88.34	2026-10-19 15:59:57	2026-10-19 15:59:57
+2849	785	71	2	75.13	2026-10-19 15:59:57	2026-10-19 15:59:57
+2850	786	356	4	90.68	2026-10-19 15:59:57	2026-10-19 15:59:57
+2851	786	401	4	36.52	2026-10-19 15:59:57	2026-10-19 15:59:57
+2852	786	532	3	99.87	2026-10-19 15:59:57	2026-10-19 15:59:57
+2853	786	961	6	111.61	2026-10-19 15:59:57	2026-10-19 15:59:57
+2854	786	907	6	45.62	2026-10-19 15:59:57	2026-10-19 15:59:57
+2855	786	765	4	23.11	2026-10-19 15:59:57	2026-10-19 15:59:57
+2856	787	719	4	95.06	2026-10-19 15:59:57	2026-10-19 15:59:57
+2857	787	582	8	143.54	2026-10-19 15:59:57	2026-10-19 15:59:57
+2858	788	602	6	80.84	2026-10-19 15:59:57	2026-10-19 15:59:57
+2859	788	834	7	30.88	2026-10-19 15:59:57	2026-10-19 15:59:57
+2860	788	415	2	70.28	2026-10-19 15:59:58	2026-10-19 15:59:58
+2861	788	97	4	81.27	2026-10-19 15:59:58	2026-10-19 15:59:58
+2862	788	930	8	55.31	2026-10-19 15:59:58	2026-10-19 15:59:58
+2863	789	991	8	121.80	2026-10-19 15:59:58	2026-10-19 15:59:58
+2864	789	203	4	83.08	2026-10-19 15:59:58	2026-10-19 15:59:58
+2865	789	342	2	115.18	2026-10-19 15:59:58	2026-10-19 15:59:58
+2866	789	708	6	25.09	2026-10-19 15:59:58	2026-10-19 15:59:58
+2867	789	914	5	26.89	2026-10-19 15:59:58	2026-10-19 15:59:58
+2868	789	501	5	35.07	2026-10-19 15:59:58	2026-10-19 15:59:58
+2869	790	429	7	89.80	2026-10-19 15:59:58	2026-10-19 15:59:58
+2870	790	705	7	111.72	2026-10-19 15:59:58	2026-10-19 15:59:58
+2871	790	836	6	75.35	2026-10-19 15:59:58	2026-10-19 15:59:58
+2872	790	165	1	97.97	2026-10-19 15:59:58	2026-10-19 15:59:58
+2873	790	881	3	144.20	2026-10-19 15:59:58	2026-10-19 15:59:58
+2874	790	212	7	5.44	2026-10-19 15:59:58	2026-10-19 15:59:58
+2875	791	66	4	21.01	2026-10-19 15:59:58	2026-10-19 15:59:58
+2876	791	609	3	32.10	2026-10-19 15:59:58	2026-10-19 15:59:58
+2877	792	357	6	17.35	2026-10-19 15:59:58	2026-10-19 15:59:58
+2878	792	184	6	69.16	2026-10-19 15:59:58	2026-10-19 15:59:58
+2879	792	136	3	83.83	2026-10-19 15:59:58	2026-10-19 15:59:58
+2880	793	801	6	139.78	2026-10-19 15:59:58	2026-10-19 15:59:58
+2881	793	227	1	105.82	2026-10-19 15:59:58	2026-10-19 15:59:58
+2882	793	931	7	81.16	2026-10-19 15:59:58	2026-10-19 15:59:58
+2883	793	430	7	99.36	2026-10-19 15:59:58	2026-10-19 15:59:58
+2884	793	812	2	113.67	2026-10-19 15:59:58	2026-10-19 15:59:58
+2885	793	511	4	58.33	2026-10-19 15:59:58	2026-10-19 15:59:58
+2886	794	275	1	117.32	2026-10-19 15:59:58	2026-10-19 15:59:58
+2887	794	870	6	47.58	2026-10-19 15:59:58	2026-10-19 15:59:58
+2888	794	378	4	18.60	2026-10-19 15:59:58	2026-10-19 15:59:58
+2889	794	250	5	104.51	2026-10-19 15:59:58	2026-10-19 15:59:58
+2890	795	437	6	35.61	2026-10-19 15:59:58	2026-10-19 15:59:58
+2891	795	323	3	14.21	2026-10-19 15:59:58	2026-10-19 15:59:58
+2892	795	694	3	15.81	2026-10-19 15:59:58	2026-10-19 15:59:58
+2893	795	981	8	139.72	2026-10-19 15:59:58	2026-10-19 15:59:58
+2894	795	302	5	64.33	2026-10-19 15:59:58	2026-10-19 15:59:58
+2895	795	924	7	90.34	2026-10-19 15:59:58	2026-10-19 15:59:58
+2896	796	955	2	34.29	2026-10-19 15:59:58	2026-10-19 15:59:58
+2897	796	810	2	32.38	2026-10-19 15:59:58	2026-10-19 15:59:58
+2898	796	90	8	36.99	2026-10-19 15:59:58	2026-10-19 15:59:58
+2899	796	588	6	69.83	2026-10-19 15:59:58	2026-10-19 15:59:58
+2900	796	865	7	77.74	2026-10-19 15:59:58	2026-10-19 15:59:58
+2901	797	909	1	63.86	2026-10-19 15:59:58	2026-10-19 15:59:58
+2902	797	726	6	65.44	2026-10-19 15:59:58	2026-10-19 15:59:58
+2903	797	298	6	7.88	2026-10-19 15:59:58	2026-10-19 15:59:58
+2904	797	217	1	92.41	2026-10-19 15:59:58	2026-10-19 15:59:58
+2905	798	914	4	26.89	2026-10-19 15:59:58	2026-10-19 15:59:58
+2906	798	190	1	52.78	2026-10-19 15:59:58	2026-10-19 15:59:58
+2907	798	515	7	116.50	2026-10-19 15:59:58	2026-10-19 15:59:58
+2908	799	115	5	92.43	2026-10-19 15:59:58	2026-10-19 15:59:58
+2909	799	284	3	68.56	2026-10-19 15:59:58	2026-10-19 15:59:58
+2910	799	421	8	15.67	2026-10-19 15:59:58	2026-10-19 15:59:58
+2911	799	272	1	24.17	2026-10-19 15:59:58	2026-10-19 15:59:58
+2912	800	694	2	15.81	2026-10-19 15:59:58	2026-10-19 15:59:58
+2913	800	445	7	132.18	2026-10-19 15:59:58	2026-10-19 15:59:58
+2914	801	824	4	18.83	2026-10-19 15:59:58	2026-10-19 15:59:58
+2915	801	636	8	33.76	2026-10-19 15:59:58	2026-10-19 15:59:58
+2916	801	211	6	132.22	2026-10-19 15:59:58	2026-10-19 15:59:58
+2917	801	918	7	36.52	2026-10-19 15:59:58	2026-10-19 15:59:58
+2918	801	807	2	143.29	2026-10-19 15:59:58	2026-10-19 15:59:58
+2919	802	802	2	15.05	2026-10-19 15:59:58	2026-10-19 15:59:58
+2920	802	257	5	90.83	2026-10-19 15:59:58	2026-10-19 15:59:58
+2921	802	98	3	113.36	2026-10-19 15:59:59	2026-10-19 15:59:59
+2922	802	549	5	111.58	2026-10-19 15:59:59	2026-10-19 15:59:59
+2923	802	410	6	26.99	2026-10-19 15:59:59	2026-10-19 15:59:59
+2924	803	735	6	25.21	2026-10-19 15:59:59	2026-10-19 15:59:59
+2925	803	200	1	141.52	2026-10-19 15:59:59	2026-10-19 15:59:59
+2926	804	812	1	113.67	2026-10-19 15:59:59	2026-10-19 15:59:59
+2927	804	356	1	90.68	2026-10-19 15:59:59	2026-10-19 15:59:59
+2928	804	591	6	83.31	2026-10-19 15:59:59	2026-10-19 15:59:59
+2929	805	961	5	111.61	2026-10-19 15:59:59	2026-10-19 15:59:59
+2930	805	457	8	9.82	2026-10-19 15:59:59	2026-10-19 15:59:59
+2931	805	617	6	32.34	2026-10-19 15:59:59	2026-10-19 15:59:59
+2932	805	435	2	78.82	2026-10-19 15:59:59	2026-10-19 15:59:59
+2933	805	868	1	113.86	2026-10-19 15:59:59	2026-10-19 15:59:59
+2934	806	571	4	23.89	2026-10-19 15:59:59	2026-10-19 15:59:59
+2935	806	254	8	107.92	2026-10-19 15:59:59	2026-10-19 15:59:59
+2936	806	68	3	89.24	2026-10-19 15:59:59	2026-10-19 15:59:59
+2937	806	886	2	104.28	2026-10-19 15:59:59	2026-10-19 15:59:59
+2938	806	239	5	108.19	2026-10-19 15:59:59	2026-10-19 15:59:59
+2939	806	154	8	26.99	2026-10-19 15:59:59	2026-10-19 15:59:59
+2940	807	439	3	63.58	2026-10-19 15:59:59	2026-10-19 15:59:59
+2941	807	476	2	34.80	2026-10-19 15:59:59	2026-10-19 15:59:59
+2942	807	229	6	129.01	2026-10-19 15:59:59	2026-10-19 15:59:59
+2943	807	429	3	89.80	2026-10-19 15:59:59	2026-10-19 15:59:59
+2944	807	985	1	37.30	2026-10-19 15:59:59	2026-10-19 15:59:59
+2945	807	520	7	6.66	2026-10-19 15:59:59	2026-10-19 15:59:59
+2946	808	623	2	135.33	2026-10-19 15:59:59	2026-10-19 15:59:59
+2947	808	128	8	107.44	2026-10-19 15:59:59	2026-10-19 15:59:59
+2948	808	680	3	24.44	2026-10-19 15:59:59	2026-10-19 15:59:59
+2949	808	815	3	52.15	2026-10-19 15:59:59	2026-10-19 15:59:59
+2950	808	531	6	69.28	2026-10-19 15:59:59	2026-10-19 15:59:59
+2951	808	914	7	26.89	2026-10-19 15:59:59	2026-10-19 15:59:59
+2952	809	639	6	135.59	2026-10-19 15:59:59	2026-10-19 15:59:59
+2953	809	999	4	137.14	2026-10-19 15:59:59	2026-10-19 15:59:59
+2954	809	153	1	77.96	2026-10-19 15:59:59	2026-10-19 15:59:59
+2955	810	257	1	90.83	2026-10-19 15:59:59	2026-10-19 15:59:59
+2956	810	333	4	11.33	2026-10-19 15:59:59	2026-10-19 15:59:59
+2957	811	628	6	62.07	2026-10-19 15:59:59	2026-10-19 15:59:59
+2958	811	866	1	122.06	2026-10-19 15:59:59	2026-10-19 15:59:59
+2959	812	402	5	149.31	2026-10-19 15:59:59	2026-10-19 15:59:59
+2960	812	865	1	77.74	2026-10-19 15:59:59	2026-10-19 15:59:59
+2961	812	67	4	134.35	2026-10-19 15:59:59	2026-10-19 15:59:59
+2962	812	939	4	7.52	2026-10-19 15:59:59	2026-10-19 15:59:59
+2963	812	820	8	65.34	2026-10-19 15:59:59	2026-10-19 15:59:59
+2964	813	905	8	97.21	2026-10-19 15:59:59	2026-10-19 15:59:59
+2965	813	921	4	120.68	2026-10-19 15:59:59	2026-10-19 15:59:59
+2966	814	153	8	77.96	2026-10-19 15:59:59	2026-10-19 15:59:59
+2967	815	608	3	125.72	2026-10-19 15:59:59	2026-10-19 15:59:59
+2968	815	673	7	115.98	2026-10-19 15:59:59	2026-10-19 15:59:59
+2969	816	244	1	120.69	2026-10-19 15:59:59	2026-10-19 15:59:59
+2970	816	56	7	52.86	2026-10-19 15:59:59	2026-10-19 15:59:59
+2971	817	254	3	107.92	2026-10-19 15:59:59	2026-10-19 15:59:59
+2972	817	835	1	93.63	2026-10-19 15:59:59	2026-10-19 15:59:59
+2973	818	875	5	109.76	2026-10-19 15:59:59	2026-10-19 15:59:59
+2974	818	257	8	90.83	2026-10-19 15:59:59	2026-10-19 15:59:59
+2975	818	584	2	132.77	2026-10-19 15:59:59	2026-10-19 15:59:59
+2976	818	61	3	62.47	2026-10-19 15:59:59	2026-10-19 15:59:59
+2977	818	160	6	142.84	2026-10-19 15:59:59	2026-10-19 15:59:59
+2978	818	226	7	21.08	2026-10-19 16:00:00	2026-10-19 16:00:00
+2979	819	222	4	43.84	2026-10-19 16:00:00	2026-10-19 16:00:00
+2980	819	199	1	19.61	2026-10-19 16:00:00	2026-10-19 16:00:00
+2981	820	376	6	114.71	2026-10-19 16:00:00	2026-10-19 16:00:00
+2982	820	440	5	70.62	2026-10-19 16:00:00	2026-10-19 16:00:00
+2983	820	381	1	100.28	2026-10-19 16:00:00	2026-10-19 16:00:00
+2984	820	270	8	126.00	2026-10-19 16:00:00	2026-10-19 16:00:00
+2985	821	552	4	147.64	2026-10-19 16:00:00	2026-10-19 16:00:00
+2986	822	538	4	111.01	2026-10-19 16:00:00	2026-10-19 16:00:00
+2987	822	159	2	83.73	2026-10-19 16:00:00	2026-10-19 16:00:00
+2988	822	431	5	43.27	2026-10-19 16:00:00	2026-10-19 16:00:00
+2989	823	944	6	81.93	2026-10-19 16:00:00	2026-10-19 16:00:00
+2990	823	377	3	114.27	2026-10-19 16:00:00	2026-10-19 16:00:00
+2991	824	277	3	86.30	2026-10-19 16:00:00	2026-10-19 16:00:00
+2992	824	208	2	60.72	2026-10-19 16:00:00	2026-10-19 16:00:00
+2993	825	282	7	106.91	2026-10-19 16:00:00	2026-10-19 16:00:00
+2994	825	198	3	119.75	2026-10-19 16:00:00	2026-10-19 16:00:00
+2995	825	735	2	25.21	2026-10-19 16:00:00	2026-10-19 16:00:00
+2996	825	805	1	98.87	2026-10-19 16:00:00	2026-10-19 16:00:00
+2997	826	239	3	108.19	2026-10-19 16:00:00	2026-10-19 16:00:00
+2998	826	616	6	84.09	2026-10-19 16:00:00	2026-10-19 16:00:00
+2999	826	77	2	27.40	2026-10-19 16:00:00	2026-10-19 16:00:00
+3000	827	859	5	49.92	2026-10-19 16:00:00	2026-10-19 16:00:00
+3001	827	289	1	64.28	2026-10-19 16:00:00	2026-10-19 16:00:00
+3002	827	586	8	58.25	2026-10-19 16:00:00	2026-10-19 16:00:00
+3003	828	82	7	28.80	2026-10-19 16:00:00	2026-10-19 16:00:00
+3004	828	129	8	6.41	2026-10-19 16:00:00	2026-10-19 16:00:00
+3005	828	406	7	37.51	2026-10-19 16:00:00	2026-10-19 16:00:00
+3006	828	599	6	37.36	2026-10-19 16:00:00	2026-10-19 16:00:00
+3007	828	363	2	124.78	2026-10-19 16:00:00	2026-10-19 16:00:00
+3008	828	160	4	142.84	2026-10-19 16:00:00	2026-10-19 16:00:00
+3009	829	78	8	113.21	2026-10-19 16:00:00	2026-10-19 16:00:00
+3010	829	659	5	143.03	2026-10-19 16:00:00	2026-10-19 16:00:00
+3011	829	804	4	56.13	2026-10-19 16:00:00	2026-10-19 16:00:00
+3012	829	699	4	34.26	2026-10-19 16:00:00	2026-10-19 16:00:00
+3013	829	997	2	82.61	2026-10-19 16:00:00	2026-10-19 16:00:00
+3014	829	243	3	49.93	2026-10-19 16:00:00	2026-10-19 16:00:00
+3015	830	484	3	116.80	2026-10-19 16:00:00	2026-10-19 16:00:00
+3016	831	227	8	105.82	2026-10-19 16:00:00	2026-10-19 16:00:00
+3017	831	707	2	35.88	2026-10-19 16:00:00	2026-10-19 16:00:00
+3018	831	842	5	32.35	2026-10-19 16:00:00	2026-10-19 16:00:00
+3019	831	93	6	19.71	2026-10-19 16:00:00	2026-10-19 16:00:00
+3020	832	138	7	56.71	2026-10-19 16:00:00	2026-10-19 16:00:00
+3021	832	740	7	10.15	2026-10-19 16:00:00	2026-10-19 16:00:00
+3022	833	116	8	61.74	2026-10-19 16:00:00	2026-10-19 16:00:00
+3023	833	871	2	7.85	2026-10-19 16:00:00	2026-10-19 16:00:00
+3024	833	981	3	139.72	2026-10-19 16:00:00	2026-10-19 16:00:00
+3025	833	807	2	143.29	2026-10-19 16:00:00	2026-10-19 16:00:00
+3026	834	407	3	21.70	2026-10-19 16:00:00	2026-10-19 16:00:00
+3027	834	738	2	144.31	2026-10-19 16:00:00	2026-10-19 16:00:00
+3028	835	442	7	45.28	2026-10-19 16:00:00	2026-10-19 16:00:00
+3029	836	961	7	111.61	2026-10-19 16:00:00	2026-10-19 16:00:00
+3030	836	509	4	27.22	2026-10-19 16:00:00	2026-10-19 16:00:00
+3031	836	117	5	71.07	2026-10-19 16:00:00	2026-10-19 16:00:00
+3032	836	4	2	25.00	2026-10-19 16:00:00	2026-10-19 16:00:00
+3033	836	466	6	72.61	2026-10-19 16:00:00	2026-10-19 16:00:00
+3034	837	236	1	11.02	2026-10-19 16:00:00	2026-10-19 16:00:00
+3035	837	209	5	41.59	2026-10-19 16:00:00	2026-10-19 16:00:00
+3036	837	340	1	73.02	2026-10-19 16:00:01	2026-10-19 16:00:01
+3037	837	575	4	30.15	2026-10-19 16:00:01	2026-10-19 16:00:01
+3038	838	384	7	78.85	2026-10-19 16:00:01	2026-10-19 16:00:01
+3039	838	502	1	85.08	2026-10-19 16:00:01	2026-10-19 16:00:01
+3040	838	945	2	35.73	2026-10-19 16:00:01	2026-10-19 16:00:01
+3041	838	348	1	90.71	2026-10-19 16:00:01	2026-10-19 16:00:01
+3042	838	179	8	54.77	2026-10-19 16:00:01	2026-10-19 16:00:01
+3043	839	958	7	24.10	2026-10-19 16:00:01	2026-10-19 16:00:01
+3044	839	693	5	121.76	2026-10-19 16:00:01	2026-10-19 16:00:01
+3045	839	848	7	30.71	2026-10-19 16:00:01	2026-10-19 16:00:01
+3046	839	505	5	43.11	2026-10-19 16:00:01	2026-10-19 16:00:01
+3047	839	327	7	12.11	2026-10-19 16:00:01	2026-10-19 16:00:01
+3048	840	142	8	32.03	2026-10-19 16:00:01	2026-10-19 16:00:01
+3049	840	45	1	100.91	2026-10-19 16:00:01	2026-10-19 16:00:01
+3050	840	631	6	35.04	2026-10-19 16:00:01	2026-10-19 16:00:01
+3051	840	771	1	104.34	2026-10-19 16:00:01	2026-10-19 16:00:01
+3052	841	601	3	59.81	2026-10-19 16:00:01	2026-10-19 16:00:01
+3053	841	757	6	59.41	2026-10-19 16:00:01	2026-10-19 16:00:01
+3054	841	727	2	51.72	2026-10-19 16:00:01	2026-10-19 16:00:01
+3055	841	564	8	17.72	2026-10-19 16:00:01	2026-10-19 16:00:01
+3056	842	679	1	107.57	2026-10-19 16:00:01	2026-10-19 16:00:01
+3057	842	927	6	120.93	2026-10-19 16:00:01	2026-10-19 16:00:01
+3058	842	252	5	119.37	2026-10-19 16:00:01	2026-10-19 16:00:01
+3059	842	571	4	23.89	2026-10-19 16:00:01	2026-10-19 16:00:01
+3060	842	910	1	41.81	2026-10-19 16:00:01	2026-10-19 16:00:01
+3061	842	702	7	44.77	2026-10-19 16:00:01	2026-10-19 16:00:01
+3062	843	936	4	141.85	2026-10-19 16:00:01	2026-10-19 16:00:01
+3063	843	621	7	92.74	2026-10-19 16:00:01	2026-10-19 16:00:01
+3064	843	237	8	68.01	2026-10-19 16:00:01	2026-10-19 16:00:01
+3065	844	278	8	103.51	2026-10-19 16:00:01	2026-10-19 16:00:01
+3066	844	884	3	68.00	2026-10-19 16:00:01	2026-10-19 16:00:01
+3067	844	974	1	52.32	2026-10-19 16:00:01	2026-10-19 16:00:01
+3068	844	773	1	42.11	2026-10-19 16:00:01	2026-10-19 16:00:01
+3069	844	329	6	42.12	2026-10-19 16:00:01	2026-10-19 16:00:01
+3070	844	270	4	126.00	2026-10-19 16:00:01	2026-10-19 16:00:01
+3071	845	869	2	31.21	2026-10-19 16:00:01	2026-10-19 16:00:01
+3072	845	87	8	133.68	2026-10-19 16:00:01	2026-10-19 16:00:01
+3073	845	489	8	101.17	2026-10-19 16:00:01	2026-10-19 16:00:01
+3074	845	826	3	16.86	2026-10-19 16:00:01	2026-10-19 16:00:01
+3075	845	631	3	35.04	2026-10-19 16:00:01	2026-10-19 16:00:01
+3076	845	94	3	68.09	2026-10-19 16:00:01	2026-10-19 16:00:01
+3077	846	399	5	141.97	2026-10-19 16:00:01	2026-10-19 16:00:01
+3078	847	53	6	135.26	2026-10-19 16:00:01	2026-10-19 16:00:01
+3079	847	344	7	129.19	2026-10-19 16:00:01	2026-10-19 16:00:01
+3080	848	921	1	120.68	2026-10-19 16:00:01	2026-10-19 16:00:01
+3081	848	556	7	15.74	2026-10-19 16:00:01	2026-10-19 16:00:01
+3082	848	460	4	94.68	2026-10-19 16:00:01	2026-10-19 16:00:01
+3083	848	304	8	8.87	2026-10-19 16:00:01	2026-10-19 16:00:01
+3084	848	324	5	94.68	2026-10-19 16:00:01	2026-10-19 16:00:01
+3085	848	257	5	90.83	2026-10-19 16:00:01	2026-10-19 16:00:01
+3086	849	993	5	12.87	2026-10-19 16:00:01	2026-10-19 16:00:01
+3087	849	660	5	135.97	2026-10-19 16:00:01	2026-10-19 16:00:01
+3088	849	930	8	55.31	2026-10-19 16:00:01	2026-10-19 16:00:01
+3089	849	489	3	101.17	2026-10-19 16:00:01	2026-10-19 16:00:01
+3090	850	199	3	19.61	2026-10-19 16:00:01	2026-10-19 16:00:01
+3091	850	562	3	38.58	2026-10-19 16:00:01	2026-10-19 16:00:01
+3092	850	245	7	90.29	2026-10-19 16:00:01	2026-10-19 16:00:01
+3093	850	962	3	104.42	2026-10-19 16:00:01	2026-10-19 16:00:01
+3094	851	627	8	122.18	2026-10-19 16:00:01	2026-10-19 16:00:01
+3095	851	196	1	47.98	2026-10-19 16:00:02	2026-10-19 16:00:02
+3096	852	378	1	18.60	2026-10-19 16:00:02	2026-10-19 16:00:02
+3097	852	214	7	77.76	2026-10-19 16:00:02	2026-10-19 16:00:02
+3098	852	617	2	32.34	2026-10-19 16:00:02	2026-10-19 16:00:02
+3099	853	927	4	120.93	2026-10-19 16:00:02	2026-10-19 16:00:02
+3100	853	571	1	23.89	2026-10-19 16:00:02	2026-10-19 16:00:02
+3101	853	508	3	58.44	2026-10-19 16:00:02	2026-10-19 16:00:02
+3102	853	289	6	64.28	2026-10-19 16:00:02	2026-10-19 16:00:02
+3103	853	656	2	35.95	2026-10-19 16:00:02	2026-10-19 16:00:02
+3104	853	149	4	33.43	2026-10-19 16:00:02	2026-10-19 16:00:02
+3105	854	445	2	132.18	2026-10-19 16:00:02	2026-10-19 16:00:02
+3106	854	439	1	63.58	2026-10-19 16:00:02	2026-10-19 16:00:02
+3107	854	144	4	77.20	2026-10-19 16:00:02	2026-10-19 16:00:02
+3108	854	610	5	44.51	2026-10-19 16:00:02	2026-10-19 16:00:02
+3109	854	46	1	103.35	2026-10-19 16:00:02	2026-10-19 16:00:02
+3110	855	131	5	100.39	2026-10-19 16:00:02	2026-10-19 16:00:02
+3111	855	738	5	144.31	2026-10-19 16:00:02	2026-10-19 16:00:02
+3112	855	268	6	67.26	2026-10-19 16:00:02	2026-10-19 16:00:02
+3113	855	543	6	70.41	2026-10-19 16:00:02	2026-10-19 16:00:02
+3114	855	664	8	101.54	2026-10-19 16:00:02	2026-10-19 16:00:02
+3115	855	661	3	146.05	2026-10-19 16:00:02	2026-10-19 16:00:02
+3116	856	187	7	147.70	2026-10-19 16:00:02	2026-10-19 16:00:02
+3117	856	799	3	86.37	2026-10-19 16:00:02	2026-10-19 16:00:02
+3118	856	343	1	44.32	2026-10-19 16:00:02	2026-10-19 16:00:02
+3119	857	818	2	16.66	2026-10-19 16:00:02	2026-10-19 16:00:02
+3120	857	977	5	118.81	2026-10-19 16:00:02	2026-10-19 16:00:02
+3121	857	108	5	8.55	2026-10-19 16:00:02	2026-10-19 16:00:02
+3122	857	291	3	59.19	2026-10-19 16:00:02	2026-10-19 16:00:02
+3123	857	787	3	99.61	2026-10-19 16:00:02	2026-10-19 16:00:02
+3124	857	803	2	101.91	2026-10-19 16:00:02	2026-10-19 16:00:02
+3125	858	166	1	56.88	2026-10-19 16:00:02	2026-10-19 16:00:02
+3126	859	140	2	148.16	2026-10-19 16:00:02	2026-10-19 16:00:02
+3127	859	950	1	43.98	2026-10-19 16:00:02	2026-10-19 16:00:02
+3128	859	523	4	50.64	2026-10-19 16:00:02	2026-10-19 16:00:02
+3129	859	487	1	28.22	2026-10-19 16:00:02	2026-10-19 16:00:02
+3130	859	283	7	34.85	2026-10-19 16:00:02	2026-10-19 16:00:02
+3131	860	535	3	96.53	2026-10-19 16:00:02	2026-10-19 16:00:02
+3132	860	859	2	49.92	2026-10-19 16:00:02	2026-10-19 16:00:02
+3133	860	446	3	108.64	2026-10-19 16:00:02	2026-10-19 16:00:02
+3134	860	345	8	124.16	2026-10-19 16:00:02	2026-10-19 16:00:02
+3135	860	261	2	97.10	2026-10-19 16:00:02	2026-10-19 16:00:02
+3136	861	764	4	36.59	2026-10-19 16:00:02	2026-10-19 16:00:02
+3137	861	634	4	47.52	2026-10-19 16:00:02	2026-10-19 16:00:02
+3138	861	776	4	39.52	2026-10-19 16:00:02	2026-10-19 16:00:02
+3139	862	810	4	32.38	2026-10-19 16:00:02	2026-10-19 16:00:02
+3140	862	109	5	54.26	2026-10-19 16:00:02	2026-10-19 16:00:02
+3141	862	556	4	15.74	2026-10-19 16:00:02	2026-10-19 16:00:02
+3142	862	958	2	24.10	2026-10-19 16:00:02	2026-10-19 16:00:02
+3143	862	853	4	74.21	2026-10-19 16:00:02	2026-10-19 16:00:02
+3144	862	485	5	115.15	2026-10-19 16:00:02	2026-10-19 16:00:02
+3145	863	907	8	45.62	2026-10-19 16:00:02	2026-10-19 16:00:02
+3146	863	463	6	78.16	2026-10-19 16:00:02	2026-10-19 16:00:02
+3147	863	124	1	98.91	2026-10-19 16:00:02	2026-10-19 16:00:02
+3148	864	932	2	28.25	2026-10-19 16:00:02	2026-10-19 16:00:02
+3149	864	746	5	27.36	2026-10-19 16:00:02	2026-10-19 16:00:02
+3150	864	593	5	58.92	2026-10-19 16:00:02	2026-10-19 16:00:02
+3151	864	241	3	28.52	2026-10-19 16:00:03	2026-10-19 16:00:03
+3152	864	177	6	25.52	2026-10-19 16:00:03	2026-10-19 16:00:03
+3153	865	238	7	25.62	2026-10-19 16:00:03	2026-10-19 16:00:03
+3154	865	300	3	33.69	2026-10-19 16:00:03	2026-10-19 16:00:03
+3155	865	985	7	37.30	2026-10-19 16:00:03	2026-10-19 16:00:03
+3156	865	292	5	125.50	2026-10-19 16:00:03	2026-10-19 16:00:03
+3157	865	545	7	17.95	2026-10-19 16:00:03	2026-10-19 16:00:03
+3158	866	637	5	58.43	2026-10-19 16:00:03	2026-10-19 16:00:03
+3159	867	241	1	28.52	2026-10-19 16:00:03	2026-10-19 16:00:03
+3160	867	657	4	100.40	2026-10-19 16:00:03	2026-10-19 16:00:03
+3161	867	97	1	81.27	2026-10-19 16:00:03	2026-10-19 16:00:03
+3162	867	319	8	8.15	2026-10-19 16:00:03	2026-10-19 16:00:03
+3163	867	404	2	133.13	2026-10-19 16:00:03	2026-10-19 16:00:03
+3164	867	425	7	141.44	2026-10-19 16:00:03	2026-10-19 16:00:03
+3165	868	824	4	18.83	2026-10-19 16:00:03	2026-10-19 16:00:03
+3166	868	115	3	92.43	2026-10-19 16:00:03	2026-10-19 16:00:03
+3167	869	906	6	140.30	2026-10-19 16:00:03	2026-10-19 16:00:03
+3168	869	760	2	20.92	2026-10-19 16:00:03	2026-10-19 16:00:03
+3169	869	525	6	99.58	2026-10-19 16:00:03	2026-10-19 16:00:03
+3170	869	475	7	71.62	2026-10-19 16:00:03	2026-10-19 16:00:03
+3171	869	470	2	73.91	2026-10-19 16:00:03	2026-10-19 16:00:03
+3172	869	547	1	37.80	2026-10-19 16:00:03	2026-10-19 16:00:03
+3173	870	515	4	116.50	2026-10-19 16:00:03	2026-10-19 16:00:03
+3174	870	405	2	110.72	2026-10-19 16:00:03	2026-10-19 16:00:03
+3175	870	285	2	144.22	2026-10-19 16:00:03	2026-10-19 16:00:03
+3176	871	455	4	88.34	2026-10-19 16:00:03	2026-10-19 16:00:03
+3177	871	728	3	32.72	2026-10-19 16:00:03	2026-10-19 16:00:03
+3178	871	890	4	66.34	2026-10-19 16:00:03	2026-10-19 16:00:03
+3179	872	765	3	23.11	2026-10-19 16:00:03	2026-10-19 16:00:03
+3180	872	597	2	63.32	2026-10-19 16:00:03	2026-10-19 16:00:03
+3181	872	873	1	101.06	2026-10-19 16:00:03	2026-10-19 16:00:03
+3182	872	686	4	124.35	2026-10-19 16:00:03	2026-10-19 16:00:03
+3183	873	819	7	41.13	2026-10-19 16:00:03	2026-10-19 16:00:03
+3184	873	960	3	121.09	2026-10-19 16:00:03	2026-10-19 16:00:03
+3185	873	885	6	147.25	2026-10-19 16:00:03	2026-10-19 16:00:03
+3186	874	501	3	35.07	2026-10-19 16:00:03	2026-10-19 16:00:03
+3187	874	324	2	94.68	2026-10-19 16:00:03	2026-10-19 16:00:03
+3188	874	361	7	40.95	2026-10-19 16:00:03	2026-10-19 16:00:03
+3189	875	639	1	135.59	2026-10-19 16:00:03	2026-10-19 16:00:03
+3190	875	387	6	47.37	2026-10-19 16:00:03	2026-10-19 16:00:03
+3191	875	161	5	91.18	2026-10-19 16:00:03	2026-10-19 16:00:03
+3192	875	630	5	144.86	2026-10-19 16:00:03	2026-10-19 16:00:03
+3193	875	353	4	70.61	2026-10-19 16:00:03	2026-10-19 16:00:03
+3194	876	341	7	45.77	2026-10-19 16:00:03	2026-10-19 16:00:03
+3195	876	236	4	11.02	2026-10-19 16:00:03	2026-10-19 16:00:03
+3196	876	772	6	62.03	2026-10-19 16:00:03	2026-10-19 16:00:03
+3197	876	158	8	40.89	2026-10-19 16:00:03	2026-10-19 16:00:03
+3198	877	178	5	34.13	2026-10-19 16:00:03	2026-10-19 16:00:03
+3199	877	188	3	80.28	2026-10-19 16:00:03	2026-10-19 16:00:03
+3200	877	689	4	47.29	2026-10-19 16:00:03	2026-10-19 16:00:03
+3201	877	970	8	15.64	2026-10-19 16:00:03	2026-10-19 16:00:03
+3202	877	489	8	101.17	2026-10-19 16:00:03	2026-10-19 16:00:03
+3203	878	455	2	88.34	2026-10-19 16:00:03	2026-10-19 16:00:03
+3204	878	602	2	80.84	2026-10-19 16:00:04	2026-10-19 16:00:04
+3205	878	128	1	107.44	2026-10-19 16:00:04	2026-10-19 16:00:04
+3206	878	569	3	47.79	2026-10-19 16:00:04	2026-10-19 16:00:04
+3207	879	692	3	89.78	2026-10-19 16:00:04	2026-10-19 16:00:04
+3208	879	414	5	12.41	2026-10-19 16:00:04	2026-10-19 16:00:04
+3209	879	335	7	149.30	2026-10-19 16:00:04	2026-10-19 16:00:04
+3210	879	688	8	127.13	2026-10-19 16:00:04	2026-10-19 16:00:04
+3211	879	898	4	140.88	2026-10-19 16:00:04	2026-10-19 16:00:04
+3212	879	303	2	77.35	2026-10-19 16:00:04	2026-10-19 16:00:04
+3213	880	725	3	40.82	2026-10-19 16:00:04	2026-10-19 16:00:04
+3214	880	584	4	132.77	2026-10-19 16:00:04	2026-10-19 16:00:04
+3215	880	617	2	32.34	2026-10-19 16:00:04	2026-10-19 16:00:04
+3216	880	806	8	89.07	2026-10-19 16:00:04	2026-10-19 16:00:04
+3217	880	826	1	16.86	2026-10-19 16:00:04	2026-10-19 16:00:04
+3218	881	434	4	20.46	2026-10-19 16:00:04	2026-10-19 16:00:04
+3219	882	58	5	53.33	2026-10-19 16:00:04	2026-10-19 16:00:04
+3220	883	917	7	41.56	2026-10-19 16:00:04	2026-10-19 16:00:04
+3221	883	494	5	11.97	2026-10-19 16:00:04	2026-10-19 16:00:04
+3222	884	611	4	20.97	2026-10-19 16:00:04	2026-10-19 16:00:04
+3223	884	658	3	120.91	2026-10-19 16:00:04	2026-10-19 16:00:04
+3224	884	137	8	109.43	2026-10-19 16:00:04	2026-10-19 16:00:04
+3225	884	490	5	140.01	2026-10-19 16:00:04	2026-10-19 16:00:04
+3226	885	499	6	79.87	2026-10-19 16:00:04	2026-10-19 16:00:04
+3227	885	754	8	66.86	2026-10-19 16:00:04	2026-10-19 16:00:04
+3228	885	945	6	35.73	2026-10-19 16:00:04	2026-10-19 16:00:04
+3229	885	135	1	51.43	2026-10-19 16:00:04	2026-10-19 16:00:04
+3230	885	169	8	146.65	2026-10-19 16:00:04	2026-10-19 16:00:04
+3231	886	460	8	94.68	2026-10-19 16:00:04	2026-10-19 16:00:04
+3232	886	750	4	23.96	2026-10-19 16:00:04	2026-10-19 16:00:04
+3233	887	735	7	25.21	2026-10-19 16:00:04	2026-10-19 16:00:04
+3234	887	875	5	109.76	2026-10-19 16:00:04	2026-10-19 16:00:04
+3235	887	266	5	68.52	2026-10-19 16:00:04	2026-10-19 16:00:04
+3236	887	410	6	26.99	2026-10-19 16:00:04	2026-10-19 16:00:04
+3237	887	354	6	6.47	2026-10-19 16:00:04	2026-10-19 16:00:04
+3238	887	420	3	16.28	2026-10-19 16:00:04	2026-10-19 16:00:04
+3239	888	469	5	68.89	2026-10-19 16:00:04	2026-10-19 16:00:04
+3240	888	245	3	90.29	2026-10-19 16:00:04	2026-10-19 16:00:04
+3241	888	667	6	41.22	2026-10-19 16:00:04	2026-10-19 16:00:04
+3242	888	508	5	58.44	2026-10-19 16:00:04	2026-10-19 16:00:04
+3243	888	408	6	54.08	2026-10-19 16:00:04	2026-10-19 16:00:04
+3244	889	672	5	7.22	2026-10-19 16:00:04	2026-10-19 16:00:04
+3245	889	477	6	127.78	2026-10-19 16:00:04	2026-10-19 16:00:04
+3246	889	120	2	33.87	2026-10-19 16:00:04	2026-10-19 16:00:04
+3247	889	900	8	15.81	2026-10-19 16:00:04	2026-10-19 16:00:04
+3248	889	132	8	64.93	2026-10-19 16:00:04	2026-10-19 16:00:04
+3249	889	831	1	41.64	2026-10-19 16:00:04	2026-10-19 16:00:04
+3250	890	63	4	28.87	2026-10-19 16:00:04	2026-10-19 16:00:04
+3251	890	955	4	34.29	2026-10-19 16:00:04	2026-10-19 16:00:04
+3252	890	355	8	94.85	2026-10-19 16:00:04	2026-10-19 16:00:04
+3253	891	202	7	20.63	2026-10-19 16:00:04	2026-10-19 16:00:04
+3254	891	491	2	85.12	2026-10-19 16:00:04	2026-10-19 16:00:04
+3255	891	288	4	104.48	2026-10-19 16:00:04	2026-10-19 16:00:04
+3256	892	992	5	85.28	2026-10-19 16:00:04	2026-10-19 16:00:04
+3257	892	803	3	101.91	2026-10-19 16:00:04	2026-10-19 16:00:04
+3258	893	200	4	141.52	2026-10-19 16:00:04	2026-10-19 16:00:04
+3259	893	474	4	13.08	2026-10-19 16:00:04	2026-10-19 16:00:04
+3260	894	359	6	19.53	2026-10-19 16:00:04	2026-10-19 16:00:04
+3261	895	562	7	38.58	2026-10-19 16:00:05	2026-10-19 16:00:05
+3262	895	110	7	50.66	2026-10-19 16:00:05	2026-10-19 16:00:05
+3263	895	168	7	141.97	2026-10-19 16:00:05	2026-10-19 16:00:05
+3264	896	536	8	98.69	2026-10-19 16:00:05	2026-10-19 16:00:05
+3265	896	777	7	119.09	2026-10-19 16:00:05	2026-10-19 16:00:05
+3266	897	783	2	73.98	2026-10-19 16:00:05	2026-10-19 16:00:05
+3267	897	865	1	77.74	2026-10-19 16:00:05	2026-10-19 16:00:05
+3268	897	199	2	19.61	2026-10-19 16:00:05	2026-10-19 16:00:05
+3269	898	737	7	21.78	2026-10-19 16:00:05	2026-10-19 16:00:05
+3270	898	534	1	87.98	2026-10-19 16:00:05	2026-10-19 16:00:05
+3271	898	774	2	100.07	2026-10-19 16:00:05	2026-10-19 16:00:05
+3272	898	349	6	8.33	2026-10-19 16:00:05	2026-10-19 16:00:05
+3273	898	306	5	121.21	2026-10-19 16:00:05	2026-10-19 16:00:05
+3274	899	232	8	118.19	2026-10-19 16:00:05	2026-10-19 16:00:05
+3275	899	422	4	43.32	2026-10-19 16:00:05	2026-10-19 16:00:05
+3276	899	449	3	28.23	2026-10-19 16:00:05	2026-10-19 16:00:05
+3277	899	704	4	26.31	2026-10-19 16:00:05	2026-10-19 16:00:05
+3278	899	989	6	32.64	2026-10-19 16:00:05	2026-10-19 16:00:05
+3279	899	995	2	34.41	2026-10-19 16:00:05	2026-10-19 16:00:05
+3280	900	965	3	116.96	2026-10-19 16:00:05	2026-10-19 16:00:05
+3281	900	745	1	6.27	2026-10-19 16:00:05	2026-10-19 16:00:05
+3282	900	349	5	8.33	2026-10-19 16:00:05	2026-10-19 16:00:05
+3283	900	284	5	68.56	2026-10-19 16:00:05	2026-10-19 16:00:05
+3284	900	970	2	15.64	2026-10-19 16:00:05	2026-10-19 16:00:05
+3285	901	868	5	113.86	2026-10-19 16:00:05	2026-10-19 16:00:05
+3286	902	791	3	141.56	2026-10-19 16:00:05	2026-10-19 16:00:05
+3287	902	783	3	73.98	2026-10-19 16:00:05	2026-10-19 16:00:05
+3288	902	461	2	141.22	2026-10-19 16:00:05	2026-10-19 16:00:05
+3289	902	79	5	79.86	2026-10-19 16:00:05	2026-10-19 16:00:05
+3290	902	214	5	77.76	2026-10-19 16:00:05	2026-10-19 16:00:05
+3291	903	700	8	127.35	2026-10-19 16:00:05	2026-10-19 16:00:05
+3292	903	108	8	8.55	2026-10-19 16:00:05	2026-10-19 16:00:05
+3293	903	74	5	129.17	2026-10-19 16:00:05	2026-10-19 16:00:05
+3294	903	195	6	117.57	2026-10-19 16:00:05	2026-10-19 16:00:05
+3295	903	630	8	144.86	2026-10-19 16:00:05	2026-10-19 16:00:05
+3296	903	192	8	20.30	2026-10-19 16:00:05	2026-10-19 16:00:05
+3297	904	231	7	66.60	2026-10-19 16:00:05	2026-10-19 16:00:05
+3298	904	713	6	141.10	2026-10-19 16:00:05	2026-10-19 16:00:05
+3299	904	167	2	10.02	2026-10-19 16:00:05	2026-10-19 16:00:05
+3300	904	718	7	80.34	2026-10-19 16:00:05	2026-10-19 16:00:05
+3301	904	668	7	15.80	2026-10-19 16:00:05	2026-10-19 16:00:05
+3302	904	887	4	93.79	2026-10-19 16:00:05	2026-10-19 16:00:05
+3303	905	136	7	83.83	2026-10-19 16:00:05	2026-10-19 16:00:05
+3304	906	249	6	72.66	2026-10-19 16:00:05	2026-10-19 16:00:05
+3305	906	267	1	7.96	2026-10-19 16:00:05	2026-10-19 16:00:05
+3306	906	53	8	135.26	2026-10-19 16:00:05	2026-10-19 16:00:05
+3307	906	804	3	56.13	2026-10-19 16:00:05	2026-10-19 16:00:05
+3308	907	196	5	47.98	2026-10-19 16:00:05	2026-10-19 16:00:05
+3309	907	761	5	8.80	2026-10-19 16:00:05	2026-10-19 16:00:05
+3310	907	655	3	68.59	2026-10-19 16:00:05	2026-10-19 16:00:05
+3311	907	613	5	19.19	2026-10-19 16:00:05	2026-10-19 16:00:05
+3312	907	645	8	61.95	2026-10-19 16:00:05	2026-10-19 16:00:05
+3313	907	175	7	132.27	2026-10-19 16:00:05	2026-10-19 16:00:05
+3314	908	271	2	26.48	2026-10-19 16:00:05	2026-10-19 16:00:05
+3315	908	596	3	123.79	2026-10-19 16:00:05	2026-10-19 16:00:05
+3316	908	448	5	99.16	2026-10-19 16:00:05	2026-10-19 16:00:05
+3317	909	137	3	109.43	2026-10-19 16:00:05	2026-10-19 16:00:05
+3318	909	227	6	105.82	2026-10-19 16:00:05	2026-10-19 16:00:05
+3319	909	87	8	133.68	2026-10-19 16:00:06	2026-10-19 16:00:06
+3320	910	441	7	103.22	2026-10-19 16:00:06	2026-10-19 16:00:06
+3321	910	536	1	98.69	2026-10-19 16:00:06	2026-10-19 16:00:06
+3322	910	591	4	83.31	2026-10-19 16:00:06	2026-10-19 16:00:06
+3323	911	579	2	79.51	2026-10-19 16:00:06	2026-10-19 16:00:06
+3324	912	335	2	149.30	2026-10-19 16:00:06	2026-10-19 16:00:06
+3325	912	742	6	143.65	2026-10-19 16:00:06	2026-10-19 16:00:06
+3326	913	572	2	53.33	2026-10-19 16:00:06	2026-10-19 16:00:06
+3327	913	544	3	133.41	2026-10-19 16:00:06	2026-10-19 16:00:06
+3328	913	751	4	103.06	2026-10-19 16:00:06	2026-10-19 16:00:06
+3329	913	840	3	35.36	2026-10-19 16:00:06	2026-10-19 16:00:06
+3330	914	852	4	92.28	2026-10-19 16:00:06	2026-10-19 16:00:06
+3331	914	860	5	56.88	2026-10-19 16:00:06	2026-10-19 16:00:06
+3332	914	786	7	148.24	2026-10-19 16:00:06	2026-10-19 16:00:06
+3333	914	168	6	141.97	2026-10-19 16:00:06	2026-10-19 16:00:06
+3334	914	548	3	120.70	2026-10-19 16:00:06	2026-10-19 16:00:06
+3335	914	177	6	25.52	2026-10-19 16:00:06	2026-10-19 16:00:06
+3336	915	295	5	118.17	2026-10-19 16:00:06	2026-10-19 16:00:06
+3337	915	604	5	96.21	2026-10-19 16:00:06	2026-10-19 16:00:06
+3338	915	908	8	75.61	2026-10-19 16:00:06	2026-10-19 16:00:06
+3339	915	563	3	21.56	2026-10-19 16:00:06	2026-10-19 16:00:06
+3340	916	79	6	79.86	2026-10-19 16:00:06	2026-10-19 16:00:06
+3341	916	123	1	149.26	2026-10-19 16:00:06	2026-10-19 16:00:06
+3342	916	381	1	100.28	2026-10-19 16:00:06	2026-10-19 16:00:06
+3343	917	59	7	114.79	2026-10-19 16:00:06	2026-10-19 16:00:06
+3344	917	318	3	96.35	2026-10-19 16:00:06	2026-10-19 16:00:06
+3345	917	902	1	26.18	2026-10-19 16:00:06	2026-10-19 16:00:06
+3346	917	514	3	96.48	2026-10-19 16:00:06	2026-10-19 16:00:06
+3347	918	394	1	128.43	2026-10-19 16:00:06	2026-10-19 16:00:06
+3348	918	939	7	7.52	2026-10-19 16:00:06	2026-10-19 16:00:06
+3349	918	573	4	117.51	2026-10-19 16:00:06	2026-10-19 16:00:06
+3350	918	968	8	21.75	2026-10-19 16:00:06	2026-10-19 16:00:06
+3351	918	185	1	63.00	2026-10-19 16:00:06	2026-10-19 16:00:06
+3352	918	434	7	20.46	2026-10-19 16:00:06	2026-10-19 16:00:06
+3353	919	999	6	137.14	2026-10-19 16:00:06	2026-10-19 16:00:06
+3354	919	626	6	77.49	2026-10-19 16:00:06	2026-10-19 16:00:06
+3355	919	179	2	54.77	2026-10-19 16:00:06	2026-10-19 16:00:06
+3356	919	61	2	62.47	2026-10-19 16:00:06	2026-10-19 16:00:06
+3357	919	169	6	146.65	2026-10-19 16:00:06	2026-10-19 16:00:06
+3358	919	748	4	104.47	2026-10-19 16:00:06	2026-10-19 16:00:06
+3359	920	285	5	144.22	2026-10-19 16:00:06	2026-10-19 16:00:06
+3360	920	143	1	93.43	2026-10-19 16:00:06	2026-10-19 16:00:06
+3361	920	934	3	143.55	2026-10-19 16:00:06	2026-10-19 16:00:06
+3362	920	404	6	133.13	2026-10-19 16:00:06	2026-10-19 16:00:06
+3363	920	958	5	24.10	2026-10-19 16:00:06	2026-10-19 16:00:06
+3364	920	268	6	67.26	2026-10-19 16:00:06	2026-10-19 16:00:06
+3365	921	865	7	77.74	2026-10-19 16:00:06	2026-10-19 16:00:06
+3366	921	352	4	76.73	2026-10-19 16:00:06	2026-10-19 16:00:06
+3367	921	489	5	101.17	2026-10-19 16:00:06	2026-10-19 16:00:06
+3368	921	275	8	117.32	2026-10-19 16:00:06	2026-10-19 16:00:06
+3369	921	531	5	69.28	2026-10-19 16:00:06	2026-10-19 16:00:06
+3370	921	184	3	69.16	2026-10-19 16:00:06	2026-10-19 16:00:06
+3371	922	731	6	19.28	2026-10-19 16:00:06	2026-10-19 16:00:06
+3372	922	293	6	80.52	2026-10-19 16:00:06	2026-10-19 16:00:06
+3373	922	943	8	82.48	2026-10-19 16:00:06	2026-10-19 16:00:06
+3374	923	377	7	114.27	2026-10-19 16:00:06	2026-10-19 16:00:06
+3375	923	713	4	141.10	2026-10-19 16:00:07	2026-10-19 16:00:07
+3376	923	746	7	27.36	2026-10-19 16:00:07	2026-10-19 16:00:07
+3377	923	497	2	140.21	2026-10-19 16:00:07	2026-10-19 16:00:07
+3378	924	377	5	114.27	2026-10-19 16:00:07	2026-10-19 16:00:07
+3379	924	215	4	77.75	2026-10-19 16:00:07	2026-10-19 16:00:07
+3380	924	827	4	27.33	2026-10-19 16:00:07	2026-10-19 16:00:07
+3381	924	81	1	88.93	2026-10-19 16:00:07	2026-10-19 16:00:07
+3382	924	516	4	97.86	2026-10-19 16:00:07	2026-10-19 16:00:07
+3383	925	340	4	73.02	2026-10-19 16:00:07	2026-10-19 16:00:07
+3384	925	73	5	129.32	2026-10-19 16:00:07	2026-10-19 16:00:07
+3385	926	927	8	120.93	2026-10-19 16:00:07	2026-10-19 16:00:07
+3386	926	576	7	54.39	2026-10-19 16:00:07	2026-10-19 16:00:07
+3387	927	822	7	128.40	2026-10-19 16:00:07	2026-10-19 16:00:07
+3388	927	87	6	133.68	2026-10-19 16:00:07	2026-10-19 16:00:07
+3389	927	416	6	108.40	2026-10-19 16:00:07	2026-10-19 16:00:07
+3390	928	244	6	120.69	2026-10-19 16:00:07	2026-10-19 16:00:07
+3391	928	730	1	66.63	2026-10-19 16:00:07	2026-10-19 16:00:07
+3392	928	350	3	94.95	2026-10-19 16:00:07	2026-10-19 16:00:07
+3393	928	246	3	22.35	2026-10-19 16:00:07	2026-10-19 16:00:07
+3394	928	868	4	113.86	2026-10-19 16:00:07	2026-10-19 16:00:07
+3395	928	593	5	58.92	2026-10-19 16:00:07	2026-10-19 16:00:07
+3396	929	483	4	134.61	2026-10-19 16:00:07	2026-10-19 16:00:07
+3397	929	444	4	42.97	2026-10-19 16:00:07	2026-10-19 16:00:07
+3398	929	435	6	78.82	2026-10-19 16:00:07	2026-10-19 16:00:07
+3399	929	256	5	135.59	2026-10-19 16:00:07	2026-10-19 16:00:07
+3400	929	396	6	12.41	2026-10-19 16:00:07	2026-10-19 16:00:07
+3401	929	824	5	18.83	2026-10-19 16:00:07	2026-10-19 16:00:07
+3402	930	654	7	32.25	2026-10-19 16:00:07	2026-10-19 16:00:07
+3403	930	644	7	17.34	2026-10-19 16:00:07	2026-10-19 16:00:07
+3404	930	881	5	144.20	2026-10-19 16:00:07	2026-10-19 16:00:07
+3405	930	773	3	42.11	2026-10-19 16:00:07	2026-10-19 16:00:07
+3406	931	414	5	12.41	2026-10-19 16:00:07	2026-10-19 16:00:07
+3407	931	537	6	122.19	2026-10-19 16:00:07	2026-10-19 16:00:07
+3408	931	842	7	32.35	2026-10-19 16:00:07	2026-10-19 16:00:07
+3409	931	124	6	98.91	2026-10-19 16:00:07	2026-10-19 16:00:07
+3410	931	506	6	139.08	2026-10-19 16:00:07	2026-10-19 16:00:07
+3411	931	291	3	59.19	2026-10-19 16:00:07	2026-10-19 16:00:07
+3412	932	468	5	129.72	2026-10-19 16:00:07	2026-10-19 16:00:07
+3413	932	167	5	10.02	2026-10-19 16:00:07	2026-10-19 16:00:07
+3414	932	91	5	20.88	2026-10-19 16:00:07	2026-10-19 16:00:07
+3415	932	757	3	59.41	2026-10-19 16:00:07	2026-10-19 16:00:07
+3416	933	297	5	28.69	2026-10-19 16:00:07	2026-10-19 16:00:07
+3417	933	375	4	41.11	2026-10-19 16:00:07	2026-10-19 16:00:07
+3418	933	522	5	140.22	2026-10-19 16:00:07	2026-10-19 16:00:07
+3419	934	359	5	19.53	2026-10-19 16:00:07	2026-10-19 16:00:07
+3420	934	878	4	34.93	2026-10-19 16:00:07	2026-10-19 16:00:07
+3421	934	896	8	54.48	2026-10-19 16:00:07	2026-10-19 16:00:07
+3422	934	730	8	66.63	2026-10-19 16:00:07	2026-10-19 16:00:07
+3423	934	116	4	61.74	2026-10-19 16:00:07	2026-10-19 16:00:07
+3424	934	253	8	61.78	2026-10-19 16:00:07	2026-10-19 16:00:07
+3425	935	502	3	85.08	2026-10-19 16:00:07	2026-10-19 16:00:07
+3426	935	323	7	14.21	2026-10-19 16:00:07	2026-10-19 16:00:07
+3427	935	655	8	68.59	2026-10-19 16:00:07	2026-10-19 16:00:07
+3428	935	836	7	75.35	2026-10-19 16:00:07	2026-10-19 16:00:07
+3429	935	299	5	121.64	2026-10-19 16:00:07	2026-10-19 16:00:07
+3430	935	612	5	38.11	2026-10-19 16:00:08	2026-10-19 16:00:08
+3431	936	330	1	58.14	2026-10-19 16:00:08	2026-10-19 16:00:08
+3432	936	914	4	26.89	2026-10-19 16:00:08	2026-10-19 16:00:08
+3433	936	145	4	54.03	2026-10-19 16:00:08	2026-10-19 16:00:08
+3434	936	832	4	102.87	2026-10-19 16:00:08	2026-10-19 16:00:08
+3435	937	504	6	127.29	2026-10-19 16:00:08	2026-10-19 16:00:08
+3436	937	697	6	127.56	2026-10-19 16:00:08	2026-10-19 16:00:08
+3437	937	631	8	35.04	2026-10-19 16:00:08	2026-10-19 16:00:08
+3438	938	916	1	143.54	2026-10-19 16:00:08	2026-10-19 16:00:08
+3439	939	912	7	92.43	2026-10-19 16:00:08	2026-10-19 16:00:08
+3440	940	729	4	42.49	2026-10-19 16:00:08	2026-10-19 16:00:08
+3441	940	358	7	54.03	2026-10-19 16:00:08	2026-10-19 16:00:08
+3442	940	516	3	97.86	2026-10-19 16:00:08	2026-10-19 16:00:08
+3443	940	762	8	104.08	2026-10-19 16:00:08	2026-10-19 16:00:08
+3444	940	579	7	79.51	2026-10-19 16:00:08	2026-10-19 16:00:08
+3445	941	362	4	6.49	2026-10-19 16:00:08	2026-10-19 16:00:08
+3446	941	238	3	25.62	2026-10-19 16:00:08	2026-10-19 16:00:08
+3447	941	528	1	36.91	2026-10-19 16:00:08	2026-10-19 16:00:08
+3448	941	62	4	71.53	2026-10-19 16:00:08	2026-10-19 16:00:08
+3449	941	480	8	110.59	2026-10-19 16:00:08	2026-10-19 16:00:08
+3450	942	617	1	32.34	2026-10-19 16:00:08	2026-10-19 16:00:08
+3451	942	862	4	147.22	2026-10-19 16:00:08	2026-10-19 16:00:08
+3452	942	956	3	120.40	2026-10-19 16:00:08	2026-10-19 16:00:08
+3453	942	689	4	47.29	2026-10-19 16:00:08	2026-10-19 16:00:08
+3454	942	135	7	51.43	2026-10-19 16:00:08	2026-10-19 16:00:08
+3455	942	555	7	65.68	2026-10-19 16:00:08	2026-10-19 16:00:08
+3456	943	93	8	19.71	2026-10-19 16:00:08	2026-10-19 16:00:08
+3457	944	805	3	98.87	2026-10-19 16:00:08	2026-10-19 16:00:08
+3458	944	954	7	104.18	2026-10-19 16:00:08	2026-10-19 16:00:08
+3459	944	947	2	108.23	2026-10-19 16:00:08	2026-10-19 16:00:08
+3460	945	630	2	144.86	2026-10-19 16:00:08	2026-10-19 16:00:08
+3461	945	315	1	127.72	2026-10-19 16:00:08	2026-10-19 16:00:08
+3462	946	450	4	12.63	2026-10-19 16:00:08	2026-10-19 16:00:08
+3463	946	702	1	44.77	2026-10-19 16:00:08	2026-10-19 16:00:08
+3464	946	928	1	98.75	2026-10-19 16:00:08	2026-10-19 16:00:08
+3465	946	319	4	8.15	2026-10-19 16:00:08	2026-10-19 16:00:08
+3466	946	677	4	104.55	2026-10-19 16:00:08	2026-10-19 16:00:08
+3467	946	748	6	104.47	2026-10-19 16:00:08	2026-10-19 16:00:08
+3468	947	996	2	101.79	2026-10-19 16:00:08	2026-10-19 16:00:08
+3469	947	208	3	60.72	2026-10-19 16:00:08	2026-10-19 16:00:08
+3470	947	305	1	91.22	2026-10-19 16:00:08	2026-10-19 16:00:08
+3471	947	208	1	60.72	2026-10-19 16:00:08	2026-10-19 16:00:08
+3472	947	783	1	73.98	2026-10-19 16:00:08	2026-10-19 16:00:08
+3473	948	791	8	141.56	2026-10-19 16:00:08	2026-10-19 16:00:08
+3474	948	336	4	104.81	2026-10-19 16:00:08	2026-10-19 16:00:08
+3475	948	465	8	37.65	2026-10-19 16:00:08	2026-10-19 16:00:08
+3476	948	914	4	26.89	2026-10-19 16:00:08	2026-10-19 16:00:08
+3477	948	193	4	61.82	2026-10-19 16:00:08	2026-10-19 16:00:08
+3478	949	945	5	35.73	2026-10-19 16:00:08	2026-10-19 16:00:08
+3479	949	420	7	16.28	2026-10-19 16:00:08	2026-10-19 16:00:08
+3480	949	349	3	8.33	2026-10-19 16:00:08	2026-10-19 16:00:08
+3481	949	782	3	78.63	2026-10-19 16:00:08	2026-10-19 16:00:08
+3482	950	554	8	100.82	2026-10-19 16:00:08	2026-10-19 16:00:08
+3483	950	651	6	75.47	2026-10-19 16:00:08	2026-10-19 16:00:08
+3484	950	623	4	135.33	2026-10-19 16:00:08	2026-10-19 16:00:08
+3485	950	269	6	108.40	2026-10-19 16:00:08	2026-10-19 16:00:08
+3486	951	155	1	21.24	2026-10-19 16:00:08	2026-10-19 16:00:08
+3487	951	453	6	100.94	2026-10-19 16:00:08	2026-10-19 16:00:08
+3488	951	973	2	114.98	2026-10-19 16:00:08	2026-10-19 16:00:08
+3489	951	785	1	48.21	2026-10-19 16:00:08	2026-10-19 16:00:08
+3490	951	979	1	141.12	2026-10-19 16:00:08	2026-10-19 16:00:08
+3491	951	319	1	8.15	2026-10-19 16:00:08	2026-10-19 16:00:08
+3492	952	465	5	37.65	2026-10-19 16:00:08	2026-10-19 16:00:08
+3493	953	298	3	7.88	2026-10-19 16:00:08	2026-10-19 16:00:08
+3494	953	626	8	77.49	2026-10-19 16:00:08	2026-10-19 16:00:08
+3495	954	230	4	108.46	2026-10-19 16:00:08	2026-10-19 16:00:08
+3496	954	591	4	83.31	2026-10-19 16:00:08	2026-10-19 16:00:08
+3497	954	484	4	116.80	2026-10-19 16:00:08	2026-10-19 16:00:08
+3498	954	103	3	107.64	2026-10-19 16:00:08	2026-10-19 16:00:08
+3499	955	703	1	68.65	2026-10-19 16:00:08	2026-10-19 16:00:08
+3500	955	386	2	106.88	2026-10-19 16:00:08	2026-10-19 16:00:08
+3501	955	545	1	17.95	2026-10-19 16:00:09	2026-10-19 16:00:09
+3502	955	789	6	37.83	2026-10-19 16:00:09	2026-10-19 16:00:09
+3503	955	711	7	117.67	2026-10-19 16:00:09	2026-10-19 16:00:09
+3504	955	314	1	35.70	2026-10-19 16:00:09	2026-10-19 16:00:09
+3505	956	967	4	42.94	2026-10-19 16:00:09	2026-10-19 16:00:09
+3506	956	314	7	35.70	2026-10-19 16:00:09	2026-10-19 16:00:09
+3507	957	380	4	47.32	2026-10-19 16:00:09	2026-10-19 16:00:09
+3508	957	753	8	140.58	2026-10-19 16:00:09	2026-10-19 16:00:09
+3509	957	415	1	70.28	2026-10-19 16:00:09	2026-10-19 16:00:09
+3510	957	726	6	65.44	2026-10-19 16:00:09	2026-10-19 16:00:09
+3511	957	256	6	135.59	2026-10-19 16:00:09	2026-10-19 16:00:09
+3512	958	132	3	64.93	2026-10-19 16:00:09	2026-10-19 16:00:09
+3513	958	958	2	24.10	2026-10-19 16:00:09	2026-10-19 16:00:09
+3514	958	783	6	73.98	2026-10-19 16:00:09	2026-10-19 16:00:09
+3515	959	947	8	108.23	2026-10-19 16:00:09	2026-10-19 16:00:09
+3516	959	734	6	144.03	2026-10-19 16:00:09	2026-10-19 16:00:09
+3517	960	968	8	21.75	2026-10-19 16:00:09	2026-10-19 16:00:09
+3518	960	183	7	90.47	2026-10-19 16:00:09	2026-10-19 16:00:09
+3519	960	841	7	72.09	2026-10-19 16:00:09	2026-10-19 16:00:09
+3520	961	881	6	144.20	2026-10-19 16:00:09	2026-10-19 16:00:09
+3521	961	299	3	121.64	2026-10-19 16:00:09	2026-10-19 16:00:09
+3522	961	93	3	19.71	2026-10-19 16:00:09	2026-10-19 16:00:09
+3523	962	820	4	65.34	2026-10-19 16:00:09	2026-10-19 16:00:09
+3524	962	420	4	16.28	2026-10-19 16:00:09	2026-10-19 16:00:09
+3525	962	653	1	26.45	2026-10-19 16:00:09	2026-10-19 16:00:09
+3526	962	517	7	103.84	2026-10-19 16:00:09	2026-10-19 16:00:09
+3527	962	949	5	26.59	2026-10-19 16:00:09	2026-10-19 16:00:09
+3528	962	113	4	68.86	2026-10-19 16:00:09	2026-10-19 16:00:09
+3529	963	367	4	126.04	2026-10-19 16:00:09	2026-10-19 16:00:09
+3530	963	420	4	16.28	2026-10-19 16:00:09	2026-10-19 16:00:09
+3531	963	820	2	65.34	2026-10-19 16:00:09	2026-10-19 16:00:09
+3532	964	563	7	21.56	2026-10-19 16:00:09	2026-10-19 16:00:09
+3533	965	109	8	54.26	2026-10-19 16:00:09	2026-10-19 16:00:09
+3534	965	244	1	120.69	2026-10-19 16:00:09	2026-10-19 16:00:09
+3535	966	96	7	68.08	2026-10-19 16:00:09	2026-10-19 16:00:09
+3536	966	140	6	148.16	2026-10-19 16:00:09	2026-10-19 16:00:09
+3537	967	535	5	96.53	2026-10-19 16:00:09	2026-10-19 16:00:09
+3538	967	893	7	10.00	2026-10-19 16:00:09	2026-10-19 16:00:09
+3539	967	869	4	31.21	2026-10-19 16:00:09	2026-10-19 16:00:09
+3540	968	209	8	41.59	2026-10-19 16:00:09	2026-10-19 16:00:09
+3541	968	244	5	120.69	2026-10-19 16:00:09	2026-10-19 16:00:09
+3542	968	930	5	55.31	2026-10-19 16:00:09	2026-10-19 16:00:09
+3543	968	903	8	119.89	2026-10-19 16:00:09	2026-10-19 16:00:09
+3544	968	170	4	5.25	2026-10-19 16:00:09	2026-10-19 16:00:09
+3545	968	275	1	117.32	2026-10-19 16:00:09	2026-10-19 16:00:09
+3546	969	508	5	58.44	2026-10-19 16:00:09	2026-10-19 16:00:09
+3547	969	509	6	27.22	2026-10-19 16:00:09	2026-10-19 16:00:09
+3548	969	234	5	15.06	2026-10-19 16:00:09	2026-10-19 16:00:09
+3549	969	72	4	76.77	2026-10-19 16:00:09	2026-10-19 16:00:09
+3550	969	862	2	147.22	2026-10-19 16:00:09	2026-10-19 16:00:09
+3551	969	627	4	122.18	2026-10-19 16:00:09	2026-10-19 16:00:09
+3552	970	76	8	98.78	2026-10-19 16:00:09	2026-10-19 16:00:09
+3553	970	167	7	10.02	2026-10-19 16:00:09	2026-10-19 16:00:09
+3554	970	930	7	55.31	2026-10-19 16:00:09	2026-10-19 16:00:09
+3555	971	145	5	54.03	2026-10-19 16:00:09	2026-10-19 16:00:09
+3556	971	503	8	119.84	2026-10-19 16:00:09	2026-10-19 16:00:09
+3557	971	259	4	141.21	2026-10-19 16:00:09	2026-10-19 16:00:09
+3558	971	511	8	58.33	2026-10-19 16:00:10	2026-10-19 16:00:10
+3559	971	532	4	99.87	2026-10-19 16:00:10	2026-10-19 16:00:10
+3560	971	771	5	104.34	2026-10-19 16:00:10	2026-10-19 16:00:10
+3561	972	577	8	66.36	2026-10-19 16:00:10	2026-10-19 16:00:10
+3562	972	150	4	134.02	2026-10-19 16:00:10	2026-10-19 16:00:10
+3563	972	824	4	18.83	2026-10-19 16:00:10	2026-10-19 16:00:10
+3564	972	141	6	97.03	2026-10-19 16:00:10	2026-10-19 16:00:10
+3565	972	709	2	87.77	2026-10-19 16:00:10	2026-10-19 16:00:10
+3566	973	295	7	118.17	2026-10-19 16:00:10	2026-10-19 16:00:10
+3567	974	499	7	79.87	2026-10-19 16:00:10	2026-10-19 16:00:10
+3568	974	102	2	118.72	2026-10-19 16:00:10	2026-10-19 16:00:10
+3569	974	720	4	72.75	2026-10-19 16:00:10	2026-10-19 16:00:10
+3570	974	590	3	140.82	2026-10-19 16:00:10	2026-10-19 16:00:10
+3571	974	463	1	78.16	2026-10-19 16:00:10	2026-10-19 16:00:10
+3572	974	670	7	146.90	2026-10-19 16:00:10	2026-10-19 16:00:10
+3573	975	109	1	54.26	2026-10-19 16:00:10	2026-10-19 16:00:10
+3574	975	670	6	146.90	2026-10-19 16:00:10	2026-10-19 16:00:10
+3575	975	938	2	99.08	2026-10-19 16:00:10	2026-10-19 16:00:10
+3576	975	169	7	146.65	2026-10-19 16:00:10	2026-10-19 16:00:10
+3577	975	170	4	5.25	2026-10-19 16:00:10	2026-10-19 16:00:10
+3578	975	702	8	44.77	2026-10-19 16:00:10	2026-10-19 16:00:10
+3579	976	527	7	117.23	2026-10-19 16:00:10	2026-10-19 16:00:10
+3580	976	618	5	143.59	2026-10-19 16:00:10	2026-10-19 16:00:10
+3581	976	419	5	67.09	2026-10-19 16:00:10	2026-10-19 16:00:10
+3582	976	439	4	63.58	2026-10-19 16:00:10	2026-10-19 16:00:10
+3583	977	884	4	68.00	2026-10-19 16:00:10	2026-10-19 16:00:10
+3584	977	916	6	143.54	2026-10-19 16:00:10	2026-10-19 16:00:10
+3585	978	116	8	61.74	2026-10-19 16:00:10	2026-10-19 16:00:10
+3586	978	168	8	141.97	2026-10-19 16:00:10	2026-10-19 16:00:10
+3587	979	737	4	21.78	2026-10-19 16:00:10	2026-10-19 16:00:10
+3588	980	525	1	99.58	2026-10-19 16:00:10	2026-10-19 16:00:10
+3589	980	616	7	84.09	2026-10-19 16:00:10	2026-10-19 16:00:10
+3590	980	483	2	134.61	2026-10-19 16:00:10	2026-10-19 16:00:10
+3591	981	395	1	61.56	2026-10-19 16:00:10	2026-10-19 16:00:10
+3592	981	502	5	85.08	2026-10-19 16:00:10	2026-10-19 16:00:10
+3593	981	883	8	93.79	2026-10-19 16:00:10	2026-10-19 16:00:10
+3594	981	644	5	17.34	2026-10-19 16:00:10	2026-10-19 16:00:10
+3595	981	45	1	100.91	2026-10-19 16:00:10	2026-10-19 16:00:10
+3596	982	87	7	133.68	2026-10-19 16:00:10	2026-10-19 16:00:10
+3597	982	646	1	132.76	2026-10-19 16:00:10	2026-10-19 16:00:10
+3598	983	519	5	114.25	2026-10-19 16:00:10	2026-10-19 16:00:10
+3599	983	109	1	54.26	2026-10-19 16:00:10	2026-10-19 16:00:10
+3600	983	241	3	28.52	2026-10-19 16:00:10	2026-10-19 16:00:10
+3601	983	610	3	44.51	2026-10-19 16:00:10	2026-10-19 16:00:10
+3602	984	53	7	135.26	2026-10-19 16:00:10	2026-10-19 16:00:10
+3603	984	138	4	56.71	2026-10-19 16:00:10	2026-10-19 16:00:10
+3604	984	258	5	93.02	2026-10-19 16:00:10	2026-10-19 16:00:10
+3605	984	707	5	35.88	2026-10-19 16:00:10	2026-10-19 16:00:10
+3606	984	783	6	73.98	2026-10-19 16:00:10	2026-10-19 16:00:10
+3607	985	57	6	44.78	2026-10-19 16:00:10	2026-10-19 16:00:10
+3608	985	923	8	54.92	2026-10-19 16:00:10	2026-10-19 16:00:10
+3609	986	622	1	26.25	2026-10-19 16:00:10	2026-10-19 16:00:10
+3610	986	684	6	77.74	2026-10-19 16:00:10	2026-10-19 16:00:10
+3611	986	931	5	81.16	2026-10-19 16:00:10	2026-10-19 16:00:10
+3612	986	401	1	36.52	2026-10-19 16:00:10	2026-10-19 16:00:10
+3613	986	636	6	33.76	2026-10-19 16:00:11	2026-10-19 16:00:11
+3614	986	575	7	30.15	2026-10-19 16:00:11	2026-10-19 16:00:11
+3615	987	65	2	51.99	2026-10-19 16:00:11	2026-10-19 16:00:11
+3616	988	82	6	28.80	2026-10-19 16:00:11	2026-10-19 16:00:11
+3617	988	743	3	59.27	2026-10-19 16:00:11	2026-10-19 16:00:11
+3618	988	160	3	142.84	2026-10-19 16:00:11	2026-10-19 16:00:11
+3619	988	272	2	24.17	2026-10-19 16:00:11	2026-10-19 16:00:11
+3620	988	918	4	36.52	2026-10-19 16:00:11	2026-10-19 16:00:11
+3621	989	228	2	131.38	2026-10-19 16:00:11	2026-10-19 16:00:11
+3622	989	353	1	70.61	2026-10-19 16:00:11	2026-10-19 16:00:11
+3623	989	395	8	61.56	2026-10-19 16:00:11	2026-10-19 16:00:11
+3624	990	910	2	41.81	2026-10-19 16:00:11	2026-10-19 16:00:11
+3625	990	202	5	20.63	2026-10-19 16:00:11	2026-10-19 16:00:11
+3626	990	281	2	88.72	2026-10-19 16:00:11	2026-10-19 16:00:11
+3627	990	402	1	149.31	2026-10-19 16:00:11	2026-10-19 16:00:11
+3628	990	930	1	55.31	2026-10-19 16:00:11	2026-10-19 16:00:11
+3629	991	887	3	93.79	2026-10-19 16:00:11	2026-10-19 16:00:11
+3630	991	873	6	101.06	2026-10-19 16:00:11	2026-10-19 16:00:11
+3631	992	112	4	85.93	2026-10-19 16:00:11	2026-10-19 16:00:11
+3632	993	662	5	96.98	2026-10-19 16:00:11	2026-10-19 16:00:11
+3633	993	761	3	8.80	2026-10-19 16:00:11	2026-10-19 16:00:11
+3634	993	774	5	100.07	2026-10-19 16:00:11	2026-10-19 16:00:11
+3635	994	306	3	121.21	2026-10-19 16:00:11	2026-10-19 16:00:11
+3636	994	950	7	43.98	2026-10-19 16:00:11	2026-10-19 16:00:11
+3637	994	95	2	140.71	2026-10-19 16:00:11	2026-10-19 16:00:11
+3638	994	906	8	140.30	2026-10-19 16:00:11	2026-10-19 16:00:11
+3639	994	108	1	8.55	2026-10-19 16:00:11	2026-10-19 16:00:11
+3640	994	941	2	72.83	2026-10-19 16:00:11	2026-10-19 16:00:11
+3641	995	706	7	103.70	2026-10-19 16:00:11	2026-10-19 16:00:11
+3642	995	316	8	38.75	2026-10-19 16:00:11	2026-10-19 16:00:11
+3643	995	273	3	76.33	2026-10-19 16:00:11	2026-10-19 16:00:11
+3644	995	82	6	28.80	2026-10-19 16:00:11	2026-10-19 16:00:11
+3645	995	804	7	56.13	2026-10-19 16:00:11	2026-10-19 16:00:11
+3646	995	261	1	97.10	2026-10-19 16:00:11	2026-10-19 16:00:11
+3647	996	245	1	90.29	2026-10-19 16:00:11	2026-10-19 16:00:11
+3648	996	728	8	32.72	2026-10-19 16:00:11	2026-10-19 16:00:11
+3649	996	983	3	34.04	2026-10-19 16:00:11	2026-10-19 16:00:11
+3650	996	993	5	12.87	2026-10-19 16:00:11	2026-10-19 16:00:11
+3651	996	930	8	55.31	2026-10-19 16:00:11	2026-10-19 16:00:11
+3652	996	556	6	15.74	2026-10-19 16:00:11	2026-10-19 16:00:11
+3653	997	604	6	96.21	2026-10-19 16:00:11	2026-10-19 16:00:11
+3654	998	220	5	55.54	2026-10-19 16:00:11	2026-10-19 16:00:11
+3655	998	373	5	28.50	2026-10-19 16:00:11	2026-10-19 16:00:11
+3656	998	270	5	126.00	2026-10-19 16:00:11	2026-10-19 16:00:11
+3657	998	746	6	27.36	2026-10-19 16:00:11	2026-10-19 16:00:11
+3658	999	108	8	8.55	2026-10-19 16:00:11	2026-10-19 16:00:11
+3659	999	213	4	7.38	2026-10-19 16:00:11	2026-10-19 16:00:11
+3660	999	969	2	71.89	2026-10-19 16:00:11	2026-10-19 16:00:11
+3661	999	63	6	28.87	2026-10-19 16:00:11	2026-10-19 16:00:11
+3662	999	99	5	60.50	2026-10-19 16:00:11	2026-10-19 16:00:11
+3663	999	669	4	35.68	2026-10-19 16:00:11	2026-10-19 16:00:11
+3664	1000	554	5	100.82	2026-10-19 16:00:11	2026-10-19 16:00:11
+3665	1000	122	5	60.00	2026-10-19 16:00:11	2026-10-19 16:00:11
+3666	1000	538	6	111.01	2026-10-19 16:00:11	2026-10-19 16:00:11
+3667	1000	588	8	69.83	2026-10-19 16:00:11	2026-10-19 16:00:11
+3668	1000	751	2	103.06	2026-10-19 16:00:11	2026-10-19 16:00:11
 \.
 
 
 --
--- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.failed_jobs (id, uuid, connection, queue, payload, exception, failed_at) FROM stdin;
@@ -675,7 +4221,7 @@ COPY public.failed_jobs (id, uuid, connection, queue, payload, exception, failed
 
 
 --
--- Data for Name: job_batches; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: job_batches; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed_job_ids, options, cancelled_at, created_at, finished_at) FROM stdin;
@@ -683,7 +4229,7 @@ COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed
 
 
 --
--- Data for Name: jobs; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: jobs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
@@ -691,193 +4237,2043 @@ COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, creat
 
 
 --
--- Data for Name: laboratorios; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: laboratorios; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.laboratorios (id, nombre, pais, direccion, telefono, email, created_at, updated_at) FROM stdin;
-4	Pfizer	Estados Unidos	\N	\N	contacto@pfizer.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-5	Bayer	Alemania	\N	\N	contacto@bayer.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-6	Roche	Suiza	\N	\N	contacto@roche.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-7	Novartis	Suiza	\N	\N	contacto@novartis.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-8	Sanofi	Francia	\N	\N	contacto@sanofi.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-9	Johnson & Johnson	Estados Unidos	\N	\N	contacto@jnj.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-10	AstraZeneca	Reino Unido	\N	\N	contacto@astrazeneca.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-11	GlaxoSmithKline	Reino Unido	\N	\N	contacto@gsk.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-12	Abbott Laboratories	Estados Unidos	\N	\N	contacto@abbott.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-13	Genfar	Colombia	\N	\N	contacto@genfar.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-14	MK (Tecnoquímicas)	Colombia	\N	\N	contacto@tecnoquimicas.com	2026-10-18 21:30:06	2026-10-18 21:30:06
-15	Laboratorios Bagó	Argentina	\N	\N	contacto@bago.com	2026-10-18 21:30:06	2026-10-18 21:30:06
+1	Pfizer	Estados Unidos	\N	\N	contacto@pfizer.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+2	Bayer	Alemania	\N	\N	contacto@bayer.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+3	Roche	Suiza	\N	\N	contacto@roche.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+4	Novartis	Suiza	\N	\N	contacto@novartis.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+5	Sanofi	Francia	\N	\N	contacto@sanofi.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+6	Johnson & Johnson	Estados Unidos	\N	\N	contacto@jnj.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+7	AstraZeneca	Reino Unido	\N	\N	contacto@astrazeneca.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+8	GlaxoSmithKline	Reino Unido	\N	\N	contacto@gsk.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+9	Abbott Laboratories	Estados Unidos	\N	\N	contacto@abbott.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+10	Genfar	Colombia	\N	\N	contacto@genfar.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+11	MK (Tecnoquímicas)	Colombia	\N	\N	contacto@tecnoquimicas.com	2026-10-19 15:58:40	2026-10-19 15:58:40
+12	Laboratorios Bagó	Argentina	\N	\N	contacto@bago.com	2026-10-19 15:58:40	2026-10-19 15:58:40
 \.
 
 
 --
--- Data for Name: lotes; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: lotes; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.lotes (id, medicamento_id, numero_lote, fecha_vencimiento, cantidad_stock, created_at, updated_at) FROM stdin;
-9	4	LOT-00003	2026-11-08	1	2026-10-18 21:30:06	2026-10-18 21:30:06
-41	12	LOT-00035	2026-11-09	13	2026-10-18 21:30:06	2026-10-18 21:30:07
-10	4	LOT-00004	2026-08-12	6	2026-10-18 21:30:06	2026-10-18 21:30:06
-14	5	LOT-00008	2026-06-01	6	2026-10-18 21:30:06	2026-10-18 21:30:06
-18	6	LOT-00012	2026-08-18	5	2026-10-18 21:30:06	2026-10-18 21:30:06
-22	7	LOT-00016	2026-09-23	14	2026-10-18 21:30:06	2026-10-18 21:30:06
-26	8	LOT-00020	2026-05-05	12	2026-10-18 21:30:06	2026-10-18 21:30:06
-27	9	LOT-00021	2027-04-18	70	2026-10-18 21:30:06	2026-10-18 21:30:06
-28	9	LOT-00022	2028-02-18	91	2026-10-18 21:30:06	2026-10-18 21:30:06
-30	9	LOT-00024	2026-05-06	16	2026-10-18 21:30:06	2026-10-18 21:30:06
-33	10	LOT-00027	2026-11-04	25	2026-10-18 21:30:06	2026-10-18 21:30:06
-34	10	LOT-00028	2026-09-28	20	2026-10-18 21:30:06	2026-10-18 21:30:06
-35	11	LOT-00029	2027-06-18	123	2026-10-18 21:30:06	2026-10-18 21:30:06
-36	11	LOT-00030	2027-11-18	110	2026-10-18 21:30:06	2026-10-18 21:30:06
-37	11	LOT-00031	2026-11-11	16	2026-10-18 21:30:06	2026-10-18 21:30:06
-38	11	LOT-00032	2026-10-16	17	2026-10-18 21:30:06	2026-10-18 21:30:06
-42	12	LOT-00036	2026-09-24	13	2026-10-18 21:30:06	2026-10-18 21:30:06
-44	13	LOT-00038	2027-02-18	144	2026-10-18 21:30:06	2026-10-18 21:30:06
-45	13	LOT-00039	2026-10-28	26	2026-10-18 21:30:06	2026-10-18 21:30:06
-46	13	LOT-00040	2026-06-20	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-50	14	LOT-00044	2026-05-25	11	2026-10-18 21:30:06	2026-10-18 21:30:06
-53	15	LOT-00047	2026-10-30	7	2026-10-18 21:30:06	2026-10-18 21:30:06
-54	15	LOT-00048	2026-08-07	16	2026-10-18 21:30:06	2026-10-18 21:30:06
-56	16	LOT-00050	2027-10-18	92	2026-10-18 21:30:06	2026-10-18 21:30:06
-57	16	LOT-00051	2026-10-27	14	2026-10-18 21:30:06	2026-10-18 21:30:06
-58	16	LOT-00052	2026-06-04	17	2026-10-18 21:30:06	2026-10-18 21:30:06
-62	17	LOT-00056	2026-07-30	3	2026-10-18 21:30:06	2026-10-18 21:30:06
-65	18	LOT-00059	2026-10-24	5	2026-10-18 21:30:06	2026-10-18 21:30:06
-66	18	LOT-00060	2026-04-21	14	2026-10-18 21:30:06	2026-10-18 21:30:06
-69	19	LOT-00063	2026-11-03	28	2026-10-18 21:30:06	2026-10-18 21:30:06
-70	19	LOT-00064	2026-07-08	18	2026-10-18 21:30:06	2026-10-18 21:30:06
-71	20	LOT-00065	2027-06-18	40	2026-10-18 21:30:06	2026-10-18 21:30:06
-74	20	LOT-00068	2026-07-28	17	2026-10-18 21:30:06	2026-10-18 21:30:06
-75	21	LOT-00069	2027-11-18	40	2026-10-18 21:30:06	2026-10-18 21:30:06
-77	21	LOT-00071	2026-11-07	22	2026-10-18 21:30:06	2026-10-18 21:30:06
-78	21	LOT-00072	2026-08-31	18	2026-10-18 21:30:06	2026-10-18 21:30:06
-80	22	LOT-00074	2028-01-18	116	2026-10-18 21:30:06	2026-10-18 21:30:06
-81	22	LOT-00075	2026-11-16	29	2026-10-18 21:30:06	2026-10-18 21:30:06
-82	22	LOT-00076	2026-04-21	1	2026-10-18 21:30:06	2026-10-18 21:30:06
-83	23	LOT-00077	2028-04-18	75	2026-10-18 21:30:06	2026-10-18 21:30:06
-84	23	LOT-00078	2027-03-18	117	2026-10-18 21:30:06	2026-10-18 21:30:06
-85	23	LOT-00079	2026-11-05	11	2026-10-18 21:30:06	2026-10-18 21:30:06
-86	23	LOT-00080	2026-05-22	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-87	24	LOT-00081	2027-11-18	38	2026-10-18 21:30:06	2026-10-18 21:30:06
-88	24	LOT-00082	2028-04-18	71	2026-10-18 21:30:06	2026-10-18 21:30:06
-89	24	LOT-00083	2026-11-07	29	2026-10-18 21:30:06	2026-10-18 21:30:06
-90	24	LOT-00084	2026-05-15	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-93	25	LOT-00087	2026-11-10	11	2026-10-18 21:30:06	2026-10-18 21:30:06
-94	25	LOT-00088	2026-05-16	3	2026-10-18 21:30:06	2026-10-18 21:30:06
-8	4	LOT-00002	2027-06-18	1	2026-10-18 21:30:06	2026-10-18 21:30:06
-95	26	LOT-00089	2027-12-18	94	2026-10-18 21:30:06	2026-10-18 21:30:07
-61	17	LOT-00055	2026-11-10	15	2026-10-18 21:30:06	2026-10-18 21:30:07
-43	13	LOT-00037	2028-03-18	67	2026-10-18 21:30:06	2026-10-18 21:30:07
-15	6	LOT-00009	2028-02-18	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-16	6	LOT-00010	2027-05-18	2	2026-10-18 21:30:06	2026-10-18 21:30:06
-24	8	LOT-00018	2027-01-18	1	2026-10-18 21:30:06	2026-10-18 21:30:07
-49	14	LOT-00043	2026-11-08	5	2026-10-18 21:30:06	2026-10-18 21:30:07
-67	19	LOT-00061	2028-03-18	31	2026-10-18 21:30:06	2026-10-18 21:30:07
-19	7	LOT-00013	2028-04-18	3	2026-10-18 21:30:06	2026-10-18 21:30:06
-25	8	LOT-00019	2026-10-26	2	2026-10-18 21:30:06	2026-10-18 21:30:06
-21	7	LOT-00015	2026-11-07	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-23	8	LOT-00017	2027-10-18	2	2026-10-18 21:30:06	2026-10-18 21:30:06
-20	7	LOT-00014	2027-11-18	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-64	18	LOT-00058	2027-06-18	64	2026-10-18 21:30:06	2026-10-18 21:30:07
-11	5	LOT-00005	2027-10-18	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-29	9	LOT-00023	2026-11-13	6	2026-10-18 21:30:06	2026-10-18 21:30:07
-13	5	LOT-00007	2026-10-25	1	2026-10-18 21:30:06	2026-10-18 21:30:07
-76	21	LOT-00070	2027-01-18	136	2026-10-18 21:30:06	2026-10-18 21:30:07
-52	15	LOT-00046	2027-07-18	81	2026-10-18 21:30:06	2026-10-18 21:30:07
-55	16	LOT-00049	2027-12-18	46	2026-10-18 21:30:06	2026-10-18 21:30:07
-47	14	LOT-00041	2027-12-18	53	2026-10-18 21:30:06	2026-10-18 21:30:07
-59	17	LOT-00053	2028-01-18	96	2026-10-18 21:30:06	2026-10-18 21:30:07
-68	19	LOT-00062	2028-01-18	86	2026-10-18 21:30:06	2026-10-18 21:30:07
-63	18	LOT-00057	2027-02-18	135	2026-10-18 21:30:06	2026-10-18 21:30:07
-32	10	LOT-00026	2028-02-18	75	2026-10-18 21:30:06	2026-10-18 21:30:07
-7	4	LOT-00001	2027-03-18	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-17	6	LOT-00011	2026-10-25	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-72	20	LOT-00066	2027-06-18	58	2026-10-18 21:30:06	2026-10-18 21:30:07
-92	25	LOT-00086	2028-03-18	116	2026-10-18 21:30:06	2026-10-18 21:30:07
-12	5	LOT-00006	2028-02-18	0	2026-10-18 21:30:06	2026-10-18 21:30:07
-39	12	LOT-00033	2027-11-18	64	2026-10-18 21:30:06	2026-10-18 21:30:07
-60	17	LOT-00054	2027-07-18	128	2026-10-18 21:30:06	2026-10-18 21:30:07
-48	14	LOT-00042	2027-11-18	76	2026-10-18 21:30:06	2026-10-18 21:30:07
-91	25	LOT-00085	2027-06-18	53	2026-10-18 21:30:06	2026-10-18 21:30:07
-79	22	LOT-00073	2027-04-18	59	2026-10-18 21:30:06	2026-10-18 21:30:07
-40	12	LOT-00034	2027-11-18	46	2026-10-18 21:30:06	2026-10-18 21:30:07
-51	15	LOT-00045	2027-02-18	81	2026-10-18 21:30:06	2026-10-18 21:30:07
-31	10	LOT-00025	2028-03-18	32	2026-10-18 21:30:06	2026-10-18 21:30:07
-73	20	LOT-00067	2026-10-28	1	2026-10-18 21:30:06	2026-10-18 21:30:07
-96	26	LOT-00090	2027-08-18	74	2026-10-18 21:30:06	2026-10-18 21:30:06
-98	26	LOT-00092	2026-06-07	4	2026-10-18 21:30:06	2026-10-18 21:30:06
-99	27	LOT-00093	2028-01-18	143	2026-10-18 21:30:06	2026-10-18 21:30:06
-101	27	LOT-00095	2026-10-22	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-102	27	LOT-00096	2026-07-19	14	2026-10-18 21:30:06	2026-10-18 21:30:06
-104	28	LOT-00098	2027-02-18	51	2026-10-18 21:30:06	2026-10-18 21:30:06
-106	28	LOT-00100	2026-10-06	20	2026-10-18 21:30:06	2026-10-18 21:30:06
-109	29	LOT-00103	2026-10-21	18	2026-10-18 21:30:06	2026-10-18 21:30:06
-110	29	LOT-00104	2026-08-25	7	2026-10-18 21:30:06	2026-10-18 21:30:06
-112	30	LOT-00106	2028-01-18	146	2026-10-18 21:30:06	2026-10-18 21:30:06
-113	30	LOT-00107	2026-11-08	5	2026-10-18 21:30:06	2026-10-18 21:30:06
-114	30	LOT-00108	2026-08-17	2	2026-10-18 21:30:06	2026-10-18 21:30:06
-118	31	LOT-00112	2026-05-03	5	2026-10-18 21:30:06	2026-10-18 21:30:06
-119	32	LOT-00113	2027-05-18	116	2026-10-18 21:30:06	2026-10-18 21:30:06
-121	32	LOT-00115	2026-10-20	28	2026-10-18 21:30:06	2026-10-18 21:30:06
-122	32	LOT-00116	2026-09-25	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-124	33	LOT-00118	2028-03-18	94	2026-10-18 21:30:06	2026-10-18 21:30:06
-126	33	LOT-00120	2026-07-19	1	2026-10-18 21:30:06	2026-10-18 21:30:06
-116	31	LOT-00110	2027-03-18	81	2026-10-18 21:30:06	2026-10-18 21:30:07
-108	29	LOT-00102	2028-03-18	134	2026-10-18 21:30:06	2026-10-18 21:30:07
-111	30	LOT-00105	2028-03-18	89	2026-10-18 21:30:06	2026-10-18 21:30:07
-103	28	LOT-00097	2028-03-18	134	2026-10-18 21:30:06	2026-10-18 21:30:07
-117	31	LOT-00111	2026-11-08	8	2026-10-18 21:30:06	2026-10-18 21:30:07
-105	28	LOT-00099	2026-11-09	18	2026-10-18 21:30:06	2026-10-18 21:30:07
-115	31	LOT-00109	2027-03-18	44	2026-10-18 21:30:06	2026-10-18 21:30:07
-107	29	LOT-00101	2027-02-18	43	2026-10-18 21:30:06	2026-10-18 21:30:07
-125	33	LOT-00119	2026-11-06	7	2026-10-18 21:30:06	2026-10-18 21:30:07
-97	26	LOT-00091	2026-10-20	26	2026-10-18 21:30:06	2026-10-18 21:30:07
-123	33	LOT-00117	2027-06-18	112	2026-10-18 21:30:06	2026-10-18 21:30:07
-120	32	LOT-00114	2027-04-18	68	2026-10-18 21:30:06	2026-10-18 21:30:07
-100	27	LOT-00094	2027-09-18	68	2026-10-18 21:30:06	2026-10-18 21:30:07
+89	89	LOT-000089	2027-12-19	108	2026-10-19 15:58:49	2026-10-19 15:58:49
+51	51	LOT-000051	2028-10-19	38	2026-10-19 15:58:48	2026-10-19 15:59:54
+61	61	LOT-000061	2028-02-19	130	2026-10-19 15:58:48	2026-10-19 16:00:06
+52	52	LOT-000052	2028-10-19	143	2026-10-19 15:58:48	2026-10-19 15:59:32
+46	46	LOT-000046	2028-05-19	0	2026-10-19 15:58:48	2026-10-19 16:00:02
+88	88	LOT-000088	2027-09-19	95	2026-10-19 15:58:49	2026-10-19 15:59:50
+16	16	LOT-000016	2027-08-19	0	2026-10-19 15:58:48	2026-10-19 15:59:12
+54	54	LOT-000054	2028-08-19	69	2026-10-19 15:58:48	2026-10-19 15:58:55
+21	21	LOT-000021	2027-02-19	0	2026-10-19 15:58:48	2026-10-19 15:59:50
+94	94	LOT-000094	2027-05-19	68	2026-10-19 15:58:49	2026-10-19 16:00:01
+57	57	LOT-000057	2027-12-19	86	2026-10-19 15:58:48	2026-10-19 16:00:10
+79	79	LOT-000079	2027-05-19	170	2026-10-19 15:58:49	2026-10-19 16:00:06
+67	67	LOT-000067	2028-04-19	67	2026-10-19 15:58:48	2026-10-19 15:59:59
+81	81	LOT-000081	2028-07-19	175	2026-10-19 15:58:49	2026-10-19 16:00:07
+66	66	LOT-000066	2027-03-19	25	2026-10-19 15:58:48	2026-10-19 15:59:58
+45	45	LOT-000045	2028-05-19	0	2026-10-19 15:58:48	2026-10-19 16:00:10
+48	48	LOT-000048	2027-03-19	0	2026-10-19 15:58:48	2026-10-19 15:58:53
+40	40	LOT-000040	2028-06-19	0	2026-10-19 15:58:48	2026-10-19 15:59:19
+78	78	LOT-000078	2027-02-19	66	2026-10-19 15:58:49	2026-10-19 16:00:00
+70	70	LOT-000070	2028-01-19	106	2026-10-19 15:58:48	2026-10-19 15:59:54
+43	43	LOT-000043	2028-09-19	0	2026-10-19 15:58:48	2026-10-19 15:59:10
+22	22	LOT-000022	2027-05-19	0	2026-10-19 15:58:48	2026-10-19 15:59:18
+26	26	LOT-000026	2028-01-19	0	2026-10-19 15:58:48	2026-10-19 15:59:13
+4	4	LOT-000004	2027-11-19	0	2026-10-19 15:58:48	2026-10-19 16:00:00
+55	55	LOT-000055	2027-09-19	32	2026-10-19 15:58:48	2026-10-19 15:59:21
+47	47	LOT-000047	2027-02-19	0	2026-10-19 15:58:48	2026-10-19 15:59:15
+77	77	LOT-000077	2027-07-19	105	2026-10-19 15:58:49	2026-10-19 16:00:00
+8	8	LOT-000008	2027-04-19	0	2026-10-19 15:58:48	2026-10-19 15:59:11
+60	60	LOT-000060	2027-09-19	123	2026-10-19 15:58:48	2026-10-19 15:59:14
+32	32	LOT-000032	2028-04-19	2	2026-10-19 15:58:48	2026-10-19 15:58:53
+69	69	LOT-000069	2027-02-19	154	2026-10-19 15:58:48	2026-10-19 15:59:30
+12	12	LOT-000012	2027-04-19	0	2026-10-19 15:58:48	2026-10-19 15:58:57
+6	6	LOT-000006	2027-12-19	0	2026-10-19 15:58:48	2026-10-19 15:59:55
+53	53	LOT-000053	2028-09-19	62	2026-10-19 15:58:48	2026-10-19 16:00:10
+93	93	LOT-000093	2027-11-19	92	2026-10-19 15:58:49	2026-10-19 16:00:09
+18	18	LOT-000018	2027-02-19	0	2026-10-19 15:58:48	2026-10-19 15:59:51
+85	85	LOT-000085	2027-09-19	131	2026-10-19 15:58:49	2026-10-19 15:59:29
+13	13	LOT-000013	2028-07-19	0	2026-10-19 15:58:48	2026-10-19 15:59:02
+5	5	LOT-000005	2027-08-19	1	2026-10-19 15:58:48	2026-10-19 15:59:28
+27	27	LOT-000027	2027-08-19	0	2026-10-19 15:58:48	2026-10-19 15:59:14
+62	62	LOT-000062	2027-03-19	158	2026-10-19 15:58:48	2026-10-19 16:00:08
+59	59	LOT-000059	2027-03-19	57	2026-10-19 15:58:48	2026-10-19 16:00:06
+33	33	LOT-000033	2028-05-19	0	2026-10-19 15:58:48	2026-10-19 15:58:54
+56	56	LOT-000056	2027-06-19	105	2026-10-19 15:58:48	2026-10-19 15:59:59
+97	97	LOT-000097	2027-12-19	111	2026-10-19 15:58:49	2026-10-19 16:00:03
+42	42	LOT-000042	2028-09-19	0	2026-10-19 15:58:48	2026-10-19 15:59:11
+30	30	LOT-000030	2027-03-19	0	2026-10-19 15:58:48	2026-10-19 15:58:53
+95	95	LOT-000095	2028-06-19	190	2026-10-19 15:58:49	2026-10-19 16:00:11
+84	84	LOT-000084	2027-03-19	129	2026-10-19 15:58:49	2026-10-19 15:58:54
+31	31	LOT-000031	2027-01-19	0	2026-10-19 15:58:48	2026-10-19 15:58:55
+44	44	LOT-000044	2028-09-19	0	2026-10-19 15:58:48	2026-10-19 15:59:36
+9	9	LOT-000009	2027-06-19	0	2026-10-19 15:58:48	2026-10-19 15:58:55
+34	34	LOT-000034	2028-07-19	0	2026-10-19 15:58:48	2026-10-19 15:58:56
+35	35	LOT-000035	2027-04-19	0	2026-10-19 15:58:48	2026-10-19 15:58:58
+90	90	LOT-000090	2027-07-19	139	2026-10-19 15:58:49	2026-10-19 15:59:58
+72	72	LOT-000072	2027-08-19	22	2026-10-19 15:58:48	2026-10-19 16:00:09
+17	17	LOT-000017	2028-09-19	0	2026-10-19 15:58:48	2026-10-19 15:58:59
+65	65	LOT-000065	2028-08-19	88	2026-10-19 15:58:48	2026-10-19 16:00:11
+50	50	LOT-000050	2028-05-19	0	2026-10-19 15:58:48	2026-10-19 15:59:04
+15	15	LOT-000015	2028-04-19	0	2026-10-19 15:58:48	2026-10-19 15:59:01
+2	2	LOT-000002	2028-10-19	0	2026-10-19 15:58:48	2026-10-19 15:59:24
+29	29	LOT-000029	2028-02-19	0	2026-10-19 15:58:48	2026-10-19 15:59:00
+11	11	LOT-000011	2028-07-19	0	2026-10-19 15:58:48	2026-10-19 15:59:00
+63	63	LOT-000063	2028-02-19	106	2026-10-19 15:58:48	2026-10-19 16:00:11
+19	19	LOT-000019	2028-10-19	0	2026-10-19 15:58:48	2026-10-19 15:59:19
+73	73	LOT-000073	2028-06-19	52	2026-10-19 15:58:49	2026-10-19 16:00:07
+23	23	LOT-000023	2027-03-19	0	2026-10-19 15:58:48	2026-10-19 15:59:40
+75	75	LOT-000075	2027-01-19	143	2026-10-19 15:58:49	2026-10-19 15:59:03
+36	36	LOT-000036	2028-06-19	0	2026-10-19 15:58:48	2026-10-19 15:59:04
+10	10	LOT-000010	2027-06-19	0	2026-10-19 15:58:48	2026-10-19 15:59:11
+39	39	LOT-000039	2028-09-19	0	2026-10-19 15:58:48	2026-10-19 15:59:28
+14	14	LOT-000014	2027-05-19	0	2026-10-19 15:58:48	2026-10-19 15:59:05
+3	3	LOT-000003	2028-02-19	0	2026-10-19 15:58:48	2026-10-19 15:59:46
+86	86	LOT-000086	2028-09-19	184	2026-10-19 15:58:49	2026-10-19 15:59:07
+68	68	LOT-000068	2027-08-19	81	2026-10-19 15:58:48	2026-10-19 15:59:59
+92	92	LOT-000092	2028-01-19	77	2026-10-19 15:58:49	2026-10-19 15:59:23
+24	24	LOT-000024	2028-03-19	0	2026-10-19 15:58:48	2026-10-19 15:59:12
+25	25	LOT-000025	2027-03-19	0	2026-10-19 15:58:48	2026-10-19 15:59:15
+41	41	LOT-000041	2027-05-19	0	2026-10-19 15:58:48	2026-10-19 15:59:16
+82	82	LOT-000082	2027-02-19	141	2026-10-19 15:58:49	2026-10-19 16:00:11
+20	20	LOT-000020	2028-05-19	0	2026-10-19 15:58:48	2026-10-19 15:59:26
+96	96	LOT-000096	2027-04-19	168	2026-10-19 15:58:49	2026-10-19 16:00:09
+80	80	LOT-000080	2027-06-19	173	2026-10-19 15:58:49	2026-10-19 15:59:55
+71	71	LOT-000071	2027-09-19	160	2026-10-19 15:58:48	2026-10-19 15:59:57
+64	64	LOT-000064	2027-12-19	53	2026-10-19 15:58:48	2026-10-19 15:59:35
+83	83	LOT-000083	2028-08-19	152	2026-10-19 15:58:49	2026-10-19 15:59:35
+87	87	LOT-000087	2028-09-19	115	2026-10-19 15:58:49	2026-10-19 16:00:10
+91	91	LOT-000091	2027-08-19	178	2026-10-19 15:58:49	2026-10-19 16:00:07
+76	76	LOT-000076	2027-09-19	77	2026-10-19 15:58:49	2026-10-19 16:00:09
+38	38	LOT-000038	2028-01-19	0	2026-10-19 15:58:48	2026-10-19 15:59:55
+58	58	LOT-000058	2028-03-19	143	2026-10-19 15:58:48	2026-10-19 16:00:04
+186	186	LOT-000186	2028-10-19	53	2026-10-19 15:58:49	2026-10-19 15:58:49
+111	111	LOT-000111	2027-02-19	93	2026-10-19 15:58:49	2026-10-19 15:59:33
+128	128	LOT-000128	2027-08-19	105	2026-10-19 15:58:49	2026-10-19 16:00:04
+167	167	LOT-000167	2027-08-19	122	2026-10-19 15:58:49	2026-10-19 16:00:09
+155	155	LOT-000155	2028-03-19	121	2026-10-19 15:58:49	2026-10-19 16:00:08
+103	103	LOT-000103	2028-03-19	117	2026-10-19 15:58:49	2026-10-19 16:00:08
+129	129	LOT-000129	2028-09-19	65	2026-10-19 15:58:49	2026-10-19 16:00:00
+166	166	LOT-000166	2028-10-19	135	2026-10-19 15:58:49	2026-10-19 16:00:02
+108	108	LOT-000108	2028-05-19	140	2026-10-19 15:58:49	2026-10-19 16:00:11
+123	123	LOT-000123	2027-10-19	46	2026-10-19 15:58:49	2026-10-19 16:00:06
+174	174	LOT-000174	2027-02-19	95	2026-10-19 15:58:49	2026-10-19 15:58:55
+118	118	LOT-000118	2027-08-19	178	2026-10-19 15:58:49	2026-10-19 15:59:16
+157	157	LOT-000157	2027-10-19	170	2026-10-19 15:58:49	2026-10-19 15:59:25
+161	161	LOT-000161	2028-07-19	140	2026-10-19 15:58:49	2026-10-19 16:00:03
+187	187	LOT-000187	2027-05-19	154	2026-10-19 15:58:49	2026-10-19 16:00:02
+164	164	LOT-000164	2027-04-19	59	2026-10-19 15:58:49	2026-10-19 15:59:34
+159	159	LOT-000159	2027-07-19	11	2026-10-19 15:58:49	2026-10-19 16:00:00
+179	179	LOT-000179	2028-01-19	46	2026-10-19 15:58:49	2026-10-19 16:00:06
+135	135	LOT-000135	2027-11-19	128	2026-10-19 15:58:49	2026-10-19 16:00:08
+141	141	LOT-000141	2027-05-19	98	2026-10-19 15:58:49	2026-10-19 16:00:10
+153	153	LOT-000153	2028-03-19	165	2026-10-19 15:58:49	2026-10-19 15:59:59
+151	151	LOT-000151	2028-10-19	51	2026-10-19 15:58:49	2026-10-19 15:59:35
+192	192	LOT-000192	2027-06-19	64	2026-10-19 15:58:49	2026-10-19 16:00:05
+133	133	LOT-000133	2028-02-19	147	2026-10-19 15:58:49	2026-10-19 15:59:51
+124	124	LOT-000124	2027-03-19	166	2026-10-19 15:58:49	2026-10-19 16:00:07
+114	114	LOT-000114	2027-05-19	167	2026-10-19 15:58:49	2026-10-19 15:59:54
+152	152	LOT-000152	2027-06-19	54	2026-10-19 15:58:49	2026-10-19 15:59:32
+130	130	LOT-000130	2027-10-19	40	2026-10-19 15:58:49	2026-10-19 15:59:54
+137	137	LOT-000137	2027-10-19	31	2026-10-19 15:58:49	2026-10-19 16:00:05
+189	189	LOT-000189	2027-04-19	100	2026-10-19 15:58:49	2026-10-19 15:59:32
+119	119	LOT-000119	2027-12-19	175	2026-10-19 15:58:49	2026-10-19 15:59:50
+125	125	LOT-000125	2027-07-19	142	2026-10-19 15:58:49	2026-10-19 15:59:22
+158	158	LOT-000158	2027-05-19	142	2026-10-19 15:58:49	2026-10-19 16:00:03
+194	194	LOT-000194	2028-09-19	176	2026-10-19 15:58:49	2026-10-19 15:59:39
+170	170	LOT-000170	2027-03-19	86	2026-10-19 15:58:49	2026-10-19 16:00:10
+191	191	LOT-000191	2027-02-19	117	2026-10-19 15:58:49	2026-10-19 15:59:20
+150	150	LOT-000150	2027-01-19	45	2026-10-19 15:58:49	2026-10-19 16:00:10
+132	132	LOT-000132	2028-08-19	83	2026-10-19 15:58:49	2026-10-19 16:00:09
+105	105	LOT-000105	2028-06-19	170	2026-10-19 15:58:49	2026-10-19 15:59:18
+140	140	LOT-000140	2027-11-19	173	2026-10-19 15:58:49	2026-10-19 16:00:09
+165	165	LOT-000165	2027-05-19	49	2026-10-19 15:58:49	2026-10-19 15:59:58
+180	180	LOT-000180	2027-07-19	81	2026-10-19 15:58:49	2026-10-19 15:59:20
+113	113	LOT-000113	2027-08-19	187	2026-10-19 15:58:49	2026-10-19 16:00:09
+188	188	LOT-000188	2027-07-19	42	2026-10-19 15:58:49	2026-10-19 16:00:03
+98	98	LOT-000098	2027-12-19	64	2026-10-19 15:58:49	2026-10-19 15:59:59
+109	109	LOT-000109	2027-04-19	82	2026-10-19 15:58:49	2026-10-19 16:00:10
+115	115	LOT-000115	2027-11-19	125	2026-10-19 15:58:49	2026-10-19 16:00:03
+182	182	LOT-000182	2027-02-19	43	2026-10-19 15:58:49	2026-10-19 15:59:57
+148	148	LOT-000148	2028-08-19	80	2026-10-19 15:58:49	2026-10-19 15:59:33
+173	173	LOT-000173	2027-04-19	54	2026-10-19 15:58:49	2026-10-19 15:59:51
+162	162	LOT-000162	2028-01-19	189	2026-10-19 15:58:49	2026-10-19 15:59:17
+190	190	LOT-000190	2027-05-19	130	2026-10-19 15:58:49	2026-10-19 15:59:58
+184	184	LOT-000184	2028-02-19	82	2026-10-19 15:58:49	2026-10-19 16:00:06
+168	168	LOT-000168	2027-11-19	115	2026-10-19 15:58:49	2026-10-19 16:00:10
+176	176	LOT-000176	2028-03-19	95	2026-10-19 15:58:49	2026-10-19 15:59:31
+169	169	LOT-000169	2027-06-19	26	2026-10-19 15:58:49	2026-10-19 16:00:10
+116	116	LOT-000116	2028-10-19	39	2026-10-19 15:58:49	2026-10-19 16:00:10
+102	102	LOT-000102	2028-03-19	69	2026-10-19 15:58:49	2026-10-19 16:00:10
+142	142	LOT-000142	2027-01-19	41	2026-10-19 15:58:49	2026-10-19 16:00:01
+136	136	LOT-000136	2028-03-19	65	2026-10-19 15:58:49	2026-10-19 16:00:05
+171	171	LOT-000171	2027-09-19	162	2026-10-19 15:58:49	2026-10-19 15:59:57
+121	121	LOT-000121	2027-06-19	13	2026-10-19 15:58:49	2026-10-19 15:59:51
+122	122	LOT-000122	2027-12-19	65	2026-10-19 15:58:49	2026-10-19 16:00:11
+112	112	LOT-000112	2028-09-19	69	2026-10-19 15:58:49	2026-10-19 16:00:11
+100	100	LOT-000100	2028-08-19	46	2026-10-19 15:58:49	2026-10-19 15:59:13
+143	143	LOT-000143	2028-04-19	171	2026-10-19 15:58:49	2026-10-19 16:00:06
+107	107	LOT-000107	2027-12-19	138	2026-10-19 15:58:49	2026-10-19 15:59:17
+183	183	LOT-000183	2027-08-19	39	2026-10-19 15:58:49	2026-10-19 16:00:09
+138	138	LOT-000138	2027-06-19	138	2026-10-19 15:58:49	2026-10-19 16:00:10
+127	127	LOT-000127	2028-03-19	49	2026-10-19 15:58:49	2026-10-19 15:59:18
+175	175	LOT-000175	2028-02-19	133	2026-10-19 15:58:49	2026-10-19 16:00:05
+193	193	LOT-000193	2028-01-19	56	2026-10-19 15:58:49	2026-10-19 16:00:08
+146	146	LOT-000146	2027-10-19	24	2026-10-19 15:58:49	2026-10-19 15:59:28
+185	185	LOT-000185	2028-10-19	152	2026-10-19 15:58:49	2026-10-19 16:00:06
+117	117	LOT-000117	2027-09-19	24	2026-10-19 15:58:49	2026-10-19 16:00:00
+106	106	LOT-000106	2028-05-19	44	2026-10-19 15:58:49	2026-10-19 15:59:55
+163	163	LOT-000163	2028-08-19	87	2026-10-19 15:58:49	2026-10-19 15:59:56
+178	178	LOT-000178	2027-07-19	26	2026-10-19 15:58:49	2026-10-19 16:00:03
+160	160	LOT-000160	2027-01-19	75	2026-10-19 15:58:49	2026-10-19 16:00:11
+145	145	LOT-000145	2028-03-19	122	2026-10-19 15:58:49	2026-10-19 16:00:09
+104	104	LOT-000104	2027-01-19	99	2026-10-19 15:58:49	2026-10-19 15:59:34
+177	177	LOT-000177	2028-04-19	110	2026-10-19 15:58:49	2026-10-19 16:00:06
+101	101	LOT-000101	2027-04-19	106	2026-10-19 15:58:49	2026-10-19 15:59:53
+156	156	LOT-000156	2028-04-19	51	2026-10-19 15:58:49	2026-10-19 15:59:53
+126	126	LOT-000126	2027-07-19	40	2026-10-19 15:58:49	2026-10-19 15:59:50
+181	181	LOT-000181	2028-03-19	47	2026-10-19 15:58:49	2026-10-19 15:59:53
+110	110	LOT-000110	2027-10-19	65	2026-10-19 15:58:49	2026-10-19 16:00:05
+149	149	LOT-000149	2028-08-19	105	2026-10-19 15:58:49	2026-10-19 16:00:02
+144	144	LOT-000144	2028-07-19	89	2026-10-19 15:58:49	2026-10-19 16:00:02
+120	120	LOT-000120	2028-03-19	105	2026-10-19 15:58:49	2026-10-19 16:00:04
+99	99	LOT-000099	2027-09-19	133	2026-10-19 15:58:49	2026-10-19 16:00:11
+197	197	LOT-000197	2027-12-19	162	2026-10-19 15:58:49	2026-10-19 15:58:49
+206	206	LOT-000206	2027-09-19	91	2026-10-19 15:58:49	2026-10-19 15:58:49
+210	210	LOT-000210	2028-07-19	103	2026-10-19 15:58:49	2026-10-19 15:59:57
+234	234	LOT-000234	2028-04-19	42	2026-10-19 15:58:49	2026-10-19 16:00:09
+270	270	LOT-000270	2027-08-19	35	2026-10-19 15:58:49	2026-10-19 16:00:11
+203	203	LOT-000203	2027-01-19	89	2026-10-19 15:58:49	2026-10-19 15:59:58
+283	283	LOT-000283	2028-03-19	19	2026-10-19 15:58:49	2026-10-19 16:00:02
+245	245	LOT-000245	2027-12-19	13	2026-10-19 15:58:49	2026-10-19 16:00:11
+204	204	LOT-000204	2027-01-19	39	2026-10-19 15:58:49	2026-10-19 15:59:52
+221	221	LOT-000221	2028-10-19	19	2026-10-19 15:58:49	2026-10-19 15:59:50
+199	199	LOT-000199	2028-01-19	104	2026-10-19 15:58:49	2026-10-19 16:00:05
+256	256	LOT-000256	2027-01-19	35	2026-10-19 15:58:49	2026-10-19 16:00:09
+229	229	LOT-000229	2027-01-19	10	2026-10-19 15:58:49	2026-10-19 15:59:59
+238	238	LOT-000238	2027-09-19	123	2026-10-19 15:58:49	2026-10-19 16:00:08
+287	287	LOT-000287	2028-09-19	121	2026-10-19 15:58:49	2026-10-19 15:59:56
+220	220	LOT-000220	2028-06-19	81	2026-10-19 15:58:49	2026-10-19 16:00:11
+236	236	LOT-000236	2028-10-19	128	2026-10-19 15:58:49	2026-10-19 16:00:03
+242	242	LOT-000242	2027-01-19	78	2026-10-19 15:58:49	2026-10-19 15:59:12
+289	289	LOT-000289	2027-12-19	140	2026-10-19 15:58:49	2026-10-19 16:00:02
+201	201	LOT-000201	2028-09-19	186	2026-10-19 15:58:49	2026-10-19 15:59:51
+250	250	LOT-000250	2027-06-19	107	2026-10-19 15:58:49	2026-10-19 15:59:58
+222	222	LOT-000222	2027-09-19	151	2026-10-19 15:58:49	2026-10-19 16:00:00
+214	214	LOT-000214	2028-10-19	33	2026-10-19 15:58:49	2026-10-19 16:00:05
+248	248	LOT-000248	2027-05-19	91	2026-10-19 15:58:49	2026-10-19 15:59:30
+233	233	LOT-000233	2027-01-19	114	2026-10-19 15:58:49	2026-10-19 15:59:51
+273	273	LOT-000273	2028-09-19	53	2026-10-19 15:58:49	2026-10-19 16:00:11
+205	205	LOT-000205	2027-09-19	30	2026-10-19 15:58:49	2026-10-19 15:59:57
+225	225	LOT-000225	2028-08-19	38	2026-10-19 15:58:49	2026-10-19 15:59:55
+208	208	LOT-000208	2028-10-19	118	2026-10-19 15:58:49	2026-10-19 16:00:08
+252	252	LOT-000252	2027-06-19	68	2026-10-19 15:58:49	2026-10-19 16:00:01
+196	196	LOT-000196	2027-07-19	93	2026-10-19 15:58:49	2026-10-19 16:00:05
+263	263	LOT-000263	2028-05-19	113	2026-10-19 15:58:49	2026-10-19 15:59:01
+286	286	LOT-000286	2028-02-19	176	2026-10-19 15:58:49	2026-10-19 15:59:54
+276	276	LOT-000276	2028-03-19	124	2026-10-19 15:58:49	2026-10-19 15:59:54
+258	258	LOT-000258	2028-08-19	148	2026-10-19 15:58:49	2026-10-19 16:00:10
+278	278	LOT-000278	2028-10-19	151	2026-10-19 15:58:49	2026-10-19 16:00:01
+255	255	LOT-000255	2027-10-19	168	2026-10-19 15:58:49	2026-10-19 15:59:27
+195	195	LOT-000195	2028-02-19	95	2026-10-19 15:58:49	2026-10-19 16:00:05
+230	230	LOT-000230	2027-10-19	129	2026-10-19 15:58:49	2026-10-19 16:00:08
+285	285	LOT-000285	2027-02-19	65	2026-10-19 15:58:49	2026-10-19 16:00:06
+291	291	LOT-000291	2027-04-19	126	2026-10-19 15:58:50	2026-10-19 16:00:07
+271	271	LOT-000271	2028-04-19	51	2026-10-19 15:58:49	2026-10-19 16:00:05
+223	223	LOT-000223	2028-04-19	118	2026-10-19 15:58:49	2026-10-19 15:59:57
+257	257	LOT-000257	2027-04-19	69	2026-10-19 15:58:49	2026-10-19 16:00:01
+198	198	LOT-000198	2028-08-19	127	2026-10-19 15:58:49	2026-10-19 16:00:00
+241	241	LOT-000241	2027-09-19	41	2026-10-19 15:58:49	2026-10-19 16:00:10
+216	216	LOT-000216	2027-07-19	156	2026-10-19 15:58:49	2026-10-19 15:59:22
+227	227	LOT-000227	2027-05-19	53	2026-10-19 15:58:49	2026-10-19 16:00:05
+202	202	LOT-000202	2027-03-19	129	2026-10-19 15:58:49	2026-10-19 16:00:11
+212	212	LOT-000212	2028-03-19	176	2026-10-19 15:58:49	2026-10-19 15:59:58
+219	219	LOT-000219	2028-07-19	45	2026-10-19 15:58:49	2026-10-19 15:59:26
+207	207	LOT-000207	2027-12-19	76	2026-10-19 15:58:49	2026-10-19 15:59:55
+209	209	LOT-000209	2027-01-19	112	2026-10-19 15:58:49	2026-10-19 16:00:09
+277	277	LOT-000277	2028-01-19	152	2026-10-19 15:58:49	2026-10-19 16:00:00
+268	268	LOT-000268	2028-08-19	28	2026-10-19 15:58:49	2026-10-19 16:00:06
+228	228	LOT-000228	2028-07-19	119	2026-10-19 15:58:49	2026-10-19 16:00:11
+232	232	LOT-000232	2027-09-19	90	2026-10-19 15:58:49	2026-10-19 16:00:05
+261	261	LOT-000261	2027-11-19	57	2026-10-19 15:58:49	2026-10-19 16:00:11
+231	231	LOT-000231	2028-07-19	157	2026-10-19 15:58:49	2026-10-19 16:00:05
+267	267	LOT-000267	2027-02-19	98	2026-10-19 15:58:49	2026-10-19 16:00:05
+243	243	LOT-000243	2028-09-19	168	2026-10-19 15:58:49	2026-10-19 16:00:00
+253	253	LOT-000253	2027-09-19	139	2026-10-19 15:58:49	2026-10-19 16:00:07
+284	284	LOT-000284	2027-10-19	120	2026-10-19 15:58:49	2026-10-19 16:00:05
+235	235	LOT-000235	2027-07-19	70	2026-10-19 15:58:49	2026-10-19 15:59:14
+200	200	LOT-000200	2028-06-19	150	2026-10-19 15:58:49	2026-10-19 16:00:04
+269	269	LOT-000269	2027-01-19	24	2026-10-19 15:58:49	2026-10-19 16:00:08
+279	279	LOT-000279	2028-10-19	83	2026-10-19 15:58:49	2026-10-19 15:59:33
+211	211	LOT-000211	2027-09-19	153	2026-10-19 15:58:49	2026-10-19 15:59:58
+213	213	LOT-000213	2028-05-19	112	2026-10-19 15:58:49	2026-10-19 16:00:11
+266	266	LOT-000266	2028-09-19	109	2026-10-19 15:58:49	2026-10-19 16:00:04
+259	259	LOT-000259	2027-10-19	70	2026-10-19 15:58:49	2026-10-19 16:00:09
+281	281	LOT-000281	2028-10-19	141	2026-10-19 15:58:49	2026-10-19 16:00:11
+246	246	LOT-000246	2027-08-19	54	2026-10-19 15:58:49	2026-10-19 16:00:07
+282	282	LOT-000282	2027-01-19	48	2026-10-19 15:58:49	2026-10-19 16:00:00
+239	239	LOT-000239	2027-10-19	173	2026-10-19 15:58:49	2026-10-19 16:00:00
+280	280	LOT-000280	2027-09-19	105	2026-10-19 15:58:49	2026-10-19 15:59:29
+218	218	LOT-000218	2027-07-19	25	2026-10-19 15:58:49	2026-10-19 15:59:55
+240	240	LOT-000240	2028-03-19	50	2026-10-19 15:58:49	2026-10-19 15:59:27
+247	247	LOT-000247	2028-09-19	45	2026-10-19 15:58:49	2026-10-19 15:59:33
+244	244	LOT-000244	2028-01-19	166	2026-10-19 15:58:49	2026-10-19 16:00:09
+265	265	LOT-000265	2027-04-19	82	2026-10-19 15:58:49	2026-10-19 15:59:57
+237	237	LOT-000237	2028-08-19	87	2026-10-19 15:58:49	2026-10-19 16:00:01
+290	290	LOT-000290	2028-01-19	71	2026-10-19 15:58:50	2026-10-19 15:59:33
+251	251	LOT-000251	2027-07-19	66	2026-10-19 15:58:49	2026-10-19 15:59:55
+274	274	LOT-000274	2027-04-19	17	2026-10-19 15:58:49	2026-10-19 15:59:54
+275	275	LOT-000275	2027-08-19	122	2026-10-19 15:58:49	2026-10-19 16:00:09
+264	264	LOT-000264	2027-11-19	79	2026-10-19 15:58:49	2026-10-19 15:59:51
+272	272	LOT-000272	2027-01-19	62	2026-10-19 15:58:49	2026-10-19 16:00:11
+217	217	LOT-000217	2028-04-19	109	2026-10-19 15:58:49	2026-10-19 15:59:58
+254	254	LOT-000254	2028-10-19	33	2026-10-19 15:58:49	2026-10-19 15:59:59
+288	288	LOT-000288	2027-05-19	90	2026-10-19 15:58:49	2026-10-19 16:00:04
+309	309	LOT-000309	2027-09-19	181	2026-10-19 15:58:50	2026-10-19 15:58:50
+338	338	LOT-000338	2027-08-19	58	2026-10-19 15:58:50	2026-10-19 15:58:50
+388	388	LOT-000388	2028-08-19	155	2026-10-19 15:58:50	2026-10-19 15:58:50
+302	302	LOT-000302	2028-07-19	39	2026-10-19 15:58:50	2026-10-19 15:59:58
+326	326	LOT-000326	2027-08-19	64	2026-10-19 15:58:50	2026-10-19 15:59:34
+333	333	LOT-000333	2027-08-19	38	2026-10-19 15:58:50	2026-10-19 15:59:59
+361	361	LOT-000361	2027-03-19	147	2026-10-19 15:58:50	2026-10-19 16:00:03
+344	344	LOT-000344	2027-11-19	146	2026-10-19 15:58:50	2026-10-19 16:00:01
+359	359	LOT-000359	2027-02-19	57	2026-10-19 15:58:50	2026-10-19 16:00:07
+353	353	LOT-000353	2027-08-19	134	2026-10-19 15:58:50	2026-10-19 16:00:11
+367	367	LOT-000367	2027-06-19	162	2026-10-19 15:58:50	2026-10-19 16:00:09
+347	347	LOT-000347	2028-06-19	24	2026-10-19 15:58:50	2026-10-19 15:59:57
+371	371	LOT-000371	2027-07-19	91	2026-10-19 15:58:50	2026-10-19 15:59:22
+314	314	LOT-000314	2028-10-19	118	2026-10-19 15:58:50	2026-10-19 16:00:09
+352	352	LOT-000352	2027-06-19	128	2026-10-19 15:58:50	2026-10-19 16:00:06
+296	296	LOT-000296	2028-08-19	181	2026-10-19 15:58:50	2026-10-19 15:59:22
+374	374	LOT-000374	2027-01-19	41	2026-10-19 15:58:50	2026-10-19 15:59:31
+328	328	LOT-000328	2028-04-19	86	2026-10-19 15:58:50	2026-10-19 15:59:56
+380	380	LOT-000380	2027-12-19	47	2026-10-19 15:58:50	2026-10-19 16:00:09
+306	306	LOT-000306	2027-01-19	137	2026-10-19 15:58:50	2026-10-19 16:00:11
+334	334	LOT-000334	2028-06-19	140	2026-10-19 15:58:50	2026-10-19 15:59:28
+343	343	LOT-000343	2027-01-19	111	2026-10-19 15:58:50	2026-10-19 16:00:02
+370	370	LOT-000370	2027-10-19	67	2026-10-19 15:58:50	2026-10-19 15:59:18
+368	368	LOT-000368	2028-07-19	120	2026-10-19 15:58:50	2026-10-19 15:59:51
+385	385	LOT-000385	2028-05-19	132	2026-10-19 15:58:50	2026-10-19 15:59:24
+311	311	LOT-000311	2027-09-19	42	2026-10-19 15:58:50	2026-10-19 15:58:58
+345	345	LOT-000345	2027-10-19	47	2026-10-19 15:58:50	2026-10-19 16:00:02
+337	337	LOT-000337	2028-05-19	53	2026-10-19 15:58:50	2026-10-19 15:59:52
+300	300	LOT-000300	2027-04-19	108	2026-10-19 15:58:50	2026-10-19 16:00:03
+293	293	LOT-000293	2028-03-19	34	2026-10-19 15:58:50	2026-10-19 16:00:06
+362	362	LOT-000362	2027-09-19	136	2026-10-19 15:58:50	2026-10-19 16:00:08
+384	384	LOT-000384	2027-06-19	177	2026-10-19 15:58:50	2026-10-19 16:00:01
+346	346	LOT-000346	2027-03-19	107	2026-10-19 15:58:50	2026-10-19 15:59:25
+369	369	LOT-000369	2028-02-19	145	2026-10-19 15:58:50	2026-10-19 15:59:48
+373	373	LOT-000373	2027-08-19	33	2026-10-19 15:58:50	2026-10-19 16:00:11
+342	342	LOT-000342	2028-09-19	163	2026-10-19 15:58:50	2026-10-19 15:59:58
+295	295	LOT-000295	2028-04-19	132	2026-10-19 15:58:50	2026-10-19 16:00:10
+294	294	LOT-000294	2027-10-19	153	2026-10-19 15:58:50	2026-10-19 15:59:33
+363	363	LOT-000363	2028-01-19	72	2026-10-19 15:58:50	2026-10-19 16:00:00
+329	329	LOT-000329	2027-02-19	28	2026-10-19 15:58:50	2026-10-19 16:00:01
+377	377	LOT-000377	2027-05-19	131	2026-10-19 15:58:50	2026-10-19 16:00:07
+313	313	LOT-000313	2028-07-19	60	2026-10-19 15:58:50	2026-10-19 15:59:35
+387	387	LOT-000387	2028-08-19	23	2026-10-19 15:58:50	2026-10-19 16:00:03
+357	357	LOT-000357	2027-06-19	83	2026-10-19 15:58:50	2026-10-19 15:59:58
+324	324	LOT-000324	2028-01-19	21	2026-10-19 15:58:50	2026-10-19 16:00:03
+372	372	LOT-000372	2027-09-19	47	2026-10-19 15:58:50	2026-10-19 15:59:14
+321	321	LOT-000321	2027-07-19	159	2026-10-19 15:58:50	2026-10-19 15:59:05
+356	356	LOT-000356	2027-03-19	129	2026-10-19 15:58:50	2026-10-19 15:59:59
+322	322	LOT-000322	2027-09-19	179	2026-10-19 15:58:50	2026-10-19 15:59:17
+335	335	LOT-000335	2028-09-19	16	2026-10-19 15:58:50	2026-10-19 16:00:06
+381	381	LOT-000381	2027-03-19	178	2026-10-19 15:58:50	2026-10-19 16:00:06
+379	379	LOT-000379	2028-09-19	65	2026-10-19 15:58:50	2026-10-19 15:59:15
+376	376	LOT-000376	2027-01-19	123	2026-10-19 15:58:50	2026-10-19 16:00:00
+297	297	LOT-000297	2028-09-19	18	2026-10-19 15:58:50	2026-10-19 16:00:07
+332	332	LOT-000332	2028-01-19	76	2026-10-19 15:58:50	2026-10-19 15:59:06
+358	358	LOT-000358	2028-10-19	36	2026-10-19 15:58:50	2026-10-19 16:00:08
+292	292	LOT-000292	2027-02-19	36	2026-10-19 15:58:50	2026-10-19 16:00:03
+339	339	LOT-000339	2027-07-19	51	2026-10-19 15:58:50	2026-10-19 15:59:53
+315	315	LOT-000315	2028-03-19	152	2026-10-19 15:58:50	2026-10-19 16:00:08
+307	307	LOT-000307	2028-04-19	83	2026-10-19 15:58:50	2026-10-19 15:59:23
+319	319	LOT-000319	2027-02-19	0	2026-10-19 15:58:50	2026-10-19 16:00:08
+341	341	LOT-000341	2027-09-19	179	2026-10-19 15:58:50	2026-10-19 16:00:03
+327	327	LOT-000327	2028-03-19	158	2026-10-19 15:58:50	2026-10-19 16:00:01
+317	317	LOT-000317	2028-07-19	183	2026-10-19 15:58:50	2026-10-19 15:59:33
+318	318	LOT-000318	2027-02-19	140	2026-10-19 15:58:50	2026-10-19 16:00:06
+310	310	LOT-000310	2027-08-19	140	2026-10-19 15:58:50	2026-10-19 15:59:46
+304	304	LOT-000304	2027-03-19	5	2026-10-19 15:58:50	2026-10-19 16:00:01
+323	323	LOT-000323	2027-04-19	122	2026-10-19 15:58:50	2026-10-19 16:00:07
+351	351	LOT-000351	2027-07-19	177	2026-10-19 15:58:50	2026-10-19 15:59:53
+364	364	LOT-000364	2028-09-19	116	2026-10-19 15:58:50	2026-10-19 15:59:53
+340	340	LOT-000340	2028-07-19	166	2026-10-19 15:58:50	2026-10-19 16:00:07
+382	382	LOT-000382	2027-05-19	129	2026-10-19 15:58:50	2026-10-19 15:59:28
+360	360	LOT-000360	2028-09-19	105	2026-10-19 15:58:50	2026-10-19 15:59:57
+325	325	LOT-000325	2028-03-19	177	2026-10-19 15:58:50	2026-10-19 15:59:32
+301	301	LOT-000301	2027-01-19	191	2026-10-19 15:58:50	2026-10-19 15:59:21
+298	298	LOT-000298	2028-01-19	119	2026-10-19 15:58:50	2026-10-19 16:00:08
+330	330	LOT-000330	2028-02-19	52	2026-10-19 15:58:50	2026-10-19 16:00:08
+375	375	LOT-000375	2027-11-19	150	2026-10-19 15:58:50	2026-10-19 16:00:07
+366	366	LOT-000366	2028-06-19	107	2026-10-19 15:58:50	2026-10-19 15:59:23
+320	320	LOT-000320	2027-02-19	68	2026-10-19 15:58:50	2026-10-19 15:59:23
+312	312	LOT-000312	2028-06-19	188	2026-10-19 15:58:50	2026-10-19 15:59:28
+308	308	LOT-000308	2027-05-19	189	2026-10-19 15:58:50	2026-10-19 15:59:31
+348	348	LOT-000348	2027-09-19	100	2026-10-19 15:58:50	2026-10-19 16:00:01
+365	365	LOT-000365	2027-06-19	139	2026-10-19 15:58:50	2026-10-19 15:59:33
+354	354	LOT-000354	2027-02-19	185	2026-10-19 15:58:50	2026-10-19 16:00:04
+350	350	LOT-000350	2027-08-19	38	2026-10-19 15:58:50	2026-10-19 16:00:07
+378	378	LOT-000378	2027-12-19	7	2026-10-19 15:58:50	2026-10-19 16:00:02
+316	316	LOT-000316	2028-08-19	109	2026-10-19 15:58:50	2026-10-19 16:00:11
+303	303	LOT-000303	2028-07-19	89	2026-10-19 15:58:50	2026-10-19 16:00:04
+355	355	LOT-000355	2027-05-19	46	2026-10-19 15:58:50	2026-10-19 16:00:04
+299	299	LOT-000299	2028-02-19	132	2026-10-19 15:58:50	2026-10-19 16:00:09
+413	413	LOT-000413	2028-05-19	25	2026-10-19 15:58:50	2026-10-19 15:59:26
+390	390	LOT-000390	2027-09-19	173	2026-10-19 15:58:50	2026-10-19 15:59:35
+423	423	LOT-000423	2027-07-19	54	2026-10-19 15:58:50	2026-10-19 15:59:31
+447	447	LOT-000447	2027-01-19	42	2026-10-19 15:58:50	2026-10-19 15:58:53
+409	409	LOT-000409	2028-06-19	65	2026-10-19 15:58:50	2026-10-19 15:59:47
+433	433	LOT-000433	2028-10-19	111	2026-10-19 15:58:50	2026-10-19 15:59:57
+467	467	LOT-000467	2027-03-19	104	2026-10-19 15:58:50	2026-10-19 15:59:53
+469	469	LOT-000469	2027-11-19	165	2026-10-19 15:58:50	2026-10-19 16:00:04
+441	441	LOT-000441	2027-09-19	60	2026-10-19 15:58:50	2026-10-19 16:00:06
+437	437	LOT-000437	2027-06-19	142	2026-10-19 15:58:50	2026-10-19 15:59:58
+480	480	LOT-000480	2027-01-19	97	2026-10-19 15:58:50	2026-10-19 16:00:08
+484	484	LOT-000484	2027-12-19	146	2026-10-19 15:58:50	2026-10-19 16:00:08
+395	395	LOT-000395	2028-05-19	69	2026-10-19 15:58:50	2026-10-19 16:00:11
+414	414	LOT-000414	2028-06-19	33	2026-10-19 15:58:50	2026-10-19 16:00:07
+452	452	LOT-000452	2027-08-19	102	2026-10-19 15:58:50	2026-10-19 15:59:39
+426	426	LOT-000426	2027-03-19	161	2026-10-19 15:58:50	2026-10-19 15:59:52
+448	448	LOT-000448	2028-01-19	72	2026-10-19 15:58:50	2026-10-19 16:00:05
+464	464	LOT-000464	2028-08-19	43	2026-10-19 15:58:50	2026-10-19 15:58:58
+442	442	LOT-000442	2028-10-19	60	2026-10-19 15:58:50	2026-10-19 16:00:00
+475	475	LOT-000475	2027-07-19	125	2026-10-19 15:58:50	2026-10-19 16:00:03
+485	485	LOT-000485	2028-10-19	18	2026-10-19 15:58:50	2026-10-19 16:00:02
+410	410	LOT-000410	2028-05-19	156	2026-10-19 15:58:50	2026-10-19 16:00:04
+431	431	LOT-000431	2028-03-19	59	2026-10-19 15:58:50	2026-10-19 16:00:00
+394	394	LOT-000394	2028-09-19	55	2026-10-19 15:58:50	2026-10-19 16:00:06
+417	417	LOT-000417	2027-03-19	12	2026-10-19 15:58:50	2026-10-19 15:59:53
+462	462	LOT-000462	2028-08-19	141	2026-10-19 15:58:50	2026-10-19 15:59:55
+463	463	LOT-000463	2028-06-19	113	2026-10-19 15:58:50	2026-10-19 16:00:10
+407	407	LOT-000407	2028-07-19	99	2026-10-19 15:58:50	2026-10-19 16:00:00
+403	403	LOT-000403	2027-09-19	145	2026-10-19 15:58:50	2026-10-19 15:59:32
+411	411	LOT-000411	2027-10-19	26	2026-10-19 15:58:50	2026-10-19 15:59:35
+400	400	LOT-000400	2028-04-19	53	2026-10-19 15:58:50	2026-10-19 15:59:21
+427	427	LOT-000427	2028-01-19	53	2026-10-19 15:58:50	2026-10-19 15:59:56
+468	468	LOT-000468	2028-08-19	148	2026-10-19 15:58:50	2026-10-19 16:00:07
+415	415	LOT-000415	2028-03-19	99	2026-10-19 15:58:50	2026-10-19 16:00:09
+422	422	LOT-000422	2028-01-19	166	2026-10-19 15:58:50	2026-10-19 16:00:05
+425	425	LOT-000425	2028-04-19	52	2026-10-19 15:58:50	2026-10-19 16:00:03
+399	399	LOT-000399	2028-06-19	84	2026-10-19 15:58:50	2026-10-19 16:00:01
+465	465	LOT-000465	2027-02-19	83	2026-10-19 15:58:50	2026-10-19 16:00:08
+446	446	LOT-000446	2028-06-19	38	2026-10-19 15:58:50	2026-10-19 16:00:02
+436	436	LOT-000436	2027-09-19	38	2026-10-19 15:58:50	2026-10-19 15:59:01
+439	439	LOT-000439	2027-04-19	153	2026-10-19 15:58:50	2026-10-19 16:00:10
+397	397	LOT-000397	2028-04-19	24	2026-10-19 15:58:50	2026-10-19 15:59:20
+473	473	LOT-000473	2028-02-19	109	2026-10-19 15:58:50	2026-10-19 15:59:56
+393	393	LOT-000393	2027-01-19	22	2026-10-19 15:58:50	2026-10-19 15:59:27
+392	392	LOT-000392	2027-09-19	60	2026-10-19 15:58:50	2026-10-19 15:59:22
+450	450	LOT-000450	2028-07-19	41	2026-10-19 15:58:50	2026-10-19 16:00:08
+458	458	LOT-000458	2027-06-19	82	2026-10-19 15:58:50	2026-10-19 15:59:03
+438	438	LOT-000438	2027-07-19	109	2026-10-19 15:58:50	2026-10-19 15:59:55
+408	408	LOT-000408	2028-08-19	171	2026-10-19 15:58:50	2026-10-19 16:00:04
+470	470	LOT-000470	2028-05-19	118	2026-10-19 15:58:50	2026-10-19 16:00:03
+419	419	LOT-000419	2027-07-19	162	2026-10-19 15:58:50	2026-10-19 16:00:10
+435	435	LOT-000435	2028-04-19	128	2026-10-19 15:58:50	2026-10-19 16:00:07
+432	432	LOT-000432	2028-06-19	178	2026-10-19 15:58:50	2026-10-19 15:59:24
+402	402	LOT-000402	2028-06-19	106	2026-10-19 15:58:50	2026-10-19 16:00:11
+478	478	LOT-000478	2028-07-19	82	2026-10-19 15:58:50	2026-10-19 15:59:56
+391	391	LOT-000391	2027-12-19	132	2026-10-19 15:58:50	2026-10-19 15:59:14
+477	477	LOT-000477	2027-03-19	109	2026-10-19 15:58:50	2026-10-19 16:00:04
+416	416	LOT-000416	2027-01-19	173	2026-10-19 15:58:50	2026-10-19 16:00:07
+444	444	LOT-000444	2028-08-19	109	2026-10-19 15:58:50	2026-10-19 16:00:07
+474	474	LOT-000474	2028-10-19	38	2026-10-19 15:58:50	2026-10-19 16:00:04
+396	396	LOT-000396	2027-02-19	86	2026-10-19 15:58:50	2026-10-19 16:00:07
+404	404	LOT-000404	2027-11-19	160	2026-10-19 15:58:50	2026-10-19 16:00:06
+460	460	LOT-000460	2027-11-19	27	2026-10-19 15:58:50	2026-10-19 16:00:04
+454	454	LOT-000454	2027-09-19	31	2026-10-19 15:58:50	2026-10-19 15:59:28
+451	451	LOT-000451	2027-01-19	74	2026-10-19 15:58:50	2026-10-19 15:59:54
+482	482	LOT-000482	2027-04-19	131	2026-10-19 15:58:50	2026-10-19 15:59:55
+424	424	LOT-000424	2028-07-19	16	2026-10-19 15:58:50	2026-10-19 15:59:50
+476	476	LOT-000476	2028-04-19	170	2026-10-19 15:58:50	2026-10-19 15:59:59
+443	443	LOT-000443	2028-04-19	69	2026-10-19 15:58:50	2026-10-19 15:59:17
+445	445	LOT-000445	2027-01-19	99	2026-10-19 15:58:50	2026-10-19 16:00:02
+455	455	LOT-000455	2028-05-19	51	2026-10-19 15:58:50	2026-10-19 16:00:03
+449	449	LOT-000449	2027-03-19	120	2026-10-19 15:58:50	2026-10-19 16:00:05
+398	398	LOT-000398	2027-01-19	135	2026-10-19 15:58:50	2026-10-19 15:59:56
+466	466	LOT-000466	2028-03-19	138	2026-10-19 15:58:50	2026-10-19 16:00:00
+440	440	LOT-000440	2027-02-19	92	2026-10-19 15:58:50	2026-10-19 16:00:00
+461	461	LOT-000461	2028-05-19	158	2026-10-19 15:58:50	2026-10-19 16:00:05
+472	472	LOT-000472	2027-06-19	174	2026-10-19 15:58:50	2026-10-19 15:59:21
+412	412	LOT-000412	2028-06-19	173	2026-10-19 15:58:50	2026-10-19 15:59:33
+481	481	LOT-000481	2027-08-19	60	2026-10-19 15:58:50	2026-10-19 15:59:52
+483	483	LOT-000483	2028-08-19	178	2026-10-19 15:58:50	2026-10-19 16:00:10
+401	401	LOT-000401	2027-06-19	68	2026-10-19 15:58:50	2026-10-19 16:00:10
+429	429	LOT-000429	2027-02-19	148	2026-10-19 15:58:50	2026-10-19 15:59:59
+456	456	LOT-000456	2028-01-19	111	2026-10-19 15:58:50	2026-10-19 15:59:26
+471	471	LOT-000471	2027-02-19	152	2026-10-19 15:58:50	2026-10-19 15:59:30
+421	421	LOT-000421	2027-07-19	147	2026-10-19 15:58:50	2026-10-19 15:59:58
+428	428	LOT-000428	2027-12-19	96	2026-10-19 15:58:50	2026-10-19 15:59:54
+453	453	LOT-000453	2027-04-19	143	2026-10-19 15:58:50	2026-10-19 16:00:08
+420	420	LOT-000420	2027-04-19	108	2026-10-19 15:58:50	2026-10-19 16:00:09
+479	479	LOT-000479	2027-11-19	35	2026-10-19 15:58:50	2026-10-19 15:59:50
+430	430	LOT-000430	2028-09-19	160	2026-10-19 15:58:50	2026-10-19 15:59:58
+405	405	LOT-000405	2028-06-19	24	2026-10-19 15:58:50	2026-10-19 16:00:03
+558	558	LOT-000558	2027-11-19	46	2026-10-19 15:58:51	2026-10-19 15:58:51
+506	506	LOT-000506	2027-08-19	37	2026-10-19 15:58:51	2026-10-19 16:00:07
+567	567	LOT-000567	2027-12-19	43	2026-10-19 15:58:51	2026-10-19 15:59:49
+575	575	LOT-000575	2028-01-19	189	2026-10-19 15:58:51	2026-10-19 16:00:11
+579	579	LOT-000579	2027-10-19	151	2026-10-19 15:58:51	2026-10-19 16:00:08
+495	495	LOT-000495	2028-01-19	129	2026-10-19 15:58:50	2026-10-19 15:58:55
+539	539	LOT-000539	2027-04-19	98	2026-10-19 15:58:51	2026-10-19 15:59:23
+533	533	LOT-000533	2028-10-19	57	2026-10-19 15:58:51	2026-10-19 15:59:27
+529	529	LOT-000529	2027-12-19	199	2026-10-19 15:58:51	2026-10-19 15:59:04
+513	513	LOT-000513	2027-12-19	97	2026-10-19 15:58:51	2026-10-19 15:59:27
+552	552	LOT-000552	2027-10-19	19	2026-10-19 15:58:51	2026-10-19 16:00:00
+536	536	LOT-000536	2027-06-19	84	2026-10-19 15:58:51	2026-10-19 16:00:06
+493	493	LOT-000493	2027-02-19	139	2026-10-19 15:58:50	2026-10-19 15:59:52
+543	543	LOT-000543	2028-08-19	19	2026-10-19 15:58:51	2026-10-19 16:00:02
+525	525	LOT-000525	2027-01-19	86	2026-10-19 15:58:51	2026-10-19 16:00:10
+488	488	LOT-000488	2028-08-19	149	2026-10-19 15:58:50	2026-10-19 15:59:51
+568	568	LOT-000568	2027-04-19	39	2026-10-19 15:58:51	2026-10-19 15:59:32
+581	581	LOT-000581	2027-06-19	43	2026-10-19 15:58:51	2026-10-19 15:59:33
+545	545	LOT-000545	2028-01-19	72	2026-10-19 15:58:51	2026-10-19 16:00:09
+561	561	LOT-000561	2027-10-19	122	2026-10-19 15:58:51	2026-10-19 15:59:23
+538	538	LOT-000538	2028-08-19	44	2026-10-19 15:58:51	2026-10-19 16:00:11
+499	499	LOT-000499	2028-02-19	61	2026-10-19 15:58:50	2026-10-19 16:00:10
+541	541	LOT-000541	2028-07-19	96	2026-10-19 15:58:51	2026-10-19 15:59:26
+523	523	LOT-000523	2028-05-19	149	2026-10-19 15:58:51	2026-10-19 16:00:02
+490	490	LOT-000490	2027-05-19	25	2026-10-19 15:58:50	2026-10-19 16:00:04
+501	501	LOT-000501	2027-06-19	96	2026-10-19 15:58:50	2026-10-19 16:00:03
+563	563	LOT-000563	2028-04-19	137	2026-10-19 15:58:51	2026-10-19 16:00:09
+556	556	LOT-000556	2027-05-19	41	2026-10-19 15:58:51	2026-10-19 16:00:11
+554	554	LOT-000554	2028-09-19	19	2026-10-19 15:58:51	2026-10-19 16:00:11
+521	521	LOT-000521	2028-03-19	167	2026-10-19 15:58:51	2026-10-19 15:59:23
+570	570	LOT-000570	2028-01-19	130	2026-10-19 15:58:51	2026-10-19 15:59:54
+557	557	LOT-000557	2027-08-19	188	2026-10-19 15:58:51	2026-10-19 15:59:51
+550	550	LOT-000550	2027-06-19	64	2026-10-19 15:58:51	2026-10-19 15:59:08
+532	532	LOT-000532	2027-12-19	48	2026-10-19 15:58:51	2026-10-19 16:00:10
+580	580	LOT-000580	2028-01-19	114	2026-10-19 15:58:51	2026-10-19 15:59:28
+492	492	LOT-000492	2027-11-19	115	2026-10-19 15:58:50	2026-10-19 15:59:27
+500	500	LOT-000500	2028-04-19	159	2026-10-19 15:58:50	2026-10-19 15:59:34
+522	522	LOT-000522	2028-10-19	146	2026-10-19 15:58:51	2026-10-19 16:00:07
+519	519	LOT-000519	2028-01-19	123	2026-10-19 15:58:51	2026-10-19 16:00:10
+510	510	LOT-000510	2027-10-19	133	2026-10-19 15:58:51	2026-10-19 15:59:27
+546	546	LOT-000546	2028-04-19	115	2026-10-19 15:58:51	2026-10-19 15:59:54
+524	524	LOT-000524	2027-08-19	181	2026-10-19 15:58:51	2026-10-19 15:59:55
+549	549	LOT-000549	2028-06-19	93	2026-10-19 15:58:51	2026-10-19 15:59:59
+508	508	LOT-000508	2027-12-19	99	2026-10-19 15:58:51	2026-10-19 16:00:09
+511	511	LOT-000511	2028-01-19	55	2026-10-19 15:58:51	2026-10-19 16:00:10
+553	553	LOT-000553	2027-06-19	108	2026-10-19 15:58:51	2026-10-19 15:59:57
+534	534	LOT-000534	2028-05-19	104	2026-10-19 15:58:51	2026-10-19 16:00:05
+528	528	LOT-000528	2028-03-19	138	2026-10-19 15:58:51	2026-10-19 16:00:08
+548	548	LOT-000548	2027-03-19	168	2026-10-19 15:58:51	2026-10-19 16:00:06
+562	562	LOT-000562	2028-05-19	163	2026-10-19 15:58:51	2026-10-19 16:00:05
+569	569	LOT-000569	2027-03-19	183	2026-10-19 15:58:51	2026-10-19 16:00:04
+571	571	LOT-000571	2027-10-19	42	2026-10-19 15:58:51	2026-10-19 16:00:02
+574	574	LOT-000574	2027-08-19	60	2026-10-19 15:58:51	2026-10-19 15:59:57
+540	540	LOT-000540	2027-08-19	172	2026-10-19 15:58:51	2026-10-19 15:59:27
+502	502	LOT-000502	2027-11-19	165	2026-10-19 15:58:51	2026-10-19 16:00:10
+526	526	LOT-000526	2028-07-19	50	2026-10-19 15:58:51	2026-10-19 15:59:31
+489	489	LOT-000489	2027-02-19	82	2026-10-19 15:58:50	2026-10-19 16:00:06
+559	559	LOT-000559	2027-05-19	54	2026-10-19 15:58:51	2026-10-19 15:59:14
+572	572	LOT-000572	2027-08-19	126	2026-10-19 15:58:51	2026-10-19 16:00:06
+503	503	LOT-000503	2028-02-19	115	2026-10-19 15:58:51	2026-10-19 16:00:09
+573	573	LOT-000573	2027-04-19	58	2026-10-19 15:58:51	2026-10-19 16:00:06
+565	565	LOT-000565	2028-04-19	49	2026-10-19 15:58:51	2026-10-19 15:59:26
+530	530	LOT-000530	2028-08-19	53	2026-10-19 15:58:51	2026-10-19 15:59:57
+582	582	LOT-000582	2027-08-19	80	2026-10-19 15:58:51	2026-10-19 15:59:57
+512	512	LOT-000512	2028-06-19	79	2026-10-19 15:58:51	2026-10-19 15:59:34
+578	578	LOT-000578	2028-02-19	81	2026-10-19 15:58:51	2026-10-19 15:59:54
+560	560	LOT-000560	2027-11-19	50	2026-10-19 15:58:51	2026-10-19 15:59:31
+531	531	LOT-000531	2028-10-19	52	2026-10-19 15:58:51	2026-10-19 16:00:06
+518	518	LOT-000518	2027-04-19	92	2026-10-19 15:58:51	2026-10-19 15:59:56
+491	491	LOT-000491	2028-06-19	76	2026-10-19 15:58:50	2026-10-19 16:00:04
+566	566	LOT-000566	2027-06-19	122	2026-10-19 15:58:51	2026-10-19 15:59:34
+487	487	LOT-000487	2028-08-19	170	2026-10-19 15:58:50	2026-10-19 16:00:02
+515	515	LOT-000515	2027-11-19	31	2026-10-19 15:58:51	2026-10-19 16:00:03
+547	547	LOT-000547	2028-07-19	31	2026-10-19 15:58:51	2026-10-19 16:00:03
+507	507	LOT-000507	2027-02-19	174	2026-10-19 15:58:51	2026-10-19 15:59:56
+576	576	LOT-000576	2027-12-19	44	2026-10-19 15:58:51	2026-10-19 16:00:07
+516	516	LOT-000516	2027-04-19	166	2026-10-19 15:58:51	2026-10-19 16:00:08
+498	498	LOT-000498	2028-08-19	74	2026-10-19 15:58:50	2026-10-19 15:59:30
+535	535	LOT-000535	2027-01-19	150	2026-10-19 15:58:51	2026-10-19 16:00:09
+520	520	LOT-000520	2028-08-19	105	2026-10-19 15:58:51	2026-10-19 15:59:59
+486	486	LOT-000486	2028-05-19	78	2026-10-19 15:58:50	2026-10-19 15:59:36
+564	564	LOT-000564	2027-09-19	96	2026-10-19 15:58:51	2026-10-19 16:00:01
+496	496	LOT-000496	2028-06-19	85	2026-10-19 15:58:50	2026-10-19 15:59:50
+542	542	LOT-000542	2028-02-19	14	2026-10-19 15:58:51	2026-10-19 15:59:55
+497	497	LOT-000497	2028-06-19	87	2026-10-19 15:58:50	2026-10-19 16:00:07
+504	504	LOT-000504	2027-09-19	114	2026-10-19 15:58:51	2026-10-19 16:00:08
+505	505	LOT-000505	2027-02-19	19	2026-10-19 15:58:51	2026-10-19 16:00:01
+517	517	LOT-000517	2028-08-19	167	2026-10-19 15:58:51	2026-10-19 16:00:09
+494	494	LOT-000494	2027-05-19	148	2026-10-19 15:58:50	2026-10-19 16:00:04
+527	527	LOT-000527	2027-12-19	33	2026-10-19 15:58:51	2026-10-19 16:00:10
+544	544	LOT-000544	2027-03-19	25	2026-10-19 15:58:51	2026-10-19 16:00:06
+594	594	LOT-000594	2027-07-19	132	2026-10-19 15:58:51	2026-10-19 15:58:51
+606	606	LOT-000606	2027-02-19	45	2026-10-19 15:58:51	2026-10-19 15:58:51
+625	625	LOT-000625	2028-06-19	54	2026-10-19 15:58:51	2026-10-19 15:58:51
+633	633	LOT-000633	2027-07-19	96	2026-10-19 15:58:51	2026-10-19 15:58:51
+663	663	LOT-000663	2027-12-19	112	2026-10-19 15:58:51	2026-10-19 15:58:51
+602	602	LOT-000602	2028-08-19	92	2026-10-19 15:58:51	2026-10-19 16:00:04
+593	593	LOT-000593	2027-04-19	82	2026-10-19 15:58:51	2026-10-19 16:00:07
+597	597	LOT-000597	2028-10-19	124	2026-10-19 15:58:51	2026-10-19 16:00:03
+591	591	LOT-000591	2028-06-19	17	2026-10-19 15:58:51	2026-10-19 16:00:08
+601	601	LOT-000601	2028-04-19	128	2026-10-19 15:58:51	2026-10-19 16:00:01
+644	644	LOT-000644	2028-10-19	147	2026-10-19 15:58:51	2026-10-19 16:00:10
+608	608	LOT-000608	2028-10-19	96	2026-10-19 15:58:51	2026-10-19 15:59:59
+666	666	LOT-000666	2027-04-19	171	2026-10-19 15:58:51	2026-10-19 15:59:57
+609	609	LOT-000609	2027-04-19	144	2026-10-19 15:58:51	2026-10-19 15:59:58
+658	658	LOT-000658	2027-01-19	113	2026-10-19 15:58:51	2026-10-19 16:00:04
+611	611	LOT-000611	2028-03-19	41	2026-10-19 15:58:51	2026-10-19 16:00:04
+673	673	LOT-000673	2028-07-19	176	2026-10-19 15:58:51	2026-10-19 15:59:59
+583	583	LOT-000583	2028-08-19	163	2026-10-19 15:58:51	2026-10-19 15:59:25
+630	630	LOT-000630	2027-10-19	11	2026-10-19 15:58:51	2026-10-19 16:00:08
+654	654	LOT-000654	2027-12-19	35	2026-10-19 15:58:51	2026-10-19 16:00:07
+650	650	LOT-000650	2027-03-19	111	2026-10-19 15:58:51	2026-10-19 15:58:57
+603	603	LOT-000603	2027-08-19	153	2026-10-19 15:58:51	2026-10-19 15:59:55
+648	648	LOT-000648	2027-04-19	59	2026-10-19 15:58:51	2026-10-19 15:59:05
+662	662	LOT-000662	2027-03-19	149	2026-10-19 15:58:51	2026-10-19 16:00:11
+626	626	LOT-000626	2027-01-19	25	2026-10-19 15:58:51	2026-10-19 16:00:08
+584	584	LOT-000584	2027-06-19	95	2026-10-19 15:58:51	2026-10-19 16:00:04
+657	657	LOT-000657	2027-04-19	18	2026-10-19 15:58:51	2026-10-19 16:00:03
+596	596	LOT-000596	2027-07-19	153	2026-10-19 15:58:51	2026-10-19 16:00:05
+605	605	LOT-000605	2027-11-19	51	2026-10-19 15:58:51	2026-10-19 15:59:35
+617	617	LOT-000617	2027-12-19	1	2026-10-19 15:58:51	2026-10-19 16:00:08
+641	641	LOT-000641	2027-04-19	115	2026-10-19 15:58:51	2026-10-19 15:59:41
+674	674	LOT-000674	2028-03-19	118	2026-10-19 15:58:51	2026-10-19 15:59:01
+660	660	LOT-000660	2027-02-19	106	2026-10-19 15:58:51	2026-10-19 16:00:01
+646	646	LOT-000646	2028-07-19	23	2026-10-19 15:58:51	2026-10-19 16:00:10
+664	664	LOT-000664	2028-03-19	140	2026-10-19 15:58:51	2026-10-19 16:00:02
+670	670	LOT-000670	2028-09-19	124	2026-10-19 15:58:51	2026-10-19 16:00:10
+639	639	LOT-000639	2028-06-19	137	2026-10-19 15:58:51	2026-10-19 16:00:03
+637	637	LOT-000637	2028-07-19	86	2026-10-19 15:58:51	2026-10-19 16:00:03
+604	604	LOT-000604	2027-07-19	101	2026-10-19 15:58:51	2026-10-19 16:00:11
+619	619	LOT-000619	2027-04-19	36	2026-10-19 15:58:51	2026-10-19 15:59:08
+651	651	LOT-000651	2027-08-19	179	2026-10-19 15:58:51	2026-10-19 16:00:08
+665	665	LOT-000665	2027-04-19	125	2026-10-19 15:58:51	2026-10-19 15:59:21
+671	671	LOT-000671	2028-09-19	95	2026-10-19 15:58:51	2026-10-19 15:59:34
+669	669	LOT-000669	2028-05-19	29	2026-10-19 15:58:51	2026-10-19 16:00:11
+588	588	LOT-000588	2027-06-19	13	2026-10-19 15:58:51	2026-10-19 16:00:11
+616	616	LOT-000616	2028-10-19	87	2026-10-19 15:58:51	2026-10-19 16:00:10
+620	620	LOT-000620	2028-06-19	121	2026-10-19 15:58:51	2026-10-19 15:59:33
+586	586	LOT-000586	2027-02-19	142	2026-10-19 15:58:51	2026-10-19 16:00:00
+675	675	LOT-000675	2027-02-19	44	2026-10-19 15:58:51	2026-10-19 15:59:57
+634	634	LOT-000634	2027-08-19	139	2026-10-19 15:58:51	2026-10-19 16:00:02
+643	643	LOT-000643	2027-01-19	148	2026-10-19 15:58:51	2026-10-19 15:59:52
+592	592	LOT-000592	2028-02-19	34	2026-10-19 15:58:51	2026-10-19 15:59:27
+647	647	LOT-000647	2027-05-19	139	2026-10-19 15:58:51	2026-10-19 15:59:43
+655	655	LOT-000655	2028-08-19	125	2026-10-19 15:58:51	2026-10-19 16:00:07
+610	610	LOT-000610	2028-09-19	115	2026-10-19 15:58:51	2026-10-19 16:00:10
+652	652	LOT-000652	2027-02-19	112	2026-10-19 15:58:51	2026-10-19 15:59:16
+649	649	LOT-000649	2027-10-19	96	2026-10-19 15:58:51	2026-10-19 15:59:31
+618	618	LOT-000618	2027-06-19	128	2026-10-19 15:58:51	2026-10-19 16:00:10
+679	679	LOT-000679	2028-08-19	149	2026-10-19 15:58:51	2026-10-19 16:00:01
+659	659	LOT-000659	2028-08-19	169	2026-10-19 15:58:51	2026-10-19 16:00:00
+622	622	LOT-000622	2028-03-19	169	2026-10-19 15:58:51	2026-10-19 16:00:10
+636	636	LOT-000636	2028-01-19	53	2026-10-19 15:58:51	2026-10-19 16:00:11
+599	599	LOT-000599	2027-06-19	118	2026-10-19 15:58:51	2026-10-19 16:00:00
+640	640	LOT-000640	2027-02-19	114	2026-10-19 15:58:51	2026-10-19 15:59:57
+613	613	LOT-000613	2027-10-19	94	2026-10-19 15:58:51	2026-10-19 16:00:05
+627	627	LOT-000627	2028-02-19	98	2026-10-19 15:58:51	2026-10-19 16:00:09
+621	621	LOT-000621	2027-02-19	171	2026-10-19 15:58:51	2026-10-19 16:00:01
+661	661	LOT-000661	2027-03-19	150	2026-10-19 15:58:51	2026-10-19 16:00:02
+585	585	LOT-000585	2027-08-19	145	2026-10-19 15:58:51	2026-10-19 15:59:57
+589	589	LOT-000589	2027-01-19	24	2026-10-19 15:58:51	2026-10-19 15:59:50
+587	587	LOT-000587	2027-09-19	133	2026-10-19 15:58:51	2026-10-19 15:59:54
+600	600	LOT-000600	2027-07-19	49	2026-10-19 15:58:51	2026-10-19 15:59:57
+668	668	LOT-000668	2027-02-19	42	2026-10-19 15:58:51	2026-10-19 16:00:05
+628	628	LOT-000628	2027-01-19	96	2026-10-19 15:58:51	2026-10-19 15:59:59
+667	667	LOT-000667	2028-02-19	148	2026-10-19 15:58:51	2026-10-19 16:00:04
+624	624	LOT-000624	2027-10-19	177	2026-10-19 15:58:51	2026-10-19 15:59:25
+635	635	LOT-000635	2027-12-19	172	2026-10-19 15:58:51	2026-10-19 15:59:49
+632	632	LOT-000632	2027-12-19	20	2026-10-19 15:58:51	2026-10-19 15:59:23
+595	595	LOT-000595	2028-10-19	28	2026-10-19 15:58:51	2026-10-19 15:59:55
+676	676	LOT-000676	2027-02-19	141	2026-10-19 15:58:51	2026-10-19 15:59:24
+614	614	LOT-000614	2028-05-19	130	2026-10-19 15:58:51	2026-10-19 15:59:25
+598	598	LOT-000598	2028-07-19	110	2026-10-19 15:58:51	2026-10-19 15:59:29
+623	623	LOT-000623	2028-01-19	135	2026-10-19 15:58:51	2026-10-19 16:00:08
+678	678	LOT-000678	2028-08-19	157	2026-10-19 15:58:51	2026-10-19 15:59:27
+607	607	LOT-000607	2027-06-19	48	2026-10-19 15:58:51	2026-10-19 15:59:33
+642	642	LOT-000642	2027-12-19	74	2026-10-19 15:58:51	2026-10-19 15:59:56
+631	631	LOT-000631	2027-12-19	102	2026-10-19 15:58:51	2026-10-19 16:00:08
+672	672	LOT-000672	2027-11-19	61	2026-10-19 15:58:51	2026-10-19 16:00:04
+645	645	LOT-000645	2028-01-19	62	2026-10-19 15:58:51	2026-10-19 16:00:05
+653	653	LOT-000653	2028-05-19	170	2026-10-19 15:58:51	2026-10-19 16:00:09
+612	612	LOT-000612	2028-05-19	54	2026-10-19 15:58:51	2026-10-19 16:00:08
+759	759	LOT-000759	2028-05-19	70	2026-10-19 15:58:52	2026-10-19 15:58:52
+765	765	LOT-000765	2028-04-19	104	2026-10-19 15:58:52	2026-10-19 16:00:03
+717	717	LOT-000717	2028-09-19	78	2026-10-19 15:58:51	2026-10-19 15:58:54
+701	701	LOT-000701	2027-05-19	187	2026-10-19 15:58:51	2026-10-19 15:59:26
+715	715	LOT-000715	2028-05-19	110	2026-10-19 15:58:51	2026-10-19 15:59:54
+771	771	LOT-000771	2028-04-19	101	2026-10-19 15:58:52	2026-10-19 16:00:10
+727	727	LOT-000727	2027-01-19	117	2026-10-19 15:58:51	2026-10-19 16:00:01
+708	708	LOT-000708	2028-10-19	38	2026-10-19 15:58:51	2026-10-19 15:59:58
+760	760	LOT-000760	2028-02-19	20	2026-10-19 15:58:52	2026-10-19 16:00:03
+743	743	LOT-000743	2028-03-19	69	2026-10-19 15:58:52	2026-10-19 16:00:11
+753	753	LOT-000753	2027-01-19	118	2026-10-19 15:58:52	2026-10-19 16:00:09
+730	730	LOT-000730	2027-05-19	128	2026-10-19 15:58:51	2026-10-19 16:00:07
+703	703	LOT-000703	2027-03-19	69	2026-10-19 15:58:51	2026-10-19 16:00:08
+728	728	LOT-000728	2027-03-19	102	2026-10-19 15:58:51	2026-10-19 16:00:11
+755	755	LOT-000755	2028-02-19	79	2026-10-19 15:58:52	2026-10-19 15:59:50
+775	775	LOT-000775	2028-06-19	61	2026-10-19 15:58:52	2026-10-19 15:59:09
+684	684	LOT-000684	2027-12-19	106	2026-10-19 15:58:51	2026-10-19 16:00:10
+721	721	LOT-000721	2027-06-19	169	2026-10-19 15:58:51	2026-10-19 15:59:27
+680	680	LOT-000680	2027-12-19	87	2026-10-19 15:58:51	2026-10-19 15:59:59
+693	693	LOT-000693	2027-01-19	145	2026-10-19 15:58:51	2026-10-19 16:00:01
+719	719	LOT-000719	2028-03-19	185	2026-10-19 15:58:51	2026-10-19 15:59:57
+757	757	LOT-000757	2028-10-19	138	2026-10-19 15:58:52	2026-10-19 16:00:07
+726	726	LOT-000726	2028-09-19	128	2026-10-19 15:58:51	2026-10-19 16:00:09
+690	690	LOT-000690	2028-02-19	99	2026-10-19 15:58:51	2026-10-19 15:59:33
+683	683	LOT-000683	2028-09-19	101	2026-10-19 15:58:51	2026-10-19 15:59:51
+734	734	LOT-000734	2028-03-19	119	2026-10-19 15:58:52	2026-10-19 16:00:09
+762	762	LOT-000762	2028-09-19	53	2026-10-19 15:58:52	2026-10-19 16:00:08
+685	685	LOT-000685	2027-09-19	119	2026-10-19 15:58:51	2026-10-19 15:59:48
+773	773	LOT-000773	2027-02-19	47	2026-10-19 15:58:52	2026-10-19 16:00:07
+682	682	LOT-000682	2027-09-19	57	2026-10-19 15:58:51	2026-10-19 15:59:00
+695	695	LOT-000695	2027-05-19	184	2026-10-19 15:58:51	2026-10-19 15:59:00
+766	766	LOT-000766	2028-03-19	102	2026-10-19 15:58:52	2026-10-19 15:59:54
+745	745	LOT-000745	2027-05-19	52	2026-10-19 15:58:52	2026-10-19 16:00:05
+724	724	LOT-000724	2027-03-19	56	2026-10-19 15:58:51	2026-10-19 15:59:30
+747	747	LOT-000747	2028-03-19	171	2026-10-19 15:58:52	2026-10-19 15:59:22
+770	770	LOT-000770	2028-10-19	108	2026-10-19 15:58:52	2026-10-19 15:59:54
+718	718	LOT-000718	2027-05-19	83	2026-10-19 15:58:51	2026-10-19 16:00:05
+697	697	LOT-000697	2028-10-19	179	2026-10-19 15:58:51	2026-10-19 16:00:08
+742	742	LOT-000742	2028-01-19	57	2026-10-19 15:58:52	2026-10-19 16:00:06
+714	714	LOT-000714	2028-10-19	120	2026-10-19 15:58:51	2026-10-19 15:59:42
+723	723	LOT-000723	2028-10-19	42	2026-10-19 15:58:51	2026-10-19 15:59:54
+774	774	LOT-000774	2028-03-19	60	2026-10-19 15:58:52	2026-10-19 16:00:11
+709	709	LOT-000709	2027-08-19	61	2026-10-19 15:58:51	2026-10-19 16:00:10
+732	732	LOT-000732	2027-04-19	55	2026-10-19 15:58:51	2026-10-19 15:59:53
+713	713	LOT-000713	2028-03-19	48	2026-10-19 15:58:51	2026-10-19 16:00:07
+758	758	LOT-000758	2027-03-19	168	2026-10-19 15:58:52	2026-10-19 15:59:52
+752	752	LOT-000752	2028-06-19	98	2026-10-19 15:58:52	2026-10-19 15:59:34
+722	722	LOT-000722	2028-04-19	107	2026-10-19 15:58:51	2026-10-19 15:59:36
+776	776	LOT-000776	2028-08-19	7	2026-10-19 15:58:52	2026-10-19 16:00:02
+691	691	LOT-000691	2028-07-19	125	2026-10-19 15:58:51	2026-10-19 15:59:52
+689	689	LOT-000689	2027-01-19	157	2026-10-19 15:58:51	2026-10-19 16:00:08
+751	751	LOT-000751	2027-07-19	41	2026-10-19 15:58:52	2026-10-19 16:00:11
+772	772	LOT-000772	2027-03-19	46	2026-10-19 15:58:52	2026-10-19 16:00:03
+699	699	LOT-000699	2028-07-19	143	2026-10-19 15:58:51	2026-10-19 16:00:00
+737	737	LOT-000737	2027-03-19	87	2026-10-19 15:58:52	2026-10-19 16:00:10
+756	756	LOT-000756	2027-06-19	14	2026-10-19 15:58:52	2026-10-19 15:59:57
+692	692	LOT-000692	2028-10-19	166	2026-10-19 15:58:51	2026-10-19 16:00:04
+738	738	LOT-000738	2027-06-19	43	2026-10-19 15:58:52	2026-10-19 16:00:02
+746	746	LOT-000746	2027-12-19	76	2026-10-19 15:58:52	2026-10-19 16:00:11
+736	736	LOT-000736	2027-03-19	175	2026-10-19 15:58:52	2026-10-19 15:59:53
+740	740	LOT-000740	2027-09-19	159	2026-10-19 15:58:52	2026-10-19 16:00:00
+761	761	LOT-000761	2027-09-19	69	2026-10-19 15:58:52	2026-10-19 16:00:11
+705	705	LOT-000705	2028-05-19	95	2026-10-19 15:58:51	2026-10-19 15:59:58
+739	739	LOT-000739	2028-04-19	0	2026-10-19 15:58:52	2026-10-19 15:59:57
+763	763	LOT-000763	2028-02-19	75	2026-10-19 15:58:52	2026-10-19 15:59:14
+681	681	LOT-000681	2027-01-19	29	2026-10-19 15:58:51	2026-10-19 15:59:49
+687	687	LOT-000687	2028-05-19	33	2026-10-19 15:58:51	2026-10-19 15:59:56
+696	696	LOT-000696	2027-08-19	25	2026-10-19 15:58:51	2026-10-19 15:59:51
+748	748	LOT-000748	2027-02-19	100	2026-10-19 15:58:52	2026-10-19 16:00:08
+764	764	LOT-000764	2027-08-19	111	2026-10-19 15:58:52	2026-10-19 16:00:02
+698	698	LOT-000698	2027-08-19	23	2026-10-19 15:58:51	2026-10-19 15:59:31
+749	749	LOT-000749	2027-10-19	165	2026-10-19 15:58:52	2026-10-19 15:59:53
+704	704	LOT-000704	2028-02-19	167	2026-10-19 15:58:51	2026-10-19 16:00:05
+769	769	LOT-000769	2028-04-19	7	2026-10-19 15:58:52	2026-10-19 15:59:34
+710	710	LOT-000710	2027-01-19	144	2026-10-19 15:58:51	2026-10-19 15:59:57
+735	735	LOT-000735	2027-11-19	41	2026-10-19 15:58:52	2026-10-19 16:00:04
+711	711	LOT-000711	2028-06-19	162	2026-10-19 15:58:51	2026-10-19 16:00:09
+754	754	LOT-000754	2027-02-19	86	2026-10-19 15:58:52	2026-10-19 16:00:04
+725	725	LOT-000725	2027-06-19	184	2026-10-19 15:58:51	2026-10-19 16:00:04
+707	707	LOT-000707	2027-01-19	27	2026-10-19 15:58:51	2026-10-19 16:00:10
+768	768	LOT-000768	2027-06-19	95	2026-10-19 15:58:52	2026-10-19 15:59:34
+741	741	LOT-000741	2027-07-19	148	2026-10-19 15:58:52	2026-10-19 15:59:35
+700	700	LOT-000700	2028-07-19	23	2026-10-19 15:58:51	2026-10-19 16:00:05
+731	731	LOT-000731	2028-01-19	55	2026-10-19 15:58:51	2026-10-19 16:00:06
+733	733	LOT-000733	2027-04-19	50	2026-10-19 15:58:51	2026-10-19 15:59:51
+686	686	LOT-000686	2027-02-19	63	2026-10-19 15:58:51	2026-10-19 16:00:03
+706	706	LOT-000706	2028-09-19	106	2026-10-19 15:58:51	2026-10-19 16:00:11
+729	729	LOT-000729	2027-05-19	68	2026-10-19 15:58:51	2026-10-19 16:00:08
+694	694	LOT-000694	2027-09-19	54	2026-10-19 15:58:51	2026-10-19 15:59:58
+688	688	LOT-000688	2028-09-19	11	2026-10-19 15:58:51	2026-10-19 16:00:04
+702	702	LOT-000702	2027-08-19	158	2026-10-19 15:58:51	2026-10-19 16:00:10
+793	793	LOT-000793	2028-10-19	65	2026-10-19 15:58:52	2026-10-19 15:58:52
+823	823	LOT-000823	2028-03-19	87	2026-10-19 15:58:52	2026-10-19 15:58:52
+864	864	LOT-000864	2028-07-19	125	2026-10-19 15:58:52	2026-10-19 15:58:52
+792	792	LOT-000792	2028-06-19	109	2026-10-19 15:58:52	2026-10-19 15:59:54
+783	783	LOT-000783	2027-01-19	4	2026-10-19 15:58:52	2026-10-19 16:00:10
+804	804	LOT-000804	2028-09-19	10	2026-10-19 15:58:52	2026-10-19 16:00:11
+867	867	LOT-000867	2027-06-19	61	2026-10-19 15:58:52	2026-10-19 15:59:30
+779	779	LOT-000779	2028-03-19	164	2026-10-19 15:58:52	2026-10-19 15:59:55
+795	795	LOT-000795	2028-06-19	100	2026-10-19 15:58:52	2026-10-19 15:59:56
+852	852	LOT-000852	2027-09-19	159	2026-10-19 15:58:52	2026-10-19 16:00:06
+869	869	LOT-000869	2028-09-19	123	2026-10-19 15:58:52	2026-10-19 16:00:09
+796	796	LOT-000796	2027-02-19	29	2026-10-19 15:58:52	2026-10-19 15:58:56
+807	807	LOT-000807	2027-11-19	122	2026-10-19 15:58:52	2026-10-19 16:00:00
+806	806	LOT-000806	2028-07-19	46	2026-10-19 15:58:52	2026-10-19 16:00:04
+830	830	LOT-000830	2027-05-19	98	2026-10-19 15:58:52	2026-10-19 15:59:53
+803	803	LOT-000803	2027-09-19	63	2026-10-19 15:58:52	2026-10-19 16:00:04
+791	791	LOT-000791	2028-04-19	142	2026-10-19 15:58:52	2026-10-19 16:00:08
+850	850	LOT-000850	2028-02-19	139	2026-10-19 15:58:52	2026-10-19 15:59:28
+840	840	LOT-000840	2027-05-19	87	2026-10-19 15:58:52	2026-10-19 16:00:06
+855	855	LOT-000855	2028-03-19	149	2026-10-19 15:58:52	2026-10-19 15:59:56
+825	825	LOT-000825	2027-03-19	44	2026-10-19 15:58:52	2026-10-19 15:59:55
+845	845	LOT-000845	2028-01-19	60	2026-10-19 15:58:52	2026-10-19 15:59:00
+785	785	LOT-000785	2028-10-19	60	2026-10-19 15:58:52	2026-10-19 16:00:08
+822	822	LOT-000822	2027-05-19	132	2026-10-19 15:58:52	2026-10-19 16:00:07
+868	868	LOT-000868	2028-08-19	63	2026-10-19 15:58:52	2026-10-19 16:00:07
+847	847	LOT-000847	2027-12-19	126	2026-10-19 15:58:52	2026-10-19 15:59:32
+844	844	LOT-000844	2028-06-19	49	2026-10-19 15:58:52	2026-10-19 15:59:50
+842	842	LOT-000842	2028-04-19	177	2026-10-19 15:58:52	2026-10-19 16:00:07
+833	833	LOT-000833	2027-10-19	127	2026-10-19 15:58:52	2026-10-19 15:59:50
+815	815	LOT-000815	2027-10-19	62	2026-10-19 15:58:52	2026-10-19 15:59:59
+857	857	LOT-000857	2028-10-19	176	2026-10-19 15:58:52	2026-10-19 15:59:01
+854	854	LOT-000854	2027-03-19	31	2026-10-19 15:58:52	2026-10-19 15:59:35
+820	820	LOT-000820	2027-05-19	154	2026-10-19 15:58:52	2026-10-19 16:00:09
+859	859	LOT-000859	2028-05-19	130	2026-10-19 15:58:52	2026-10-19 16:00:02
+787	787	LOT-000787	2027-10-19	47	2026-10-19 15:58:52	2026-10-19 16:00:02
+784	784	LOT-000784	2028-10-19	190	2026-10-19 15:58:52	2026-10-19 15:59:52
+824	824	LOT-000824	2027-02-19	33	2026-10-19 15:58:52	2026-10-19 16:00:10
+821	821	LOT-000821	2027-02-19	61	2026-10-19 15:58:52	2026-10-19 15:59:24
+799	799	LOT-000799	2028-08-19	159	2026-10-19 15:58:52	2026-10-19 16:00:02
+819	819	LOT-000819	2027-10-19	31	2026-10-19 15:58:52	2026-10-19 16:00:03
+780	780	LOT-000780	2028-08-19	33	2026-10-19 15:58:52	2026-10-19 15:59:19
+798	798	LOT-000798	2027-03-19	11	2026-10-19 15:58:52	2026-10-19 15:59:28
+872	872	LOT-000872	2027-11-19	154	2026-10-19 15:58:52	2026-10-19 15:59:03
+860	860	LOT-000860	2027-01-19	18	2026-10-19 15:58:52	2026-10-19 16:00:06
+846	846	LOT-000846	2027-03-19	175	2026-10-19 15:58:52	2026-10-19 15:59:22
+834	834	LOT-000834	2028-08-19	107	2026-10-19 15:58:52	2026-10-19 15:59:57
+831	831	LOT-000831	2028-01-19	144	2026-10-19 15:58:52	2026-10-19 16:00:04
+782	782	LOT-000782	2027-11-19	140	2026-10-19 15:58:52	2026-10-19 16:00:08
+866	866	LOT-000866	2027-09-19	88	2026-10-19 15:58:52	2026-10-19 15:59:59
+801	801	LOT-000801	2028-10-19	138	2026-10-19 15:58:52	2026-10-19 15:59:58
+873	873	LOT-000873	2027-03-19	37	2026-10-19 15:58:52	2026-10-19 16:00:11
+826	826	LOT-000826	2027-11-19	81	2026-10-19 15:58:52	2026-10-19 16:00:04
+838	838	LOT-000838	2028-07-19	155	2026-10-19 15:58:52	2026-10-19 15:59:10
+853	853	LOT-000853	2027-03-19	184	2026-10-19 15:58:52	2026-10-19 16:00:02
+789	789	LOT-000789	2028-08-19	112	2026-10-19 15:58:52	2026-10-19 16:00:09
+839	839	LOT-000839	2028-05-19	129	2026-10-19 15:58:52	2026-10-19 15:59:12
+816	816	LOT-000816	2028-06-19	149	2026-10-19 15:58:52	2026-10-19 15:59:21
+786	786	LOT-000786	2028-02-19	58	2026-10-19 15:58:52	2026-10-19 16:00:06
+835	835	LOT-000835	2027-03-19	154	2026-10-19 15:58:52	2026-10-19 15:59:59
+788	788	LOT-000788	2028-08-19	159	2026-10-19 15:58:52	2026-10-19 15:59:19
+777	777	LOT-000777	2027-04-19	133	2026-10-19 15:58:52	2026-10-19 16:00:05
+858	858	LOT-000858	2027-04-19	121	2026-10-19 15:58:52	2026-10-19 15:59:33
+827	827	LOT-000827	2027-06-19	61	2026-10-19 15:58:52	2026-10-19 16:00:07
+865	865	LOT-000865	2027-07-19	57	2026-10-19 15:58:52	2026-10-19 16:00:06
+813	813	LOT-000813	2027-06-19	111	2026-10-19 15:58:52	2026-10-19 15:59:45
+790	790	LOT-000790	2027-11-19	31	2026-10-19 15:58:52	2026-10-19 15:59:50
+805	805	LOT-000805	2028-02-19	125	2026-10-19 15:58:52	2026-10-19 16:00:08
+781	781	LOT-000781	2028-09-19	103	2026-10-19 15:58:52	2026-10-19 15:59:28
+836	836	LOT-000836	2027-10-19	93	2026-10-19 15:58:52	2026-10-19 16:00:07
+828	828	LOT-000828	2027-12-19	125	2026-10-19 15:58:52	2026-10-19 15:59:53
+814	814	LOT-000814	2027-09-19	105	2026-10-19 15:58:52	2026-10-19 15:59:18
+809	809	LOT-000809	2028-07-19	66	2026-10-19 15:58:52	2026-10-19 15:59:56
+843	843	LOT-000843	2028-01-19	143	2026-10-19 15:58:52	2026-10-19 15:59:18
+800	800	LOT-000800	2028-07-19	184	2026-10-19 15:58:52	2026-10-19 15:59:51
+861	861	LOT-000861	2028-01-19	147	2026-10-19 15:58:52	2026-10-19 15:59:37
+778	778	LOT-000778	2027-05-19	133	2026-10-19 15:58:52	2026-10-19 15:59:51
+848	848	LOT-000848	2028-03-19	156	2026-10-19 15:58:52	2026-10-19 16:00:01
+837	837	LOT-000837	2027-12-19	177	2026-10-19 15:58:52	2026-10-19 15:59:22
+871	871	LOT-000871	2028-09-19	47	2026-10-19 15:58:52	2026-10-19 16:00:00
+794	794	LOT-000794	2027-03-19	29	2026-10-19 15:58:52	2026-10-19 15:59:52
+797	797	LOT-000797	2028-03-19	157	2026-10-19 15:58:52	2026-10-19 15:59:35
+862	862	LOT-000862	2028-05-19	51	2026-10-19 15:58:52	2026-10-19 16:00:09
+856	856	LOT-000856	2027-01-19	178	2026-10-19 15:58:52	2026-10-19 15:59:54
+870	870	LOT-000870	2028-07-19	136	2026-10-19 15:58:52	2026-10-19 15:59:58
+841	841	LOT-000841	2028-03-19	23	2026-10-19 15:58:52	2026-10-19 16:00:09
+863	863	LOT-000863	2027-07-19	157	2026-10-19 15:58:52	2026-10-19 15:59:37
+802	802	LOT-000802	2027-11-19	81	2026-10-19 15:58:52	2026-10-19 15:59:58
+808	808	LOT-000808	2027-09-19	114	2026-10-19 15:58:52	2026-10-19 15:59:52
+817	817	LOT-000817	2028-10-19	178	2026-10-19 15:58:52	2026-10-19 15:59:53
+818	818	LOT-000818	2028-09-19	91	2026-10-19 15:58:52	2026-10-19 16:00:02
+812	812	LOT-000812	2028-09-19	78	2026-10-19 15:58:52	2026-10-19 15:59:59
+888	888	LOT-000888	2028-08-19	65	2026-10-19 15:58:52	2026-10-19 15:58:52
+966	966	LOT-000966	2028-07-19	151	2026-10-19 15:58:53	2026-10-19 15:58:53
+881	881	LOT-000881	2028-07-19	34	2026-10-19 15:58:52	2026-10-19 16:00:09
+886	886	LOT-000886	2027-09-19	30	2026-10-19 15:58:52	2026-10-19 15:59:59
+959	959	LOT-000959	2028-08-19	174	2026-10-19 15:58:53	2026-10-19 15:59:52
+883	883	LOT-000883	2028-04-19	94	2026-10-19 15:58:52	2026-10-19 16:00:10
+908	908	LOT-000908	2027-01-19	139	2026-10-19 15:58:52	2026-10-19 16:00:06
+907	907	LOT-000907	2027-10-19	141	2026-10-19 15:58:52	2026-10-19 16:00:02
+889	889	LOT-000889	2027-04-19	65	2026-10-19 15:58:52	2026-10-19 15:59:54
+877	877	LOT-000877	2027-09-19	79	2026-10-19 15:58:52	2026-10-19 15:59:26
+963	963	LOT-000963	2027-08-19	77	2026-10-19 15:58:53	2026-10-19 15:59:21
+948	948	LOT-000948	2028-07-19	112	2026-10-19 15:58:52	2026-10-19 15:59:30
+944	944	LOT-000944	2028-05-19	83	2026-10-19 15:58:52	2026-10-19 16:00:00
+934	934	LOT-000934	2027-10-19	102	2026-10-19 15:58:52	2026-10-19 16:00:06
+894	894	LOT-000894	2028-09-19	177	2026-10-19 15:58:52	2026-10-19 15:59:51
+921	921	LOT-000921	2027-04-19	46	2026-10-19 15:58:52	2026-10-19 16:00:01
+950	950	LOT-000950	2028-10-19	38	2026-10-19 15:58:52	2026-10-19 16:00:11
+936	936	LOT-000936	2027-06-19	66	2026-10-19 15:58:52	2026-10-19 16:00:01
+900	900	LOT-000900	2027-09-19	119	2026-10-19 15:58:52	2026-10-19 16:00:04
+912	912	LOT-000912	2028-05-19	125	2026-10-19 15:58:52	2026-10-19 16:00:08
+967	967	LOT-000967	2027-09-19	35	2026-10-19 15:58:53	2026-10-19 16:00:09
+945	945	LOT-000945	2028-10-19	65	2026-10-19 15:58:52	2026-10-19 16:00:08
+947	947	LOT-000947	2028-04-19	105	2026-10-19 15:58:52	2026-10-19 16:00:09
+929	929	LOT-000929	2027-03-19	111	2026-10-19 15:58:52	2026-10-19 15:59:22
+899	899	LOT-000899	2028-08-19	145	2026-10-19 15:58:52	2026-10-19 15:59:51
+901	901	LOT-000901	2027-05-19	126	2026-10-19 15:58:52	2026-10-19 15:59:52
+955	955	LOT-000955	2027-11-19	168	2026-10-19 15:58:52	2026-10-19 16:00:04
+891	891	LOT-000891	2028-05-19	53	2026-10-19 15:58:52	2026-10-19 15:59:26
+882	882	LOT-000882	2027-04-19	30	2026-10-19 15:58:52	2026-10-19 15:59:53
+953	953	LOT-000953	2028-08-19	119	2026-10-19 15:58:52	2026-10-19 15:59:01
+897	897	LOT-000897	2027-11-19	174	2026-10-19 15:58:52	2026-10-19 15:59:01
+958	958	LOT-000958	2028-06-19	114	2026-10-19 15:58:53	2026-10-19 16:00:09
+878	878	LOT-000878	2027-11-19	174	2026-10-19 15:58:52	2026-10-19 16:00:07
+905	905	LOT-000905	2027-09-19	87	2026-10-19 15:58:52	2026-10-19 15:59:59
+915	915	LOT-000915	2028-08-19	182	2026-10-19 15:58:52	2026-10-19 15:59:21
+956	956	LOT-000956	2028-01-19	55	2026-10-19 15:58:52	2026-10-19 16:00:08
+951	951	LOT-000951	2027-09-19	121	2026-10-19 15:58:52	2026-10-19 15:59:51
+965	965	LOT-000965	2028-10-19	111	2026-10-19 15:58:53	2026-10-19 16:00:05
+961	961	LOT-000961	2027-06-19	9	2026-10-19 15:58:53	2026-10-19 16:00:00
+964	964	LOT-000964	2028-08-19	111	2026-10-19 15:58:53	2026-10-19 15:59:14
+879	879	LOT-000879	2027-11-19	149	2026-10-19 15:58:52	2026-10-19 15:59:53
+970	970	LOT-000970	2027-11-19	72	2026-10-19 15:58:53	2026-10-19 16:00:05
+931	931	LOT-000931	2027-08-19	67	2026-10-19 15:58:52	2026-10-19 16:00:10
+885	885	LOT-000885	2028-03-19	102	2026-10-19 15:58:52	2026-10-19 16:00:03
+903	903	LOT-000903	2028-06-19	34	2026-10-19 15:58:52	2026-10-19 16:00:09
+880	880	LOT-000880	2027-02-19	149	2026-10-19 15:58:52	2026-10-19 15:59:54
+941	941	LOT-000941	2027-05-19	162	2026-10-19 15:58:52	2026-10-19 16:00:11
+919	919	LOT-000919	2027-06-19	143	2026-10-19 15:58:52	2026-10-19 15:59:55
+962	962	LOT-000962	2028-03-19	32	2026-10-19 15:58:53	2026-10-19 16:00:01
+935	935	LOT-000935	2028-09-19	40	2026-10-19 15:58:52	2026-10-19 15:59:52
+952	952	LOT-000952	2028-04-19	88	2026-10-19 15:58:52	2026-10-19 15:59:54
+942	942	LOT-000942	2028-06-19	98	2026-10-19 15:58:52	2026-10-19 15:59:54
+926	926	LOT-000926	2027-12-19	16	2026-10-19 15:58:52	2026-10-19 15:59:47
+969	969	LOT-000969	2028-09-19	29	2026-10-19 15:58:53	2026-10-19 16:00:11
+896	896	LOT-000896	2027-11-19	69	2026-10-19 15:58:52	2026-10-19 16:00:07
+924	924	LOT-000924	2027-07-19	117	2026-10-19 15:58:52	2026-10-19 15:59:58
+957	957	LOT-000957	2027-09-19	102	2026-10-19 15:58:52	2026-10-19 15:59:51
+876	876	LOT-000876	2027-10-19	79	2026-10-19 15:58:52	2026-10-19 15:59:10
+922	922	LOT-000922	2028-06-19	136	2026-10-19 15:58:52	2026-10-19 15:59:32
+875	875	LOT-000875	2027-08-19	98	2026-10-19 15:58:52	2026-10-19 16:00:04
+928	928	LOT-000928	2027-07-19	65	2026-10-19 15:58:52	2026-10-19 16:00:08
+940	940	LOT-000940	2028-03-19	161	2026-10-19 15:58:52	2026-10-19 15:59:26
+918	918	LOT-000918	2028-04-19	117	2026-10-19 15:58:52	2026-10-19 16:00:11
+910	910	LOT-000910	2028-08-19	156	2026-10-19 15:58:52	2026-10-19 16:00:11
+892	892	LOT-000892	2027-07-19	142	2026-10-19 15:58:52	2026-10-19 15:59:54
+917	917	LOT-000917	2027-08-19	150	2026-10-19 15:58:52	2026-10-19 16:00:04
+920	920	LOT-000920	2027-06-19	128	2026-10-19 15:58:52	2026-10-19 15:59:32
+933	933	LOT-000933	2028-10-19	44	2026-10-19 15:58:52	2026-10-19 15:59:56
+911	911	LOT-000911	2027-04-19	19	2026-10-19 15:58:52	2026-10-19 15:59:53
+914	914	LOT-000914	2028-08-19	154	2026-10-19 15:58:52	2026-10-19 16:00:08
+904	904	LOT-000904	2027-04-19	174	2026-10-19 15:58:52	2026-10-19 15:59:19
+954	954	LOT-000954	2027-01-19	28	2026-10-19 15:58:52	2026-10-19 16:00:08
+890	890	LOT-000890	2028-08-19	123	2026-10-19 15:58:52	2026-10-19 16:00:03
+895	895	LOT-000895	2028-01-19	143	2026-10-19 15:58:52	2026-10-19 15:59:31
+909	909	LOT-000909	2027-03-19	138	2026-10-19 15:58:52	2026-10-19 15:59:58
+893	893	LOT-000893	2027-12-19	30	2026-10-19 15:58:52	2026-10-19 16:00:09
+898	898	LOT-000898	2028-06-19	106	2026-10-19 15:58:52	2026-10-19 16:00:04
+937	937	LOT-000937	2027-04-19	92	2026-10-19 15:58:52	2026-10-19 15:59:32
+874	874	LOT-000874	2028-03-19	143	2026-10-19 15:58:52	2026-10-19 15:59:31
+923	923	LOT-000923	2027-12-19	141	2026-10-19 15:58:52	2026-10-19 16:00:10
+960	960	LOT-000960	2027-09-19	43	2026-10-19 15:58:53	2026-10-19 16:00:03
+946	946	LOT-000946	2027-09-19	47	2026-10-19 15:58:52	2026-10-19 15:59:34
+968	968	LOT-000968	2027-04-19	128	2026-10-19 15:58:53	2026-10-19 16:00:09
+927	927	LOT-000927	2028-06-19	32	2026-10-19 15:58:52	2026-10-19 16:00:07
+884	884	LOT-000884	2028-06-19	86	2026-10-19 15:58:52	2026-10-19 16:00:10
+913	913	LOT-000913	2027-06-19	39	2026-10-19 15:58:52	2026-10-19 15:59:50
+902	902	LOT-000902	2027-09-19	143	2026-10-19 15:58:52	2026-10-19 16:00:06
+939	939	LOT-000939	2028-10-19	163	2026-10-19 15:58:52	2026-10-19 16:00:06
+949	949	LOT-000949	2027-10-19	134	2026-10-19 15:58:52	2026-10-19 16:00:09
+943	943	LOT-000943	2028-10-19	107	2026-10-19 15:58:52	2026-10-19 16:00:06
+930	930	LOT-000930	2028-01-19	137	2026-10-19 15:58:52	2026-10-19 16:00:11
+386	386	LOT-000386	2028-07-19	45	2026-10-19 15:58:50	2026-10-19 16:00:08
+989	989	LOT-000989	2028-05-19	142	2026-10-19 15:58:53	2026-10-19 16:00:05
+716	716	LOT-000716	2027-03-19	180	2026-10-19 15:58:51	2026-10-19 15:59:24
+305	305	LOT-000305	2027-03-19	88	2026-10-19 15:58:50	2026-10-19 16:00:08
+7	7	LOT-000007	2028-04-19	0	2026-10-19 15:58:48	2026-10-19 15:58:55
+987	987	LOT-000987	2027-11-19	128	2026-10-19 15:58:53	2026-10-19 15:59:06
+224	224	LOT-000224	2027-04-19	109	2026-10-19 15:58:49	2026-10-19 15:58:55
+767	767	LOT-000767	2028-07-19	98	2026-10-19 15:58:52	2026-10-19 15:59:51
+49	49	LOT-000049	2027-11-19	0	2026-10-19 15:58:48	2026-10-19 15:58:56
+1	1	LOT-000001	2027-01-19	0	2026-10-19 15:58:48	2026-10-19 15:58:57
+977	977	LOT-000977	2027-06-19	109	2026-10-19 15:58:53	2026-10-19 16:00:02
+172	172	LOT-000172	2027-04-19	92	2026-10-19 15:58:49	2026-10-19 15:59:34
+976	976	LOT-000976	2028-03-19	76	2026-10-19 15:58:53	2026-10-19 15:59:55
+986	986	LOT-000986	2027-06-19	66	2026-10-19 15:58:53	2026-10-19 15:59:27
+975	975	LOT-000975	2028-07-19	106	2026-10-19 15:58:53	2026-10-19 15:58:57
+656	656	LOT-000656	2028-10-19	152	2026-10-19 15:58:51	2026-10-19 16:00:02
+829	829	LOT-000829	2027-04-19	36	2026-10-19 15:58:52	2026-10-19 15:59:38
+988	988	LOT-000988	2028-01-19	116	2026-10-19 15:58:53	2026-10-19 15:59:45
+331	331	LOT-000331	2028-01-19	108	2026-10-19 15:58:50	2026-10-19 15:59:55
+974	974	LOT-000974	2027-10-19	39	2026-10-19 15:58:53	2026-10-19 16:00:01
+985	985	LOT-000985	2027-03-19	134	2026-10-19 15:58:53	2026-10-19 16:00:03
+577	577	LOT-000577	2027-10-19	130	2026-10-19 15:58:51	2026-10-19 16:00:10
+226	226	LOT-000226	2027-11-19	132	2026-10-19 15:58:49	2026-10-19 16:00:00
+537	537	LOT-000537	2027-11-19	35	2026-10-19 15:58:51	2026-10-19 16:00:07
+37	37	LOT-000037	2028-06-19	0	2026-10-19 15:58:48	2026-10-19 15:59:01
+997	997	LOT-000997	2027-03-19	58	2026-10-19 15:58:53	2026-10-19 16:00:00
+832	832	LOT-000832	2027-10-19	131	2026-10-19 15:58:52	2026-10-19 16:00:08
+629	629	LOT-000629	2027-08-19	98	2026-10-19 15:58:51	2026-10-19 15:59:27
+590	590	LOT-000590	2027-09-19	69	2026-10-19 15:58:51	2026-10-19 16:00:10
+744	744	LOT-000744	2027-09-19	143	2026-10-19 15:58:52	2026-10-19 15:59:56
+938	938	LOT-000938	2028-03-19	0	2026-10-19 15:58:52	2026-10-19 16:00:10
+215	215	LOT-000215	2028-04-19	172	2026-10-19 15:58:49	2026-10-19 16:00:07
+389	389	LOT-000389	2028-08-19	5	2026-10-19 15:58:50	2026-10-19 15:59:31
+154	154	LOT-000154	2028-05-19	57	2026-10-19 15:58:49	2026-10-19 15:59:59
+983	983	LOT-000983	2027-11-19	70	2026-10-19 15:58:53	2026-10-19 16:00:11
+131	131	LOT-000131	2027-07-19	37	2026-10-19 15:58:49	2026-10-19 16:00:02
+638	638	LOT-000638	2027-06-19	94	2026-10-19 15:58:51	2026-10-19 15:59:36
+972	972	LOT-000972	2027-08-19	112	2026-10-19 15:58:53	2026-10-19 15:59:06
+978	978	LOT-000978	2028-05-19	167	2026-10-19 15:58:53	2026-10-19 15:59:18
+906	906	LOT-000906	2027-05-19	153	2026-10-19 15:58:52	2026-10-19 16:00:11
+418	418	LOT-000418	2027-12-19	1	2026-10-19 15:58:50	2026-10-19 15:59:26
+262	262	LOT-000262	2028-07-19	137	2026-10-19 15:58:49	2026-10-19 15:59:55
+1000	1000	LOT-001000	2028-04-19	116	2026-10-19 15:58:53	2026-10-19 15:59:52
+811	811	LOT-000811	2028-08-19	145	2026-10-19 15:58:52	2026-10-19 15:59:47
+981	981	LOT-000981	2028-06-19	140	2026-10-19 15:58:53	2026-10-19 16:00:00
+74	74	LOT-000074	2028-03-19	43	2026-10-19 15:58:49	2026-10-19 16:00:05
+509	509	LOT-000509	2028-06-19	20	2026-10-19 15:58:51	2026-10-19 16:00:09
+134	134	LOT-000134	2028-05-19	32	2026-10-19 15:58:49	2026-10-19 15:59:14
+994	994	LOT-000994	2028-03-19	128	2026-10-19 15:58:53	2026-10-19 15:59:51
+916	916	LOT-000916	2027-02-19	126	2026-10-19 15:58:52	2026-10-19 16:00:10
+712	712	LOT-000712	2028-10-19	113	2026-10-19 15:58:51	2026-10-19 15:59:56
+260	260	LOT-000260	2027-08-19	81	2026-10-19 15:58:49	2026-10-19 15:59:56
+982	982	LOT-000982	2028-08-19	154	2026-10-19 15:58:53	2026-10-19 15:59:22
+932	932	LOT-000932	2028-10-19	162	2026-10-19 15:58:52	2026-10-19 16:00:02
+998	998	LOT-000998	2027-05-19	12	2026-10-19 15:58:53	2026-10-19 15:59:56
+995	995	LOT-000995	2028-07-19	103	2026-10-19 15:58:53	2026-10-19 16:00:05
+406	406	LOT-000406	2028-09-19	62	2026-10-19 15:58:50	2026-10-19 16:00:00
+991	991	LOT-000991	2027-03-19	72	2026-10-19 15:58:53	2026-10-19 15:59:58
+810	810	LOT-000810	2027-09-19	139	2026-10-19 15:58:52	2026-10-19 16:00:02
+615	615	LOT-000615	2027-05-19	177	2026-10-19 15:58:51	2026-10-19 15:59:29
+971	971	LOT-000971	2028-04-19	6	2026-10-19 15:58:53	2026-10-19 15:59:55
+990	990	LOT-000990	2028-04-19	161	2026-10-19 15:58:53	2026-10-19 15:59:26
+28	28	LOT-000028	2027-07-19	0	2026-10-19 15:58:48	2026-10-19 15:59:52
+457	457	LOT-000457	2027-12-19	37	2026-10-19 15:58:50	2026-10-19 15:59:59
+992	992	LOT-000992	2028-01-19	102	2026-10-19 15:58:53	2026-10-19 16:00:04
+849	849	LOT-000849	2028-07-19	177	2026-10-19 15:58:52	2026-10-19 15:59:57
+555	555	LOT-000555	2027-03-19	12	2026-10-19 15:58:51	2026-10-19 16:00:08
+993	993	LOT-000993	2027-11-19	174	2026-10-19 15:58:53	2026-10-19 16:00:11
+887	887	LOT-000887	2028-01-19	130	2026-10-19 15:58:52	2026-10-19 16:00:11
+147	147	LOT-000147	2027-01-19	184	2026-10-19 15:58:49	2026-10-19 15:59:26
+551	551	LOT-000551	2028-07-19	134	2026-10-19 15:58:51	2026-10-19 15:59:53
+720	720	LOT-000720	2027-09-19	57	2026-10-19 15:58:51	2026-10-19 16:00:10
+984	984	LOT-000984	2028-05-19	87	2026-10-19 15:58:53	2026-10-19 15:59:35
+980	980	LOT-000980	2027-10-19	83	2026-10-19 15:58:53	2026-10-19 15:59:55
+434	434	LOT-000434	2028-09-19	109	2026-10-19 15:58:50	2026-10-19 16:00:06
+851	851	LOT-000851	2028-01-19	87	2026-10-19 15:58:52	2026-10-19 15:59:50
+750	750	LOT-000750	2028-02-19	145	2026-10-19 15:58:52	2026-10-19 16:00:04
+999	999	LOT-000999	2028-10-19	50	2026-10-19 15:58:53	2026-10-19 16:00:06
+139	139	LOT-000139	2027-11-19	110	2026-10-19 15:58:49	2026-10-19 15:59:50
+973	973	LOT-000973	2027-06-19	39	2026-10-19 15:58:53	2026-10-19 16:00:08
+336	336	LOT-000336	2028-07-19	148	2026-10-19 15:58:50	2026-10-19 16:00:08
+459	459	LOT-000459	2027-11-19	68	2026-10-19 15:58:50	2026-10-19 15:59:55
+925	925	LOT-000925	2027-02-19	28	2026-10-19 15:58:52	2026-10-19 15:59:52
+383	383	LOT-000383	2027-04-19	21	2026-10-19 15:58:50	2026-10-19 15:59:54
+677	677	LOT-000677	2027-01-19	154	2026-10-19 15:58:51	2026-10-19 16:00:08
+249	249	LOT-000249	2027-07-19	169	2026-10-19 15:58:49	2026-10-19 16:00:05
+514	514	LOT-000514	2027-04-19	29	2026-10-19 15:58:51	2026-10-19 16:00:06
+996	996	LOT-000996	2027-06-19	28	2026-10-19 15:58:53	2026-10-19 16:00:08
+349	349	LOT-000349	2027-01-19	30	2026-10-19 15:58:50	2026-10-19 16:00:08
+979	979	LOT-000979	2027-06-19	95	2026-10-19 15:58:53	2026-10-19 16:00:08
 \.
 
 
 --
--- Data for Name: medicamentos; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: medicamentos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.medicamentos (id, categoria_id, laboratorio_id, nombre_comercial, principio_activo, presentacion, precio_venta, stock_minimo, created_at, updated_at) FROM stdin;
-4	4	9	Panadol	Paracetamol	Tabletas 500mg x 20	8.50	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-5	4	4	Advil	Ibuprofeno	Cápsulas 400mg x 10	12.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-6	4	5	Aspirina	Ácido acetilsalicílico	Tabletas 500mg x 20	6.50	20	2026-10-18 21:30:06	2026-10-18 21:30:06
-7	5	11	Amoxil	Amoxicilina	Cápsulas 500mg x 21	25.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-8	5	14	Azitromicina MK	Azitromicina	Tabletas 500mg x 3	18.50	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-9	5	13	Ciprofloxacino Genfar	Ciprofloxacino	Tabletas 500mg x 10	22.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-10	5	14	Claritromicina MK	Claritromicina	Tabletas 500mg x 14	35.00	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-11	6	13	Diclofenaco Genfar	Diclofenaco sódico	Tabletas 50mg x 20	7.50	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-12	6	14	Naproxeno MK	Naproxeno sódico	Tabletas 275mg x 10	9.00	12	2026-10-18 21:30:06	2026-10-18 21:30:06
-13	6	13	Dexametasona Genfar	Dexametasona	Tabletas 0.5mg x 30	11.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-14	7	14	Losartán MK	Losartán potásico	Tabletas 50mg x 30	15.00	20	2026-10-18 21:30:06	2026-10-18 21:30:06
-15	7	13	Enalapril Genfar	Enalapril maleato	Tabletas 20mg x 30	12.50	20	2026-10-18 21:30:06	2026-10-18 21:30:06
-16	7	14	Amlodipino MK	Amlodipino besilato	Tabletas 5mg x 30	14.00	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-17	8	5	Vitamina C Bayer	Ácido ascórbico	Tabletas efervescentes 1g x 10	10.00	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-18	8	4	Centrum	Multivitamínico	Tabletas x 30	45.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-19	8	14	Complejo B MK	Complejo vitamínico B	Tabletas x 30	12.00	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-20	9	13	Loratadina Genfar	Loratadina	Tabletas 10mg x 10	5.50	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-21	9	14	Cetirizina MK	Cetirizina	Tabletas 10mg x 10	6.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-22	10	13	Metformina Genfar	Metformina clorhidrato	Tabletas 850mg x 30	8.00	25	2026-10-18 21:30:06	2026-10-18 21:30:06
-23	11	14	Omeprazol MK	Omeprazol	Cápsulas 20mg x 14	9.50	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-24	11	14	Ranitidina MK	Ranitidina	Tabletas 150mg x 20	7.00	12	2026-10-18 21:30:06	2026-10-18 21:30:06
-25	11	14	Metoclopramida MK	Metoclopramida	Tabletas 10mg x 20	6.50	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-26	12	13	Clotrimazol Genfar	Clotrimazol	Crema 1% x 20g	8.50	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-27	12	13	Hidrocortisona Genfar	Hidrocortisona	Crema 1% x 15g	10.00	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-28	13	14	Salbutamol MK	Salbutamol	Inhalador 100mcg x 200 dosis	35.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
-29	4	13	Ibuprofeno Genfar	Ibuprofeno	Suspensión 100mg/5mL x 120mL	11.00	12	2026-10-18 21:30:06	2026-10-18 21:30:06
-30	4	13	Acetaminofén Genfar	Acetaminofén	Jarabe 150mg/5mL x 120mL	9.00	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-31	8	15	Glucosamina Bagó	Glucosamina sulfato	Sobres 1500mg x 15	28.00	8	2026-10-18 21:30:06	2026-10-18 21:30:06
-32	7	13	Simvastatina Genfar	Simvastatina	Tabletas 20mg x 30	16.00	15	2026-10-18 21:30:06	2026-10-18 21:30:06
-33	11	13	Fluoxetina Genfar	Fluoxetina	Cápsulas 20mg x 14	14.00	10	2026-10-18 21:30:06	2026-10-18 21:30:06
+1	1	6	Panadol	Paracetamol	Tabletas 500mg x 20	8.50	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+2	1	1	Advil	Ibuprofeno	Cápsulas 400mg x 10	12.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+3	1	2	Aspirina	Ácido acetilsalicílico	Tabletas 500mg x 20	6.50	20	2026-10-19 15:58:40	2026-10-19 15:58:40
+4	2	8	Amoxil	Amoxicilina	Cápsulas 500mg x 21	25.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+5	2	11	Azitromicina MK	Azitromicina	Tabletas 500mg x 3	18.50	8	2026-10-19 15:58:40	2026-10-19 15:58:40
+6	2	10	Ciprofloxacino Genfar	Ciprofloxacino	Tabletas 500mg x 10	22.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+7	2	11	Claritromicina MK	Claritromicina	Tabletas 500mg x 14	35.00	8	2026-10-19 15:58:40	2026-10-19 15:58:40
+8	3	10	Diclofenaco Genfar	Diclofenaco sódico	Tabletas 50mg x 20	7.50	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+9	3	11	Naproxeno MK	Naproxeno sódico	Tabletas 275mg x 10	9.00	12	2026-10-19 15:58:40	2026-10-19 15:58:40
+10	3	10	Dexametasona Genfar	Dexametasona	Tabletas 0.5mg x 30	11.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+11	4	11	Losartán MK	Losartán potásico	Tabletas 50mg x 30	15.00	20	2026-10-19 15:58:40	2026-10-19 15:58:40
+12	4	10	Enalapril Genfar	Enalapril maleato	Tabletas 20mg x 30	12.50	20	2026-10-19 15:58:40	2026-10-19 15:58:40
+13	4	11	Amlodipino MK	Amlodipino besilato	Tabletas 5mg x 30	14.00	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+14	5	2	Vitamina C Bayer	Ácido ascórbico	Tabletas efervescentes 1g x 10	10.00	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+15	5	1	Centrum	Multivitamínico	Tabletas x 30	45.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+16	5	11	Complejo B MK	Complejo vitamínico B	Tabletas x 30	12.00	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+17	6	10	Loratadina Genfar	Loratadina	Tabletas 10mg x 10	5.50	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+18	6	11	Cetirizina MK	Cetirizina	Tabletas 10mg x 10	6.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+19	7	10	Metformina Genfar	Metformina clorhidrato	Tabletas 850mg x 30	8.00	25	2026-10-19 15:58:40	2026-10-19 15:58:40
+20	8	11	Omeprazol MK	Omeprazol	Cápsulas 20mg x 14	9.50	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+21	8	11	Ranitidina MK	Ranitidina	Tabletas 150mg x 20	7.00	12	2026-10-19 15:58:40	2026-10-19 15:58:40
+22	8	11	Metoclopramida MK	Metoclopramida	Tabletas 10mg x 20	6.50	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+23	9	10	Clotrimazol Genfar	Clotrimazol	Crema 1% x 20g	8.50	8	2026-10-19 15:58:40	2026-10-19 15:58:40
+24	9	10	Hidrocortisona Genfar	Hidrocortisona	Crema 1% x 15g	10.00	8	2026-10-19 15:58:40	2026-10-19 15:58:40
+25	10	11	Salbutamol MK	Salbutamol	Inhalador 100mcg x 200 dosis	35.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+26	1	10	Ibuprofeno Genfar	Ibuprofeno	Suspensión 100mg/5mL x 120mL	11.00	12	2026-10-19 15:58:40	2026-10-19 15:58:40
+27	1	10	Acetaminofén Genfar	Acetaminofén	Jarabe 150mg/5mL x 120mL	9.00	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+28	5	12	Glucosamina Bagó	Glucosamina sulfato	Sobres 1500mg x 15	28.00	8	2026-10-19 15:58:40	2026-10-19 15:58:40
+29	4	10	Simvastatina Genfar	Simvastatina	Tabletas 20mg x 30	16.00	15	2026-10-19 15:58:40	2026-10-19 15:58:40
+30	8	10	Fluoxetina Genfar	Fluoxetina	Cápsulas 20mg x 14	14.00	10	2026-10-19 15:58:40	2026-10-19 15:58:40
+31	1	3	Panadol-001	Paracetamol	Tabletas 500mg x 20	145.18	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+32	3	9	Advil-002	Ibuprofeno	Cápsulas 400mg x 10	61.43	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+33	6	8	Amoxil-003	Amoxicilina	Cápsulas 500mg x 21	86.16	19	2026-10-19 15:58:45	2026-10-19 15:58:45
+34	10	10	Aspirina-004	Ácido acetilsalicílico	Tabletas 500mg x 20	50.37	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+35	3	6	Losartán MK-005	Losartán potásico	Tabletas 50mg x 30	122.01	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+36	10	11	Metformina Genfar-006	Metformina clorhidrato	Tabletas 850mg x 30	105.61	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+37	3	9	Omeprazol MK-007	Omeprazol	Cápsulas 20mg x 14	26.18	24	2026-10-19 15:58:45	2026-10-19 15:58:45
+38	4	1	Loratadina Genfar-008	Loratadina	Tabletas 10mg x 10	10.28	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+39	1	7	Azitromicina MK-009	Azitromicina	Tabletas 500mg x 3	148.59	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+40	1	9	Diclofenaco Genfar-010	Diclofenaco sódico	Tabletas 50mg x 20	72.99	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+41	5	1	Cetirizina MK-011	Cetirizina	Tabletas 10mg x 10	7.03	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+42	10	2	Enalapril Genfar-012	Enalapril maleato	Tabletas 20mg x 30	133.85	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+43	8	7	Vitamina C Bayer-013	Ácido ascórbico	Tabletas efervescentes 1g x 10	81.16	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+44	9	7	Centrum-014	Multivitamínico	Tabletas x 30	125.90	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+45	1	11	Ranitidina MK-015	Ranitidina	Tabletas 150mg x 20	100.91	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+46	2	8	Ciprofloxacino Genfar-016	Ciprofloxacino	Tabletas 500mg x 10	103.35	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+47	7	10	Glucosamina Bagó-017	Glucosamina sulfato	Sobres 1500mg x 15	145.16	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+48	4	7	Naproxeno MK-018	Naproxeno sódico	Tabletas 275mg x 10	21.37	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+49	3	5	Dexametasona Genfar-019	Dexametasona	Tabletas 0.5mg x 30	44.97	5	2026-10-19 15:58:45	2026-10-19 15:58:45
+50	1	8	Salbutamol MK-020	Salbutamol	Inhalador 100mcg x 200 dosis	131.31	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+51	6	3	Panadol-021	Paracetamol	Tabletas 500mg x 20	13.41	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+52	2	9	Advil-022	Ibuprofeno	Cápsulas 400mg x 10	70.38	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+53	9	1	Amoxil-023	Amoxicilina	Cápsulas 500mg x 21	135.26	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+54	10	2	Aspirina-024	Ácido acetilsalicílico	Tabletas 500mg x 20	63.64	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+55	2	10	Losartán MK-025	Losartán potásico	Tabletas 50mg x 30	116.02	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+56	7	3	Metformina Genfar-026	Metformina clorhidrato	Tabletas 850mg x 30	52.86	5	2026-10-19 15:58:45	2026-10-19 15:58:45
+57	6	5	Omeprazol MK-027	Omeprazol	Cápsulas 20mg x 14	44.78	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+58	7	9	Loratadina Genfar-028	Loratadina	Tabletas 10mg x 10	53.33	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+59	6	5	Azitromicina MK-029	Azitromicina	Tabletas 500mg x 3	114.79	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+60	10	3	Diclofenaco Genfar-030	Diclofenaco sódico	Tabletas 50mg x 20	105.56	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+61	3	10	Cetirizina MK-031	Cetirizina	Tabletas 10mg x 10	62.47	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+62	3	10	Enalapril Genfar-032	Enalapril maleato	Tabletas 20mg x 30	71.53	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+63	9	11	Vitamina C Bayer-033	Ácido ascórbico	Tabletas efervescentes 1g x 10	28.87	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+64	10	5	Centrum-034	Multivitamínico	Tabletas x 30	46.12	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+65	7	2	Ranitidina MK-035	Ranitidina	Tabletas 150mg x 20	51.99	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+66	10	6	Ciprofloxacino Genfar-036	Ciprofloxacino	Tabletas 500mg x 10	21.01	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+67	5	7	Glucosamina Bagó-037	Glucosamina sulfato	Sobres 1500mg x 15	134.35	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+68	10	6	Naproxeno MK-038	Naproxeno sódico	Tabletas 275mg x 10	89.24	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+69	3	1	Dexametasona Genfar-039	Dexametasona	Tabletas 0.5mg x 30	15.51	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+70	10	12	Salbutamol MK-040	Salbutamol	Inhalador 100mcg x 200 dosis	25.63	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+71	7	8	Panadol-041	Paracetamol	Tabletas 500mg x 20	75.13	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+72	3	11	Advil-042	Ibuprofeno	Cápsulas 400mg x 10	76.77	19	2026-10-19 15:58:45	2026-10-19 15:58:45
+73	8	1	Amoxil-043	Amoxicilina	Cápsulas 500mg x 21	129.32	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+74	8	3	Aspirina-044	Ácido acetilsalicílico	Tabletas 500mg x 20	129.17	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+75	4	10	Losartán MK-045	Losartán potásico	Tabletas 50mg x 30	45.51	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+76	8	4	Metformina Genfar-046	Metformina clorhidrato	Tabletas 850mg x 30	98.78	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+77	1	4	Omeprazol MK-047	Omeprazol	Cápsulas 20mg x 14	27.40	24	2026-10-19 15:58:45	2026-10-19 15:58:45
+78	9	2	Loratadina Genfar-048	Loratadina	Tabletas 10mg x 10	113.21	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+79	10	4	Azitromicina MK-049	Azitromicina	Tabletas 500mg x 3	79.86	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+80	3	7	Diclofenaco Genfar-050	Diclofenaco sódico	Tabletas 50mg x 20	58.60	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+81	9	2	Cetirizina MK-051	Cetirizina	Tabletas 10mg x 10	88.93	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+82	7	6	Enalapril Genfar-052	Enalapril maleato	Tabletas 20mg x 30	28.80	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+83	3	4	Vitamina C Bayer-053	Ácido ascórbico	Tabletas efervescentes 1g x 10	122.01	19	2026-10-19 15:58:45	2026-10-19 15:58:45
+84	6	10	Centrum-054	Multivitamínico	Tabletas x 30	53.67	7	2026-10-19 15:58:45	2026-10-19 15:58:45
+85	1	8	Ranitidina MK-055	Ranitidina	Tabletas 150mg x 20	37.41	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+86	4	1	Ciprofloxacino Genfar-056	Ciprofloxacino	Tabletas 500mg x 10	65.40	7	2026-10-19 15:58:45	2026-10-19 15:58:45
+87	2	7	Glucosamina Bagó-057	Glucosamina sulfato	Sobres 1500mg x 15	133.68	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+88	4	1	Naproxeno MK-058	Naproxeno sódico	Tabletas 275mg x 10	95.43	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+89	6	10	Dexametasona Genfar-059	Dexametasona	Tabletas 0.5mg x 30	31.99	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+90	7	6	Salbutamol MK-060	Salbutamol	Inhalador 100mcg x 200 dosis	36.99	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+91	6	5	Panadol-061	Paracetamol	Tabletas 500mg x 20	20.88	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+92	9	6	Advil-062	Ibuprofeno	Cápsulas 400mg x 10	53.36	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+93	2	10	Amoxil-063	Amoxicilina	Cápsulas 500mg x 21	19.71	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+94	4	4	Aspirina-064	Ácido acetilsalicílico	Tabletas 500mg x 20	68.09	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+95	8	8	Losartán MK-065	Losartán potásico	Tabletas 50mg x 30	140.71	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+96	10	12	Metformina Genfar-066	Metformina clorhidrato	Tabletas 850mg x 30	68.08	14	2026-10-19 15:58:45	2026-10-19 15:58:45
+97	6	8	Omeprazol MK-067	Omeprazol	Cápsulas 20mg x 14	81.27	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+98	10	5	Loratadina Genfar-068	Loratadina	Tabletas 10mg x 10	113.36	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+99	9	9	Azitromicina MK-069	Azitromicina	Tabletas 500mg x 3	60.50	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+100	10	8	Diclofenaco Genfar-070	Diclofenaco sódico	Tabletas 50mg x 20	58.97	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+101	10	5	Cetirizina MK-071	Cetirizina	Tabletas 10mg x 10	108.56	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+102	3	12	Enalapril Genfar-072	Enalapril maleato	Tabletas 20mg x 30	118.72	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+103	6	7	Vitamina C Bayer-073	Ácido ascórbico	Tabletas efervescentes 1g x 10	107.64	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+104	7	10	Centrum-074	Multivitamínico	Tabletas x 30	51.55	14	2026-10-19 15:58:45	2026-10-19 15:58:45
+105	10	3	Ranitidina MK-075	Ranitidina	Tabletas 150mg x 20	117.35	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+106	4	9	Ciprofloxacino Genfar-076	Ciprofloxacino	Tabletas 500mg x 10	82.40	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+107	7	6	Glucosamina Bagó-077	Glucosamina sulfato	Sobres 1500mg x 15	99.83	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+108	6	1	Naproxeno MK-078	Naproxeno sódico	Tabletas 275mg x 10	8.55	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+109	6	6	Dexametasona Genfar-079	Dexametasona	Tabletas 0.5mg x 30	54.26	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+110	5	1	Salbutamol MK-080	Salbutamol	Inhalador 100mcg x 200 dosis	50.66	24	2026-10-19 15:58:45	2026-10-19 15:58:45
+111	1	8	Panadol-081	Paracetamol	Tabletas 500mg x 20	102.89	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+112	8	4	Advil-082	Ibuprofeno	Cápsulas 400mg x 10	85.93	7	2026-10-19 15:58:45	2026-10-19 15:58:45
+113	2	1	Amoxil-083	Amoxicilina	Cápsulas 500mg x 21	68.86	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+114	5	6	Aspirina-084	Ácido acetilsalicílico	Tabletas 500mg x 20	109.75	19	2026-10-19 15:58:45	2026-10-19 15:58:45
+115	7	9	Losartán MK-085	Losartán potásico	Tabletas 50mg x 30	92.43	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+116	7	3	Metformina Genfar-086	Metformina clorhidrato	Tabletas 850mg x 30	61.74	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+117	2	2	Omeprazol MK-087	Omeprazol	Cápsulas 20mg x 14	71.07	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+118	7	2	Loratadina Genfar-088	Loratadina	Tabletas 10mg x 10	33.70	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+119	8	2	Azitromicina MK-089	Azitromicina	Tabletas 500mg x 3	146.38	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+179	7	6	Azitromicina MK-149	Azitromicina	Tabletas 500mg x 3	54.77	24	2026-10-19 15:58:45	2026-10-19 15:58:45
+120	5	3	Diclofenaco Genfar-090	Diclofenaco sódico	Tabletas 50mg x 20	33.87	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+121	2	11	Cetirizina MK-091	Cetirizina	Tabletas 10mg x 10	92.99	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+122	3	8	Enalapril Genfar-092	Enalapril maleato	Tabletas 20mg x 30	60.00	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+123	9	5	Vitamina C Bayer-093	Ácido ascórbico	Tabletas efervescentes 1g x 10	149.26	5	2026-10-19 15:58:45	2026-10-19 15:58:45
+124	7	11	Centrum-094	Multivitamínico	Tabletas x 30	98.91	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+125	1	9	Ranitidina MK-095	Ranitidina	Tabletas 150mg x 20	65.35	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+126	9	7	Ciprofloxacino Genfar-096	Ciprofloxacino	Tabletas 500mg x 10	141.02	14	2026-10-19 15:58:45	2026-10-19 15:58:45
+127	1	9	Glucosamina Bagó-097	Glucosamina sulfato	Sobres 1500mg x 15	91.15	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+128	5	3	Naproxeno MK-098	Naproxeno sódico	Tabletas 275mg x 10	107.44	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+129	5	7	Dexametasona Genfar-099	Dexametasona	Tabletas 0.5mg x 30	6.41	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+130	7	3	Salbutamol MK-100	Salbutamol	Inhalador 100mcg x 200 dosis	35.15	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+131	6	9	Panadol-101	Paracetamol	Tabletas 500mg x 20	100.39	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+132	1	2	Advil-102	Ibuprofeno	Cápsulas 400mg x 10	64.93	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+133	7	10	Amoxil-103	Amoxicilina	Cápsulas 500mg x 21	148.97	24	2026-10-19 15:58:45	2026-10-19 15:58:45
+134	4	1	Aspirina-104	Ácido acetilsalicílico	Tabletas 500mg x 20	147.99	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+135	5	9	Losartán MK-105	Losartán potásico	Tabletas 50mg x 30	51.43	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+136	8	2	Metformina Genfar-106	Metformina clorhidrato	Tabletas 850mg x 30	83.83	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+137	6	9	Omeprazol MK-107	Omeprazol	Cápsulas 20mg x 14	109.43	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+138	10	11	Loratadina Genfar-108	Loratadina	Tabletas 10mg x 10	56.71	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+139	4	5	Azitromicina MK-109	Azitromicina	Tabletas 500mg x 3	75.92	14	2026-10-19 15:58:45	2026-10-19 15:58:45
+140	10	6	Diclofenaco Genfar-110	Diclofenaco sódico	Tabletas 50mg x 20	148.16	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+141	5	3	Cetirizina MK-111	Cetirizina	Tabletas 10mg x 10	97.03	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+142	7	5	Enalapril Genfar-112	Enalapril maleato	Tabletas 20mg x 30	32.03	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+143	6	6	Vitamina C Bayer-113	Ácido ascórbico	Tabletas efervescentes 1g x 10	93.43	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+144	2	12	Centrum-114	Multivitamínico	Tabletas x 30	77.20	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+145	5	8	Ranitidina MK-115	Ranitidina	Tabletas 150mg x 20	54.03	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+146	6	8	Ciprofloxacino Genfar-116	Ciprofloxacino	Tabletas 500mg x 10	68.67	14	2026-10-19 15:58:45	2026-10-19 15:58:45
+147	3	5	Glucosamina Bagó-117	Glucosamina sulfato	Sobres 1500mg x 15	72.33	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+148	7	6	Naproxeno MK-118	Naproxeno sódico	Tabletas 275mg x 10	5.99	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+149	4	9	Dexametasona Genfar-119	Dexametasona	Tabletas 0.5mg x 30	33.43	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+150	3	2	Salbutamol MK-120	Salbutamol	Inhalador 100mcg x 200 dosis	134.02	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+151	5	7	Panadol-121	Paracetamol	Tabletas 500mg x 20	32.42	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+152	7	8	Advil-122	Ibuprofeno	Cápsulas 400mg x 10	28.21	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+153	5	5	Amoxil-123	Amoxicilina	Cápsulas 500mg x 21	77.96	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+154	2	12	Aspirina-124	Ácido acetilsalicílico	Tabletas 500mg x 20	26.99	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+155	7	10	Losartán MK-125	Losartán potásico	Tabletas 50mg x 30	21.24	5	2026-10-19 15:58:45	2026-10-19 15:58:45
+156	6	6	Metformina Genfar-126	Metformina clorhidrato	Tabletas 850mg x 30	27.43	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+157	9	2	Omeprazol MK-127	Omeprazol	Cápsulas 20mg x 14	85.79	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+158	4	12	Loratadina Genfar-128	Loratadina	Tabletas 10mg x 10	40.89	5	2026-10-19 15:58:45	2026-10-19 15:58:45
+159	4	4	Azitromicina MK-129	Azitromicina	Tabletas 500mg x 3	83.73	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+160	2	12	Diclofenaco Genfar-130	Diclofenaco sódico	Tabletas 50mg x 20	142.84	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+161	7	6	Cetirizina MK-131	Cetirizina	Tabletas 10mg x 10	91.18	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+162	5	7	Enalapril Genfar-132	Enalapril maleato	Tabletas 20mg x 30	28.97	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+163	4	9	Vitamina C Bayer-133	Ácido ascórbico	Tabletas efervescentes 1g x 10	24.72	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+164	3	10	Centrum-134	Multivitamínico	Tabletas x 30	104.91	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+165	2	11	Ranitidina MK-135	Ranitidina	Tabletas 150mg x 20	97.97	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+166	10	5	Ciprofloxacino Genfar-136	Ciprofloxacino	Tabletas 500mg x 10	56.88	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+167	1	8	Glucosamina Bagó-137	Glucosamina sulfato	Sobres 1500mg x 15	10.02	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+168	4	3	Naproxeno MK-138	Naproxeno sódico	Tabletas 275mg x 10	141.97	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+169	5	6	Dexametasona Genfar-139	Dexametasona	Tabletas 0.5mg x 30	146.65	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+170	5	5	Salbutamol MK-140	Salbutamol	Inhalador 100mcg x 200 dosis	5.25	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+171	9	11	Panadol-141	Paracetamol	Tabletas 500mg x 20	116.85	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+172	3	6	Advil-142	Ibuprofeno	Cápsulas 400mg x 10	146.07	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+173	8	5	Amoxil-143	Amoxicilina	Cápsulas 500mg x 21	7.93	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+174	4	8	Aspirina-144	Ácido acetilsalicílico	Tabletas 500mg x 20	140.45	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+175	6	8	Losartán MK-145	Losartán potásico	Tabletas 50mg x 30	132.27	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+176	6	3	Metformina Genfar-146	Metformina clorhidrato	Tabletas 850mg x 30	110.14	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+177	3	11	Omeprazol MK-147	Omeprazol	Cápsulas 20mg x 14	25.52	18	2026-10-19 15:58:45	2026-10-19 15:58:45
+178	6	7	Loratadina Genfar-148	Loratadina	Tabletas 10mg x 10	34.13	22	2026-10-19 15:58:45	2026-10-19 15:58:45
+180	9	9	Diclofenaco Genfar-150	Diclofenaco sódico	Tabletas 50mg x 20	98.53	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+181	5	1	Cetirizina MK-151	Cetirizina	Tabletas 10mg x 10	63.73	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+182	9	7	Enalapril Genfar-152	Enalapril maleato	Tabletas 20mg x 30	44.86	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+183	6	12	Vitamina C Bayer-153	Ácido ascórbico	Tabletas efervescentes 1g x 10	90.47	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+184	2	6	Centrum-154	Multivitamínico	Tabletas x 30	69.16	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+185	8	3	Ranitidina MK-155	Ranitidina	Tabletas 150mg x 20	63.00	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+186	4	7	Ciprofloxacino Genfar-156	Ciprofloxacino	Tabletas 500mg x 10	12.76	13	2026-10-19 15:58:45	2026-10-19 15:58:45
+187	3	6	Glucosamina Bagó-157	Glucosamina sulfato	Sobres 1500mg x 15	147.70	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+188	5	8	Naproxeno MK-158	Naproxeno sódico	Tabletas 275mg x 10	80.28	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+189	1	5	Dexametasona Genfar-159	Dexametasona	Tabletas 0.5mg x 30	71.03	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+190	2	7	Salbutamol MK-160	Salbutamol	Inhalador 100mcg x 200 dosis	52.78	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+191	6	6	Panadol-161	Paracetamol	Tabletas 500mg x 20	120.24	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+192	10	6	Advil-162	Ibuprofeno	Cápsulas 400mg x 10	20.30	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+193	1	11	Amoxil-163	Amoxicilina	Cápsulas 500mg x 21	61.82	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+194	3	9	Aspirina-164	Ácido acetilsalicílico	Tabletas 500mg x 20	132.16	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+195	6	1	Losartán MK-165	Losartán potásico	Tabletas 50mg x 30	117.57	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+196	5	10	Metformina Genfar-166	Metformina clorhidrato	Tabletas 850mg x 30	47.98	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+197	9	1	Omeprazol MK-167	Omeprazol	Cápsulas 20mg x 14	99.03	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+198	8	2	Loratadina Genfar-168	Loratadina	Tabletas 10mg x 10	119.75	21	2026-10-19 15:58:45	2026-10-19 15:58:45
+199	8	3	Azitromicina MK-169	Azitromicina	Tabletas 500mg x 3	19.61	11	2026-10-19 15:58:45	2026-10-19 15:58:45
+200	5	11	Diclofenaco Genfar-170	Diclofenaco sódico	Tabletas 50mg x 20	141.52	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+201	6	10	Cetirizina MK-171	Cetirizina	Tabletas 10mg x 10	72.24	12	2026-10-19 15:58:45	2026-10-19 15:58:45
+202	7	9	Enalapril Genfar-172	Enalapril maleato	Tabletas 20mg x 30	20.63	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+203	1	5	Vitamina C Bayer-173	Ácido ascórbico	Tabletas efervescentes 1g x 10	83.08	25	2026-10-19 15:58:45	2026-10-19 15:58:45
+204	2	9	Centrum-174	Multivitamínico	Tabletas x 30	34.88	20	2026-10-19 15:58:45	2026-10-19 15:58:45
+205	10	5	Ranitidina MK-175	Ranitidina	Tabletas 150mg x 20	110.91	15	2026-10-19 15:58:45	2026-10-19 15:58:45
+206	1	10	Ciprofloxacino Genfar-176	Ciprofloxacino	Tabletas 500mg x 10	6.96	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+207	9	7	Glucosamina Bagó-177	Glucosamina sulfato	Sobres 1500mg x 15	125.93	16	2026-10-19 15:58:45	2026-10-19 15:58:45
+208	1	3	Naproxeno MK-178	Naproxeno sódico	Tabletas 275mg x 10	60.72	7	2026-10-19 15:58:45	2026-10-19 15:58:45
+209	6	12	Dexametasona Genfar-179	Dexametasona	Tabletas 0.5mg x 30	41.59	9	2026-10-19 15:58:45	2026-10-19 15:58:45
+210	10	2	Salbutamol MK-180	Salbutamol	Inhalador 100mcg x 200 dosis	83.10	8	2026-10-19 15:58:45	2026-10-19 15:58:45
+211	5	4	Panadol-181	Paracetamol	Tabletas 500mg x 20	132.22	6	2026-10-19 15:58:45	2026-10-19 15:58:45
+212	8	3	Advil-182	Ibuprofeno	Cápsulas 400mg x 10	5.44	23	2026-10-19 15:58:45	2026-10-19 15:58:45
+213	3	6	Amoxil-183	Amoxicilina	Cápsulas 500mg x 21	7.38	17	2026-10-19 15:58:45	2026-10-19 15:58:45
+214	2	2	Aspirina-184	Ácido acetilsalicílico	Tabletas 500mg x 20	77.76	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+215	3	6	Losartán MK-185	Losartán potásico	Tabletas 50mg x 30	77.75	10	2026-10-19 15:58:45	2026-10-19 15:58:45
+216	2	4	Metformina Genfar-186	Metformina clorhidrato	Tabletas 850mg x 30	94.02	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+217	4	11	Omeprazol MK-187	Omeprazol	Cápsulas 20mg x 14	92.41	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+218	6	1	Loratadina Genfar-188	Loratadina	Tabletas 10mg x 10	35.75	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+219	10	5	Azitromicina MK-189	Azitromicina	Tabletas 500mg x 3	140.11	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+220	10	8	Diclofenaco Genfar-190	Diclofenaco sódico	Tabletas 50mg x 20	55.54	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+221	3	9	Cetirizina MK-191	Cetirizina	Tabletas 10mg x 10	48.83	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+222	1	4	Enalapril Genfar-192	Enalapril maleato	Tabletas 20mg x 30	43.84	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+223	2	10	Vitamina C Bayer-193	Ácido ascórbico	Tabletas efervescentes 1g x 10	125.23	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+224	4	1	Centrum-194	Multivitamínico	Tabletas x 30	81.53	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+225	10	6	Ranitidina MK-195	Ranitidina	Tabletas 150mg x 20	71.50	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+226	7	12	Ciprofloxacino Genfar-196	Ciprofloxacino	Tabletas 500mg x 10	21.08	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+227	1	5	Glucosamina Bagó-197	Glucosamina sulfato	Sobres 1500mg x 15	105.82	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+228	5	8	Naproxeno MK-198	Naproxeno sódico	Tabletas 275mg x 10	131.38	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+229	5	4	Dexametasona Genfar-199	Dexametasona	Tabletas 0.5mg x 30	129.01	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+230	5	10	Salbutamol MK-200	Salbutamol	Inhalador 100mcg x 200 dosis	108.46	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+231	6	2	Panadol-201	Paracetamol	Tabletas 500mg x 20	66.60	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+232	7	2	Advil-202	Ibuprofeno	Cápsulas 400mg x 10	118.19	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+233	6	12	Amoxil-203	Amoxicilina	Cápsulas 500mg x 21	129.43	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+234	10	7	Aspirina-204	Ácido acetilsalicílico	Tabletas 500mg x 20	15.06	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+235	8	7	Losartán MK-205	Losartán potásico	Tabletas 50mg x 30	122.69	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+236	3	9	Metformina Genfar-206	Metformina clorhidrato	Tabletas 850mg x 30	11.02	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+237	6	11	Omeprazol MK-207	Omeprazol	Cápsulas 20mg x 14	68.01	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+238	2	4	Loratadina Genfar-208	Loratadina	Tabletas 10mg x 10	25.62	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+239	4	7	Azitromicina MK-209	Azitromicina	Tabletas 500mg x 3	108.19	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+240	5	8	Diclofenaco Genfar-210	Diclofenaco sódico	Tabletas 50mg x 20	9.88	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+241	7	8	Cetirizina MK-211	Cetirizina	Tabletas 10mg x 10	28.52	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+242	2	12	Enalapril Genfar-212	Enalapril maleato	Tabletas 20mg x 30	141.46	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+243	5	12	Vitamina C Bayer-213	Ácido ascórbico	Tabletas efervescentes 1g x 10	49.93	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+244	3	10	Centrum-214	Multivitamínico	Tabletas x 30	120.69	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+245	7	1	Ranitidina MK-215	Ranitidina	Tabletas 150mg x 20	90.29	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+246	7	4	Ciprofloxacino Genfar-216	Ciprofloxacino	Tabletas 500mg x 10	22.35	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+247	9	11	Glucosamina Bagó-217	Glucosamina sulfato	Sobres 1500mg x 15	133.90	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+248	5	3	Naproxeno MK-218	Naproxeno sódico	Tabletas 275mg x 10	41.38	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+249	7	11	Dexametasona Genfar-219	Dexametasona	Tabletas 0.5mg x 30	72.66	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+250	1	6	Salbutamol MK-220	Salbutamol	Inhalador 100mcg x 200 dosis	104.51	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+251	4	9	Panadol-221	Paracetamol	Tabletas 500mg x 20	28.82	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+252	10	9	Advil-222	Ibuprofeno	Cápsulas 400mg x 10	119.37	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+253	9	6	Amoxil-223	Amoxicilina	Cápsulas 500mg x 21	61.78	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+254	5	2	Aspirina-224	Ácido acetilsalicílico	Tabletas 500mg x 20	107.92	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+255	8	2	Losartán MK-225	Losartán potásico	Tabletas 50mg x 30	123.75	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+256	6	9	Metformina Genfar-226	Metformina clorhidrato	Tabletas 850mg x 30	135.59	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+257	2	6	Omeprazol MK-227	Omeprazol	Cápsulas 20mg x 14	90.83	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+258	3	11	Loratadina Genfar-228	Loratadina	Tabletas 10mg x 10	93.02	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+259	4	12	Azitromicina MK-229	Azitromicina	Tabletas 500mg x 3	141.21	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+260	2	3	Diclofenaco Genfar-230	Diclofenaco sódico	Tabletas 50mg x 20	125.63	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+261	4	12	Cetirizina MK-231	Cetirizina	Tabletas 10mg x 10	97.10	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+262	9	3	Enalapril Genfar-232	Enalapril maleato	Tabletas 20mg x 30	128.31	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+263	8	12	Vitamina C Bayer-233	Ácido ascórbico	Tabletas efervescentes 1g x 10	32.74	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+264	2	6	Centrum-234	Multivitamínico	Tabletas x 30	101.99	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+265	10	12	Ranitidina MK-235	Ranitidina	Tabletas 150mg x 20	9.65	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+266	5	12	Ciprofloxacino Genfar-236	Ciprofloxacino	Tabletas 500mg x 10	68.52	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+267	4	4	Glucosamina Bagó-237	Glucosamina sulfato	Sobres 1500mg x 15	7.96	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+268	9	12	Naproxeno MK-238	Naproxeno sódico	Tabletas 275mg x 10	67.26	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+269	7	4	Dexametasona Genfar-239	Dexametasona	Tabletas 0.5mg x 30	108.40	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+270	3	11	Salbutamol MK-240	Salbutamol	Inhalador 100mcg x 200 dosis	126.00	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+271	1	10	Panadol-241	Paracetamol	Tabletas 500mg x 20	26.48	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+272	2	10	Advil-242	Ibuprofeno	Cápsulas 400mg x 10	24.17	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+273	1	6	Amoxil-243	Amoxicilina	Cápsulas 500mg x 21	76.33	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+274	4	11	Aspirina-244	Ácido acetilsalicílico	Tabletas 500mg x 20	146.61	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+275	6	5	Losartán MK-245	Losartán potásico	Tabletas 50mg x 30	117.32	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+276	8	1	Metformina Genfar-246	Metformina clorhidrato	Tabletas 850mg x 30	137.67	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+277	8	5	Omeprazol MK-247	Omeprazol	Cápsulas 20mg x 14	86.30	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+278	6	6	Loratadina Genfar-248	Loratadina	Tabletas 10mg x 10	103.51	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+279	7	12	Azitromicina MK-249	Azitromicina	Tabletas 500mg x 3	121.63	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+280	8	11	Diclofenaco Genfar-250	Diclofenaco sódico	Tabletas 50mg x 20	73.77	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+281	6	1	Cetirizina MK-251	Cetirizina	Tabletas 10mg x 10	88.72	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+282	2	5	Enalapril Genfar-252	Enalapril maleato	Tabletas 20mg x 30	106.91	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+283	1	4	Vitamina C Bayer-253	Ácido ascórbico	Tabletas efervescentes 1g x 10	34.85	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+284	7	2	Centrum-254	Multivitamínico	Tabletas x 30	68.56	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+285	7	6	Ranitidina MK-255	Ranitidina	Tabletas 150mg x 20	144.22	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+286	5	8	Ciprofloxacino Genfar-256	Ciprofloxacino	Tabletas 500mg x 10	90.78	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+287	8	3	Glucosamina Bagó-257	Glucosamina sulfato	Sobres 1500mg x 15	52.33	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+288	10	12	Naproxeno MK-258	Naproxeno sódico	Tabletas 275mg x 10	104.48	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+289	4	4	Dexametasona Genfar-259	Dexametasona	Tabletas 0.5mg x 30	64.28	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+290	8	5	Salbutamol MK-260	Salbutamol	Inhalador 100mcg x 200 dosis	54.16	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+291	2	6	Panadol-261	Paracetamol	Tabletas 500mg x 20	59.19	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+292	4	7	Advil-262	Ibuprofeno	Cápsulas 400mg x 10	125.50	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+293	5	2	Amoxil-263	Amoxicilina	Cápsulas 500mg x 21	80.52	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+294	2	3	Aspirina-264	Ácido acetilsalicílico	Tabletas 500mg x 20	16.23	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+295	5	4	Losartán MK-265	Losartán potásico	Tabletas 50mg x 30	118.17	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+296	5	12	Metformina Genfar-266	Metformina clorhidrato	Tabletas 850mg x 30	45.48	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+297	9	10	Omeprazol MK-267	Omeprazol	Cápsulas 20mg x 14	28.69	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+298	3	4	Loratadina Genfar-268	Loratadina	Tabletas 10mg x 10	7.88	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+299	8	6	Azitromicina MK-269	Azitromicina	Tabletas 500mg x 3	121.64	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+300	7	7	Diclofenaco Genfar-270	Diclofenaco sódico	Tabletas 50mg x 20	33.69	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+301	10	9	Cetirizina MK-271	Cetirizina	Tabletas 10mg x 10	118.99	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+302	4	12	Enalapril Genfar-272	Enalapril maleato	Tabletas 20mg x 30	64.33	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+303	3	9	Vitamina C Bayer-273	Ácido ascórbico	Tabletas efervescentes 1g x 10	77.35	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+304	6	5	Centrum-274	Multivitamínico	Tabletas x 30	8.87	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+305	3	4	Ranitidina MK-275	Ranitidina	Tabletas 150mg x 20	91.22	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+306	5	6	Ciprofloxacino Genfar-276	Ciprofloxacino	Tabletas 500mg x 10	121.21	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+307	3	5	Glucosamina Bagó-277	Glucosamina sulfato	Sobres 1500mg x 15	148.78	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+308	8	11	Naproxeno MK-278	Naproxeno sódico	Tabletas 275mg x 10	34.96	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+309	7	6	Dexametasona Genfar-279	Dexametasona	Tabletas 0.5mg x 30	18.73	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+310	1	3	Salbutamol MK-280	Salbutamol	Inhalador 100mcg x 200 dosis	7.77	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+311	5	7	Panadol-281	Paracetamol	Tabletas 500mg x 20	35.11	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+312	2	10	Advil-282	Ibuprofeno	Cápsulas 400mg x 10	28.60	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+313	5	7	Amoxil-283	Amoxicilina	Cápsulas 500mg x 21	68.57	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+314	6	12	Aspirina-284	Ácido acetilsalicílico	Tabletas 500mg x 20	35.70	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+315	10	7	Losartán MK-285	Losartán potásico	Tabletas 50mg x 30	127.72	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+316	2	5	Metformina Genfar-286	Metformina clorhidrato	Tabletas 850mg x 30	38.75	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+317	6	7	Omeprazol MK-287	Omeprazol	Cápsulas 20mg x 14	25.20	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+318	10	5	Loratadina Genfar-288	Loratadina	Tabletas 10mg x 10	96.35	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+319	3	4	Azitromicina MK-289	Azitromicina	Tabletas 500mg x 3	8.15	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+320	10	5	Diclofenaco Genfar-290	Diclofenaco sódico	Tabletas 50mg x 20	86.32	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+321	3	10	Cetirizina MK-291	Cetirizina	Tabletas 10mg x 10	131.87	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+322	9	11	Enalapril Genfar-292	Enalapril maleato	Tabletas 20mg x 30	92.24	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+323	10	12	Vitamina C Bayer-293	Ácido ascórbico	Tabletas efervescentes 1g x 10	14.21	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+324	9	12	Centrum-294	Multivitamínico	Tabletas x 30	94.68	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+325	2	4	Ranitidina MK-295	Ranitidina	Tabletas 150mg x 20	35.26	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+326	4	11	Ciprofloxacino Genfar-296	Ciprofloxacino	Tabletas 500mg x 10	40.53	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+327	6	11	Glucosamina Bagó-297	Glucosamina sulfato	Sobres 1500mg x 15	12.11	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+328	2	5	Naproxeno MK-298	Naproxeno sódico	Tabletas 275mg x 10	70.30	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+329	8	7	Dexametasona Genfar-299	Dexametasona	Tabletas 0.5mg x 30	42.12	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+330	9	4	Salbutamol MK-300	Salbutamol	Inhalador 100mcg x 200 dosis	58.14	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+331	3	3	Panadol-301	Paracetamol	Tabletas 500mg x 20	95.00	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+332	9	8	Advil-302	Ibuprofeno	Cápsulas 400mg x 10	39.06	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+333	6	2	Amoxil-303	Amoxicilina	Cápsulas 500mg x 21	11.33	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+334	3	8	Aspirina-304	Ácido acetilsalicílico	Tabletas 500mg x 20	19.48	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+335	3	6	Losartán MK-305	Losartán potásico	Tabletas 50mg x 30	149.30	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+336	3	8	Metformina Genfar-306	Metformina clorhidrato	Tabletas 850mg x 30	104.81	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+337	9	10	Omeprazol MK-307	Omeprazol	Cápsulas 20mg x 14	132.30	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+338	10	3	Loratadina Genfar-308	Loratadina	Tabletas 10mg x 10	10.41	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+339	2	1	Azitromicina MK-309	Azitromicina	Tabletas 500mg x 3	141.11	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+340	10	7	Diclofenaco Genfar-310	Diclofenaco sódico	Tabletas 50mg x 20	73.02	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+341	8	12	Cetirizina MK-311	Cetirizina	Tabletas 10mg x 10	45.77	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+342	5	11	Enalapril Genfar-312	Enalapril maleato	Tabletas 20mg x 30	115.18	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+343	2	10	Vitamina C Bayer-313	Ácido ascórbico	Tabletas efervescentes 1g x 10	44.32	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+344	6	2	Centrum-314	Multivitamínico	Tabletas x 30	129.19	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+345	1	1	Ranitidina MK-315	Ranitidina	Tabletas 150mg x 20	124.16	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+346	10	2	Ciprofloxacino Genfar-316	Ciprofloxacino	Tabletas 500mg x 10	93.61	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+347	5	8	Glucosamina Bagó-317	Glucosamina sulfato	Sobres 1500mg x 15	88.23	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+348	6	12	Naproxeno MK-318	Naproxeno sódico	Tabletas 275mg x 10	90.71	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+349	6	7	Dexametasona Genfar-319	Dexametasona	Tabletas 0.5mg x 30	8.33	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+350	6	2	Salbutamol MK-320	Salbutamol	Inhalador 100mcg x 200 dosis	94.95	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+351	2	2	Panadol-321	Paracetamol	Tabletas 500mg x 20	78.54	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+352	2	10	Advil-322	Ibuprofeno	Cápsulas 400mg x 10	76.73	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+353	10	8	Amoxil-323	Amoxicilina	Cápsulas 500mg x 21	70.61	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+354	6	1	Aspirina-324	Ácido acetilsalicílico	Tabletas 500mg x 20	6.47	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+355	3	9	Losartán MK-325	Losartán potásico	Tabletas 50mg x 30	94.85	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+356	1	9	Metformina Genfar-326	Metformina clorhidrato	Tabletas 850mg x 30	90.68	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+357	5	8	Omeprazol MK-327	Omeprazol	Cápsulas 20mg x 14	17.35	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+358	5	6	Loratadina Genfar-328	Loratadina	Tabletas 10mg x 10	54.03	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+359	8	6	Azitromicina MK-329	Azitromicina	Tabletas 500mg x 3	19.53	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+360	9	8	Diclofenaco Genfar-330	Diclofenaco sódico	Tabletas 50mg x 20	66.68	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+361	9	6	Cetirizina MK-331	Cetirizina	Tabletas 10mg x 10	40.95	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+362	6	4	Enalapril Genfar-332	Enalapril maleato	Tabletas 20mg x 30	6.49	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+363	7	5	Vitamina C Bayer-333	Ácido ascórbico	Tabletas efervescentes 1g x 10	124.78	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+364	9	5	Centrum-334	Multivitamínico	Tabletas x 30	126.52	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+365	3	11	Ranitidina MK-335	Ranitidina	Tabletas 150mg x 20	114.09	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+366	10	3	Ciprofloxacino Genfar-336	Ciprofloxacino	Tabletas 500mg x 10	34.23	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+367	10	11	Glucosamina Bagó-337	Glucosamina sulfato	Sobres 1500mg x 15	126.04	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+368	3	8	Naproxeno MK-338	Naproxeno sódico	Tabletas 275mg x 10	78.66	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+369	10	10	Dexametasona Genfar-339	Dexametasona	Tabletas 0.5mg x 30	116.51	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+370	2	8	Salbutamol MK-340	Salbutamol	Inhalador 100mcg x 200 dosis	64.43	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+371	1	2	Panadol-341	Paracetamol	Tabletas 500mg x 20	76.37	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+372	9	2	Advil-342	Ibuprofeno	Cápsulas 400mg x 10	134.53	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+373	7	6	Amoxil-343	Amoxicilina	Cápsulas 500mg x 21	28.50	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+374	10	11	Aspirina-344	Ácido acetilsalicílico	Tabletas 500mg x 20	48.89	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+375	10	3	Losartán MK-345	Losartán potásico	Tabletas 50mg x 30	41.11	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+376	4	7	Metformina Genfar-346	Metformina clorhidrato	Tabletas 850mg x 30	114.71	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+377	6	4	Omeprazol MK-347	Omeprazol	Cápsulas 20mg x 14	114.27	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+378	1	2	Loratadina Genfar-348	Loratadina	Tabletas 10mg x 10	18.60	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+379	2	10	Azitromicina MK-349	Azitromicina	Tabletas 500mg x 3	58.15	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+380	7	12	Diclofenaco Genfar-350	Diclofenaco sódico	Tabletas 50mg x 20	47.32	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+381	3	2	Cetirizina MK-351	Cetirizina	Tabletas 10mg x 10	100.28	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+382	7	5	Enalapril Genfar-352	Enalapril maleato	Tabletas 20mg x 30	36.74	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+383	9	12	Vitamina C Bayer-353	Ácido ascórbico	Tabletas efervescentes 1g x 10	50.06	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+384	2	7	Centrum-354	Multivitamínico	Tabletas x 30	78.85	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+385	8	1	Ranitidina MK-355	Ranitidina	Tabletas 150mg x 20	81.16	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+386	8	12	Ciprofloxacino Genfar-356	Ciprofloxacino	Tabletas 500mg x 10	106.88	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+387	1	8	Glucosamina Bagó-357	Glucosamina sulfato	Sobres 1500mg x 15	47.37	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+388	2	9	Naproxeno MK-358	Naproxeno sódico	Tabletas 275mg x 10	23.20	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+389	10	6	Dexametasona Genfar-359	Dexametasona	Tabletas 0.5mg x 30	84.67	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+390	8	9	Salbutamol MK-360	Salbutamol	Inhalador 100mcg x 200 dosis	83.21	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+391	2	2	Panadol-361	Paracetamol	Tabletas 500mg x 20	8.26	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+392	6	11	Advil-362	Ibuprofeno	Cápsulas 400mg x 10	112.27	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+393	2	1	Amoxil-363	Amoxicilina	Cápsulas 500mg x 21	119.89	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+394	7	3	Aspirina-364	Ácido acetilsalicílico	Tabletas 500mg x 20	128.43	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+395	9	6	Losartán MK-365	Losartán potásico	Tabletas 50mg x 30	61.56	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+396	1	10	Metformina Genfar-366	Metformina clorhidrato	Tabletas 850mg x 30	12.41	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+397	10	4	Omeprazol MK-367	Omeprazol	Cápsulas 20mg x 14	83.57	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+398	3	12	Loratadina Genfar-368	Loratadina	Tabletas 10mg x 10	22.77	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+399	9	5	Azitromicina MK-369	Azitromicina	Tabletas 500mg x 3	141.97	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+400	1	8	Diclofenaco Genfar-370	Diclofenaco sódico	Tabletas 50mg x 20	31.90	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+401	2	12	Cetirizina MK-371	Cetirizina	Tabletas 10mg x 10	36.52	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+402	7	11	Enalapril Genfar-372	Enalapril maleato	Tabletas 20mg x 30	149.31	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+403	5	7	Vitamina C Bayer-373	Ácido ascórbico	Tabletas efervescentes 1g x 10	81.29	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+404	1	1	Centrum-374	Multivitamínico	Tabletas x 30	133.13	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+405	7	5	Ranitidina MK-375	Ranitidina	Tabletas 150mg x 20	110.72	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+406	6	6	Ciprofloxacino Genfar-376	Ciprofloxacino	Tabletas 500mg x 10	37.51	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+407	7	2	Glucosamina Bagó-377	Glucosamina sulfato	Sobres 1500mg x 15	21.70	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+408	8	6	Naproxeno MK-378	Naproxeno sódico	Tabletas 275mg x 10	54.08	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+409	6	3	Dexametasona Genfar-379	Dexametasona	Tabletas 0.5mg x 30	11.18	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+410	10	2	Salbutamol MK-380	Salbutamol	Inhalador 100mcg x 200 dosis	26.99	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+411	9	12	Panadol-381	Paracetamol	Tabletas 500mg x 20	62.50	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+412	1	9	Advil-382	Ibuprofeno	Cápsulas 400mg x 10	66.66	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+413	10	1	Amoxil-383	Amoxicilina	Cápsulas 500mg x 21	58.61	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+414	10	4	Aspirina-384	Ácido acetilsalicílico	Tabletas 500mg x 20	12.41	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+415	4	9	Losartán MK-385	Losartán potásico	Tabletas 50mg x 30	70.28	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+593	9	12	Amoxil-563	Amoxicilina	Cápsulas 500mg x 21	58.92	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+416	1	8	Metformina Genfar-386	Metformina clorhidrato	Tabletas 850mg x 30	108.40	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+417	9	7	Omeprazol MK-387	Omeprazol	Cápsulas 20mg x 14	83.86	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+418	6	1	Loratadina Genfar-388	Loratadina	Tabletas 10mg x 10	107.84	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+419	4	11	Azitromicina MK-389	Azitromicina	Tabletas 500mg x 3	67.09	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+420	3	4	Diclofenaco Genfar-390	Diclofenaco sódico	Tabletas 50mg x 20	16.28	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+421	7	3	Cetirizina MK-391	Cetirizina	Tabletas 10mg x 10	15.67	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+422	6	11	Enalapril Genfar-392	Enalapril maleato	Tabletas 20mg x 30	43.32	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+423	3	4	Vitamina C Bayer-393	Ácido ascórbico	Tabletas efervescentes 1g x 10	72.37	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+424	3	2	Centrum-394	Multivitamínico	Tabletas x 30	89.35	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+425	2	7	Ranitidina MK-395	Ranitidina	Tabletas 150mg x 20	141.44	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+426	4	1	Ciprofloxacino Genfar-396	Ciprofloxacino	Tabletas 500mg x 10	94.15	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+427	6	4	Glucosamina Bagó-397	Glucosamina sulfato	Sobres 1500mg x 15	49.91	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+428	1	6	Naproxeno MK-398	Naproxeno sódico	Tabletas 275mg x 10	58.50	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+429	5	9	Dexametasona Genfar-399	Dexametasona	Tabletas 0.5mg x 30	89.80	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+430	5	1	Salbutamol MK-400	Salbutamol	Inhalador 100mcg x 200 dosis	99.36	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+431	6	2	Panadol-401	Paracetamol	Tabletas 500mg x 20	43.27	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+432	1	5	Advil-402	Ibuprofeno	Cápsulas 400mg x 10	96.49	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+433	4	7	Amoxil-403	Amoxicilina	Cápsulas 500mg x 21	60.65	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+434	9	3	Aspirina-404	Ácido acetilsalicílico	Tabletas 500mg x 20	20.46	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+435	4	12	Losartán MK-405	Losartán potásico	Tabletas 50mg x 30	78.82	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+436	3	3	Metformina Genfar-406	Metformina clorhidrato	Tabletas 850mg x 30	131.35	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+437	4	4	Omeprazol MK-407	Omeprazol	Cápsulas 20mg x 14	35.61	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+438	7	8	Loratadina Genfar-408	Loratadina	Tabletas 10mg x 10	114.50	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+439	2	8	Azitromicina MK-409	Azitromicina	Tabletas 500mg x 3	63.58	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+440	9	1	Diclofenaco Genfar-410	Diclofenaco sódico	Tabletas 50mg x 20	70.62	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+441	3	1	Cetirizina MK-411	Cetirizina	Tabletas 10mg x 10	103.22	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+442	7	12	Enalapril Genfar-412	Enalapril maleato	Tabletas 20mg x 30	45.28	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+443	1	7	Vitamina C Bayer-413	Ácido ascórbico	Tabletas efervescentes 1g x 10	10.68	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+444	5	2	Centrum-414	Multivitamínico	Tabletas x 30	42.97	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+445	2	3	Ranitidina MK-415	Ranitidina	Tabletas 150mg x 20	132.18	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+446	8	11	Ciprofloxacino Genfar-416	Ciprofloxacino	Tabletas 500mg x 10	108.64	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+447	1	3	Glucosamina Bagó-417	Glucosamina sulfato	Sobres 1500mg x 15	68.67	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+448	6	12	Naproxeno MK-418	Naproxeno sódico	Tabletas 275mg x 10	99.16	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+449	9	9	Dexametasona Genfar-419	Dexametasona	Tabletas 0.5mg x 30	28.23	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+450	6	11	Salbutamol MK-420	Salbutamol	Inhalador 100mcg x 200 dosis	12.63	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+451	10	8	Panadol-421	Paracetamol	Tabletas 500mg x 20	41.47	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+452	3	5	Advil-422	Ibuprofeno	Cápsulas 400mg x 10	12.99	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+453	8	7	Amoxil-423	Amoxicilina	Cápsulas 500mg x 21	100.94	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+454	4	8	Aspirina-424	Ácido acetilsalicílico	Tabletas 500mg x 20	35.97	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+455	4	7	Losartán MK-425	Losartán potásico	Tabletas 50mg x 30	88.34	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+456	7	11	Metformina Genfar-426	Metformina clorhidrato	Tabletas 850mg x 30	7.42	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+457	10	6	Omeprazol MK-427	Omeprazol	Cápsulas 20mg x 14	9.82	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+458	9	4	Loratadina Genfar-428	Loratadina	Tabletas 10mg x 10	115.72	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+459	9	12	Azitromicina MK-429	Azitromicina	Tabletas 500mg x 3	42.13	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+460	2	9	Diclofenaco Genfar-430	Diclofenaco sódico	Tabletas 50mg x 20	94.68	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+461	7	10	Cetirizina MK-431	Cetirizina	Tabletas 10mg x 10	141.22	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+462	2	6	Enalapril Genfar-432	Enalapril maleato	Tabletas 20mg x 30	58.58	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+463	7	10	Vitamina C Bayer-433	Ácido ascórbico	Tabletas efervescentes 1g x 10	78.16	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+464	8	1	Centrum-434	Multivitamínico	Tabletas x 30	51.92	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+465	3	10	Ranitidina MK-435	Ranitidina	Tabletas 150mg x 20	37.65	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+466	1	1	Ciprofloxacino Genfar-436	Ciprofloxacino	Tabletas 500mg x 10	72.61	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+467	3	12	Glucosamina Bagó-437	Glucosamina sulfato	Sobres 1500mg x 15	77.94	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+468	7	2	Naproxeno MK-438	Naproxeno sódico	Tabletas 275mg x 10	129.72	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+469	3	11	Dexametasona Genfar-439	Dexametasona	Tabletas 0.5mg x 30	68.89	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+470	8	7	Salbutamol MK-440	Salbutamol	Inhalador 100mcg x 200 dosis	73.91	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+471	7	1	Panadol-441	Paracetamol	Tabletas 500mg x 20	18.14	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+472	9	8	Advil-442	Ibuprofeno	Cápsulas 400mg x 10	49.50	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+473	10	7	Amoxil-443	Amoxicilina	Cápsulas 500mg x 21	100.27	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+474	9	6	Aspirina-444	Ácido acetilsalicílico	Tabletas 500mg x 20	13.08	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+475	6	5	Losartán MK-445	Losartán potásico	Tabletas 50mg x 30	71.62	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+476	7	11	Metformina Genfar-446	Metformina clorhidrato	Tabletas 850mg x 30	34.80	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+477	4	4	Omeprazol MK-447	Omeprazol	Cápsulas 20mg x 14	127.78	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+478	10	9	Loratadina Genfar-448	Loratadina	Tabletas 10mg x 10	116.32	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+479	5	5	Azitromicina MK-449	Azitromicina	Tabletas 500mg x 3	134.49	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+480	9	6	Diclofenaco Genfar-450	Diclofenaco sódico	Tabletas 50mg x 20	110.59	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+481	8	12	Cetirizina MK-451	Cetirizina	Tabletas 10mg x 10	61.45	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+482	10	7	Enalapril Genfar-452	Enalapril maleato	Tabletas 20mg x 30	17.07	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+483	6	5	Vitamina C Bayer-453	Ácido ascórbico	Tabletas efervescentes 1g x 10	134.61	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+484	10	5	Centrum-454	Multivitamínico	Tabletas x 30	116.80	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+485	10	6	Ranitidina MK-455	Ranitidina	Tabletas 150mg x 20	115.15	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+486	2	7	Ciprofloxacino Genfar-456	Ciprofloxacino	Tabletas 500mg x 10	116.24	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+487	9	4	Glucosamina Bagó-457	Glucosamina sulfato	Sobres 1500mg x 15	28.22	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+488	7	11	Naproxeno MK-458	Naproxeno sódico	Tabletas 275mg x 10	89.44	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+489	4	2	Dexametasona Genfar-459	Dexametasona	Tabletas 0.5mg x 30	101.17	16	2026-10-19 15:58:46	2026-10-19 15:58:46
+490	3	10	Salbutamol MK-460	Salbutamol	Inhalador 100mcg x 200 dosis	140.01	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+491	9	4	Panadol-461	Paracetamol	Tabletas 500mg x 20	85.12	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+492	10	7	Advil-462	Ibuprofeno	Cápsulas 400mg x 10	116.10	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+493	8	11	Amoxil-463	Amoxicilina	Cápsulas 500mg x 21	111.54	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+494	10	8	Aspirina-464	Ácido acetilsalicílico	Tabletas 500mg x 20	11.97	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+495	2	8	Losartán MK-465	Losartán potásico	Tabletas 50mg x 30	36.18	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+496	3	11	Metformina Genfar-466	Metformina clorhidrato	Tabletas 850mg x 30	66.15	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+497	10	4	Omeprazol MK-467	Omeprazol	Cápsulas 20mg x 14	140.21	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+498	2	5	Loratadina Genfar-468	Loratadina	Tabletas 10mg x 10	90.82	11	2026-10-19 15:58:46	2026-10-19 15:58:46
+499	9	9	Azitromicina MK-469	Azitromicina	Tabletas 500mg x 3	79.87	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+500	3	5	Diclofenaco Genfar-470	Diclofenaco sódico	Tabletas 50mg x 20	80.75	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+501	5	8	Cetirizina MK-471	Cetirizina	Tabletas 10mg x 10	35.07	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+502	10	7	Enalapril Genfar-472	Enalapril maleato	Tabletas 20mg x 30	85.08	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+503	1	12	Vitamina C Bayer-473	Ácido ascórbico	Tabletas efervescentes 1g x 10	119.84	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+504	1	5	Centrum-474	Multivitamínico	Tabletas x 30	127.29	8	2026-10-19 15:58:46	2026-10-19 15:58:46
+505	4	8	Ranitidina MK-475	Ranitidina	Tabletas 150mg x 20	43.11	22	2026-10-19 15:58:46	2026-10-19 15:58:46
+506	4	3	Ciprofloxacino Genfar-476	Ciprofloxacino	Tabletas 500mg x 10	139.08	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+507	9	10	Glucosamina Bagó-477	Glucosamina sulfato	Sobres 1500mg x 15	65.37	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+508	3	8	Naproxeno MK-478	Naproxeno sódico	Tabletas 275mg x 10	58.44	19	2026-10-19 15:58:46	2026-10-19 15:58:46
+509	9	11	Dexametasona Genfar-479	Dexametasona	Tabletas 0.5mg x 30	27.22	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+510	9	8	Salbutamol MK-480	Salbutamol	Inhalador 100mcg x 200 dosis	25.12	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+511	1	1	Panadol-481	Paracetamol	Tabletas 500mg x 20	58.33	13	2026-10-19 15:58:46	2026-10-19 15:58:46
+512	9	11	Advil-482	Ibuprofeno	Cápsulas 400mg x 10	136.36	7	2026-10-19 15:58:46	2026-10-19 15:58:46
+513	3	6	Amoxil-483	Amoxicilina	Cápsulas 500mg x 21	37.58	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+514	3	4	Aspirina-484	Ácido acetilsalicílico	Tabletas 500mg x 20	96.48	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+515	10	6	Losartán MK-485	Losartán potásico	Tabletas 50mg x 30	116.50	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+516	8	5	Metformina Genfar-486	Metformina clorhidrato	Tabletas 850mg x 30	97.86	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+517	5	7	Omeprazol MK-487	Omeprazol	Cápsulas 20mg x 14	103.84	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+518	4	3	Loratadina Genfar-488	Loratadina	Tabletas 10mg x 10	27.61	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+519	8	12	Azitromicina MK-489	Azitromicina	Tabletas 500mg x 3	114.25	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+520	9	5	Diclofenaco Genfar-490	Diclofenaco sódico	Tabletas 50mg x 20	6.66	5	2026-10-19 15:58:46	2026-10-19 15:58:46
+521	2	8	Cetirizina MK-491	Cetirizina	Tabletas 10mg x 10	43.94	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+522	2	7	Enalapril Genfar-492	Enalapril maleato	Tabletas 20mg x 30	140.22	12	2026-10-19 15:58:46	2026-10-19 15:58:46
+523	2	3	Vitamina C Bayer-493	Ácido ascórbico	Tabletas efervescentes 1g x 10	50.64	9	2026-10-19 15:58:46	2026-10-19 15:58:46
+524	5	9	Centrum-494	Multivitamínico	Tabletas x 30	14.53	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+525	10	8	Ranitidina MK-495	Ranitidina	Tabletas 150mg x 20	99.58	17	2026-10-19 15:58:46	2026-10-19 15:58:46
+526	7	2	Ciprofloxacino Genfar-496	Ciprofloxacino	Tabletas 500mg x 10	81.64	21	2026-10-19 15:58:46	2026-10-19 15:58:46
+527	2	10	Glucosamina Bagó-497	Glucosamina sulfato	Sobres 1500mg x 15	117.23	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+528	6	8	Naproxeno MK-498	Naproxeno sódico	Tabletas 275mg x 10	36.91	18	2026-10-19 15:58:46	2026-10-19 15:58:46
+529	3	6	Dexametasona Genfar-499	Dexametasona	Tabletas 0.5mg x 30	26.63	23	2026-10-19 15:58:46	2026-10-19 15:58:46
+530	1	2	Salbutamol MK-500	Salbutamol	Inhalador 100mcg x 200 dosis	9.50	10	2026-10-19 15:58:46	2026-10-19 15:58:46
+531	6	7	Panadol-501	Paracetamol	Tabletas 500mg x 20	69.28	25	2026-10-19 15:58:46	2026-10-19 15:58:46
+532	3	11	Advil-502	Ibuprofeno	Cápsulas 400mg x 10	99.87	14	2026-10-19 15:58:46	2026-10-19 15:58:46
+533	2	4	Amoxil-503	Amoxicilina	Cápsulas 500mg x 21	20.78	6	2026-10-19 15:58:46	2026-10-19 15:58:46
+534	7	5	Aspirina-504	Ácido acetilsalicílico	Tabletas 500mg x 20	87.98	24	2026-10-19 15:58:46	2026-10-19 15:58:46
+535	6	5	Losartán MK-505	Losartán potásico	Tabletas 50mg x 30	96.53	20	2026-10-19 15:58:46	2026-10-19 15:58:46
+536	4	10	Metformina Genfar-506	Metformina clorhidrato	Tabletas 850mg x 30	98.69	15	2026-10-19 15:58:46	2026-10-19 15:58:46
+537	10	5	Omeprazol MK-507	Omeprazol	Cápsulas 20mg x 14	122.19	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+538	9	8	Loratadina Genfar-508	Loratadina	Tabletas 10mg x 10	111.01	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+539	3	6	Azitromicina MK-509	Azitromicina	Tabletas 500mg x 3	130.56	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+540	8	7	Diclofenaco Genfar-510	Diclofenaco sódico	Tabletas 50mg x 20	90.10	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+541	5	12	Cetirizina MK-511	Cetirizina	Tabletas 10mg x 10	57.39	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+542	3	2	Enalapril Genfar-512	Enalapril maleato	Tabletas 20mg x 30	65.80	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+543	10	6	Vitamina C Bayer-513	Ácido ascórbico	Tabletas efervescentes 1g x 10	70.41	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+544	4	8	Centrum-514	Multivitamínico	Tabletas x 30	133.41	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+545	4	7	Ranitidina MK-515	Ranitidina	Tabletas 150mg x 20	17.95	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+546	3	4	Ciprofloxacino Genfar-516	Ciprofloxacino	Tabletas 500mg x 10	41.62	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+547	7	5	Glucosamina Bagó-517	Glucosamina sulfato	Sobres 1500mg x 15	37.80	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+548	2	12	Naproxeno MK-518	Naproxeno sódico	Tabletas 275mg x 10	120.70	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+549	8	11	Dexametasona Genfar-519	Dexametasona	Tabletas 0.5mg x 30	111.58	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+550	1	7	Salbutamol MK-520	Salbutamol	Inhalador 100mcg x 200 dosis	38.46	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+551	4	11	Panadol-521	Paracetamol	Tabletas 500mg x 20	71.10	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+552	4	2	Advil-522	Ibuprofeno	Cápsulas 400mg x 10	147.64	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+553	8	2	Amoxil-523	Amoxicilina	Cápsulas 500mg x 21	57.00	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+554	2	4	Aspirina-524	Ácido acetilsalicílico	Tabletas 500mg x 20	100.82	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+555	1	2	Losartán MK-525	Losartán potásico	Tabletas 50mg x 30	65.68	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+556	4	10	Metformina Genfar-526	Metformina clorhidrato	Tabletas 850mg x 30	15.74	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+557	9	7	Omeprazol MK-527	Omeprazol	Cápsulas 20mg x 14	42.04	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+558	3	12	Loratadina Genfar-528	Loratadina	Tabletas 10mg x 10	26.45	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+559	6	2	Azitromicina MK-529	Azitromicina	Tabletas 500mg x 3	33.45	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+560	6	8	Diclofenaco Genfar-530	Diclofenaco sódico	Tabletas 50mg x 20	118.31	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+561	3	7	Cetirizina MK-531	Cetirizina	Tabletas 10mg x 10	44.66	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+562	4	12	Enalapril Genfar-532	Enalapril maleato	Tabletas 20mg x 30	38.58	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+563	1	6	Vitamina C Bayer-533	Ácido ascórbico	Tabletas efervescentes 1g x 10	21.56	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+564	3	10	Centrum-534	Multivitamínico	Tabletas x 30	17.72	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+565	8	8	Ranitidina MK-535	Ranitidina	Tabletas 150mg x 20	86.71	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+566	3	8	Ciprofloxacino Genfar-536	Ciprofloxacino	Tabletas 500mg x 10	128.48	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+567	7	4	Glucosamina Bagó-537	Glucosamina sulfato	Sobres 1500mg x 15	12.54	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+568	1	9	Naproxeno MK-538	Naproxeno sódico	Tabletas 275mg x 10	67.67	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+569	3	5	Dexametasona Genfar-539	Dexametasona	Tabletas 0.5mg x 30	47.79	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+570	10	9	Salbutamol MK-540	Salbutamol	Inhalador 100mcg x 200 dosis	34.72	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+571	10	10	Panadol-541	Paracetamol	Tabletas 500mg x 20	23.89	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+572	3	7	Advil-542	Ibuprofeno	Cápsulas 400mg x 10	53.33	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+573	10	10	Amoxil-543	Amoxicilina	Cápsulas 500mg x 21	117.51	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+574	10	3	Aspirina-544	Ácido acetilsalicílico	Tabletas 500mg x 20	47.33	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+575	4	6	Losartán MK-545	Losartán potásico	Tabletas 50mg x 30	30.15	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+576	3	11	Metformina Genfar-546	Metformina clorhidrato	Tabletas 850mg x 30	54.39	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+577	6	3	Omeprazol MK-547	Omeprazol	Cápsulas 20mg x 14	66.36	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+578	3	5	Loratadina Genfar-548	Loratadina	Tabletas 10mg x 10	41.85	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+579	1	1	Azitromicina MK-549	Azitromicina	Tabletas 500mg x 3	79.51	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+580	8	1	Diclofenaco Genfar-550	Diclofenaco sódico	Tabletas 50mg x 20	31.01	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+581	6	8	Cetirizina MK-551	Cetirizina	Tabletas 10mg x 10	60.20	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+582	3	9	Enalapril Genfar-552	Enalapril maleato	Tabletas 20mg x 30	143.54	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+583	9	4	Vitamina C Bayer-553	Ácido ascórbico	Tabletas efervescentes 1g x 10	119.99	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+584	7	10	Centrum-554	Multivitamínico	Tabletas x 30	132.77	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+585	8	8	Ranitidina MK-555	Ranitidina	Tabletas 150mg x 20	93.33	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+586	9	5	Ciprofloxacino Genfar-556	Ciprofloxacino	Tabletas 500mg x 10	58.25	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+587	4	10	Glucosamina Bagó-557	Glucosamina sulfato	Sobres 1500mg x 15	113.15	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+588	4	7	Naproxeno MK-558	Naproxeno sódico	Tabletas 275mg x 10	69.83	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+589	7	6	Dexametasona Genfar-559	Dexametasona	Tabletas 0.5mg x 30	133.11	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+590	4	1	Salbutamol MK-560	Salbutamol	Inhalador 100mcg x 200 dosis	140.82	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+591	3	9	Panadol-561	Paracetamol	Tabletas 500mg x 20	83.31	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+592	10	1	Advil-562	Ibuprofeno	Cápsulas 400mg x 10	47.20	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+594	3	12	Aspirina-564	Ácido acetilsalicílico	Tabletas 500mg x 20	79.94	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+595	2	2	Losartán MK-565	Losartán potásico	Tabletas 50mg x 30	13.47	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+596	1	2	Metformina Genfar-566	Metformina clorhidrato	Tabletas 850mg x 30	123.79	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+597	6	1	Omeprazol MK-567	Omeprazol	Cápsulas 20mg x 14	63.32	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+598	2	3	Loratadina Genfar-568	Loratadina	Tabletas 10mg x 10	117.28	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+599	10	11	Azitromicina MK-569	Azitromicina	Tabletas 500mg x 3	37.36	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+600	9	8	Diclofenaco Genfar-570	Diclofenaco sódico	Tabletas 50mg x 20	91.66	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+601	8	8	Cetirizina MK-571	Cetirizina	Tabletas 10mg x 10	59.81	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+602	3	5	Enalapril Genfar-572	Enalapril maleato	Tabletas 20mg x 30	80.84	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+603	5	1	Vitamina C Bayer-573	Ácido ascórbico	Tabletas efervescentes 1g x 10	35.98	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+604	3	12	Centrum-574	Multivitamínico	Tabletas x 30	96.21	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+605	6	4	Ranitidina MK-575	Ranitidina	Tabletas 150mg x 20	96.30	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+606	9	5	Ciprofloxacino Genfar-576	Ciprofloxacino	Tabletas 500mg x 10	139.52	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+607	1	1	Glucosamina Bagó-577	Glucosamina sulfato	Sobres 1500mg x 15	92.75	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+608	3	2	Naproxeno MK-578	Naproxeno sódico	Tabletas 275mg x 10	125.72	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+609	7	11	Dexametasona Genfar-579	Dexametasona	Tabletas 0.5mg x 30	32.10	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+610	10	7	Salbutamol MK-580	Salbutamol	Inhalador 100mcg x 200 dosis	44.51	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+611	4	8	Panadol-581	Paracetamol	Tabletas 500mg x 20	20.97	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+612	7	10	Advil-582	Ibuprofeno	Cápsulas 400mg x 10	38.11	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+613	10	11	Amoxil-583	Amoxicilina	Cápsulas 500mg x 21	19.19	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+614	1	3	Aspirina-584	Ácido acetilsalicílico	Tabletas 500mg x 20	68.01	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+615	3	6	Losartán MK-585	Losartán potásico	Tabletas 50mg x 30	118.88	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+616	1	9	Metformina Genfar-586	Metformina clorhidrato	Tabletas 850mg x 30	84.09	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+617	7	12	Omeprazol MK-587	Omeprazol	Cápsulas 20mg x 14	32.34	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+618	8	6	Loratadina Genfar-588	Loratadina	Tabletas 10mg x 10	143.59	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+619	2	11	Azitromicina MK-589	Azitromicina	Tabletas 500mg x 3	129.53	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+620	8	1	Diclofenaco Genfar-590	Diclofenaco sódico	Tabletas 50mg x 20	107.38	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+621	7	8	Cetirizina MK-591	Cetirizina	Tabletas 10mg x 10	92.74	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+622	6	2	Enalapril Genfar-592	Enalapril maleato	Tabletas 20mg x 30	26.25	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+623	10	9	Vitamina C Bayer-593	Ácido ascórbico	Tabletas efervescentes 1g x 10	135.33	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+624	3	2	Centrum-594	Multivitamínico	Tabletas x 30	136.08	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+625	9	2	Ranitidina MK-595	Ranitidina	Tabletas 150mg x 20	23.30	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+626	7	4	Ciprofloxacino Genfar-596	Ciprofloxacino	Tabletas 500mg x 10	77.49	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+627	1	9	Glucosamina Bagó-597	Glucosamina sulfato	Sobres 1500mg x 15	122.18	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+628	9	11	Naproxeno MK-598	Naproxeno sódico	Tabletas 275mg x 10	62.07	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+629	8	10	Dexametasona Genfar-599	Dexametasona	Tabletas 0.5mg x 30	131.93	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+630	9	9	Salbutamol MK-600	Salbutamol	Inhalador 100mcg x 200 dosis	144.86	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+631	9	1	Panadol-601	Paracetamol	Tabletas 500mg x 20	35.04	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+632	6	1	Advil-602	Ibuprofeno	Cápsulas 400mg x 10	145.14	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+633	8	8	Amoxil-603	Amoxicilina	Cápsulas 500mg x 21	57.48	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+634	3	8	Aspirina-604	Ácido acetilsalicílico	Tabletas 500mg x 20	47.52	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+635	8	11	Losartán MK-605	Losartán potásico	Tabletas 50mg x 30	56.75	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+636	3	2	Metformina Genfar-606	Metformina clorhidrato	Tabletas 850mg x 30	33.76	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+637	5	5	Omeprazol MK-607	Omeprazol	Cápsulas 20mg x 14	58.43	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+638	3	9	Loratadina Genfar-608	Loratadina	Tabletas 10mg x 10	118.72	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+639	1	4	Azitromicina MK-609	Azitromicina	Tabletas 500mg x 3	135.59	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+640	7	7	Diclofenaco Genfar-610	Diclofenaco sódico	Tabletas 50mg x 20	144.81	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+641	3	9	Cetirizina MK-611	Cetirizina	Tabletas 10mg x 10	90.15	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+642	1	11	Enalapril Genfar-612	Enalapril maleato	Tabletas 20mg x 30	28.24	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+643	6	9	Vitamina C Bayer-613	Ácido ascórbico	Tabletas efervescentes 1g x 10	110.45	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+644	4	4	Centrum-614	Multivitamínico	Tabletas x 30	17.34	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+645	9	8	Ranitidina MK-615	Ranitidina	Tabletas 150mg x 20	61.95	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+646	5	8	Ciprofloxacino Genfar-616	Ciprofloxacino	Tabletas 500mg x 10	132.76	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+647	8	10	Glucosamina Bagó-617	Glucosamina sulfato	Sobres 1500mg x 15	38.83	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+648	2	1	Naproxeno MK-618	Naproxeno sódico	Tabletas 275mg x 10	122.75	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+649	9	4	Dexametasona Genfar-619	Dexametasona	Tabletas 0.5mg x 30	34.79	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+650	2	1	Salbutamol MK-620	Salbutamol	Inhalador 100mcg x 200 dosis	83.13	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+651	5	5	Panadol-621	Paracetamol	Tabletas 500mg x 20	75.47	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+652	3	2	Advil-622	Ibuprofeno	Cápsulas 400mg x 10	76.14	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+653	2	1	Amoxil-623	Amoxicilina	Cápsulas 500mg x 21	26.45	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+654	6	7	Aspirina-624	Ácido acetilsalicílico	Tabletas 500mg x 20	32.25	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+655	8	11	Losartán MK-625	Losartán potásico	Tabletas 50mg x 30	68.59	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+656	10	8	Metformina Genfar-626	Metformina clorhidrato	Tabletas 850mg x 30	35.95	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+657	8	11	Omeprazol MK-627	Omeprazol	Cápsulas 20mg x 14	100.40	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+658	2	11	Loratadina Genfar-628	Loratadina	Tabletas 10mg x 10	120.91	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+659	6	5	Azitromicina MK-629	Azitromicina	Tabletas 500mg x 3	143.03	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+660	5	4	Diclofenaco Genfar-630	Diclofenaco sódico	Tabletas 50mg x 20	135.97	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+661	2	9	Cetirizina MK-631	Cetirizina	Tabletas 10mg x 10	146.05	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+662	2	12	Enalapril Genfar-632	Enalapril maleato	Tabletas 20mg x 30	96.98	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+663	4	6	Vitamina C Bayer-633	Ácido ascórbico	Tabletas efervescentes 1g x 10	79.07	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+664	3	2	Centrum-634	Multivitamínico	Tabletas x 30	101.54	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+665	8	12	Ranitidina MK-635	Ranitidina	Tabletas 150mg x 20	112.09	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+666	3	3	Ciprofloxacino Genfar-636	Ciprofloxacino	Tabletas 500mg x 10	123.45	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+667	6	9	Glucosamina Bagó-637	Glucosamina sulfato	Sobres 1500mg x 15	41.22	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+668	7	1	Naproxeno MK-638	Naproxeno sódico	Tabletas 275mg x 10	15.80	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+669	1	2	Dexametasona Genfar-639	Dexametasona	Tabletas 0.5mg x 30	35.68	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+670	2	5	Salbutamol MK-640	Salbutamol	Inhalador 100mcg x 200 dosis	146.90	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+671	9	6	Panadol-641	Paracetamol	Tabletas 500mg x 20	120.85	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+672	4	4	Advil-642	Ibuprofeno	Cápsulas 400mg x 10	7.22	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+673	7	11	Amoxil-643	Amoxicilina	Cápsulas 500mg x 21	115.98	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+674	6	6	Aspirina-644	Ácido acetilsalicílico	Tabletas 500mg x 20	122.60	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+675	6	11	Losartán MK-645	Losartán potásico	Tabletas 50mg x 30	75.20	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+676	5	2	Metformina Genfar-646	Metformina clorhidrato	Tabletas 850mg x 30	101.97	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+677	5	6	Omeprazol MK-647	Omeprazol	Cápsulas 20mg x 14	104.55	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+678	8	7	Loratadina Genfar-648	Loratadina	Tabletas 10mg x 10	75.23	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+679	6	11	Azitromicina MK-649	Azitromicina	Tabletas 500mg x 3	107.57	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+680	7	2	Diclofenaco Genfar-650	Diclofenaco sódico	Tabletas 50mg x 20	24.44	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+681	6	3	Cetirizina MK-651	Cetirizina	Tabletas 10mg x 10	94.83	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+682	6	3	Enalapril Genfar-652	Enalapril maleato	Tabletas 20mg x 30	16.95	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+683	8	7	Vitamina C Bayer-653	Ácido ascórbico	Tabletas efervescentes 1g x 10	144.89	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+684	3	12	Centrum-654	Multivitamínico	Tabletas x 30	77.74	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+685	3	11	Ranitidina MK-655	Ranitidina	Tabletas 150mg x 20	6.18	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+686	10	2	Ciprofloxacino Genfar-656	Ciprofloxacino	Tabletas 500mg x 10	124.35	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+687	8	12	Glucosamina Bagó-657	Glucosamina sulfato	Sobres 1500mg x 15	19.29	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+688	6	2	Naproxeno MK-658	Naproxeno sódico	Tabletas 275mg x 10	127.13	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+689	4	3	Dexametasona Genfar-659	Dexametasona	Tabletas 0.5mg x 30	47.29	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+690	5	2	Salbutamol MK-660	Salbutamol	Inhalador 100mcg x 200 dosis	126.04	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+691	1	12	Panadol-661	Paracetamol	Tabletas 500mg x 20	128.37	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+692	2	11	Advil-662	Ibuprofeno	Cápsulas 400mg x 10	89.78	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+693	10	10	Amoxil-663	Amoxicilina	Cápsulas 500mg x 21	121.76	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+694	1	1	Aspirina-664	Ácido acetilsalicílico	Tabletas 500mg x 20	15.81	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+695	2	11	Losartán MK-665	Losartán potásico	Tabletas 50mg x 30	108.68	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+696	7	12	Metformina Genfar-666	Metformina clorhidrato	Tabletas 850mg x 30	117.01	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+697	3	2	Omeprazol MK-667	Omeprazol	Cápsulas 20mg x 14	127.56	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+698	4	3	Loratadina Genfar-668	Loratadina	Tabletas 10mg x 10	35.48	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+699	8	9	Azitromicina MK-669	Azitromicina	Tabletas 500mg x 3	34.26	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+700	2	8	Diclofenaco Genfar-670	Diclofenaco sódico	Tabletas 50mg x 20	127.35	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+701	10	5	Cetirizina MK-671	Cetirizina	Tabletas 10mg x 10	114.67	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+702	3	6	Enalapril Genfar-672	Enalapril maleato	Tabletas 20mg x 30	44.77	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+703	8	4	Vitamina C Bayer-673	Ácido ascórbico	Tabletas efervescentes 1g x 10	68.65	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+704	7	7	Centrum-674	Multivitamínico	Tabletas x 30	26.31	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+705	2	7	Ranitidina MK-675	Ranitidina	Tabletas 150mg x 20	111.72	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+706	6	9	Ciprofloxacino Genfar-676	Ciprofloxacino	Tabletas 500mg x 10	103.70	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+707	5	10	Glucosamina Bagó-677	Glucosamina sulfato	Sobres 1500mg x 15	35.88	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+708	7	7	Naproxeno MK-678	Naproxeno sódico	Tabletas 275mg x 10	25.09	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+709	6	3	Dexametasona Genfar-679	Dexametasona	Tabletas 0.5mg x 30	87.77	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+710	1	10	Salbutamol MK-680	Salbutamol	Inhalador 100mcg x 200 dosis	146.89	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+711	2	11	Panadol-681	Paracetamol	Tabletas 500mg x 20	117.67	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+712	9	10	Advil-682	Ibuprofeno	Cápsulas 400mg x 10	80.58	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+713	8	3	Amoxil-683	Amoxicilina	Cápsulas 500mg x 21	141.10	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+714	4	1	Aspirina-684	Ácido acetilsalicílico	Tabletas 500mg x 20	37.90	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+715	1	4	Losartán MK-685	Losartán potásico	Tabletas 50mg x 30	36.12	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+716	2	10	Metformina Genfar-686	Metformina clorhidrato	Tabletas 850mg x 30	109.46	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+717	10	9	Omeprazol MK-687	Omeprazol	Cápsulas 20mg x 14	68.90	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+718	5	10	Loratadina Genfar-688	Loratadina	Tabletas 10mg x 10	80.34	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+719	2	12	Azitromicina MK-689	Azitromicina	Tabletas 500mg x 3	95.06	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+720	4	6	Diclofenaco Genfar-690	Diclofenaco sódico	Tabletas 50mg x 20	72.75	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+721	7	4	Cetirizina MK-691	Cetirizina	Tabletas 10mg x 10	131.15	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+722	7	9	Enalapril Genfar-692	Enalapril maleato	Tabletas 20mg x 30	67.90	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+723	5	10	Vitamina C Bayer-693	Ácido ascórbico	Tabletas efervescentes 1g x 10	79.22	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+724	10	10	Centrum-694	Multivitamínico	Tabletas x 30	19.77	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+725	9	8	Ranitidina MK-695	Ranitidina	Tabletas 150mg x 20	40.82	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+726	6	7	Ciprofloxacino Genfar-696	Ciprofloxacino	Tabletas 500mg x 10	65.44	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+727	2	2	Glucosamina Bagó-697	Glucosamina sulfato	Sobres 1500mg x 15	51.72	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+728	1	11	Naproxeno MK-698	Naproxeno sódico	Tabletas 275mg x 10	32.72	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+729	8	5	Dexametasona Genfar-699	Dexametasona	Tabletas 0.5mg x 30	42.49	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+730	6	4	Salbutamol MK-700	Salbutamol	Inhalador 100mcg x 200 dosis	66.63	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+731	9	5	Panadol-701	Paracetamol	Tabletas 500mg x 20	19.28	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+732	4	7	Advil-702	Ibuprofeno	Cápsulas 400mg x 10	109.40	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+733	5	6	Amoxil-703	Amoxicilina	Cápsulas 500mg x 21	14.90	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+734	6	12	Aspirina-704	Ácido acetilsalicílico	Tabletas 500mg x 20	144.03	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+735	10	7	Losartán MK-705	Losartán potásico	Tabletas 50mg x 30	25.21	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+736	3	7	Metformina Genfar-706	Metformina clorhidrato	Tabletas 850mg x 30	32.58	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+737	6	6	Omeprazol MK-707	Omeprazol	Cápsulas 20mg x 14	21.78	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+738	3	12	Loratadina Genfar-708	Loratadina	Tabletas 10mg x 10	144.31	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+739	10	7	Azitromicina MK-709	Azitromicina	Tabletas 500mg x 3	80.82	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+740	5	12	Diclofenaco Genfar-710	Diclofenaco sódico	Tabletas 50mg x 20	10.15	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+741	5	10	Cetirizina MK-711	Cetirizina	Tabletas 10mg x 10	110.89	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+742	6	12	Enalapril Genfar-712	Enalapril maleato	Tabletas 20mg x 30	143.65	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+743	8	10	Vitamina C Bayer-713	Ácido ascórbico	Tabletas efervescentes 1g x 10	59.27	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+744	1	9	Centrum-714	Multivitamínico	Tabletas x 30	29.99	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+745	7	11	Ranitidina MK-715	Ranitidina	Tabletas 150mg x 20	6.27	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+746	8	1	Ciprofloxacino Genfar-716	Ciprofloxacino	Tabletas 500mg x 10	27.36	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+747	9	4	Glucosamina Bagó-717	Glucosamina sulfato	Sobres 1500mg x 15	119.11	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+748	10	11	Naproxeno MK-718	Naproxeno sódico	Tabletas 275mg x 10	104.47	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+749	8	2	Dexametasona Genfar-719	Dexametasona	Tabletas 0.5mg x 30	38.39	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+750	2	6	Salbutamol MK-720	Salbutamol	Inhalador 100mcg x 200 dosis	23.96	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+751	8	12	Panadol-721	Paracetamol	Tabletas 500mg x 20	103.06	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+752	1	11	Advil-722	Ibuprofeno	Cápsulas 400mg x 10	111.53	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+753	5	8	Amoxil-723	Amoxicilina	Cápsulas 500mg x 21	140.58	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+754	10	1	Aspirina-724	Ácido acetilsalicílico	Tabletas 500mg x 20	66.86	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+755	4	8	Losartán MK-725	Losartán potásico	Tabletas 50mg x 30	114.05	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+756	10	10	Metformina Genfar-726	Metformina clorhidrato	Tabletas 850mg x 30	44.37	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+757	8	12	Omeprazol MK-727	Omeprazol	Cápsulas 20mg x 14	59.41	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+758	7	4	Loratadina Genfar-728	Loratadina	Tabletas 10mg x 10	129.49	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+759	5	3	Azitromicina MK-729	Azitromicina	Tabletas 500mg x 3	144.64	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+760	8	7	Diclofenaco Genfar-730	Diclofenaco sódico	Tabletas 50mg x 20	20.92	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+761	9	10	Cetirizina MK-731	Cetirizina	Tabletas 10mg x 10	8.80	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+762	1	11	Enalapril Genfar-732	Enalapril maleato	Tabletas 20mg x 30	104.08	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+763	9	2	Vitamina C Bayer-733	Ácido ascórbico	Tabletas efervescentes 1g x 10	130.25	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+764	5	3	Centrum-734	Multivitamínico	Tabletas x 30	36.59	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+765	10	11	Ranitidina MK-735	Ranitidina	Tabletas 150mg x 20	23.11	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+766	6	5	Ciprofloxacino Genfar-736	Ciprofloxacino	Tabletas 500mg x 10	28.57	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+767	4	2	Glucosamina Bagó-737	Glucosamina sulfato	Sobres 1500mg x 15	104.40	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+768	10	10	Naproxeno MK-738	Naproxeno sódico	Tabletas 275mg x 10	35.90	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+769	7	9	Dexametasona Genfar-739	Dexametasona	Tabletas 0.5mg x 30	46.02	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+770	7	9	Salbutamol MK-740	Salbutamol	Inhalador 100mcg x 200 dosis	136.83	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+771	6	2	Panadol-741	Paracetamol	Tabletas 500mg x 20	104.34	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+772	3	7	Advil-742	Ibuprofeno	Cápsulas 400mg x 10	62.03	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+773	10	7	Amoxil-743	Amoxicilina	Cápsulas 500mg x 21	42.11	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+774	9	12	Aspirina-744	Ácido acetilsalicílico	Tabletas 500mg x 20	100.07	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+775	2	5	Losartán MK-745	Losartán potásico	Tabletas 50mg x 30	79.25	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+776	10	2	Metformina Genfar-746	Metformina clorhidrato	Tabletas 850mg x 30	39.52	14	2026-10-19 15:58:47	2026-10-19 15:58:47
+777	1	7	Omeprazol MK-747	Omeprazol	Cápsulas 20mg x 14	119.09	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+778	5	2	Loratadina Genfar-748	Loratadina	Tabletas 10mg x 10	34.69	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+779	10	3	Azitromicina MK-749	Azitromicina	Tabletas 500mg x 3	117.13	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+780	10	5	Diclofenaco Genfar-750	Diclofenaco sódico	Tabletas 50mg x 20	62.06	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+781	1	12	Cetirizina MK-751	Cetirizina	Tabletas 10mg x 10	12.30	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+782	7	10	Enalapril Genfar-752	Enalapril maleato	Tabletas 20mg x 30	78.63	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+783	9	9	Vitamina C Bayer-753	Ácido ascórbico	Tabletas efervescentes 1g x 10	73.98	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+784	4	9	Centrum-754	Multivitamínico	Tabletas x 30	91.00	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+785	1	12	Ranitidina MK-755	Ranitidina	Tabletas 150mg x 20	48.21	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+786	10	9	Ciprofloxacino Genfar-756	Ciprofloxacino	Tabletas 500mg x 10	148.24	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+787	4	10	Glucosamina Bagó-757	Glucosamina sulfato	Sobres 1500mg x 15	99.61	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+788	6	1	Naproxeno MK-758	Naproxeno sódico	Tabletas 275mg x 10	90.50	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+789	7	7	Dexametasona Genfar-759	Dexametasona	Tabletas 0.5mg x 30	37.83	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+790	3	4	Salbutamol MK-760	Salbutamol	Inhalador 100mcg x 200 dosis	30.52	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+791	4	10	Panadol-761	Paracetamol	Tabletas 500mg x 20	141.56	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+792	2	8	Advil-762	Ibuprofeno	Cápsulas 400mg x 10	74.48	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+793	5	9	Amoxil-763	Amoxicilina	Cápsulas 500mg x 21	43.98	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+794	10	10	Aspirina-764	Ácido acetilsalicílico	Tabletas 500mg x 20	7.40	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+795	3	8	Losartán MK-765	Losartán potásico	Tabletas 50mg x 30	148.01	11	2026-10-19 15:58:47	2026-10-19 15:58:47
+796	4	11	Metformina Genfar-766	Metformina clorhidrato	Tabletas 850mg x 30	55.51	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+797	6	6	Omeprazol MK-767	Omeprazol	Cápsulas 20mg x 14	101.22	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+798	4	7	Loratadina Genfar-768	Loratadina	Tabletas 10mg x 10	98.00	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+799	1	3	Azitromicina MK-769	Azitromicina	Tabletas 500mg x 3	86.37	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+800	4	11	Diclofenaco Genfar-770	Diclofenaco sódico	Tabletas 50mg x 20	87.44	8	2026-10-19 15:58:47	2026-10-19 15:58:47
+801	8	12	Cetirizina MK-771	Cetirizina	Tabletas 10mg x 10	139.78	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+802	2	10	Enalapril Genfar-772	Enalapril maleato	Tabletas 20mg x 30	15.05	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+803	3	7	Vitamina C Bayer-773	Ácido ascórbico	Tabletas efervescentes 1g x 10	101.91	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+804	5	8	Centrum-774	Multivitamínico	Tabletas x 30	56.13	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+805	1	12	Ranitidina MK-775	Ranitidina	Tabletas 150mg x 20	98.87	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+806	9	7	Ciprofloxacino Genfar-776	Ciprofloxacino	Tabletas 500mg x 10	89.07	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+807	7	10	Glucosamina Bagó-777	Glucosamina sulfato	Sobres 1500mg x 15	143.29	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+808	4	7	Naproxeno MK-778	Naproxeno sódico	Tabletas 275mg x 10	142.03	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+809	5	12	Dexametasona Genfar-779	Dexametasona	Tabletas 0.5mg x 30	96.84	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+810	4	3	Salbutamol MK-780	Salbutamol	Inhalador 100mcg x 200 dosis	32.38	22	2026-10-19 15:58:47	2026-10-19 15:58:47
+811	6	5	Panadol-781	Paracetamol	Tabletas 500mg x 20	121.96	10	2026-10-19 15:58:47	2026-10-19 15:58:47
+812	2	7	Advil-782	Ibuprofeno	Cápsulas 400mg x 10	113.67	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+813	4	11	Amoxil-783	Amoxicilina	Cápsulas 500mg x 21	67.34	25	2026-10-19 15:58:47	2026-10-19 15:58:47
+814	5	7	Aspirina-784	Ácido acetilsalicílico	Tabletas 500mg x 20	143.95	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+815	10	2	Losartán MK-785	Losartán potásico	Tabletas 50mg x 30	52.15	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+816	10	9	Metformina Genfar-786	Metformina clorhidrato	Tabletas 850mg x 30	95.47	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+817	5	5	Omeprazol MK-787	Omeprazol	Cápsulas 20mg x 14	31.85	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+818	5	1	Loratadina Genfar-788	Loratadina	Tabletas 10mg x 10	16.66	6	2026-10-19 15:58:47	2026-10-19 15:58:47
+819	8	4	Azitromicina MK-789	Azitromicina	Tabletas 500mg x 3	41.13	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+820	3	7	Diclofenaco Genfar-790	Diclofenaco sódico	Tabletas 50mg x 20	65.34	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+821	8	5	Cetirizina MK-791	Cetirizina	Tabletas 10mg x 10	126.25	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+822	4	2	Enalapril Genfar-792	Enalapril maleato	Tabletas 20mg x 30	128.40	21	2026-10-19 15:58:47	2026-10-19 15:58:47
+823	3	8	Vitamina C Bayer-793	Ácido ascórbico	Tabletas efervescentes 1g x 10	101.80	12	2026-10-19 15:58:47	2026-10-19 15:58:47
+824	3	10	Centrum-794	Multivitamínico	Tabletas x 30	18.83	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+825	2	9	Ranitidina MK-795	Ranitidina	Tabletas 150mg x 20	89.58	18	2026-10-19 15:58:47	2026-10-19 15:58:47
+826	4	6	Ciprofloxacino Genfar-796	Ciprofloxacino	Tabletas 500mg x 10	16.86	7	2026-10-19 15:58:47	2026-10-19 15:58:47
+827	1	12	Glucosamina Bagó-797	Glucosamina sulfato	Sobres 1500mg x 15	27.33	9	2026-10-19 15:58:47	2026-10-19 15:58:47
+828	3	2	Naproxeno MK-798	Naproxeno sódico	Tabletas 275mg x 10	44.66	16	2026-10-19 15:58:47	2026-10-19 15:58:47
+829	3	6	Dexametasona Genfar-799	Dexametasona	Tabletas 0.5mg x 30	89.74	20	2026-10-19 15:58:47	2026-10-19 15:58:47
+830	4	10	Salbutamol MK-800	Salbutamol	Inhalador 100mcg x 200 dosis	148.33	17	2026-10-19 15:58:47	2026-10-19 15:58:47
+831	5	3	Panadol-801	Paracetamol	Tabletas 500mg x 20	41.64	19	2026-10-19 15:58:47	2026-10-19 15:58:47
+832	6	10	Advil-802	Ibuprofeno	Cápsulas 400mg x 10	102.87	23	2026-10-19 15:58:47	2026-10-19 15:58:47
+833	4	10	Amoxil-803	Amoxicilina	Cápsulas 500mg x 21	34.14	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+834	6	1	Aspirina-804	Ácido acetilsalicílico	Tabletas 500mg x 20	30.88	15	2026-10-19 15:58:47	2026-10-19 15:58:47
+835	7	4	Losartán MK-805	Losartán potásico	Tabletas 50mg x 30	93.63	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+836	6	10	Metformina Genfar-806	Metformina clorhidrato	Tabletas 850mg x 30	75.35	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+837	5	3	Omeprazol MK-807	Omeprazol	Cápsulas 20mg x 14	99.04	13	2026-10-19 15:58:47	2026-10-19 15:58:47
+838	9	12	Loratadina Genfar-808	Loratadina	Tabletas 10mg x 10	17.28	24	2026-10-19 15:58:47	2026-10-19 15:58:47
+839	9	11	Azitromicina MK-809	Azitromicina	Tabletas 500mg x 3	145.55	5	2026-10-19 15:58:47	2026-10-19 15:58:47
+840	2	3	Diclofenaco Genfar-810	Diclofenaco sódico	Tabletas 50mg x 20	35.36	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+841	3	12	Cetirizina MK-811	Cetirizina	Tabletas 10mg x 10	72.09	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+842	5	9	Enalapril Genfar-812	Enalapril maleato	Tabletas 20mg x 30	32.35	20	2026-10-19 15:58:48	2026-10-19 15:58:48
+843	9	1	Vitamina C Bayer-813	Ácido ascórbico	Tabletas efervescentes 1g x 10	77.44	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+844	9	2	Centrum-814	Multivitamínico	Tabletas x 30	69.56	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+845	5	4	Ranitidina MK-815	Ranitidina	Tabletas 150mg x 20	122.34	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+846	10	5	Ciprofloxacino Genfar-816	Ciprofloxacino	Tabletas 500mg x 10	6.34	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+847	4	9	Glucosamina Bagó-817	Glucosamina sulfato	Sobres 1500mg x 15	32.77	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+848	10	1	Naproxeno MK-818	Naproxeno sódico	Tabletas 275mg x 10	30.71	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+849	10	4	Dexametasona Genfar-819	Dexametasona	Tabletas 0.5mg x 30	102.02	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+850	3	2	Salbutamol MK-820	Salbutamol	Inhalador 100mcg x 200 dosis	146.27	8	2026-10-19 15:58:48	2026-10-19 15:58:48
+851	10	4	Panadol-821	Paracetamol	Tabletas 500mg x 20	126.89	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+852	6	10	Advil-822	Ibuprofeno	Cápsulas 400mg x 10	92.28	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+853	1	3	Amoxil-823	Amoxicilina	Cápsulas 500mg x 21	74.21	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+854	3	7	Aspirina-824	Ácido acetilsalicílico	Tabletas 500mg x 20	86.95	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+855	1	12	Losartán MK-825	Losartán potásico	Tabletas 50mg x 30	59.93	8	2026-10-19 15:58:48	2026-10-19 15:58:48
+856	9	7	Metformina Genfar-826	Metformina clorhidrato	Tabletas 850mg x 30	57.11	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+857	1	2	Omeprazol MK-827	Omeprazol	Cápsulas 20mg x 14	13.39	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+858	10	1	Loratadina Genfar-828	Loratadina	Tabletas 10mg x 10	24.01	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+859	2	6	Azitromicina MK-829	Azitromicina	Tabletas 500mg x 3	49.92	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+860	9	4	Diclofenaco Genfar-830	Diclofenaco sódico	Tabletas 50mg x 20	56.88	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+861	10	5	Cetirizina MK-831	Cetirizina	Tabletas 10mg x 10	129.99	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+862	9	10	Enalapril Genfar-832	Enalapril maleato	Tabletas 20mg x 30	147.22	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+863	2	7	Vitamina C Bayer-833	Ácido ascórbico	Tabletas efervescentes 1g x 10	105.83	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+864	8	11	Centrum-834	Multivitamínico	Tabletas x 30	55.89	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+865	8	10	Ranitidina MK-835	Ranitidina	Tabletas 150mg x 20	77.74	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+866	6	3	Ciprofloxacino Genfar-836	Ciprofloxacino	Tabletas 500mg x 10	122.06	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+867	2	6	Glucosamina Bagó-837	Glucosamina sulfato	Sobres 1500mg x 15	54.52	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+868	9	6	Naproxeno MK-838	Naproxeno sódico	Tabletas 275mg x 10	113.86	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+869	10	4	Dexametasona Genfar-839	Dexametasona	Tabletas 0.5mg x 30	31.21	18	2026-10-19 15:58:48	2026-10-19 15:58:48
+870	3	5	Salbutamol MK-840	Salbutamol	Inhalador 100mcg x 200 dosis	47.58	8	2026-10-19 15:58:48	2026-10-19 15:58:48
+871	6	8	Panadol-841	Paracetamol	Tabletas 500mg x 20	7.85	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+872	3	3	Advil-842	Ibuprofeno	Cápsulas 400mg x 10	11.63	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+873	5	9	Amoxil-843	Amoxicilina	Cápsulas 500mg x 21	101.06	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+874	8	7	Aspirina-844	Ácido acetilsalicílico	Tabletas 500mg x 20	96.93	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+875	1	11	Losartán MK-845	Losartán potásico	Tabletas 50mg x 30	109.76	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+876	7	5	Metformina Genfar-846	Metformina clorhidrato	Tabletas 850mg x 30	112.29	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+877	1	1	Omeprazol MK-847	Omeprazol	Cápsulas 20mg x 14	47.74	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+878	6	7	Loratadina Genfar-848	Loratadina	Tabletas 10mg x 10	34.93	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+879	5	10	Azitromicina MK-849	Azitromicina	Tabletas 500mg x 3	59.39	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+880	9	4	Diclofenaco Genfar-850	Diclofenaco sódico	Tabletas 50mg x 20	9.84	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+881	8	12	Cetirizina MK-851	Cetirizina	Tabletas 10mg x 10	144.20	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+882	3	7	Enalapril Genfar-852	Enalapril maleato	Tabletas 20mg x 30	143.89	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+883	1	5	Vitamina C Bayer-853	Ácido ascórbico	Tabletas efervescentes 1g x 10	93.79	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+884	5	4	Centrum-854	Multivitamínico	Tabletas x 30	68.00	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+885	3	7	Ranitidina MK-855	Ranitidina	Tabletas 150mg x 20	147.25	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+886	5	3	Ciprofloxacino Genfar-856	Ciprofloxacino	Tabletas 500mg x 10	104.28	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+887	4	4	Glucosamina Bagó-857	Glucosamina sulfato	Sobres 1500mg x 15	93.79	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+888	6	6	Naproxeno MK-858	Naproxeno sódico	Tabletas 275mg x 10	60.35	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+889	7	2	Dexametasona Genfar-859	Dexametasona	Tabletas 0.5mg x 30	131.82	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+890	9	2	Salbutamol MK-860	Salbutamol	Inhalador 100mcg x 200 dosis	66.34	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+891	8	8	Panadol-861	Paracetamol	Tabletas 500mg x 20	117.86	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+892	9	7	Advil-862	Ibuprofeno	Cápsulas 400mg x 10	8.25	8	2026-10-19 15:58:48	2026-10-19 15:58:48
+893	10	11	Amoxil-863	Amoxicilina	Cápsulas 500mg x 21	10.00	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+894	3	8	Aspirina-864	Ácido acetilsalicílico	Tabletas 500mg x 20	58.31	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+895	7	10	Losartán MK-865	Losartán potásico	Tabletas 50mg x 30	108.23	7	2026-10-19 15:58:48	2026-10-19 15:58:48
+896	1	9	Metformina Genfar-866	Metformina clorhidrato	Tabletas 850mg x 30	54.48	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+897	3	1	Omeprazol MK-867	Omeprazol	Cápsulas 20mg x 14	24.42	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+898	4	3	Loratadina Genfar-868	Loratadina	Tabletas 10mg x 10	140.88	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+899	3	10	Azitromicina MK-869	Azitromicina	Tabletas 500mg x 3	85.06	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+900	2	7	Diclofenaco Genfar-870	Diclofenaco sódico	Tabletas 50mg x 20	15.81	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+901	9	2	Cetirizina MK-871	Cetirizina	Tabletas 10mg x 10	38.63	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+902	10	5	Enalapril Genfar-872	Enalapril maleato	Tabletas 20mg x 30	26.18	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+903	2	6	Vitamina C Bayer-873	Ácido ascórbico	Tabletas efervescentes 1g x 10	119.89	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+904	9	4	Centrum-874	Multivitamínico	Tabletas x 30	106.67	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+905	2	10	Ranitidina MK-875	Ranitidina	Tabletas 150mg x 20	97.21	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+906	7	5	Ciprofloxacino Genfar-876	Ciprofloxacino	Tabletas 500mg x 10	140.30	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+907	4	2	Glucosamina Bagó-877	Glucosamina sulfato	Sobres 1500mg x 15	45.62	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+908	8	2	Naproxeno MK-878	Naproxeno sódico	Tabletas 275mg x 10	75.61	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+909	2	6	Dexametasona Genfar-879	Dexametasona	Tabletas 0.5mg x 30	63.86	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+910	2	5	Salbutamol MK-880	Salbutamol	Inhalador 100mcg x 200 dosis	41.81	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+911	6	2	Panadol-881	Paracetamol	Tabletas 500mg x 20	62.18	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+912	9	2	Advil-882	Ibuprofeno	Cápsulas 400mg x 10	92.43	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+913	5	11	Amoxil-883	Amoxicilina	Cápsulas 500mg x 21	13.43	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+914	3	1	Aspirina-884	Ácido acetilsalicílico	Tabletas 500mg x 20	26.89	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+915	1	12	Losartán MK-885	Losartán potásico	Tabletas 50mg x 30	118.90	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+916	6	6	Metformina Genfar-886	Metformina clorhidrato	Tabletas 850mg x 30	143.54	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+917	10	8	Omeprazol MK-887	Omeprazol	Cápsulas 20mg x 14	41.56	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+918	9	10	Loratadina Genfar-888	Loratadina	Tabletas 10mg x 10	36.52	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+919	3	4	Azitromicina MK-889	Azitromicina	Tabletas 500mg x 3	105.45	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+920	5	7	Diclofenaco Genfar-890	Diclofenaco sódico	Tabletas 50mg x 20	22.31	18	2026-10-19 15:58:48	2026-10-19 15:58:48
+921	1	5	Cetirizina MK-891	Cetirizina	Tabletas 10mg x 10	120.68	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+922	2	11	Enalapril Genfar-892	Enalapril maleato	Tabletas 20mg x 30	54.94	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+923	6	11	Vitamina C Bayer-893	Ácido ascórbico	Tabletas efervescentes 1g x 10	54.92	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+924	3	3	Centrum-894	Multivitamínico	Tabletas x 30	90.34	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+925	1	3	Ranitidina MK-895	Ranitidina	Tabletas 150mg x 20	49.79	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+926	3	12	Ciprofloxacino Genfar-896	Ciprofloxacino	Tabletas 500mg x 10	53.44	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+927	5	5	Glucosamina Bagó-897	Glucosamina sulfato	Sobres 1500mg x 15	120.93	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+928	8	7	Naproxeno MK-898	Naproxeno sódico	Tabletas 275mg x 10	98.75	7	2026-10-19 15:58:48	2026-10-19 15:58:48
+929	8	6	Dexametasona Genfar-899	Dexametasona	Tabletas 0.5mg x 30	132.93	20	2026-10-19 15:58:48	2026-10-19 15:58:48
+930	3	7	Salbutamol MK-900	Salbutamol	Inhalador 100mcg x 200 dosis	55.31	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+931	6	3	Panadol-901	Paracetamol	Tabletas 500mg x 20	81.16	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+932	6	2	Advil-902	Ibuprofeno	Cápsulas 400mg x 10	28.25	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+933	9	4	Amoxil-903	Amoxicilina	Cápsulas 500mg x 21	122.38	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+934	4	7	Aspirina-904	Ácido acetilsalicílico	Tabletas 500mg x 20	143.55	18	2026-10-19 15:58:48	2026-10-19 15:58:48
+935	9	2	Losartán MK-905	Losartán potásico	Tabletas 50mg x 30	25.06	20	2026-10-19 15:58:48	2026-10-19 15:58:48
+936	7	12	Metformina Genfar-906	Metformina clorhidrato	Tabletas 850mg x 30	141.85	7	2026-10-19 15:58:48	2026-10-19 15:58:48
+937	3	6	Omeprazol MK-907	Omeprazol	Cápsulas 20mg x 14	24.53	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+938	10	3	Loratadina Genfar-908	Loratadina	Tabletas 10mg x 10	99.08	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+939	1	9	Azitromicina MK-909	Azitromicina	Tabletas 500mg x 3	7.52	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+940	2	12	Diclofenaco Genfar-910	Diclofenaco sódico	Tabletas 50mg x 20	129.52	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+941	9	11	Cetirizina MK-911	Cetirizina	Tabletas 10mg x 10	72.83	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+942	8	5	Enalapril Genfar-912	Enalapril maleato	Tabletas 20mg x 30	10.01	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+943	1	2	Vitamina C Bayer-913	Ácido ascórbico	Tabletas efervescentes 1g x 10	82.48	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+944	4	6	Centrum-914	Multivitamínico	Tabletas x 30	81.93	6	2026-10-19 15:58:48	2026-10-19 15:58:48
+945	2	7	Ranitidina MK-915	Ranitidina	Tabletas 150mg x 20	35.73	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+946	7	9	Ciprofloxacino Genfar-916	Ciprofloxacino	Tabletas 500mg x 10	133.89	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+947	9	9	Glucosamina Bagó-917	Glucosamina sulfato	Sobres 1500mg x 15	108.23	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+948	10	12	Naproxeno MK-918	Naproxeno sódico	Tabletas 275mg x 10	114.90	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+949	10	2	Dexametasona Genfar-919	Dexametasona	Tabletas 0.5mg x 30	26.59	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+950	1	10	Salbutamol MK-920	Salbutamol	Inhalador 100mcg x 200 dosis	43.98	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+951	6	11	Panadol-921	Paracetamol	Tabletas 500mg x 20	125.48	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+952	8	10	Advil-922	Ibuprofeno	Cápsulas 400mg x 10	30.03	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+953	5	3	Amoxil-923	Amoxicilina	Cápsulas 500mg x 21	51.12	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+954	2	6	Aspirina-924	Ácido acetilsalicílico	Tabletas 500mg x 20	104.18	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+955	10	11	Losartán MK-925	Losartán potásico	Tabletas 50mg x 30	34.29	11	2026-10-19 15:58:48	2026-10-19 15:58:48
+956	4	11	Metformina Genfar-926	Metformina clorhidrato	Tabletas 850mg x 30	120.40	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+957	6	11	Omeprazol MK-927	Omeprazol	Cápsulas 20mg x 14	121.44	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+958	10	1	Loratadina Genfar-928	Loratadina	Tabletas 10mg x 10	24.10	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+959	9	10	Azitromicina MK-929	Azitromicina	Tabletas 500mg x 3	136.79	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+960	5	8	Diclofenaco Genfar-930	Diclofenaco sódico	Tabletas 50mg x 20	121.09	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+961	2	6	Cetirizina MK-931	Cetirizina	Tabletas 10mg x 10	111.61	16	2026-10-19 15:58:48	2026-10-19 15:58:48
+962	6	4	Enalapril Genfar-932	Enalapril maleato	Tabletas 20mg x 30	104.42	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+963	5	1	Vitamina C Bayer-933	Ácido ascórbico	Tabletas efervescentes 1g x 10	116.95	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+964	5	7	Centrum-934	Multivitamínico	Tabletas x 30	26.19	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+965	5	10	Ranitidina MK-935	Ranitidina	Tabletas 150mg x 20	116.96	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+966	9	10	Ciprofloxacino Genfar-936	Ciprofloxacino	Tabletas 500mg x 10	22.19	17	2026-10-19 15:58:48	2026-10-19 15:58:48
+967	5	7	Glucosamina Bagó-937	Glucosamina sulfato	Sobres 1500mg x 15	42.94	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+968	10	4	Naproxeno MK-938	Naproxeno sódico	Tabletas 275mg x 10	21.75	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+969	7	12	Dexametasona Genfar-939	Dexametasona	Tabletas 0.5mg x 30	71.89	13	2026-10-19 15:58:48	2026-10-19 15:58:48
+970	10	12	Salbutamol MK-940	Salbutamol	Inhalador 100mcg x 200 dosis	15.64	9	2026-10-19 15:58:48	2026-10-19 15:58:48
+971	1	4	Panadol-941	Paracetamol	Tabletas 500mg x 20	7.00	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+972	8	2	Advil-942	Ibuprofeno	Cápsulas 400mg x 10	120.17	7	2026-10-19 15:58:48	2026-10-19 15:58:48
+973	7	7	Amoxil-943	Amoxicilina	Cápsulas 500mg x 21	114.98	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+974	9	1	Aspirina-944	Ácido acetilsalicílico	Tabletas 500mg x 20	52.32	25	2026-10-19 15:58:48	2026-10-19 15:58:48
+975	10	11	Losartán MK-945	Losartán potásico	Tabletas 50mg x 30	134.50	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+976	4	5	Metformina Genfar-946	Metformina clorhidrato	Tabletas 850mg x 30	64.41	21	2026-10-19 15:58:48	2026-10-19 15:58:48
+977	9	7	Omeprazol MK-947	Omeprazol	Cápsulas 20mg x 14	118.81	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+978	3	8	Loratadina Genfar-948	Loratadina	Tabletas 10mg x 10	124.43	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+979	1	7	Azitromicina MK-949	Azitromicina	Tabletas 500mg x 3	141.12	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+980	9	4	Diclofenaco Genfar-950	Diclofenaco sódico	Tabletas 50mg x 20	58.89	22	2026-10-19 15:58:48	2026-10-19 15:58:48
+981	8	10	Cetirizina MK-951	Cetirizina	Tabletas 10mg x 10	139.72	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+982	9	5	Enalapril Genfar-952	Enalapril maleato	Tabletas 20mg x 30	82.21	10	2026-10-19 15:58:48	2026-10-19 15:58:48
+983	5	9	Vitamina C Bayer-953	Ácido ascórbico	Tabletas efervescentes 1g x 10	34.04	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+984	3	5	Centrum-954	Multivitamínico	Tabletas x 30	129.83	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+985	5	12	Ranitidina MK-955	Ranitidina	Tabletas 150mg x 20	37.30	19	2026-10-19 15:58:48	2026-10-19 15:58:48
+986	4	3	Ciprofloxacino Genfar-956	Ciprofloxacino	Tabletas 500mg x 10	149.70	15	2026-10-19 15:58:48	2026-10-19 15:58:48
+987	5	10	Glucosamina Bagó-957	Glucosamina sulfato	Sobres 1500mg x 15	57.24	20	2026-10-19 15:58:48	2026-10-19 15:58:48
+988	1	1	Naproxeno MK-958	Naproxeno sódico	Tabletas 275mg x 10	72.39	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+989	2	2	Dexametasona Genfar-959	Dexametasona	Tabletas 0.5mg x 30	32.64	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+990	1	1	Salbutamol MK-960	Salbutamol	Inhalador 100mcg x 200 dosis	96.87	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+991	3	12	Panadol-961	Paracetamol	Tabletas 500mg x 20	121.80	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+992	5	3	Advil-962	Ibuprofeno	Cápsulas 400mg x 10	85.28	14	2026-10-19 15:58:48	2026-10-19 15:58:48
+993	7	3	Amoxil-963	Amoxicilina	Cápsulas 500mg x 21	12.87	12	2026-10-19 15:58:48	2026-10-19 15:58:48
+994	6	10	Aspirina-964	Ácido acetilsalicílico	Tabletas 500mg x 20	36.37	5	2026-10-19 15:58:48	2026-10-19 15:58:48
+995	9	10	Losartán MK-965	Losartán potásico	Tabletas 50mg x 30	34.41	8	2026-10-19 15:58:48	2026-10-19 15:58:48
+996	1	3	Metformina Genfar-966	Metformina clorhidrato	Tabletas 850mg x 30	101.79	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+997	8	3	Omeprazol MK-967	Omeprazol	Cápsulas 20mg x 14	82.61	18	2026-10-19 15:58:48	2026-10-19 15:58:48
+998	10	7	Loratadina Genfar-968	Loratadina	Tabletas 10mg x 10	80.27	23	2026-10-19 15:58:48	2026-10-19 15:58:48
+999	10	8	Azitromicina MK-969	Azitromicina	Tabletas 500mg x 3	137.14	24	2026-10-19 15:58:48	2026-10-19 15:58:48
+1000	10	5	Diclofenaco Genfar-970	Diclofenaco sódico	Tabletas 50mg x 20	106.85	15	2026-10-19 15:58:48	2026-10-19 15:58:48
 \.
 
 
 --
--- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.migrations (id, migration, batch) FROM stdin;
@@ -894,7 +6290,7 @@ COPY public.migrations (id, migration, batch) FROM stdin;
 
 
 --
--- Data for Name: password_reset_tokens; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: password_reset_tokens; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.password_reset_tokens (email, token, created_at) FROM stdin;
@@ -902,7 +6298,7 @@ COPY public.password_reset_tokens (email, token, created_at) FROM stdin;
 
 
 --
--- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.sessions (id, user_id, ip_address, user_agent, payload, last_activity) FROM stdin;
@@ -910,7 +6306,7 @@ COPY public.sessions (id, user_id, ip_address, user_agent, payload, last_activit
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.users (id, name, email, email_verified_at, password, remember_token, created_at, updated_at) FROM stdin;
@@ -918,110 +6314,1085 @@ COPY public.users (id, name, email, email_verified_at, password, remember_token,
 
 
 --
--- Data for Name: ventas; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: ventas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.ventas (id, fecha_venta, monto_total, created_at, updated_at) FROM stdin;
-2	2026-10-06 21:01:40	102.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-3	2026-10-03 06:47:51	143.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-4	2026-08-10 13:05:44	166.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-5	2026-09-28 03:43:42	55.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-6	2026-08-14 01:49:41	62.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-7	2026-10-11 01:42:54	197.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-8	2026-07-25 23:51:46	239.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-9	2026-09-03 04:14:55	169.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-10	2026-08-13 18:11:12	12.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-11	2026-10-03 09:04:36	113.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-12	2026-09-24 21:22:06	385.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-13	2026-07-27 05:32:18	314.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-14	2026-09-15 09:52:08	87.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-15	2026-09-07 06:58:20	30.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-16	2026-08-18 10:40:46	55.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-17	2026-08-29 22:16:49	28.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-18	2026-10-02 02:54:39	50.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-19	2026-08-13 14:38:30	123.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-20	2026-08-23 19:40:22	119.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-21	2026-10-06 04:17:31	198.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-22	2026-08-18 19:55:01	40.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-23	2026-10-07 21:46:49	78.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-24	2026-10-06 09:57:34	27.00	2026-10-18 21:30:07	2026-10-18 21:30:07
-25	2026-10-11 18:24:45	258.50	2026-10-18 21:30:07	2026-10-18 21:30:07
-26	2026-09-07 11:35:00	239.00	2026-10-18 21:30:07	2026-10-18 21:30:07
+1	2026-02-02 20:26:31	33.32	2026-10-19 15:58:53	2026-10-19 15:58:53
+2	2025-12-12 07:20:40	150.18	2026-10-19 15:58:53	2026-10-19 15:58:53
+3	2025-12-08 14:09:56	89.97	2026-10-19 15:58:53	2026-10-19 15:58:53
+4	2025-11-23 20:49:04	1103.20	2026-10-19 15:58:53	2026-10-19 15:58:53
+5	2026-10-14 13:49:07	179.04	2026-10-19 15:58:53	2026-10-19 15:58:53
+6	2026-03-02 16:01:44	568.30	2026-10-19 15:58:53	2026-10-19 15:58:53
+7	2026-01-27 16:33:55	994.62	2026-10-19 15:58:53	2026-10-19 15:58:53
+8	2025-12-18 04:22:39	1376.34	2026-10-19 15:58:53	2026-10-19 15:58:53
+9	2026-09-02 02:23:30	309.75	2026-10-19 15:58:53	2026-10-19 15:58:53
+10	2025-11-10 08:54:54	1372.56	2026-10-19 15:58:53	2026-10-19 15:58:53
+11	2026-09-04 18:12:52	2217.10	2026-10-19 15:58:53	2026-10-19 15:58:54
+12	2026-08-01 23:26:47	316.62	2026-10-19 15:58:54	2026-10-19 15:58:54
+13	2026-07-18 20:21:18	462.92	2026-10-19 15:58:54	2026-10-19 15:58:54
+14	2026-04-24 16:47:12	1276.95	2026-10-19 15:58:54	2026-10-19 15:58:54
+15	2026-01-04 21:50:19	3787.88	2026-10-19 15:58:54	2026-10-19 15:58:54
+16	2026-06-01 14:59:34	2805.30	2026-10-19 15:58:54	2026-10-19 15:58:54
+17	2026-05-07 20:24:40	1954.82	2026-10-19 15:58:54	2026-10-19 15:58:54
+18	2026-04-26 15:35:56	90.68	2026-10-19 15:58:54	2026-10-19 15:58:54
+19	2026-08-05 04:31:48	1855.56	2026-10-19 15:58:54	2026-10-19 15:58:54
+20	2026-09-08 22:39:04	972.57	2026-10-19 15:58:54	2026-10-19 15:58:54
+21	2026-05-20 14:31:15	3179.15	2026-10-19 15:58:54	2026-10-19 15:58:54
+22	2025-11-26 16:28:42	375.69	2026-10-19 15:58:54	2026-10-19 15:58:54
+23	2026-07-28 06:26:04	496.06	2026-10-19 15:58:54	2026-10-19 15:58:54
+24	2026-05-26 01:49:57	1695.64	2026-10-19 15:58:54	2026-10-19 15:58:55
+25	2026-04-17 01:58:44	401.72	2026-10-19 15:58:55	2026-10-19 15:58:55
+26	2026-03-11 07:34:05	866.62	2026-10-19 15:58:55	2026-10-19 15:58:55
+27	2025-12-29 22:10:17	505.66	2026-10-19 15:58:55	2026-10-19 15:58:55
+28	2026-10-05 01:55:50	1943.95	2026-10-19 15:58:55	2026-10-19 15:58:55
+29	2026-04-25 08:26:24	385.01	2026-10-19 15:58:55	2026-10-19 15:58:55
+30	2026-07-23 20:02:46	1095.97	2026-10-19 15:58:55	2026-10-19 15:58:55
+31	2026-03-13 11:39:28	2109.68	2026-10-19 15:58:55	2026-10-19 15:58:55
+32	2026-08-22 10:51:13	580.53	2026-10-19 15:58:55	2026-10-19 15:58:55
+33	2026-09-01 15:44:32	1062.68	2026-10-19 15:58:55	2026-10-19 15:58:55
+34	2026-08-17 14:44:14	342.66	2026-10-19 15:58:55	2026-10-19 15:58:55
+35	2025-11-29 07:19:46	421.35	2026-10-19 15:58:55	2026-10-19 15:58:55
+36	2026-01-12 17:21:32	1035.76	2026-10-19 15:58:55	2026-10-19 15:58:55
+37	2026-07-01 15:20:34	265.24	2026-10-19 15:58:55	2026-10-19 15:58:55
+38	2026-07-29 11:51:38	1248.47	2026-10-19 15:58:55	2026-10-19 15:58:55
+39	2026-03-25 13:14:10	1928.43	2026-10-19 15:58:55	2026-10-19 15:58:55
+40	2026-03-12 20:48:40	2413.26	2026-10-19 15:58:55	2026-10-19 15:58:56
+41	2026-07-22 03:11:20	228.18	2026-10-19 15:58:56	2026-10-19 15:58:56
+42	2026-08-27 01:20:05	1127.66	2026-10-19 15:58:56	2026-10-19 15:58:56
+43	2026-01-26 10:02:18	1337.93	2026-10-19 15:58:56	2026-10-19 15:58:56
+44	2026-09-27 12:04:44	1592.80	2026-10-19 15:58:56	2026-10-19 15:58:56
+45	2025-11-04 12:23:27	2131.26	2026-10-19 15:58:56	2026-10-19 15:58:56
+46	2025-11-06 22:35:13	545.39	2026-10-19 15:58:56	2026-10-19 15:58:56
+47	2026-06-13 11:01:28	1353.82	2026-10-19 15:58:56	2026-10-19 15:58:56
+48	2026-01-08 00:43:16	720.73	2026-10-19 15:58:56	2026-10-19 15:58:56
+49	2026-07-04 05:06:43	788.90	2026-10-19 15:58:56	2026-10-19 15:58:56
+50	2025-12-23 16:15:23	204.04	2026-10-19 15:58:56	2026-10-19 15:58:56
+51	2026-06-15 13:16:46	102.78	2026-10-19 15:58:56	2026-10-19 15:58:56
+52	2026-02-27 09:10:05	2901.51	2026-10-19 15:58:56	2026-10-19 15:58:56
+53	2026-03-15 02:02:25	1011.84	2026-10-19 15:58:56	2026-10-19 15:58:56
+54	2025-11-30 00:56:25	2923.86	2026-10-19 15:58:56	2026-10-19 15:58:57
+55	2026-08-11 06:49:50	347.94	2026-10-19 15:58:57	2026-10-19 15:58:57
+56	2026-01-02 12:48:50	751.46	2026-10-19 15:58:57	2026-10-19 15:58:57
+57	2026-09-11 19:14:31	2271.47	2026-10-19 15:58:57	2026-10-19 15:58:57
+58	2026-02-15 03:47:48	1293.34	2026-10-19 15:58:57	2026-10-19 15:58:57
+59	2026-04-17 17:21:54	1485.49	2026-10-19 15:58:57	2026-10-19 15:58:57
+60	2026-02-05 05:48:24	1802.80	2026-10-19 15:58:57	2026-10-19 15:58:57
+61	2026-06-03 16:54:15	2003.96	2026-10-19 15:58:57	2026-10-19 15:58:57
+62	2026-01-09 11:10:39	1427.98	2026-10-19 15:58:57	2026-10-19 15:58:57
+63	2026-01-12 11:22:50	1237.93	2026-10-19 15:58:57	2026-10-19 15:58:57
+64	2025-10-30 02:48:48	2270.18	2026-10-19 15:58:57	2026-10-19 15:58:57
+65	2026-10-04 03:40:32	49.06	2026-10-19 15:58:57	2026-10-19 15:58:57
+66	2026-03-10 08:15:46	845.88	2026-10-19 15:58:57	2026-10-19 15:58:57
+67	2025-12-30 20:05:39	1424.92	2026-10-19 15:58:57	2026-10-19 15:58:57
+68	2025-11-13 23:22:17	336.81	2026-10-19 15:58:57	2026-10-19 15:58:57
+69	2026-06-27 01:19:11	1234.86	2026-10-19 15:58:57	2026-10-19 15:58:58
+70	2026-08-09 21:35:19	2198.79	2026-10-19 15:58:58	2026-10-19 15:58:58
+71	2026-01-25 19:57:49	1203.53	2026-10-19 15:58:58	2026-10-19 15:58:58
+72	2026-05-14 14:35:31	477.89	2026-10-19 15:58:58	2026-10-19 15:58:58
+73	2025-11-13 03:05:32	435.46	2026-10-19 15:58:58	2026-10-19 15:58:58
+74	2026-04-06 03:26:00	1584.98	2026-10-19 15:58:58	2026-10-19 15:58:58
+75	2026-06-26 23:04:11	274.08	2026-10-19 15:58:58	2026-10-19 15:58:58
+76	2026-03-03 10:14:20	1884.94	2026-10-19 15:58:58	2026-10-19 15:58:58
+77	2026-08-28 15:04:18	1701.29	2026-10-19 15:58:58	2026-10-19 15:58:58
+78	2026-09-12 11:05:34	1511.93	2026-10-19 15:58:58	2026-10-19 15:58:58
+79	2026-03-04 02:04:50	884.05	2026-10-19 15:58:58	2026-10-19 15:58:58
+80	2026-07-26 17:06:44	1971.79	2026-10-19 15:58:58	2026-10-19 15:58:58
+81	2026-05-20 17:39:31	1073.04	2026-10-19 15:58:58	2026-10-19 15:58:58
+82	2026-03-21 07:40:56	683.47	2026-10-19 15:58:58	2026-10-19 15:58:58
+83	2026-04-20 17:52:04	1702.79	2026-10-19 15:58:59	2026-10-19 15:58:59
+84	2026-01-07 12:57:07	1653.42	2026-10-19 15:58:59	2026-10-19 15:58:59
+85	2026-01-03 14:30:07	355.12	2026-10-19 15:58:59	2026-10-19 15:58:59
+86	2026-10-14 00:50:24	1334.05	2026-10-19 15:58:59	2026-10-19 15:58:59
+87	2026-06-19 13:18:37	502.37	2026-10-19 15:58:59	2026-10-19 15:58:59
+88	2026-10-07 04:10:22	1366.65	2026-10-19 15:58:59	2026-10-19 15:58:59
+89	2026-07-22 18:56:56	421.72	2026-10-19 15:58:59	2026-10-19 15:58:59
+90	2025-10-23 02:28:19	1799.11	2026-10-19 15:58:59	2026-10-19 15:58:59
+91	2026-06-25 22:25:15	1672.69	2026-10-19 15:58:59	2026-10-19 15:58:59
+92	2026-07-09 13:27:51	409.08	2026-10-19 15:58:59	2026-10-19 15:58:59
+93	2026-06-16 05:39:25	1270.34	2026-10-19 15:58:59	2026-10-19 15:58:59
+94	2026-09-08 11:51:54	559.58	2026-10-19 15:58:59	2026-10-19 15:58:59
+95	2026-04-21 16:43:13	600.57	2026-10-19 15:58:59	2026-10-19 15:58:59
+96	2026-07-11 12:14:30	337.75	2026-10-19 15:58:59	2026-10-19 15:58:59
+97	2025-11-22 18:07:48	1008.55	2026-10-19 15:58:59	2026-10-19 15:59:00
+98	2025-12-04 05:37:42	2246.00	2026-10-19 15:59:00	2026-10-19 15:59:00
+99	2026-10-13 10:03:31	725.44	2026-10-19 15:59:00	2026-10-19 15:59:00
+100	2025-11-02 15:36:48	938.15	2026-10-19 15:59:00	2026-10-19 15:59:00
+101	2026-03-30 19:25:12	3258.59	2026-10-19 15:59:00	2026-10-19 15:59:00
+102	2026-06-24 17:16:23	623.49	2026-10-19 15:59:00	2026-10-19 15:59:00
+103	2026-01-22 02:54:30	1204.08	2026-10-19 15:59:00	2026-10-19 15:59:00
+104	2026-01-06 06:04:27	2323.55	2026-10-19 15:59:00	2026-10-19 15:59:00
+105	2025-11-19 12:24:31	994.12	2026-10-19 15:59:00	2026-10-19 15:59:00
+106	2025-10-29 18:27:14	249.36	2026-10-19 15:59:00	2026-10-19 15:59:00
+107	2026-01-14 06:32:06	84.63	2026-10-19 15:59:00	2026-10-19 15:59:00
+108	2026-08-23 22:40:24	334.88	2026-10-19 15:59:00	2026-10-19 15:59:00
+109	2026-07-25 11:43:47	833.36	2026-10-19 15:59:00	2026-10-19 15:59:00
+110	2026-05-20 17:08:16	2695.16	2026-10-19 15:59:00	2026-10-19 15:59:00
+111	2025-12-08 16:07:01	1285.61	2026-10-19 15:59:00	2026-10-19 15:59:00
+112	2026-09-16 15:31:12	862.80	2026-10-19 15:59:00	2026-10-19 15:59:00
+113	2026-03-19 18:29:54	920.69	2026-10-19 15:59:00	2026-10-19 15:59:00
+114	2026-05-05 23:56:10	237.59	2026-10-19 15:59:00	2026-10-19 15:59:00
+115	2026-03-20 15:51:16	1661.42	2026-10-19 15:59:00	2026-10-19 15:59:01
+116	2025-12-25 08:49:12	75.78	2026-10-19 15:59:01	2026-10-19 15:59:01
+117	2026-01-02 08:16:19	758.80	2026-10-19 15:59:01	2026-10-19 15:59:01
+118	2026-05-06 09:26:25	1094.86	2026-10-19 15:59:01	2026-10-19 15:59:01
+119	2026-04-23 02:45:17	1865.93	2026-10-19 15:59:01	2026-10-19 15:59:01
+120	2026-02-21 22:24:58	1740.78	2026-10-19 15:59:01	2026-10-19 15:59:01
+121	2026-08-07 06:17:16	796.31	2026-10-19 15:59:01	2026-10-19 15:59:01
+122	2026-03-17 15:29:36	1466.54	2026-10-19 15:59:01	2026-10-19 15:59:01
+123	2026-05-20 17:48:57	336.20	2026-10-19 15:59:01	2026-10-19 15:59:01
+124	2026-02-22 08:52:49	232.73	2026-10-19 15:59:01	2026-10-19 15:59:01
+125	2026-03-21 14:58:32	1114.53	2026-10-19 15:59:01	2026-10-19 15:59:01
+126	2026-08-27 03:13:32	1170.66	2026-10-19 15:59:01	2026-10-19 15:59:01
+127	2026-02-16 06:22:08	2331.89	2026-10-19 15:59:01	2026-10-19 15:59:01
+128	2026-10-19 08:49:59	1686.41	2026-10-19 15:59:01	2026-10-19 15:59:01
+129	2026-03-28 02:41:53	1527.86	2026-10-19 15:59:01	2026-10-19 15:59:01
+130	2026-06-01 09:47:08	1318.15	2026-10-19 15:59:01	2026-10-19 15:59:01
+131	2026-06-06 12:17:06	1488.86	2026-10-19 15:59:01	2026-10-19 15:59:01
+132	2026-08-02 22:22:48	1049.19	2026-10-19 15:59:01	2026-10-19 15:59:02
+133	2026-09-24 19:55:16	766.80	2026-10-19 15:59:02	2026-10-19 15:59:02
+134	2026-05-07 13:00:11	2621.88	2026-10-19 15:59:02	2026-10-19 15:59:02
+135	2026-03-20 08:39:55	1007.93	2026-10-19 15:59:02	2026-10-19 15:59:02
+136	2026-01-04 14:24:29	2527.24	2026-10-19 15:59:02	2026-10-19 15:59:02
+137	2026-01-19 01:34:05	1129.97	2026-10-19 15:59:02	2026-10-19 15:59:02
+138	2026-06-23 22:55:42	1624.66	2026-10-19 15:59:02	2026-10-19 15:59:02
+139	2026-09-11 16:45:10	966.44	2026-10-19 15:59:02	2026-10-19 15:59:02
+140	2026-07-14 18:39:19	1010.94	2026-10-19 15:59:02	2026-10-19 15:59:02
+141	2026-03-09 19:20:06	2253.33	2026-10-19 15:59:02	2026-10-19 15:59:02
+142	2026-04-07 16:42:35	1089.40	2026-10-19 15:59:02	2026-10-19 15:59:02
+143	2026-10-12 13:37:09	492.24	2026-10-19 15:59:02	2026-10-19 15:59:02
+144	2026-03-09 10:06:03	1663.69	2026-10-19 15:59:02	2026-10-19 15:59:03
+145	2026-04-14 20:28:19	2814.97	2026-10-19 15:59:03	2026-10-19 15:59:03
+146	2026-05-23 06:50:53	626.04	2026-10-19 15:59:03	2026-10-19 15:59:03
+147	2026-08-18 14:56:50	1295.12	2026-10-19 15:59:03	2026-10-19 15:59:03
+148	2026-04-21 18:02:31	1478.27	2026-10-19 15:59:03	2026-10-19 15:59:03
+149	2026-08-30 21:55:45	710.88	2026-10-19 15:59:03	2026-10-19 15:59:03
+150	2026-07-12 21:27:28	116.36	2026-10-19 15:59:03	2026-10-19 15:59:03
+151	2026-06-02 13:53:11	26.86	2026-10-19 15:59:03	2026-10-19 15:59:03
+152	2026-03-15 15:24:16	560.16	2026-10-19 15:59:03	2026-10-19 15:59:03
+153	2026-02-07 16:58:50	1326.22	2026-10-19 15:59:03	2026-10-19 15:59:03
+154	2026-05-12 14:27:46	464.50	2026-10-19 15:59:03	2026-10-19 15:59:03
+155	2026-08-23 19:07:26	660.37	2026-10-19 15:59:03	2026-10-19 15:59:03
+156	2026-08-11 05:46:20	1542.70	2026-10-19 15:59:03	2026-10-19 15:59:03
+157	2026-05-19 03:27:17	573.78	2026-10-19 15:59:03	2026-10-19 15:59:03
+158	2025-12-02 17:33:26	637.66	2026-10-19 15:59:03	2026-10-19 15:59:03
+159	2026-01-18 02:54:02	1363.93	2026-10-19 15:59:03	2026-10-19 15:59:03
+160	2026-01-07 12:11:03	768.08	2026-10-19 15:59:03	2026-10-19 15:59:04
+161	2026-06-01 18:25:08	106.91	2026-10-19 15:59:04	2026-10-19 15:59:04
+162	2026-05-28 19:00:45	340.50	2026-10-19 15:59:04	2026-10-19 15:59:04
+163	2026-05-03 11:25:40	1447.77	2026-10-19 15:59:04	2026-10-19 15:59:04
+164	2026-07-08 08:25:47	2809.29	2026-10-19 15:59:04	2026-10-19 15:59:04
+165	2026-06-08 14:55:10	1145.96	2026-10-19 15:59:04	2026-10-19 15:59:04
+166	2026-04-18 02:02:54	1919.54	2026-10-19 15:59:04	2026-10-19 15:59:04
+167	2025-10-29 16:10:22	107.57	2026-10-19 15:59:04	2026-10-19 15:59:04
+168	2026-08-31 10:41:03	1953.44	2026-10-19 15:59:04	2026-10-19 15:59:04
+169	2026-04-12 09:27:11	778.33	2026-10-19 15:59:04	2026-10-19 15:59:04
+170	2026-01-18 19:17:25	1863.03	2026-10-19 15:59:04	2026-10-19 15:59:04
+171	2026-07-05 22:45:49	2427.36	2026-10-19 15:59:04	2026-10-19 15:59:04
+172	2026-03-28 03:40:10	1841.58	2026-10-19 15:59:04	2026-10-19 15:59:04
+173	2026-10-03 05:34:00	683.67	2026-10-19 15:59:04	2026-10-19 15:59:05
+174	2026-04-13 10:41:04	2208.47	2026-10-19 15:59:05	2026-10-19 15:59:05
+175	2025-11-30 05:57:12	988.26	2026-10-19 15:59:05	2026-10-19 15:59:05
+176	2025-12-27 00:28:08	733.52	2026-10-19 15:59:05	2026-10-19 15:59:05
+177	2026-05-27 11:15:38	855.45	2026-10-19 15:59:05	2026-10-19 15:59:05
+178	2025-12-17 05:45:42	1794.10	2026-10-19 15:59:05	2026-10-19 15:59:05
+179	2026-10-10 05:00:26	273.72	2026-10-19 15:59:05	2026-10-19 15:59:05
+180	2026-02-11 01:32:48	1677.68	2026-10-19 15:59:05	2026-10-19 15:59:05
+181	2026-07-30 22:11:23	850.09	2026-10-19 15:59:05	2026-10-19 15:59:05
+182	2025-11-22 18:06:24	1750.19	2026-10-19 15:59:05	2026-10-19 15:59:05
+183	2026-05-04 00:46:41	486.41	2026-10-19 15:59:05	2026-10-19 15:59:05
+184	2026-01-19 14:00:52	1392.30	2026-10-19 15:59:05	2026-10-19 15:59:05
+185	2026-09-19 05:40:35	2477.54	2026-10-19 15:59:05	2026-10-19 15:59:05
+186	2026-01-05 13:53:30	1872.64	2026-10-19 15:59:05	2026-10-19 15:59:05
+187	2026-06-04 04:29:24	1351.77	2026-10-19 15:59:05	2026-10-19 15:59:06
+188	2026-02-25 15:41:09	688.88	2026-10-19 15:59:06	2026-10-19 15:59:06
+189	2026-04-04 04:12:54	639.06	2026-10-19 15:59:06	2026-10-19 15:59:06
+190	2025-11-02 08:06:29	3737.03	2026-10-19 15:59:06	2026-10-19 15:59:06
+191	2026-09-22 16:13:06	33.32	2026-10-19 15:59:06	2026-10-19 15:59:06
+192	2025-10-31 14:36:31	2344.65	2026-10-19 15:59:06	2026-10-19 15:59:06
+193	2026-01-02 17:18:54	822.82	2026-10-19 15:59:06	2026-10-19 15:59:06
+194	2026-08-07 06:00:36	528.72	2026-10-19 15:59:06	2026-10-19 15:59:06
+195	2026-01-22 16:28:35	1281.96	2026-10-19 15:59:06	2026-10-19 15:59:06
+196	2026-03-01 05:34:54	243.63	2026-10-19 15:59:06	2026-10-19 15:59:06
+197	2026-04-27 17:16:28	1122.84	2026-10-19 15:59:06	2026-10-19 15:59:06
+198	2025-11-22 12:07:31	921.00	2026-10-19 15:59:06	2026-10-19 15:59:06
+199	2026-07-16 04:39:43	1217.25	2026-10-19 15:59:06	2026-10-19 15:59:06
+200	2025-12-11 06:22:21	340.00	2026-10-19 15:59:06	2026-10-19 15:59:06
+201	2026-09-18 08:28:13	823.02	2026-10-19 15:59:06	2026-10-19 15:59:07
+202	2026-07-23 06:58:51	463.72	2026-10-19 15:59:07	2026-10-19 15:59:07
+203	2026-08-12 13:04:40	1458.39	2026-10-19 15:59:07	2026-10-19 15:59:07
+204	2026-01-11 20:57:34	590.83	2026-10-19 15:59:07	2026-10-19 15:59:07
+205	2026-02-20 01:14:19	2219.38	2026-10-19 15:59:07	2026-10-19 15:59:07
+206	2026-10-06 10:02:54	2115.32	2026-10-19 15:59:07	2026-10-19 15:59:07
+207	2026-05-10 22:35:30	868.90	2026-10-19 15:59:07	2026-10-19 15:59:07
+208	2025-10-23 16:12:27	1102.49	2026-10-19 15:59:07	2026-10-19 15:59:07
+209	2026-08-23 20:32:08	1760.53	2026-10-19 15:59:07	2026-10-19 15:59:07
+210	2026-01-27 23:28:53	316.88	2026-10-19 15:59:07	2026-10-19 15:59:07
+211	2025-11-25 12:15:47	1888.47	2026-10-19 15:59:07	2026-10-19 15:59:07
+212	2026-06-10 15:22:13	2318.41	2026-10-19 15:59:07	2026-10-19 15:59:07
+213	2026-07-30 12:42:59	3219.08	2026-10-19 15:59:07	2026-10-19 15:59:08
+214	2026-02-19 14:09:41	1066.38	2026-10-19 15:59:08	2026-10-19 15:59:08
+215	2025-12-12 17:14:01	1369.61	2026-10-19 15:59:08	2026-10-19 15:59:08
+216	2026-01-14 03:29:02	218.22	2026-10-19 15:59:08	2026-10-19 15:59:08
+217	2026-10-18 05:05:43	2810.06	2026-10-19 15:59:08	2026-10-19 15:59:08
+218	2025-12-01 20:23:31	2767.36	2026-10-19 15:59:08	2026-10-19 15:59:08
+219	2026-08-10 18:16:01	1077.41	2026-10-19 15:59:08	2026-10-19 15:59:08
+220	2026-04-16 21:15:39	1005.69	2026-10-19 15:59:08	2026-10-19 15:59:08
+221	2026-07-14 04:25:24	535.74	2026-10-19 15:59:08	2026-10-19 15:59:08
+222	2025-11-18 23:01:56	990.08	2026-10-19 15:59:08	2026-10-19 15:59:08
+223	2026-09-17 15:05:24	401.12	2026-10-19 15:59:08	2026-10-19 15:59:08
+224	2026-08-20 06:54:01	714.90	2026-10-19 15:59:08	2026-10-19 15:59:08
+225	2026-07-03 17:07:58	2084.52	2026-10-19 15:59:08	2026-10-19 15:59:08
+226	2026-07-06 02:55:03	434.75	2026-10-19 15:59:08	2026-10-19 15:59:08
+227	2026-06-14 23:47:49	1072.46	2026-10-19 15:59:08	2026-10-19 15:59:08
+228	2026-06-27 19:38:32	1480.22	2026-10-19 15:59:08	2026-10-19 15:59:08
+229	2025-11-20 00:24:38	1411.58	2026-10-19 15:59:08	2026-10-19 15:59:09
+230	2026-05-08 13:50:31	1073.94	2026-10-19 15:59:09	2026-10-19 15:59:09
+231	2026-08-10 07:30:32	787.74	2026-10-19 15:59:09	2026-10-19 15:59:09
+232	2025-11-04 08:20:58	79.25	2026-10-19 15:59:09	2026-10-19 15:59:09
+233	2026-06-02 09:12:04	1168.09	2026-10-19 15:59:09	2026-10-19 15:59:09
+234	2026-08-26 16:51:43	1963.76	2026-10-19 15:59:09	2026-10-19 15:59:09
+235	2025-11-15 18:53:51	2149.63	2026-10-19 15:59:09	2026-10-19 15:59:09
+236	2026-05-24 21:37:41	1970.38	2026-10-19 15:59:09	2026-10-19 15:59:09
+237	2026-06-08 00:37:06	1199.37	2026-10-19 15:59:09	2026-10-19 15:59:09
+238	2025-11-01 01:07:19	1889.02	2026-10-19 15:59:09	2026-10-19 15:59:09
+239	2026-10-09 23:33:18	2259.56	2026-10-19 15:59:09	2026-10-19 15:59:09
+240	2026-06-03 04:51:31	1461.35	2026-10-19 15:59:09	2026-10-19 15:59:09
+241	2026-09-05 16:21:23	2230.18	2026-10-19 15:59:09	2026-10-19 15:59:09
+242	2026-09-15 12:56:01	484.42	2026-10-19 15:59:09	2026-10-19 15:59:10
+243	2026-05-02 23:01:18	186.09	2026-10-19 15:59:10	2026-10-19 15:59:10
+244	2026-02-16 20:36:28	1212.61	2026-10-19 15:59:10	2026-10-19 15:59:10
+245	2026-08-19 03:20:18	1219.62	2026-10-19 15:59:10	2026-10-19 15:59:10
+246	2025-11-23 02:01:22	782.81	2026-10-19 15:59:10	2026-10-19 15:59:10
+247	2026-03-20 16:10:20	1408.63	2026-10-19 15:59:10	2026-10-19 15:59:10
+248	2026-04-24 04:14:12	1322.70	2026-10-19 15:59:10	2026-10-19 15:59:10
+249	2025-11-02 03:26:08	2433.54	2026-10-19 15:59:10	2026-10-19 15:59:10
+250	2026-03-09 18:23:17	1671.60	2026-10-19 15:59:10	2026-10-19 15:59:10
+251	2026-07-06 00:41:26	1482.92	2026-10-19 15:59:10	2026-10-19 15:59:10
+252	2026-04-08 10:27:35	1022.71	2026-10-19 15:59:10	2026-10-19 15:59:10
+253	2026-08-30 00:18:54	309.04	2026-10-19 15:59:10	2026-10-19 15:59:10
+254	2026-05-19 20:26:54	3131.43	2026-10-19 15:59:10	2026-10-19 15:59:10
+255	2026-04-05 22:03:11	1875.03	2026-10-19 15:59:10	2026-10-19 15:59:10
+256	2026-04-05 19:23:39	906.18	2026-10-19 15:59:10	2026-10-19 15:59:10
+257	2026-06-19 02:40:49	1809.69	2026-10-19 15:59:10	2026-10-19 15:59:11
+258	2026-10-01 14:48:44	2843.95	2026-10-19 15:59:11	2026-10-19 15:59:11
+259	2026-06-19 02:03:02	652.70	2026-10-19 15:59:11	2026-10-19 15:59:11
+260	2026-02-28 06:41:22	2628.41	2026-10-19 15:59:11	2026-10-19 15:59:11
+261	2025-11-15 08:56:44	1429.16	2026-10-19 15:59:11	2026-10-19 15:59:11
+262	2026-07-27 22:47:51	1498.79	2026-10-19 15:59:11	2026-10-19 15:59:11
+263	2026-03-25 03:39:26	11.00	2026-10-19 15:59:11	2026-10-19 15:59:11
+264	2026-08-03 18:45:56	255.94	2026-10-19 15:59:11	2026-10-19 15:59:11
+265	2026-01-28 06:05:48	1208.34	2026-10-19 15:59:11	2026-10-19 15:59:11
+266	2025-11-10 09:13:38	1709.01	2026-10-19 15:59:11	2026-10-19 15:59:11
+267	2026-09-26 08:32:52	1790.19	2026-10-19 15:59:11	2026-10-19 15:59:11
+268	2026-07-24 07:55:36	266.75	2026-10-19 15:59:11	2026-10-19 15:59:11
+269	2026-08-22 07:24:49	846.52	2026-10-19 15:59:11	2026-10-19 15:59:11
+270	2026-01-03 01:40:46	1510.55	2026-10-19 15:59:11	2026-10-19 15:59:12
+271	2026-01-09 12:01:13	1248.80	2026-10-19 15:59:12	2026-10-19 15:59:12
+272	2026-04-21 02:46:05	1482.23	2026-10-19 15:59:12	2026-10-19 15:59:12
+273	2026-04-21 15:12:02	1212.16	2026-10-19 15:59:12	2026-10-19 15:59:12
+274	2026-03-27 21:50:56	833.13	2026-10-19 15:59:12	2026-10-19 15:59:12
+275	2026-04-23 23:30:25	897.50	2026-10-19 15:59:12	2026-10-19 15:59:12
+276	2025-12-07 20:09:25	1232.29	2026-10-19 15:59:12	2026-10-19 15:59:12
+277	2026-04-22 13:08:40	2334.61	2026-10-19 15:59:12	2026-10-19 15:59:12
+278	2026-07-09 06:19:02	2556.43	2026-10-19 15:59:12	2026-10-19 15:59:12
+279	2025-11-27 22:06:11	1275.72	2026-10-19 15:59:12	2026-10-19 15:59:12
+280	2026-10-08 08:42:59	1210.78	2026-10-19 15:59:12	2026-10-19 15:59:12
+281	2026-10-13 00:39:19	1769.99	2026-10-19 15:59:12	2026-10-19 15:59:12
+282	2026-06-23 02:03:55	1042.36	2026-10-19 15:59:12	2026-10-19 15:59:13
+283	2026-07-16 23:54:25	2057.10	2026-10-19 15:59:13	2026-10-19 15:59:13
+284	2025-12-23 07:56:53	659.87	2026-10-19 15:59:13	2026-10-19 15:59:13
+285	2025-11-21 20:48:21	1528.94	2026-10-19 15:59:13	2026-10-19 15:59:13
+286	2026-01-08 08:09:07	11.00	2026-10-19 15:59:13	2026-10-19 15:59:13
+287	2025-12-14 18:40:50	244.57	2026-10-19 15:59:13	2026-10-19 15:59:13
+288	2026-09-14 01:12:48	1381.94	2026-10-19 15:59:13	2026-10-19 15:59:13
+289	2026-10-04 16:53:38	299.58	2026-10-19 15:59:13	2026-10-19 15:59:13
+290	2026-05-25 17:09:33	1390.15	2026-10-19 15:59:13	2026-10-19 15:59:13
+291	2026-03-27 02:05:46	2926.62	2026-10-19 15:59:13	2026-10-19 15:59:13
+292	2026-05-18 21:26:22	2150.85	2026-10-19 15:59:13	2026-10-19 15:59:13
+293	2026-02-07 17:33:01	468.88	2026-10-19 15:59:13	2026-10-19 15:59:13
+294	2026-10-05 01:52:28	526.64	2026-10-19 15:59:13	2026-10-19 15:59:13
+295	2026-07-15 14:05:46	2416.82	2026-10-19 15:59:13	2026-10-19 15:59:13
+296	2026-05-23 01:01:07	528.72	2026-10-19 15:59:13	2026-10-19 15:59:13
+297	2026-09-24 04:48:08	427.52	2026-10-19 15:59:13	2026-10-19 15:59:13
+298	2026-06-16 16:13:03	1285.20	2026-10-19 15:59:13	2026-10-19 15:59:13
+299	2026-02-06 03:11:02	2413.51	2026-10-19 15:59:13	2026-10-19 15:59:14
+300	2026-04-12 03:58:42	545.44	2026-10-19 15:59:14	2026-10-19 15:59:14
+301	2026-06-11 18:36:38	490.98	2026-10-19 15:59:14	2026-10-19 15:59:14
+302	2026-03-31 01:20:39	1502.02	2026-10-19 15:59:14	2026-10-19 15:59:14
+303	2026-06-20 13:05:18	940.40	2026-10-19 15:59:14	2026-10-19 15:59:14
+304	2025-11-16 20:56:47	981.52	2026-10-19 15:59:14	2026-10-19 15:59:14
+305	2026-06-02 15:37:20	1221.68	2026-10-19 15:59:14	2026-10-19 15:59:14
+306	2026-01-18 22:37:06	1599.97	2026-10-19 15:59:14	2026-10-19 15:59:14
+307	2026-09-15 11:55:09	2582.04	2026-10-19 15:59:14	2026-10-19 15:59:14
+308	2025-12-22 20:08:30	901.96	2026-10-19 15:59:14	2026-10-19 15:59:14
+309	2026-01-23 12:05:29	2177.06	2026-10-19 15:59:14	2026-10-19 15:59:14
+310	2026-02-28 10:24:56	1497.32	2026-10-19 15:59:14	2026-10-19 15:59:14
+311	2025-11-25 09:15:19	2119.81	2026-10-19 15:59:14	2026-10-19 15:59:14
+312	2025-11-07 13:53:57	644.13	2026-10-19 15:59:14	2026-10-19 15:59:14
+313	2025-12-03 13:34:45	2148.95	2026-10-19 15:59:14	2026-10-19 15:59:15
+314	2026-03-16 03:13:27	1265.68	2026-10-19 15:59:15	2026-10-19 15:59:15
+315	2026-06-20 08:44:37	1524.51	2026-10-19 15:59:15	2026-10-19 15:59:15
+316	2025-11-29 12:26:22	1477.23	2026-10-19 15:59:15	2026-10-19 15:59:15
+317	2026-04-02 02:58:39	2350.85	2026-10-19 15:59:15	2026-10-19 15:59:15
+318	2026-05-13 23:01:47	3188.80	2026-10-19 15:59:15	2026-10-19 15:59:15
+319	2026-05-20 10:12:34	2472.19	2026-10-19 15:59:15	2026-10-19 15:59:15
+320	2026-09-26 08:32:37	62.16	2026-10-19 15:59:15	2026-10-19 15:59:15
+321	2026-08-24 13:02:06	1901.26	2026-10-19 15:59:15	2026-10-19 15:59:15
+322	2026-09-05 19:24:48	377.18	2026-10-19 15:59:15	2026-10-19 15:59:15
+323	2026-09-15 15:34:38	2040.16	2026-10-19 15:59:15	2026-10-19 15:59:15
+324	2026-05-01 12:44:09	807.18	2026-10-19 15:59:15	2026-10-19 15:59:15
+325	2025-10-31 20:28:00	1096.46	2026-10-19 15:59:15	2026-10-19 15:59:15
+326	2026-07-06 08:28:13	2621.12	2026-10-19 15:59:15	2026-10-19 15:59:16
+327	2025-10-28 04:44:58	1889.34	2026-10-19 15:59:16	2026-10-19 15:59:16
+328	2026-02-17 05:16:52	1062.12	2026-10-19 15:59:16	2026-10-19 15:59:16
+329	2026-08-09 04:47:22	1255.88	2026-10-19 15:59:16	2026-10-19 15:59:16
+330	2026-01-03 23:27:50	1756.03	2026-10-19 15:59:16	2026-10-19 15:59:16
+331	2026-05-29 16:59:42	119.45	2026-10-19 15:59:16	2026-10-19 15:59:16
+332	2026-07-29 02:06:33	1158.55	2026-10-19 15:59:16	2026-10-19 15:59:16
+333	2026-05-21 03:14:45	456.84	2026-10-19 15:59:16	2026-10-19 15:59:16
+334	2026-02-01 13:11:31	1466.13	2026-10-19 15:59:16	2026-10-19 15:59:16
+335	2025-10-28 03:33:17	2224.91	2026-10-19 15:59:16	2026-10-19 15:59:16
+336	2026-08-16 13:39:45	90.50	2026-10-19 15:59:16	2026-10-19 15:59:16
+337	2026-04-29 06:28:33	1342.70	2026-10-19 15:59:16	2026-10-19 15:59:16
+338	2026-09-11 02:36:42	2154.51	2026-10-19 15:59:16	2026-10-19 15:59:16
+339	2026-04-14 04:19:21	677.36	2026-10-19 15:59:16	2026-10-19 15:59:16
+340	2026-08-09 16:26:08	1081.17	2026-10-19 15:59:16	2026-10-19 15:59:16
+341	2026-08-18 05:08:33	966.74	2026-10-19 15:59:16	2026-10-19 15:59:17
+342	2026-04-02 19:04:40	345.63	2026-10-19 15:59:17	2026-10-19 15:59:17
+343	2026-08-07 09:09:04	1157.00	2026-10-19 15:59:17	2026-10-19 15:59:17
+344	2026-08-30 12:53:09	2671.22	2026-10-19 15:59:17	2026-10-19 15:59:17
+345	2025-12-28 09:05:34	1511.42	2026-10-19 15:59:17	2026-10-19 15:59:17
+346	2026-07-04 10:14:05	1040.65	2026-10-19 15:59:17	2026-10-19 15:59:17
+347	2026-05-10 18:55:06	1649.73	2026-10-19 15:59:17	2026-10-19 15:59:17
+348	2025-12-06 11:36:01	36.74	2026-10-19 15:59:17	2026-10-19 15:59:17
+349	2025-12-02 22:51:59	1920.04	2026-10-19 15:59:17	2026-10-19 15:59:17
+350	2026-04-20 03:34:29	528.90	2026-10-19 15:59:17	2026-10-19 15:59:17
+351	2026-06-27 01:14:26	1699.91	2026-10-19 15:59:17	2026-10-19 15:59:17
+352	2026-10-18 05:59:55	515.18	2026-10-19 15:59:17	2026-10-19 15:59:17
+353	2025-10-27 15:29:54	28.97	2026-10-19 15:59:17	2026-10-19 15:59:17
+354	2026-08-08 14:31:31	722.32	2026-10-19 15:59:17	2026-10-19 15:59:17
+355	2026-08-24 15:08:54	1346.31	2026-10-19 15:59:17	2026-10-19 15:59:18
+356	2026-06-16 23:17:24	378.12	2026-10-19 15:59:18	2026-10-19 15:59:18
+357	2026-04-04 01:04:20	363.63	2026-10-19 15:59:18	2026-10-19 15:59:18
+358	2026-09-13 11:34:41	546.90	2026-10-19 15:59:18	2026-10-19 15:59:18
+359	2026-06-11 10:38:00	2783.49	2026-10-19 15:59:18	2026-10-19 15:59:18
+360	2026-01-10 20:49:28	1566.66	2026-10-19 15:59:18	2026-10-19 15:59:18
+361	2026-03-09 16:11:40	2064.69	2026-10-19 15:59:18	2026-10-19 15:59:18
+362	2026-05-21 04:55:28	3113.42	2026-10-19 15:59:18	2026-10-19 15:59:18
+363	2026-01-05 06:34:44	1044.31	2026-10-19 15:59:18	2026-10-19 15:59:18
+364	2026-08-17 03:46:53	1482.95	2026-10-19 15:59:18	2026-10-19 15:59:18
+365	2026-02-17 21:24:00	954.83	2026-10-19 15:59:18	2026-10-19 15:59:18
+366	2026-06-16 06:04:18	1066.96	2026-10-19 15:59:18	2026-10-19 15:59:18
+367	2026-07-11 18:22:16	1312.50	2026-10-19 15:59:18	2026-10-19 15:59:18
+368	2026-05-15 04:34:04	1852.02	2026-10-19 15:59:18	2026-10-19 15:59:18
+369	2026-04-19 03:26:25	756.24	2026-10-19 15:59:18	2026-10-19 15:59:19
+370	2025-11-14 01:17:03	2396.69	2026-10-19 15:59:19	2026-10-19 15:59:19
+371	2026-01-25 06:07:58	1006.11	2026-10-19 15:59:19	2026-10-19 15:59:19
+372	2026-07-15 08:00:07	258.00	2026-10-19 15:59:19	2026-10-19 15:59:19
+373	2026-02-05 04:52:18	751.49	2026-10-19 15:59:19	2026-10-19 15:59:19
+374	2026-05-31 18:57:51	1055.70	2026-10-19 15:59:19	2026-10-19 15:59:19
+375	2026-01-20 19:35:05	1883.82	2026-10-19 15:59:19	2026-10-19 15:59:19
+376	2026-04-26 01:25:04	1393.53	2026-10-19 15:59:19	2026-10-19 15:59:19
+377	2026-03-02 03:14:31	475.24	2026-10-19 15:59:19	2026-10-19 15:59:19
+378	2026-01-05 15:52:50	719.14	2026-10-19 15:59:19	2026-10-19 15:59:19
+379	2025-11-25 12:42:42	16.00	2026-10-19 15:59:19	2026-10-19 15:59:19
+380	2026-04-25 07:41:29	1084.74	2026-10-19 15:59:19	2026-10-19 15:59:19
+381	2026-02-21 14:56:21	1964.67	2026-10-19 15:59:19	2026-10-19 15:59:19
+382	2026-01-19 03:00:49	72.69	2026-10-19 15:59:19	2026-10-19 15:59:19
+383	2026-04-09 02:01:05	2476.20	2026-10-19 15:59:19	2026-10-19 15:59:20
+384	2026-09-02 12:17:39	167.44	2026-10-19 15:59:20	2026-10-19 15:59:20
+385	2026-07-14 01:37:42	776.60	2026-10-19 15:59:20	2026-10-19 15:59:20
+386	2025-12-12 04:32:19	1063.44	2026-10-19 15:59:20	2026-10-19 15:59:20
+387	2026-02-16 07:30:18	1267.79	2026-10-19 15:59:20	2026-10-19 15:59:20
+388	2026-09-24 12:37:38	538.92	2026-10-19 15:59:20	2026-10-19 15:59:20
+389	2026-07-22 18:49:39	1013.70	2026-10-19 15:59:20	2026-10-19 15:59:20
+390	2025-11-07 14:55:23	101.04	2026-10-19 15:59:20	2026-10-19 15:59:20
+391	2025-12-02 20:25:46	969.76	2026-10-19 15:59:20	2026-10-19 15:59:20
+392	2026-06-09 12:57:39	1958.81	2026-10-19 15:59:20	2026-10-19 15:59:20
+393	2026-09-02 15:28:04	1112.98	2026-10-19 15:59:20	2026-10-19 15:59:20
+394	2026-07-17 05:21:42	1201.00	2026-10-19 15:59:20	2026-10-19 15:59:20
+395	2025-11-27 09:02:28	1827.55	2026-10-19 15:59:20	2026-10-19 15:59:20
+396	2026-05-30 03:36:56	233.79	2026-10-19 15:59:20	2026-10-19 15:59:20
+397	2026-09-21 02:36:47	750.27	2026-10-19 15:59:20	2026-10-19 15:59:20
+398	2025-10-26 07:51:13	2060.63	2026-10-19 15:59:20	2026-10-19 15:59:20
+399	2026-03-29 03:54:00	1784.64	2026-10-19 15:59:20	2026-10-19 15:59:20
+400	2026-06-23 02:56:50	946.07	2026-10-19 15:59:20	2026-10-19 15:59:21
+401	2026-08-29 01:41:06	1238.41	2026-10-19 15:59:21	2026-10-19 15:59:21
+402	2026-02-21 07:47:36	576.00	2026-10-19 15:59:21	2026-10-19 15:59:21
+403	2026-05-28 00:27:17	1171.14	2026-10-19 15:59:21	2026-10-19 15:59:21
+404	2026-04-18 13:22:15	999.13	2026-10-19 15:59:21	2026-10-19 15:59:21
+405	2026-06-06 07:57:34	821.45	2026-10-19 15:59:21	2026-10-19 15:59:21
+406	2026-02-01 18:41:37	670.96	2026-10-19 15:59:21	2026-10-19 15:59:21
+407	2025-11-11 05:26:31	671.99	2026-10-19 15:59:21	2026-10-19 15:59:21
+408	2026-01-18 03:53:53	1411.86	2026-10-19 15:59:21	2026-10-19 15:59:21
+409	2026-04-06 01:29:07	463.20	2026-10-19 15:59:21	2026-10-19 15:59:21
+410	2026-05-10 05:40:07	908.69	2026-10-19 15:59:21	2026-10-19 15:59:21
+411	2026-04-18 22:12:56	675.30	2026-10-19 15:59:21	2026-10-19 15:59:21
+412	2026-07-07 12:16:44	1322.38	2026-10-19 15:59:21	2026-10-19 15:59:21
+413	2026-03-15 12:48:54	1363.32	2026-10-19 15:59:21	2026-10-19 15:59:21
+414	2026-05-23 16:35:04	1941.22	2026-10-19 15:59:21	2026-10-19 15:59:22
+415	2026-01-25 10:32:17	1957.83	2026-10-19 15:59:22	2026-10-19 15:59:22
+416	2026-04-09 03:04:19	301.20	2026-10-19 15:59:22	2026-10-19 15:59:22
+417	2025-12-26 16:27:08	345.54	2026-10-19 15:59:22	2026-10-19 15:59:22
+418	2026-09-04 00:26:37	1260.00	2026-10-19 15:59:22	2026-10-19 15:59:22
+419	2026-07-08 04:31:23	1109.65	2026-10-19 15:59:22	2026-10-19 15:59:22
+420	2026-01-27 15:06:27	355.88	2026-10-19 15:59:22	2026-10-19 15:59:22
+421	2026-05-15 15:29:32	1092.56	2026-10-19 15:59:22	2026-10-19 15:59:22
+422	2025-12-14 14:53:48	1712.72	2026-10-19 15:59:22	2026-10-19 15:59:22
+423	2026-01-29 16:14:31	376.40	2026-10-19 15:59:22	2026-10-19 15:59:22
+424	2026-03-05 19:25:36	2105.19	2026-10-19 15:59:22	2026-10-19 15:59:22
+425	2026-05-12 06:28:06	439.52	2026-10-19 15:59:22	2026-10-19 15:59:22
+426	2026-09-09 03:35:26	2586.17	2026-10-19 15:59:22	2026-10-19 15:59:22
+427	2026-03-15 15:12:02	1425.86	2026-10-19 15:59:22	2026-10-19 15:59:22
+428	2026-10-14 00:01:55	1644.84	2026-10-19 15:59:22	2026-10-19 15:59:23
+429	2025-10-30 21:33:17	525.52	2026-10-19 15:59:23	2026-10-19 15:59:23
+430	2026-04-29 09:11:37	771.93	2026-10-19 15:59:23	2026-10-19 15:59:23
+431	2025-12-17 22:56:02	1565.81	2026-10-19 15:59:23	2026-10-19 15:59:23
+432	2026-06-10 21:59:38	2024.80	2026-10-19 15:59:23	2026-10-19 15:59:23
+433	2025-12-11 18:22:02	2838.87	2026-10-19 15:59:23	2026-10-19 15:59:23
+434	2026-02-14 15:17:54	1315.06	2026-10-19 15:59:23	2026-10-19 15:59:23
+435	2025-10-24 03:17:22	384.93	2026-10-19 15:59:23	2026-10-19 15:59:23
+436	2026-10-06 21:36:18	1635.75	2026-10-19 15:59:23	2026-10-19 15:59:23
+437	2026-03-04 07:39:01	168.39	2026-10-19 15:59:23	2026-10-19 15:59:23
+438	2025-11-01 21:25:32	1085.48	2026-10-19 15:59:23	2026-10-19 15:59:23
+439	2026-01-28 05:21:45	2646.47	2026-10-19 15:59:23	2026-10-19 15:59:23
+440	2026-01-05 19:03:03	292.72	2026-10-19 15:59:23	2026-10-19 15:59:23
+441	2026-06-02 19:37:05	2542.88	2026-10-19 15:59:23	2026-10-19 15:59:24
+442	2026-07-19 09:54:15	2601.62	2026-10-19 15:59:24	2026-10-19 15:59:24
+443	2026-02-09 05:02:15	624.31	2026-10-19 15:59:24	2026-10-19 15:59:24
+444	2025-10-24 14:07:04	837.67	2026-10-19 15:59:24	2026-10-19 15:59:24
+445	2026-07-17 08:16:08	1460.74	2026-10-19 15:59:24	2026-10-19 15:59:24
+446	2026-07-08 09:22:14	397.77	2026-10-19 15:59:24	2026-10-19 15:59:24
+447	2026-08-03 06:43:15	2083.40	2026-10-19 15:59:24	2026-10-19 15:59:24
+448	2026-08-15 04:59:23	287.98	2026-10-19 15:59:24	2026-10-19 15:59:24
+449	2025-11-24 03:23:37	1427.87	2026-10-19 15:59:24	2026-10-19 15:59:24
+450	2026-08-03 02:23:38	1546.88	2026-10-19 15:59:24	2026-10-19 15:59:24
+451	2026-04-14 11:03:35	752.23	2026-10-19 15:59:24	2026-10-19 15:59:24
+452	2026-02-01 01:12:28	654.01	2026-10-19 15:59:24	2026-10-19 15:59:24
+453	2026-09-29 10:30:00	754.10	2026-10-19 15:59:24	2026-10-19 15:59:24
+454	2026-09-13 13:56:04	2347.32	2026-10-19 15:59:24	2026-10-19 15:59:25
+455	2026-10-10 10:47:39	1510.61	2026-10-19 15:59:25	2026-10-19 15:59:25
+456	2025-10-24 13:43:15	1289.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+457	2026-08-04 14:19:46	233.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+458	2026-04-08 09:40:31	2206.75	2026-10-19 15:59:25	2026-10-19 15:59:25
+459	2025-11-01 12:00:24	1888.54	2026-10-19 15:59:25	2026-10-19 15:59:25
+460	2026-05-22 14:38:34	2251.11	2026-10-19 15:59:25	2026-10-19 15:59:25
+461	2026-09-30 06:27:00	263.22	2026-10-19 15:59:25	2026-10-19 15:59:25
+462	2026-01-23 14:27:34	1181.00	2026-10-19 15:59:25	2026-10-19 15:59:25
+463	2026-06-18 16:12:48	1110.62	2026-10-19 15:59:25	2026-10-19 15:59:25
+464	2026-10-11 05:38:16	2294.13	2026-10-19 15:59:25	2026-10-19 15:59:25
+465	2026-04-17 18:35:24	846.49	2026-10-19 15:59:25	2026-10-19 15:59:25
+466	2026-05-05 03:01:27	1338.68	2026-10-19 15:59:25	2026-10-19 15:59:25
+467	2026-08-24 19:29:42	941.43	2026-10-19 15:59:25	2026-10-19 15:59:25
+468	2026-08-18 16:56:53	1126.56	2026-10-19 15:59:25	2026-10-19 15:59:25
+469	2026-07-22 21:00:09	653.12	2026-10-19 15:59:25	2026-10-19 15:59:25
+470	2026-04-04 11:16:09	406.86	2026-10-19 15:59:25	2026-10-19 15:59:25
+471	2025-10-24 12:56:26	734.35	2026-10-19 15:59:25	2026-10-19 15:59:25
+472	2026-01-24 01:41:39	2217.46	2026-10-19 15:59:25	2026-10-19 15:59:26
+473	2026-05-08 04:31:51	3368.49	2026-10-19 15:59:26	2026-10-19 15:59:26
+474	2026-08-09 01:42:13	129.52	2026-10-19 15:59:26	2026-10-19 15:59:26
+475	2026-09-09 07:15:46	2530.26	2026-10-19 15:59:26	2026-10-19 15:59:26
+476	2026-07-20 14:34:03	1429.50	2026-10-19 15:59:26	2026-10-19 15:59:26
+477	2025-12-14 23:54:02	2003.37	2026-10-19 15:59:26	2026-10-19 15:59:26
+478	2025-11-19 18:26:29	1254.47	2026-10-19 15:59:26	2026-10-19 15:59:26
+479	2026-05-08 01:40:06	1076.68	2026-10-19 15:59:26	2026-10-19 15:59:26
+480	2026-08-15 15:59:37	9.50	2026-10-19 15:59:26	2026-10-19 15:59:26
+481	2025-12-09 18:10:38	916.52	2026-10-19 15:59:26	2026-10-19 15:59:26
+482	2026-04-11 09:34:38	610.90	2026-10-19 15:59:26	2026-10-19 15:59:26
+483	2026-01-28 23:52:04	217.51	2026-10-19 15:59:26	2026-10-19 15:59:26
+484	2026-10-04 11:07:46	351.05	2026-10-19 15:59:26	2026-10-19 15:59:26
+485	2026-10-04 08:32:03	1977.44	2026-10-19 15:59:26	2026-10-19 15:59:26
+486	2026-03-30 02:47:31	89.97	2026-10-19 15:59:26	2026-10-19 15:59:26
+487	2026-09-25 20:40:00	1135.11	2026-10-19 15:59:26	2026-10-19 15:59:26
+488	2026-03-28 08:54:31	698.40	2026-10-19 15:59:26	2026-10-19 15:59:26
+489	2026-01-13 21:31:42	532.01	2026-10-19 15:59:26	2026-10-19 15:59:26
+490	2026-06-25 20:36:16	1622.23	2026-10-19 15:59:26	2026-10-19 15:59:27
+491	2026-01-13 14:38:59	1407.10	2026-10-19 15:59:27	2026-10-19 15:59:27
+492	2026-07-09 22:17:07	514.52	2026-10-19 15:59:27	2026-10-19 15:59:27
+493	2026-08-11 18:02:09	527.94	2026-10-19 15:59:27	2026-10-19 15:59:27
+494	2026-02-10 18:10:41	2119.66	2026-10-19 15:59:27	2026-10-19 15:59:27
+495	2025-11-03 07:23:48	98.75	2026-10-19 15:59:27	2026-10-19 15:59:27
+496	2026-10-04 22:09:45	2039.70	2026-10-19 15:59:27	2026-10-19 15:59:27
+497	2026-06-30 21:51:43	1658.59	2026-10-19 15:59:27	2026-10-19 15:59:27
+498	2025-11-14 00:24:53	1055.44	2026-10-19 15:59:27	2026-10-19 15:59:27
+499	2026-09-14 12:08:31	1235.80	2026-10-19 15:59:27	2026-10-19 15:59:27
+500	2026-01-21 19:30:57	635.65	2026-10-19 15:59:27	2026-10-19 15:59:27
+501	2025-12-21 06:23:29	201.27	2026-10-19 15:59:27	2026-10-19 15:59:27
+502	2025-12-24 19:34:28	1618.49	2026-10-19 15:59:27	2026-10-19 15:59:27
+503	2026-08-13 23:18:44	2221.97	2026-10-19 15:59:27	2026-10-19 15:59:27
+504	2026-06-18 10:04:49	19.29	2026-10-19 15:59:27	2026-10-19 15:59:27
+505	2026-01-24 19:40:37	1609.50	2026-10-19 15:59:27	2026-10-19 15:59:27
+506	2026-06-10 14:43:58	683.12	2026-10-19 15:59:27	2026-10-19 15:59:27
+507	2026-10-10 09:58:18	765.36	2026-10-19 15:59:27	2026-10-19 15:59:27
+508	2026-03-08 20:00:55	1141.11	2026-10-19 15:59:27	2026-10-19 15:59:27
+509	2026-04-19 13:38:26	1767.01	2026-10-19 15:59:27	2026-10-19 15:59:27
+510	2026-07-24 08:00:45	1323.73	2026-10-19 15:59:27	2026-10-19 15:59:28
+511	2026-09-10 02:22:08	1618.64	2026-10-19 15:59:28	2026-10-19 15:59:28
+512	2025-12-01 23:35:42	988.05	2026-10-19 15:59:28	2026-10-19 15:59:28
+513	2026-10-06 04:05:02	1284.97	2026-10-19 15:59:28	2026-10-19 15:59:28
+514	2026-02-22 15:13:05	92.48	2026-10-19 15:59:28	2026-10-19 15:59:28
+515	2026-09-29 17:24:31	815.82	2026-10-19 15:59:28	2026-10-19 15:59:28
+516	2026-10-19 13:33:08	2814.44	2026-10-19 15:59:28	2026-10-19 15:59:28
+517	2026-09-05 06:20:01	1523.68	2026-10-19 15:59:28	2026-10-19 15:59:28
+518	2026-07-11 21:13:12	1190.76	2026-10-19 15:59:28	2026-10-19 15:59:28
+519	2025-10-22 00:43:03	1291.85	2026-10-19 15:59:28	2026-10-19 15:59:28
+520	2025-11-21 05:26:15	293.82	2026-10-19 15:59:28	2026-10-19 15:59:28
+521	2026-03-02 06:32:04	185.21	2026-10-19 15:59:28	2026-10-19 15:59:28
+522	2026-02-16 04:49:29	800.64	2026-10-19 15:59:28	2026-10-19 15:59:28
+523	2025-12-13 18:12:56	2192.54	2026-10-19 15:59:28	2026-10-19 15:59:29
+524	2026-06-27 02:24:04	1967.72	2026-10-19 15:59:29	2026-10-19 15:59:29
+525	2026-06-04 19:27:52	1328.66	2026-10-19 15:59:29	2026-10-19 15:59:29
+526	2026-06-25 00:44:45	2205.08	2026-10-19 15:59:29	2026-10-19 15:59:29
+527	2026-04-10 00:17:23	2330.77	2026-10-19 15:59:29	2026-10-19 15:59:29
+528	2025-11-18 10:35:14	647.68	2026-10-19 15:59:29	2026-10-19 15:59:29
+529	2026-03-31 04:49:48	145.32	2026-10-19 15:59:29	2026-10-19 15:59:29
+530	2026-03-26 02:36:42	378.06	2026-10-19 15:59:29	2026-10-19 15:59:29
+531	2026-04-04 16:31:29	1792.88	2026-10-19 15:59:29	2026-10-19 15:59:29
+532	2026-06-01 03:38:23	81.64	2026-10-19 15:59:29	2026-10-19 15:59:29
+533	2025-12-01 00:57:06	1277.25	2026-10-19 15:59:29	2026-10-19 15:59:29
+534	2026-05-19 07:18:39	1759.58	2026-10-19 15:59:30	2026-10-19 15:59:30
+535	2026-05-04 20:02:06	444.77	2026-10-19 15:59:30	2026-10-19 15:59:30
+536	2026-08-19 16:10:40	1424.82	2026-10-19 15:59:30	2026-10-19 15:59:30
+537	2026-04-16 05:19:20	2122.02	2026-10-19 15:59:30	2026-10-19 15:59:30
+538	2025-11-13 09:32:46	412.98	2026-10-19 15:59:30	2026-10-19 15:59:30
+539	2026-03-23 15:11:26	1364.07	2026-10-19 15:59:30	2026-10-19 15:59:30
+540	2025-11-09 08:20:17	2170.11	2026-10-19 15:59:30	2026-10-19 15:59:30
+541	2026-08-26 18:19:14	2129.82	2026-10-19 15:59:30	2026-10-19 15:59:30
+542	2026-10-10 09:21:00	644.68	2026-10-19 15:59:30	2026-10-19 15:59:30
+543	2025-11-19 09:43:18	552.95	2026-10-19 15:59:30	2026-10-19 15:59:30
+544	2026-04-19 02:05:22	1094.26	2026-10-19 15:59:30	2026-10-19 15:59:31
+545	2026-06-29 20:36:37	1923.65	2026-10-19 15:59:31	2026-10-19 15:59:31
+546	2025-11-08 08:24:37	2076.94	2026-10-19 15:59:31	2026-10-19 15:59:31
+547	2026-09-18 03:46:48	2069.90	2026-10-19 15:59:31	2026-10-19 15:59:31
+548	2025-11-28 21:21:39	1609.64	2026-10-19 15:59:31	2026-10-19 15:59:31
+549	2026-09-17 12:35:39	1015.59	2026-10-19 15:59:31	2026-10-19 15:59:31
+550	2026-03-26 19:33:26	795.05	2026-10-19 15:59:31	2026-10-19 15:59:31
+551	2026-01-05 19:11:14	2682.87	2026-10-19 15:59:31	2026-10-19 15:59:31
+552	2026-07-10 22:31:58	278.32	2026-10-19 15:59:31	2026-10-19 15:59:31
+553	2025-10-22 02:55:42	354.19	2026-10-19 15:59:31	2026-10-19 15:59:31
+554	2026-06-08 05:19:46	1344.97	2026-10-19 15:59:31	2026-10-19 15:59:31
+555	2026-05-04 11:56:49	2724.90	2026-10-19 15:59:31	2026-10-19 15:59:31
+556	2026-06-01 19:32:41	938.56	2026-10-19 15:59:31	2026-10-19 15:59:31
+557	2026-02-01 18:13:30	576.48	2026-10-19 15:59:31	2026-10-19 15:59:31
+558	2025-12-30 20:02:28	1411.93	2026-10-19 15:59:31	2026-10-19 15:59:31
+559	2025-11-06 17:12:14	647.58	2026-10-19 15:59:31	2026-10-19 15:59:31
+560	2026-01-19 09:13:49	1589.44	2026-10-19 15:59:31	2026-10-19 15:59:32
+561	2025-11-30 12:00:37	1941.99	2026-10-19 15:59:32	2026-10-19 15:59:32
+562	2026-08-02 09:40:50	23.96	2026-10-19 15:59:32	2026-10-19 15:59:32
+563	2026-10-01 02:36:15	2238.64	2026-10-19 15:59:32	2026-10-19 15:59:32
+564	2026-05-09 16:59:31	1039.06	2026-10-19 15:59:32	2026-10-19 15:59:32
+565	2026-01-09 05:35:06	932.08	2026-10-19 15:59:32	2026-10-19 15:59:32
+566	2026-10-16 13:37:38	237.13	2026-10-19 15:59:32	2026-10-19 15:59:32
+567	2026-01-04 13:29:18	1772.08	2026-10-19 15:59:32	2026-10-19 15:59:32
+568	2026-05-15 06:12:53	1792.71	2026-10-19 15:59:32	2026-10-19 15:59:32
+569	2026-02-10 19:51:08	547.32	2026-10-19 15:59:32	2026-10-19 15:59:32
+570	2026-05-14 13:37:02	1284.55	2026-10-19 15:59:32	2026-10-19 15:59:32
+571	2026-08-13 03:34:59	1526.14	2026-10-19 15:59:32	2026-10-19 15:59:32
+572	2026-03-07 01:08:45	2876.91	2026-10-19 15:59:32	2026-10-19 15:59:32
+573	2026-04-20 14:16:54	511.30	2026-10-19 15:59:32	2026-10-19 15:59:32
+574	2026-06-24 15:22:36	751.74	2026-10-19 15:59:32	2026-10-19 15:59:32
+575	2026-06-11 04:45:32	1099.41	2026-10-19 15:59:32	2026-10-19 15:59:33
+576	2026-02-04 21:30:52	511.54	2026-10-19 15:59:33	2026-10-19 15:59:33
+577	2025-10-26 02:35:58	1369.70	2026-10-19 15:59:33	2026-10-19 15:59:33
+578	2026-02-05 02:25:07	1592.10	2026-10-19 15:59:33	2026-10-19 15:59:33
+579	2026-02-18 01:48:35	989.28	2026-10-19 15:59:33	2026-10-19 15:59:33
+580	2026-02-22 23:02:23	1843.18	2026-10-19 15:59:33	2026-10-19 15:59:33
+581	2026-10-15 13:34:48	1706.25	2026-10-19 15:59:33	2026-10-19 15:59:33
+582	2026-06-25 11:06:08	2330.26	2026-10-19 15:59:33	2026-10-19 15:59:33
+583	2025-12-15 11:50:56	3088.63	2026-10-19 15:59:33	2026-10-19 15:59:33
+584	2025-11-06 02:59:44	1290.45	2026-10-19 15:59:33	2026-10-19 15:59:33
+585	2026-09-20 12:34:14	645.90	2026-10-19 15:59:33	2026-10-19 15:59:33
+586	2026-07-27 18:44:47	313.97	2026-10-19 15:59:33	2026-10-19 15:59:33
+587	2026-09-01 23:23:52	1146.88	2026-10-19 15:59:33	2026-10-19 15:59:33
+588	2026-07-05 14:16:46	1624.45	2026-10-19 15:59:33	2026-10-19 15:59:33
+589	2025-10-30 17:48:52	311.94	2026-10-19 15:59:33	2026-10-19 15:59:33
+590	2025-10-20 22:50:40	1250.26	2026-10-19 15:59:33	2026-10-19 15:59:33
+591	2025-10-30 02:09:51	1324.92	2026-10-19 15:59:33	2026-10-19 15:59:34
+592	2026-03-07 11:09:17	1030.40	2026-10-19 15:59:34	2026-10-19 15:59:34
+593	2026-03-08 19:34:05	2368.13	2026-10-19 15:59:34	2026-10-19 15:59:34
+594	2025-11-28 02:54:05	191.12	2026-10-19 15:59:34	2026-10-19 15:59:34
+595	2026-04-25 08:04:59	2415.14	2026-10-19 15:59:34	2026-10-19 15:59:34
+596	2026-08-02 05:22:18	1168.49	2026-10-19 15:59:34	2026-10-19 15:59:34
+597	2026-03-30 17:49:19	1484.57	2026-10-19 15:59:34	2026-10-19 15:59:34
+598	2026-03-24 11:48:24	1159.78	2026-10-19 15:59:34	2026-10-19 15:59:34
+599	2026-01-31 22:12:09	729.26	2026-10-19 15:59:34	2026-10-19 15:59:34
+600	2026-05-12 12:26:52	368.21	2026-10-19 15:59:34	2026-10-19 15:59:34
+601	2026-08-01 05:52:29	584.28	2026-10-19 15:59:34	2026-10-19 15:59:34
+602	2026-09-18 18:12:06	1030.54	2026-10-19 15:59:34	2026-10-19 15:59:34
+603	2026-02-06 20:12:57	1757.12	2026-10-19 15:59:34	2026-10-19 15:59:34
+604	2026-10-16 05:28:24	2003.47	2026-10-19 15:59:34	2026-10-19 15:59:34
+605	2026-08-04 23:08:21	335.33	2026-10-19 15:59:34	2026-10-19 15:59:34
+606	2026-05-08 23:00:25	226.47	2026-10-19 15:59:34	2026-10-19 15:59:34
+607	2026-05-28 12:50:20	2377.09	2026-10-19 15:59:34	2026-10-19 15:59:34
+608	2025-10-30 10:41:46	620.04	2026-10-19 15:59:34	2026-10-19 15:59:35
+609	2026-02-27 12:05:05	2114.96	2026-10-19 15:59:35	2026-10-19 15:59:35
+610	2026-03-17 22:47:40	1851.62	2026-10-19 15:59:35	2026-10-19 15:59:35
+611	2026-09-18 09:43:23	2013.52	2026-10-19 15:59:35	2026-10-19 15:59:35
+612	2026-01-28 06:17:35	58.12	2026-10-19 15:59:35	2026-10-19 15:59:35
+613	2026-08-06 09:03:01	795.66	2026-10-19 15:59:35	2026-10-19 15:59:35
+614	2025-10-24 07:20:09	834.42	2026-10-19 15:59:35	2026-10-19 15:59:35
+615	2026-07-23 21:53:45	1763.95	2026-10-19 15:59:35	2026-10-19 15:59:35
+616	2026-04-30 23:38:42	120.50	2026-10-19 15:59:35	2026-10-19 15:59:35
+617	2026-09-08 00:29:05	608.97	2026-10-19 15:59:35	2026-10-19 15:59:35
+618	2025-12-28 19:40:02	1207.67	2026-10-19 15:59:35	2026-10-19 15:59:35
+619	2026-08-21 22:18:03	1785.17	2026-10-19 15:59:35	2026-10-19 15:59:35
+620	2026-05-07 18:49:03	2498.46	2026-10-19 15:59:35	2026-10-19 15:59:35
+621	2026-03-05 00:52:03	1490.93	2026-10-19 15:59:35	2026-10-19 15:59:35
+622	2026-04-25 18:17:39	1008.59	2026-10-19 15:59:35	2026-10-19 15:59:35
+623	2026-07-22 02:44:35	437.09	2026-10-19 15:59:35	2026-10-19 15:59:35
+624	2025-11-02 02:08:41	1085.10	2026-10-19 15:59:35	2026-10-19 15:59:35
+625	2026-03-25 02:08:21	724.70	2026-10-19 15:59:35	2026-10-19 15:59:35
+626	2025-11-20 14:49:48	274.28	2026-10-19 15:59:35	2026-10-19 15:59:35
+627	2026-07-19 22:26:15	2974.85	2026-10-19 15:59:35	2026-10-19 15:59:36
+628	2026-09-29 10:13:51	917.91	2026-10-19 15:59:36	2026-10-19 15:59:36
+629	2026-05-27 13:15:19	1612.89	2026-10-19 15:59:36	2026-10-19 15:59:36
+630	2026-07-13 07:39:30	1406.26	2026-10-19 15:59:36	2026-10-19 15:59:36
+631	2026-09-08 04:34:31	1172.40	2026-10-19 15:59:36	2026-10-19 15:59:36
+632	2026-07-19 19:23:31	846.30	2026-10-19 15:59:36	2026-10-19 15:59:37
+633	2026-06-21 11:21:06	2232.24	2026-10-19 15:59:37	2026-10-19 15:59:37
+634	2026-07-09 02:58:46	882.66	2026-10-19 15:59:38	2026-10-19 15:59:38
+635	2026-08-18 04:52:36	3011.56	2026-10-19 15:59:38	2026-10-19 15:59:39
+636	2026-09-13 20:58:37	1528.03	2026-10-19 15:59:39	2026-10-19 15:59:39
+637	2026-06-26 04:58:19	1985.61	2026-10-19 15:59:39	2026-10-19 15:59:40
+638	2026-04-16 14:44:23	1861.70	2026-10-19 15:59:40	2026-10-19 15:59:40
+639	2026-07-02 16:26:58	947.35	2026-10-19 15:59:40	2026-10-19 15:59:41
+640	2026-08-21 20:22:03	1357.75	2026-10-19 15:59:41	2026-10-19 15:59:44
+641	2026-03-01 11:01:03	137.97	2026-10-19 15:59:44	2026-10-19 15:59:45
+642	2026-03-21 23:25:25	1189.37	2026-10-19 15:59:45	2026-10-19 15:59:45
+643	2025-10-21 20:51:40	2263.04	2026-10-19 15:59:45	2026-10-19 15:59:46
+644	2026-03-31 01:38:52	169.35	2026-10-19 15:59:46	2026-10-19 15:59:46
+645	2026-04-13 08:25:15	246.22	2026-10-19 15:59:46	2026-10-19 15:59:46
+646	2026-10-01 20:42:26	38.85	2026-10-19 15:59:46	2026-10-19 15:59:46
+647	2026-08-14 11:25:55	1019.36	2026-10-19 15:59:46	2026-10-19 15:59:47
+648	2026-04-27 00:58:59	877.00	2026-10-19 15:59:47	2026-10-19 15:59:47
+649	2026-03-31 01:09:39	1932.06	2026-10-19 15:59:47	2026-10-19 15:59:48
+650	2026-05-04 16:09:04	617.53	2026-10-19 15:59:48	2026-10-19 15:59:48
+651	2026-07-23 14:07:20	1833.94	2026-10-19 15:59:48	2026-10-19 15:59:49
+652	2025-10-23 15:51:32	1755.74	2026-10-19 15:59:49	2026-10-19 15:59:49
+653	2026-07-01 23:26:07	1618.32	2026-10-19 15:59:49	2026-10-19 15:59:49
+654	2026-05-10 11:40:41	2327.65	2026-10-19 15:59:49	2026-10-19 15:59:49
+655	2026-06-30 03:51:46	432.24	2026-10-19 15:59:49	2026-10-19 15:59:49
+656	2025-10-25 04:24:20	2712.40	2026-10-19 15:59:49	2026-10-19 15:59:50
+657	2026-04-26 04:18:08	534.88	2026-10-19 15:59:50	2026-10-19 15:59:50
+658	2026-08-17 09:55:26	2189.60	2026-10-19 15:59:50	2026-10-19 15:59:50
+659	2026-10-13 16:34:02	1424.61	2026-10-19 15:59:50	2026-10-19 15:59:50
+660	2026-09-16 21:13:49	1507.37	2026-10-19 15:59:50	2026-10-19 15:59:50
+661	2026-03-01 07:23:24	1425.87	2026-10-19 15:59:50	2026-10-19 15:59:50
+662	2025-10-21 05:34:52	984.46	2026-10-19 15:59:50	2026-10-19 15:59:50
+663	2026-09-18 17:24:58	1054.88	2026-10-19 15:59:50	2026-10-19 15:59:50
+664	2026-07-09 14:24:10	1316.21	2026-10-19 15:59:50	2026-10-19 15:59:50
+665	2026-04-28 06:06:46	241.89	2026-10-19 15:59:50	2026-10-19 15:59:50
+666	2026-06-14 18:19:02	148.17	2026-10-19 15:59:50	2026-10-19 15:59:50
+667	2026-06-27 01:38:47	838.08	2026-10-19 15:59:50	2026-10-19 15:59:50
+668	2026-01-30 05:58:10	1385.33	2026-10-19 15:59:50	2026-10-19 15:59:50
+669	2026-01-22 04:28:19	1015.36	2026-10-19 15:59:50	2026-10-19 15:59:50
+670	2026-03-30 03:53:17	1182.84	2026-10-19 15:59:50	2026-10-19 15:59:50
+671	2026-09-04 15:50:36	668.66	2026-10-19 15:59:50	2026-10-19 15:59:50
+672	2026-08-14 20:34:09	919.66	2026-10-19 15:59:50	2026-10-19 15:59:50
+673	2026-03-27 07:10:52	170.56	2026-10-19 15:59:50	2026-10-19 15:59:50
+674	2026-03-13 07:57:21	2677.99	2026-10-19 15:59:50	2026-10-19 15:59:50
+675	2026-07-11 16:24:55	1307.70	2026-10-19 15:59:51	2026-10-19 15:59:51
+676	2026-04-28 07:26:09	1711.10	2026-10-19 15:59:51	2026-10-19 15:59:51
+677	2026-07-27 17:32:47	1556.93	2026-10-19 15:59:51	2026-10-19 15:59:51
+678	2026-10-11 01:20:11	1550.70	2026-10-19 15:59:51	2026-10-19 15:59:51
+679	2026-08-11 01:21:37	1095.59	2026-10-19 15:59:51	2026-10-19 15:59:51
+680	2026-08-21 19:09:28	1261.89	2026-10-19 15:59:51	2026-10-19 15:59:51
+681	2026-08-16 04:23:00	1531.04	2026-10-19 15:59:51	2026-10-19 15:59:51
+682	2026-04-20 11:05:12	185.98	2026-10-19 15:59:51	2026-10-19 15:59:51
+683	2026-06-21 20:47:19	1068.22	2026-10-19 15:59:51	2026-10-19 15:59:51
+684	2026-08-21 17:30:02	1978.80	2026-10-19 15:59:51	2026-10-19 15:59:51
+685	2026-05-09 12:54:25	1170.18	2026-10-19 15:59:51	2026-10-19 15:59:51
+686	2026-01-06 17:04:57	691.36	2026-10-19 15:59:51	2026-10-19 15:59:51
+687	2026-05-18 11:34:59	2405.52	2026-10-19 15:59:51	2026-10-19 15:59:51
+688	2026-02-18 11:35:38	1033.48	2026-10-19 15:59:51	2026-10-19 15:59:51
+689	2026-06-02 21:30:03	2178.35	2026-10-19 15:59:51	2026-10-19 15:59:52
+690	2026-04-09 05:11:53	104.72	2026-10-19 15:59:52	2026-10-19 15:59:52
+691	2026-01-07 07:50:46	77.75	2026-10-19 15:59:52	2026-10-19 15:59:52
+692	2026-06-18 06:30:15	430.53	2026-10-19 15:59:52	2026-10-19 15:59:52
+693	2025-11-30 05:36:33	1591.27	2026-10-19 15:59:52	2026-10-19 15:59:52
+694	2026-04-20 05:57:56	682.67	2026-10-19 15:59:52	2026-10-19 15:59:52
+695	2025-11-20 01:27:52	433.84	2026-10-19 15:59:52	2026-10-19 15:59:52
+696	2026-06-03 15:27:24	766.72	2026-10-19 15:59:52	2026-10-19 15:59:52
+697	2026-04-29 15:37:53	1599.24	2026-10-19 15:59:52	2026-10-19 15:59:52
+698	2026-01-28 04:16:54	2149.36	2026-10-19 15:59:52	2026-10-19 15:59:52
+699	2025-12-31 07:11:02	1865.00	2026-10-19 15:59:52	2026-10-19 15:59:52
+700	2026-01-03 20:48:19	255.64	2026-10-19 15:59:52	2026-10-19 15:59:52
+701	2026-08-24 23:02:02	2919.92	2026-10-19 15:59:52	2026-10-19 15:59:52
+702	2026-08-19 21:35:23	770.22	2026-10-19 15:59:52	2026-10-19 15:59:52
+703	2026-03-19 06:51:58	516.24	2026-10-19 15:59:52	2026-10-19 15:59:52
+704	2026-06-05 23:25:17	1555.36	2026-10-19 15:59:52	2026-10-19 15:59:52
+705	2026-07-11 07:11:22	2450.96	2026-10-19 15:59:52	2026-10-19 15:59:53
+706	2025-12-06 03:05:25	702.78	2026-10-19 15:59:53	2026-10-19 15:59:53
+707	2026-03-06 16:49:10	717.19	2026-10-19 15:59:53	2026-10-19 15:59:53
+708	2026-05-13 14:08:39	1651.43	2026-10-19 15:59:53	2026-10-19 15:59:53
+709	2026-07-27 07:49:22	78.12	2026-10-19 15:59:53	2026-10-19 15:59:53
+710	2025-12-11 16:59:51	3446.34	2026-10-19 15:59:53	2026-10-19 15:59:53
+711	2025-11-11 02:42:13	999.18	2026-10-19 15:59:53	2026-10-19 15:59:53
+712	2026-01-28 13:08:10	1026.59	2026-10-19 15:59:53	2026-10-19 15:59:53
+713	2025-12-18 09:46:18	649.15	2026-10-19 15:59:53	2026-10-19 15:59:53
+714	2026-08-22 19:26:11	1812.58	2026-10-19 15:59:53	2026-10-19 15:59:53
+715	2025-12-16 07:44:24	1606.11	2026-10-19 15:59:53	2026-10-19 15:59:53
+716	2026-03-31 12:09:00	1310.90	2026-10-19 15:59:53	2026-10-19 15:59:53
+717	2026-05-05 02:28:41	2599.39	2026-10-19 15:59:53	2026-10-19 15:59:53
+718	2026-05-19 19:58:37	1062.81	2026-10-19 15:59:53	2026-10-19 15:59:53
+719	2026-07-23 10:49:43	1354.51	2026-10-19 15:59:53	2026-10-19 15:59:53
+720	2026-01-28 16:53:15	931.46	2026-10-19 15:59:53	2026-10-19 15:59:53
+721	2026-10-14 23:58:05	2037.48	2026-10-19 15:59:53	2026-10-19 15:59:53
+722	2026-02-24 19:34:45	1008.90	2026-10-19 15:59:53	2026-10-19 15:59:53
+723	2026-07-05 22:58:36	605.81	2026-10-19 15:59:54	2026-10-19 15:59:54
+724	2026-08-08 23:01:29	1568.31	2026-10-19 15:59:54	2026-10-19 15:59:54
+725	2026-04-05 20:43:03	707.04	2026-10-19 15:59:54	2026-10-19 15:59:54
+726	2025-11-02 22:21:22	604.62	2026-10-19 15:59:54	2026-10-19 15:59:54
+727	2026-02-20 17:15:56	714.81	2026-10-19 15:59:54	2026-10-19 15:59:54
+728	2026-10-15 01:14:21	2415.04	2026-10-19 15:59:54	2026-10-19 15:59:54
+729	2026-08-05 14:09:34	413.01	2026-10-19 15:59:54	2026-10-19 15:59:54
+730	2026-05-09 21:41:07	772.04	2026-10-19 15:59:54	2026-10-19 15:59:54
+731	2025-11-27 14:48:15	2020.42	2026-10-19 15:59:54	2026-10-19 15:59:54
+732	2026-04-29 15:08:48	410.49	2026-10-19 15:59:54	2026-10-19 15:59:54
+733	2026-03-03 06:49:52	1568.96	2026-10-19 15:59:54	2026-10-19 15:59:54
+734	2025-12-05 00:09:54	1318.97	2026-10-19 15:59:54	2026-10-19 15:59:54
+735	2026-03-04 09:11:43	870.17	2026-10-19 15:59:54	2026-10-19 15:59:54
+736	2026-03-03 12:46:22	2910.69	2026-10-19 15:59:54	2026-10-19 15:59:54
+737	2026-08-02 06:50:51	1246.36	2026-10-19 15:59:54	2026-10-19 15:59:54
+738	2026-02-26 00:31:39	535.62	2026-10-19 15:59:54	2026-10-19 15:59:55
+739	2026-10-08 17:23:51	1151.70	2026-10-19 15:59:55	2026-10-19 15:59:55
+740	2025-11-16 18:24:45	1402.46	2026-10-19 15:59:55	2026-10-19 15:59:55
+741	2026-05-18 18:54:23	760.87	2026-10-19 15:59:55	2026-10-19 15:59:55
+742	2026-03-26 06:25:17	845.58	2026-10-19 15:59:55	2026-10-19 15:59:55
+743	2026-09-04 18:03:25	1839.24	2026-10-19 15:59:55	2026-10-19 15:59:55
+744	2026-05-13 00:01:58	843.97	2026-10-19 15:59:55	2026-10-19 15:59:55
+745	2026-04-27 03:27:57	908.60	2026-10-19 15:59:55	2026-10-19 15:59:55
+746	2026-08-08 00:36:21	1255.22	2026-10-19 15:59:55	2026-10-19 15:59:55
+747	2026-01-31 23:42:48	475.00	2026-10-19 15:59:55	2026-10-19 15:59:55
+748	2026-03-15 10:09:18	333.18	2026-10-19 15:59:55	2026-10-19 15:59:55
+749	2026-07-29 08:11:01	627.10	2026-10-19 15:59:55	2026-10-19 15:59:55
+750	2025-12-14 22:51:00	556.41	2026-10-19 15:59:55	2026-10-19 15:59:55
+751	2026-02-25 23:30:04	1218.56	2026-10-19 15:59:55	2026-10-19 15:59:55
+752	2026-10-18 12:46:27	924.05	2026-10-19 15:59:55	2026-10-19 15:59:55
+753	2026-08-23 22:26:44	1131.85	2026-10-19 15:59:55	2026-10-19 15:59:55
+754	2026-04-23 22:47:38	336.88	2026-10-19 15:59:55	2026-10-19 15:59:56
+755	2026-08-25 13:49:38	161.70	2026-10-19 15:59:56	2026-10-19 15:59:56
+756	2026-07-21 15:20:47	1880.04	2026-10-19 15:59:56	2026-10-19 15:59:56
+757	2026-08-29 23:25:47	1199.99	2026-10-19 15:59:56	2026-10-19 15:59:56
+758	2025-12-11 16:00:53	232.64	2026-10-19 15:59:56	2026-10-19 15:59:56
+759	2025-12-03 00:08:25	1218.75	2026-10-19 15:59:56	2026-10-19 15:59:56
+760	2026-03-01 23:08:51	149.95	2026-10-19 15:59:56	2026-10-19 15:59:56
+761	2026-01-28 16:13:38	701.68	2026-10-19 15:59:56	2026-10-19 15:59:56
+762	2026-06-10 05:03:13	992.95	2026-10-19 15:59:56	2026-10-19 15:59:56
+763	2026-05-24 22:16:11	1068.40	2026-10-19 15:59:56	2026-10-19 15:59:56
+764	2026-10-07 22:09:42	784.53	2026-10-19 15:59:56	2026-10-19 15:59:56
+765	2026-02-20 09:12:31	450.77	2026-10-19 15:59:56	2026-10-19 15:59:56
+766	2026-05-17 15:55:01	939.94	2026-10-19 15:59:56	2026-10-19 15:59:56
+767	2025-10-23 06:50:06	2019.20	2026-10-19 15:59:56	2026-10-19 15:59:56
+768	2025-11-04 13:11:50	1686.72	2026-10-19 15:59:56	2026-10-19 15:59:56
+769	2025-11-19 02:23:19	739.09	2026-10-19 15:59:56	2026-10-19 15:59:56
+770	2026-07-04 09:01:26	2479.53	2026-10-19 15:59:56	2026-10-19 15:59:56
+771	2026-08-30 12:13:30	1041.87	2026-10-19 15:59:56	2026-10-19 15:59:56
+772	2026-08-06 00:52:11	246.96	2026-10-19 15:59:56	2026-10-19 15:59:56
+773	2025-12-09 16:21:18	1606.49	2026-10-19 15:59:56	2026-10-19 15:59:57
+774	2026-09-22 20:49:39	1341.94	2026-10-19 15:59:57	2026-10-19 15:59:57
+775	2026-07-28 09:40:22	1992.46	2026-10-19 15:59:57	2026-10-19 15:59:57
+776	2026-01-02 04:46:23	374.93	2026-10-19 15:59:57	2026-10-19 15:59:57
+777	2025-12-09 11:29:22	2107.32	2026-10-19 15:59:57	2026-10-19 15:59:57
+778	2026-05-13 23:12:24	2517.41	2026-10-19 15:59:57	2026-10-19 15:59:57
+779	2026-09-26 22:37:22	2229.79	2026-10-19 15:59:57	2026-10-19 15:59:57
+780	2026-02-12 11:11:30	1234.10	2026-10-19 15:59:57	2026-10-19 15:59:57
+781	2026-10-15 15:14:06	1382.12	2026-10-19 15:59:57	2026-10-19 15:59:57
+782	2026-09-30 00:16:39	647.48	2026-10-19 15:59:57	2026-10-19 15:59:57
+783	2026-07-21 02:04:14	2016.24	2026-10-19 15:59:57	2026-10-19 15:59:57
+784	2026-03-11 15:11:01	1259.84	2026-10-19 15:59:57	2026-10-19 15:59:57
+785	2026-04-14 00:45:06	150.26	2026-10-19 15:59:57	2026-10-19 15:59:57
+786	2026-10-19 04:52:21	1844.23	2026-10-19 15:59:57	2026-10-19 15:59:57
+787	2026-05-03 19:17:27	1528.56	2026-10-19 15:59:57	2026-10-19 15:59:57
+788	2026-03-11 19:00:49	1609.32	2026-10-19 15:59:57	2026-10-19 15:59:58
+789	2026-01-12 22:53:34	1997.42	2026-10-19 15:59:58	2026-10-19 15:59:58
+790	2026-07-06 18:33:10	2431.39	2026-10-19 15:59:58	2026-10-19 15:59:58
+791	2026-04-19 20:42:24	180.34	2026-10-19 15:59:58	2026-10-19 15:59:58
+792	2025-10-20 22:06:48	770.55	2026-10-19 15:59:58	2026-10-19 15:59:58
+793	2025-10-26 11:04:54	2668.80	2026-10-19 15:59:58	2026-10-19 15:59:58
+794	2025-12-13 06:51:20	999.75	2026-10-19 15:59:58	2026-10-19 15:59:58
+795	2026-02-02 18:38:07	2375.51	2026-10-19 15:59:58	2026-10-19 15:59:58
+796	2026-05-05 18:28:07	1392.42	2026-10-19 15:59:58	2026-10-19 15:59:58
+797	2026-05-01 09:37:05	596.19	2026-10-19 15:59:58	2026-10-19 15:59:58
+798	2026-03-18 05:38:07	975.84	2026-10-19 15:59:58	2026-10-19 15:59:58
+799	2026-01-25 00:22:22	817.36	2026-10-19 15:59:58	2026-10-19 15:59:58
+800	2026-08-05 01:36:20	956.88	2026-10-19 15:59:58	2026-10-19 15:59:58
+801	2026-05-08 13:47:17	1680.94	2026-10-19 15:59:58	2026-10-19 15:59:58
+802	2025-12-09 15:41:23	1544.17	2026-10-19 15:59:58	2026-10-19 15:59:59
+803	2026-09-23 01:28:58	292.78	2026-10-19 15:59:59	2026-10-19 15:59:59
+804	2026-10-13 20:55:39	704.21	2026-10-19 15:59:59	2026-10-19 15:59:59
+805	2026-09-03 05:59:54	1102.15	2026-10-19 15:59:59	2026-10-19 15:59:59
+806	2026-02-26 02:12:24	2192.07	2026-10-19 15:59:59	2026-10-19 15:59:59
+807	2026-04-14 15:21:58	1387.72	2026-10-19 15:59:59	2026-10-19 15:59:59
+808	2025-12-27 05:48:53	1963.86	2026-10-19 15:59:59	2026-10-19 15:59:59
+809	2026-06-05 03:18:53	1440.06	2026-10-19 15:59:59	2026-10-19 15:59:59
+810	2026-04-26 21:20:13	136.15	2026-10-19 15:59:59	2026-10-19 15:59:59
+811	2025-12-29 07:47:57	494.48	2026-10-19 15:59:59	2026-10-19 15:59:59
+812	2026-05-26 14:24:39	1914.49	2026-10-19 15:59:59	2026-10-19 15:59:59
+813	2026-10-09 14:00:29	1260.40	2026-10-19 15:59:59	2026-10-19 15:59:59
+814	2026-07-10 00:30:59	623.68	2026-10-19 15:59:59	2026-10-19 15:59:59
+815	2026-03-22 00:38:46	1189.02	2026-10-19 15:59:59	2026-10-19 15:59:59
+816	2026-08-20 10:03:12	490.71	2026-10-19 15:59:59	2026-10-19 15:59:59
+817	2026-02-04 09:45:22	417.39	2026-10-19 15:59:59	2026-10-19 15:59:59
+818	2026-03-18 16:26:31	2732.99	2026-10-19 15:59:59	2026-10-19 16:00:00
+819	2026-10-10 16:29:00	194.97	2026-10-19 16:00:00	2026-10-19 16:00:00
+820	2026-04-04 11:11:53	2149.64	2026-10-19 16:00:00	2026-10-19 16:00:00
+821	2026-06-09 06:37:57	590.56	2026-10-19 16:00:00	2026-10-19 16:00:00
+822	2026-03-03 13:54:50	827.85	2026-10-19 16:00:00	2026-10-19 16:00:00
+823	2026-06-12 01:47:40	834.39	2026-10-19 16:00:00	2026-10-19 16:00:00
+824	2026-03-23 03:39:55	380.34	2026-10-19 16:00:00	2026-10-19 16:00:00
+825	2026-01-04 07:34:18	1256.91	2026-10-19 16:00:00	2026-10-19 16:00:00
+826	2026-03-09 15:58:50	883.91	2026-10-19 16:00:00	2026-10-19 16:00:00
+827	2026-02-22 03:19:55	779.88	2026-10-19 16:00:00	2026-10-19 16:00:00
+828	2026-09-25 13:38:10	1560.53	2026-10-19 16:00:00	2026-10-19 16:00:00
+829	2025-12-27 06:26:22	2297.40	2026-10-19 16:00:00	2026-10-19 16:00:00
+830	2026-04-25 12:37:30	350.40	2026-10-19 16:00:00	2026-10-19 16:00:00
+831	2026-07-24 07:47:57	1198.33	2026-10-19 16:00:00	2026-10-19 16:00:00
+832	2025-11-09 00:03:49	468.02	2026-10-19 16:00:00	2026-10-19 16:00:00
+833	2026-08-25 15:33:58	1215.36	2026-10-19 16:00:00	2026-10-19 16:00:00
+834	2026-03-09 14:21:19	353.72	2026-10-19 16:00:00	2026-10-19 16:00:00
+835	2026-10-05 09:30:09	316.96	2026-10-19 16:00:00	2026-10-19 16:00:00
+836	2025-10-21 11:49:47	1731.16	2026-10-19 16:00:00	2026-10-19 16:00:00
+837	2025-12-14 16:30:10	412.59	2026-10-19 16:00:00	2026-10-19 16:00:01
+838	2026-04-14 01:27:17	1237.36	2026-10-19 16:00:01	2026-10-19 16:00:01
+839	2026-05-16 13:59:55	1292.79	2026-10-19 16:00:01	2026-10-19 16:00:01
+840	2025-10-30 12:28:01	671.73	2026-10-19 16:00:01	2026-10-19 16:00:01
+841	2026-07-01 06:58:25	781.09	2026-10-19 16:00:01	2026-10-19 16:00:01
+842	2026-01-18 21:10:59	1880.76	2026-10-19 16:00:01	2026-10-19 16:00:01
+843	2026-06-25 06:41:36	1760.66	2026-10-19 16:00:01	2026-10-19 16:00:01
+844	2025-12-18 16:46:22	1883.23	2026-10-19 16:00:01	2026-10-19 16:00:01
+845	2026-04-23 10:00:25	2301.19	2026-10-19 16:00:01	2026-10-19 16:00:01
+846	2026-07-22 06:49:33	709.85	2026-10-19 16:00:01	2026-10-19 16:00:01
+847	2026-09-02 16:53:20	1715.89	2026-10-19 16:00:01	2026-10-19 16:00:01
+848	2026-03-18 23:48:27	1608.09	2026-10-19 16:00:01	2026-10-19 16:00:01
+849	2026-02-27 00:05:53	1490.19	2026-10-19 16:00:01	2026-10-19 16:00:01
+850	2026-05-26 11:28:23	1119.86	2026-10-19 16:00:01	2026-10-19 16:00:01
+851	2026-02-26 12:12:27	1025.42	2026-10-19 16:00:01	2026-10-19 16:00:02
+852	2026-09-25 10:34:06	627.60	2026-10-19 16:00:02	2026-10-19 16:00:02
+853	2025-11-09 05:54:09	1274.23	2026-10-19 16:00:02	2026-10-19 16:00:02
+854	2026-08-21 22:05:14	962.64	2026-10-19 16:00:02	2026-10-19 16:00:02
+855	2026-06-04 06:59:16	3299.99	2026-10-19 16:00:02	2026-10-19 16:00:02
+856	2026-09-05 18:36:08	1337.33	2026-10-19 16:00:02	2026-10-19 16:00:02
+857	2026-07-29 04:17:49	1350.34	2026-10-19 16:00:02	2026-10-19 16:00:02
+858	2026-04-29 08:14:09	56.88	2026-10-19 16:00:02	2026-10-19 16:00:02
+859	2026-09-30 06:19:14	815.03	2026-10-19 16:00:02	2026-10-19 16:00:02
+860	2026-02-10 16:26:18	1902.83	2026-10-19 16:00:02	2026-10-19 16:00:02
+861	2026-10-05 09:31:00	494.52	2026-10-19 16:00:02	2026-10-19 16:00:02
+862	2026-04-20 09:38:29	1384.57	2026-10-19 16:00:02	2026-10-19 16:00:02
+863	2026-05-03 13:35:20	932.83	2026-10-19 16:00:02	2026-10-19 16:00:02
+864	2026-08-05 14:21:01	726.58	2026-10-19 16:00:02	2026-10-19 16:00:03
+865	2026-10-19 07:58:53	1294.66	2026-10-19 16:00:03	2026-10-19 16:00:03
+866	2026-02-24 04:38:23	292.15	2026-10-19 16:00:03	2026-10-19 16:00:03
+867	2026-03-31 12:01:31	1832.93	2026-10-19 16:00:03	2026-10-19 16:00:03
+868	2026-05-01 18:24:57	352.61	2026-10-19 16:00:03	2026-10-19 16:00:03
+869	2026-09-08 00:54:35	2168.08	2026-10-19 16:00:03	2026-10-19 16:00:03
+870	2026-09-26 01:02:32	975.88	2026-10-19 16:00:03	2026-10-19 16:00:03
+871	2026-10-14 02:41:14	716.88	2026-10-19 16:00:03	2026-10-19 16:00:03
+872	2026-03-31 12:58:49	794.43	2026-10-19 16:00:03	2026-10-19 16:00:03
+873	2025-11-03 17:45:18	1534.68	2026-10-19 16:00:03	2026-10-19 16:00:03
+874	2026-01-28 15:39:47	581.22	2026-10-19 16:00:03	2026-10-19 16:00:03
+875	2025-12-07 21:16:31	1882.45	2026-10-19 16:00:03	2026-10-19 16:00:03
+876	2026-02-16 07:27:31	1063.77	2026-10-19 16:00:03	2026-10-19 16:00:03
+877	2025-11-06 20:39:41	1535.13	2026-10-19 16:00:03	2026-10-19 16:00:03
+878	2026-05-16 20:25:30	589.17	2026-10-19 16:00:03	2026-10-19 16:00:04
+879	2026-05-12 03:14:53	3111.75	2026-10-19 16:00:04	2026-10-19 16:00:04
+880	2025-10-27 00:53:01	1447.64	2026-10-19 16:00:04	2026-10-19 16:00:04
+881	2026-06-03 08:31:31	81.84	2026-10-19 16:00:04	2026-10-19 16:00:04
+882	2026-07-15 22:36:52	266.65	2026-10-19 16:00:04	2026-10-19 16:00:04
+883	2026-10-17 17:07:45	350.77	2026-10-19 16:00:04	2026-10-19 16:00:04
+884	2026-01-04 14:09:48	2022.10	2026-10-19 16:00:04	2026-10-19 16:00:04
+885	2026-02-16 13:44:15	2453.11	2026-10-19 16:00:04	2026-10-19 16:00:04
+886	2026-03-06 00:41:14	853.28	2026-10-19 16:00:04	2026-10-19 16:00:04
+887	2025-11-08 00:31:22	1317.47	2026-10-19 16:00:04	2026-10-19 16:00:04
+888	2026-03-06 21:07:34	1479.32	2026-10-19 16:00:04	2026-10-19 16:00:04
+889	2025-11-13 12:34:18	1558.08	2026-10-19 16:00:04	2026-10-19 16:00:04
+890	2026-04-06 05:16:14	1011.44	2026-10-19 16:00:04	2026-10-19 16:00:04
+891	2026-01-04 13:24:16	732.57	2026-10-19 16:00:04	2026-10-19 16:00:04
+892	2026-05-19 11:27:11	732.13	2026-10-19 16:00:04	2026-10-19 16:00:04
+893	2026-10-17 08:25:08	618.40	2026-10-19 16:00:04	2026-10-19 16:00:04
+894	2025-11-05 15:22:20	117.18	2026-10-19 16:00:04	2026-10-19 16:00:05
+895	2026-10-08 18:52:43	1618.47	2026-10-19 16:00:05	2026-10-19 16:00:05
+896	2025-11-30 19:18:22	1623.15	2026-10-19 16:00:05	2026-10-19 16:00:05
+897	2026-07-30 16:42:36	264.92	2026-10-19 16:00:05	2026-10-19 16:00:05
+898	2025-12-20 06:59:22	1096.61	2026-10-19 16:00:05	2026-10-19 16:00:05
+899	2026-07-12 18:54:17	1573.39	2026-10-19 16:00:05	2026-10-19 16:00:05
+900	2026-08-20 13:40:47	772.88	2026-10-19 16:00:05	2026-10-19 16:00:05
+901	2026-05-11 15:01:21	569.30	2026-10-19 16:00:05	2026-10-19 16:00:05
+902	2026-06-12 16:39:24	1717.16	2026-10-19 16:00:05	2026-10-19 16:00:05
+903	2026-03-23 15:13:26	3759.75	2026-10-19 16:00:05	2026-10-19 16:00:05
+904	2026-09-01 08:19:46	2380.98	2026-10-19 16:00:05	2026-10-19 16:00:05
+905	2026-03-17 05:09:40	586.81	2026-10-19 16:00:05	2026-10-19 16:00:05
+906	2025-10-22 23:31:48	1694.39	2026-10-19 16:00:05	2026-10-19 16:00:05
+907	2026-04-25 05:20:16	2007.11	2026-10-19 16:00:05	2026-10-19 16:00:05
+908	2026-06-26 08:38:12	920.13	2026-10-19 16:00:05	2026-10-19 16:00:05
+909	2026-01-26 02:41:49	2032.65	2026-10-19 16:00:05	2026-10-19 16:00:06
+910	2025-10-28 03:36:27	1154.47	2026-10-19 16:00:06	2026-10-19 16:00:06
+911	2025-12-12 19:21:11	159.02	2026-10-19 16:00:06	2026-10-19 16:00:06
+912	2026-01-10 21:08:43	1160.50	2026-10-19 16:00:06	2026-10-19 16:00:06
+913	2026-02-24 02:14:17	1025.21	2026-10-19 16:00:06	2026-10-19 16:00:06
+914	2026-08-17 12:01:56	3058.24	2026-10-19 16:00:06	2026-10-19 16:00:06
+915	2026-04-15 03:10:07	1741.46	2026-10-19 16:00:06	2026-10-19 16:00:06
+916	2026-10-11 18:25:48	728.70	2026-10-19 16:00:06	2026-10-19 16:00:06
+917	2025-12-17 19:15:28	1408.20	2026-10-19 16:00:06	2026-10-19 16:00:06
+918	2026-03-21 06:38:36	1031.33	2026-10-19 16:00:06	2026-10-19 16:00:06
+919	2026-06-10 15:09:10	2820.04	2026-10-19 16:00:06	2026-10-19 16:00:06
+920	2026-04-11 08:13:56	2568.02	2026-10-19 16:00:06	2026-10-19 16:00:06
+921	2026-01-04 10:17:46	2849.39	2026-10-19 16:00:06	2026-10-19 16:00:06
+922	2026-09-14 10:40:18	1258.64	2026-10-19 16:00:06	2026-10-19 16:00:06
+923	2025-12-28 22:08:11	1836.23	2026-10-19 16:00:06	2026-10-19 16:00:07
+924	2026-09-23 06:18:34	1472.04	2026-10-19 16:00:07	2026-10-19 16:00:07
+925	2026-05-02 17:40:00	938.68	2026-10-19 16:00:07	2026-10-19 16:00:07
+926	2026-05-10 09:12:26	1348.17	2026-10-19 16:00:07	2026-10-19 16:00:07
+927	2025-10-27 16:23:17	2351.28	2026-10-19 16:00:07	2026-10-19 16:00:07
+928	2026-07-08 09:15:51	1892.71	2026-10-19 16:00:07	2026-10-19 16:00:07
+929	2026-08-05 17:25:45	2029.80	2026-10-19 16:00:07	2026-10-19 16:00:07
+930	2025-11-23 08:39:07	1194.46	2026-10-19 16:00:07	2026-10-19 16:00:07
+931	2025-11-01 11:58:26	2627.15	2026-10-19 16:00:07	2026-10-19 16:00:07
+932	2026-03-08 17:25:11	981.33	2026-10-19 16:00:07	2026-10-19 16:00:07
+933	2026-03-23 01:34:06	1008.99	2026-10-19 16:00:07	2026-10-19 16:00:07
+934	2026-06-06 09:11:03	1947.45	2026-10-19 16:00:07	2026-10-19 16:00:07
+935	2026-08-11 05:43:17	2229.63	2026-10-19 16:00:07	2026-10-19 16:00:08
+936	2025-12-16 08:35:19	793.30	2026-10-19 16:00:08	2026-10-19 16:00:08
+937	2025-11-17 16:20:37	1809.42	2026-10-19 16:00:08	2026-10-19 16:00:08
+938	2026-10-14 04:59:14	143.54	2026-10-19 16:00:08	2026-10-19 16:00:08
+939	2026-07-15 04:45:50	647.01	2026-10-19 16:00:08	2026-10-19 16:00:08
+940	2026-04-25 06:24:49	2230.96	2026-10-19 16:00:08	2026-10-19 16:00:08
+941	2025-12-23 23:11:20	1310.57	2026-10-19 16:00:08	2026-10-19 16:00:08
+942	2026-09-19 12:10:52	1991.35	2026-10-19 16:00:08	2026-10-19 16:00:08
+943	2026-06-20 12:26:46	157.68	2026-10-19 16:00:08	2026-10-19 16:00:08
+944	2026-05-01 22:25:46	1242.33	2026-10-19 16:00:08	2026-10-19 16:00:08
+945	2026-05-06 02:35:06	417.44	2026-10-19 16:00:08	2026-10-19 16:00:08
+946	2026-07-01 00:10:36	1271.66	2026-10-19 16:00:08	2026-10-19 16:00:08
+947	2026-02-06 10:44:51	611.66	2026-10-19 16:00:08	2026-10-19 16:00:08
+948	2026-04-08 02:51:15	2207.76	2026-10-19 16:00:08	2026-10-19 16:00:08
+949	2026-09-19 14:36:01	553.49	2026-10-19 16:00:08	2026-10-19 16:00:08
+950	2026-08-26 08:11:20	2451.10	2026-10-19 16:00:08	2026-10-19 16:00:08
+951	2026-05-21 10:11:04	1054.32	2026-10-19 16:00:08	2026-10-19 16:00:08
+952	2026-09-05 13:04:29	188.25	2026-10-19 16:00:08	2026-10-19 16:00:08
+953	2026-03-30 23:32:31	643.56	2026-10-19 16:00:08	2026-10-19 16:00:08
+954	2026-08-21 13:39:24	1557.20	2026-10-19 16:00:08	2026-10-19 16:00:08
+955	2026-07-25 08:05:28	1386.73	2026-10-19 16:00:08	2026-10-19 16:00:09
+956	2026-03-25 11:17:56	421.66	2026-10-19 16:00:09	2026-10-19 16:00:09
+957	2026-06-27 02:31:20	2590.38	2026-10-19 16:00:09	2026-10-19 16:00:09
+958	2026-05-04 14:03:47	686.87	2026-10-19 16:00:09	2026-10-19 16:00:09
+959	2026-08-07 10:07:37	1730.02	2026-10-19 16:00:09	2026-10-19 16:00:09
+960	2026-09-02 12:00:16	1311.92	2026-10-19 16:00:09	2026-10-19 16:00:09
+961	2026-02-01 05:05:47	1289.25	2026-10-19 16:00:09	2026-10-19 16:00:09
+962	2026-04-08 17:20:24	1488.20	2026-10-19 16:00:09	2026-10-19 16:00:09
+963	2026-03-31 17:00:21	699.96	2026-10-19 16:00:09	2026-10-19 16:00:09
+964	2026-01-17 17:21:31	150.92	2026-10-19 16:00:09	2026-10-19 16:00:09
+965	2026-07-09 18:52:34	554.77	2026-10-19 16:00:09	2026-10-19 16:00:09
+966	2026-10-01 22:30:16	1365.52	2026-10-19 16:00:09	2026-10-19 16:00:09
+967	2025-11-29 23:21:41	677.49	2026-10-19 16:00:09	2026-10-19 16:00:09
+968	2026-01-14 03:27:25	2310.16	2026-10-19 16:00:09	2026-10-19 16:00:09
+969	2026-01-08 18:44:19	1621.06	2026-10-19 16:00:09	2026-10-19 16:00:09
+970	2026-01-26 19:10:54	1247.55	2026-10-19 16:00:09	2026-10-19 16:00:09
+971	2026-04-26 04:38:29	3181.53	2026-10-19 16:00:09	2026-10-19 16:00:10
+972	2026-03-05 02:54:23	1900.00	2026-10-19 16:00:10	2026-10-19 16:00:10
+973	2026-02-03 13:21:13	827.19	2026-10-19 16:00:10	2026-10-19 16:00:10
+974	2026-09-14 12:19:02	2616.45	2026-10-19 16:00:10	2026-10-19 16:00:10
+975	2025-10-23 02:42:27	2539.53	2026-10-19 16:00:10	2026-10-19 16:00:10
+976	2026-01-28 14:37:57	2128.33	2026-10-19 16:00:10	2026-10-19 16:00:10
+977	2026-04-21 06:52:58	1133.24	2026-10-19 16:00:10	2026-10-19 16:00:10
+978	2025-10-22 01:14:05	1629.68	2026-10-19 16:00:10	2026-10-19 16:00:10
+979	2026-04-11 04:24:24	87.12	2026-10-19 16:00:10	2026-10-19 16:00:10
+980	2026-09-30 13:46:41	957.43	2026-10-19 16:00:10	2026-10-19 16:00:10
+981	2025-12-03 14:04:37	1424.89	2026-10-19 16:00:10	2026-10-19 16:00:10
+982	2026-05-28 01:22:54	1068.52	2026-10-19 16:00:10	2026-10-19 16:00:10
+983	2026-08-13 06:14:10	844.60	2026-10-19 16:00:10	2026-10-19 16:00:10
+984	2026-01-15 11:56:50	2262.04	2026-10-19 16:00:10	2026-10-19 16:00:10
+985	2026-06-22 19:44:27	708.04	2026-10-19 16:00:10	2026-10-19 16:00:10
+986	2025-12-06 00:33:35	1348.62	2026-10-19 16:00:10	2026-10-19 16:00:11
+987	2025-12-13 00:45:57	103.98	2026-10-19 16:00:11	2026-10-19 16:00:11
+988	2026-01-12 13:51:01	973.55	2026-10-19 16:00:11	2026-10-19 16:00:11
+989	2026-07-11 18:46:52	825.85	2026-10-19 16:00:11	2026-10-19 16:00:11
+990	2025-11-20 19:54:22	568.83	2026-10-19 16:00:11	2026-10-19 16:00:11
+991	2026-06-10 03:55:29	887.73	2026-10-19 16:00:11	2026-10-19 16:00:11
+992	2026-04-24 06:33:09	343.72	2026-10-19 16:00:11	2026-10-19 16:00:11
+993	2026-01-02 06:52:47	1011.65	2026-10-19 16:00:11	2026-10-19 16:00:11
+994	2026-03-30 16:03:37	2229.52	2026-10-19 16:00:11	2026-10-19 16:00:11
+995	2026-02-06 09:44:50	1927.70	2026-10-19 16:00:11	2026-10-19 16:00:11
+996	2026-10-02 21:48:24	1055.44	2026-10-19 16:00:11	2026-10-19 16:00:11
+997	2025-11-13 16:31:42	577.26	2026-10-19 16:00:11	2026-10-19 16:00:11
+998	2026-01-17 05:21:57	1214.36	2026-10-19 16:00:11	2026-10-19 16:00:11
+999	2026-02-18 10:06:43	860.14	2026-10-19 16:00:11	2026-10-19 16:00:11
+1000	2026-08-01 19:57:55	2234.92	2026-10-19 16:00:11	2026-10-19 16:00:11
 \.
 
 
 --
--- Name: categorias_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: categorias_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.categorias_id_seq', 13, true);
-
-
---
--- Name: detalles_venta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.detalles_venta_id_seq', 74, true);
+SELECT pg_catalog.setval('public.categorias_id_seq', 10, true);
 
 
 --
--- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: detalles_venta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.detalles_venta_id_seq', 3668, true);
+
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
 
 
 --
--- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
 
 
 --
--- Name: laboratorios_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: laboratorios_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.laboratorios_id_seq', 15, true);
-
-
---
--- Name: lotes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.lotes_id_seq', 126, true);
+SELECT pg_catalog.setval('public.laboratorios_id_seq', 12, true);
 
 
 --
--- Name: medicamentos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: lotes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.medicamentos_id_seq', 33, true);
+SELECT pg_catalog.setval('public.lotes_id_seq', 1000, true);
 
 
 --
--- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: medicamentos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.medicamentos_id_seq', 1000, true);
+
+
+--
+-- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.migrations_id_seq', 9, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 1, false);
 
 
 --
--- Name: ventas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: ventas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.ventas_id_seq', 26, true);
+SELECT pg_catalog.setval('public.ventas_id_seq', 1000, true);
 
 
 --
--- Name: cache_locks cache_locks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cache_locks cache_locks_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cache_locks
@@ -1029,7 +7400,7 @@ ALTER TABLE ONLY public.cache_locks
 
 
 --
--- Name: cache cache_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cache cache_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cache
@@ -1037,7 +7408,7 @@ ALTER TABLE ONLY public.cache
 
 
 --
--- Name: categorias categorias_nombre_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categorias categorias_nombre_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categorias
@@ -1045,7 +7416,7 @@ ALTER TABLE ONLY public.categorias
 
 
 --
--- Name: categorias categorias_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categorias categorias_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categorias
@@ -1053,7 +7424,7 @@ ALTER TABLE ONLY public.categorias
 
 
 --
--- Name: detalles_venta detalles_venta_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: detalles_venta detalles_venta_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.detalles_venta
@@ -1061,7 +7432,7 @@ ALTER TABLE ONLY public.detalles_venta
 
 
 --
--- Name: failed_jobs failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: failed_jobs failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.failed_jobs
@@ -1069,7 +7440,7 @@ ALTER TABLE ONLY public.failed_jobs
 
 
 --
--- Name: failed_jobs failed_jobs_uuid_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: failed_jobs failed_jobs_uuid_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.failed_jobs
@@ -1077,7 +7448,7 @@ ALTER TABLE ONLY public.failed_jobs
 
 
 --
--- Name: job_batches job_batches_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: job_batches job_batches_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.job_batches
@@ -1085,7 +7456,7 @@ ALTER TABLE ONLY public.job_batches
 
 
 --
--- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jobs
@@ -1093,7 +7464,7 @@ ALTER TABLE ONLY public.jobs
 
 
 --
--- Name: laboratorios laboratorios_nombre_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: laboratorios laboratorios_nombre_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.laboratorios
@@ -1101,7 +7472,7 @@ ALTER TABLE ONLY public.laboratorios
 
 
 --
--- Name: laboratorios laboratorios_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: laboratorios laboratorios_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.laboratorios
@@ -1109,7 +7480,7 @@ ALTER TABLE ONLY public.laboratorios
 
 
 --
--- Name: lotes lotes_numero_lote_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lotes lotes_numero_lote_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.lotes
@@ -1117,7 +7488,7 @@ ALTER TABLE ONLY public.lotes
 
 
 --
--- Name: lotes lotes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lotes lotes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.lotes
@@ -1125,7 +7496,7 @@ ALTER TABLE ONLY public.lotes
 
 
 --
--- Name: medicamentos medicamentos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: medicamentos medicamentos_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.medicamentos
@@ -1133,7 +7504,7 @@ ALTER TABLE ONLY public.medicamentos
 
 
 --
--- Name: migrations migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: migrations migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.migrations
@@ -1141,7 +7512,7 @@ ALTER TABLE ONLY public.migrations
 
 
 --
--- Name: password_reset_tokens password_reset_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: password_reset_tokens password_reset_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.password_reset_tokens
@@ -1149,7 +7520,7 @@ ALTER TABLE ONLY public.password_reset_tokens
 
 
 --
--- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.sessions
@@ -1157,7 +7528,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: users users_email_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_email_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -1165,7 +7536,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -1173,7 +7544,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: ventas ventas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ventas ventas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.ventas
@@ -1181,119 +7552,119 @@ ALTER TABLE ONLY public.ventas
 
 
 --
--- Name: cache_expiration_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: cache_expiration_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX cache_expiration_index ON public.cache USING btree (expiration);
 
 
 --
--- Name: cache_locks_expiration_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: cache_locks_expiration_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX cache_locks_expiration_index ON public.cache_locks USING btree (expiration);
 
 
 --
--- Name: categorias_nombre_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: categorias_nombre_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX categorias_nombre_index ON public.categorias USING btree (nombre);
 
 
 --
--- Name: detalles_venta_venta_id_lote_id_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: detalles_venta_venta_id_lote_id_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX detalles_venta_venta_id_lote_id_index ON public.detalles_venta USING btree (venta_id, lote_id);
 
 
 --
--- Name: failed_jobs_connection_queue_failed_at_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: failed_jobs_connection_queue_failed_at_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX failed_jobs_connection_queue_failed_at_index ON public.failed_jobs USING btree (connection, queue, failed_at);
 
 
 --
--- Name: jobs_queue_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: jobs_queue_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX jobs_queue_index ON public.jobs USING btree (queue);
 
 
 --
--- Name: laboratorios_nombre_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: laboratorios_nombre_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX laboratorios_nombre_index ON public.laboratorios USING btree (nombre);
 
 
 --
--- Name: laboratorios_pais_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: laboratorios_pais_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX laboratorios_pais_index ON public.laboratorios USING btree (pais);
 
 
 --
--- Name: lotes_fecha_vencimiento_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: lotes_fecha_vencimiento_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX lotes_fecha_vencimiento_index ON public.lotes USING btree (fecha_vencimiento);
 
 
 --
--- Name: lotes_medicamento_id_fecha_vencimiento_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: lotes_medicamento_id_fecha_vencimiento_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX lotes_medicamento_id_fecha_vencimiento_index ON public.lotes USING btree (medicamento_id, fecha_vencimiento);
 
 
 --
--- Name: medicamentos_categoria_id_laboratorio_id_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: medicamentos_categoria_id_laboratorio_id_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX medicamentos_categoria_id_laboratorio_id_index ON public.medicamentos USING btree (categoria_id, laboratorio_id);
 
 
 --
--- Name: medicamentos_nombre_comercial_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: medicamentos_nombre_comercial_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX medicamentos_nombre_comercial_index ON public.medicamentos USING btree (nombre_comercial);
 
 
 --
--- Name: medicamentos_principio_activo_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: medicamentos_principio_activo_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX medicamentos_principio_activo_index ON public.medicamentos USING btree (principio_activo);
 
 
 --
--- Name: sessions_last_activity_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: sessions_last_activity_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX sessions_last_activity_index ON public.sessions USING btree (last_activity);
 
 
 --
--- Name: sessions_user_id_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: sessions_user_id_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX sessions_user_id_index ON public.sessions USING btree (user_id);
 
 
 --
--- Name: ventas_fecha_venta_index; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ventas_fecha_venta_index; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX ventas_fecha_venta_index ON public.ventas USING btree (fecha_venta);
 
 
 --
--- Name: detalles_venta detalles_venta_lote_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: detalles_venta detalles_venta_lote_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.detalles_venta
@@ -1301,7 +7672,7 @@ ALTER TABLE ONLY public.detalles_venta
 
 
 --
--- Name: detalles_venta detalles_venta_venta_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: detalles_venta detalles_venta_venta_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.detalles_venta
@@ -1309,7 +7680,7 @@ ALTER TABLE ONLY public.detalles_venta
 
 
 --
--- Name: lotes lotes_medicamento_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lotes lotes_medicamento_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.lotes
@@ -1317,7 +7688,7 @@ ALTER TABLE ONLY public.lotes
 
 
 --
--- Name: medicamentos medicamentos_categoria_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: medicamentos medicamentos_categoria_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.medicamentos
@@ -1325,7 +7696,7 @@ ALTER TABLE ONLY public.medicamentos
 
 
 --
--- Name: medicamentos medicamentos_laboratorio_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: medicamentos medicamentos_laboratorio_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.medicamentos
@@ -1336,5 +7707,5 @@ ALTER TABLE ONLY public.medicamentos
 -- PostgreSQL database dump complete
 --
 
-\unrestrict V9ZAhbYrW1KnOSYIQU9pbKsikNhYfYesKJfRefFfJUQ2iYJf8GjUAjhPnHEBjbk
+\unrestrict lCKelnl3DLhEcTagTP4eiaVTeb1fdqBhVTmV3JYAjdCrD4XHWGFBUl605eSf4ir
 
