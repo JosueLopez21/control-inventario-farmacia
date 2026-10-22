@@ -79,9 +79,9 @@ php artisan serve --port=8080
 
 | Rol | Nombre | Correo | Contraseña |
 | :--- | :--- | :--- | :--- |
-| Administrador | Nahuel Martínez | `admin@farmacia.test` | `Admin2026*` |
-| Farmacéutico | Lic. Carla Rojas | `farmaceutica@farmacia.test` | `Farma2026*` |
-| Doctor | Dr. Andrés Vargas | `doctor@farmacia.test` | `Doctor2026*` |
+| Administrador | Nahuel Martínez | `admin@farmacia.test` | `1234` |
+| Farmacéutico | Lic. Carla Rojas | `farmaceutica@farmacia.test` | `password` |
+| Doctor | Dr. Andrés Vargas | `doctor@farmacia.test` | `password` |
 
 > Cambia estas contraseñas antes de usar el sistema con datos reales.
 
@@ -171,7 +171,7 @@ Ejecutar la suite:
 php artisan test
 ```
 
-Resultado esperado: **24 pruebas aprobadas**. Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación y ventas FEFO con bloqueo de vencidos.
+Resultado esperado: **25 pruebas aprobadas**. Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación y ventas FEFO con bloqueo de vencidos.
 
 ---
 

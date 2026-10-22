@@ -101,9 +101,9 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 
 | Rol | Correo | Contraseña | Alcance |
 | :--- | :--- | :--- | :--- |
-| Administrador | `admin@farmacia.test` | `Admin2026*` | Todos los módulos, usuarios y eliminaciones |
-| Farmacéutico | `farmaceutica@farmacia.test` | `Farma2026*` | Inventario, ventas, alertas y reportes |
-| Doctor | `doctor@farmacia.test` | `Doctor2026*` | Dashboard, catálogo, lotes (lectura) y alertas |
+| Administrador | `admin@farmacia.test` | `1234` | Todos los módulos, usuarios y eliminaciones |
+| Farmacéutico | `farmaceutica@farmacia.test` | `password` | Inventario, ventas, alertas y reportes |
+| Doctor | `doctor@farmacia.test` | `password` | Dashboard, catálogo, lotes (lectura) y alertas |
 
 - El **doctor** no puede acceder a ventas, reportes ni usuarios.
 - El **farmacéutico** no puede acceder a la gestión de usuarios ni eliminar registros.
@@ -127,7 +127,7 @@ Verifica las reglas de negocio, la política FEFO, el login y el acceso por role
 php artisan test
 ```
 
-Resultado esperado: **24 pruebas aprobadas**.
+Resultado esperado: **25 pruebas aprobadas**.
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**

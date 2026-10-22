@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict OW8BTfO9dx29pIwchAIJjhx2hiPsGALncCJhzAj1Sl3zYY3fW1D812OqpZhgmLw
+\restrict xWe8OqUZl5cApFGthCHsgV9kIuPYf1L5Pu7U9YbrOD5qzYEd5VhZdpo5qyIkrVa
 
 -- Dumped from database version 17.11
 -- Dumped by pg_dump version 17.11
@@ -6113,9 +6113,9 @@ COPY public.sessions (id, user_id, ip_address, user_agent, payload, last_activit
 --
 
 COPY public.users (id, name, email, email_verified_at, password, remember_token, created_at, updated_at, rol, activo) FROM stdin;
-1	Nahuel Martínez	admin@farmacia.test	\N	$2y$12$PkipzL/0Z9OykBZx91oRO.NqsngUJ9X1g5uRY3jOupxYlpLxf6P6i	\N	2026-10-22 10:40:58	2026-10-22 10:40:58	administrador	t
-2	Lic. Carla Rojas	farmaceutica@farmacia.test	\N	$2y$12$AJAbGcdPDn2ej6/7N0trqeNuyd8BFiKfDJn.YpMJtYCXSHZrL73gy	\N	2026-10-22 10:40:58	2026-10-22 10:40:58	farmaceutico	t
-3	Dr. Andrés Vargas	doctor@farmacia.test	\N	$2y$12$G7HsGOxSEvitezRgHtrsHOR8SJtG2p189D78RqeFOOBQeyLE7YajW	\N	2026-10-22 10:40:59	2026-10-22 10:40:59	doctor	t
+1	Nahuel Martínez	admin@farmacia.test	\N	$2y$12$B..12JrUy3uL4EwPzlyyFumz63AqGfpKiO8AzTexSvD1SylyhZPCy	\N	2026-10-22 10:40:58	2026-10-22 10:56:23	administrador	t
+2	Lic. Carla Rojas	farmaceutica@farmacia.test	\N	$2y$12$3lO6RbJRAoZGOFp4eL8Tpe7ANxGP1e455sGYoUdxupZa55VfWyaqy	\N	2026-10-22 10:40:58	2026-10-22 10:56:23	farmaceutico	t
+3	Dr. Andrés Vargas	doctor@farmacia.test	\N	$2y$12$sv7JXgLhlYDFk9qZyrBm4OsNvFlp1EW6UWKfnGKJjE1HYNAmVzJU.	\N	2026-10-22 10:40:59	2026-10-22 10:56:23	doctor	t
 \.
 
 
@@ -7138,7 +7138,7 @@ SELECT pg_catalog.setval('public.categorias_id_seq', 10, true);
 -- Name: detalles_venta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.detalles_venta_id_seq', 3467, true);
+SELECT pg_catalog.setval('public.detalles_venta_id_seq', 3469, true);
 
 
 --
@@ -7166,14 +7166,14 @@ SELECT pg_catalog.setval('public.laboratorios_id_seq', 12, true);
 -- Name: lotes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.lotes_id_seq', 1000, true);
+SELECT pg_catalog.setval('public.lotes_id_seq', 1004, true);
 
 
 --
 -- Name: medicamentos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.medicamentos_id_seq', 1000, true);
+SELECT pg_catalog.setval('public.medicamentos_id_seq', 1002, true);
 
 
 --
@@ -7194,7 +7194,7 @@ SELECT pg_catalog.setval('public.users_id_seq', 3, true);
 -- Name: ventas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.ventas_id_seq', 1000, true);
+SELECT pg_catalog.setval('public.ventas_id_seq', 1002, true);
 
 
 --
@@ -7520,5 +7520,5 @@ ALTER TABLE ONLY public.medicamentos
 -- PostgreSQL database dump complete
 --
 
-\unrestrict OW8BTfO9dx29pIwchAIJjhx2hiPsGALncCJhzAj1Sl3zYY3fW1D812OqpZhgmLw
+\unrestrict xWe8OqUZl5cApFGthCHsgV9kIuPYf1L5Pu7U9YbrOD5qzYEd5VhZdpo5qyIkrVa
 

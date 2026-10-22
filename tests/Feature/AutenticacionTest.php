@@ -14,25 +14,50 @@ class AutenticacionTest extends TestCase
     {
         $usuario = User::factory()->create([
             'email' => 'admin@farmacia.test',
-            'password' => 'Admin2026*',
+            'password' => '1234',
             'rol' => 'administrador',
             'activo' => true,
         ]);
 
         $respuesta = $this->post('/login', [
             'email' => 'admin@farmacia.test',
-            'password' => 'Admin2026*',
+            'password' => '1234',
         ]);
 
         $respuesta->assertRedirect(route('dashboard'));
         $this->assertAuthenticatedAs($usuario);
     }
 
+    public function test_login_funciona_con_las_tres_credenciales_de_demostracion(): void
+    {
+        $this->seed(\Database\Seeders\UserSeeder::class);
+
+        $credenciales = [
+            ['admin@farmacia.test', '1234'],
+            ['farmaceutica@farmacia.test', 'password'],
+            ['doctor@farmacia.test', 'password'],
+        ];
+
+        foreach ($credenciales as [$email, $password]) {
+            $respuesta = $this->post('/login', [
+                'email' => $email,
+                'password' => $password,
+            ]);
+
+            $respuesta->assertRedirect(route('dashboard'));
+            $this->assertAuthenticated();
+            $this->assertSame($email, auth()->user()->email);
+
+            $this->post('/logout');
+            $this->assertGuest();
+        }
+    }
+
     public function test_login_incorrecto_muestra_credenciales_incorrectas(): void
     {
         User::factory()->create([
             'email' => 'admin@farmacia.test',
-            'password' => 'Admin2026*',
+            'password' => '1234',
             'activo' => true,
         ]);
 
@@ -42,7 +67,7 @@ class AutenticacionTest extends TestCase
         ]);
 
         $respuesta->assertRedirect('/login');
-        $respuesta->assertSessionHasErrors('email');
+        $respuesta->assertSessionHasErrors(['email' => 'Credenciales incorrectas.']);
         $this->assertGuest();
     }
 

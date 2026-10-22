@@ -38,7 +38,7 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
     * `✓ scope por vencer identifica lotes dentro de 30 dias`
     * `✓ alerta medicamentos por debajo del stock minimo`
     * `✓ venta fefo descuenta del lote mas proximo y bloquea vencidos`
-  * El resumen final: `Tests: 24 passed`.
+  * El resumen final: `Tests: 25 passed`.
 
 ---
 
