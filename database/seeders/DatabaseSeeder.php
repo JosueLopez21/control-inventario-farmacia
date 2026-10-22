@@ -22,6 +22,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->command->info('🏥 Sembrando datos de farmacia (~1000 registros por tabla)...');
 
+        // 0. Usuarios del sistema
+        $this->call(UserSeeder::class);
+
         // 1. Categorías (10)
         $this->command->info('📦 Creando categorías...');
         $categorias = collect([

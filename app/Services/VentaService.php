@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class VentaService
 {
     /**
-     * Registra una venta descontando stock según estrategia FIFO
+     * Registra una venta descontando stock según la estrategia FEFO
      * y bloqueando estrictamente lotes vencidos.
      *
      * @param  array  $items  Lista de items: [['medicamento_id' => int, 'cantidad' => int], ...]
@@ -39,7 +39,7 @@ class VentaService
                 }
 
                 // Regla #3: Bloquear estrictamente la venta de lotes vencidos.
-                // FIFO: Obtener solo lotes vigentes ordenados por fecha de vencimiento ascendente.
+                // FEFO: Obtener solo lotes vigentes ordenados por fecha de vencimiento ascendente.
                 $lotesDisponibles = Lote::where('medicamento_id', $medicamento->id)
                     ->where('fecha_vencimiento', '>=', now()->toDateString())
                     ->where('cantidad_stock', '>', 0)
@@ -56,7 +56,7 @@ class VentaService
                     );
                 }
 
-                // Descontar por FIFO
+                // Descontar por FEFO
                 foreach ($lotesDisponibles as $lote) {
                     if ($cantidadRequerida <= 0) {
                         break;

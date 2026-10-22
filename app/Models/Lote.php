@@ -72,9 +72,9 @@ class Lote extends Model
     }
 
     /**
-     * Scope: Ordenamiento FIFO (primero en vencer, primero en salir).
+     * Scope: Ordenamiento FEFO (primero en vencer, primero en salir).
      */
-    public function scopeFifo(Builder $query): Builder
+    public function scopeFefo(Builder $query): Builder
     {
         return $query->orderBy('fecha_vencimiento', 'asc');
     }
