@@ -180,17 +180,18 @@ UNIQUE VIOLATION: 23505 -> Código LOT-000001 duplicado rechazado.
 ```php
 DB::transaction(function() {
     $cat = Categoria::has('medicamentos')->first();
+    $cantidad = $cat->medicamentos()->count();
     try {
         $cat->delete();
     } catch (\Illuminate\Database\QueryException $e) {
-        echo "RESTRICT VIOLATION: " . $e->getCode() . " -> No se puede borrar categoría '{$cat->nombre}' porque tiene {$cat->medicamentos()->count()} medicamentos asociados.\n";
+        echo "RESTRICT VIOLATION: " . $e->getCode() . " -> No se puede borrar categoría '{$cat->nombre}' porque tiene {$cantidad} medicamentos asociados.\n";
     }
     throw new \Exception("Rollback");
 });
 ```
 * **Salida Real Ejecutada:**
 ```text
-RESTRICT VIOLATION: 23001 -> No se puede borrar categoría 'Analgésicos' porque tiene 103 medicamentos asociados.
+RESTRICT VIOLATION: 23503 -> No se puede borrar categoría 'Analgésicos' porque tiene 105 medicamentos asociados.
 ```
 * **Justificación Técnica:**
   > Evidencia el comportamiento `ON DELETE RESTRICT` de la clave foránea `medicamentos_categoria_id_foreign`. La base de datos impide borrados accidentales en cascada, obligando al usuario a reubicar o dar de baja primero los medicamentos dependientes antes de poder suprimir la categoría principal.

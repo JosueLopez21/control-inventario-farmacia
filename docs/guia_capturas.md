@@ -37,8 +37,8 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
   * Los 3 tests aprobados con check verde:
     * `✓ scope por vencer identifica lotes dentro de 30 dias`
     * `✓ alerta medicamentos por debajo del stock minimo`
-    * `✓ venta fifo descuenta del lote mas proximo y bloquea vencidos`
-  * El resumen final: `Tests: 5 passed (9 assertions)`.
+    * `✓ venta fefo descuenta del lote mas proximo y bloquea vencidos`
+  * El resumen final: `Tests: 24 passed`.
 
 ---
 

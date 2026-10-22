@@ -1,6 +1,9 @@
 # Sistema de Control de Inventario de una Farmacia
 
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes.
+
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
+**Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  
 **Materia:** Tecnología Web I  
 **Universidad:** Universidad Privada Domingo Savio (UPDS) — Sede Tarija  
 **Docente:** Ing. Yanet Colque Alarcon  
@@ -59,9 +62,9 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
    composer install
    ```
 
-3. **Configurar el entorno:**
-   Copiar la plantilla de variables de entorno:
+3. **Crear la base de datos y configurar el entorno:**
    ```bash
+   psql -U postgres -c "CREATE DATABASE farmacia_inventario;"
    cp .env.example .env
    ```
    Ajustar las credenciales de PostgreSQL en el archivo `.env`:
@@ -73,6 +76,7 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
    DB_USERNAME=postgres
    DB_PASSWORD=tu_contraseña
    ```
+   *(En Windows puedes crear la base con pgAdmin usando la misma sentencia SQL).*
 
 4. **Generar la clave de aplicación:**
    ```bash
@@ -83,17 +87,47 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
    ```bash
    php artisan migrate:fresh --seed
    ```
-   *(Este comando creará las 6 tablas con sus restricciones CHECK e insertará 10 categorías, 12 laboratorios, 30 medicamentos, 120 lotes y 25 ventas)*.
+   *(Este comando crea las 6 tablas con sus restricciones CHECK e inserta 3 usuarios, 10 categorías, 12 laboratorios, 1.000 medicamentos, 1.000 lotes y 1.000 ventas con sus detalles. Incluye lotes vencidos, próximos a vencer y con stock bajo para probar las alertas).*
+
+6. **Iniciar el servidor:**
+   ```bash
+   php artisan serve
+   ```
+   Abrir en el navegador: **http://127.0.0.1:8000**
 
 ---
 
-## 🧪 5. Pruebas Automatizadas y Consultas en Tinker
+## 🌐 5. Acceso al Sistema y Roles
+
+| Rol | Correo | Contraseña | Alcance |
+| :--- | :--- | :--- | :--- |
+| Administrador | `admin@farmacia.test` | `Admin2026*` | Todos los módulos, usuarios y eliminaciones |
+| Farmacéutico | `farmaceutica@farmacia.test` | `Farma2026*` | Inventario, ventas, alertas y reportes |
+| Doctor | `doctor@farmacia.test` | `Doctor2026*` | Dashboard, catálogo, lotes (lectura) y alertas |
+
+- El **doctor** no puede acceder a ventas, reportes ni usuarios.
+- El **farmacéutico** no puede acceder a la gestión de usuarios ni eliminar registros.
+- Los usuarios inactivos no pueden iniciar sesión.
+- El manual completo está en [docs/MANUAL_USO.md](docs/MANUAL_USO.md).
+
+---
+
+## 🧪 6. Pruebas Automatizadas y Consultas en Tinker
 
 ### Ejecución de Pruebas Unitarias (PHPUnit)
-Verifica las 3 reglas de negocio y la política FEFO:
+Las pruebas usan la base separada `farmacia_inventario_test` (configurada en `phpunit.xml`) y no modifican los datos de `farmacia_inventario`. Crear la base una sola vez:
+
+```bash
+psql -U postgres -c "CREATE DATABASE farmacia_inventario_test;"
+```
+
+Verifica las reglas de negocio, la política FEFO, el login y el acceso por roles:
+
 ```bash
 php artisan test
 ```
+
+Resultado esperado: **24 pruebas aprobadas**.
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**
@@ -110,8 +144,9 @@ php artisan test
 
 ---
 
-## 📚 6. Documentación Adicional en la Carpeta `/docs`
+## 📚 7. Documentación Adicional en la Carpeta `/docs`
 
+* 📖 **Manual de Uso del Sistema Web:** [docs/MANUAL_USO.md](docs/MANUAL_USO.md) (inicio del sistema, usuarios, roles, recorrido en 6 pasos y administración en pgAdmin).
 * 📊 **Diagrama Entidad-Relación:** [docs/diagrama_er.md](docs/diagrama_er.md) (formato Mermaid y exportación PNG) y [docs/diagrama_er.puml](docs/diagrama_er.puml) (PlantUML).
 * 📋 **Consultas de Tinker Detalladas:** [docs/consultas_tinker.md](docs/consultas_tinker.md) (las 12 consultas con comandos, salidas reales y justificaciones técnicas de integridad).
 * 📸 **Guía para Toma de Capturas:** [docs/guia_capturas.md](docs/guia_capturas.md) (instrucciones paso a paso de qué comandos correr y qué capturar para el informe en Word).

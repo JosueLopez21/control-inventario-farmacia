@@ -80,16 +80,16 @@ class ReglasNegocioFarmaciaTest extends TestCase
     }
 
     /**
-     * Regla 3: Bloquear estrictamente la venta de lotes vencidos y respetar FIFO.
+     * Regla 3: Bloquear estrictamente la venta de lotes vencidos y respetar FEFO.
      */
-    public function test_venta_fifo_descuenta_del_lote_mas_proximo_y_bloquea_vencidos(): void
+    public function test_venta_fefo_descuenta_del_lote_mas_proximo_y_bloquea_vencidos(): void
     {
         $categoria = Categoria::factory()->create();
         $lab = Laboratorio::factory()->create();
         $medicamento = Medicamento::create([
             'categoria_id' => $categoria->id,
             'laboratorio_id' => $lab->id,
-            'nombre_comercial' => 'Medicamento FIFO',
+            'nombre_comercial' => 'Medicamento FEFO',
             'principio_activo' => 'Principio',
             'presentacion' => 'Caja',
             'precio_venta' => 15.00,
@@ -99,23 +99,23 @@ class ReglasNegocioFarmaciaTest extends TestCase
         // Lote vencido (no debe tocarse)
         $loteVencido = Lote::create([
             'medicamento_id' => $medicamento->id,
-            'numero_lote' => 'LOTE-VENCIDO',
+            'numero_lote' => 'LOTE-FEFO-VENCIDO',
             'fecha_vencimiento' => now()->subDays(10)->toDateString(),
             'cantidad_stock' => 10,
         ]);
 
-        // Lote 1 vigente: vence en 2 meses (sale primero por FIFO)
+        // Lote 1 vigente: vence en 2 meses (sale primero por FEFO)
         $lote1 = Lote::create([
             'medicamento_id' => $medicamento->id,
-            'numero_lote' => 'LOTE-FIFO-1',
+            'numero_lote' => 'LOTE-FEFO-1',
             'fecha_vencimiento' => now()->addMonths(2)->toDateString(),
             'cantidad_stock' => 5,
         ]);
 
-        // Lote 2 vigente: vence en 6 meses (sale después por FIFO)
+        // Lote 2 vigente: vence en 6 meses (sale después por FEFO)
         $lote2 = Lote::create([
             'medicamento_id' => $medicamento->id,
-            'numero_lote' => 'LOTE-FIFO-2',
+            'numero_lote' => 'LOTE-FEFO-2',
             'fecha_vencimiento' => now()->addMonths(6)->toDateString(),
             'cantidad_stock' => 10,
         ]);
