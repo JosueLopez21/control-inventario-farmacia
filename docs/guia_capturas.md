@@ -15,15 +15,15 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
   ```
 * **Qué debe verse en la captura:**
   1. La lista de migraciones ejecutándose en azul/verde (`create_categorias_table`, `create_laboratorios_table`, `create_medicamentos_table`, `create_lotes_table`, `create_ventas_table`, `create_detalles_venta_table`).
-  2. El bloque final verde con los emojis de conteo:
-     * `📦 Categorías: 10`
-     * `🏭 Laboratorios: 12`
-     * `💊 Medicamentos: 30`
-     * `📋 Lotes: 120`
-     * `🛒 Ventas: 25`
-     * `📝 Detalles: 98`
-     * `⚠️ Lotes vencidos: 30`
-     * `⏰ Lotes por vencer: 28`
+  2. El bloque final con el conteo real del catálogo de feria:
+     * `Categorías: 10`
+     * `Laboratorios: 12`
+     * `Medicamentos: 300`
+     * `Lotes: 750`
+     * `Ventas: 500`
+     * `Detalles: 1234`
+     * `Lotes vencidos: 75`
+     * `Por vencer: 75`
 
 ---
 
@@ -33,12 +33,9 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
   php artisan test
   ```
 * **Qué debe verse en la captura:**
-  * La barra verde de éxito: `PASS Tests\Feature\ReglasNegocioFarmaciaTest`.
-  * Los 3 tests aprobados con check verde:
-    * `✓ scope por vencer identifica lotes dentro de 30 dias`
-    * `✓ alerta medicamentos por debajo del stock minimo`
-    * `✓ venta fefo descuenta del lote mas proximo y bloquea vencidos`
-  * El resumen final: `Tests: 26 passed`.
+  * La barra verde de éxito con las suites de reglas de negocio, catálogo y pantallas de feria.
+  * Los tests aprobados con check verde, incluidos `scope por vencer identifica lotes dentro de 30 dias`, `alerta medicamentos por debajo del stock minimo` y `venta fefo descuenta del lote mas proximo y bloquea vencidos`.
+  * El resumen final: `Tests: 50 passed (230 assertions)`.
 
 ---
 
@@ -132,7 +129,7 @@ use App\Models\Categoria; use App\Models\Laboratorio; use App\Models\Medicamento
   ```php
   ['total' => Lote::count(), 'vigentes_con_stock' => Lote::where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)->count(), 'vencidos' => Lote::where('fecha_vencimiento', '<', now()->toDateString())->count(), 'agotados' => Lote::where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', 0)->count()];
   ```
-* **Qué debe verse:** Arreglo con `total => 120, vigentes_con_stock => 83, vencidos => 30, agotados => 7`.
+* **Qué debe verse:** Arreglo con `total => 750, vigentes_con_stock => 660, vencidos => 75, agotados => 15`.
 
 ---
 
@@ -141,7 +138,7 @@ use App\Models\Categoria; use App\Models\Laboratorio; use App\Models\Medicamento
   ```php
   ['total_ventas' => Venta::count(), 'recaudacion_total' => '$' . number_format(Venta::sum('monto_total'), 2), 'ticket_promedio' => '$' . number_format(Venta::avg('monto_total'), 2), 'unidades_dispensadas' => DetalleVenta::sum('cantidad')];
   ```
-* **Qué debe verse:** Arreglo con métricas monetarias (ej. `total_ventas => 25, recaudacion_total => $3,291.50...`).
+* **Qué debe verse:** Arreglo con `total_ventas => 500` y las métricas de recaudación, ticket promedio y unidades calculadas sobre el seed actual.
 
 ---
 

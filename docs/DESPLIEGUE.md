@@ -67,8 +67,11 @@ El proyecto ya incluye:
 | `SEED_ADMIN_PASSWORD` | Opcional; contraseña fuerte si se sembrarán datos demo |
 | `SEED_FARMACEUTICO_PASSWORD` | Opcional; contraseña fuerte si se sembrarán datos demo |
 | `SEED_DOCTOR_PASSWORD` | Opcional; contraseña fuerte si se sembrarán datos demo |
+| `DEMO_ACCESS` | `false` en producción; `true` solo para demostraciones controladas |
 
 `APP_KEY` debe tener el formato `base64:...` que produce Laravel. No usar un valor aleatorio sin ese prefijo. No reemplazarla después de la primera puesta en marcha salvo que se acepte invalidar sesiones y datos cifrados.
+
+`DEMO_ACCESS=true` habilita botones que inician sesión como farmacéutico o doctor sin contraseña. En producción debe quedar en `false`; si se habilita para una feria, desactivarlo al terminar y verificar que las cuentas demo sigan siendo de prueba.
 
 ### Variables que ya define el Blueprint
 
@@ -103,8 +106,8 @@ Render inyecta `PORT` automáticamente. Apache escucha en `${PORT}` y el contene
    ```
 
    Debe responder `200 OK`.
-4. Abrir `/login` y comprobar que la pantalla de acceso carga con los estilos locales.
-5. Iniciar sesión con un usuario existente o crear los usuarios demo (ver sección 6).
+4. Abrir `/bienvenida` y comprobar que la portada, el mini reto FEFO y los estilos locales cargan. Abrir `/login` y verificar la pantalla de acceso.
+5. Iniciar sesión con un usuario existente o crear los usuarios demo (ver sección 6). Con `DEMO_ACCESS=false`, los botones demo no deben aparecer.
 
 > En el plan gratuito el servicio puede suspenderse por inactividad y tardar en responder al primer acceso. Es normal que la primera petición después de un tiempo de espera sea lenta.
 
@@ -151,6 +154,8 @@ La base recién creada queda vacía. Para cargar los usuarios demo:
    php artisan db:seed --force
    ```
 
+   El seed de feria genera 10 categorías, 12 laboratorios, 300 medicamentos, 750 lotes y 500 ventas con sus detalles, incluyendo escenarios de vencimiento y stock bajo.
+
 > `UserSeeder` usa `updateOrCreate`: si se vuelve a ejecutar, restablece las contraseñas de los tres usuarios demo. No ejecutarlo en una base con usuarios reales sin revisar antes el seeder.
 
 En una instalación real se recomienda no usar las cuentas de demostración: crear usuarios propios, asignar roles y eliminar o desactivar las cuentas demo.
@@ -162,12 +167,14 @@ En una instalación real se recomienda no usar las cuentas de demostración: cre
 Comprobar en este orden:
 
 1. `GET /up` responde `200`.
-2. `GET /login` responde `200` y carga CSS, iconos y JavaScript locales.
-3. El login de un usuario activo redirige al dashboard.
-4. El dashboard muestra datos sin errores 500.
-5. Inventario, ventas, alertas y reportes cargan según el rol.
-6. En los logs de Render aparece `LOG_CHANNEL=stderr` y no hay errores de conexión a PostgreSQL.
-7. Las URLs generadas usan `https://` y las cookies de sesión son seguras.
+2. `GET /bienvenida` responde `200` y carga CSS, iconos y JavaScript locales.
+3. `GET /login` responde `200`; un invitado que entra a `/` es redirigido a `/bienvenida`.
+4. El login de un usuario activo redirige al dashboard.
+5. El dashboard muestra datos sin errores 500 y el modo presentación funciona.
+6. Catálogo, inventario, ventas, alertas y reportes cargan según el rol; el POS táctil y el formulario clásico están disponibles.
+7. Con `DEMO_ACCESS=false`, las rutas `/demo/*` no permiten iniciar sesión.
+8. En los logs de Render aparece `LOG_CHANNEL=stderr` y no hay errores de conexión a PostgreSQL.
+9. Las URLs generadas usan `https://` y las cookies de sesión son seguras.
 
 Pruebas locales antes de publicar:
 
@@ -175,7 +182,7 @@ Pruebas locales antes de publicar:
 php artisan test
 ```
 
-Resultado esperado: **26 pruebas aprobadas**.
+Resultado esperado: **50 pruebas aprobadas** (230 aserciones).
 
 ---
 
@@ -289,8 +296,9 @@ Es el comportamiento esperado del plan gratuito de Render cuando el servicio est
 - [ ] `APP_URL` configurada con HTTPS.
 - [ ] Variables `DB_*` completas y `DB_SSLMODE=require`.
 - [ ] `APP_KEY` configurada manualmente con el prefijo `base64:`.
+- [ ] `DEMO_ACCESS=false` en producción.
 - [ ] Health check `/up` en verde.
-- [ ] Login y dashboard funcionando.
+- [ ] Portada `/bienvenida`, login y dashboard funcionando.
 - [ ] Datos demo cargados solo si se necesitan.
 - [ ] Cuentas demo cambiadas o eliminadas en producción.
 - [ ] Logs sin errores y respaldo de Neon verificado.

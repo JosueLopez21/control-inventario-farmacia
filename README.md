@@ -1,6 +1,6 @@
 # Sistema de Control de Inventario de una Farmacia
 
-Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes.
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada interactiva, catálogo en tarjetas, modo presentación y un punto de venta táctil con respaldo accesible sin JavaScript.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
 **Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  
@@ -108,7 +108,17 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 - El **doctor** no puede acceder a ventas, reportes ni usuarios.
 - El **farmacéutico** no puede acceder a la gestión de usuarios ni eliminar registros.
 - Los usuarios inactivos no pueden iniciar sesión.
+- La portada pública está en **`/bienvenida`**; los invitados que entran a `/` son redirigidos allí. El acceso directo sigue disponible en `/login`.
 - El manual completo está en [docs/MANUAL_USO.md](docs/MANUAL_USO.md).
+
+### Experiencia de feria
+
+- **Portada `/bienvenida`:** presentación del sistema, accesos demo y mini reto FEFO interactivo.
+- **Catálogo:** tarjetas responsivas, filtros por categoría, búsqueda AJAX, paginación y detalle en modal.
+- **Dashboard:** indicadores animados, simulador de ventas y **modo presentación** para exposiciones.
+- **Alertas:** semáforo por prioridad, pestañas y acciones directas para reponer o revisar lotes.
+- **Punto de venta:** interfaz táctil con carrito y respaldo clásico si JavaScript no está disponible.
+- **Acceso demo opcional:** definir `DEMO_ACCESS=true` en `.env` para mostrar los botones de ingreso demo de **farmacéutico** y **doctor**. Por defecto está deshabilitado (`false`).
 
 ---
 
@@ -127,7 +137,7 @@ Verifica las reglas de negocio, la política FEFO, el login y el acceso por role
 php artisan test
 ```
 
-Resultado esperado: **26 pruebas aprobadas**.
+Resultado esperado: **50 pruebas aprobadas** (230 aserciones).
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**
@@ -146,7 +156,7 @@ Resultado esperado: **26 pruebas aprobadas**.
 
 ## 📚 7. Documentación Adicional en la Carpeta `/docs`
 
-* 📖 **Manual de Uso del Sistema Web:** [docs/MANUAL_USO.md](docs/MANUAL_USO.md) (inicio del sistema, usuarios, roles, recorrido en 6 pasos y administración en pgAdmin).
+* 📖 **Manual de Uso del Sistema Web:** [docs/MANUAL_USO.md](docs/MANUAL_USO.md) (portada, acceso demo, usuarios, roles, recorrido de uso y administración en pgAdmin).
 * 🚀 **Guía de Despliegue en Render y Neon:** [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md) (Docker, PostgreSQL en Neon, variables de entorno, verificación y solución de problemas).
 * 📊 **Diagrama Entidad-Relación:** [docs/diagrama_er.md](docs/diagrama_er.md) (formato Mermaid y exportación PNG) y [docs/diagrama_er.puml](docs/diagrama_er.puml) (PlantUML).
 * 📋 **Consultas de Tinker Detalladas:** [docs/consultas_tinker.md](docs/consultas_tinker.md) (las 12 consultas con comandos, salidas reales y justificaciones técnicas de integridad).

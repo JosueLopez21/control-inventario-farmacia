@@ -42,7 +42,10 @@ DB_PORT=5432
 DB_DATABASE=farmacia_inventario
 DB_USERNAME=postgres
 DB_PASSWORD=tu_contraseña
+DEMO_ACCESS=false
 ```
+
+`DEMO_ACCESS` controla los botones de acceso demo de la portada. Déjalo en `false` salvo que necesites mostrar la aplicación sin escribir credenciales. Para habilitarlo, cambia el valor a `true` y reinicia `php artisan serve`. En producción no lo actives sin supervisión.
 
 ### 2.3 Crear las tablas y cargar los datos de demostración
 
@@ -85,6 +88,15 @@ php artisan serve --port=8080
 
 > Cambia estas contraseñas antes de usar el sistema con datos reales.
 
+### 3.1 Acceso demo desde la portada
+
+Con `DEMO_ACCESS=true`, la portada muestra botones para entrar como **farmacéutico** o **doctor** sin escribir contraseña. El botón de administrador no se ofrece por seguridad.
+
+- Las rutas demo son `POST /demo/farmaceutico` y `POST /demo/doctor`.
+- Si `DEMO_ACCESS=false`, esas rutas responden como no encontradas.
+- El acceso demo inicia sesión con el primer usuario activo del rol correspondiente.
+- La ruta está limitada a invitados y tiene un límite de intentos por minuto.
+
 ---
 
 ## 4. Roles y permisos
@@ -110,15 +122,21 @@ Reglas adicionales:
 
 ---
 
-## 5. Recorrido de uso en 6 pasos
+## 5. Recorrido de uso principal
 
-### Paso 1 — Iniciar sesión
+La interfaz está preparada para pantallas desde 360 px, con controles táctiles de al menos 44 px y respeto por la preferencia de movimiento reducido. Los datos y acciones siguen dependiendo del rol.
 
-Entra a `http://127.0.0.1:8000`, ingresa el correo y la contraseña de la tabla anterior. El sistema redirige al dashboard según el rol.
+### Paso 1 — Portada e inicio de sesión
+
+Entra a `http://127.0.0.1:8000`. Si no hay sesión, el sistema muestra la portada `/bienvenida`, con la presentación, el mini reto FEFO y los accesos demo cuando `DEMO_ACCESS=true`.
+
+Para entrar con credenciales, pulsa **Iniciar sesión** o abre `http://127.0.0.1:8000/login`, ingresa el correo y la contraseña de la tabla anterior. El sistema redirige al dashboard según el rol.
 
 ### Paso 2 — Revisar el dashboard
 
 Consulta los indicadores del día: ventas, ingresos, ticket promedio, medicamentos con stock bajo y lotes próximos a vencer. El menú lateral muestra solo los módulos permitidos para tu rol.
+
+El botón de **modo presentación** amplía la interfaz y oculta elementos secundarios para exposiciones. La preferencia se guarda en el navegador y se puede desactivar con el mismo botón.
 
 ### Paso 3 — Registrar un medicamento y su lote
 
@@ -132,8 +150,11 @@ El número de lote es único y la fecha de vencimiento determina el orden FEFO d
 ### Paso 4 — Registrar una venta
 
 1. Ve a **Ventas → Nueva venta**.
-2. Busca el medicamento por nombre y agrégalo al carrito con la cantidad deseada.
-3. Pulsa **Registrar venta**.
+2. Busca el medicamento por nombre o principio activo y agrégalo al carrito con la cantidad deseada.
+3. Ajusta cantidades, elimina líneas si hace falta y revisa el total.
+4. Pulsa **Registrar venta**.
+
+La pantalla táctil muestra el stock disponible y los controles grandes para operar en mostrador. Si JavaScript no está disponible, el sistema redirige al formulario clásico para completar la venta sin perder la operación.
 
 El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta puedes imprimir el comprobante.
 
@@ -145,7 +166,7 @@ Abre **Alertas** para revisar:
 - Lotes ya vencidos.
 - Medicamentos cuyo stock vigente está por debajo del mínimo.
 
-Usa esta información para priorizar la rotación y programar reposición.
+El semáforo prioriza lo urgente: rojo para vencidos, ámbar para próximos a vencer y gris para stock bajo. Usa las pestañas y las acciones directas para revisar el lote o registrar reposición. Esta información permite priorizar la rotación y programar compras.
 
 ### Paso 6 — Consultar reportes y administrar usuarios
 
@@ -171,7 +192,7 @@ Ejecutar la suite:
 php artisan test
 ```
 
-Resultado esperado: **26 pruebas aprobadas**. Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación y ventas FEFO con bloqueo de vencidos.
+Resultado esperado: **50 pruebas aprobadas** (230 aserciones). Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación, ventas FEFO con bloqueo de vencidos y las pantallas de feria, alertas, POS y portada.
 
 ---
 
