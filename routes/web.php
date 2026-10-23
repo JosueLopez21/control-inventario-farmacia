@@ -20,6 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/simulador-venta', [DashboardController::class, 'simular'])
+        ->middleware('rol:administrador,farmaceutico')
+        ->name('simulador.venta');
 
     Route::get('/perfil/password', [PerfilController::class, 'editPassword'])->name('perfil.password');
     Route::put('/perfil/password', [PerfilController::class, 'updatePassword'])->name('perfil.password.update');

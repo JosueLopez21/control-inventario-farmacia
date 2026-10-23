@@ -4,26 +4,74 @@
 @section('subtitulo', 'Resumen general de la farmacia · ' . now()->translatedFormat('l, d \d\e F \d\e Y'))
 
 @section('contenido')
+@php($colMetrica = $puedeVerVentas ? 'col-6 col-xl-2' : 'col-6 col-xl-3')
+
+<div class="dashboard-hero mb-4">
+    <div class="row align-items-center g-4 position-relative">
+        <div class="col-lg-7">
+            <span class="hero-pill mb-3"><i class="bi bi-sun"></i>Hola, {{ auth()->user()->name }}</span>
+            <h2 class="mb-2">Tu farmacia, lista para la feria</h2>
+            <p class="mb-4">Mira el pulso del inventario, detecta lo urgente y deja que el sistema te muestre cómo se vende con FEFO.</p>
+            <div class="d-flex flex-wrap gap-2">
+                @if ($puedeVerVentas)
+                    <button type="button" class="btn btn-light btn-lg fw-semibold" id="btnSimularVenta" data-url="{{ route('simulador.venta') }}">
+                        <i class="bi bi-magic me-1"></i>Simular venta
+                    </button>
+                @endif
+                <a href="{{ route('medicamentos.index') }}" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-capsule me-1"></i>Explorar catálogo
+                </a>
+                @if ($puedeVerVentas)
+                    <a href="{{ route('reportes.index') }}" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-bar-chart me-1"></i>Reportes
+                    </a>
+                @endif
+            </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-visual" aria-hidden="true">
+                <span class="hero-orb hero-orb--uno"></span>
+                <span class="hero-orb hero-orb--dos"></span>
+                <div class="hero-visual-card">
+                    <i class="bi bi-capsule-pill"></i>
+                    <div>
+                        <strong>Inventario vivo</strong>
+                        <span>Stock, lotes y alertas en un vistazo</span>
+                    </div>
+                </div>
+                <div class="hero-visual-card hero-visual-card--mini">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Ventas seguras con FEFO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if ($puedeVerVentas)
+    <div id="resultadoSimulacion" class="mb-3" aria-live="polite"></div>
+@endif
+
 <div class="row g-3 mb-4">
     @if ($puedeVerVentas)
-        <div class="col-6 col-xl-2">
-            <x-metric-card titulo="Ventas de hoy" :valor="$ventasHoy" icono="bi-cart-check" color="verde" />
+        <div class="{{ $colMetrica }}">
+            <x-metric-card titulo="Ventas de hoy" :valor="$ventasHoy" icono="bi-cart-check" color="verde" clave="ventasHoy" :valorCrudo="$ventasHoy" formato="numero" />
         </div>
-        <div class="col-6 col-xl-2">
-            <x-metric-card titulo="Ingresos de hoy" :valor="formato_bs($ingresosHoy)" icono="bi-cash-coin" color="azul" />
+        <div class="{{ $colMetrica }}">
+            <x-metric-card titulo="Ingresos de hoy" :valor="formato_bs($ingresosHoy)" icono="bi-cash-coin" color="azul" clave="ingresosHoy" :valorCrudo="$ingresosHoy" formato="bs" />
         </div>
     @endif
-    <div class="col-6 col-xl-2">
-        <x-metric-card titulo="Medicamentos" :valor="$totalMedicamentos" icono="bi-capsule" color="azul" />
+    <div class="{{ $colMetrica }}">
+        <x-metric-card titulo="Medicamentos" :valor="$totalMedicamentos" icono="bi-capsule" color="azul" clave="totalMedicamentos" :valorCrudo="$totalMedicamentos" formato="numero" />
     </div>
-    <div class="col-6 col-xl-2">
-        <x-metric-card titulo="Por vencer (30 días)" :valor="$lotesPorVencer" icono="bi-exclamation-triangle" color="ambar" enlace="{{ route('alertas.index') }}" />
+    <div class="{{ $colMetrica }}">
+        <x-metric-card titulo="Por vencer (30 días)" :valor="$lotesPorVencer" icono="bi-exclamation-triangle" color="ambar" enlace="{{ route('alertas.index') }}" clave="lotesPorVencer" :valorCrudo="$lotesPorVencer" formato="numero" />
     </div>
-    <div class="col-6 col-xl-2">
-        <x-metric-card titulo="Lotes vencidos" :valor="$lotesVencidos" icono="bi-x-octagon" color="rojo" enlace="{{ route('alertas.index') }}" />
+    <div class="{{ $colMetrica }}">
+        <x-metric-card titulo="Lotes vencidos" :valor="$lotesVencidos" icono="bi-x-octagon" color="rojo" enlace="{{ route('alertas.index') }}" clave="lotesVencidos" :valorCrudo="$lotesVencidos" formato="numero" />
     </div>
-    <div class="col-6 col-xl-2">
-        <x-metric-card titulo="Stock bajo mínimo" :valor="$stockBajo->count()" icono="bi-arrow-down-circle" color="gris" enlace="{{ route('alertas.index') }}" />
+    <div class="{{ $colMetrica }}">
+        <x-metric-card titulo="Stock bajo mínimo" :valor="$stockBajo->count()" icono="bi-arrow-down-circle" color="gris" enlace="{{ route('alertas.index') }}" clave="stockBajo" :valorCrudo="$stockBajo->count()" formato="numero" />
     </div>
 </div>
 
@@ -33,10 +81,12 @@
             <div class="card h-100">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span><i class="bi bi-graph-up-arrow me-2 text-farma"></i>Ventas de los últimos 7 días</span>
-                    <span class="small text-muted">Ticket promedio: {{ formato_bs($ticketPromedio) }}</span>
+                    <span class="small text-muted"><i class="bi bi-receipt me-1"></i>Ticket promedio: {{ formato_bs($ticketPromedio) }}</span>
                 </div>
                 <div class="card-body">
-                    <canvas id="graficoVentas" height="110"></canvas>
+                    <div class="chart-wrap">
+                        <canvas id="graficoVentas" data-grafico="{{ json_encode($grafico) }}"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,12 +97,12 @@
                     @if ($topMedicamentos->isEmpty())
                         <x-empty-state icono="bi-trophy" titulo="Sin ventas registradas" mensaje="Aún no hay medicamentos vendidos." />
                     @else
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush ranking">
                             @foreach ($topMedicamentos as $i => $fila)
                                 <li class="list-group-item d-flex align-items-center gap-2">
-                                    <span class="badge rounded-pill bg-farma-soft text-farma">{{ $i + 1 }}</span>
+                                    <span class="ranking-pos">{{ $i + 1 }}</span>
                                     <span class="flex-grow-1">{{ $fila->nombre_comercial }}</span>
-                                    <span class="badge bg-secondary">{{ $fila->unidades }} u.</span>
+                                    <span class="badge rounded-pill bg-farma-soft text-farma">{{ $fila->unidades }} u.</span>
                                 </li>
                             @endforeach
                         </ul>
@@ -140,47 +190,6 @@
 @push('scripts')
 @if ($puedeVerVentas)
 <script src="{{ asset('vendor/chartjs/chart.umd.min.js') }}"></script>
-<script>
-    const ctx = document.getElementById('graficoVentas');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: @json($grafico['etiquetas']),
-            datasets: [
-                {
-                    label: 'Ventas',
-                    data: @json($grafico['totales']),
-                    borderColor: '#0f766e',
-                    backgroundColor: 'rgba(15, 118, 110, .12)',
-                    fill: true,
-                    tension: .35,
-                    borderWidth: 2,
-                    pointBackgroundColor: '#0f766e'
-                },
-                {
-                    label: 'Ingresos (Bs)',
-                    data: @json($grafico['montos']),
-                    borderColor: '#1d4ed8',
-                    backgroundColor: 'rgba(29, 78, 216, .08)',
-                    fill: false,
-                    tension: .35,
-                    borderWidth: 2,
-                    pointBackgroundColor: '#1d4ed8',
-                    yAxisID: 'y1'
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: { mode: 'index', intersect: false },
-            plugins: { legend: { position: 'bottom' } },
-            scales: {
-                y: { beginAtZero: true, ticks: { precision: 0 }, grid: { color: 'rgba(0,0,0,.05)' } },
-                y1: { beginAtZero: true, position: 'right', grid: { drawOnChartArea: false } }
-            }
-        }
-    });
-</script>
+<script src="{{ asset('js/dashboard.js') }}?v={{ filemtime(public_path('js/dashboard.js')) }}"></script>
 @endif
 @endpush

@@ -26,7 +26,8 @@ body {
 }
 
 .feria-hero,
-.catalogo-hero {
+.catalogo-hero,
+.dashboard-hero {
     position: relative;
     overflow: hidden;
     border-radius: 24px;
@@ -40,7 +41,8 @@ body {
 }
 
 .catalogo-hero::after,
-.feria-hero::after {
+.feria-hero::after,
+.dashboard-hero::after {
     content: "";
     position: absolute;
     width: 220px;
@@ -53,19 +55,22 @@ body {
 }
 
 .catalogo-hero h2,
-.feria-hero h2 {
+.feria-hero h2,
+.dashboard-hero h2 {
     font-size: clamp(1.35rem, 3vw, 2.1rem);
     font-weight: 800;
     letter-spacing: -.02em;
 }
 
 .catalogo-hero p,
-.feria-hero p {
+.feria-hero p,
+.dashboard-hero p {
     color: rgba(255, 255, 255, .82);
 }
 
 .catalogo-hero .hero-pill,
-.feria-hero .hero-pill {
+.feria-hero .hero-pill,
+.dashboard-hero .hero-pill {
     display: inline-flex;
     align-items: center;
     gap: .45rem;
@@ -495,6 +500,174 @@ body {
     font-size: .86rem;
 }
 
+.dashboard-hero .btn-outline-light {
+    border-color: rgba(255, 255, 255, .55);
+    color: #fff;
+}
+
+.dashboard-hero .btn-outline-light:hover {
+    background: rgba(255, 255, 255, .16);
+    border-color: #fff;
+    color: #fff;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 195px;
+}
+
+.hero-visual-card {
+    position: absolute;
+    top: 24px;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    width: min(320px, 90%);
+    padding: .95rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .14);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .14);
+    backdrop-filter: blur(8px);
+    transform: rotate(-2deg);
+    animation: flotar 5s ease-in-out infinite;
+}
+
+.hero-visual-card > i {
+    display: grid;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .2);
+    font-size: 1.3rem;
+}
+
+.hero-visual-card strong,
+.hero-visual-card span {
+    display: block;
+}
+
+.hero-visual-card strong {
+    font-size: .9rem;
+}
+
+.hero-visual-card span {
+    color: rgba(255, 255, 255, .72);
+    font-size: .72rem;
+}
+
+.hero-visual-card--mini {
+    top: 126px;
+    left: 32%;
+    width: auto;
+    padding: .65rem .9rem;
+    font-size: .78rem;
+    transform: rotate(2deg);
+    animation-delay: -2.4s;
+}
+
+.hero-visual-card--mini > i {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+}
+
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(250, 204, 21, .3);
+    filter: blur(2px);
+}
+
+.hero-orb--uno {
+    top: 0;
+    right: 8%;
+    width: 68px;
+    height: 68px;
+}
+
+.hero-orb--dos {
+    bottom: 12px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: rgba(45, 212, 191, .45);
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-7px) rotate(-1deg); }
+}
+
+.chart-wrap {
+    position: relative;
+    height: 300px;
+}
+
+.ranking-pos {
+    display: grid;
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--farma-suave);
+    color: var(--farma-verde);
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.sim-resultado {
+    animation: aparecer .35s ease both;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: none; }
+}
+
+.btn-presentacion.activo {
+    background: var(--farma-verde);
+    border-color: var(--farma-verde);
+    color: #fff;
+}
+
+body.modo-presentacion .app-sidebar {
+    display: none !important;
+}
+
+body.modo-presentacion .app-main {
+    margin-left: 0;
+}
+
+body.modo-presentacion .app-content {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: clamp(1rem, 2.5vw, 2rem);
+}
+
+body.modo-presentacion .app-topbar .d-lg-none {
+    display: none !important;
+}
+
+body.modo-presentacion .dashboard-hero {
+    padding: clamp(1.6rem, 4vw, 3rem);
+}
+
+body.modo-presentacion .metric-value {
+    font-size: 2rem;
+}
+
+@media (max-width: 991.98px) {
+    .hero-visual {
+        display: none;
+    }
+}
+
 @media (pointer: coarse) {
     .btn,
     .form-control,
@@ -514,7 +687,8 @@ body {
     }
 
     .catalogo-hero,
-    .feria-hero {
+    .feria-hero,
+    .dashboard-hero {
         border-radius: 18px;
     }
 
@@ -533,7 +707,8 @@ body {
     }
 
     .catalogo-hero .hero-pill,
-    .feria-hero .hero-pill {
+    .feria-hero .hero-pill,
+    .dashboard-hero .hero-pill {
         font-size: .66rem;
     }
 

@@ -124,6 +124,10 @@
                     <div class="small text-muted">@yield('subtitulo')</div>
                 @endif
             </div>
+            <button type="button" class="btn btn-light border btn-presentacion d-flex align-items-center gap-2" data-presentacion-toggle aria-pressed="false" title="Activar modo presentación">
+                <i class="bi bi-easel"></i>
+                <span class="d-none d-md-inline" data-presentacion-texto>Presentación</span>
+            </button>
             <div class="dropdown">
                 <button class="btn btn-light border d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="avatar-inicial" style="width:30px;height:30px;background:var(--farma-verde);font-size:.85rem;">{{ strtoupper(substr($user->name, 0, 1)) }}</span>

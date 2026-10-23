@@ -1,8 +1,9 @@
-@props(['titulo', 'valor', 'icono' => 'bi-graph-up', 'color' => 'verde', 'detalle' => null, 'enlace' => null])
+@props(['titulo', 'valor', 'icono' => 'bi-graph-up', 'color' => 'verde', 'detalle' => null, 'enlace' => null, 'clave' => null, 'valorCrudo' => null, 'formato' => 'texto'])
 
 <div class="metric-card metric-{{ $color }}">
     <div class="metric-label">{{ $titulo }}</div>
-    <div class="metric-value">{{ $valor }}</div>
+    <div class="metric-value"
+         @if ($clave) data-contador="{{ $clave }}" data-valor="{{ $valorCrudo ?? $valor }}" data-formato="{{ $formato }}" @endif>{{ $valor }}</div>
     @if ($detalle)
         <div class="small mt-1" style="opacity: .85;">{{ $detalle }}</div>
     @endif
