@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AlertaController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BienvenidaController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LaboratorioController;
 use App\Http\Controllers\LoteController;
@@ -12,6 +14,14 @@ use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\VentaController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/bienvenida', [BienvenidaController::class, 'index'])
+    ->middleware('guest')
+    ->name('bienvenida');
+
+Route::post('/demo/{rol}', [DemoController::class, 'entrar'])
+    ->middleware(['guest', 'throttle:6,1'])
+    ->name('demo.entrar');
 
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');

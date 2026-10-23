@@ -7,10 +7,10 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    public function test_el_invitado_es_redirigido_al_login(): void
+    public function test_el_invitado_es_redirigido_a_la_portada(): void
     {
         $response = $this->get('/');
 
-        $response->assertRedirect(route('login'));
+        $response->assertRedirect(route('bienvenida'));
     }
 }

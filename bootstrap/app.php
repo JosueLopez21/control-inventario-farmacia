@@ -20,7 +20,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'rol' => VerificarRol::class,
         ]);
 
-        $middleware->redirectGuestsTo(fn () => route('login'));
+        $middleware->redirectGuestsTo(fn () => route('bienvenida'));
         $middleware->redirectUsersTo(fn () => route('dashboard'));
     })
     ->withExceptions(function (Exceptions $exceptions): void {
