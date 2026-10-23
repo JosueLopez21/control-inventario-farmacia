@@ -3,7 +3,9 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use Database\Seeders\UserSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class AutenticacionTest extends TestCase
@@ -30,7 +32,7 @@ class AutenticacionTest extends TestCase
 
     public function test_login_funciona_con_las_tres_credenciales_de_demostracion(): void
     {
-        $this->seed(\Database\Seeders\UserSeeder::class);
+        $this->seed(UserSeeder::class);
 
         $credenciales = [
             ['admin@farmacia.test', '1234'],
@@ -51,6 +53,30 @@ class AutenticacionTest extends TestCase
             $this->post('/logout');
             $this->assertGuest();
         }
+    }
+
+    public function test_user_seeder_usa_las_contrasenas_de_entorno_cuando_existen(): void
+    {
+        putenv('SEED_ADMIN_PASSWORD=AdminSegura2026*');
+        putenv('SEED_FARMACEUTICA_PASSWORD=Farmaceutica2026*');
+        putenv('SEED_DOCTOR_PASSWORD=Doctor2026*');
+
+        try {
+            $this->seed(UserSeeder::class);
+
+            $this->assertTrue(Hash::check('AdminSegura2026*', User::where('email', 'admin@farmacia.test')->firstOrFail()->password));
+            $this->assertTrue(Hash::check('Farmaceutica2026*', User::where('email', 'farmaceutica@farmacia.test')->firstOrFail()->password));
+            $this->assertTrue(Hash::check('Doctor2026*', User::where('email', 'doctor@farmacia.test')->firstOrFail()->password));
+        } finally {
+            putenv('SEED_ADMIN_PASSWORD');
+            putenv('SEED_FARMACEUTICA_PASSWORD');
+            putenv('SEED_DOCTOR_PASSWORD');
+        }
+    }
+
+    public function test_health_check_responde_sin_autenticacion(): void
+    {
+        $this->get('/up')->assertOk();
     }
 
     public function test_login_incorrecto_muestra_credenciales_incorrectas(): void
