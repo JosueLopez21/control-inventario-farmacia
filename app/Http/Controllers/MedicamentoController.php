@@ -14,15 +14,18 @@ use Illuminate\View\View;
 
 class MedicamentoController extends Controller
 {
-    public function index(Request $request): View
+    public function index(Request $request): View|JsonResponse
     {
         $q = trim((string) $request->query('q'));
         $categoriaId = $request->query('categoria_id');
         $laboratorioId = $request->query('laboratorio_id');
 
         $medicamentos = Medicamento::query()
-            ->with(['categoria:id,nombre', 'laboratorio:id,nombre'])
-            ->withSum(['lotes as stock_vigente' => fn ($query) => $query->where('fecha_vencimiento', '>=', now()->toDateString())], 'cantidad_stock')
+            ->with([
+                'categoria:id,nombre',
+                'laboratorio:id,nombre',
+                'lotes' => fn ($query) => $query->orderBy('fecha_vencimiento'),
+            ])
             ->when($q !== '', function ($query) use ($q) {
                 $query->where(function ($sub) use ($q) {
                     $sub->where('nombre_comercial', 'ilike', "%{$q}%")
@@ -32,11 +35,29 @@ class MedicamentoController extends Controller
             ->when($categoriaId, fn ($query) => $query->where('categoria_id', $categoriaId))
             ->when($laboratorioId, fn ($query) => $query->where('laboratorio_id', $laboratorioId))
             ->orderBy('nombre_comercial')
-            ->paginate(15)
+            ->paginate(24)
             ->withQueryString();
 
-        $categorias = Categoria::orderBy('nombre')->get(['id', 'nombre']);
+        $categorias = Categoria::query()
+            ->withCount(['medicamentos as total' => function ($query) use ($q, $laboratorioId) {
+                $query->when($q !== '', function ($subquery) use ($q) {
+                    $subquery->where(function ($search) use ($q) {
+                        $search->where('nombre_comercial', 'ilike', "%{$q}%")
+                            ->orWhere('principio_activo', 'ilike', "%{$q}%");
+                    });
+                })->when($laboratorioId, fn ($subquery) => $subquery->where('laboratorio_id', $laboratorioId));
+            }])
+            ->orderBy('nombre')
+            ->get(['id', 'nombre']);
+
         $laboratorios = Laboratorio::orderBy('nombre')->get(['id', 'nombre']);
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'html' => view('medicamentos._resultados', compact('medicamentos', 'categorias', 'q', 'categoriaId', 'laboratorioId'))->render(),
+                'total' => $medicamentos->total(),
+            ]);
+        }
 
         return view('medicamentos.index', compact('medicamentos', 'categorias', 'laboratorios', 'q', 'categoriaId', 'laboratorioId'));
     }

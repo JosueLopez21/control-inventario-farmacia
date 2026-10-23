@@ -32,9 +32,17 @@ class VentaController extends Controller
         return view('ventas.index', compact('ventas', 'desde', 'hasta'));
     }
 
-    public function create(): View
+    public function create(Request $request): View
     {
-        $itemsIniciales = collect(old('items', []))
+        $itemsBase = old('items', []);
+
+        if (blank($itemsBase) && $request->filled('medicamento_id')) {
+            $itemsBase = [
+                ['medicamento_id' => $request->integer('medicamento_id'), 'cantidad' => 1],
+            ];
+        }
+
+        $itemsIniciales = collect($itemsBase)
             ->map(function ($item) {
                 if (! is_array($item)) {
                     return null;

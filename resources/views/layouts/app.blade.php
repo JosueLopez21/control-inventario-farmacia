@@ -96,6 +96,7 @@
             .card { box-shadow: none; border: 1px solid #ddd; }
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('css/feria.css') }}?v={{ filemtime(public_path('css/feria.css')) }}">
     @stack('estilos')
 </head>
 <body>
@@ -187,6 +188,7 @@
     </div>
 
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/feria.js') }}?v={{ filemtime(public_path('js/feria.js')) }}"></script>
     <script>
         document.querySelectorAll('.flash-alert').forEach(function (el) {
             setTimeout(function () {

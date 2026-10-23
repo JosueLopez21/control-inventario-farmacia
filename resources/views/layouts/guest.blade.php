@@ -21,6 +21,7 @@
         .btn-farma { background: #0f766e; border-color: #0f766e; color: #fff; }
         .btn-farma:hover { background: #0b5d57; border-color: #0b5d57; color: #fff; }
     </style>
+    <link rel="stylesheet" href="{{ asset('css/feria.css') }}?v={{ filemtime(public_path('css/feria.css')) }}">
 </head>
 <body>
     <div class="w-100" style="max-width: 430px; padding: 1rem;">
@@ -33,6 +34,7 @@
         @yield('contenido')
     </div>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/feria.js') }}?v={{ filemtime(public_path('js/feria.js')) }}"></script>
     @stack('scripts')
 </body>
 </html>
