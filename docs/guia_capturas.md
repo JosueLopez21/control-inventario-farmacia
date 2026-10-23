@@ -35,7 +35,7 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
 * **Qué debe verse en la captura:**
   * La barra verde de éxito con las suites de reglas de negocio, catálogo y pantallas de feria.
   * Los tests aprobados con check verde, incluidos `scope por vencer identifica lotes dentro de 30 dias`, `alerta medicamentos por debajo del stock minimo` y `venta fefo descuenta del lote mas proximo y bloquea vencidos`.
-  * El resumen final: `Tests: 50 passed (230 assertions)`.
+  * El resumen final: `Tests: 63 passed (634 assertions)`.
 
 ---
 
@@ -167,3 +167,23 @@ use App\Models\Categoria; use App\Models\Laboratorio; use App\Models\Medicamento
   DB::transaction(function() { $med = Medicamento::where('nombre_comercial', 'Ciprofloxacino Genfar')->first(); $lotes = $med->lotes()->where('fecha_vencimiento', '>=', now()->toDateString())->orderBy('fecha_vencimiento', 'asc')->take(2)->get(); echo "ANTES -> Lote 1 (" . $lotes[0]->fecha_vencimiento->format('Y-m-d') . "): " . $lotes[0]->cantidad_stock . " | Lote 2 (" . $lotes[1]->fecha_vencimiento->format('Y-m-d') . "): " . $lotes[1]->cantidad_stock . "\n"; (new VentaService)->crearVenta([['medicamento_id' => $med->id, 'cantidad' => $lotes[0]->cantidad_stock + 2]]); $l1 = $lotes[0]->fresh(); $l2 = $lotes[1]->fresh(); echo "DESPUES -> Lote 1: " . $l1->cantidad_stock . " (agotado) | Lote 2: " . $l2->cantidad_stock . " (consumio 2)\n"; throw new \Exception('Rollback'); });
   ```
 * **Qué debe verse:** El mensaje de consola mostrando que el Lote 1 se liquidó a 0 unidades y el Lote 2 pasó a tener 2 unidades menos.
+
+---
+
+## PARTE 3: Portada, juego y asesor
+
+### Captura 15: Portada simple
+* **Acción:** Abrir `http://127.0.0.1:8000/bienvenida` sin sesión iniciada.
+* **Qué debe verse:** Encabezado con el nombre FarmaSalud, explicación breve, tres ideas clave, foto de una profesional de la salud y un único botón **Entrar al sistema**. Si `DEMO_ACCESS=true`, los botones demo aparecen agrupados junto al acceso principal. El pie debe decir **FarmaSalud · Proyecto académico**.
+
+### Captura 16: Juego de la ruleta
+* **Acción:** Iniciar sesión como doctor o farmacéutico y abrir `/juego`.
+* **Qué debe verse:** La ruleta con las categorías del catálogo, el contador de giros, el puntaje, el botón **Girar la ruleta** y el reto rápido de lotes FEFO. Al girar y responder, se debe observar la pregunta con cuatro opciones y la retroalimentación. Se recomienda capturar también el resultado final de los cinco giros.
+
+### Captura 17: Asesor de síntomas
+* **Acción:** Abrir `/asesor`, elegir un síntoma y pulsar **Ver orientación**.
+* **Qué debe verse:** La recomendación general, el bloque rojo de señales de alarma, los productos de venta libre con stock vigente y el lote próximo a vencer. Con el rol doctor debe aparecer **Solo consulta**; con administrador o farmacéutico, el botón **Agregar a venta**. Capturar ambas variantes si el informe lo requiere.
+
+### Captura 18: Vista móvil
+* **Acción:** Abrir la portada, el juego y el asesor con el navegador en modo responsive a 360 px.
+* **Qué debe verse:** Contenido sin desbordamiento horizontal, botones de al menos 44 px, foto adaptable y tarjetas apiladas en una sola columna.

@@ -1,6 +1,6 @@
 # Sistema de Control de Inventario de una Farmacia
 
-Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada interactiva, catálogo en tarjetas, modo presentación y un punto de venta táctil con respaldo accesible sin JavaScript.
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, modo presentación y un punto de venta táctil con respaldo accesible sin JavaScript.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
 **Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  
@@ -103,7 +103,7 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 | :--- | :--- | :--- | :--- |
 | Administrador | `admin@farmacia.test` | `1234` | Todos los módulos, usuarios y eliminaciones |
 | Farmacéutico | `farmaceutica@farmacia.test` | `password` | Inventario, ventas, alertas y reportes |
-| Doctor | `doctor@farmacia.test` | `password` | Dashboard, catálogo, lotes (lectura) y alertas |
+| Doctor | `doctor@farmacia.test` | `password` | Dashboard, catálogo, lotes (lectura), alertas, juego y asesor en solo lectura |
 
 - El **doctor** no puede acceder a ventas, reportes ni usuarios.
 - El **farmacéutico** no puede acceder a la gestión de usuarios ni eliminar registros.
@@ -113,7 +113,9 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 
 ### Experiencia de feria
 
-- **Portada `/bienvenida`:** presentación del sistema, accesos demo y mini reto FEFO interactivo.
+- **Portada `/bienvenida`:** explicación breve, foto, un único acceso al sistema y botones demo agrupados cuando `DEMO_ACCESS=true`.
+- **Juego `/juego`:** ruleta de categorías con cinco giros, preguntas generadas desde el catálogo real, puntaje, mejor marca en `localStorage` y un reto rápido de lotes FEFO.
+- **Asesor `/asesor`:** orientación educativa para 18 síntomas leves, productos de venta libre con stock vigente, lote próximo a vencer y advertencias de alarma. El doctor solo consulta; administrador y farmacéutico pueden enviar el producto al POS existente.
 - **Catálogo:** tarjetas responsivas, filtros por categoría, búsqueda AJAX, paginación y detalle en modal.
 - **Dashboard:** indicadores animados, simulador de ventas y **modo presentación** para exposiciones.
 - **Alertas:** semáforo por prioridad, pestañas y acciones directas para reponer o revisar lotes.
@@ -137,7 +139,7 @@ Verifica las reglas de negocio, la política FEFO, el login y el acceso por role
 php artisan test
 ```
 
-Resultado esperado: **50 pruebas aprobadas** (230 aserciones).
+Resultado esperado: **63 pruebas aprobadas** (634 aserciones).
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**

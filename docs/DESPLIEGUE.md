@@ -106,7 +106,7 @@ Render inyecta `PORT` automáticamente. Apache escucha en `${PORT}` y el contene
    ```
 
    Debe responder `200 OK`.
-4. Abrir `/bienvenida` y comprobar que la portada, el mini reto FEFO y los estilos locales cargan. Abrir `/login` y verificar la pantalla de acceso.
+4. Abrir `/bienvenida` y comprobar que la portada simple, la foto y los estilos locales cargan sin recursos externos. Abrir `/login` y verificar la pantalla de acceso.
 5. Iniciar sesión con un usuario existente o crear los usuarios demo (ver sección 6). Con `DEMO_ACCESS=false`, los botones demo no deben aparecer.
 
 > En el plan gratuito el servicio puede suspenderse por inactividad y tardar en responder al primer acceso. Es normal que la primera petición después de un tiempo de espera sea lenta.
@@ -167,14 +167,15 @@ En una instalación real se recomienda no usar las cuentas de demostración: cre
 Comprobar en este orden:
 
 1. `GET /up` responde `200`.
-2. `GET /bienvenida` responde `200` y carga CSS, iconos y JavaScript locales.
+2. `GET /bienvenida` responde `200` y carga CSS, iconos, foto y JavaScript locales, sin CDN ni imágenes remotas.
 3. `GET /login` responde `200`; un invitado que entra a `/` es redirigido a `/bienvenida`.
 4. El login de un usuario activo redirige al dashboard.
 5. El dashboard muestra datos sin errores 500 y el modo presentación funciona.
 6. Catálogo, inventario, ventas, alertas y reportes cargan según el rol; el POS táctil y el formulario clásico están disponibles.
-7. Con `DEMO_ACCESS=false`, las rutas `/demo/*` no permiten iniciar sesión.
-8. En los logs de Render aparece `LOG_CHANNEL=stderr` y no hay errores de conexión a PostgreSQL.
-9. Las URLs generadas usan `https://` y las cookies de sesión son seguras.
+7. `/juego` muestra la ruleta y permite completar una partida; `/asesor` devuelve productos con stock vigente y respeta el modo de solo lectura del doctor.
+8. Con `DEMO_ACCESS=false`, las rutas `/demo/*` no permiten iniciar sesión.
+9. En los logs de Render aparece `LOG_CHANNEL=stderr` y no hay errores de conexión a PostgreSQL.
+10. Las URLs generadas usan `https://` y las cookies de sesión son seguras.
 
 Pruebas locales antes de publicar:
 
@@ -182,7 +183,7 @@ Pruebas locales antes de publicar:
 php artisan test
 ```
 
-Resultado esperado: **50 pruebas aprobadas** (230 aserciones).
+Resultado esperado: **63 pruebas aprobadas** (634 aserciones).
 
 ---
 

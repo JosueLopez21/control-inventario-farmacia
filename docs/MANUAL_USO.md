@@ -109,6 +109,8 @@ Con `DEMO_ACCESS=true`, la portada muestra botones para entrar como **farmacéut
 | Categorías y laboratorios | Ver y gestionar | Ver y gestionar | Sin acceso |
 | Ventas | Sí | Sí | Sin acceso |
 | Alertas | Sí | Sí | Sí |
+| Juego educativo | Sí | Sí | Sí |
+| Asesor de síntomas | Sí, con envío al POS | Sí, con envío al POS | Solo lectura |
 | Reportes | Sí | Sí | Sin acceso |
 | Usuarios | Sí | Sin acceso | Sin acceso |
 | Eliminar registros | Sí | Sin acceso | Sin acceso |
@@ -128,9 +130,9 @@ La interfaz está preparada para pantallas desde 360 px, con controles táctiles
 
 ### Paso 1 — Portada e inicio de sesión
 
-Entra a `http://127.0.0.1:8000`. Si no hay sesión, el sistema muestra la portada `/bienvenida`, con la presentación, el mini reto FEFO y los accesos demo cuando `DEMO_ACCESS=true`.
+Entra a `http://127.0.0.1:8000`. Si no hay sesión, el sistema muestra la portada `/bienvenida` con una explicación breve, una foto y un único botón **Entrar al sistema**. Cuando `DEMO_ACCESS=true`, los accesos rápidos de farmacéutico y doctor aparecen agrupados junto al botón principal.
 
-Para entrar con credenciales, pulsa **Iniciar sesión** o abre `http://127.0.0.1:8000/login`, ingresa el correo y la contraseña de la tabla anterior. El sistema redirige al dashboard según el rol.
+Para entrar con credenciales, pulsa **Entrar al sistema** o abre `http://127.0.0.1:8000/login`, ingresa el correo y la contraseña de la tabla anterior. El sistema redirige al dashboard según el rol.
 
 ### Paso 2 — Revisar el dashboard
 
@@ -168,7 +170,27 @@ Abre **Alertas** para revisar:
 
 El semáforo prioriza lo urgente: rojo para vencidos, ámbar para próximos a vencer y gris para stock bajo. Usa las pestañas y las acciones directas para revisar el lote o registrar reposición. Esta información permite priorizar la rotación y programar compras.
 
-### Paso 6 — Consultar reportes y administrar usuarios
+### Paso 6 — Jugar con la ruleta del catálogo
+
+1. Abre **Juego** en el menú lateral. La actividad está disponible para los tres roles.
+2. Pulsa **Girar la ruleta**. La ruleta se detiene en una categoría y carga una pregunta generada con medicamentos reales del catálogo.
+3. Responde una de las cuatro opciones. Verás de inmediato si acertaste y la explicación.
+4. Completa los cinco giros. Al final se muestra el puntaje y puedes pulsar **Jugar de nuevo**.
+5. El mejor puntaje se conserva en el navegador mediante `localStorage`.
+
+La misma pantalla incluye un reto rápido para elegir qué lote debe salir primero según FEFO. Si el navegador tiene activada la preferencia de movimiento reducido, la ruleta cambia de categoría sin animación larga.
+
+### Paso 7 — Consultar el asesor de síntomas
+
+1. Abre **Asesor** en el menú lateral.
+2. Selecciona uno de los 18 síntomas leves y pulsa **Ver orientación**.
+3. Revisa la recomendación general y las señales de alarma. La herramienta es educativa y no sustituye una consulta médica.
+4. Los resultados muestran solo productos de venta libre con stock vigente, su precio, categoría y el lote próximo a vencer.
+5. El **doctor** ve la información en modo de solo lectura. El **administrador** y el **farmacéutico** pueden pulsar **Agregar a venta** para abrir el POS existente con el medicamento precargado.
+
+El asesor no recomienda antibióticos ni medicamentos que requieren receta, no guarda la consulta y no registra ventas por sí solo.
+
+### Paso 8 — Consultar reportes y administrar usuarios
 
 - **Reportes:** ventas por día y por mes, medicamentos más vendidos, ingresos por categoría y ticket promedio.
 - **Usuarios** (solo administrador): alta de cuentas, cambio de rol, activación/desactivación y restablecimiento de contraseña.
@@ -192,7 +214,7 @@ Ejecutar la suite:
 php artisan test
 ```
 
-Resultado esperado: **50 pruebas aprobadas** (230 aserciones). Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación, ventas FEFO con bloqueo de vencidos y las pantallas de feria, alertas, POS y portada.
+Resultado esperado: **63 pruebas aprobadas** (634 aserciones). Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación, ventas FEFO con bloqueo de vencidos y las pantallas de feria: portada, juego, asesor, alertas, POS y catálogo.
 
 ---
 
