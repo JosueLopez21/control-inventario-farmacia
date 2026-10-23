@@ -37,10 +37,11 @@ class LoteController extends Controller
         return view('lotes.index', compact('lotes', 'medicamentos', 'estado', 'medicamentoId', 'q'));
     }
 
-    public function create(): View
+    public function create(Request $request): View
     {
         return view('lotes.create', [
             'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
+            'medicamentoSeleccionado' => $request->integer('medicamento_id') ?: null,
         ]);
     }
 

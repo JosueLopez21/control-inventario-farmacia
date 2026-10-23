@@ -27,7 +27,8 @@ body {
 
 .feria-hero,
 .catalogo-hero,
-.dashboard-hero {
+.dashboard-hero,
+.alertas-hero {
     position: relative;
     overflow: hidden;
     border-radius: 24px;
@@ -42,7 +43,8 @@ body {
 
 .catalogo-hero::after,
 .feria-hero::after,
-.dashboard-hero::after {
+.dashboard-hero::after,
+.alertas-hero::after {
     content: "";
     position: absolute;
     width: 220px;
@@ -56,7 +58,8 @@ body {
 
 .catalogo-hero h2,
 .feria-hero h2,
-.dashboard-hero h2 {
+.dashboard-hero h2,
+.alertas-hero h2 {
     font-size: clamp(1.35rem, 3vw, 2.1rem);
     font-weight: 800;
     letter-spacing: -.02em;
@@ -64,13 +67,15 @@ body {
 
 .catalogo-hero p,
 .feria-hero p,
-.dashboard-hero p {
+.dashboard-hero p,
+.alertas-hero p {
     color: rgba(255, 255, 255, .82);
 }
 
 .catalogo-hero .hero-pill,
 .feria-hero .hero-pill,
-.dashboard-hero .hero-pill {
+.dashboard-hero .hero-pill,
+.alertas-hero .hero-pill {
     display: inline-flex;
     align-items: center;
     gap: .45rem;
@@ -668,6 +673,159 @@ body.modo-presentacion .metric-value {
     }
 }
 
+.alerta-resumen {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(15, 118, 110, .12);
+    border-left: 5px solid #94a3b8;
+    border-radius: 16px;
+    background: #fff;
+    color: var(--farma-tinta);
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(15, 118, 110, .07);
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.alerta-resumen:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--farma-sombra);
+}
+
+.alerta-resumen.activo {
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .13), var(--farma-sombra);
+}
+
+.alerta-resumen--rojo { border-left-color: var(--farma-rojo); }
+.alerta-resumen--ambar { border-left-color: var(--farma-ambar); }
+.alerta-resumen--gris { border-left-color: #64748b; }
+
+.alerta-semaforo {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #94a3b8;
+    box-shadow: 0 0 0 4px rgba(148, 163, 184, .18);
+}
+
+.alerta-resumen--rojo .alerta-semaforo {
+    background: var(--farma-rojo);
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, .17);
+    animation: latido 2s ease-in-out infinite;
+}
+
+.alerta-resumen--ambar .alerta-semaforo {
+    background: var(--farma-ambar);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, .18);
+}
+
+.alerta-resumen--gris .alerta-semaforo {
+    background: #64748b;
+    box-shadow: 0 0 0 4px rgba(100, 116, 139, .16);
+}
+
+@keyframes latido {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(220, 38, 38, .17); }
+    50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, .06); }
+}
+
+.alerta-resumen__cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.alerta-resumen__label {
+    color: #64748b;
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.alerta-resumen__valor {
+    font-size: 1.8rem;
+    line-height: 1.1;
+}
+
+.alerta-resumen__nota {
+    color: #7b908d;
+    font-size: .76rem;
+}
+
+.alerta-resumen__flecha {
+    flex: 0 0 auto;
+    color: #a9b9b6;
+    font-size: 1.25rem;
+}
+
+.alerta-resumen.activo .alerta-resumen__flecha {
+    color: var(--farma-verde);
+}
+
+.leyenda-semaforo {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35rem;
+    color: #64748b;
+    font-size: .74rem;
+}
+
+.punto {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.punto--rojo { background: var(--farma-rojo); }
+.punto--ambar { background: var(--farma-ambar); }
+.punto--gris { background: #64748b; }
+
+.alertas-tabs {
+    border-bottom-color: #dbe7e5;
+}
+
+.alertas-tabs .nav-link {
+    color: #4b6562;
+    font-weight: 600;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: 10px 10px 0 0;
+}
+
+.alertas-tabs .nav-link:hover {
+    color: var(--farma-verde);
+    background: rgba(15, 118, 110, .05);
+}
+
+.alertas-tabs .nav-link.active {
+    color: var(--farma-verde);
+    background: #fff;
+    border-bottom-color: var(--farma-verde);
+}
+
+.alertas-panel {
+    border-color: #dbe7e5 !important;
+    box-shadow: 0 10px 28px rgba(15, 118, 110, .06);
+}
+
+@media (max-width: 767.98px) {
+    .alerta-resumen {
+        padding: .85rem .9rem;
+    }
+
+    .alerta-resumen__valor {
+        font-size: 1.55rem;
+    }
+}
+
 @media (pointer: coarse) {
     .btn,
     .form-control,
@@ -688,7 +846,8 @@ body.modo-presentacion .metric-value {
 
     .catalogo-hero,
     .feria-hero,
-    .dashboard-hero {
+    .dashboard-hero,
+    .alertas-hero {
         border-radius: 18px;
     }
 
@@ -708,7 +867,8 @@ body.modo-presentacion .metric-value {
 
     .catalogo-hero .hero-pill,
     .feria-hero .hero-pill,
-    .dashboard-hero .hero-pill {
+    .dashboard-hero .hero-pill,
+    .alertas-hero .hero-pill {
         font-size: .66rem;
     }
 

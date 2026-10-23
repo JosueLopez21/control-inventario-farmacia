@@ -1,4 +1,7 @@
-@php($lote = $lote ?? null)
+@php
+    $lote = $lote ?? null;
+    $medicamentoSeleccionado = $medicamentoSeleccionado ?? null;
+@endphp
 
 <div class="row g-3">
     <div class="col-md-6">
@@ -6,7 +9,7 @@
         <select name="medicamento_id" id="medicamento_id" class="form-select @error('medicamento_id') is-invalid @enderror" required>
             <option value="">Selecciona un medicamento</option>
             @foreach ($medicamentos as $medicamento)
-                <option value="{{ $medicamento->id }}" @selected((string) old('medicamento_id', $lote?->medicamento_id) === (string) $medicamento->id)>{{ $medicamento->nombre_comercial }}</option>
+                <option value="{{ $medicamento->id }}" @selected((string) old('medicamento_id', $lote?->medicamento_id ?? $medicamentoSeleccionado) === (string) $medicamento->id)>{{ $medicamento->nombre_comercial }}</option>
             @endforeach
         </select>
         @error('medicamento_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
