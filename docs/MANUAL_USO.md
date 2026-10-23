@@ -138,27 +138,29 @@ Para entrar con credenciales, pulsa **Entrar al sistema** o abre `http://127.0.0
 
 Consulta los indicadores del día: ventas, ingresos, ticket promedio, medicamentos con stock bajo y lotes próximos a vencer. El menú lateral muestra solo los módulos permitidos para tu rol.
 
-El botón de **modo presentación** amplía la interfaz y oculta elementos secundarios para exposiciones. La preferencia se guarda en el navegador y se puede desactivar con el mismo botón.
+La cabecera del dashboard incluye una explicación en lenguaje simple de la política FEFO y los bloques de ventas y alertas llevan el ícono **ⓘ** para ampliarla sobre la marcha: así el público de la feria entiende por qué el sistema vende primero el lote que vence antes. Los botones del dashboard se redujeron al mínimo y el **modo presentación** vive ahora en la barra superior: amplía la interfaz y oculta elementos secundarios. La preferencia se guarda en el navegador y se desactiva con el mismo botón o la tecla `Escape`.
 
 ### Paso 3 — Registrar un medicamento y su lote
 
 1. Ve a **Medicamentos → Nuevo medicamento**.
 2. Completa categoría, laboratorio, nombre comercial, principio activo, presentación, precio y stock mínimo.
 3. Guarda y luego entra a **Lotes → Nuevo lote**.
-4. Registra el número de lote, la fecha de vencimiento y la cantidad disponible.
+4. El medicamento se elige con un **buscador**: escribe al menos 2 letras y aparecerá una lista con nombre comercial, principio activo, presentación, laboratorio y una etiqueta **Agotado** cuando corresponda. Puedes navegar con ↑ ↓ y elegir con `Enter`, o tocar la opción directamente. Si ya hay uno elegido, el formulario lo muestra en una tarjeta con botón **Cambiar**.
+5. Registra el número de lote, la fecha de vencimiento y la cantidad disponible.
 
-El número de lote es único y la fecha de vencimiento determina el orden FEFO de despacho.
+El número de lote es único y la fecha de vencimiento determina el orden FEFO de despacho. Al guardar el lote se muestra una **animación de confirmación** con el medicamento asociado y accesos directos para ver los lotes o registrar otro.
 
 ### Paso 4 — Registrar una venta
 
 1. Ve a **Ventas → Nueva venta**.
-2. Busca el medicamento por nombre o principio activo y agrégalo al carrito con la cantidad deseada.
-3. Ajusta cantidades, elimina líneas si hace falta y revisa el total.
-4. Pulsa **Registrar venta**.
+2. Busca el medicamento por nombre, principio activo o presentación: el **buscador inteligente** sugiere resultados mientras escribes, con ícono de categoría, precio, stock y una etiqueta si está por vencer o agotado.
+3. También puedes recorrer el abanico de **categorías** (chips con icono y color) y elegir el medicamento desde sus **tarjetas**.
+4. Agrégalo al carrito con la cantidad deseada, ajusta montos si hace falta y revisa el total.
+5. Pulsa **Registrar venta**.
 
 La pantalla táctil muestra el stock disponible y los controles grandes para operar en mostrador. Si JavaScript no está disponible, el sistema redirige al formulario clásico para completar la venta sin perder la operación.
 
-El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta puedes imprimir el comprobante.
+Al confirmar la venta se muestra una **animación de éxito** con el monto y accesos directos para imprimir el comprobante o volver al punto de venta. El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta puedes imprimir el comprobante.
 
 ### Paso 5 — Atender las alertas
 
@@ -214,7 +216,7 @@ Ejecutar la suite:
 php artisan test
 ```
 
-Resultado esperado: **63 pruebas aprobadas** (634 aserciones). Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación, ventas FEFO con bloqueo de vencidos y las pantallas de feria: portada, juego, asesor, alertas, POS y catálogo.
+Resultado esperado: **77 pruebas aprobadas** (759 aserciones). Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación, ventas FEFO con bloqueo de vencidos y las pantallas de feria: portada, juego, asesor, alertas, POS, selector de medicamento con búsqueda al registrar lotes y un barrido de todas las rutas para los tres roles.
 
 ---
 

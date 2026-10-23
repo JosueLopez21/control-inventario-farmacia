@@ -1,6 +1,6 @@
 # Sistema de Control de Inventario de una Farmacia
 
-Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, modo presentación y un punto de venta táctil con respaldo accesible sin JavaScript.
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, un punto de venta táctil con buscador inteligente, animaciones de venta exitosa y de lote registrado, un selector de medicamento con búsqueda al registrar lotes, y un respaldo accesible sin JavaScript.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
 **Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  
@@ -117,9 +117,11 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 - **Juego `/juego`:** ruleta de categorías con cinco giros, preguntas generadas desde el catálogo real, puntaje, mejor marca en `localStorage` y un reto rápido de lotes FEFO.
 - **Asesor `/asesor`:** orientación educativa para 18 síntomas leves, productos de venta libre con stock vigente, lote próximo a vencer y advertencias de alarma. El doctor solo consulta; administrador y farmacéutico pueden enviar el producto al POS existente.
 - **Catálogo:** tarjetas responsivas, filtros por categoría, búsqueda AJAX, paginación y detalle en modal.
-- **Dashboard:** indicadores animados, simulador de ventas y **modo presentación** para exposiciones.
+- **Dashboard:** indicadores animados, modo presentación en la barra superior y explicación de FEFO con ayuda **ⓘ** directamente en la pantalla; los botones se redujeron al mínimo.
+- **Punto de venta:** buscador inteligente con sugerencias mientras escribes (precio, stock, categoría y avisos de vencimiento o agotado), chips de categorías y tarjetas táctiles; si JavaScript no está disponible, respaldo clásico con carrito tradicional.
+- **Animaciones:** confirmación visual al registrar una venta exitosa (con monto comprobante y accesos directos) y al registrar un lote (con el medicamento asociado).
+- **Lotes:** al registrar un lote, el medicamento se elige con un buscador (por nombre, principio activo, presentación o laboratorio, con navegación de teclado, tecla `Enter`, etiqueta **Agotado** y botón **Cambiar**).
 - **Alertas:** semáforo por prioridad, pestañas y acciones directas para reponer o revisar lotes.
-- **Punto de venta:** interfaz táctil con carrito y respaldo clásico si JavaScript no está disponible.
 - **Acceso demo opcional:** definir `DEMO_ACCESS=true` en `.env` para mostrar los botones de ingreso demo de **farmacéutico** y **doctor**. Por defecto está deshabilitado (`false`).
 
 ---
