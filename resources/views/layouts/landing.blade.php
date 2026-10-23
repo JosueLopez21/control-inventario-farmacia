@@ -12,16 +12,10 @@
 </head>
 <body class="landing-body">
     <header class="landing-nav">
-        <div class="container d-flex align-items-center justify-content-between gap-3">
+        <div class="container">
             <a href="{{ route('bienvenida') }}" class="landing-marca">
                 <span class="landing-marca__icono"><i class="bi bi-heart-pulse-fill"></i></span>
-                <span>
-                    <strong>FarmaSalud</strong>
-                    <small>Control de inventario</small>
-                </span>
-            </a>
-            <a href="{{ route('login') }}" class="btn btn-light border fw-semibold">
-                <i class="bi bi-box-arrow-in-right me-1"></i>Iniciar sesión
+                <strong>FarmaSalud</strong>
             </a>
         </div>
     </header>
@@ -46,13 +40,9 @@
     </main>
 
     <footer class="landing-footer">
-        <div class="container d-flex flex-wrap justify-content-between gap-2">
-            <span><i class="bi bi-heart-pulse me-1"></i>FarmaSalud · Proyecto académico</span>
-            <span>Control de inventario, ventas y alertas con FEFO</span>
+        <div class="container text-center">
+            FarmaSalud · Proyecto académico
         </div>
     </footer>
-
-    <script src="{{ asset('js/feria.js') }}?v={{ filemtime(public_path('js/feria.js')) }}"></script>
-    @stack('scripts')
 </body>
 </html>

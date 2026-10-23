@@ -2,9 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Models\Categoria;
-use App\Models\Laboratorio;
-use App\Models\Medicamento;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -19,33 +16,29 @@ class BienvenidaTest extends TestCase
         $this->get('/medicamentos')->assertRedirect(route('bienvenida'));
     }
 
-    public function test_portada_muestra_modulos_y_estadisticas_sin_demo_por_defecto(): void
+    public function test_portada_muestra_un_solo_acceso_y_contenido_breve(): void
     {
         config(['feria.demo_access' => false]);
 
-        $categoria = Categoria::factory()->create(['nombre' => 'Analgésicos']);
-        $laboratorio = Laboratorio::factory()->create(['nombre' => 'Genfar']);
-        Medicamento::create([
-            'categoria_id' => $categoria->id,
-            'laboratorio_id' => $laboratorio->id,
-            'nombre_comercial' => 'Panadol Feria',
-            'principio_activo' => 'Paracetamol',
-            'presentacion' => 'Tabletas 500 mg x 20',
-            'precio_venta' => 12.50,
-            'stock_minimo' => 5,
-        ]);
-
         $respuesta = $this->get('/bienvenida');
+        $contenido = $respuesta->getContent();
 
         $respuesta->assertOk()
-            ->assertSee('La farmacia que se siente')
-            ->assertSee('Catálogo visual')
-            ->assertSee('POS táctil')
-            ->assertSee('data-contador="landingMedicamentos"', false)
-            ->assertSee('Mini reto')
-            ->assertSee('data-juego', false)
-            ->assertSee('Iniciar sesión')
+            ->assertSee('Control de inventario')
+            ->assertSee('Entrar al sistema')
+            ->assertSee('Inventario y lotes bajo control')
+            ->assertSee('Ventas seguras, primero lo que vence antes')
+            ->assertSee('Alertas de vencimiento y stock bajo')
+            ->assertSee('Profesional de la salud')
+            ->assertSee('img/doctora.webp', false)
+            ->assertDontSee('Iniciar sesión')
+            ->assertDontSee('Mini reto')
+            ->assertDontSee('¿Listo para recorrer la farmacia?')
+            ->assertDontSee('data-contador', false)
             ->assertDontSee('Entra a la demo sin escribir contraseñas');
+
+        $this->assertSame(1, substr_count($contenido, route('login')));
+        $this->assertFileExists(public_path('img/doctora.webp'));
     }
 
     public function test_portada_muestra_demo_cuando_esta_habilitada(): void
@@ -53,11 +46,16 @@ class BienvenidaTest extends TestCase
         config(['feria.demo_access' => true]);
 
         $respuesta = $this->get('/bienvenida');
+        $contenido = $respuesta->getContent();
 
         $respuesta->assertOk()
-            ->assertSee('Entra a la demo sin escribir contraseñas')
+            ->assertSee('Acceso rápido demo')
             ->assertSee(route('demo.entrar', ['rol' => 'farmaceutico']), false)
-            ->assertSee(route('demo.entrar', ['rol' => 'doctor']), false);
+            ->assertSee(route('demo.entrar', ['rol' => 'doctor']), false)
+            ->assertSee('Entrar al sistema')
+            ->assertDontSee('Iniciar sesión');
+
+        $this->assertSame(1, substr_count($contenido, route('login')));
     }
 
     public function test_usuario_autenticado_no_ve_la_portada(): void
