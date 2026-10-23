@@ -11,22 +11,7 @@
         <div class="col-lg-7">
             <span class="hero-pill mb-3"><i class="bi bi-sun"></i>Hola, {{ auth()->user()->name }}</span>
             <h2 class="mb-2">Tu farmacia, lista para la feria</h2>
-            <p class="mb-4">Mira el pulso del inventario, detecta lo urgente y deja que el sistema te muestre cómo se vende con FEFO.</p>
-            <div class="d-flex flex-wrap gap-2">
-                @if ($puedeVerVentas)
-                    <button type="button" class="btn btn-light btn-lg fw-semibold" id="btnSimularVenta" data-url="{{ route('simulador.venta') }}">
-                        <i class="bi bi-magic me-1"></i>Simular venta
-                    </button>
-                @endif
-                <a href="{{ route('medicamentos.index') }}" class="btn btn-outline-light btn-lg">
-                    <i class="bi bi-capsule me-1"></i>Explorar catálogo
-                </a>
-                @if ($puedeVerVentas)
-                    <a href="{{ route('reportes.index') }}" class="btn btn-outline-light btn-lg">
-                        <i class="bi bi-bar-chart me-1"></i>Reportes
-                    </a>
-                @endif
-            </div>
+            <p class="mb-0">Mira el pulso del inventario, detecta lo urgente y entiende cómo el sistema vende primero lo que vence antes <x-ayuda-fefo solo-icono />.</p>
         </div>
         <div class="col-lg-5 d-none d-lg-block">
             <div class="hero-visual" aria-hidden="true">
@@ -41,16 +26,12 @@
                 </div>
                 <div class="hero-visual-card hero-visual-card--mini">
                     <i class="bi bi-shield-check"></i>
-                    <span>Ventas seguras con FEFO</span>
+                    <span>Ventas seguras: sale primero lo que vence antes <x-ayuda-fefo solo-icono /></span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-@if ($puedeVerVentas)
-    <div id="resultadoSimulacion" class="mb-3" aria-live="polite"></div>
-@endif
 
 <div class="row g-3 mb-4">
     @if ($puedeVerVentas)

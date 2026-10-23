@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo', 'Nueva venta')
-@section('subtitulo', 'Punto de venta táctil · descuento FEFO automático')
+@section('subtitulo', 'Punto de venta táctil · descuento automático del lote que vence antes')
 
 @section('contenido')
 <div id="posApp"
@@ -90,7 +90,7 @@
                             <i class="bi bi-check2-circle me-1"></i>Confirmar venta
                         </button>
                         <a href="{{ route('ventas.index') }}" class="btn btn-outline-secondary w-100 mt-2">Cancelar</a>
-                        <p class="small text-muted mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>El sistema descuenta automáticamente del lote que vence primero (FEFO) y bloquea lotes vencidos.</p>
+                        <p class="small text-muted mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>El sistema descuenta automáticamente del lote que vence primero <x-ayuda-fefo sigla /> y bloquea lotes vencidos.</p>
                     </div>
                 </div>
             </div>

@@ -39,7 +39,7 @@
             <span class="alerta-resumen__cuerpo">
                 <span class="alerta-resumen__label">Por vencer (30 días)</span>
                 <strong class="alerta-resumen__valor" data-contador="totalPorVencer" data-valor="{{ $totalPorVencer }}" data-formato="numero">{{ $totalPorVencer }}</strong>
-                <span class="alerta-resumen__nota">Prioriza su salida con FEFO</span>
+                <span class="alerta-resumen__nota">Prioriza su salida: vence primero</span>
             </span>
             <i class="bi bi-arrow-right-circle alerta-resumen__flecha"></i>
         </button>

@@ -50,7 +50,7 @@ class DashboardController extends Controller
 
         return response()->json([
             'ok' => true,
-            'message' => 'Venta #' . $venta->id . ' registrada con FEFO.',
+            'message' => 'Venta #' . $venta->id . ' registrada. Se descontó primero el lote que vence antes.',
             'venta' => [
                 'id' => $venta->id,
                 'monto_total' => (float) $venta->monto_total,

@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h3 class="h6 fw-bold mb-0"><i class="bi bi-box-seam me-1 text-farma"></i>Lotes FEFO</h3>
+                    <h3 class="h6 fw-bold mb-0"><i class="bi bi-box-seam me-1 text-farma"></i>Lotes: sale primero lo que vence antes <x-ayuda-fefo solo-icono /></h3>
                     <span class="small text-muted" id="modalMedicamentoEstado"></span>
                 </div>
                 <div class="lotes-lista" id="modalMedicamentoLotes"></div>

@@ -45,18 +45,22 @@ class DashboardVisualTest extends TestCase
         return $medicamento;
     }
 
-    public function test_dashboard_muestra_hero_contadores_y_simulador_para_farmacia(): void
+    public function test_dashboard_muestra_hero_contadores_y_ayuda_de_venta_sin_botones(): void
     {
         $this->medicamentoConLote();
 
         $respuesta = $this->actingAs($this->usuario('farmaceutico'))->get('/');
 
         $respuesta->assertOk()
-            ->assertSee('Simular venta')
             ->assertSee('data-contador="ventasHoy"', false)
             ->assertSee('Presentación')
             ->assertSee('hero-visual', false)
-            ->assertSee('graficoVentas', false);
+            ->assertSee('graficoVentas', false)
+            ->assertSee('vende primero lo que vence antes')
+            ->assertSee('data-ayuda-fefo', false)
+            ->assertDontSee('btnSimularVenta', false)
+            ->assertDontSee('Simular venta')
+            ->assertDontSee('Explorar catálogo');
     }
 
     public function test_doctor_ve_dashboard_de_consulta_sin_simulador(): void

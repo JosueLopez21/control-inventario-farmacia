@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo', 'Nueva venta · formulario clásico')
-@section('subtitulo', 'Alternativa sin JavaScript · mismo descuento FEFO')
+@section('subtitulo', 'Alternativa sin JavaScript · mismo descuento del lote que vence antes')
 
 @section('contenido')
 <div class="row justify-content-center">
@@ -55,7 +55,7 @@
                         </table>
                     </div>
 
-                    <div class="alert alert-info py-2 small mt-3"><i class="bi bi-info-circle me-1"></i>El sistema validará el stock vigente y aplicará FEFO al confirmar. Los lotes vencidos nunca se venden.</div>
+                    <div class="alert alert-info py-2 small mt-3"><i class="bi bi-info-circle me-1"></i>El sistema validará el stock vigente y venderá primero lo que vence antes <x-ayuda-fefo sigla />. Los lotes vencidos nunca se venden.</div>
 
                     <div class="d-flex flex-wrap gap-2">
                         <button type="submit" class="btn btn-primary"><i class="bi bi-check2-circle me-1"></i>Registrar venta</button>
