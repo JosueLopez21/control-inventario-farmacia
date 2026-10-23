@@ -1,0 +1,45 @@
+# Solo para pruebas locales del contenedor. NO es la configuración de Render.
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "10000:10000"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:10000
+      # Clave de demostración, solo válida para este entorno local.
+      APP_KEY: "base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      LOG_CHANNEL: stderr
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_DATABASE: farmacia_inventario
+      DB_USERNAME: farmacia
+      DB_PASSWORD: farmacia
+      DB_SSLMODE: prefer
+      SESSION_DRIVER: database
+      CACHE_STORE: database
+      PORT: "10000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: farmacia_inventario
+      POSTGRES_USER: farmacia
+      POSTGRES_PASSWORD: farmacia
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U farmacia -d farmacia_inventario"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:

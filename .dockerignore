@@ -1,0 +1,34 @@
+# Control de versiones y metadatos del editor
+.git
+.gitignore
+.gitattributes
+.github
+.idea
+.vscode
+.editorconfig
+
+# Secretos y configuración local
+.env
+.env.*
+.auth.json
+
+# Dependencias instaladas en el host
+vendor
+node_modules
+
+# Artefactos que no deben entrar a la imagen
+tests
+docs
+scripts
+*.md
+phpunit.xml
+database/farmacia_inventario.sql
+docker-compose.yml
+
+# Cachés locales (Laravel las reconstruye al arrancar)
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/testing/*
+bootstrap/cache/*.php
