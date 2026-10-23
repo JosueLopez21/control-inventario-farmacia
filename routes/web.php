@@ -6,6 +6,7 @@ use App\Http\Controllers\BienvenidaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JuegoController;
 use App\Http\Controllers\LaboratorioController;
 use App\Http\Controllers\LoteController;
 use App\Http\Controllers\MedicamentoController;
@@ -41,6 +42,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/medicamentos', [MedicamentoController::class, 'index'])->name('medicamentos.index');
     Route::get('/lotes', [LoteController::class, 'index'])->name('lotes.index');
     Route::get('/alertas', [AlertaController::class, 'index'])->name('alertas.index');
+
+    // Juego educativo disponible para todos los roles.
+    Route::get('/juego', [JuegoController::class, 'index'])->name('juego.index');
+    Route::get('/juego/pregunta', [JuegoController::class, 'pregunta'])->name('juego.pregunta');
 
     // Inventario: administrador y farmacéutico.
     Route::middleware('rol:administrador,farmaceutico')->group(function () {
