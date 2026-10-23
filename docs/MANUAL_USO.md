@@ -171,7 +171,7 @@ Ejecutar la suite:
 php artisan test
 ```
 
-Resultado esperado: **25 pruebas aprobadas**. Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación y ventas FEFO con bloqueo de vencidos.
+Resultado esperado: **26 pruebas aprobadas**. Cubren autenticación, acceso por rol, CRUD de inventario, restricciones de eliminación y ventas FEFO con bloqueo de vencidos.
 
 ---
 

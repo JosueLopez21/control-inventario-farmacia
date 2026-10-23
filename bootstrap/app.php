@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Render termina el TLS en su proxy: confiar en las cabeceras reenviadas.
+        $middleware->trustProxies(at: '*');
+
         $middleware->alias([
             'rol' => VerificarRol::class,
         ]);

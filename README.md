@@ -127,7 +127,7 @@ Verifica las reglas de negocio, la política FEFO, el login y el acceso por role
 php artisan test
 ```
 
-Resultado esperado: **25 pruebas aprobadas**.
+Resultado esperado: **26 pruebas aprobadas**.
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**

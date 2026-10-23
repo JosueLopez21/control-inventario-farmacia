@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // En producción todas las URLs deben generarse con HTTPS.
+        if ($this->app->isProduction()) {
+            URL::forceScheme('https');
+        }
+
         Paginator::useBootstrapFive();
 
         Carbon::setLocale(config('app.locale'));
