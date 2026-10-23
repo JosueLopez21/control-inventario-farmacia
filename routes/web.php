@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlertaController;
+use App\Http\Controllers\AsesorController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BienvenidaController;
 use App\Http\Controllers\CategoriaController;
@@ -46,6 +47,9 @@ Route::middleware('auth')->group(function () {
     // Juego educativo disponible para todos los roles.
     Route::get('/juego', [JuegoController::class, 'index'])->name('juego.index');
     Route::get('/juego/pregunta', [JuegoController::class, 'pregunta'])->name('juego.pregunta');
+
+    // Asesor educativo de síntomas, disponible para todos los roles.
+    Route::get('/asesor', [AsesorController::class, 'index'])->name('asesor.index');
 
     // Inventario: administrador y farmacéutico.
     Route::middleware('rol:administrador,farmaceutico')->group(function () {

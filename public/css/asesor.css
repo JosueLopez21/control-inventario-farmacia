@@ -1,0 +1,327 @@
+.asesor-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: clamp(1.5rem, 4vw, 2.7rem);
+    color: #fff;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(250, 204, 21, .28), transparent 24%),
+        radial-gradient(circle at 8% 100%, rgba(45, 212, 191, .26), transparent 32%),
+        linear-gradient(125deg, #0f766e 0%, #0e7490 50%, #1e3a8a 100%);
+}
+
+.asesor-hero::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -150px;
+    width: 270px;
+    height: 270px;
+    border: 32px solid rgba(255, 255, 255, .08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.asesor-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.asesor-hero__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .35rem .7rem;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.asesor-hero h2 {
+    font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -.025em;
+}
+
+.asesor-hero p {
+    max-width: 52rem;
+    color: rgba(255, 255, 255, .82);
+}
+
+.asesor-hero__icono {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .14);
+    color: #99f6e4;
+    font-size: 1.8rem;
+}
+
+.asesor-etiqueta {
+    display: inline-block;
+    margin-bottom: .2rem;
+    color: #0f766e;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.asesor-btn {
+    min-height: 46px;
+}
+
+.asesor-selector .form-select {
+    min-height: 48px;
+}
+
+.asesor-aviso {
+    padding: .65rem .75rem;
+    border-radius: 10px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: .76rem;
+}
+
+.asesor-sintoma-icono {
+    display: grid;
+    flex: 0 0 auto;
+    width: 54px;
+    height: 54px;
+    place-items: center;
+    border-radius: 15px;
+    background: #e6f4f1;
+    color: var(--asesor-color, #0f766e);
+    font-size: 1.4rem;
+}
+
+.asesor-recomendacion {
+    display: flex;
+    align-items: flex-start;
+    padding: .75rem .9rem;
+    border-left: 4px solid #14b8a6;
+    border-radius: 0 10px 10px 0;
+    background: #f0fdfa;
+    color: #115e59;
+    font-size: .85rem;
+}
+
+.asesor-resultado {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .85rem;
+    padding: .8rem;
+    margin-bottom: .65rem;
+    border: 1px solid #e2e8e8;
+    border-radius: 13px;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.asesor-resultado:hover {
+    border-color: #b6e3dc;
+    box-shadow: 0 5px 16px rgba(15, 118, 110, .07);
+}
+
+.asesor-resultado:last-of-type {
+    margin-bottom: 0;
+}
+
+.asesor-resultado__icono {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--asesor-suave, #e6f4f1);
+    color: var(--asesor-color, #0f766e);
+    font-size: 1.15rem;
+}
+
+.asesor-resultado__cuerpo {
+    min-width: 0;
+}
+
+.asesor-resultado__detalle {
+    color: #64748b;
+    font-size: .78rem;
+}
+
+.asesor-categoria {
+    display: inline-flex;
+    padding: .18rem .45rem;
+    border-radius: 999px;
+    background: #e6f4f1;
+    color: #0f766e;
+    font-size: .64rem;
+    font-weight: 700;
+}
+
+.asesor-resultado__lote {
+    margin-top: .2rem;
+    color: #64748b;
+    font-size: .7rem;
+}
+
+.asesor-resultado__acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .2rem;
+    text-align: right;
+}
+
+.asesor-resultado__precio {
+    color: #0f766e;
+    font-size: .95rem;
+    font-weight: 800;
+}
+
+.asesor-resultado__stock {
+    color: #64748b;
+    font-size: .68rem;
+}
+
+.asesor-resultado__acciones .btn,
+.asesor-solo-lectura {
+    min-height: 34px;
+    margin-top: .2rem;
+    padding: .3rem .55rem;
+    border-radius: 8px;
+    font-size: .72rem;
+}
+
+.asesor-solo-lectura {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.asesor-vacio {
+    padding: 1.8rem 1rem;
+    border: 1px dashed #cbd5e1;
+    border-radius: 13px;
+    background: #f8fafc;
+    color: #64748b;
+    text-align: center;
+}
+
+.asesor-vacio i {
+    display: block;
+    margin-bottom: .4rem;
+    color: #94a3b8;
+    font-size: 2rem;
+}
+
+.asesor-inicio {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(20, 184, 166, .09), transparent 34%),
+        #fff;
+}
+
+.asesor-inicio__icono {
+    display: grid;
+    width: 76px;
+    height: 76px;
+    place-items: center;
+    border-radius: 22px;
+    background: #e6f4f1;
+    color: #0f766e;
+    font-size: 2rem;
+}
+
+.asesor-garantias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .45rem;
+}
+
+.asesor-garantias span {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .35rem .6rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+    .asesor-resultado {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .asesor-resultado__acciones {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: .55rem;
+        border-top: 1px solid #eef2f2;
+        text-align: left;
+    }
+
+    .asesor-resultado__acciones .btn,
+    .asesor-solo-lectura {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .asesor-hero {
+        border-radius: 18px;
+        padding: 1.25rem;
+    }
+
+    .asesor-hero h2 {
+        font-size: 1.55rem;
+    }
+
+    .asesor-hero__icono {
+        display: none;
+    }
+
+    .asesor-sintoma-icono {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+
+    .asesor-resultado {
+        padding: .65rem;
+        gap: .65rem;
+    }
+
+    .asesor-resultado__acciones {
+        justify-content: flex-start;
+        gap: .45rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .asesor-resultado {
+        transition: none !important;
+    }
+
+    .asesor-hero::after {
+        display: none;
+    }
+}

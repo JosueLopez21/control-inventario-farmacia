@@ -9,6 +9,7 @@
     $items[] = ['ruta' => 'lotes.index', 'activo' => 'lotes.*', 'icono' => 'bi-box-seam', 'texto' => 'Lotes', 'visible' => $user->puedeGestionarInventario()];
     $items[] = ['ruta' => 'alertas.index', 'activo' => 'alertas.*', 'icono' => 'bi-exclamation-triangle', 'texto' => 'Alertas', 'visible' => true];
     $items[] = ['ruta' => 'juego.index', 'activo' => 'juego.*', 'icono' => 'bi-dice-5', 'texto' => 'Juego', 'visible' => true];
+    $items[] = ['ruta' => 'asesor.index', 'activo' => 'asesor.*', 'icono' => 'bi-clipboard2-pulse', 'texto' => 'Asesor', 'visible' => true];
     $items[] = ['ruta' => 'categorias.index', 'activo' => 'categorias.*', 'icono' => 'bi-tags', 'texto' => 'Categorías', 'visible' => $user->puedeGestionarInventario()];
     $items[] = ['ruta' => 'laboratorios.index', 'activo' => 'laboratorios.*', 'icono' => 'bi-building', 'texto' => 'Laboratorios', 'visible' => $user->puedeGestionarInventario()];
     $items[] = ['ruta' => 'reportes.index', 'activo' => 'reportes.*', 'icono' => 'bi-bar-chart-line', 'texto' => 'Reportes', 'visible' => $user->puedeOperarVentas()];
