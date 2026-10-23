@@ -154,7 +154,7 @@ La base recién creada queda vacía. Para cargar los usuarios demo:
    php artisan db:seed --force
    ```
 
-   El seed de feria genera 10 categorías, 12 laboratorios, 300 medicamentos, 750 lotes y 500 ventas con sus detalles, incluyendo escenarios de vencimiento y stock bajo.
+   El seed de feria genera 10 categorías, 12 laboratorios, 1000 medicamentos, 2000 lotes y 1000 ventas con sus detalles, incluyendo escenarios de vencimiento y stock bajo.
 
 > `UserSeeder` usa `updateOrCreate`: si se vuelve a ejecutar, restablece las contraseñas de los tres usuarios demo. No ejecutarlo en una base con usuarios reales sin revisar antes el seeder.
 

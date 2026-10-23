@@ -2,7 +2,7 @@
 
 Este documento contiene las consultas de consola ejecutables en **Laravel Tinker** (`php artisan tinker`), diseñadas para evidenciar el cumplimiento de las reglas de negocio, restricciones de integridad relacional en PostgreSQL, métodos funcionales de Collections y funciones de agregación.
 
-> **Nota de conteos:** el catálogo de demostración cambió a **300 medicamentos, 750 lotes y 500 ventas**. Las salidas numéricas de este documento son históricas; los bloques de consulta siguen siendo válidos, pero sus totales ya no coinciden con el seed actual.
+> **Nota de conteos:** el catálogo de demostración cambió a **1000 medicamentos, 2000 lotes y 1000 ventas**. Las salidas numéricas de este documento son históricas; los bloques de consulta siguen siendo válidos, pero sus totales ya no coinciden con el seed actual.
 
 ---
 

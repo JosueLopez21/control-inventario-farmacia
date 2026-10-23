@@ -57,8 +57,8 @@ Este comando crea el esquema completo y siembra:
 
 - 3 usuarios del sistema.
 - 10 categorías y 12 laboratorios.
-- 60 principios activos, 300 medicamentos, 750 lotes y 500 ventas con sus detalles.
-- 75 lotes vencidos, 75 próximos a vencer, 24 medicamentos con stock bajo y 15 agotados para probar las alertas.
+- 60 principios activos, 1000 medicamentos, 2000 lotes y 1000 ventas con sus detalles.
+- 200 lotes vencidos, 200 próximos a vencer, 80 medicamentos con stock bajo y 30 agotados para probar las alertas.
 
 > `migrate:fresh` elimina las tablas existentes. No lo ejecutes sobre una base con información real.
 

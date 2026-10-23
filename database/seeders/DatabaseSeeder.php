@@ -11,6 +11,7 @@ use App\Models\Venta;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
     /**
      * Siembra un catálogo realista y liviano para la demostración de feria.
      *
-     * El escenario es determinista: 300 medicamentos, 750 lotes y 500 ventas.
+     * El escenario es determinista: 1000 medicamentos, 2000 lotes y 1000 ventas.
      * Se garantizan lotes vencidos, próximos a vencer, stock bajo y agotados
      * sin recurrir a consultas por registro ni a VentaService.
      */
@@ -68,63 +69,74 @@ class DatabaseSeeder extends Seeder
         $medicamentosData = [];
 
         foreach ($catalogo['medicamentos'] as $indice => $base) {
-            foreach ($catalogo['variantes'] as $variante => $sufijo) {
-                $categoria = $categorias[$base['categoria']];
-                $laboratorio = $laboratorios[($indice + $variante * 3) % $laboratorios->count()];
-                $nombre = trim($base['marca'].' '.$sufijo);
-                $precio = round(
-                    $catalogo['precios_base'][$base['categoria']]
-                    + ($indice % 7) * 0.75
-                    + $variante * 2.25,
-                    2
-                );
+            $cantidadLaboratorios = $base['otc'] ? 4 : 3;
 
-                $medicamentosData[] = [
-                    'categoria_id' => $categoria->id,
-                    'laboratorio_id' => $laboratorio->id,
-                    'nombre_comercial' => $nombre,
-                    'principio_activo' => $base['principio_activo'],
-                    'presentacion' => $catalogo['presentaciones'][$base['categoria']][$variante],
-                    'precio_venta' => $precio,
-                    'stock_minimo' => 5 + (($indice * 3 + $variante) % 21),
-                    'created_at' => $ahora,
-                    'updated_at' => $ahora,
-                ];
+            foreach ($base['formas'] as $formacion => $forma) {
+                for ($posicionLaboratorio = 0; $posicionLaboratorio < $cantidadLaboratorios; $posicionLaboratorio++) {
+                    $categoria = $categorias[$base['categoria']];
+                    $laboratorio = $laboratorios[($indice + $formacion + $posicionLaboratorio) % $laboratorios->count()];
+                    $nombre = trim($base['marca'].' '.Str::before($forma, ' x '));
+                    $precio = round(
+                        $catalogo['precios_base'][$base['categoria']]
+                        + $formacion * 1.75
+                        + (($indice + $posicionLaboratorio) % 6) * 0.35,
+                        2
+                    );
+
+                    $medicamentosData[] = [
+                        'categoria_id' => $categoria->id,
+                        'laboratorio_id' => $laboratorio->id,
+                        'nombre_comercial' => $nombre,
+                        'principio_activo' => $base['principio_activo'],
+                        'presentacion' => $forma,
+                        'precio_venta' => $precio,
+                        'stock_minimo' => 5 + (($indice * 3 + $formacion + $posicionLaboratorio) % 16),
+                        'created_at' => $ahora,
+                        'updated_at' => $ahora,
+                    ];
+                }
             }
         }
 
-        Medicamento::insert($medicamentosData);
+        if (count($medicamentosData) !== 1000) {
+            throw new \RuntimeException('El catálogo debe generar exactamente 1000 medicamentos.');
+        }
+
+        foreach (array_chunk($medicamentosData, 500) as $bloque) {
+            Medicamento::insert($bloque);
+        }
+
         $medicamentos = Medicamento::orderBy('id')->get();
 
-        $this->command->info('Creando 750 lotes...');
+        $this->command->info('Creando 2000 lotes...');
 
         $lotesData = [];
         $numeroLote = 1;
-        $extra = 0;
-        $totalLotes = 750;
 
         foreach ($medicamentos as $indice => $medicamento) {
-            $cantidadLotes = $indice % 2 === 0 ? 3 : 2;
+            $cantidadLotes = $indice < 300 ? 1 : ($indice < 700 ? 2 : 3);
 
             for ($posicion = 0; $posicion < $cantidadLotes; $posicion++) {
-                $esBase = $posicion === 0;
                 $tipo = 'futuro';
 
-                if (! $esBase) {
-                    $tipo = $extra < 75 ? 'vencido' : ($extra < 150 ? 'por_vencer' : 'futuro');
-                    $extra++;
+                if ($indice >= 300 && $indice < 500 && $posicion === 1) {
+                    $tipo = 'vencido';
+                } elseif ($indice >= 500 && $indice < 700 && $posicion === 1) {
+                    $tipo = 'por_vencer';
                 }
 
                 $fecha = match ($tipo) {
-                    'vencido' => $ahora->copy()->subDays(mt_rand(15, 180)),
+                    'vencido' => $ahora->copy()->subDays(mt_rand(20, 240)),
                     'por_vencer' => $ahora->copy()->addDays(mt_rand(2, 28)),
-                    default => $ahora->copy()->addMonths(mt_rand($esBase ? 4 : 3, $esBase ? 24 : 18)),
+                    default => $ahora->copy()->addMonths(
+                        mt_rand($posicion === 0 ? 6 : 4, $posicion === 0 ? 24 : 20)
+                    ),
                 };
 
                 $stock = match ($tipo) {
-                    'vencido' => mt_rand(10, 80),
-                    'por_vencer' => mt_rand(10, 45),
-                    default => mt_rand($esBase ? 60 : 30, $esBase ? 180 : 120),
+                    'vencido' => mt_rand(10, 60),
+                    'por_vencer' => mt_rand(10, 40),
+                    default => mt_rand($posicion === 0 ? 50 : 20, $posicion === 0 ? 160 : 100),
                 };
 
                 $lotesData[] = [
@@ -138,14 +150,17 @@ class DatabaseSeeder extends Seeder
             }
         }
 
-        if (count($lotesData) !== $totalLotes) {
-            throw new \RuntimeException('El catálogo debe generar exactamente '.$totalLotes.' lotes.');
+        if (count($lotesData) !== 2000) {
+            throw new \RuntimeException('El catálogo debe generar exactamente 2000 lotes.');
         }
 
-        Lote::insert($lotesData);
+        foreach (array_chunk($lotesData, 500) as $bloque) {
+            Lote::insert($bloque);
+        }
+
         $lotes = Lote::with('medicamento:id,precio_venta')->get();
 
-        $this->command->info('Creando 500 ventas de demostración...');
+        $this->command->info('Creando 1000 ventas de demostración...');
 
         $hoy = $ahora->copy()->startOfDay();
         $limitePorVencer = $hoy->copy()->addDays(30);
@@ -158,9 +173,16 @@ class DatabaseSeeder extends Seeder
         $stockTemporal = $lotesVendibles->mapWithKeys(fn (Lote $lote) => [$lote->id => $lote->cantidad_stock]);
         $detallesData = [];
         $minutosTranscurridos = max(1, $hoy->diffInMinutes($ahora));
+        $ventasCreadas = 0;
+        $totalVentas = 1000;
+        $intentosVenta = 0;
 
-        for ($indiceVenta = 0; $indiceVenta < 500; $indiceVenta++) {
-            $fechaVenta = $indiceVenta < 10
+        while ($ventasCreadas < $totalVentas) {
+            if (++$intentosVenta > $totalVentas * 3) {
+                throw new \RuntimeException('No se pudieron generar las 1000 ventas del escenario.');
+            }
+
+            $fechaVenta = $ventasCreadas < 10
                 ? $ahora->copy()->subMinutes(mt_rand(0, min(600, $minutosTranscurridos)))
                 : $ahora->copy()->subDays(mt_rand(1, 180))->setTime(mt_rand(8, 20), mt_rand(0, 59));
 
@@ -201,7 +223,11 @@ class DatabaseSeeder extends Seeder
 
             if ($detallesCreados === 0) {
                 $venta->delete();
+
+                continue;
             }
+
+            $ventasCreadas++;
         }
 
         foreach (array_chunk($detallesData, 1000) as $bloque) {
@@ -218,19 +244,8 @@ class DatabaseSeeder extends Seeder
 
         $this->command->info('Ajustando escenarios de alertas...');
 
-        $medicamentosConPorVencer = Lote::query()
-            ->whereBetween('fecha_vencimiento', [$hoy->toDateString(), $limitePorVencer->toDateString()])
-            ->where('cantidad_stock', '>', 0)
-            ->pluck('medicamento_id')
-            ->unique();
-
-        $candidatos = $medicamentos
-            ->whereNotIn('id', $medicamentosConPorVencer)
-            ->sortBy('id')
-            ->values();
-
-        $agotados = $candidatos->take(15);
-        $stockBajo = $candidatos->slice(15, 24);
+        $agotados = $medicamentos->slice(80, 30);
+        $stockBajo = $medicamentos->slice(0, 80);
 
         foreach ($agotados as $medicamento) {
             Lote::query()

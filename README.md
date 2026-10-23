@@ -87,7 +87,7 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
    ```bash
    php artisan migrate:fresh --seed
    ```
-   *(Este comando crea las 6 tablas con sus restricciones CHECK e inserta 3 usuarios, 10 categorías, 12 laboratorios, 60 principios activos, 300 medicamentos, 750 lotes y 500 ventas con sus detalles. Incluye 75 lotes vencidos, 75 próximos a vencer, 24 medicamentos con stock bajo y 15 agotados para probar las alertas).*
+   *(Este comando crea las 6 tablas con sus restricciones CHECK e inserta 3 usuarios, 10 categorías, 12 laboratorios, 60 principios activos, 1000 medicamentos, 2000 lotes y 1000 ventas con sus detalles. Incluye 200 lotes vencidos, 200 próximos a vencer, 80 medicamentos con stock bajo y 30 agotados para probar las alertas).*
 
 6. **Iniciar el servidor:**
    ```bash

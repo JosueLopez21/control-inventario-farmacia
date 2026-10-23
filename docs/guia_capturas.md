@@ -18,12 +18,12 @@ Esta guía detalla el orden exacto de comandos que debes ejecutar en tu terminal
   2. El bloque final con el conteo real del catálogo de feria:
      * `Categorías: 10`
      * `Laboratorios: 12`
-     * `Medicamentos: 300`
-     * `Lotes: 750`
-     * `Ventas: 500`
-     * `Detalles: 1234`
-     * `Lotes vencidos: 75`
-     * `Por vencer: 75`
+     * `Medicamentos: 1000`
+     * `Lotes: 2000`
+     * `Ventas: 1000`
+     * `Detalles: 2486`
+     * `Lotes vencidos: 200`
+     * `Por vencer: 200`
 
 ---
 
@@ -129,7 +129,7 @@ use App\Models\Categoria; use App\Models\Laboratorio; use App\Models\Medicamento
   ```php
   ['total' => Lote::count(), 'vigentes_con_stock' => Lote::where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)->count(), 'vencidos' => Lote::where('fecha_vencimiento', '<', now()->toDateString())->count(), 'agotados' => Lote::where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', 0)->count()];
   ```
-* **Qué debe verse:** Arreglo con `total => 750, vigentes_con_stock => 660, vencidos => 75, agotados => 15`.
+* **Qué debe verse:** Arreglo con `total => 2000, vigentes_con_stock => 1770, vencidos => 200, agotados => 30`.
 
 ---
 
@@ -138,7 +138,7 @@ use App\Models\Categoria; use App\Models\Laboratorio; use App\Models\Medicamento
   ```php
   ['total_ventas' => Venta::count(), 'recaudacion_total' => '$' . number_format(Venta::sum('monto_total'), 2), 'ticket_promedio' => '$' . number_format(Venta::avg('monto_total'), 2), 'unidades_dispensadas' => DetalleVenta::sum('cantidad')];
   ```
-* **Qué debe verse:** Arreglo con `total_ventas => 500` y las métricas de recaudación, ticket promedio y unidades calculadas sobre el seed actual.
+* **Qué debe verse:** Arreglo con `total_ventas => 1000` y las métricas de recaudación, ticket promedio y unidades calculadas sobre el seed actual.
 
 ---
 
