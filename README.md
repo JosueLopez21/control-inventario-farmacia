@@ -1,5 +1,7 @@
 # Sistema de Control de Inventario de una Farmacia
 
+> **Despliegue en producción:** consulta la [guía de despliegue en Render y Neon](docs/DESPLIEGUE.md).
+
 Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
@@ -127,7 +129,7 @@ Verifica las reglas de negocio, la política FEFO, el login y el acceso por role
 php artisan test
 ```
 
-Resultado esperado: **25 pruebas aprobadas**.
+Resultado esperado: **27 pruebas aprobadas**.
 
 ### Ejecución de las Consultas en Tinker
 * **Modo interactivo manual:**
