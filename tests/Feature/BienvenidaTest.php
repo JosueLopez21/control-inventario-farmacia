@@ -42,6 +42,8 @@ class BienvenidaTest extends TestCase
             ->assertSee('Catálogo visual')
             ->assertSee('POS táctil')
             ->assertSee('data-contador="landingMedicamentos"', false)
+            ->assertSee('Mini reto')
+            ->assertSee('data-juego', false)
             ->assertSee('Iniciar sesión')
             ->assertDontSee('Entra a la demo sin escribir contraseñas');
     }

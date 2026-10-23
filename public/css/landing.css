@@ -607,3 +607,126 @@
         padding: .85rem;
     }
 }
+
+.landing-reto {
+    padding: 0 0 clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.landing-reto__caja {
+    padding: clamp(1.3rem, 3vw, 2.2rem);
+    border: 1px solid rgba(15, 118, 110, .12);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 94% 12%, rgba(250, 204, 21, .16), transparent 26%),
+        linear-gradient(135deg, #ffffff 0%, #f3fbf9 100%);
+    box-shadow: 0 18px 44px rgba(15, 118, 110, .09);
+}
+
+.landing-reto h2 {
+    margin: .9rem 0 .5rem;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.landing-reto p {
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.reto-feedback {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .7rem .8rem;
+    border: 1px solid #dbe7e5;
+    border-radius: 12px;
+    background: #fff;
+    color: #4b6562;
+    font-size: .82rem;
+}
+
+.reto-feedback i {
+    color: var(--farma-verde);
+    font-size: 1rem;
+}
+
+.reto-feedback--ok {
+    border-color: #a7f3d0;
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.reto-feedback--ok i { color: #059669; }
+
+.reto-feedback--error {
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.reto-feedback--error i { color: #dc2626; }
+
+.reto-lote {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid #dbe7e5;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--farma-tinta);
+    text-align: left;
+    transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.reto-lote:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: var(--farma-verde);
+    box-shadow: 0 10px 22px rgba(15, 118, 110, .12);
+}
+
+.reto-lote__etiqueta {
+    color: var(--farma-verde);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.reto-lote strong {
+    margin: .35rem 0 .2rem;
+    font-size: .95rem;
+}
+
+.reto-lote__stock {
+    color: #7b908d;
+    font-size: .74rem;
+}
+
+.reto-lote--vencido {
+    border-style: dashed;
+}
+
+.reto-lote--correcto {
+    border-color: #10b981;
+    background: #ecfdf5;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, .16);
+}
+
+.reto-lote--incorrecto {
+    border-color: #ef4444;
+    background: #fef2f2;
+    animation: sacudir .3s ease;
+}
+
+.reto-lote:disabled {
+    opacity: .7;
+}
+
+@keyframes sacudir {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}

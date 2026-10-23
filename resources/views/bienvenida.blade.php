@@ -113,6 +113,52 @@
     </div>
 </section>
 
+<section class="landing-reto" id="reto">
+    <div class="container">
+        <div class="landing-reto__caja">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <span class="landing-badge landing-badge--oscuro"><i class="bi bi-controller"></i>Mini reto</span>
+                    <h2>¿Qué lote sale primero?</h2>
+                    <p>Un cliente pide una caja de Panadol. Elige el lote correcto según FEFO y descubre si la farmacia está segura.</p>
+                    <div class="reto-feedback" id="retoFeedback" aria-live="polite">
+                        <i class="bi bi-question-circle"></i>
+                        <span>Toca un lote para responder.</span>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary mt-3 d-none" id="retoReiniciar">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i>Reintentar
+                    </button>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3" data-juego>
+                        <div class="col-sm-4">
+                            <button type="button" class="reto-lote" data-correcta="0">
+                                <span class="reto-lote__etiqueta">Lote A</span>
+                                <strong>Vence en 20 días</strong>
+                                <span class="reto-lote__stock">Stock: 8</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="reto-lote" data-correcta="1">
+                                <span class="reto-lote__etiqueta">Lote B</span>
+                                <strong>Vence en 13 días</strong>
+                                <span class="reto-lote__stock">Stock: 3</span>
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="reto-lote reto-lote--vencido" data-correcta="0">
+                                <span class="reto-lote__etiqueta">Lote C</span>
+                                <strong>Venció hace 2 días</strong>
+                                <span class="reto-lote__stock">Stock: 15</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="landing-seccion" id="modulos">
     <div class="container">
         <div class="landing-titulo">
@@ -223,3 +269,7 @@
     </div>
 </section>
 @endsection
+
+@push('scripts')
+<script src="{{ asset('js/juego.js') }}?v={{ filemtime(public_path('js/juego.js')) }}"></script>
+@endpush
