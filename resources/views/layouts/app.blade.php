@@ -97,6 +97,9 @@
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/feria.css') }}?v={{ filemtime(public_path('css/feria.css')) }}">
+    @if (session('animacion'))
+        <link rel="stylesheet" href="{{ asset('css/animaciones.css') }}?v={{ filemtime(public_path('css/animaciones.css')) }}">
+    @endif
     @stack('estilos')
 </head>
 <body>
@@ -151,7 +154,7 @@
         </header>
 
         <main class="app-content flex-grow-1">
-            @if (session('exito'))
+            @if (session('exito') && ! session('animacion'))
                 <div class="alert alert-success alert-dismissible fade show flash-alert" role="alert">
                     <i class="bi bi-check-circle-fill me-1"></i> {{ session('exito') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
@@ -191,6 +194,10 @@
         </div>
     </div>
 
+    @if (session('animacion'))
+        <x-animacion-exito :tipo="session('animacion')" :datos="session('animacion_datos', [])" />
+    @endif
+
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/feria.js') }}?v={{ filemtime(public_path('js/feria.js')) }}"></script>
     <script>
@@ -208,6 +215,9 @@
             bootstrap.Modal.getOrCreateInstance(document.getElementById('modalEliminar')).show();
         });
     </script>
+    @if (session('animacion'))
+        <script src="{{ asset('js/animaciones.js') }}?v={{ filemtime(public_path('js/animaciones.js')) }}"></script>
+    @endif
     @stack('scripts')
 </body>
 </html>

@@ -51,6 +51,45 @@ class VentaTest extends TestCase
         $this->assertEquals(70.0, (float) $venta->monto_total);
     }
 
+    public function test_venta_exitosa_muestra_overlay_y_no_repite_al_recargar(): void
+    {
+        $medicamento = Medicamento::factory()->create(['precio_venta' => 12.50]);
+
+        Lote::create([
+            'medicamento_id' => $medicamento->id,
+            'numero_lote' => 'LOT-OVERLAY-001',
+            'fecha_vencimiento' => now()->addMonths(4)->toDateString(),
+            'cantidad_stock' => 10,
+        ]);
+
+        $usuario = $this->farmaceutico();
+
+        $respuesta = $this->actingAs($usuario)->post('/ventas', [
+            'items' => [
+                ['medicamento_id' => $medicamento->id, 'cantidad' => 2],
+            ],
+        ]);
+
+        $venta = Venta::first();
+        $respuesta->assertRedirect(route('ventas.show', $venta));
+        $respuesta->assertSessionHas('animacion', 'venta');
+
+        $destino = $this->actingAs($usuario)->get(route('ventas.show', $venta));
+
+        $destino->assertOk()
+            ->assertSee('data-animacion-exito', false)
+            ->assertSee('¡Venta exitosa!', false)
+            ->assertSee('Ver comprobante')
+            ->assertSee('Nueva venta')
+            ->assertSee(formato_bs($venta->monto_total));
+
+        $recarga = $this->actingAs($usuario)->get(route('ventas.show', $venta));
+
+        $recarga->assertOk()
+            ->assertDontSee('data-animacion-exito', false)
+            ->assertDontSee('¡Venta exitosa!', false);
+    }
+
     public function test_venta_rechazada_cuando_el_unico_lote_esta_vencido(): void
     {
         $medicamento = Medicamento::factory()->create(['precio_venta' => 10.00]);

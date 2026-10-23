@@ -47,9 +47,19 @@ class LoteController extends Controller
 
     public function store(LoteRequest $request): RedirectResponse
     {
-        Lote::create($request->validated());
+        $lote = Lote::create($request->validated());
+        $lote->loadMissing('medicamento:id,nombre_comercial');
 
-        return redirect()->route('lotes.index')->with('exito', 'Lote registrado correctamente.');
+        return redirect()
+            ->route('lotes.index')
+            ->with('exito', 'Lote registrado correctamente.')
+            ->with('animacion', 'lote')
+            ->with('animacion_datos', [
+                'numero_lote' => $lote->numero_lote,
+                'medicamento' => $lote->medicamento?->nombre_comercial ?? 'Medicamento',
+                'ver_lotes' => route('lotes.index'),
+                'otro' => route('lotes.create'),
+            ]);
     }
 
     public function edit(Lote $lote): View

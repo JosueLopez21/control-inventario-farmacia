@@ -3,9 +3,12 @@
 namespace Tests\Feature;
 
 use App\Models\Categoria;
+use App\Models\DetalleVenta;
 use App\Models\Laboratorio;
+use App\Models\Lote;
 use App\Models\Medicamento;
 use App\Models\User;
+use App\Models\Venta;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -75,6 +78,38 @@ class InventarioTest extends TestCase
         $this->assertDatabaseHas('lotes', ['numero_lote' => 'LOT-TEST-001', 'cantidad_stock' => 50]);
     }
 
+    public function test_lote_registrado_muestra_overlay_y_no_repite_al_recargar(): void
+    {
+        $medicamento = Medicamento::factory()->create(['nombre_comercial' => 'Medicamento Overlay']);
+        $usuario = $this->admin();
+
+        $respuesta = $this->actingAs($usuario)->post('/lotes', [
+            'medicamento_id' => $medicamento->id,
+            'numero_lote' => 'LOT-OVERLAY-002',
+            'fecha_vencimiento' => now()->addMonths(7)->toDateString(),
+            'cantidad_stock' => 35,
+        ]);
+
+        $respuesta->assertRedirect(route('lotes.index'));
+        $respuesta->assertSessionHas('animacion', 'lote');
+
+        $destino = $this->actingAs($usuario)->get(route('lotes.index'));
+
+        $destino->assertOk()
+            ->assertSee('data-animacion-exito', false)
+            ->assertSee('¡Lote registrado!', false)
+            ->assertSee('LOT-OVERLAY-002')
+            ->assertSee('Medicamento Overlay')
+            ->assertSee('Ver lotes')
+            ->assertSee('Registrar otro');
+
+        $recarga = $this->actingAs($usuario)->get(route('lotes.index'));
+
+        $recarga->assertOk()
+            ->assertDontSee('data-animacion-exito', false)
+            ->assertDontSee('¡Lote registrado!', false);
+    }
+
     public function test_no_se_puede_registrar_lote_con_numero_duplicado(): void
     {
         $medicamento = Medicamento::factory()->create();
@@ -114,14 +149,14 @@ class InventarioTest extends TestCase
     public function test_eliminar_lote_con_ventas_muestra_mensaje_y_no_error_500(): void
     {
         $medicamento = Medicamento::factory()->create();
-        $lote = \App\Models\Lote::create([
+        $lote = Lote::create([
             'medicamento_id' => $medicamento->id,
             'numero_lote' => 'LOT-CON-VENTA',
             'fecha_vencimiento' => now()->addYear()->toDateString(),
             'cantidad_stock' => 20,
         ]);
-        \App\Models\DetalleVenta::create([
-            'venta_id' => \App\Models\Venta::create(['fecha_venta' => now(), 'monto_total' => 10])->id,
+        DetalleVenta::create([
+            'venta_id' => Venta::create(['fecha_venta' => now(), 'monto_total' => 10])->id,
             'lote_id' => $lote->id,
             'cantidad' => 1,
             'precio_unitario' => 10,

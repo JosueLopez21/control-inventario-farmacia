@@ -1,0 +1,273 @@
+.animacion-exito {
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    display: grid;
+    padding: 1rem;
+    place-items: center;
+    background: rgba(6, 35, 32, .66);
+    backdrop-filter: blur(3px);
+    animation: animacion-fondo .22s ease both;
+}
+
+.animacion-exito__panel {
+    position: relative;
+    width: min(430px, 100%);
+    padding: 1.6rem 1.25rem 1.35rem;
+    border: 1px solid rgba(15, 118, 110, .12);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 28px 70px rgba(2, 30, 27, .32);
+    text-align: center;
+    animation: animacion-panel .3s cubic-bezier(.2, .9, .3, 1.15) both;
+}
+
+.animacion-exito__cerrar {
+    position: absolute;
+    top: .55rem;
+    right: .55rem;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: #f1f7f6;
+    color: #48615e;
+}
+
+.animacion-exito__cerrar:hover,
+.animacion-exito__cerrar:focus-visible {
+    background: #e2f1ee;
+    color: #0f766e;
+}
+
+.animacion-exito__visual {
+    display: grid;
+    width: 140px;
+    height: 140px;
+    margin: .4rem auto .85rem;
+    place-items: center;
+}
+
+.animacion-verificacion {
+    width: 140px;
+    height: 140px;
+    overflow: visible;
+}
+
+.animacion-verificacion__halo {
+    fill: #dcfce7;
+    opacity: 0;
+    animation: animacion-halo .3s ease .1s forwards;
+}
+
+.animacion-verificacion__aro {
+    fill: none;
+    stroke: #16a34a;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transform: rotate(-90deg);
+    transform-origin: 70px 70px;
+    animation: animacion-dibujar .55s ease .12s forwards;
+}
+
+.animacion-verificacion__relleno {
+    fill: #16a34a;
+    opacity: 0;
+    transform: scale(.25);
+    transform-origin: 70px 70px;
+    animation: animacion-relleno .36s cubic-bezier(.2, .9, .3, 1.2) .38s forwards;
+}
+
+.animacion-verificacion__check {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 11;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: animacion-dibujar .36s ease .58s forwards;
+}
+
+.animacion-camion {
+    width: min(280px, 100%);
+    height: auto;
+    overflow: visible;
+}
+
+.animacion-camion__via {
+    stroke: #cbd5d3;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 10 12;
+}
+
+.animacion-camion__vehiculo {
+    animation: animacion-camion-entra .95s cubic-bezier(.22, 1.12, .36, 1) .08s both;
+}
+
+.animacion-camion__caja {
+    fill: #0f766e;
+}
+
+.animacion-camion__cabina {
+    fill: #115e59;
+}
+
+.animacion-camion__ventana {
+    fill: #ccfbf1;
+}
+
+.animacion-camion__rueda {
+    fill: #1f2937;
+}
+
+.animacion-camion__rin {
+    fill: #f8fafc;
+}
+
+.animacion-camion__check {
+    opacity: 0;
+    transform: scale(.35);
+    transform-origin: 205px 34px;
+    animation: animacion-check-pop .3s cubic-bezier(.2, .9, .3, 1.25) .9s both;
+}
+
+.animacion-camion__check circle {
+    fill: #16a34a;
+}
+
+.animacion-camion__check path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.animacion-exito__titulo {
+    margin-bottom: .35rem;
+    color: #143c38;
+    font-size: clamp(1.35rem, 5vw, 1.65rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.animacion-exito__detalle {
+    max-width: 22rem;
+    margin: 0 auto 1.15rem;
+    color: #5b716e;
+    font-size: .92rem;
+}
+
+.animacion-exito__detalle strong {
+    color: #0f766e;
+}
+
+.animacion-exito__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+
+.animacion-exito__acciones .btn {
+    flex: 1 1 160px;
+    min-height: 48px;
+}
+
+body.sin-scroll {
+    overflow: hidden;
+}
+
+@keyframes animacion-fondo {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes animacion-panel {
+    from { opacity: 0; transform: translateY(12px) scale(.96); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes animacion-halo {
+    from { opacity: 0; transform: scale(.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes animacion-dibujar {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes animacion-relleno {
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes animacion-camion-entra {
+    0% { opacity: 0; transform: translateX(-180px); }
+    72% { opacity: 1; transform: translateX(9px); }
+    86% { transform: translateX(-4px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes animacion-check-pop {
+    from { opacity: 0; transform: scale(.35); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 575.98px) {
+    .animacion-exito__panel {
+        padding: 1.35rem 1rem 1.1rem;
+        border-radius: 20px;
+    }
+
+    .animacion-exito__acciones {
+        flex-direction: column;
+    }
+
+    .animacion-exito__acciones .btn {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+@media (pointer: coarse) {
+    .animacion-exito__cerrar {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animacion-exito,
+    .animacion-exito__panel,
+    .animacion-verificacion__halo,
+    .animacion-verificacion__aro,
+    .animacion-verificacion__relleno,
+    .animacion-verificacion__check,
+    .animacion-camion__vehiculo,
+    .animacion-camion__check {
+        animation: none !important;
+    }
+
+    .animacion-verificacion__halo,
+    .animacion-verificacion__relleno,
+    .animacion-camion__check {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .animacion-verificacion__aro,
+    .animacion-verificacion__check {
+        stroke-dashoffset: 0;
+    }
+
+    .animacion-camion__vehiculo {
+        opacity: 1;
+        transform: none;
+    }
+}

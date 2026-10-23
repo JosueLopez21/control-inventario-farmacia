@@ -13,9 +13,7 @@ use Illuminate\View\View;
 
 class VentaController extends Controller
 {
-    public function __construct(private readonly VentaService $ventaService)
-    {
-    }
+    public function __construct(private readonly VentaService $ventaService) {}
 
     public function index(Request $request): View
     {
@@ -104,7 +102,14 @@ class VentaController extends Controller
 
         return redirect()
             ->route('ventas.show', $venta)
-            ->with('exito', "Venta #{$venta->id} registrada correctamente por un total de ".formato_bs($venta->monto_total).'.');
+            ->with('exito', "Venta #{$venta->id} registrada correctamente por un total de ".formato_bs($venta->monto_total).'.')
+            ->with('animacion', 'venta')
+            ->with('animacion_datos', [
+                'venta_id' => $venta->id,
+                'total' => formato_bs($venta->monto_total),
+                'comprobante' => route('ventas.show', $venta),
+                'nueva' => route('ventas.create'),
+            ]);
     }
 
     public function show(Venta $venta): View
