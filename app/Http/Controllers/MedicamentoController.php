@@ -166,12 +166,16 @@ class MedicamentoController extends Controller
         if ($terminoNormalizado !== '') {
             $nombreNormalizado = "translate(lower(nombre_comercial), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
             $principioNormalizado = "translate(lower(principio_activo), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
+            $presentacionNormalizada = "translate(lower(presentacion), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
+            $laboratorioNormalizado = "translate(lower(nombre), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
             $contiene = '%'.$this->escaparLike($terminoNormalizado).'%';
             $empieza = $this->escaparLike($terminoNormalizado).'%';
 
-            $consulta->where(function ($sub) use ($nombreNormalizado, $principioNormalizado, $contiene) {
+            $consulta->where(function ($sub) use ($nombreNormalizado, $principioNormalizado, $presentacionNormalizada, $laboratorioNormalizado, $contiene) {
                 $sub->whereRaw("{$nombreNormalizado} LIKE ?", [$contiene])
-                    ->orWhereRaw("{$principioNormalizado} LIKE ?", [$contiene]);
+                    ->orWhereRaw("{$principioNormalizado} LIKE ?", [$contiene])
+                    ->orWhereRaw("{$presentacionNormalizada} LIKE ?", [$contiene])
+                    ->orWhereHas('laboratorio', fn ($laboratorio) => $laboratorio->whereRaw("{$laboratorioNormalizado} LIKE ?", [$contiene]));
             })->orderByRaw(
                 "CASE WHEN {$nombreNormalizado} LIKE ? OR {$principioNormalizado} LIKE ? THEN 0 ELSE 1 END",
                 [$empieza, $empieza]

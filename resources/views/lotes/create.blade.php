@@ -22,3 +22,7 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/lotes.js') }}?v={{ filemtime(public_path('js/lotes.js')) }}"></script>
+@endpush

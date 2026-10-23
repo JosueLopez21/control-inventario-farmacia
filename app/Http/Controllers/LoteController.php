@@ -39,9 +39,17 @@ class LoteController extends Controller
 
     public function create(Request $request): View
     {
+        $medicamentoSeleccionado = (int) old('medicamento_id', $request->integer('medicamento_id')) ?: null;
+        $medicamentoInicial = $medicamentoSeleccionado
+            ? Medicamento::with('laboratorio:id,nombre')->find($medicamentoSeleccionado, [
+                'id', 'laboratorio_id', 'nombre_comercial', 'principio_activo', 'presentacion',
+            ])
+            : null;
+
         return view('lotes.create', [
             'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
-            'medicamentoSeleccionado' => $request->integer('medicamento_id') ?: null,
+            'medicamentoSeleccionado' => $medicamentoSeleccionado,
+            'medicamentoInicial' => $medicamentoInicial,
         ]);
     }
 
