@@ -147,6 +147,7 @@ Resultado esperado: **26 pruebas aprobadas**.
 ## 📚 7. Documentación Adicional en la Carpeta `/docs`
 
 * 📖 **Manual de Uso del Sistema Web:** [docs/MANUAL_USO.md](docs/MANUAL_USO.md) (inicio del sistema, usuarios, roles, recorrido en 6 pasos y administración en pgAdmin).
+* 🚀 **Guía de Despliegue en Render y Neon:** [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md) (Docker, PostgreSQL en Neon, variables de entorno, verificación y solución de problemas).
 * 📊 **Diagrama Entidad-Relación:** [docs/diagrama_er.md](docs/diagrama_er.md) (formato Mermaid y exportación PNG) y [docs/diagrama_er.puml](docs/diagrama_er.puml) (PlantUML).
 * 📋 **Consultas de Tinker Detalladas:** [docs/consultas_tinker.md](docs/consultas_tinker.md) (las 12 consultas con comandos, salidas reales y justificaciones técnicas de integridad).
 * 📸 **Guía para Toma de Capturas:** [docs/guia_capturas.md](docs/guia_capturas.md) (instrucciones paso a paso de qué comandos correr y qué capturar para el informe en Word).
