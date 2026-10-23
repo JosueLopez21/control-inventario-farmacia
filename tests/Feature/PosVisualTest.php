@@ -56,7 +56,10 @@ class PosVisualTest extends TestCase
             ->assertSee('posApp', false)
             ->assertSee('Formulario clásico')
             ->assertSee($medicamento->nombre_comercial)
-            ->assertSee('data-items', false);
+            ->assertSee('data-items', false)
+            ->assertSee('sugerencias', false)
+            ->assertSee('data-categoria', false)
+            ->assertSee('posGrid', false);
     }
 
     public function test_buscador_pos_incluye_metadatos_de_categoria(): void

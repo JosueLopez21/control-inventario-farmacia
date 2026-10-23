@@ -14,6 +14,10 @@ use Illuminate\View\View;
 
 class MedicamentoController extends Controller
 {
+    private const CARACTERES_ACENTUADOS = 'áàäâãéèëêíìïîóòöôõúùüûñç';
+
+    private const CARACTERES_SIN_ACENTO = 'aaaaaeeeeiiiiooooouuuunc';
+
     public function index(Request $request): View|JsonResponse
     {
         $q = trim((string) $request->query('q'));
@@ -126,30 +130,75 @@ class MedicamentoController extends Controller
     }
 
     /**
-     * Endpoint JSON para el buscador del punto de venta.
+     * Endpoint JSON para el buscador del punto de venta y el selector de lotes.
      */
     public function buscar(Request $request): JsonResponse
     {
         $q = trim((string) $request->query('q'));
+        $terminoNormalizado = $this->normalizarTexto($q);
+        $categoriaId = $request->query('categoria_id');
+        $limite = max(1, min(50, (int) $request->integer('limit', 8)));
+        $desplazamiento = max(0, (int) $request->integer('offset', 0));
+        $incluirAgotados = $request->boolean('incluir_agotados');
+        $hoy = now()->toDateString();
 
-        if (mb_strlen($q) < 2) {
-            return response()->json(['resultados' => []]);
+        if ($q !== '' && mb_strlen($q) < 2) {
+            return response()->json([
+                'resultados' => [],
+                'total' => 0,
+                'hay_mas' => false,
+            ]);
         }
 
-        $resultados = Medicamento::query()
-            ->with('categoria:id,nombre')
-            ->withSum(['lotes as stock_vigente' => fn ($query) => $query->where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)], 'cantidad_stock')
-            ->where(function ($sub) use ($q) {
-                $sub->where('nombre_comercial', 'ilike', "%{$q}%")
-                    ->orWhere('principio_activo', 'ilike', "%{$q}%");
-            })
+        $consulta = Medicamento::query()
+            ->with(['categoria:id,nombre', 'laboratorio:id,nombre'])
+            ->withSum(
+                ['lotes as stock_vigente' => fn ($query) => $query
+                    ->where('fecha_vencimiento', '>=', $hoy)
+                    ->where('cantidad_stock', '>', 0)],
+                'cantidad_stock'
+            )
+            ->when($categoriaId, fn ($query) => $query->where('categoria_id', $categoriaId))
+            ->when(! $incluirAgotados, fn ($query) => $query->whereHas('lotes', fn ($sub) => $sub
+                ->where('fecha_vencimiento', '>=', $hoy)
+                ->where('cantidad_stock', '>', 0)));
+
+        if ($terminoNormalizado !== '') {
+            $nombreNormalizado = "translate(lower(nombre_comercial), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
+            $principioNormalizado = "translate(lower(principio_activo), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
+            $contiene = '%'.$this->escaparLike($terminoNormalizado).'%';
+            $empieza = $this->escaparLike($terminoNormalizado).'%';
+
+            $consulta->where(function ($sub) use ($nombreNormalizado, $principioNormalizado, $contiene) {
+                $sub->whereRaw("{$nombreNormalizado} LIKE ?", [$contiene])
+                    ->orWhereRaw("{$principioNormalizado} LIKE ?", [$contiene]);
+            })->orderByRaw(
+                "CASE WHEN {$nombreNormalizado} LIKE ? OR {$principioNormalizado} LIKE ? THEN 0 ELSE 1 END",
+                [$empieza, $empieza]
+            );
+        }
+
+        $total = (clone $consulta)->count();
+
+        $resultados = $consulta
             ->orderBy('nombre_comercial')
-            ->limit(15)
-            ->get(['id', 'categoria_id', 'nombre_comercial', 'principio_activo', 'presentacion', 'precio_venta']);
+            ->skip($desplazamiento)
+            ->take($limite)
+            ->get([
+                'id',
+                'categoria_id',
+                'laboratorio_id',
+                'nombre_comercial',
+                'principio_activo',
+                'presentacion',
+                'precio_venta',
+                'stock_minimo',
+            ]);
 
         return response()->json([
             'resultados' => $resultados->map(function ($medicamento) {
                 $ui = categoria_ui($medicamento->categoria?->nombre);
+                $stock = (int) ($medicamento->stock_vigente ?? 0);
 
                 return [
                     'id' => $medicamento->id,
@@ -157,13 +206,35 @@ class MedicamentoController extends Controller
                     'principio_activo' => $medicamento->principio_activo,
                     'presentacion' => $medicamento->presentacion,
                     'precio_venta' => (float) $medicamento->precio_venta,
-                    'stock' => (int) ($medicamento->stock_vigente ?? 0),
+                    'stock' => $stock,
+                    'stock_minimo' => (int) $medicamento->stock_minimo,
+                    'vendible' => $stock > 0,
                     'categoria' => $medicamento->categoria?->nombre ?? 'General',
                     'categoria_icono' => $ui['icono'],
                     'categoria_color' => $ui['color'],
                     'categoria_suave' => $ui['suave'],
+                    'laboratorio' => $medicamento->laboratorio?->nombre ?? 'Sin laboratorio',
                 ];
             }),
+            'total' => $total,
+            'hay_mas' => $desplazamiento + $resultados->count() < $total,
         ]);
+    }
+
+    private function normalizarTexto(string $texto): string
+    {
+        return strtr(mb_strtolower($texto), [
+            'á' => 'a', 'à' => 'a', 'ä' => 'a', 'â' => 'a', 'ã' => 'a',
+            'é' => 'e', 'è' => 'e', 'ë' => 'e', 'ê' => 'e',
+            'í' => 'i', 'ì' => 'i', 'ï' => 'i', 'î' => 'i',
+            'ó' => 'o', 'ò' => 'o', 'ö' => 'o', 'ô' => 'o', 'õ' => 'o',
+            'ú' => 'u', 'ù' => 'u', 'ü' => 'u', 'û' => 'u',
+            'ñ' => 'n', 'ç' => 'c',
+        ]);
+    }
+
+    private function escaparLike(string $texto): string
+    {
+        return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $texto);
     }
 }

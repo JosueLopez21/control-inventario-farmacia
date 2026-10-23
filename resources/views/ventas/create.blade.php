@@ -40,15 +40,57 @@
                     <div class="card-header"><i class="bi bi-search me-2 text-farma"></i>Buscar medicamento</div>
                     <div class="card-body">
                         <label class="form-label" for="buscar">Nombre comercial o principio activo</label>
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-text bg-white"><i class="bi bi-upc-scan text-farma"></i></span>
-                            <input type="search" id="buscar" class="form-control" placeholder="Escribe al menos 2 letras..." autocomplete="off">
-                        </div>
-                        <div id="resultados" class="pos-resultados mt-3" aria-live="polite">
-                            <div class="pos-pista">
-                                <i class="bi bi-hand-index-thumb"></i>
-                                <span>Los medicamentos con stock vigente aparecerán aquí.</span>
+                        <div class="pos-buscador__campo">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-white"><i class="bi bi-upc-scan text-farma"></i></span>
+                                <input type="search"
+                                       id="buscar"
+                                       class="form-control"
+                                       placeholder="Escribe 3 letras o elige una categoría..."
+                                       autocomplete="off"
+                                       role="combobox"
+                                       aria-autocomplete="list"
+                                       aria-expanded="false"
+                                       aria-controls="sugerencias"
+                                       aria-haspopup="listbox">
                             </div>
+                            <div id="sugerencias" class="pos-sugerencias" role="listbox" aria-label="Sugerencias de medicamentos" hidden></div>
+                        </div>
+                        <div class="form-text">Se ignoran mayúsculas y tildes. Usa ↑ ↓ para navegar, Enter para agregar y Esc para cerrar.</div>
+                    </div>
+                </div>
+
+                <div class="card pos-catalogo mb-3">
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap align-items-start justify-content-between gap-2 mb-3">
+                            <div>
+                                <h2 class="h6 fw-bold mb-1"><i class="bi bi-grid-3x3-gap me-1 text-farma"></i>Productos disponibles</h2>
+                                <p class="small text-muted mb-0" id="posGridEstado" aria-live="polite">Cargando catálogo...</p>
+                            </div>
+                            <span class="badge rounded-pill bg-farma-soft text-farma" id="posConteo">0</span>
+                        </div>
+
+                        <div class="pos-categorias" id="posCategorias" role="group" aria-label="Filtrar por categoría">
+                            <button type="button" class="pos-chip activo" data-categoria="" aria-pressed="true">
+                                <i class="bi bi-grid"></i>Todas
+                            </button>
+                            @foreach ($categorias as $categoria)
+                                @php($ui = categoria_ui($categoria->nombre))
+                                <button type="button"
+                                        class="pos-chip"
+                                        data-categoria="{{ $categoria->id }}"
+                                        aria-pressed="false"
+                                        style="--chip-color: {{ $ui['color'] }}; --chip-suave: {{ $ui['suave'] }};">
+                                    <i class="bi {{ $ui['icono'] }}"></i>{{ $categoria->nombre }}
+                                </button>
+                            @endforeach
+                        </div>
+
+                        <div id="posGrid" class="pos-grid mt-3" aria-live="polite" aria-busy="true"></div>
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-primary" id="posVerMas" hidden>
+                                <i class="bi bi-plus-circle me-1"></i>Ver más productos
+                            </button>
                         </div>
                     </div>
                 </div>

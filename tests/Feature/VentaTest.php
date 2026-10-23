@@ -92,8 +92,37 @@ class VentaTest extends TestCase
         ]);
 
         $respuesta->assertRedirect('/ventas/nueva');
-        $respuesta->assertSessionHas('error');
+        $respuesta->assertSessionHas('error', fn ($mensaje) => str_contains($mensaje, 'Stock insuficiente'));
         $this->assertDatabaseCount('ventas', 0);
+    }
+
+    public function test_venta_rechazada_muestra_mensaje_y_conserva_el_carrito(): void
+    {
+        $medicamento = Medicamento::factory()->create([
+            'nombre_comercial' => 'Carrito Conservado',
+            'precio_venta' => 10.00,
+        ]);
+
+        Lote::create([
+            'medicamento_id' => $medicamento->id,
+            'numero_lote' => 'LOT-CARRITO-001',
+            'fecha_vencimiento' => now()->addMonths(3)->toDateString(),
+            'cantidad_stock' => 2,
+        ]);
+
+        $respuesta = $this->actingAs($this->farmaceutico())
+            ->followingRedirects()
+            ->from('/ventas/nueva')
+            ->post('/ventas', [
+                'items' => [
+                    ['medicamento_id' => $medicamento->id, 'cantidad' => 9],
+                ],
+            ]);
+
+        $respuesta->assertOk()
+            ->assertSee('Stock insuficiente')
+            ->assertSee('Carrito Conservado')
+            ->assertSee('data-items', false);
     }
 
     public function test_no_se_puede_registrar_una_venta_sin_items(): void

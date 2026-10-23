@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\VentaRequest;
+use App\Models\Categoria;
 use App\Models\Medicamento;
 use App\Models\Venta;
 use App\Services\VentaService;
@@ -55,7 +56,7 @@ class VentaController extends Controller
                 }
 
                 $medicamento = Medicamento::query()
-                    ->with('categoria:id,nombre')
+                    ->with(['categoria:id,nombre', 'laboratorio:id,nombre'])
                     ->withSum(['lotes as stock_vigente' => fn ($query) => $query->where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)], 'cantidad_stock')
                     ->find($item['medicamento_id'] ?? null);
 
@@ -68,6 +69,7 @@ class VentaController extends Controller
                 return [
                     'id' => $medicamento->id,
                     'nombre_comercial' => $medicamento->nombre_comercial,
+                    'presentacion' => $medicamento->presentacion,
                     'precio_venta' => (float) $medicamento->precio_venta,
                     'stock' => (int) ($medicamento->stock_vigente ?? 0),
                     'cantidad' => max(1, (int) ($item['cantidad'] ?? 1)),
@@ -75,12 +77,15 @@ class VentaController extends Controller
                     'categoria_icono' => $ui['icono'],
                     'categoria_color' => $ui['color'],
                     'categoria_suave' => $ui['suave'],
+                    'laboratorio' => $medicamento->laboratorio?->nombre,
                 ];
             })
             ->filter()
             ->values();
 
-        return view('ventas.create', compact('itemsIniciales'));
+        $categorias = Categoria::orderBy('nombre')->get(['id', 'nombre']);
+
+        return view('ventas.create', compact('itemsIniciales', 'categorias'));
     }
 
     public function store(VentaRequest $request): RedirectResponse
