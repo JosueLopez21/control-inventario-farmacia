@@ -1,0 +1,68 @@
+# Blueprint de Render para el sistema de inventario de farmacia.
+# Los secretos se configuran en el panel de Render (sync: false), nunca en este archivo.
+services:
+  - type: web
+    name: control-inventario-farmacia
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: feature/despliegue-docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /up
+    autoDeploy: true
+    envVars:
+      - key: APP_NAME
+        value: Farmacia Inventario
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        sync: false
+      - key: APP_TIMEZONE
+        value: America/La_Paz
+      - key: APP_LOCALE
+        value: es
+      - key: APP_FALLBACK_LOCALE
+        value: es
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: info
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_SECURE_COOKIE
+        value: "true"
+      - key: SESSION_SAME_SITE
+        value: lax
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: FILESYSTEM_DISK
+        value: local
+      - key: MAIL_MAILER
+        value: log
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      - key: SEED_FARMACEUTICO_PASSWORD
+        sync: false
+      - key: SEED_DOCTOR_PASSWORD
+        sync: false
