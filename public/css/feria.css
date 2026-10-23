@@ -826,6 +826,233 @@ body.modo-presentacion .metric-value {
     }
 }
 
+.pos-resultados {
+    display: grid;
+    gap: .55rem;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: .15rem;
+}
+
+.pos-resultado {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: .7rem;
+    width: 100%;
+    padding: .65rem .75rem;
+    border: 1px solid #e0ebe9;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--farma-tinta);
+    text-align: left;
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+.pos-resultado:hover:not(:disabled) {
+    border-color: var(--farma-verde);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(15, 118, 110, .1);
+}
+
+.pos-resultado:disabled {
+    cursor: not-allowed;
+    opacity: .55;
+}
+
+.pos-resultado__texto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.pos-resultado__texto strong,
+.pos-resultado__texto small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pos-resultado__texto small {
+    color: #7b908d;
+    font-size: .72rem;
+}
+
+.pos-resultado__stock {
+    color: #4b6562 !important;
+    font-weight: 600;
+}
+
+.pos-resultado__precio {
+    color: var(--farma-verde);
+    font-size: .86rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.pos-resultado__agregar {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--farma-suave);
+    color: var(--farma-verde);
+}
+
+.pos-pista {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    border: 1px dashed #d8e4e2;
+    border-radius: 12px;
+    color: #7b908d;
+    font-size: .84rem;
+}
+
+.pos-pista i {
+    font-size: 1.1rem;
+    color: var(--farma-verde);
+}
+
+.pos-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.pos-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    align-items: center;
+    gap: .7rem;
+    padding: .8rem 1rem;
+    border-bottom: 1px solid #eef3f2;
+}
+
+.pos-item:last-child {
+    border-bottom: 0;
+}
+
+.pos-item__principal {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    min-width: 0;
+}
+
+.pos-item__icono {
+    display: grid;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 11px;
+    font-size: 1.1rem;
+}
+
+.pos-item__texto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.pos-item__texto strong,
+.pos-item__texto small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pos-item__texto small {
+    color: #7b908d;
+    font-size: .72rem;
+}
+
+.pos-item__controles {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.pos-cantidad-btn {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #d8e4e2;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--farma-verde);
+}
+
+.pos-cantidad-btn:hover:not(:disabled) {
+    background: var(--farma-suave);
+    border-color: var(--farma-verde);
+}
+
+.pos-cantidad-btn:disabled {
+    opacity: .4;
+}
+
+.pos-cantidad {
+    min-width: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.pos-item__subtotal {
+    min-width: 5.5rem;
+    color: var(--farma-tinta);
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.pos-quitar {
+    min-width: 38px;
+}
+
+.pos-resumen {
+    border: 1px solid rgba(15, 118, 110, .12);
+    box-shadow: 0 12px 30px rgba(15, 118, 110, .08);
+}
+
+@media (max-width: 575.98px) {
+    .pos-resultado {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+    }
+
+    .pos-resultado__precio {
+        grid-column: 2;
+        font-size: .78rem;
+    }
+
+    .pos-resultado__agregar {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .pos-item {
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: .55rem;
+    }
+
+    .pos-item__controles {
+        grid-column: 1;
+    }
+
+    .pos-item__subtotal {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .pos-quitar {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
 @media (pointer: coarse) {
     .btn,
     .form-control,

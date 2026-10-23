@@ -13,10 +13,19 @@ class VentaRequest extends FormRequest
 
     protected function prepareForValidation(): void
     {
-        if (is_string($this->input('items'))) {
-            $decodificado = json_decode($this->input('items'), true);
-            $this->merge(['items' => is_array($decodificado) ? $decodificado : []]);
+        $items = $this->input('items');
+
+        if (is_string($items)) {
+            $decodificado = json_decode($items, true);
+            $items = is_array($decodificado) ? $decodificado : [];
         }
+
+        $items = collect(is_array($items) ? $items : [])
+            ->filter(fn ($item) => is_array($item) && filled($item['medicamento_id'] ?? null))
+            ->values()
+            ->all();
+
+        $this->merge(['items' => $items]);
     }
 
     public function rules(): array

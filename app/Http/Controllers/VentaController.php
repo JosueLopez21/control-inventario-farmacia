@@ -34,6 +34,12 @@ class VentaController extends Controller
 
     public function create(Request $request): View
     {
+        if ($request->query('modo') === 'clasico') {
+            return view('ventas.create-clasico', [
+                'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
+            ]);
+        }
+
         $itemsBase = old('items', []);
 
         if (blank($itemsBase) && $request->filled('medicamento_id')) {
@@ -49,6 +55,7 @@ class VentaController extends Controller
                 }
 
                 $medicamento = Medicamento::query()
+                    ->with('categoria:id,nombre')
                     ->withSum(['lotes as stock_vigente' => fn ($query) => $query->where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)], 'cantidad_stock')
                     ->find($item['medicamento_id'] ?? null);
 
@@ -56,12 +63,18 @@ class VentaController extends Controller
                     return null;
                 }
 
+                $ui = categoria_ui($medicamento->categoria?->nombre);
+
                 return [
                     'id' => $medicamento->id,
                     'nombre_comercial' => $medicamento->nombre_comercial,
                     'precio_venta' => (float) $medicamento->precio_venta,
                     'stock' => (int) ($medicamento->stock_vigente ?? 0),
                     'cantidad' => max(1, (int) ($item['cantidad'] ?? 1)),
+                    'categoria' => $medicamento->categoria?->nombre ?? 'General',
+                    'categoria_icono' => $ui['icono'],
+                    'categoria_color' => $ui['color'],
+                    'categoria_suave' => $ui['suave'],
                 ];
             })
             ->filter()
@@ -75,8 +88,11 @@ class VentaController extends Controller
         try {
             $venta = $this->ventaService->crearVenta($request->validated()['items']);
         } catch (\Throwable $e) {
-            return redirect()
-                ->route('ventas.create')
+            $destino = $request->input('modo') === 'clasico'
+                ? route('ventas.create', ['modo' => 'clasico'])
+                : route('ventas.create');
+
+            return redirect($destino)
                 ->withInput()
                 ->with('error', $e->getMessage());
         }

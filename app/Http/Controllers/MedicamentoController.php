@@ -137,6 +137,7 @@ class MedicamentoController extends Controller
         }
 
         $resultados = Medicamento::query()
+            ->with('categoria:id,nombre')
             ->withSum(['lotes as stock_vigente' => fn ($query) => $query->where('fecha_vencimiento', '>=', now()->toDateString())->where('cantidad_stock', '>', 0)], 'cantidad_stock')
             ->where(function ($sub) use ($q) {
                 $sub->where('nombre_comercial', 'ilike', "%{$q}%")
@@ -144,17 +145,25 @@ class MedicamentoController extends Controller
             })
             ->orderBy('nombre_comercial')
             ->limit(15)
-            ->get(['id', 'nombre_comercial', 'principio_activo', 'presentacion', 'precio_venta']);
+            ->get(['id', 'categoria_id', 'nombre_comercial', 'principio_activo', 'presentacion', 'precio_venta']);
 
         return response()->json([
-            'resultados' => $resultados->map(fn ($medicamento) => [
-                'id' => $medicamento->id,
-                'nombre_comercial' => $medicamento->nombre_comercial,
-                'principio_activo' => $medicamento->principio_activo,
-                'presentacion' => $medicamento->presentacion,
-                'precio_venta' => (float) $medicamento->precio_venta,
-                'stock' => (int) ($medicamento->stock_vigente ?? 0),
-            ]),
+            'resultados' => $resultados->map(function ($medicamento) {
+                $ui = categoria_ui($medicamento->categoria?->nombre);
+
+                return [
+                    'id' => $medicamento->id,
+                    'nombre_comercial' => $medicamento->nombre_comercial,
+                    'principio_activo' => $medicamento->principio_activo,
+                    'presentacion' => $medicamento->presentacion,
+                    'precio_venta' => (float) $medicamento->precio_venta,
+                    'stock' => (int) ($medicamento->stock_vigente ?? 0),
+                    'categoria' => $medicamento->categoria?->nombre ?? 'General',
+                    'categoria_icono' => $ui['icono'],
+                    'categoria_color' => $ui['color'],
+                    'categoria_suave' => $ui['suave'],
+                ];
+            }),
         ]);
     }
 }
