@@ -58,6 +58,7 @@ El proyecto ya incluye:
 
 | Variable | Valor |
 | :--- | :--- |
+| `APP_KEY` | Generar con `php artisan key:generate --show` y pegar el valor completo, incluido el prefijo `base64:` |
 | `APP_URL` | `https://<nombre-del-servicio>.onrender.com` |
 | `DB_HOST` | Host directo de Neon, sin `postgresql://` |
 | `DB_DATABASE` | Nombre de la base, por ejemplo `neondb` |
@@ -67,7 +68,7 @@ El proyecto ya incluye:
 | `SEED_FARMACEUTICO_PASSWORD` | Opcional; contraseña fuerte si se sembrarán datos demo |
 | `SEED_DOCTOR_PASSWORD` | Opcional; contraseña fuerte si se sembrarán datos demo |
 
-`APP_KEY` se genera automáticamente con `generateValue: true`. No reemplazarla después de la primera puesta en marcha salvo que se acepte invalidar sesiones y datos cifrados.
+`APP_KEY` debe tener el formato `base64:...` que produce Laravel. No usar un valor aleatorio sin ese prefijo. No reemplazarla después de la primera puesta en marcha salvo que se acepte invalidar sesiones y datos cifrados.
 
 ### Variables que ya define el Blueprint
 
@@ -287,7 +288,7 @@ Es el comportamiento esperado del plan gratuito de Render cuando el servicio est
 - [ ] Blueprint de Render aplicado con plan Free.
 - [ ] `APP_URL` configurada con HTTPS.
 - [ ] Variables `DB_*` completas y `DB_SSLMODE=require`.
-- [ ] `APP_KEY` generada por Render.
+- [ ] `APP_KEY` configurada manualmente con el prefijo `base64:`.
 - [ ] Health check `/up` en verde.
 - [ ] Login y dashboard funcionando.
 - [ ] Datos demo cargados solo si se necesitan.
