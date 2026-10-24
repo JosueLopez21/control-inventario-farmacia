@@ -54,6 +54,11 @@ return [
             'color' => '#0891b2',
             'suave' => '#cffafe',
         ],
+        'antiparasitarios' => [
+            'icono' => 'bi-bug',
+            'color' => '#65a30d',
+            'suave' => '#ecfccb',
+        ],
         'default' => [
             'icono' => 'bi-capsule',
             'color' => '#0f766e',

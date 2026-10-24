@@ -303,10 +303,24 @@ body.sin-scroll {
 
 .animacion-exito__fila {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 12px;
     padding: 6px 2px;
     border-bottom: 1px solid #e2e8f0;
+}
+
+.animacion-exito__fila .lote {
+    flex-basis: 100%;
+    font-size: .8rem;
+    color: #64748b;
+}
+
+.animacion-exito__enlace {
+    display: inline-block;
+    margin: 4px 0 10px;
+    font-weight: 600;
+    font-size: .9rem;
 }
 
 .animacion-exito__fila .nombre {

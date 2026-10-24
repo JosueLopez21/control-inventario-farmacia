@@ -84,9 +84,18 @@
                     <div class="animacion-exito__fila">
                         <span class="nombre">{{ $fila['medicamento'] }}</span>
                         <span class="valores">−{{ $fila['cantidad'] }} · stock {{ $fila['antes'] }} → <strong>{{ $fila['despues'] }}</strong></span>
+                        @foreach ($fila['lotes'] ?? [] as $loteFila)
+                            <span class="lote">Lote {{ $loteFila['numero_lote'] }}: −{{ $loteFila['cantidad'] }} ({{ $loteFila['antes'] }} → {{ $loteFila['despues'] }})</span>
+                        @endforeach
                     </div>
                 @endforeach
             </div>
+        @endif
+
+        @if ($esVenta && ! empty($datos['movimientos']))
+            <a href="{{ $datos['movimientos'] }}" class="animacion-exito__enlace" data-ver-movimientos>
+                <i class="bi bi-arrow-left-right me-1"></i>Ver qué lotes bajaron en Movimientos
+            </a>
         @endif
 
         <div class="animacion-exito__acciones">

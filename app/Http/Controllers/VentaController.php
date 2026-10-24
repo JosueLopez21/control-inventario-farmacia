@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\VentaRequest;
 use App\Models\Categoria;
 use App\Models\Medicamento;
+use App\Models\MovimientoInventario;
 use App\Models\Venta;
 use App\Services\VentaService;
 use Illuminate\Http\RedirectResponse;
@@ -120,6 +121,7 @@ class VentaController extends Controller
                 'stock' => $venta->resumenStock,
                 'comprobante' => route('ventas.show', $venta),
                 'nueva' => route('ventas.create'),
+                'movimientos' => route('movimientos.index', ['venta' => $venta->id]),
             ]);
     }
 
@@ -137,7 +139,9 @@ class VentaController extends Controller
             ->get()
             ->mapWithKeys(fn (Medicamento $medicamento) => [$medicamento->id => (int) ($medicamento->stock_vigente ?? 0)]);
 
-        return view('ventas.show', compact('venta', 'stockActual'));
+        $movimientos = MovimientoInventario::where('venta_id', $venta->id)->orderBy('id')->get();
+
+        return view('ventas.show', compact('venta', 'stockActual', 'movimientos'));
     }
 
     public function print(Venta $venta): View

@@ -1,6 +1,6 @@
 # Sistema de Control de Inventario de una Farmacia
 
-Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, un punto de venta táctil con buscador inteligente, selector de cantidad, métodos de pago (efectivo con cálculo de cambio, tarjeta y QR), animaciones de venta exitosa y de lote registrado, un selector de medicamento con búsqueda al registrar lotes, y un respaldo accesible sin JavaScript.
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, un punto de venta táctil con buscador inteligente, selector de cantidad, métodos de pago (efectivo con cálculo de cambio, tarjeta y QR), animaciones de venta exitosa y de lote registrado, un selector de medicamento con búsqueda al registrar lotes, un módulo de **Movimientos** (kardex) que muestra qué lote subió o bajó de stock en cada venta, ingreso o ajuste, un lote de medicamentos de laboratorios bolivianos (`MedicamentosBolivianosSeeder`, datos de demostración) y un respaldo accesible sin JavaScript.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
 **Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  

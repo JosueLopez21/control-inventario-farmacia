@@ -7,6 +7,7 @@
     $items[] = ['ruta' => 'ventas.index', 'activo' => 'ventas.*', 'icono' => 'bi-cart3', 'texto' => 'Ventas', 'visible' => $user->puedeOperarVentas()];
     $items[] = ['ruta' => 'medicamentos.index', 'activo' => 'medicamentos.*', 'icono' => 'bi-capsule', 'texto' => 'Medicamentos', 'visible' => true];
     $items[] = ['ruta' => 'lotes.index', 'activo' => 'lotes.*', 'icono' => 'bi-box-seam', 'texto' => 'Lotes', 'visible' => $user->puedeGestionarInventario()];
+    $items[] = ['ruta' => 'movimientos.index', 'activo' => 'movimientos.*', 'icono' => 'bi-arrow-left-right', 'texto' => 'Movimientos', 'visible' => $user->puedeGestionarInventario()];
     $items[] = ['ruta' => 'alertas.index', 'activo' => 'alertas.*', 'icono' => 'bi-exclamation-triangle', 'texto' => 'Alertas', 'visible' => true];
     $items[] = ['ruta' => 'juego.index', 'activo' => 'juego.*', 'icono' => 'bi-dice-5', 'texto' => 'Juego', 'visible' => true];
     $items[] = ['ruta' => 'asesor.index', 'activo' => 'asesor.*', 'icono' => 'bi-clipboard2-pulse', 'texto' => 'Asesor', 'visible' => true];

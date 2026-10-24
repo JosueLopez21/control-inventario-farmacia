@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\DetalleVenta;
 use App\Models\Lote;
 use App\Models\Medicamento;
+use App\Models\MovimientoInventario;
 use App\Models\Venta;
 use Exception;
 use Illuminate\Support\Facades\DB;
@@ -70,6 +71,7 @@ class VentaService
                     'cantidad' => $cantidadRequerida,
                     'antes' => (int) $stockTotalDisponible,
                     'despues' => (int) $stockTotalDisponible - $cantidadRequerida,
+                    'lotes' => [],
                 ];
 
                 // Descontar por FEFO
@@ -92,7 +94,17 @@ class VentaService
                         'precio_unitario' => $medicamento->precio_venta,
                     ]);
 
+                    $stockAntesLote = (int) $lote->cantidad_stock;
                     $lote->decrement('cantidad_stock', $descontar);
+                    $lote->setRelation('medicamento', $medicamento);
+                    MovimientoInventario::registrar($lote, 'venta', -$descontar, $stockAntesLote, $venta);
+
+                    $resumenStock[$medicamento->id]['lotes'][] = [
+                        'numero_lote' => $lote->numero_lote,
+                        'cantidad' => $descontar,
+                        'antes' => $stockAntesLote,
+                        'despues' => $stockAntesLote - $descontar,
+                    ];
                     $montoTotal += $descontar * $medicamento->precio_venta;
                     $cantidadRequerida -= $descontar;
                 }

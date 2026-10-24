@@ -40,7 +40,7 @@ class Venta extends Model
      * Resumen de stock antes y después de la venta, por medicamento.
      * Solo se llena al registrar la venta (no se guarda en la base).
      *
-     * @var array<int, array{medicamento: string, cantidad: int, antes: int, despues: int}>
+     * @var array<int, array{medicamento: string, cantidad: int, antes: int, despues: int, lotes: array}>
      */
     public array $resumenStock = [];
 

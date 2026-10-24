@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoteRequest;
 use App\Models\Lote;
 use App\Models\Medicamento;
+use App\Models\MovimientoInventario;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -58,6 +59,10 @@ class LoteController extends Controller
         $lote = Lote::create($request->validated());
         $lote->loadMissing('medicamento:id,nombre_comercial');
 
+        if ($lote->cantidad_stock > 0) {
+            MovimientoInventario::registrar($lote, 'ingreso', (int) $lote->cantidad_stock, 0, null, 'Ingreso de lote');
+        }
+
         return redirect()
             ->route('lotes.index')
             ->with('exito', 'Lote registrado correctamente.')
@@ -80,7 +85,13 @@ class LoteController extends Controller
 
     public function update(LoteRequest $request, Lote $lote): RedirectResponse
     {
+        $stockAntes = (int) $lote->cantidad_stock;
         $lote->update($request->validated());
+
+        $diferencia = (int) $lote->cantidad_stock - $stockAntes;
+        if ($diferencia !== 0) {
+            MovimientoInventario::registrar($lote, 'ajuste', $diferencia, $stockAntes, null, 'Stock corregido al editar el lote');
+        }
 
         return redirect()->route('lotes.index')->with('exito', 'Lote actualizado correctamente.');
     }

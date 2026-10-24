@@ -108,6 +108,7 @@ Con `DEMO_ACCESS=true`, la portada muestra botones para entrar como **farmacéut
 | Lotes | Ver y gestionar | Ver y gestionar | Solo lectura |
 | Categorías y laboratorios | Ver y gestionar | Ver y gestionar | Sin acceso |
 | Ventas | Sí | Sí | Sin acceso |
+| Movimientos de inventario | Sí | Sí | Sin acceso |
 | Alertas | Sí | Sí | Sí |
 | Juego educativo | Sí | Sí | Sí |
 | Asesor de síntomas | Sí, con envío al POS | Sí, con envío al POS | Solo lectura |
@@ -167,6 +168,20 @@ La pantalla táctil muestra el stock disponible y los controles grandes para ope
 Al confirmar la venta se muestra una **animación de éxito** con el monto, el método de pago, el **cambio a devolver** (si fue en efectivo), el **stock antes y después** de cada producto y accesos directos para imprimir el comprobante o volver al punto de venta. El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta (que también muestra el método de pago, lo recibido, el cambio y el stock actual) puedes imprimir el comprobante.
 
 > **Sobre los contadores de alertas:** *Por vencer* y *Vencidos* cuentan **lotes**, y *Stock bajo* cuenta **medicamentos**. Una venta baja las **unidades**, pero el contador solo cambia cuando un lote se agota o un medicamento sale de la condición de alerta. Por eso cada contador muestra también sus unidades.
+
+### Paso 4b — Ver qué lote bajó de stock (Movimientos)
+
+El menú **Movimientos** es el historial exacto del inventario (kardex). Cada fila indica:
+
+- **Tipo**: *Venta* (el stock bajó), *Ingreso* (se registró un lote nuevo) o *Ajuste* (se corrigió el stock al editar un lote).
+- **Medicamento y lote** que se movieron, con la cantidad (`−3` salió, `+40` entró).
+- **Stock del lote** antes y después (`30 → 27`).
+- La venta que lo causó (con enlace) y quién la hizo.
+
+Se puede buscar por nombre de medicamento (sin importar tildes) o por número de lote, y filtrar por tipo y fechas. Al terminar una venta, la ventana de éxito y el detalle de la venta muestran qué lotes bajaron, con un enlace directo a Movimientos filtrado por esa venta.
+
+> El dashboard y las alertas cuentan **lotes y medicamentos**, no unidades: vender 3 unidades de un lote no cambia ese número mientras al lote le quede stock. Para ver las unidades exactas, usa Movimientos.
+> Las ventas anteriores a este módulo aparecen como *historial reconstruido* a partir del stock actual de cada lote.
 
 ### Paso 5 — Atender las alertas
 

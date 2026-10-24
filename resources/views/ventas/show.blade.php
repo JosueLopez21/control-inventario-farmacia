@@ -65,6 +65,33 @@
     </div>
 @endif
 
+@if ($movimientos->isNotEmpty())
+    <div class="card mb-3" data-movimientos-venta>
+        <div class="card-header d-flex flex-wrap gap-2 justify-content-between align-items-center">
+            <span><i class="bi bi-arrow-left-right me-2 text-farma"></i>Lotes que bajaron con esta venta</span>
+            <a href="{{ route('movimientos.index', ['venta' => $venta->id]) }}" class="btn btn-sm btn-outline-primary">Ver en Movimientos</a>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table mb-0 align-middle">
+                    <thead><tr><th>Medicamento</th><th>Lote</th><th class="text-center">Salió</th><th class="text-center">Stock del lote antes</th><th class="text-center">Stock del lote después</th></tr></thead>
+                    <tbody>
+                        @foreach ($movimientos as $mov)
+                            <tr>
+                                <td class="fw-semibold">{{ $mov->medicamento_nombre }}</td>
+                                <td>{{ $mov->numero_lote }}</td>
+                                <td class="text-center text-danger fw-semibold">{{ $mov->cantidad }}</td>
+                                <td class="text-center">{{ $mov->stock_antes }}</td>
+                                <td class="text-center fw-bold">{{ $mov->stock_despues }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+@endif
+
 <div class="card">
     <div class="card-header"><i class="bi bi-list-check me-2"></i>Medicamentos vendidos ({{ $venta->detalles->count() }})</div>
     <div class="card-body p-0">

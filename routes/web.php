@@ -11,6 +11,7 @@ use App\Http\Controllers\JuegoController;
 use App\Http\Controllers\LaboratorioController;
 use App\Http\Controllers\LoteController;
 use App\Http\Controllers\MedicamentoController;
+use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\UsuarioController;
@@ -68,6 +69,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/ventas', [VentaController::class, 'store'])->name('ventas.store');
         Route::get('/ventas/{venta}/imprimir', [VentaController::class, 'print'])->name('ventas.print');
         Route::get('/ventas/{venta}', [VentaController::class, 'show'])->name('ventas.show');
+
+        Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
 
         Route::get('/reportes', [ReporteController::class, 'index'])->name('reportes.index');
     });
