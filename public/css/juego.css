@@ -235,10 +235,198 @@
     border-radius: 50%;
 }
 
+/* Pregunta estilo concurso: tarjeta centrada sobre un fondo oscuro. */
+.juego-telon {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(6, 14, 24, .9);
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.juego-telon.is-visible {
+    opacity: 1;
+}
+
+.juego-telon[hidden],
+.juego-banner[hidden],
+.juego-pregunta[hidden] {
+    display: none !important;
+}
+
+.ruleta-marcador {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.ruleta-marco.is-escena {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2001;
+    margin: 0;
+    transform-origin: center center;
+    filter: drop-shadow(0 0 28px rgba(255, 255, 255, .28));
+}
+
+.juego-banner {
+    position: fixed;
+    left: 50%;
+    bottom: max(5vh, 20px);
+    z-index: 2002;
+    display: grid;
+    justify-items: center;
+    gap: .1rem;
+    min-width: min(80vw, 320px);
+    padding: .8rem 1.6rem;
+    border-radius: 22px;
+    background: var(--banner-color, #0f766e);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .4);
+    transform: translateX(-50%);
+}
+
+.juego-banner i {
+    font-size: 1.9rem;
+}
+
+.juego-banner__pre {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+.juego-banner strong {
+    font-size: 1.5rem;
+    line-height: 1.15;
+}
+
 .juego-pregunta {
-    margin-top: .75rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid #eef2f2;
+    --pregunta-color: #0f766e;
+    width: min(580px, 100%);
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .5);
+    animation: juego-aparecer .45s cubic-bezier(.2, .9, .25, 1.15) both;
+}
+
+.juego-pregunta__cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .9rem 1.2rem;
+    background: var(--pregunta-color);
+    color: #fff;
+}
+
+.juego-pregunta__cabecera .juego-categoria-chip {
+    border-color: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .2) !important;
+    color: #fff !important;
+    font-size: .85rem;
+}
+
+.juego-pregunta__giro {
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.juego-tiempo {
+    height: 7px;
+    background: #e2e8f0;
+}
+
+.juego-tiempo span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--pregunta-color);
+}
+
+.juego-tiempo span.is-urgente {
+    background: #dc2626 !important;
+}
+
+.juego-pregunta__texto {
+    margin: 0;
+    padding: 1.3rem 1.3rem .9rem;
+    color: #0f172a;
+    font-size: clamp(1.15rem, 3.6vw, 1.45rem);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.juego-pregunta .juego-opciones,
+.juego-pregunta .juego-feedback,
+.juego-pregunta > .btn {
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+}
+
+.juego-pregunta > .btn {
+    display: block;
+    width: calc(100% - 2.6rem);
+    margin-bottom: 1.3rem;
+}
+
+.juego-pregunta > .btn[hidden] {
+    display: none;
+}
+
+.juego-pregunta .juego-opciones {
+    margin-bottom: .6rem;
+}
+
+.juego-pregunta .juego-feedback:empty {
+    display: none;
+}
+
+@keyframes juego-aparecer {
+    from {
+        opacity: 0;
+        transform: scale(.7) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes juego-opcion-entra {
+    from {
+        opacity: 0;
+        transform: translateX(-22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes juego-sacudir {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+}
+
+@keyframes juego-latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
 }
 
 .juego-categoria-chip {
@@ -492,6 +680,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .juego-pregunta,
+    .juego-opcion,
+    .juego-telon,
+    .juego-opcion--correcta,
+    .juego-opcion--incorrecta {
+        animation: none !important;
+        transition: none !important;
+    }
+
     .ruleta,
     .juego-opcion,
     .fefo-lote {
@@ -500,5 +697,72 @@
 
     .juego-hero::after {
         display: none;
+    }
+}
+
+/* Opciones grandes con letra, estilo concurso. */
+.juego-pregunta .juego-opcion {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    min-height: 56px;
+    padding: .7rem .9rem;
+    border-width: 2px;
+    border-radius: 14px;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    animation: juego-opcion-entra .4s ease both;
+}
+
+.juego-pregunta .juego-opcion::before {
+    content: attr(data-letra);
+    display: grid;
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--pregunta-color);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 800;
+}
+
+.juego-pregunta .juego-opcion:hover:not(:disabled),
+.juego-pregunta .juego-opcion:focus-visible:not(:disabled) {
+    border-color: var(--pregunta-color);
+    background: #f8fafc;
+    transform: translateX(4px);
+}
+
+.juego-pregunta .juego-opcion--correcta {
+    animation: juego-latido .5s ease 2;
+    background: #dcfce7;
+}
+
+.juego-pregunta .juego-opcion--correcta::before {
+    content: "\2713";
+    background: #16a34a;
+}
+
+.juego-pregunta .juego-opcion--incorrecta {
+    animation: juego-sacudir .45s ease;
+    background: #fee2e2;
+}
+
+.juego-pregunta .juego-opcion--incorrecta::before {
+    content: "\2715";
+    background: #dc2626;
+}
+
+@media (max-width: 575.98px) {
+    .juego-banner strong {
+        font-size: 1.25rem;
+    }
+
+    .juego-pregunta {
+        border-radius: 20px;
     }
 }

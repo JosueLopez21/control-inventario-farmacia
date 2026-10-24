@@ -200,12 +200,13 @@ El semáforo prioriza lo urgente: rojo para vencidos, ámbar para próximos a ve
 ### Paso 6 — Jugar con la ruleta del catálogo
 
 1. Abre **Juego** en el menú lateral. La actividad está disponible para los tres roles.
-2. Pulsa **Girar la ruleta**. La ruleta se detiene en una categoría y carga una pregunta generada con medicamentos reales del catálogo.
-3. Responde una de las cuatro opciones. Verás de inmediato si acertaste y la explicación.
-4. Completa los cinco giros. Al final se muestra el puntaje y puedes pulsar **Jugar de nuevo**.
-5. El mejor puntaje se conserva en el navegador mediante `localStorage`.
+2. Pulsa **Girar la ruleta**. La pantalla se oscurece, la ruleta se agranda al centro, gira y un cartel anuncia el tema que te tocó.
+3. Aparece la pregunta en una tarjeta de color, con cuatro opciones (A–D, o teclas 1–4) y **20 segundos** para responder. Verás de inmediato si acertaste y una explicación corta. Pulsa **Continuar**.
+4. Las preguntas son sencillas y de cultura general sobre salud (para qué sirve un analgésico, cómo cuidarse de los parásitos, el soroche en la altura, etc.); no hace falta saber de medicamentos. Están en `app/Support/PreguntasJuego.php` y se pueden ampliar. En una misma partida no se repiten.
+5. Completa los cinco giros. Al final se muestra el puntaje y puedes pulsar **Jugar de nuevo**.
+6. El mejor puntaje se conserva en el navegador mediante `localStorage`.
 
-La misma pantalla incluye un reto rápido para elegir qué lote debe salir primero según FEFO. Si el navegador tiene activada la preferencia de movimiento reducido, la ruleta cambia de categoría sin animación larga.
+La misma pantalla incluye un reto rápido para elegir qué lote debe salir primero según FEFO. Si el navegador tiene activada la preferencia de movimiento reducido, el juego funciona igual pero sin animaciones.
 
 ### Paso 7 — Consultar el asesor de síntomas
 

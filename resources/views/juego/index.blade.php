@@ -20,8 +20,8 @@
                 <span class="juego-hero__pill"><i class="bi bi-dice-5"></i> Aprende jugando</span>
                 <h2 class="mt-2 mb-2">La ruleta del catálogo</h2>
                 <p class="mb-0">
-                    Cinco giros, cinco preguntas. La ruleta elige una categoría y tú demuestras
-                    cuánto sabes sobre medicamentos, principios activos y laboratorios.
+                    Cinco giros, cinco preguntas fáciles. La ruleta elige un tema y tú respondes
+                    antes de que se acabe el tiempo. No necesitas saber de medicamentos: ¡se aprende jugando!
                 </p>
             </div>
             <div class="col-lg-4 text-lg-end">
@@ -84,11 +84,26 @@
                         </div>
                     </div>
 
-                    <div class="juego-pregunta" data-pregunta hidden>
-                        <span class="juego-categoria-chip" data-pregunta-categoria></span>
-                        <h4 class="h5 mt-2 mb-3" data-pregunta-texto></h4>
-                        <div class="juego-opciones" data-opciones></div>
-                        <div class="juego-feedback" data-feedback role="status" aria-live="polite"></div>
+                    <div class="juego-telon" data-telon hidden>
+                        <div class="juego-banner" data-banner aria-live="polite" hidden>
+                            <i class="bi" data-banner-icono aria-hidden="true"></i>
+                            <span class="juego-banner__pre">¡Te tocó!</span>
+                            <strong data-banner-texto></strong>
+                        </div>
+
+                        <div class="juego-pregunta" data-pregunta role="dialog" aria-modal="true" aria-labelledby="juegoPreguntaTexto" hidden>
+                            <div class="juego-pregunta__cabecera" data-pregunta-cabecera>
+                                <span class="juego-categoria-chip" data-pregunta-categoria></span>
+                                <span class="juego-pregunta__giro">Pregunta <strong data-pregunta-numero>1</strong> de 5</span>
+                            </div>
+                            <div class="juego-tiempo" aria-hidden="true"><span data-tiempo-barra></span></div>
+                            <h4 class="juego-pregunta__texto" id="juegoPreguntaTexto" data-pregunta-texto></h4>
+                            <div class="juego-opciones" data-opciones></div>
+                            <div class="juego-feedback" data-feedback role="status" aria-live="polite"></div>
+                            <button type="button" class="btn btn-primary btn-lg mt-3" data-siguiente hidden>
+                                Continuar <i class="bi bi-arrow-right ms-1"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="juego-resultado" data-resultado hidden>
@@ -157,7 +172,8 @@
                 <div class="card-body">
                     <h3 class="h6"><i class="bi bi-lightbulb text-warning me-1"></i>¿Cómo se juega?</h3>
                     <ul class="mb-0">
-                        <li>Gira la ruleta y responde la pregunta de la categoría elegida.</li>
+                        <li>Gira la ruleta y responde la pregunta del tema que te toque.</li>
+                        <li>Tienes 20 segundos por pregunta.</li>
                         <li>Cada respuesta correcta suma un punto.</li>
                         <li>Al terminar los cinco giros verás tu resultado y podrás intentarlo otra vez.</li>
                     </ul>
