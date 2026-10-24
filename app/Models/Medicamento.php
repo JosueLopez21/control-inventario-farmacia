@@ -76,6 +76,17 @@ class Medicamento extends Model
      * Scope: Medicamentos cuyo stock total vigente está por debajo del mínimo.
      * Regla de negocio #2.
      */
+    /**
+     * Scope: ordena primero los medicamentos de laboratorios bolivianos.
+     * Se usa antes del orden alfabético en todos los listados.
+     */
+    public function scopeBolivianosPrimero(Builder $query): Builder
+    {
+        return $query->orderByRaw(
+            "CASE WHEN EXISTS (SELECT 1 FROM laboratorios WHERE laboratorios.id = medicamentos.laboratorio_id AND laboratorios.pais = 'Bolivia') THEN 0 ELSE 1 END"
+        );
+    }
+
     public function scopeBajoStockMinimo(Builder $query): Builder
     {
         return $query->withSum(['lotes as stock_vigente' => function ($q) {

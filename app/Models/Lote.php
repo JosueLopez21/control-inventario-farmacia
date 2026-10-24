@@ -72,6 +72,16 @@ class Lote extends Model
     }
 
     /**
+     * Scope: ordena primero los lotes de medicamentos de laboratorios bolivianos.
+     */
+    public function scopeBolivianosPrimero(Builder $query): Builder
+    {
+        return $query->orderByRaw(
+            "CASE WHEN EXISTS (SELECT 1 FROM medicamentos m JOIN laboratorios l ON l.id = m.laboratorio_id WHERE m.id = lotes.medicamento_id AND l.pais = 'Bolivia') THEN 0 ELSE 1 END"
+        );
+    }
+
+    /**
      * Scope: Ordenamiento FEFO (primero en vencer, primero en salir).
      */
     public function scopeFefo(Builder $query): Builder

@@ -183,6 +183,10 @@ Se puede buscar por nombre de medicamento (sin importar tildes) o por número de
 > El dashboard y las alertas cuentan **lotes y medicamentos**, no unidades: vender 3 unidades de un lote no cambia ese número mientras al lote le quede stock. Para ver las unidades exactas, usa Movimientos.
 > Las ventas anteriores a este módulo aparecen como *historial reconstruido* a partir del stock actual de cada lote.
 
+### Medicamentos bolivianos siempre primero
+
+El sistema trae un catálogo de **129 medicamentos de laboratorios bolivianos** (INTI, Lafar, COFAR, Vita y Bagó de Bolivia; datos de demostración) en las 11 categorías. En el catálogo, el buscador del punto de venta, el selector de medicamento, el formulario clásico de ventas, Lotes, Alertas y el Asesor, **los de laboratorios de Bolivia aparecen primero**, también al filtrar por categoría (por ejemplo, Analgésicos). Para marcar un laboratorio como boliviano basta que su país sea "Bolivia".
+
 ### Paso 5 — Atender las alertas
 
 Abre **Alertas** para revisar:

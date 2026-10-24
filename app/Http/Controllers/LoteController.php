@@ -29,11 +29,12 @@ class LoteController extends Controller
             ->when($estado === 'por_vencer', fn ($query) => $query->whereBetween('fecha_vencimiento', [$hoy, $limite])->where('cantidad_stock', '>', 0))
             ->when($estado === 'agotado', fn ($query) => $query->where('cantidad_stock', '<=', 0))
             ->when($estado === 'vigente', fn ($query) => $query->where('fecha_vencimiento', '>', $limite)->where('cantidad_stock', '>', 0))
+            ->bolivianosPrimero()
             ->orderBy('fecha_vencimiento')
             ->paginate(15)
             ->withQueryString();
 
-        $medicamentos = Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']);
+        $medicamentos = Medicamento::bolivianosPrimero()->orderBy('nombre_comercial')->get(['id', 'nombre_comercial']);
 
         return view('lotes.index', compact('lotes', 'medicamentos', 'estado', 'medicamentoId', 'q'));
     }
@@ -48,7 +49,7 @@ class LoteController extends Controller
             : null;
 
         return view('lotes.create', [
-            'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
+            'medicamentos' => Medicamento::bolivianosPrimero()->orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
             'medicamentoSeleccionado' => $medicamentoSeleccionado,
             'medicamentoInicial' => $medicamentoInicial,
         ]);
@@ -79,7 +80,7 @@ class LoteController extends Controller
     {
         return view('lotes.edit', [
             'lote' => $lote,
-            'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
+            'medicamentos' => Medicamento::bolivianosPrimero()->orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
         ]);
     }
 

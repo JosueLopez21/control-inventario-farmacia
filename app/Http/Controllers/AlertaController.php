@@ -14,12 +14,14 @@ class AlertaController extends Controller
     {
         $porVencer = Lote::porVencer(30)
             ->with('medicamento:id,nombre_comercial')
+            ->bolivianosPrimero()
             ->orderBy('fecha_vencimiento')
             ->paginate(10, ['*'], 'page_por_vencer')
             ->withQueryString();
 
         $vencidos = Lote::vencidos()
             ->with('medicamento:id,nombre_comercial')
+            ->bolivianosPrimero()
             ->orderByDesc('fecha_vencimiento')
             ->paginate(10, ['*'], 'page_vencidos')
             ->withQueryString();

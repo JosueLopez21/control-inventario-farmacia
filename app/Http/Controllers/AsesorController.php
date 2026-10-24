@@ -100,6 +100,7 @@ class AsesorController extends Controller
             ->withSum(['lotes as stock_vigente' => fn ($query) => $query
                 ->where('fecha_vencimiento', '>=', now()->toDateString())
                 ->where('cantidad_stock', '>', 0)], 'cantidad_stock')
+            ->bolivianosPrimero()
             ->orderBy('nombre_comercial')
             ->limit($limite)
             ->get();

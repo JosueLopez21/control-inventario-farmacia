@@ -36,7 +36,7 @@ class VentaController extends Controller
     {
         if ($request->query('modo') === 'clasico') {
             return view('ventas.create-clasico', [
-                'medicamentos' => Medicamento::orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
+                'medicamentos' => Medicamento::bolivianosPrimero()->orderBy('nombre_comercial')->get(['id', 'nombre_comercial']),
             ]);
         }
 

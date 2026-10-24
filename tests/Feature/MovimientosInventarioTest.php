@@ -189,9 +189,9 @@ class MovimientosInventarioTest extends TestCase
         $this->seed(MedicamentosBolivianosSeeder::class);
 
         $this->assertDatabaseHas('laboratorios', ['nombre' => 'Laboratorios INTI', 'pais' => 'Bolivia']);
-        $this->assertSame(26, Medicamento::whereHas('laboratorio', fn ($q) => $q->where('pais', 'Bolivia'))->count());
-        $this->assertSame(26, Lote::where('numero_lote', 'like', 'BOL-%')->count());
-        $this->assertSame(26, MovimientoInventario::where('tipo', 'ingreso')->count());
+        $this->assertSame(129, Medicamento::whereHas('laboratorio', fn ($q) => $q->where('pais', 'Bolivia'))->count());
+        $this->assertSame(129, Lote::where('numero_lote', 'like', 'BOL-%')->count());
+        $this->assertSame(129, MovimientoInventario::where('tipo', 'ingreso')->count());
         $this->assertSame(0, Lote::vencidos()->count());
         $this->assertDatabaseHas('categorias', ['nombre' => 'Antiparasitarios']);
 

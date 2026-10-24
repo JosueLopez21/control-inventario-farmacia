@@ -38,6 +38,7 @@ class MedicamentoController extends Controller
             })
             ->when($categoriaId, fn ($query) => $query->where('categoria_id', $categoriaId))
             ->when($laboratorioId, fn ($query) => $query->where('laboratorio_id', $laboratorioId))
+            ->bolivianosPrimero()
             ->orderBy('nombre_comercial')
             ->paginate(24)
             ->withQueryString();
@@ -162,6 +163,9 @@ class MedicamentoController extends Controller
             ->when(! $incluirAgotados, fn ($query) => $query->whereHas('lotes', fn ($sub) => $sub
                 ->where('fecha_vencimiento', '>=', $hoy)
                 ->where('cantidad_stock', '>', 0)));
+
+        // Los laboratorios bolivianos siempre se muestran primero.
+        $consulta->bolivianosPrimero();
 
         if ($terminoNormalizado !== '') {
             $nombreNormalizado = "translate(lower(nombre_comercial), '".self::CARACTERES_ACENTUADOS."', '".self::CARACTERES_SIN_ACENTO."')";
