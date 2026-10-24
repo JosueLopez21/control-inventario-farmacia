@@ -36,7 +36,11 @@ class SimuladorVentaService
 
         $items = $this->items($candidatos);
 
-        return $this->ventas->crearVenta($items);
+        $metodos = array_keys(Venta::METODOS_PAGO);
+
+        return $this->ventas->crearVenta($items, [
+            'metodo_pago' => $metodos[array_rand($metodos)],
+        ]);
     }
 
     /**

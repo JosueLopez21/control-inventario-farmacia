@@ -60,12 +60,34 @@
         <p class="animacion-exito__detalle" id="{{ $idDialogo }}-detalle" aria-live="polite">
             @if ($esVenta)
                 Venta #{{ $datos['venta_id'] ?? '' }} registrada por un total de
-                <strong>{{ $datos['total'] ?? 'Bs 0,00' }}</strong>.
+                <strong>{{ $datos['total'] ?? 'Bs 0,00' }}</strong>@if (! empty($datos['metodo'])) · {{ $datos['metodo'] }}@endif.
             @else
                 Lote <strong>{{ $datos['numero_lote'] ?? '' }}</strong> de
                 <strong>{{ $datos['medicamento'] ?? 'medicamento' }}</strong> registrado correctamente.
             @endif
         </p>
+
+        @if ($esVenta && ! empty($datos['efectivo']))
+            <div class="animacion-exito__cambio" data-cambio-venta aria-live="polite">
+                <span>Recibido {{ $datos['recibido'] ?? '' }}</span>
+                @if (! empty($datos['hay_cambio']))
+                    <strong>Cambio a devolver: {{ $datos['cambio'] ?? '' }}</strong>
+                @else
+                    <strong>Pago exacto · sin cambio</strong>
+                @endif
+            </div>
+        @endif
+
+        @if ($esVenta && ! empty($datos['stock']))
+            <div class="animacion-exito__stock" data-stock-venta>
+                @foreach ($datos['stock'] as $fila)
+                    <div class="animacion-exito__fila">
+                        <span class="nombre">{{ $fila['medicamento'] }}</span>
+                        <span class="valores">−{{ $fila['cantidad'] }} · stock {{ $fila['antes'] }} → <strong>{{ $fila['despues'] }}</strong></span>
+                    </div>
+                @endforeach
+            </div>
+        @endif
 
         <div class="animacion-exito__acciones">
             <a href="{{ $principal }}" class="btn btn-primary btn-lg" data-animacion-principal>

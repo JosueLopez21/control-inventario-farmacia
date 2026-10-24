@@ -89,7 +89,11 @@ class VentaController extends Controller
     public function store(VentaRequest $request): RedirectResponse
     {
         try {
-            $venta = $this->ventaService->crearVenta($request->validated()['items']);
+            $datos = $request->validated();
+            $venta = $this->ventaService->crearVenta($datos['items'], [
+                'metodo_pago' => $datos['metodo_pago'] ?? 'efectivo',
+                'monto_recibido' => $datos['monto_recibido'] ?? null,
+            ]);
         } catch (\Throwable $e) {
             $destino = $request->input('modo') === 'clasico'
                 ? route('ventas.create', ['modo' => 'clasico'])
@@ -104,9 +108,16 @@ class VentaController extends Controller
             ->route('ventas.show', $venta)
             ->with('exito', "Venta #{$venta->id} registrada correctamente por un total de ".formato_bs($venta->monto_total).'.')
             ->with('animacion', 'venta')
+            ->with('resumen_stock', $venta->resumenStock)
             ->with('animacion_datos', [
                 'venta_id' => $venta->id,
                 'total' => formato_bs($venta->monto_total),
+                'metodo' => $venta->metodo_pago_etiqueta,
+                'efectivo' => $venta->metodo_pago === 'efectivo',
+                'recibido' => formato_bs($venta->monto_recibido),
+                'cambio' => formato_bs($venta->cambio),
+                'hay_cambio' => (float) $venta->cambio > 0,
+                'stock' => $venta->resumenStock,
                 'comprobante' => route('ventas.show', $venta),
                 'nueva' => route('ventas.create'),
             ]);
@@ -116,7 +127,17 @@ class VentaController extends Controller
     {
         $venta->load(['detalles.lote.medicamento']);
 
-        return view('ventas.show', compact('venta'));
+        // Stock vigente actual de cada medicamento vendido (para ver cómo bajó el inventario).
+        $idsMedicamentos = $venta->detalles->pluck('lote.medicamento_id')->filter()->unique()->values();
+
+        $stockActual = Medicamento::query()
+            ->whereIn('id', $idsMedicamentos)
+            ->withSum(['lotes as stock_vigente' => fn ($query) => $query
+                ->where('fecha_vencimiento', '>=', now()->toDateString())], 'cantidad_stock')
+            ->get()
+            ->mapWithKeys(fn (Medicamento $medicamento) => [$medicamento->id => (int) ($medicamento->stock_vigente ?? 0)]);
+
+        return view('ventas.show', compact('venta', 'stockActual'));
     }
 
     public function print(Venta $venta): View

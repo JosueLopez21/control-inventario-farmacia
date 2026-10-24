@@ -10,17 +10,47 @@ class Venta extends Model
 {
     use HasFactory;
 
+    /**
+     * Métodos de pago admitidos (clave => etiqueta).
+     */
+    public const METODOS_PAGO = [
+        'efectivo' => 'Efectivo',
+        'tarjeta' => 'Tarjeta',
+        'qr' => 'QR / Transferencia',
+    ];
+
     protected $table = 'ventas';
 
     protected $fillable = [
         'fecha_venta',
         'monto_total',
+        'metodo_pago',
+        'monto_recibido',
+        'cambio',
     ];
 
     protected $casts = [
         'fecha_venta' => 'datetime',
         'monto_total' => 'decimal:2',
+        'monto_recibido' => 'decimal:2',
+        'cambio' => 'decimal:2',
     ];
+
+    /**
+     * Resumen de stock antes y después de la venta, por medicamento.
+     * Solo se llena al registrar la venta (no se guarda en la base).
+     *
+     * @var array<int, array{medicamento: string, cantidad: int, antes: int, despues: int}>
+     */
+    public array $resumenStock = [];
+
+    /**
+     * Etiqueta legible del método de pago.
+     */
+    public function getMetodoPagoEtiquetaAttribute(): string
+    {
+        return self::METODOS_PAGO[$this->metodo_pago] ?? ucfirst((string) $this->metodo_pago);
+    }
 
     /**
      * Una venta tiene muchos detalles de venta.

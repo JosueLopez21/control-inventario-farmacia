@@ -43,16 +43,16 @@
         </div>
     @endif
     <div class="{{ $colMetrica }}">
-        <x-metric-card titulo="Medicamentos" :valor="$totalMedicamentos" icono="bi-capsule" color="azul" clave="totalMedicamentos" :valorCrudo="$totalMedicamentos" formato="numero" />
+        <x-metric-card titulo="Medicamentos" :valor="$totalMedicamentos" icono="bi-capsule" color="azul" detalle="productos distintos" clave="totalMedicamentos" :valorCrudo="$totalMedicamentos" formato="numero" />
     </div>
     <div class="{{ $colMetrica }}">
-        <x-metric-card titulo="Por vencer (30 días)" :valor="$lotesPorVencer" icono="bi-exclamation-triangle" color="ambar" enlace="{{ route('alertas.index') }}" clave="lotesPorVencer" :valorCrudo="$lotesPorVencer" formato="numero" />
+        <x-metric-card titulo="Por vencer (30 días)" :valor="$lotesPorVencer" icono="bi-exclamation-triangle" color="ambar" :detalle="'lotes · '.number_format($unidadesPorVencer, 0, ',', '.').' unidades'" enlace="{{ route('alertas.index') }}" clave="lotesPorVencer" :valorCrudo="$lotesPorVencer" formato="numero" />
     </div>
     <div class="{{ $colMetrica }}">
-        <x-metric-card titulo="Lotes vencidos" :valor="$lotesVencidos" icono="bi-x-octagon" color="rojo" enlace="{{ route('alertas.index') }}" clave="lotesVencidos" :valorCrudo="$lotesVencidos" formato="numero" />
+        <x-metric-card titulo="Lotes vencidos" :valor="$lotesVencidos" icono="bi-x-octagon" color="rojo" :detalle="'lotes · '.number_format($unidadesVencidas, 0, ',', '.').' unidades'" enlace="{{ route('alertas.index') }}" clave="lotesVencidos" :valorCrudo="$lotesVencidos" formato="numero" />
     </div>
     <div class="{{ $colMetrica }}">
-        <x-metric-card titulo="Stock bajo mínimo" :valor="$stockBajo->count()" icono="bi-arrow-down-circle" color="gris" enlace="{{ route('alertas.index') }}" clave="stockBajo" :valorCrudo="$stockBajo->count()" formato="numero" />
+        <x-metric-card titulo="Stock bajo mínimo" :valor="$stockBajo->count()" icono="bi-arrow-down-circle" color="gris" :detalle="'medicamentos · faltan '.number_format($deficitStockBajo, 0, ',', '.').' unidades'" enlace="{{ route('alertas.index') }}" clave="stockBajo" :valorCrudo="$stockBajo->count()" formato="numero" />
     </div>
 </div>
 

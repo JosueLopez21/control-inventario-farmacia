@@ -124,13 +124,48 @@
                             <span id="resumenUnidades" class="fw-semibold">0</span>
                         </div>
                         <hr>
-                        <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
                             <span class="fw-semibold">Total a pagar</span>
                             <span id="resumenTotal" class="fs-3 fw-bold text-farma">Bs 0,00</span>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold" id="btnConfirmar" disabled>
+
+                        <div class="pos-pago" id="posPago">
+                            <div class="fw-semibold mb-2"><i class="bi bi-wallet2 me-1 text-farma"></i>Método de pago</div>
+                            <div class="pos-metodos" role="radiogroup" aria-label="Método de pago">
+                                @foreach (\App\Models\Venta::METODOS_PAGO as $clave => $etiqueta)
+                                    @php($icono = ['efectivo' => 'bi-cash-coin', 'tarjeta' => 'bi-credit-card-2-front', 'qr' => 'bi-qr-code'][$clave])
+                                    <label class="pos-metodo">
+                                        <input type="radio" name="metodo_pago" value="{{ $clave }}" @checked(old('metodo_pago', 'efectivo') === $clave)>
+                                        <span><i class="bi {{ $icono }}"></i>{{ $etiqueta }}</span>
+                                    </label>
+                                @endforeach
+                            </div>
+
+                            <div id="posEfectivo" class="mt-3">
+                                <label for="montoRecibido" class="form-label fw-semibold mb-1">Monto recibido (Bs)</label>
+                                <input type="number"
+                                       inputmode="decimal"
+                                       min="0"
+                                       step="0.01"
+                                       id="montoRecibido"
+                                       name="monto_recibido"
+                                       class="form-control form-control-lg"
+                                       placeholder="0,00"
+                                       value="{{ old('monto_recibido') }}"
+                                       autocomplete="off">
+                                <div class="pos-billetes" id="posBilletes" aria-label="Montos rápidos"></div>
+                            </div>
+
+                            <div id="posCambio" class="pos-cambio pos-cambio--neutro" aria-live="polite">
+                                <span class="pos-cambio__etiqueta">Cambio a devolver</span>
+                                <strong class="pos-cambio__valor">—</strong>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold mt-3" id="btnConfirmar" disabled>
                             <i class="bi bi-check2-circle me-1"></i>Confirmar venta
                         </button>
+                        <p class="small text-muted text-center mt-2 mb-0" id="posAyudaConfirmar" hidden></p>
                         <a href="{{ route('ventas.index') }}" class="btn btn-outline-secondary w-100 mt-2">Cancelar</a>
                         <p class="small text-muted mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>El sistema descuenta automáticamente del lote que vence primero <x-ayuda-fefo sigla /> y bloquea lotes vencidos.</p>
                     </div>
@@ -138,6 +173,38 @@
             </div>
         </div>
     </form>
+
+    <div class="modal fade" id="modalCantidad" tabindex="-1" aria-labelledby="modalCantidadTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="modalCantidadTitulo"><i class="bi bi-123 me-2 text-farma"></i>¿Cuántas unidades?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <strong class="d-block" id="qtyNombre"></strong>
+                        <small class="text-muted" id="qtyMeta"></small>
+                    </div>
+                    <div class="pos-qty">
+                        <button type="button" class="pos-cantidad-btn" id="qtyMenos" aria-label="Restar una unidad"><i class="bi bi-dash-lg"></i></button>
+                        <input type="number" id="qtyInput" class="form-control form-control-lg text-center" min="1" step="1" inputmode="numeric" aria-label="Cantidad de unidades" autocomplete="off">
+                        <button type="button" class="pos-cantidad-btn" id="qtyMas" aria-label="Sumar una unidad"><i class="bi bi-plus-lg"></i></button>
+                    </div>
+                    <div class="pos-qty-atajos" id="qtyAtajos" role="group" aria-label="Cantidades rápidas"></div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="text-muted">Subtotal</span>
+                        <strong class="fs-5 text-farma" id="qtySubtotal">Bs 0,00</strong>
+                    </div>
+                    <p class="small text-danger mt-2 mb-0" id="qtyError" role="alert" hidden></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="qtyAgregar"><i class="bi bi-cart-plus me-1"></i>Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 

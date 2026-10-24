@@ -41,6 +41,30 @@ class ReporteService
         return Lote::vencidos()->count();
     }
 
+    /**
+     * Unidades (no lotes) que hay en los lotes por vencer.
+     */
+    public function unidadesPorVencer(int $dias = 30): int
+    {
+        return (int) Lote::porVencer($dias)->sum('cantidad_stock');
+    }
+
+    /**
+     * Unidades (no lotes) que hay en lotes ya vencidos.
+     */
+    public function unidadesVencidas(): int
+    {
+        return (int) Lote::vencidos()->sum('cantidad_stock');
+    }
+
+    /**
+     * Unidades que faltan para que los medicamentos con stock bajo lleguen a su mínimo.
+     */
+    public function deficitStockBajo(Collection $stockBajo): int
+    {
+        return (int) $stockBajo->sum(fn (Medicamento $medicamento) => max(0, $medicamento->stock_minimo - (int) ($medicamento->stock_vigente ?? 0)));
+    }
+
     public function ultimasVentas(int $cantidad = 5): Collection
     {
         return Venta::withCount('detalles')->orderByDesc('fecha_venta')->limit($cantidad)->get();
@@ -122,6 +146,27 @@ class ReporteService
             ->groupBy('categorias.id', 'categorias.nombre')
             ->orderByDesc('ingresos')
             ->get();
+    }
+
+    /**
+     * Cantidad de ventas e ingresos por método de pago (efectivo, tarjeta, QR).
+     */
+    public function ventasPorMetodoPago(?string $desde = null, ?string $hasta = null): Collection
+    {
+        $filas = Venta::query()
+            ->when($desde, fn ($query) => $query->whereDate('fecha_venta', '>=', $desde))
+            ->when($hasta, fn ($query) => $query->whereDate('fecha_venta', '<=', $hasta))
+            ->selectRaw('metodo_pago, COUNT(*) as ventas, COALESCE(SUM(monto_total), 0) as ingresos')
+            ->groupBy('metodo_pago')
+            ->get()
+            ->keyBy('metodo_pago');
+
+        return collect(Venta::METODOS_PAGO)->map(fn (string $etiqueta, string $clave) => (object) [
+            'metodo' => $clave,
+            'etiqueta' => $etiqueta,
+            'ventas' => (int) ($filas->get($clave)->ventas ?? 0),
+            'ingresos' => (float) ($filas->get($clave)->ingresos ?? 0),
+        ])->values();
     }
 
     /**

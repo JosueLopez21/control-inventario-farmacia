@@ -155,12 +155,18 @@ El número de lote es único y la fecha de vencimiento determina el orden FEFO d
 1. Ve a **Ventas → Nueva venta**.
 2. Busca el medicamento por nombre, principio activo o presentación: el **buscador inteligente** sugiere resultados mientras escribes, con ícono de categoría, precio, stock y una etiqueta si está por vencer o agotado.
 3. También puedes recorrer el abanico de **categorías** (chips con icono y color) y elegir el medicamento desde sus **tarjetas**.
-4. Agrégalo al carrito con la cantidad deseada, ajusta montos si hace falta y revisa el total.
-5. Pulsa **Registrar venta**.
+4. Toca el medicamento (tarjeta o sugerencia): se abre **¿Cuántas unidades?**. Escribe la cantidad o usa **− / +** y los atajos (1, 5, 10, Todo); el subtotal se calcula al instante y no puedes pasar del stock vigente.
+5. En el carrito puedes **editar la cantidad** escribiendo directamente en el campo, o quitar el producto.
+6. Elige el **método de pago**:
+   - **Efectivo:** escribe el **monto recibido** (o toca un monto rápido: *Exacto*, Bs 50, 100, 200…). El sistema muestra en vivo el **cambio a devolver** (por ejemplo: total Bs 20 y recibido Bs 50 → cambio **Bs 30**) o cuánto falta. No deja confirmar si lo recibido es menor al total.
+   - **Tarjeta** o **QR / Transferencia:** se cobra el total exacto, sin cambio.
+7. Pulsa **Confirmar venta**.
 
 La pantalla táctil muestra el stock disponible y los controles grandes para operar en mostrador. Si JavaScript no está disponible, el sistema redirige al formulario clásico para completar la venta sin perder la operación.
 
-Al confirmar la venta se muestra una **animación de éxito** con el monto y accesos directos para imprimir el comprobante o volver al punto de venta. El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta puedes imprimir el comprobante.
+Al confirmar la venta se muestra una **animación de éxito** con el monto, el método de pago, el **cambio a devolver** (si fue en efectivo), el **stock antes y después** de cada producto y accesos directos para imprimir el comprobante o volver al punto de venta. El sistema descuenta primero el lote vigente con vencimiento más cercano (FEFO), bloquea lotes vencidos y rechaza la venta si el stock vigente es insuficiente. Desde el detalle de la venta (que también muestra el método de pago, lo recibido, el cambio y el stock actual) puedes imprimir el comprobante.
+
+> **Sobre los contadores de alertas:** *Por vencer* y *Vencidos* cuentan **lotes**, y *Stock bajo* cuenta **medicamentos**. Una venta baja las **unidades**, pero el contador solo cambia cuando un lote se agota o un medicamento sale de la condición de alerta. Por eso cada contador muestra también sus unidades.
 
 ### Paso 5 — Atender las alertas
 

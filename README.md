@@ -1,6 +1,6 @@
 # Sistema de Control de Inventario de una Farmacia
 
-Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, un punto de venta táctil con buscador inteligente, animaciones de venta exitosa y de lote registrado, un selector de medicamento con búsqueda al registrar lotes, y un respaldo accesible sin JavaScript.
+Sistema web con autenticación por roles, dashboard, gestión de inventario, ventas con despacho **FEFO**, alertas y reportes. Incluye una portada simple con foto, un juego educativo de ruleta, un asesor de síntomas, catálogo en tarjetas, un punto de venta táctil con buscador inteligente, selector de cantidad, métodos de pago (efectivo con cálculo de cambio, tarjeta y QR), animaciones de venta exitosa y de lote registrado, un selector de medicamento con búsqueda al registrar lotes, y un respaldo accesible sin JavaScript.
 
 **Práctico N° 2 — Migraciones, Modelos Eloquent, Factories, Seeders y Consultas en Tinker**  
 **Práctico N° 3 — Sistema web con Laravel: autenticación, roles y operación**  
@@ -35,7 +35,7 @@ El esquema relacional cuenta con 6 tablas principales con claves foráneas, rest
 * **`laboratorios`**: Empresas fabricantes internacionales y nacionales.
 * **`medicamentos`**: Fármacos con nombre comercial, principio activo, presentación, precio y stock mínimo. Restricciones CHECK: `precio_venta > 0` y `stock_minimo >= 0`.
 * **`lotes`**: Existencias físicas por número de lote único (`numero_lote UNIQUE`), fecha de caducidad y cantidad disponible. Restricción CHECK: `cantidad_stock >= 0`.
-* **`ventas`**: Cabecera transaccional con fecha y monto total (`monto_total >= 0`).
+* **`ventas`**: Cabecera transaccional con fecha, monto total (`monto_total >= 0`), método de pago (`efectivo`, `tarjeta` o `qr`), monto recibido y cambio devuelto (`cambio >= 0`). El total y el cambio los calcula siempre el servidor.
 * **`detalles_venta`**: Renglones de venta asociados al lote específico dispensado con políticas `ON DELETE CASCADE` en venta y `ON DELETE RESTRICT` en lote. Restricciones CHECK: `cantidad > 0` y `precio_unitario > 0`.
 
 ---

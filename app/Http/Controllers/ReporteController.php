@@ -16,6 +16,7 @@ class ReporteController extends Controller
         return view('reportes.index', [
             'ventasPorMes' => $reporte->ventasPorMes(12),
             'ingresosPorCategoria' => $reporte->ingresosPorCategoria($desde, $hasta),
+            'ventasPorMetodoPago' => $reporte->ventasPorMetodoPago($desde, $hasta),
             'ticketPromedio' => $reporte->ticketPromedio(),
             'stockBajo' => $reporte->stockBajo(),
             'topMedicamentos' => $reporte->topMedicamentos(10, $desde, $hasta),

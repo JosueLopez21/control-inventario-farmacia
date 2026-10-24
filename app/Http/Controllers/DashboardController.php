@@ -15,11 +15,16 @@ class DashboardController extends Controller
     {
         $usuario = $request->user();
 
+        $stockBajo = $reporte->stockBajo();
+
         $datos = [
             'totalMedicamentos' => $reporte->totalMedicamentos(),
             'lotesPorVencer' => $reporte->lotesPorVencer(30),
+            'unidadesPorVencer' => $reporte->unidadesPorVencer(30),
             'lotesVencidos' => $reporte->lotesVencidos(),
-            'stockBajo' => $reporte->stockBajo(),
+            'unidadesVencidas' => $reporte->unidadesVencidas(),
+            'stockBajo' => $stockBajo,
+            'deficitStockBajo' => $reporte->deficitStockBajo($stockBajo),
             'puedeVerVentas' => $usuario->puedeOperarVentas(),
         ];
 

@@ -242,6 +242,16 @@ class DatabaseSeeder extends Seeder
             ), 0)'
         );
 
+        // Métodos de pago de demostración: ~60 % efectivo, ~20 % tarjeta, ~20 % QR.
+        DB::statement("UPDATE ventas SET metodo_pago = CASE
+            WHEN random() < 0.6 THEN 'efectivo'
+            WHEN random() < 0.5 THEN 'tarjeta'
+            ELSE 'qr' END");
+        DB::statement("UPDATE ventas SET monto_recibido = CASE
+            WHEN metodo_pago = 'efectivo' THEN CEIL(monto_total / 10.0) * 10
+            ELSE monto_total END");
+        DB::statement('UPDATE ventas SET cambio = monto_recibido - monto_total');
+
         $this->command->info('Ajustando escenarios de alertas...');
 
         $agotados = $medicamentos->slice(80, 30);

@@ -86,6 +86,28 @@
     </div>
 
     <div class="col-lg-6">
+        <div class="card h-100" data-reporte-pagos>
+            <div class="card-header"><i class="bi bi-wallet2 me-2 text-farma"></i>Ventas por método de pago</div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead><tr><th>Método</th><th class="text-center">Ventas</th><th class="text-end">Ingresos</th></tr></thead>
+                        <tbody>
+                            @foreach ($ventasPorMetodoPago as $fila)
+                                <tr>
+                                    <td><x-metodo-pago :metodo="$fila->metodo" /></td>
+                                    <td class="text-center">{{ $fila->ventas }}</td>
+                                    <td class="text-end">{{ formato_bs($fila->ingresos) }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
         <div class="card h-100">
             <div class="card-header"><i class="bi bi-trophy me-2 text-farma"></i>Top 10 medicamentos más vendidos</div>
             <div class="card-body p-0">

@@ -44,6 +44,9 @@ class AlertaController extends Controller
             'totalPorVencer' => Lote::porVencer(30)->count(),
             'totalVencidos' => Lote::vencidos()->count(),
             'totalStockBajo' => $stockBajoTodos->count(),
+            'unidadesPorVencer' => $reporte->unidadesPorVencer(30),
+            'unidadesVencidas' => $reporte->unidadesVencidas(),
+            'deficitStockBajo' => $reporte->deficitStockBajo($stockBajoTodos),
         ]);
     }
 }

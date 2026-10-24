@@ -28,7 +28,7 @@
             <span class="alerta-resumen__cuerpo">
                 <span class="alerta-resumen__label">Lotes vencidos</span>
                 <strong class="alerta-resumen__valor" data-contador="totalVencidos" data-valor="{{ $totalVencidos }}" data-formato="numero">{{ $totalVencidos }}</strong>
-                <span class="alerta-resumen__nota">Bloqueados para la venta</span>
+                <span class="alerta-resumen__nota">lotes · {{ number_format($unidadesVencidas, 0, ',', '.') }} unidades · bloqueados para la venta</span>
             </span>
             <i class="bi bi-arrow-right-circle alerta-resumen__flecha"></i>
         </button>
@@ -39,7 +39,7 @@
             <span class="alerta-resumen__cuerpo">
                 <span class="alerta-resumen__label">Por vencer (30 días)</span>
                 <strong class="alerta-resumen__valor" data-contador="totalPorVencer" data-valor="{{ $totalPorVencer }}" data-formato="numero">{{ $totalPorVencer }}</strong>
-                <span class="alerta-resumen__nota">Prioriza su salida: vence primero</span>
+                <span class="alerta-resumen__nota">lotes · {{ number_format($unidadesPorVencer, 0, ',', '.') }} unidades · se venden primero</span>
             </span>
             <i class="bi bi-arrow-right-circle alerta-resumen__flecha"></i>
         </button>
@@ -50,7 +50,7 @@
             <span class="alerta-resumen__cuerpo">
                 <span class="alerta-resumen__label">Stock bajo mínimo</span>
                 <strong class="alerta-resumen__valor" data-contador="totalStockBajo" data-valor="{{ $totalStockBajo }}" data-formato="numero">{{ $totalStockBajo }}</strong>
-                <span class="alerta-resumen__nota">Medicamentos que necesitan reposición</span>
+                <span class="alerta-resumen__nota">medicamentos · faltan {{ number_format($deficitStockBajo, 0, ',', '.') }} unidades para llegar al mínimo</span>
             </span>
             <i class="bi bi-arrow-right-circle alerta-resumen__flecha"></i>
         </button>

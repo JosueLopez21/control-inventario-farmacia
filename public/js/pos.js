@@ -24,6 +24,19 @@
     const resumenTotal = document.getElementById('resumenTotal');
     const btnConfirmar = document.getElementById('btnConfirmar');
     const btnVaciar = document.getElementById('posVaciar');
+    const posEfectivo = document.getElementById('posEfectivo');
+    const montoRecibido = document.getElementById('montoRecibido');
+    const posBilletes = document.getElementById('posBilletes');
+    const posCambio = document.getElementById('posCambio');
+    const ayudaConfirmar = document.getElementById('posAyudaConfirmar');
+    const modalElemento = document.getElementById('modalCantidad');
+    const qtyInput = document.getElementById('qtyInput');
+    const qtyNombre = document.getElementById('qtyNombre');
+    const qtyMeta = document.getElementById('qtyMeta');
+    const qtySubtotal = document.getElementById('qtySubtotal');
+    const qtyError = document.getElementById('qtyError');
+    const qtyAtajos = document.getElementById('qtyAtajos');
+    const qtyAgregar = document.getElementById('qtyAgregar');
     const formatoBs = window.FarmaSalud.formatoBs;
     const tamanoPagina = 12;
 
@@ -106,9 +119,16 @@
         restar.disabled = item.cantidad <= 1;
         restar.innerHTML = '<i class="bi bi-dash-lg"></i>';
 
-        const cantidad = document.createElement('span');
-        cantidad.className = 'pos-cantidad';
-        cantidad.textContent = item.cantidad;
+        const cantidad = document.createElement('input');
+        cantidad.type = 'number';
+        cantidad.className = 'pos-cantidad-input';
+        cantidad.min = '1';
+        cantidad.max = String(item.stock);
+        cantidad.step = '1';
+        cantidad.value = String(item.cantidad);
+        cantidad.dataset.posCantidad = String(indice);
+        cantidad.setAttribute('inputmode', 'numeric');
+        cantidad.setAttribute('aria-label', 'Cantidad de ' + item.nombre_comercial + ' (máximo ' + item.stock + ')');
 
         const sumar = document.createElement('button');
         sumar.type = 'button';
@@ -155,7 +175,6 @@
         contador.textContent = carrito.length;
         resumenItems.textContent = carrito.length;
         resumenUnidades.textContent = unidades;
-        btnConfirmar.disabled = carrito.length === 0;
         vacio.style.display = carrito.length ? 'none' : 'block';
 
         if (total === totalAnterior && resumenTotal.textContent.trim() !== '') {
@@ -165,6 +184,7 @@
         }
 
         totalAnterior = total;
+        actualizarPago();
     }
 
     function dibujarCarrito() {
@@ -177,8 +197,9 @@
         actualizarResumen();
     }
 
-    function agregar(datos) {
+    function agregar(datos, unidades) {
         const stock = Number(datos.stock) || 0;
+        const pedidas = Math.max(1, Math.floor(Number(unidades) || 1));
 
         if (stock <= 0) {
             return;
@@ -189,9 +210,7 @@
         });
 
         if (existente) {
-            if (existente.cantidad < existente.stock) {
-                existente.cantidad += 1;
-            }
+            existente.cantidad = Math.min(existente.cantidad + pedidas, existente.stock);
         } else {
             carrito.push({
                 id: datos.id,
@@ -200,7 +219,7 @@
                 laboratorio: datos.laboratorio || '',
                 precio_venta: Number(datos.precio_venta) || 0,
                 stock: stock,
-                cantidad: 1,
+                cantidad: Math.min(pedidas, stock),
                 categoria: datos.categoria || 'General',
                 categoria_icono: datos.categoria_icono || 'bi-capsule',
                 categoria_color: datos.categoria_color || '#0f766e',
@@ -247,8 +266,8 @@
         const medicamento = sugerenciasActuales[indiceSugerencia];
 
         if (medicamento) {
-            agregar(medicamento);
             cerrarSugerencias();
+            abrirSelectorCantidad(medicamento);
         }
     }
 
@@ -372,7 +391,7 @@
         boton.appendChild(pie);
 
         boton.addEventListener('click', function () {
-            agregar(medicamento);
+            abrirSelectorCantidad(medicamento);
         });
 
         return boton;
@@ -539,9 +558,8 @@
         const medicamento = sugerenciasActuales[Number(boton.dataset.indice)];
 
         if (medicamento) {
-            agregar(medicamento);
             cerrarSugerencias();
-            entrada.focus();
+            abrirSelectorCantidad(medicamento);
         }
     });
 
@@ -573,6 +591,31 @@
 
     verMas.addEventListener('click', function () {
         cargarCatalogo(false);
+    });
+
+    lista.addEventListener('change', function (evento) {
+        const campo = evento.target.closest('[data-pos-cantidad]');
+
+        if (!campo) {
+            return;
+        }
+
+        const item = carrito[Number(campo.dataset.posCantidad)];
+
+        if (!item) {
+            return;
+        }
+
+        const pedida = Math.floor(Number(campo.value));
+        item.cantidad = Math.max(1, Math.min(Number.isFinite(pedida) ? pedida : 1, item.stock));
+        dibujarCarrito();
+    });
+
+    lista.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Enter' && evento.target.closest('[data-pos-cantidad]')) {
+            evento.preventDefault();
+            evento.target.blur();
+        }
     });
 
     lista.addEventListener('click', function (evento) {
@@ -608,10 +651,13 @@
     });
 
     form.addEventListener('submit', function (evento) {
-        if (!carrito.length) {
+        if (!carrito.length || !pagoValido()) {
             evento.preventDefault();
             return;
         }
+
+        // En tarjeta o QR no se envía monto recibido (el servidor cobra el total exacto).
+        montoRecibido.disabled = metodoActual() !== 'efectivo';
 
         document.getElementById('items').value = JSON.stringify(carrito.map(function (item) {
             return {
@@ -620,6 +666,304 @@
             };
         }));
     });
+
+
+    /* ------------------------------------------------------------------
+     * Pago: método, monto recibido y cambio
+     * ------------------------------------------------------------------ */
+    function aCentavos(valor) {
+        return Math.round((Number(valor) || 0) * 100);
+    }
+
+    function totalCarrito() {
+        return carrito.reduce(function (suma, item) {
+            return suma + item.precio_venta * item.cantidad;
+        }, 0);
+    }
+
+    function metodoActual() {
+        const marcado = form.querySelector('input[name="metodo_pago"]:checked');
+
+        return marcado ? marcado.value : 'efectivo';
+    }
+
+    function recibidoCentavos() {
+        return montoRecibido.value === '' ? null : aCentavos(montoRecibido.value);
+    }
+
+    function pagoValido() {
+        if (metodoActual() !== 'efectivo') {
+            return true;
+        }
+
+        const recibido = recibidoCentavos();
+
+        return recibido !== null && recibido >= aCentavos(totalCarrito());
+    }
+
+    function sugerirBilletes(total) {
+        const candidatos = [total, Math.ceil(total / 10) * 10, Math.ceil(total / 50) * 50,
+            Math.ceil(total / 100) * 100, 10, 20, 50, 100, 200, 500];
+        const vistos = {};
+
+        return candidatos
+            .filter(function (valor) {
+                return valor >= total && valor > 0;
+            })
+            .map(function (valor) {
+                return Math.round(valor * 100) / 100;
+            })
+            .filter(function (valor) {
+                if (vistos[valor]) {
+                    return false;
+                }
+                vistos[valor] = true;
+                return true;
+            })
+            .sort(function (a, b) {
+                return a - b;
+            })
+            .slice(0, 5);
+    }
+
+    function dibujarBilletes(total) {
+        posBilletes.innerHTML = '';
+
+        if (total <= 0) {
+            return;
+        }
+
+        sugerirBilletes(total).forEach(function (valor, indice) {
+            const boton = document.createElement('button');
+            boton.type = 'button';
+            boton.className = 'pos-billete';
+            boton.dataset.monto = String(valor);
+            boton.textContent = indice === 0 && aCentavos(valor) === aCentavos(total) ? 'Exacto' : 'Bs ' + valor;
+            posBilletes.appendChild(boton);
+        });
+    }
+
+    function mostrarCambio(clase, etiqueta, valor) {
+        posCambio.className = 'pos-cambio pos-cambio--' + clase;
+        posCambio.querySelector('.pos-cambio__etiqueta').textContent = etiqueta;
+        posCambio.querySelector('.pos-cambio__valor').textContent = valor;
+    }
+
+    function actualizarPago() {
+        const total = totalCarrito();
+        const metodo = metodoActual();
+        const efectivo = metodo === 'efectivo';
+
+        posEfectivo.hidden = !efectivo;
+        montoRecibido.disabled = !efectivo;
+
+        let ayuda = '';
+
+        if (!carrito.length) {
+            mostrarCambio('neutro', efectivo ? 'Cambio a devolver' : 'Cobro', '—');
+            ayuda = 'Agrega al menos un medicamento.';
+        } else if (!efectivo) {
+            mostrarCambio('neutro', 'Cobro exacto por ' + (metodo === 'tarjeta' ? 'tarjeta' : 'QR / transferencia'), formatoBs(total));
+        } else {
+            const recibido = recibidoCentavos();
+
+            if (recibido === null) {
+                mostrarCambio('neutro', 'Cambio a devolver', '—');
+                ayuda = 'Ingresa el monto recibido para confirmar.';
+            } else if (recibido < aCentavos(total)) {
+                mostrarCambio('falta', 'Faltan', formatoBs((aCentavos(total) - recibido) / 100));
+                ayuda = 'El monto recibido es menor al total.';
+            } else if (recibido === aCentavos(total)) {
+                mostrarCambio('ok', 'Pago exacto', 'Sin cambio');
+            } else {
+                mostrarCambio('ok', 'Cambio a devolver', formatoBs((recibido - aCentavos(total)) / 100));
+            }
+        }
+
+        if (efectivo) {
+            dibujarBilletes(total);
+        }
+
+        btnConfirmar.disabled = !carrito.length || !pagoValido();
+        ayudaConfirmar.hidden = btnConfirmar.disabled === false || ayuda === '';
+        ayudaConfirmar.textContent = ayuda;
+    }
+
+    form.querySelectorAll('input[name="metodo_pago"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            actualizarPago();
+
+            if (metodoActual() === 'efectivo') {
+                montoRecibido.focus();
+            }
+        });
+    });
+
+    montoRecibido.addEventListener('input', actualizarPago);
+
+    montoRecibido.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Enter') {
+            evento.preventDefault();
+
+            if (!btnConfirmar.disabled) {
+                form.requestSubmit(btnConfirmar);
+            }
+        }
+    });
+
+    posBilletes.addEventListener('click', function (evento) {
+        const boton = evento.target.closest('[data-monto]');
+
+        if (!boton) {
+            return;
+        }
+
+        montoRecibido.value = Number(boton.dataset.monto).toFixed(2);
+        actualizarPago();
+    });
+
+    /* ------------------------------------------------------------------
+     * Selector de cantidad (¿cuántas unidades?)
+     * ------------------------------------------------------------------ */
+    let productoSeleccionado = null;
+    let maximoSeleccion = 0;
+    let modalCantidad = null;
+
+    function unidadesEnCarrito(id) {
+        const existente = carrito.find(function (item) {
+            return item.id === id;
+        });
+
+        return existente ? existente.cantidad : 0;
+    }
+
+    function cantidadSeleccionada() {
+        const valor = Math.floor(Number(qtyInput.value));
+
+        return Number.isFinite(valor) ? valor : 0;
+    }
+
+    function actualizarSelector() {
+        const cantidad = cantidadSeleccionada();
+        const valida = cantidad >= 1 && cantidad <= maximoSeleccion;
+
+        qtySubtotal.textContent = formatoBs((productoSeleccionado ? productoSeleccionado.precio_venta : 0) * (valida ? cantidad : 0));
+        qtyAgregar.disabled = !valida;
+
+        if (maximoSeleccion <= 0) {
+            qtyError.hidden = false;
+            qtyError.textContent = 'Ya agregaste todo el stock disponible de este producto.';
+        } else if (!valida) {
+            qtyError.hidden = false;
+            qtyError.textContent = cantidad > maximoSeleccion
+                ? 'Solo hay ' + maximoSeleccion + ' unidad(es) disponibles para agregar.'
+                : 'Ingresa una cantidad de 1 o más.';
+        } else {
+            qtyError.hidden = true;
+        }
+    }
+
+    function ajustarSelector(cantidad) {
+        qtyInput.value = String(Math.max(1, Math.min(cantidad, Math.max(maximoSeleccion, 1))));
+        actualizarSelector();
+    }
+
+    function abrirSelectorCantidad(medicamento) {
+        const stock = Number(medicamento.stock) || 0;
+
+        if (stock <= 0) {
+            return;
+        }
+
+        const bootstrapListo = window.bootstrap && window.bootstrap.Modal && modalElemento;
+
+        if (!bootstrapListo) {
+            agregar(medicamento, 1);
+            return;
+        }
+
+        productoSeleccionado = {
+            id: medicamento.id,
+            precio_venta: Number(medicamento.precio_venta) || 0,
+            datos: medicamento,
+        };
+        maximoSeleccion = Math.max(0, stock - unidadesEnCarrito(medicamento.id));
+
+        qtyNombre.textContent = medicamento.nombre_comercial;
+        qtyMeta.textContent = (medicamento.presentacion ? medicamento.presentacion + ' · ' : '')
+            + formatoBs(productoSeleccionado.precio_venta) + ' c/u · Stock ' + stock
+            + (unidadesEnCarrito(medicamento.id) ? ' (' + unidadesEnCarrito(medicamento.id) + ' ya en el carrito)' : '');
+
+        qtyAtajos.innerHTML = '';
+        [1, 5, 10].concat(maximoSeleccion > 10 ? [maximoSeleccion] : []).forEach(function (valor, indice) {
+            if (valor > maximoSeleccion) {
+                return;
+            }
+
+            const boton = document.createElement('button');
+            boton.type = 'button';
+            boton.className = 'pos-billete';
+            boton.dataset.cantidad = String(valor);
+            boton.textContent = indice === 3 ? 'Todo (' + valor + ')' : String(valor);
+            qtyAtajos.appendChild(boton);
+        });
+
+        ajustarSelector(1);
+
+        modalCantidad = modalCantidad || window.bootstrap.Modal.getOrCreateInstance(modalElemento);
+        modalCantidad.show();
+    }
+
+    function confirmarCantidad() {
+        const cantidad = cantidadSeleccionada();
+
+        if (!productoSeleccionado || cantidad < 1 || cantidad > maximoSeleccion) {
+            actualizarSelector();
+            return;
+        }
+
+        agregar(productoSeleccionado.datos, cantidad);
+        modalCantidad.hide();
+    }
+
+    if (modalElemento) {
+        modalElemento.addEventListener('shown.bs.modal', function () {
+            qtyInput.focus();
+            qtyInput.select();
+        });
+
+        modalElemento.addEventListener('hidden.bs.modal', function () {
+            productoSeleccionado = null;
+            entrada.focus();
+        });
+
+        document.getElementById('qtyMenos').addEventListener('click', function () {
+            ajustarSelector(cantidadSeleccionada() - 1);
+        });
+
+        document.getElementById('qtyMas').addEventListener('click', function () {
+            ajustarSelector(cantidadSeleccionada() + 1);
+        });
+
+        qtyInput.addEventListener('input', actualizarSelector);
+
+        qtyInput.addEventListener('keydown', function (evento) {
+            if (evento.key === 'Enter') {
+                evento.preventDefault();
+                confirmarCantidad();
+            }
+        });
+
+        qtyAtajos.addEventListener('click', function (evento) {
+            const boton = evento.target.closest('[data-cantidad]');
+
+            if (boton) {
+                ajustarSelector(Number(boton.dataset.cantidad));
+            }
+        });
+
+        qtyAgregar.addEventListener('click', confirmarCantidad);
+    }
 
     dibujarCarrito();
     cargarCatalogo(true);

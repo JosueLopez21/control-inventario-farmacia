@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Venta;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class VentaRequest extends FormRequest
 {
@@ -34,6 +36,8 @@ class VentaRequest extends FormRequest
             'items' => ['required', 'array', 'min:1'],
             'items.*.medicamento_id' => ['required', 'integer', 'exists:medicamentos,id'],
             'items.*.cantidad' => ['required', 'integer', 'min:1'],
+            'metodo_pago' => ['nullable', Rule::in(array_keys(Venta::METODOS_PAGO))],
+            'monto_recibido' => ['nullable', 'numeric', 'min:0', 'max:99999999'],
         ];
     }
 
@@ -46,6 +50,9 @@ class VentaRequest extends FormRequest
             'items.*.medicamento_id.exists' => 'Uno de los medicamentos del carrito no existe.',
             'items.*.cantidad.required' => 'Debes indicar la cantidad de cada medicamento.',
             'items.*.cantidad.min' => 'La cantidad debe ser mayor o igual a 1.',
+            'metodo_pago.in' => 'El método de pago seleccionado no es válido.',
+            'monto_recibido.numeric' => 'El monto recibido debe ser un número.',
+            'monto_recibido.min' => 'El monto recibido no puede ser negativo.',
         ];
     }
 }

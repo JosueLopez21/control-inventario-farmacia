@@ -34,13 +34,14 @@
         @else
             <div class="table-responsive">
                 <table class="table table-hover mb-0">
-                    <thead><tr><th>N.º</th><th>Fecha y hora</th><th class="text-center">Ítems</th><th class="text-end">Total</th><th class="text-end">Acciones</th></tr></thead>
+                    <thead><tr><th>N.º</th><th>Fecha y hora</th><th class="text-center">Ítems</th><th>Pago</th><th class="text-end">Total</th><th class="text-end">Acciones</th></tr></thead>
                     <tbody>
                         @foreach ($ventas as $venta)
                             <tr>
                                 <td class="fw-semibold">#{{ $venta->id }}</td>
                                 <td>{{ formato_fecha_hora($venta->fecha_venta) }}</td>
                                 <td class="text-center"><span class="badge bg-light text-dark border">{{ $venta->detalles_count }}</span></td>
+                                <td><x-metodo-pago :metodo="$venta->metodo_pago" /></td>
                                 <td class="text-end fw-semibold">{{ formato_bs($venta->monto_total) }}</td>
                                 <td class="text-end">
                                     <a href="{{ route('ventas.show', $venta) }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye me-1"></i>Ver detalle</a>

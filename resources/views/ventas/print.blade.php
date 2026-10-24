@@ -69,7 +69,14 @@
     </table>
 
     <div style="display:flex; justify-content:flex-end; margin-top:14px;">
-        <div class="total">Total: {{ formato_bs($venta->monto_total) }}</div>
+        <div class="text-end">
+            <div class="total">Total: {{ formato_bs($venta->monto_total) }}</div>
+            <div>Método de pago: <strong>{{ $venta->metodo_pago_etiqueta }}</strong></div>
+            @if ($venta->metodo_pago === 'efectivo')
+                <div>Recibido: {{ formato_bs($venta->monto_recibido ?? $venta->monto_total) }}</div>
+                <div>Cambio: <strong>{{ formato_bs($venta->cambio ?? 0) }}</strong></div>
+            @endif
+        </div>
     </div>
 
     <div class="pie">

@@ -16,13 +16,22 @@ class VentaService
      * y bloqueando estrictamente lotes vencidos.
      *
      * @param  array  $items  Lista de items: [['medicamento_id' => int, 'cantidad' => int], ...]
+     * @param  array  $pago  Opcional: ['metodo_pago' => 'efectivo|tarjeta|qr', 'monto_recibido' => float].
+     *                       Si se omite, se asume efectivo por el monto exacto.
      * @return Venta
      *
      * @throws Exception
      */
-    public function crearVenta(array $items): Venta
+    public function crearVenta(array $items, array $pago = []): Venta
     {
-        return DB::transaction(function () use ($items) {
+        $metodoPago = $pago['metodo_pago'] ?? 'efectivo';
+
+        if (! array_key_exists($metodoPago, Venta::METODOS_PAGO)) {
+            throw new Exception('El método de pago seleccionado no es válido.');
+        }
+
+        return DB::transaction(function () use ($items, $pago, $metodoPago) {
+            $resumenStock = [];
             $venta = Venta::create([
                 'fecha_venta' => now(),
                 'monto_total' => 0,
@@ -56,6 +65,13 @@ class VentaService
                     );
                 }
 
+                $resumenStock[$medicamento->id] = [
+                    'medicamento' => $medicamento->nombre_comercial,
+                    'cantidad' => $cantidadRequerida,
+                    'antes' => (int) $stockTotalDisponible,
+                    'despues' => (int) $stockTotalDisponible - $cantidadRequerida,
+                ];
+
                 // Descontar por FEFO
                 foreach ($lotesDisponibles as $lote) {
                     if ($cantidadRequerida <= 0) {
@@ -82,9 +98,52 @@ class VentaService
                 }
             }
 
-            $venta->update(['monto_total' => $montoTotal]);
+            $montoTotal = round($montoTotal, 2);
 
-            return $venta->load('detalles.lote.medicamento');
+            [$montoRecibido, $cambio] = $this->calcularPago($metodoPago, $montoTotal, $pago['monto_recibido'] ?? null);
+
+            $venta->update([
+                'monto_total' => $montoTotal,
+                'metodo_pago' => $metodoPago,
+                'monto_recibido' => $montoRecibido,
+                'cambio' => $cambio,
+            ]);
+
+            $venta->load('detalles.lote.medicamento');
+            $venta->resumenStock = array_values($resumenStock);
+
+            return $venta;
         });
+    }
+
+    /**
+     * Calcula el monto recibido y el cambio. El total siempre lo calcula el servidor.
+     *
+     * @return array{0: float, 1: float}
+     *
+     * @throws Exception
+     */
+    private function calcularPago(string $metodoPago, float $total, mixed $montoRecibido): array
+    {
+        // Tarjeta y QR se cobran por el monto exacto: no hay cambio.
+        if ($metodoPago !== 'efectivo') {
+            return [$total, 0.0];
+        }
+
+        // Sin monto informado (formulario clásico, Tinker, simulador): se asume el monto exacto.
+        if ($montoRecibido === null || $montoRecibido === '') {
+            return [$total, 0.0];
+        }
+
+        $recibido = round((float) $montoRecibido, 2);
+
+        if ((int) round($recibido * 100) < (int) round($total * 100)) {
+            throw new Exception(
+                'El monto recibido (Bs '.number_format($recibido, 2, ',', '.').') es menor al total '
+                .'(Bs '.number_format($total, 2, ',', '.').').'
+            );
+        }
+
+        return [$recibido, round($recibido - $total, 2)];
     }
 }
