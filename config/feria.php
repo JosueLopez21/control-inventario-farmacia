@@ -3,6 +3,42 @@
 return [
     'demo_access' => env('DEMO_ACCESS', false),
 
+    // Muestra en la pantalla de acceso los usuarios de demostración (útil en la feria).
+    // En Render se apaga con la variable FERIA_MOSTRAR_USUARIOS=false.
+    'mostrar_usuarios' => env('FERIA_MOSTRAR_USUARIOS', true),
+
+    // Usuarios base del sistema. El seeder y la pantalla de acceso leen esta misma lista,
+    // por eso las contraseñas mostradas coinciden con las sembradas.
+    'usuarios' => [
+        [
+            'name' => 'Nahuel Martínez',
+            'email' => 'admin@farmacia.test',
+            'password' => env('SEED_ADMIN_PASSWORD') ?: '1234',
+            'rol' => 'administrador',
+            'rol_etiqueta' => 'Administrador',
+            'descripcion' => 'Acceso total',
+            'icono' => 'bi-shield-check',
+        ],
+        [
+            'name' => 'Lic. Carla Rojas',
+            'email' => 'farmaceutica@farmacia.test',
+            'password' => env('SEED_FARMACEUTICO_PASSWORD') ?: 'password',
+            'rol' => 'farmaceutico',
+            'rol_etiqueta' => 'Farmacéutico',
+            'descripcion' => 'Inventario y ventas',
+            'icono' => 'bi-capsule',
+        ],
+        [
+            'name' => 'Dr. Andrés Vargas',
+            'email' => 'doctor@farmacia.test',
+            'password' => env('SEED_DOCTOR_PASSWORD') ?: 'password',
+            'rol' => 'doctor',
+            'rol_etiqueta' => 'Doctor',
+            'descripcion' => 'Consulta del catálogo',
+            'icono' => 'bi-heart-pulse',
+        ],
+    ],
+
     'categorias' => [
         'analgesicos' => [
             'icono' => 'bi-capsule-pill',

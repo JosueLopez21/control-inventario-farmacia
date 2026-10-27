@@ -13,29 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $usuarios = [
-            [
-                'name' => 'Nahuel Martínez',
-                'email' => 'admin@farmacia.test',
-                'password' => env('SEED_ADMIN_PASSWORD') ?: '1234',
-                'rol' => 'administrador',
-                'activo' => true,
-            ],
-            [
-                'name' => 'Lic. Carla Rojas',
-                'email' => 'farmaceutica@farmacia.test',
-                'password' => env('SEED_FARMACEUTICO_PASSWORD') ?: 'password',
-                'rol' => 'farmaceutico',
-                'activo' => true,
-            ],
-            [
-                'name' => 'Dr. Andrés Vargas',
-                'email' => 'doctor@farmacia.test',
-                'password' => env('SEED_DOCTOR_PASSWORD') ?: 'password',
-                'rol' => 'doctor',
-                'activo' => true,
-            ],
-        ];
+        $usuarios = config('feria.usuarios');
 
         foreach ($usuarios as $usuario) {
             User::updateOrCreate(
@@ -44,7 +22,7 @@ class UserSeeder extends Seeder
                     'name' => $usuario['name'],
                     'password' => Hash::make($usuario['password']),
                     'rol' => $usuario['rol'],
-                    'activo' => $usuario['activo'],
+                    'activo' => true,
                 ]
             );
         }

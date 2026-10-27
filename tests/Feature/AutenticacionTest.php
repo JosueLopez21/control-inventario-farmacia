@@ -99,4 +99,37 @@ class AutenticacionTest extends TestCase
         $respuesta->assertRedirect(route('login'));
         $this->assertGuest();
     }
+
+    public function test_la_pantalla_de_acceso_muestra_los_usuarios_autorizados(): void
+    {
+        $this->get(route('login'))
+            ->assertOk()
+            ->assertSee('Usuarios autorizados')
+            ->assertSee('admin@farmacia.test')
+            ->assertSee('farmaceutica@farmacia.test')
+            ->assertSee('doctor@farmacia.test')
+            ->assertSee('data-usuarios-autorizados', false);
+    }
+
+    public function test_las_contrasenas_mostradas_son_las_que_siembra_el_seeder(): void
+    {
+        $this->seed(\Database\Seeders\UserSeeder::class);
+
+        foreach (config('feria.usuarios') as $usuario) {
+            $this->post('/login', ['email' => $usuario['email'], 'password' => $usuario['password']])
+                ->assertRedirect(route('dashboard'));
+            $this->assertAuthenticatedAs(\App\Models\User::where('email', $usuario['email'])->first());
+            $this->app['auth']->guard('web')->logout();
+        }
+    }
+
+    public function test_los_usuarios_se_pueden_ocultar_con_la_configuracion(): void
+    {
+        config(['feria.mostrar_usuarios' => false]);
+
+        $this->get(route('login'))
+            ->assertOk()
+            ->assertDontSee('Usuarios autorizados')
+            ->assertDontSee('data-usuarios-autorizados', false);
+    }
 }

@@ -47,6 +47,28 @@
             </button>
         </form>
 
+        @if (config('feria.mostrar_usuarios'))
+            <div class="usuarios-autorizados mt-4" data-usuarios-autorizados>
+                <h2 class="usuarios-autorizados__titulo"><i class="bi bi-people me-1"></i>Usuarios autorizados</h2>
+                <p class="usuarios-autorizados__ayuda">Toca un usuario para llenar el formulario.</p>
+                @foreach (config('feria.usuarios') as $usuario)
+                    <button type="button" class="usuario-demo"
+                            data-usuario-demo
+                            data-email="{{ $usuario['email'] }}"
+                            data-password="{{ $usuario['password'] }}">
+                        <span class="usuario-demo__icono"><i class="bi {{ $usuario['icono'] }}"></i></span>
+                        <span class="usuario-demo__datos">
+                            <strong>{{ $usuario['rol_etiqueta'] }}</strong>
+                            <small>{{ $usuario['descripcion'] }}</small>
+                            <span class="usuario-demo__credencial"><i class="bi bi-envelope"></i> {{ $usuario['email'] }}</span>
+                            <span class="usuario-demo__credencial"><i class="bi bi-key"></i> <code>{{ $usuario['password'] }}</code></span>
+                        </span>
+                        <i class="bi bi-box-arrow-in-right usuario-demo__usar" aria-hidden="true"></i>
+                    </button>
+                @endforeach
+            </div>
+        @endif
+
         <p class="text-center text-muted mt-4 mb-0" style="font-size: .74rem;">
             Acceso restringido · Solo personal autorizado
         </p>
@@ -58,3 +80,20 @@
     </div>
 </div>
 @endsection
+
+@if (config('feria.mostrar_usuarios'))
+@push('scripts')
+<script>
+    document.querySelectorAll('[data-usuario-demo]').forEach(function (boton) {
+        boton.addEventListener('click', function () {
+            document.getElementById('email').value = boton.dataset.email;
+            document.getElementById('password').value = boton.dataset.password;
+            document.querySelectorAll('[data-usuario-demo]').forEach(function (otro) {
+                otro.classList.toggle('is-activo', otro === boton);
+            });
+            document.querySelector('form button[type="submit"]').focus();
+        });
+    });
+</script>
+@endpush
+@endif

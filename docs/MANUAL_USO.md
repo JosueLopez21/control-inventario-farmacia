@@ -191,6 +191,10 @@ El sistema trae un catálogo de **129 medicamentos de laboratorios bolivianos** 
 
 Las tarjetas del catálogo, el punto de venta, el detalle y la tabla muestran una foto del empaque si existe en `public/img/medicamentos/`. Las fotos se comparten por **forma y laboratorio** con el nombre `{forma}_{laboratorio}.png` (formas: tabletas, capsulas, jarabe, gotas, crema, ampollas, frasco-ampolla, inhalador, sobre; laboratorios: inti, lafar, cofar, vita, bago). Ejemplo: `tabletas_inti.png`. También se aceptan `.webp`, `.jpg` y `.jpeg`. Las fotos aplican solo a laboratorios con país Bolivia. **Todos los demás medicamentos (y los bolivianos sin foto) muestran una ilustración** de su forma farmacéutica (caja con blíster, frasco, tubo, ampollas, inhalador, sobre, pluma, etc.) con el color de su categoría; están en `public/img/formas/{forma}_{categoria}.svg`, así que ningún medicamento queda sin imagen.
 
+### Usuarios autorizados en la pantalla de acceso
+
+La pantalla de inicio de sesión muestra los tres usuarios de demostración con su contraseña; al tocar uno se llenan los campos. La lista sale de `config/feria.php` (clave `usuarios`) y es la misma que siembra `UserSeeder`, por eso siempre coincide con las contraseñas reales (o con `SEED_*_PASSWORD` si se definieron). Para **ocultarla** después de la feria, define la variable de entorno `FERIA_MOSTRAR_USUARIOS=false` (en Render: Environment) y vuelve a desplegar. Si cambias una contraseña desde el sistema, la lista seguirá mostrando la original.
+
 ### Paso 5 — Atender las alertas
 
 Abre **Alertas** para revisar:
