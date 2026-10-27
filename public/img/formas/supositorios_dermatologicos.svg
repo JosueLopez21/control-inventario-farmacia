@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e772a6"/><stop offset="1" stop-color="#db2777"/></linearGradient>
+<linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#db2777"/><stop offset="1" stop-color="#9d1c55"/></linearGradient>
+<linearGradient id="am" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9822b"/><stop offset=".45" stop-color="#f0a24a"/><stop offset="1" stop-color="#a85d14"/></linearGradient>
+<linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8f1f4"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#cfdde2"/></linearGradient>
+<linearGradient id="sv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cbd5dc"/><stop offset=".5" stop-color="#f4f7f8"/><stop offset="1" stop-color="#aab6be"/></linearGradient>
+</defs>
+<ellipse cx="200" cy="352" rx="150" ry="14" fill="#0f172a" opacity=".13"/>
+<polygon points="90,170 124,146 274,146 240,170" fill="#e5679f"/><polygon points="240,170 274,146 274,306 240,330" fill="#9d1c55"/><rect x="90" y="170" width="150" height="160" rx="3" fill="url(#g)"/><rect x="102" y="198.8" width="126" height="67.2" rx="10" fill="#fff" opacity=".96"/><path d="M158.33333333333334 212.4h13.333333333333334v13.333333333333332h13.333333333333332v13.333333333333334h-13.333333333333332v13.333333333333332h-13.333333333333334v-13.333333333333332h-13.333333333333332v-13.333333333333334h13.333333333333332z" fill="#db2777"/><rect x="112" y="285.2" width="106" height="7" rx="3.5" fill="#fff" opacity=".75"/><rect x="124" y="301.2" width="82" height="7" rx="3.5" fill="#fff" opacity=".5"/><path d="M190 260q22-60 44 0v60q0 10-22 10t-22-10z" fill="#f6e7c8" stroke="#d5bd8c" stroke-width="2"/><path d="M196 268q6-24 12-32" stroke="#fff" stroke-width="4" opacity=".6" fill="none"/><path d="M236 262q22-60 44 0v60q0 10-22 10t-22-10z" fill="#f6e7c8" stroke="#d5bd8c" stroke-width="2"/><path d="M242 270q6-24 12-32" stroke="#fff" stroke-width="4" opacity=".6" fill="none"/><path d="M282 260q22-60 44 0v60q0 10-22 10t-22-10z" fill="#f6e7c8" stroke="#d5bd8c" stroke-width="2"/><path d="M288 268q6-24 12-32" stroke="#fff" stroke-width="4" opacity=".6" fill="none"/>
+</svg>

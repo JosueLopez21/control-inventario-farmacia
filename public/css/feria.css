@@ -1882,6 +1882,7 @@ body.modo-presentacion .metric-value {
 
 /* Fotos de medicamentos (laboratorios bolivianos) */
 .med-card__foto {
+    position: relative;
     display: grid;
     height: 150px;
     margin: -.2rem -.2rem .75rem;
@@ -1892,6 +1893,8 @@ body.modo-presentacion .metric-value {
 }
 
 .med-card__foto img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1915,6 +1918,7 @@ body.modo-presentacion .metric-value {
 }
 
 .med-show-foto {
+    position: relative;
     display: grid;
     height: 220px;
     margin-bottom: 1rem;
@@ -1924,6 +1928,8 @@ body.modo-presentacion .metric-value {
 }
 
 .med-show-foto img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;

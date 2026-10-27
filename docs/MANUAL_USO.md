@@ -189,7 +189,7 @@ El sistema trae un catálogo de **129 medicamentos de laboratorios bolivianos** 
 
 ### Fotos de los medicamentos bolivianos
 
-Las tarjetas del catálogo, el punto de venta, el detalle y la tabla muestran una foto del empaque si existe en `public/img/medicamentos/`. Las fotos se comparten por **forma y laboratorio** con el nombre `{forma}_{laboratorio}.png` (formas: tabletas, capsulas, jarabe, gotas, crema, ampollas, frasco-ampolla, inhalador, sobre; laboratorios: inti, lafar, cofar, vita, bago). Ejemplo: `tabletas_inti.png`. También se aceptan `.webp`, `.jpg` y `.jpeg`. Si falta la foto, la tarjeta muestra el icono de la categoría. Solo aplica a laboratorios con país Bolivia.
+Las tarjetas del catálogo, el punto de venta, el detalle y la tabla muestran una foto del empaque si existe en `public/img/medicamentos/`. Las fotos se comparten por **forma y laboratorio** con el nombre `{forma}_{laboratorio}.png` (formas: tabletas, capsulas, jarabe, gotas, crema, ampollas, frasco-ampolla, inhalador, sobre; laboratorios: inti, lafar, cofar, vita, bago). Ejemplo: `tabletas_inti.png`. También se aceptan `.webp`, `.jpg` y `.jpeg`. Las fotos aplican solo a laboratorios con país Bolivia. **Todos los demás medicamentos (y los bolivianos sin foto) muestran una ilustración** de su forma farmacéutica (caja con blíster, frasco, tubo, ampollas, inhalador, sobre, pluma, etc.) con el color de su categoría; están en `public/img/formas/{forma}_{categoria}.svg`, así que ningún medicamento queda sin imagen.
 
 ### Paso 5 — Atender las alertas
 
