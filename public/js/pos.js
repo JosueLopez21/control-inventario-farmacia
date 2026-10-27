@@ -349,7 +349,17 @@
 
         const cabecera = document.createElement('span');
         cabecera.className = 'pos-card__cabecera';
-        cabecera.appendChild(crearIcono(medicamento, 'pos-card__icono'));
+        if (medicamento.imagen) {
+            const foto = document.createElement('img');
+            foto.className = 'pos-card__foto';
+            foto.src = medicamento.imagen;
+            foto.alt = '';
+            foto.loading = 'lazy';
+            foto.decoding = 'async';
+            cabecera.appendChild(foto);
+        } else {
+            cabecera.appendChild(crearIcono(medicamento, 'pos-card__icono'));
+        }
 
         const stock = Number(medicamento.stock) || 0;
         const minimo = Math.max(1, Number(medicamento.stock_minimo) || 1);

@@ -57,13 +57,18 @@
                                 ->filter(fn ($lote) => $lote->fecha_vencimiento->gte($hoy) && $lote->cantidad_stock > 0)
                                 ->sum('cantidad_stock');
                             $ui = categoria_ui($medicamento->categoria?->nombre);
+                            $imagen = imagen_medicamento($medicamento);
                         @endphp
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center gap-2">
-                                    <span class="cat-icon" style="width: 34px; height: 34px; font-size: .92rem; background: {{ $ui['suave'] }}; color: {{ $ui['color'] }};">
-                                        <i class="bi {{ $ui['icono'] }}"></i>
-                                    </span>
+                                    @if ($imagen)
+                                        <img src="{{ $imagen }}" alt="" class="med-miniatura" loading="lazy" decoding="async">
+                                    @else
+                                        <span class="cat-icon" style="width: 34px; height: 34px; font-size: .92rem; background: {{ $ui['suave'] }}; color: {{ $ui['color'] }};">
+                                            <i class="bi {{ $ui['icono'] }}"></i>
+                                        </span>
+                                    @endif
                                     <div>
                                         <div class="fw-semibold">{{ $medicamento->nombre_comercial }}</div>
                                         <div class="small text-muted">{{ $medicamento->principio_activo }}</div>

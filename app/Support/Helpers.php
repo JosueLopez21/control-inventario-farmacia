@@ -21,6 +21,16 @@ if (! function_exists('categoria_ui')) {
     }
 }
 
+if (! function_exists('imagen_medicamento')) {
+    /**
+     * URL de la imagen de un medicamento boliviano, o null si no hay.
+     */
+    function imagen_medicamento(?\App\Models\Medicamento $medicamento): ?string
+    {
+        return \App\Support\ImagenMedicamento::url($medicamento);
+    }
+}
+
 if (! function_exists('formato_bs')) {
     /**
      * Formatea un importe monetario en bolivianos.

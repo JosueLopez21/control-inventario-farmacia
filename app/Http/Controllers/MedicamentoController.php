@@ -27,7 +27,7 @@ class MedicamentoController extends Controller
         $medicamentos = Medicamento::query()
             ->with([
                 'categoria:id,nombre',
-                'laboratorio:id,nombre',
+                'laboratorio:id,nombre,pais',
                 'lotes' => fn ($query) => $query->orderBy('fecha_vencimiento'),
             ])
             ->when($q !== '', function ($query) use ($q) {
@@ -152,7 +152,7 @@ class MedicamentoController extends Controller
         }
 
         $consulta = Medicamento::query()
-            ->with(['categoria:id,nombre', 'laboratorio:id,nombre'])
+            ->with(['categoria:id,nombre', 'laboratorio:id,nombre,pais'])
             ->withSum(
                 ['lotes as stock_vigente' => fn ($query) => $query
                     ->where('fecha_vencimiento', '>=', $hoy)
@@ -222,6 +222,7 @@ class MedicamentoController extends Controller
                     'categoria_color' => $ui['color'],
                     'categoria_suave' => $ui['suave'],
                     'laboratorio' => $medicamento->laboratorio?->nombre ?? 'Sin laboratorio',
+                    'imagen' => imagen_medicamento($medicamento),
                 ];
             }),
             'total' => $total,

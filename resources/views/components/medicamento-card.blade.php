@@ -26,6 +26,8 @@
         $stockColor = '#16a34a';
     }
 
+    $imagen = imagen_medicamento($medicamento);
+
     $puedeVender = auth()->user()->puedeOperarVentas();
     $puedeEditar = auth()->user()->puedeGestionarInventario();
     $puedeEliminar = auth()->user()->esAdministrador();
@@ -40,6 +42,7 @@
         'categoria_suave' => $ui['suave'],
         'categoria_icono' => $ui['icono'],
         'laboratorio' => $medicamento->laboratorio?->nombre ?? 'Sin laboratorio',
+        'imagen' => $imagen,
         'precio' => (float) $medicamento->precio_venta,
         'precio_texto' => formato_bs($medicamento->precio_venta),
         'stock' => $stock,
@@ -82,6 +85,12 @@
     data-medicamento="{{ json_encode($datos, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE) }}"
     style="--cat-color: {{ $ui['color'] }}; --cat-soft: {{ $ui['suave'] }}; --stock-color: {{ $stockColor }}; --stock-pct: {{ $porcentaje }}%;"
 >
+    @if ($imagen)
+        <div class="med-card__foto">
+            <img src="{{ $imagen }}" alt="{{ $medicamento->nombre_comercial }}" loading="lazy" decoding="async">
+        </div>
+    @endif
+
     <div class="med-card__head">
         <span class="cat-icon"><i class="bi {{ $ui['icono'] }}"></i></span>
         <div class="min-w-0">

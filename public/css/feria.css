@@ -1879,3 +1879,82 @@ body.modo-presentacion .metric-value {
     font-size: 1.6rem;
     font-weight: 700;
 }
+
+/* Fotos de medicamentos (laboratorios bolivianos) */
+.med-card__foto {
+    display: grid;
+    height: 150px;
+    margin: -.2rem -.2rem .75rem;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f1f5f4;
+}
+
+.med-card__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform .25s ease;
+}
+
+.med-card:hover .med-card__foto img,
+.med-card:focus-visible .med-card__foto img {
+    transform: scale(1.06);
+}
+
+.med-miniatura {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #f1f5f4;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.med-show-foto {
+    display: grid;
+    height: 220px;
+    margin-bottom: 1rem;
+    place-items: center;
+    border-radius: 16px;
+    background: #f1f5f4;
+}
+
+.med-show-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.pos-card__foto {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #f1f5f4;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.med-modal-icon:has(.modal-medicamento-foto) {
+    width: 84px;
+    height: 84px;
+    overflow: hidden;
+    background: #f1f5f4 !important;
+}
+
+.modal-medicamento-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .med-card__foto img {
+        transition: none;
+    }
+}

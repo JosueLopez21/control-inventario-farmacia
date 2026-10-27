@@ -187,6 +187,10 @@ Se puede buscar por nombre de medicamento (sin importar tildes) o por número de
 
 El sistema trae un catálogo de **129 medicamentos de laboratorios bolivianos** (INTI, Lafar, COFAR, Vita y Bagó de Bolivia; datos de demostración) en las 11 categorías. En el catálogo, el buscador del punto de venta, el selector de medicamento, el formulario clásico de ventas, Lotes, Alertas y el Asesor, **los de laboratorios de Bolivia aparecen primero**, también al filtrar por categoría (por ejemplo, Analgésicos). Para marcar un laboratorio como boliviano basta que su país sea "Bolivia".
 
+### Fotos de los medicamentos bolivianos
+
+Las tarjetas del catálogo, el punto de venta, el detalle y la tabla muestran una foto del empaque si existe en `public/img/medicamentos/`. Las fotos se comparten por **forma y laboratorio** con el nombre `{forma}_{laboratorio}.png` (formas: tabletas, capsulas, jarabe, gotas, crema, ampollas, frasco-ampolla, inhalador, sobre; laboratorios: inti, lafar, cofar, vita, bago). Ejemplo: `tabletas_inti.png`. También se aceptan `.webp`, `.jpg` y `.jpeg`. Si falta la foto, la tarjeta muestra el icono de la categoría. Solo aplica a laboratorios con país Bolivia.
+
 ### Paso 5 — Atender las alertas
 
 Abre **Alertas** para revisar:

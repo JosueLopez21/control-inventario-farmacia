@@ -17,6 +17,11 @@
         <div class="card h-100">
             <div class="card-header"><i class="bi bi-info-circle me-2"></i>Ficha del medicamento</div>
             <div class="card-body">
+                @if ($imagen = imagen_medicamento($medicamento))
+                    <div class="med-show-foto">
+                        <img src="{{ $imagen }}" alt="{{ $medicamento->nombre_comercial }}">
+                    </div>
+                @endif
                 <dl class="row mb-0">
                     <dt class="col-5 text-muted">Nombre comercial</dt><dd class="col-7 fw-semibold">{{ $medicamento->nombre_comercial }}</dd>
                     <dt class="col-5 text-muted">Principio activo</dt><dd class="col-7">{{ $medicamento->principio_activo }}</dd>

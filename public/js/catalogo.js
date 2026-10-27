@@ -160,7 +160,17 @@
         const icono = document.getElementById('modalMedicamentoIcono');
         icono.style.background = datos.categoria_suave;
         icono.style.color = datos.categoria_color;
-        icono.innerHTML = '<i class="bi ' + datos.categoria_icono + '"></i>';
+        icono.innerHTML = '';
+
+        if (datos.imagen) {
+            const foto = document.createElement('img');
+            foto.src = datos.imagen;
+            foto.alt = datos.nombre;
+            foto.className = 'modal-medicamento-foto';
+            icono.appendChild(foto);
+        } else {
+            icono.innerHTML = '<i class="bi ' + datos.categoria_icono + '"></i>';
+        }
 
         const estados = {
             ok: 'Disponible',
